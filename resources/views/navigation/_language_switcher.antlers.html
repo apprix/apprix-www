@@ -10,21 +10,20 @@
     type="button"
     @click="open = !open"
     :aria-expanded="open"
-    aria-label="Vaihda kieli"
+    aria-label="{{ trans:strings.change_language }}"
     class="
       inline-flex items-center justify-center
       h-11 w-11
       rounded-xl
-      transition
-      focus:outline-none focus-visible:ring-2 focus-visible:ring-[#519fc0]/35
+      transition-all duration-200
+      focus:outline-none focus-visible:ring-2 focus-visible:ring-primary/30
     "
     :class="open
-      ? 'bg-white/70 backdrop-blur ring-1 ring-inset ring-neutral-900/10 shadow-sm shadow-neutral-900/5'
+      ? 'bg-white/80 backdrop-blur-md ring-1 ring-inset ring-neutral-900/8 shadow-sm'
       : 'bg-white/20 hover:bg-white/45 hover:backdrop-blur ring-1 ring-inset ring-white/35'"
   >
-    {{# Globe icon (inline SVG so you don't need a file) #}}
     <span
-      class="text-neutral-900/70"
+      class="transition-colors duration-200"
       :class="open ? 'text-neutral-900' : 'text-neutral-900/70'"
       aria-hidden="true"
     >
@@ -33,7 +32,7 @@
         viewBox="0 0 24 24"
         fill="none"
         stroke="currentColor"
-        stroke-width="2.25"
+        stroke-width="2"
         stroke-linecap="round"
         stroke-linejoin="round"
       >
@@ -48,31 +47,32 @@
   <div
     x-ref="panel"
     x-show="open"
-    x-transition:enter="transition ease-out duration-140"
-    x-transition:enter-start="opacity-0 translate-y-1"
-    x-transition:enter-end="opacity-100 translate-y-0"
-    x-transition:leave="transition ease-in duration-120"
-    x-transition:leave-start="opacity-100 translate-y-0"
-    x-transition:leave-end="opacity-0 translate-y-1"
+    x-transition:enter="transition ease-out duration-200"
+    x-transition:enter-start="opacity-0 scale-95 translate-y-1"
+    x-transition:enter-end="opacity-100 scale-100 translate-y-0"
+    x-transition:leave="transition ease-in duration-150"
+    x-transition:leave-start="opacity-100 scale-100 translate-y-0"
+    x-transition:leave-end="opacity-0 scale-95 translate-y-1"
     x-cloak
-    class="absolute right-0 mt-2 z-50 w-56"
+    class="absolute left-0 mt-2.5 z-50 w-52 origin-top-left"
   >
     <div
       class="
         relative overflow-hidden rounded-2xl
-        bg-white/92 backdrop-blur
-        shadow-xl shadow-neutral-900/10
-        ring-1 ring-inset ring-neutral-900/10
-        p-2
+        bg-white/95 backdrop-blur-xl
+        shadow-2xl shadow-black/[0.08]
+        ring-1 ring-neutral-200/60
+        p-1.5
       "
     >
-      <div class="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-[#519fc0]/35 to-transparent"></div>
+      {{# Top accent line #}}
+      <div class="pointer-events-none absolute inset-x-0 top-0 h-[2px] bg-gradient-to-r from-transparent via-primary/30 to-transparent"></div>
 
-      <p class="px-3 pt-2 pb-1 text-[10px] font-semibold tracking-widest text-neutral-500 uppercase">
-        Kieli
+      <p class="px-3 pt-2.5 pb-1.5 text-[10px] font-semibold tracking-widest text-neutral-400 uppercase">
+        {{ trans:strings.language }}
       </p>
 
-      <ul class="mt-1 grid gap-1 p-1">
+      <ul class="mt-0.5 space-y-0.5">
         {{ sites }}
           <li>
             <a
@@ -81,12 +81,12 @@
                 group flex items-center justify-between
                 rounded-xl px-3 py-2.5
                 text-[13px] font-semibold
-                transition
-                focus:outline-none focus-visible:ring-2 focus-visible:ring-[#519fc0]/30
+                transition-all duration-150
+                focus:outline-none focus-visible:ring-2 focus-visible:ring-primary/25
                 {{ if handle == site:handle }}
-                  bg-[#519fc0]/10 text-neutral-900
+                  bg-primary/[0.07] text-neutral-900
                 {{ else }}
-                  text-neutral-700 hover:bg-neutral-900/5 hover:text-neutral-900
+                  text-neutral-600 hover:bg-neutral-100/80 hover:text-neutral-900
                 {{ /if }}
               "
               {{ if handle == site:handle }}aria-current="true"{{ /if }}
@@ -96,9 +96,9 @@
                   class="
                     inline-flex h-[18px] w-[26px]
                     items-center justify-center overflow-hidden
-                    rounded-[6px]
-                    ring-1 ring-black/10
-                    shadow-[0_1px_0_rgba(0,0,0,0.04)]
+                    rounded-[5px]
+                    ring-1 ring-black/8
+                    shadow-sm shadow-black/[0.04]
                     bg-white
                   "
                   aria-hidden="true"
@@ -116,8 +116,10 @@
               </span>
 
               {{ if handle == site:handle }}
-                <span class="text-[#519fc0]" aria-hidden="true">
-                  {{ svg:check attr:class="w-4 h-4 stroke-current stroke-[2.5]" }}
+                <span class="text-primary" aria-hidden="true">
+                  <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M20 6L9 17l-5-5"></path>
+                  </svg>
                 </span>
               {{ /if }}
             </a>

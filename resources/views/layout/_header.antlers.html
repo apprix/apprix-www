@@ -42,11 +42,13 @@
         <div class="justify-self-end hidden gap-2 items-center md:flex">
           {{ partial:navigation/language_switcher }}
 
+          {{ if id == 'home' }}
+          {{# Homepage: translucent button that becomes primary on scroll #}}
           <a
             href="/yritys"
             :class="scrolled
               ? 'bg-primary text-white ring-black/5 shadow-md shadow-black/10 hover:brightness-110'
-              : 'bg-white/35 text-neutral-900 ring-white/35 shadow-none hover:bg-white/20'"
+              : 'bg-white/40 text-neutral-900 ring-white/40 shadow-none hover:bg-white/80 hover:shadow-md hover:shadow-black/[0.06] hover:ring-white/70'"
             class="
               inline-flex items-center justify-center
               rounded-lg px-7 py-3
@@ -61,6 +63,27 @@
           >
             Ota yhteyttä
           </a>
+          {{ else }}
+          {{# Other pages: always primary button #}}
+          <a
+            href="/yritys"
+            class="
+              inline-flex items-center justify-center
+              rounded-lg px-7 py-3
+              text-sm font-semibold text-white
+              bg-primary
+              ring-1 ring-inset ring-black/5
+              shadow-md shadow-black/10
+              backdrop-blur
+              transition
+              hover:brightness-110 hover:shadow-lg hover:-translate-y-[1px]
+              active:translate-y-0
+              focus:outline-none focus-visible:ring-2 focus-visible:ring-primary/30 focus-visible:ring-offset-2
+            "
+          >
+            Ota yhteyttä
+          </a>
+          {{ /if }}
         </div>
 
       </div>

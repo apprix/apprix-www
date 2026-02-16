@@ -3,7 +3,7 @@
   @desc Full-width call-to-action section (brand-aligned, SaaS, image-backed).
 #}}
 
-<section class="relative isolate overflow-hidden mt-24">
+<section class="relative isolate overflow-hidden">
 
   {{# SECTION BACKGROUND — image-based #}}
   <div class="absolute inset-0">
@@ -28,11 +28,11 @@
     {{# softened vignette (less heavy on edges) #}}
     <div class="absolute inset-0 bg-gradient-to-b from-black/5 via-transparent to-black/10"></div>
 
-    {{# orange accent rails (brand continuity) #}}
-    <div class="pointer-events-none absolute inset-x-0 top-0 h-[3px]
-      bg-gradient-to-r from-transparent via-orange-300/80 to-transparent"></div>
-    <div class="pointer-events-none absolute inset-x-0 bottom-0 h-[3px]
-      bg-gradient-to-r from-transparent via-orange-300/80 to-transparent"></div>
+    {{# accent rails (brand continuity) #}}
+    <div class="pointer-events-none absolute inset-x-0 top-0 h-[2px]
+      bg-gradient-to-r from-transparent via-primary/60 to-transparent"></div>
+    <div class="pointer-events-none absolute inset-x-0 bottom-0 h-[2px]
+      bg-gradient-to-r from-transparent via-primary/60 to-transparent"></div>
   </div>
 
   {{# CONTENT #}}
@@ -61,20 +61,20 @@
               class="
                 inline-flex items-center justify-center
                 rounded-xl
-                bg-orange-600
+                bg-primary
                 px-12 py-4
                 text-md font-semibold text-white
 
-                shadow-lg shadow-orange-900/30
-                ring-1 ring-orange-400/40
+                shadow-lg shadow-black/20
+                ring-1 ring-white/15
 
                 transition
-                hover:bg-orange-700
+                hover:brightness-110
                 hover:shadow-xl
-                focus:outline-none focus-visible:ring-2 focus-visible:ring-orange-300
+                focus:outline-none focus-visible:ring-2 focus-visible:ring-white/40
               "
             >
-              Ota yhteyttä
+              {{ primary_button:title ?? button:title ?? title }}
             </a>
           </div>
         {{ /if }}

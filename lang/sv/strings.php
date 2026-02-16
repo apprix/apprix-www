@@ -18,6 +18,26 @@ return [
     'form_subject_sent' => 'Kontaktformulär skickat',
     'form_success' => 'Tack, vi har tagit emot ditt meddelande och kontaktar dig så snart som möjligt.',
     'form_required' => 'Obligatoriskt',
+    'form_success_sent' => 'Meddelandet har skickats.',
+    'form_error_check' => 'Kontrollera formulärfälten och försök igen.',
+    'form_submitting' => 'Skickar…',
+    'form_field_name' => 'Namn',
+    'form_field_company' => 'Företag',
+    'form_field_email' => 'E-post',
+    'form_field_phone' => 'Telefonnummer',
+    'form_field_message' => 'Meddelande',
+    'form_placeholder_name' => 'Förnamn Efternamn',
+    'form_placeholder_company' => 'Företagsnamn',
+    'form_placeholder_email' => 'namn@foretag.se',
+    'form_placeholder_phone' => '+46 ...',
+    'form_placeholder_message' => 'Beskriv kort er situation och vad ni söker...',
+
+    // Team cards
+    'team_phone' => 'Telefon',
+    'team_email' => 'E-post',
+    'team_copy' => 'Kopiera',
+    'team_call' => 'Ring',
+    'team_shared_contact' => 'Delad e-post',
 
     // Consent banner
     'consent_accept_all' => 'Acceptera alla',
@@ -45,6 +65,10 @@ return [
 
     // Footer
     'on' => 'på',
+
+    // Language switcher
+    'language' => 'Språk',
+    'change_language' => 'Byt språk',
 
     // Navigation
     'close' => 'Stäng',

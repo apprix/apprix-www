@@ -18,6 +18,26 @@ return [
     'form_subject_sent' => 'Contact form sent',
     'form_success' => 'Thank you, we received your message and will contact you as soon as possible.',
     'form_required' => 'Required',
+    'form_success_sent' => 'Message sent successfully.',
+    'form_error_check' => 'Please check the form fields and try again.',
+    'form_submitting' => 'Sending…',
+    'form_field_name' => 'Name',
+    'form_field_company' => 'Company',
+    'form_field_email' => 'Email',
+    'form_field_phone' => 'Phone number',
+    'form_field_message' => 'Message',
+    'form_placeholder_name' => 'First name Last name',
+    'form_placeholder_company' => 'Company name',
+    'form_placeholder_email' => 'name@company.com',
+    'form_placeholder_phone' => '+1 ...',
+    'form_placeholder_message' => 'Briefly describe your situation and what you are looking for...',
+
+    // Team cards
+    'team_phone' => 'Phone',
+    'team_email' => 'Email',
+    'team_copy' => 'Copy',
+    'team_call' => 'Call',
+    'team_shared_contact' => 'Shared email',
 
     // Consent banner
     'consent_accept_all' => 'Accept all',
@@ -45,6 +65,10 @@ return [
 
     // Footer
     'on' => 'on',
+
+    // Language switcher
+    'language' => 'Language',
+    'change_language' => 'Change language',
 
     // Navigation
     'close' => 'Close',

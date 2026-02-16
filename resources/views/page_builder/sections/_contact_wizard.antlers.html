@@ -5,27 +5,27 @@ Statamic form submissions). @set page.page_builder.contact_wizard #}}
     {{ bg = (block:background_image ? block:background_image:url :
     '/assets/images/contact/blue_bg2.jpg') }}
 
+    {{# Background image #}}
     <div
         class="pointer-events-none absolute inset-0 z-0 bg-cover bg-center"
         style="background-image: url('{{ bg }}');"
     ></div>
 
+    {{# Overlays — let the blue show through more #}}
     <div
-        class="pointer-events-none absolute inset-0 z-10 bg-gradient-to-r from-white/75 via-white/45 to-white/15"
+        class="pointer-events-none absolute inset-0 z-10 bg-gradient-to-r from-white/55 via-white/25 to-transparent"
     ></div>
     <div
-        class="pointer-events-none absolute inset-0 z-10 bg-gradient-to-b from-black/10 via-black/0 to-black/15 mix-blend-multiply"
+        class="pointer-events-none absolute inset-0 z-10 bg-gradient-to-b from-white/30 via-transparent to-black/10 mix-blend-multiply"
     ></div>
 
+    {{# Accent blobs #}}
     <div class="pointer-events-none absolute inset-0 z-10">
         <div
-            class="absolute -left-44 top-8 h-[24rem] w-[24rem] rounded-full bg-primary-200/16 blur-3xl"
+            class="absolute -left-44 top-8 h-[24rem] w-[24rem] rounded-full bg-primary/[0.08] blur-3xl"
         ></div>
         <div
-            class="absolute -right-44 bottom-[-6rem] h-[28rem] w-[28rem] rounded-full bg-sky-200/16 blur-3xl"
-        ></div>
-        <div
-            class="absolute right-20 top-10 h-36 w-36 rounded-full bg-white/18 blur-2xl"
+            class="absolute -right-44 bottom-[-6rem] h-[28rem] w-[28rem] rounded-full bg-sky-300/10 blur-3xl"
         ></div>
     </div>
 
@@ -33,13 +33,10 @@ Statamic form submissions). @set page.page_builder.contact_wizard #}}
         <div class="span-content">
             <div class="mx-auto max-w-6xl">
                 <div
-                    class="relative overflow-hidden rounded-3xl bg-white/84 shadow-xl shadow-black/10 ring-1 ring-black/10 backdrop-blur-sm"
+                    class="relative overflow-hidden rounded-2xl bg-white shadow-xl shadow-black/6 ring-1 ring-neutral-200/70"
                 >
                     <div
-                        class="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-primary/25 to-transparent"
-                    ></div>
-                    <div
-                        class="pointer-events-none absolute -right-24 -top-24 h-64 w-64 rounded-full bg-white/18 blur-3xl"
+                        class="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-neutral-200 to-transparent"
                     ></div>
 
                     <div class="p-6 md:p-10 lg:p-12">
@@ -49,131 +46,45 @@ Statamic form submissions). @set page.page_builder.contact_wizard #}}
                             trans:strings.form_send ?? 'Lähetä
                             yhteydenottopyyntö') }}
 
-                            <div class="mb-1">
-                                <div
-                                    class="flex flex-wrap items-center justify-between gap-3"
-                                >
-                                    <h3
-                                        class="text-balance text-2xl font-semibold tracking-tight text-neutral-900 md:text-3xl"
-                                        x-text="stepTitle()"
-                                    ></h3>
+                            {{# ── STEP INDICATOR ── #}}
+                            <div class="mb-2">
+                                <h3
+                                    class="text-balance text-2xl font-semibold tracking-tight text-neutral-900 md:text-3xl"
+                                    x-text="stepTitle()"
+                                ></h3>
 
-                                    <span
-                                        class="inline-flex items-center gap-2 rounded-full bg-neutral-900/5 px-3 py-1 text-xs font-semibold text-neutral-700 ring-1 ring-black/5 backdrop-blur-sm"
-                                    >
-                                        <svg
-                                            viewBox="0 0 24 24"
-                                            class="h-4 w-4 text-neutral-600"
-                                            fill="none"
-                                            stroke="currentColor"
-                                            stroke-width="2"
-                                            stroke-linecap="round"
-                                            stroke-linejoin="round"
-                                            aria-hidden="true"
-                                        >
-                                            <path
-                                                d="M4 6h16M4 12h10M4 18h16"
-                                            ></path>
-                                        </svg>
-                                        Vaihe
-                                        <span class="mx-1" x-text="step"></span
-                                        >/4
-                                    </span>
+                                {{# Horizontal stepper with labels #}}
+                                <div class="mt-8 grid grid-cols-4">
+                                    <template x-for="n in 4" :key="n">
+                                        <button type="button" @click="goTo(n)" class="group flex flex-col items-center gap-2.5">
+                                            <div class="flex w-full items-center">
+                                                <div class="h-0.5 flex-1 rounded-full transition-colors duration-500" :class="n > 1 ? (n <= step ? 'bg-primary' : 'bg-neutral-200') : 'bg-transparent'"></div>
+                                                <span class="relative grid h-10 w-10 shrink-0 place-items-center rounded-full text-sm font-bold transition-all duration-300"
+                                                    :class="n < step
+                                                        ? 'bg-primary text-white shadow-sm'
+                                                        : (n === step
+                                                            ? 'bg-primary text-white shadow-lg shadow-primary/25 scale-110'
+                                                            : 'bg-neutral-100 text-neutral-400 group-hover:bg-neutral-200')">
+                                                    <svg x-cloak x-show="n < step" class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"></path></svg>
+                                                    <span x-show="n >= step" x-text="n"></span>
+                                                </span>
+                                                <div class="h-0.5 flex-1 rounded-full transition-colors duration-500" :class="n < 4 ? (n < step ? 'bg-primary' : 'bg-neutral-200') : 'bg-transparent'"></div>
+                                            </div>
+                                            <span class="text-[11px] font-semibold tracking-wide" :class="n <= step ? 'text-neutral-700' : 'text-neutral-400'" x-text="dotLabel(n)"></span>
+                                        </button>
+                                    </template>
                                 </div>
 
-                                {{# PREMIUM PROGRESS (steps sit ON the bar) #}}
-                                <div class="mt-6">
-                                    <div class="relative pt-6">
-                                        {{# TRACK + FILL (bar behind the step
-                                        circles) #}}
-                                        <div
-                                            class="relative h-3 w-full overflow-hidden rounded-full bg-black/[0.04] ring-1 ring-black/10"
-                                        >
-                                            <div
-                                                class="pointer-events-none absolute inset-0 bg-gradient-to-b from-white/70 via-white/30 to-transparent"
-                                            ></div>
-
-                                            <div
-                                                class="absolute left-0 top-0 h-full rounded-full bg-primary/70 transition-all duration-500 ease-out will-change-[width]"
-                                                :style="`width: ${progress()}%`"
-                                            >
-                                                <div
-                                                    class="pointer-events-none absolute inset-0 bg-gradient-to-r from-white/25 via-white/0 to-white/20"
-                                                ></div>
-                                                <div
-                                                    class="pointer-events-none absolute inset-x-0 top-0 h-px bg-white/60"
-                                                ></div>
-                                            </div>
-                                        </div>
-
-                                        {{# STEP CIRCLES (attached to the bar)
-                                        #}}
-                                        <div
-                                            class="absolute left-0 right-0 top-8 -translate-y-1/2"
-                                        >
-                                            <div
-                                                class="relative flex items-center justify-between"
-                                            >
-                                                <template
-                                                    x-for="n in 4"
-                                                    :key="n"
-                                                >
-                                                    <button
-                                                        type="button"
-                                                        class="group relative inline-flex items-center justify-center"
-                                                        @click="goTo(n)"
-                                                    >
-                                                        {{# active halo (subtle)
-                                                        #}}
-                                                        <span
-                                                            class="pointer-events-none absolute inset-0 -m-2 rounded-full opacity-0 transition duration-300"
-                                                            :class="n === step ? 'opacity-100' : ''"
-                                                        >
-                                                            <span
-                                                                class="absolute inset-0 rounded-full bg-primary/15 blur-xl"
-                                                            ></span>
-                                                        </span>
-
-                                                        <span
-                                                            class="relative grid h-11 w-11 place-items-center rounded-full text-sm font-semibold transition duration-300 ring-1 ring-black/10 will-change-transform"
-                                                            :class="
-                      n < step
-                        ? 'bg-primary text-white shadow-md shadow-black/10'
-                        : (n === step
-                            ? 'bg-white text-neutral-900 ring-primary/30 shadow-sm shadow-black/10 scale-[1.06]'
-                            : 'bg-white/80 text-neutral-500 hover:bg-white')
-                    "
-                                                        >
-                                                            <span
-                                                                class="pointer-events-none absolute inset-0 rounded-full bg-gradient-to-b from-white/55 via-white/0 to-black/10 opacity-70"
-                                                            ></span>
-                                                            <span
-                                                                class="relative"
-                                                                x-text="n"
-                                                            ></span>
-                                                        </span>
-                                                    </button>
-                                                </template>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    {{# Error stays same #}}
-                                    <div
-                                        x-cloak
-                                        x-show="attempted && stepError"
-                                        x-transition
-                                        class="mt-6 rounded-xl border border-rose-200 bg-rose-50/80 px-4 py-3 text-sm text-rose-900"
-                                    >
-                                        <span x-text="stepError"></span>
-                                    </div>
+                                {{# Error (fixed height so it doesn't push content) #}}
+                                <div class="mt-4 flex h-8 items-center">
+                                    <p x-cloak x-show="attempted && stepError" x-transition.opacity class="text-sm font-medium text-rose-600" x-text="stepError"></p>
                                 </div>
                             </div>
 
                             {{ if form_handle }} {{ form:create
                             :in="form_handle" js="alpine:form" attr:x-ref="form"
                             }}
-                            <div class="flex flex-col gap-7">
+                            <div class="flex flex-col gap-4">
                                 <div class="space-y-3">
                                     <div
                                         x-cloak
@@ -181,7 +92,7 @@ Statamic form submissions). @set page.page_builder.contact_wizard #}}
                                         x-transition
                                         class="rounded-xl border border-emerald-200 bg-emerald-50/80 px-4 py-3 text-sm text-emerald-900"
                                     >
-                                        Viesti lähetetty onnistuneesti.
+                                        {{ trans:wizard.success_message }}
                                     </div>
 
                                     <div
@@ -190,15 +101,14 @@ Statamic form submissions). @set page.page_builder.contact_wizard #}}
                                         x-transition
                                         class="rounded-xl border border-rose-200 bg-rose-50/80 px-4 py-3 text-sm text-rose-900"
                                     >
-                                        Tarkista lomakkeen kentät ja yritä
-                                        uudelleen.
+                                        {{ trans:wizard.error_message }}
                                     </div>
                                 </div>
 
                                 {{# STEP 1 #}}
-                                <div x-show="step === 1" x-transition.opacity>
+                                <div x-show="step === 1" x-transition.opacity class="min-h-[22rem]">
                                     <div
-                                        class="mt-2 grid gap-5 sm:grid-cols-2 items-stretch"
+                                        class="grid gap-4 sm:grid-cols-2 items-stretch"
                                     >
                                         {{# learning_environment #}}
                                         <label class="group cursor-pointer">
@@ -209,11 +119,9 @@ Statamic form submissions). @set page.page_builder.contact_wizard #}}
                                                 value="learning_environment"
                                             />
                                             <div
-                                                class="relative h-full min-h-[190px] overflow-hidden rounded-3xl border border-black/10 bg-white/70 shadow-sm shadow-black/5 transition hover:-translate-y-0.5 hover:bg-white hover:border-neutral-200 hover:shadow-md hover:shadow-black/10 peer-checked:border-primary/35 peer-checked:bg-white peer-checked:ring-4 peer-checked:ring-primary/12"
+                                                class="relative h-full min-h-[190px] overflow-hidden rounded-xl border-2 border-neutral-200 bg-white shadow-sm transition hover:-translate-y-0.5 hover:border-neutral-300 hover:shadow-md peer-checked:border-primary peer-checked:bg-primary/[0.04] peer-checked:shadow-md peer-checked:shadow-primary/10"
                                             >
-                                                <div
-                                                    class="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-primary/25 to-transparent opacity-60"
-                                                ></div>
+                                                {{# top accent #}}
                                                 <div
                                                     class="pointer-events-none absolute -right-10 -top-10 h-28 w-28 rounded-full bg-primary/10 blur-2xl opacity-0 transition group-hover:opacity-100"
                                                 ></div>
@@ -235,7 +143,7 @@ Statamic form submissions). @set page.page_builder.contact_wizard #}}
                                                             d="M20 6L9 17l-5-5"
                                                         ></path>
                                                     </svg>
-                                                    Valittu
+                                                    {{ trans:wizard.selected }}
                                                 </div>
 
                                                 <div
@@ -316,14 +224,12 @@ Statamic form submissions). @set page.page_builder.contact_wizard #}}
                                                             <p
                                                                 class="text-lg font-semibold tracking-tight text-neutral-900"
                                                             >
-                                                                Oppimisympäristö
+                                                                {{ trans:wizard.opt_learning_env }}
                                                             </p>
                                                             <p
                                                                 class="mt-2 text-sm leading-relaxed text-neutral-600"
                                                             >
-                                                                LMS-alusta ja
-                                                                oppimisen
-                                                                hallinta.
+                                                                {{ trans:wizard.opt_learning_env_desc }}
                                                             </p>
 
                                                             <div
@@ -351,12 +257,10 @@ Statamic form submissions). @set page.page_builder.contact_wizard #}}
                                             />
 
                                             <div
-                                                class="relative h-full min-h-[190px] overflow-hidden rounded-3xl border border-black/10 bg-white/70 shadow-sm shadow-black/5 transition hover:-translate-y-0.5 hover:bg-white hover:border-neutral-200 hover:shadow-md hover:shadow-black/10 peer-checked:border-primary/35 peer-checked:bg-white peer-checked:ring-4 peer-checked:ring-primary/12"
+                                                class="relative h-full min-h-[190px] overflow-hidden rounded-xl border-2 border-neutral-200 bg-white shadow-sm transition hover:-translate-y-0.5 hover:border-neutral-300 hover:shadow-md peer-checked:border-primary peer-checked:bg-primary/[0.04] peer-checked:shadow-md peer-checked:shadow-primary/10"
                                             >
                                                 {{# top accent line #}}
-                                                <div
-                                                    class="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-primary/25 to-transparent opacity-60"
-                                                ></div>
+                                                {{# top accent #}}
 
                                                 {{# selected badge #}}
                                                 <div
@@ -376,7 +280,7 @@ Statamic form submissions). @set page.page_builder.contact_wizard #}}
                                                             d="M20 6L9 17l-5-5"
                                                         ></path>
                                                     </svg>
-                                                    Valittu
+                                                    {{ trans:wizard.selected }}
                                                 </div>
 
                                                 {{# main layout #}}
@@ -449,14 +353,12 @@ Statamic form submissions). @set page.page_builder.contact_wizard #}}
                                                         <p
                                                             class="text-lg font-semibold tracking-tight text-neutral-900"
                                                         >
-                                                            Sisällöntuotannon
-                                                            työkalu
+                                                            {{ trans:wizard.opt_authoring_tool }}
                                                         </p>
                                                         <p
                                                             class="mt-2 text-sm leading-relaxed text-neutral-600"
                                                         >
-                                                            Luo ja julkaise
-                                                            koulutussisältöä.
+                                                            {{ trans:wizard.opt_authoring_tool_desc }}
                                                         </p>
 
                                                         <div class="mt-6">
@@ -479,12 +381,10 @@ Statamic form submissions). @set page.page_builder.contact_wizard #}}
                                             />
 
                                             <div
-                                                class="relative h-full min-h-[190px] overflow-hidden rounded-3xl border border-black/10 bg-white/70 shadow-sm shadow-black/5 transition hover:-translate-y-0.5 hover:bg-white hover:border-neutral-200 hover:shadow-md hover:shadow-black/10 peer-checked:border-primary/35 peer-checked:bg-white peer-checked:ring-4 peer-checked:ring-primary/12"
+                                                class="relative h-full min-h-[190px] overflow-hidden rounded-xl border-2 border-neutral-200 bg-white shadow-sm transition hover:-translate-y-0.5 hover:border-neutral-300 hover:shadow-md peer-checked:border-primary peer-checked:bg-primary/[0.04] peer-checked:shadow-md peer-checked:shadow-primary/10"
                                             >
                                                 {{# top accent line #}}
-                                                <div
-                                                    class="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-primary/25 to-transparent opacity-60"
-                                                ></div>
+                                                {{# top accent #}}
 
                                                 {{# selected badge #}}
                                                 <div
@@ -504,7 +404,7 @@ Statamic form submissions). @set page.page_builder.contact_wizard #}}
                                                             d="M20 6L9 17l-5-5"
                                                         ></path>
                                                     </svg>
-                                                    Valittu
+                                                    {{ trans:wizard.selected }}
                                                 </div>
 
                                                 {{# main layout #}}
@@ -579,15 +479,12 @@ Statamic form submissions). @set page.page_builder.contact_wizard #}}
                                                         <p
                                                             class="text-lg font-semibold tracking-tight text-neutral-900"
                                                         >
-                                                            Räätälöidyt
-                                                            verkkokoulutukset
+                                                            {{ trans:wizard.opt_custom_trainings }}
                                                         </p>
                                                         <p
                                                             class="mt-2 text-sm leading-relaxed text-neutral-600"
                                                         >
-                                                            Tarpeisiin
-                                                            suunniteltu
-                                                            kokonaisuus.
+                                                            {{ trans:wizard.opt_custom_trainings_desc }}
                                                         </p>
 
                                                         <div class="mt-6">
@@ -610,12 +507,10 @@ Statamic form submissions). @set page.page_builder.contact_wizard #}}
                                             />
 
                                             <div
-                                                class="relative h-full min-h-[190px] overflow-hidden rounded-3xl border border-black/10 bg-white/70 shadow-sm shadow-black/5 transition hover:-translate-y-0.5 hover:bg-white hover:border-neutral-200 hover:shadow-md hover:shadow-black/10 peer-checked:border-primary/35 peer-checked:bg-white peer-checked:ring-4 peer-checked:ring-primary/12"
+                                                class="relative h-full min-h-[190px] overflow-hidden rounded-xl border-2 border-neutral-200 bg-white shadow-sm transition hover:-translate-y-0.5 hover:border-neutral-300 hover:shadow-md peer-checked:border-primary peer-checked:bg-primary/[0.04] peer-checked:shadow-md peer-checked:shadow-primary/10"
                                             >
                                                 {{# top accent line #}}
-                                                <div
-                                                    class="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-primary/25 to-transparent opacity-60"
-                                                ></div>
+                                                {{# top accent #}}
 
                                                 {{# selected badge #}}
                                                 <div
@@ -635,7 +530,7 @@ Statamic form submissions). @set page.page_builder.contact_wizard #}}
                                                             d="M20 6L9 17l-5-5"
                                                         ></path>
                                                     </svg>
-                                                    Valittu
+                                                    {{ trans:wizard.selected }}
                                                 </div>
 
                                                 {{# main layout #}}
@@ -712,15 +607,12 @@ Statamic form submissions). @set page.page_builder.contact_wizard #}}
                                                         <p
                                                             class="text-lg font-semibold tracking-tight text-neutral-900"
                                                         >
-                                                            Valmiit
-                                                            verkkokoulutukset
+                                                            {{ trans:wizard.opt_ready_trainings }}
                                                         </p>
                                                         <p
                                                             class="mt-2 text-sm leading-relaxed text-neutral-600"
                                                         >
-                                                            Nopea aloitus
-                                                            valmiilla
-                                                            sisällöillä.
+                                                            {{ trans:wizard.opt_ready_trainings_desc }}
                                                         </p>
 
                                                         <div class="mt-6">
@@ -736,9 +628,9 @@ Statamic form submissions). @set page.page_builder.contact_wizard #}}
                                 </div>
 
                                 {{# STEP 2 (same fix) #}}
-                                <div x-show="step === 2" x-transition.opacity>
+                                <div x-show="step === 2" x-transition.opacity class="min-h-[22rem]">
                                     <div
-                                        class="mt-2 grid gap-5 md:grid-cols-2 items-stretch"
+                                        class="grid gap-4 md:grid-cols-2 items-stretch"
                                     >
                                         {{# INTERNAL #}}
                                         <label class="group cursor-pointer">
@@ -750,11 +642,9 @@ Statamic form submissions). @set page.page_builder.contact_wizard #}}
                                             />
 
                                             <div
-                                                class="relative h-full min-h-[190px] overflow-hidden rounded-3xl border border-black/10 bg-white/70 shadow-sm shadow-black/5 transition hover:-translate-y-0.5 hover:bg-white hover:border-neutral-200 hover:shadow-md hover:shadow-black/10 peer-checked:border-primary/35 peer-checked:bg-white peer-checked:ring-4 peer-checked:ring-primary/12"
+                                                class="relative h-full min-h-[190px] overflow-hidden rounded-xl border-2 border-neutral-200 bg-white shadow-sm transition hover:-translate-y-0.5 hover:border-neutral-300 hover:shadow-md peer-checked:border-primary peer-checked:bg-primary/[0.04] peer-checked:shadow-md peer-checked:shadow-primary/10"
                                             >
-                                                <div
-                                                    class="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-primary/25 to-transparent opacity-60"
-                                                ></div>
+                                                {{# top accent #}}
 
                                                 <div
                                                     class="grid h-full grid-cols-[240px_1fr]"
@@ -820,13 +710,12 @@ Statamic form submissions). @set page.page_builder.contact_wizard #}}
                                                         <p
                                                             class="text-lg font-semibold tracking-tight text-neutral-900"
                                                         >
-                                                            Sisäiseen käyttöön
+                                                            {{ trans:wizard.opt_internal }}
                                                         </p>
                                                         <p
                                                             class="mt-2 text-sm leading-relaxed text-neutral-600"
                                                         >
-                                                            Henkilöstön koulutus
-                                                            ja perehdytys.
+                                                            {{ trans:wizard.opt_internal_desc }}
                                                         </p>
                                                         <div
                                                             class="mt-6 h-px w-full bg-gradient-to-r from-transparent via-black/10 to-transparent"
@@ -846,11 +735,9 @@ Statamic form submissions). @set page.page_builder.contact_wizard #}}
                                             />
 
                                             <div
-                                                class="relative h-full min-h-[190px] overflow-hidden rounded-3xl border border-black/10 bg-white/70 shadow-sm shadow-black/5 transition hover:-translate-y-0.5 hover:bg-white hover:border-neutral-200 hover:shadow-md hover:shadow-black/10 peer-checked:border-primary/35 peer-checked:bg-white peer-checked:ring-4 peer-checked:ring-primary/12"
+                                                class="relative h-full min-h-[190px] overflow-hidden rounded-xl border-2 border-neutral-200 bg-white shadow-sm transition hover:-translate-y-0.5 hover:border-neutral-300 hover:shadow-md peer-checked:border-primary peer-checked:bg-primary/[0.04] peer-checked:shadow-md peer-checked:shadow-primary/10"
                                             >
-                                                <div
-                                                    class="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-primary/25 to-transparent opacity-60"
-                                                ></div>
+                                                {{# top accent #}}
 
                                                 <div
                                                     class="grid h-full grid-cols-[240px_1fr]"
@@ -894,13 +781,12 @@ Statamic form submissions). @set page.page_builder.contact_wizard #}}
                                                         <p
                                                             class="text-lg font-semibold tracking-tight text-neutral-900"
                                                         >
-                                                            Ulkoiseen käyttöön
+                                                            {{ trans:wizard.opt_external }}
                                                         </p>
                                                         <p
                                                             class="mt-2 text-sm leading-relaxed text-neutral-600"
                                                         >
-                                                            Asiakkaat, kumppanit
-                                                            tai verkostot.
+                                                            {{ trans:wizard.opt_external_desc }}
                                                         </p>
                                                         <div
                                                             class="mt-6 h-px w-full bg-gradient-to-r from-transparent via-black/10 to-transparent"
@@ -920,11 +806,9 @@ Statamic form submissions). @set page.page_builder.contact_wizard #}}
                                             />
 
                                             <div
-                                                class="relative h-full min-h-[190px] overflow-hidden rounded-3xl border border-black/10 bg-white/70 shadow-sm shadow-black/5 transition hover:-translate-y-0.5 hover:bg-white hover:border-neutral-200 hover:shadow-md hover:shadow-black/10 peer-checked:border-primary/35 peer-checked:bg-white peer-checked:ring-4 peer-checked:ring-primary/12"
+                                                class="relative h-full min-h-[190px] overflow-hidden rounded-xl border-2 border-neutral-200 bg-white shadow-sm transition hover:-translate-y-0.5 hover:border-neutral-300 hover:shadow-md peer-checked:border-primary peer-checked:bg-primary/[0.04] peer-checked:shadow-md peer-checked:shadow-primary/10"
                                             >
-                                                <div
-                                                    class="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-primary/25 to-transparent opacity-60"
-                                                ></div>
+                                                {{# top accent #}}
 
                                                 <div
                                                     class="grid h-full grid-cols-[240px_1fr]"
@@ -967,13 +851,12 @@ Statamic form submissions). @set page.page_builder.contact_wizard #}}
                                                         <p
                                                             class="text-lg font-semibold tracking-tight text-neutral-900"
                                                         >
-                                                            Molempiin
+                                                            {{ trans:wizard.opt_both }}
                                                         </p>
                                                         <p
                                                             class="mt-2 text-sm leading-relaxed text-neutral-600"
                                                         >
-                                                            Yksi ratkaisu useaan
-                                                            käyttötapaan.
+                                                            {{ trans:wizard.opt_both_desc }}
                                                         </p>
                                                         <div
                                                             class="mt-6 h-px w-full bg-gradient-to-r from-transparent via-black/10 to-transparent"
@@ -986,15 +869,15 @@ Statamic form submissions). @set page.page_builder.contact_wizard #}}
                                 </div>
                                 {{# STEP 3: optional industry chips (only
                                 visible on step 3) #}}
-                                <div x-show="step === 3" x-transition.opacity>
-                                    <div class="mt-2">
+                                <div x-show="step === 3" x-transition.opacity class="min-h-[22rem]">
+                                    <div
                                         <p
                                             class="text-[11px] font-semibold tracking-widest text-neutral-500 uppercase"
                                         >
-                                            Toimiala (valinnainen)
+                                            {{ trans:wizard.industry_label }}
                                         </p>
 
-                                        <div class="mt-3 flex flex-wrap gap-2">
+                                        <div class="mt-4 grid grid-cols-2 gap-3 sm:grid-cols-3">
                                             <label class="cursor-pointer">
                                                 <input
                                                     class="peer sr-only"
@@ -1003,9 +886,9 @@ Statamic form submissions). @set page.page_builder.contact_wizard #}}
                                                     value="food"
                                                 />
                                                 <span
-                                                    class="inline-flex items-center rounded-full border border-black/10 bg-white/70 px-3 py-2 text-xs font-semibold text-neutral-800 shadow-sm shadow-black/5 transition hover:bg-white hover:border-neutral-200 peer-checked:border-primary/35 peer-checked:bg-primary/8 peer-checked:ring-4 peer-checked:ring-primary/10"
+                                                    class="inline-flex items-center justify-center rounded-xl border-2 border-neutral-200 bg-white px-5 py-3.5 text-sm font-semibold text-neutral-700 transition hover:border-neutral-300 hover:bg-neutral-50 peer-checked:border-primary peer-checked:bg-primary/5 peer-checked:text-primary"
                                                 >
-                                                    Elintarviketeollisuus
+                                                    {{ trans:wizard.ind_food }}
                                                 </span>
                                             </label>
 
@@ -1017,9 +900,9 @@ Statamic form submissions). @set page.page_builder.contact_wizard #}}
                                                     value="energy"
                                                 />
                                                 <span
-                                                    class="inline-flex items-center rounded-full border border-black/10 bg-white/70 px-3 py-2 text-xs font-semibold text-neutral-800 shadow-sm shadow-black/5 transition hover:bg-white hover:border-neutral-200 peer-checked:border-primary/35 peer-checked:bg-primary/8 peer-checked:ring-4 peer-checked:ring-primary/10"
+                                                    class="inline-flex items-center justify-center rounded-xl border-2 border-neutral-200 bg-white px-5 py-3.5 text-sm font-semibold text-neutral-700 transition hover:border-neutral-300 hover:bg-neutral-50 peer-checked:border-primary peer-checked:bg-primary/5 peer-checked:text-primary"
                                                 >
-                                                    Energia-ala
+                                                    {{ trans:wizard.ind_energy }}
                                                 </span>
                                             </label>
 
@@ -1031,9 +914,9 @@ Statamic form submissions). @set page.page_builder.contact_wizard #}}
                                                     value="retail"
                                                 />
                                                 <span
-                                                    class="inline-flex items-center rounded-full border border-black/10 bg-white/70 px-3 py-2 text-xs font-semibold text-neutral-800 shadow-sm shadow-black/5 transition hover:bg-white hover:border-neutral-200 peer-checked:border-primary/35 peer-checked:bg-primary/8 peer-checked:ring-4 peer-checked:ring-primary/10"
+                                                    class="inline-flex items-center justify-center rounded-xl border-2 border-neutral-200 bg-white px-5 py-3.5 text-sm font-semibold text-neutral-700 transition hover:border-neutral-300 hover:bg-neutral-50 peer-checked:border-primary peer-checked:bg-primary/5 peer-checked:text-primary"
                                                 >
-                                                    Kaupan ala
+                                                    {{ trans:wizard.ind_retail }}
                                                 </span>
                                             </label>
 
@@ -1045,9 +928,9 @@ Statamic form submissions). @set page.page_builder.contact_wizard #}}
                                                     value="logistics"
                                                 />
                                                 <span
-                                                    class="inline-flex items-center rounded-full border border-black/10 bg-white/70 px-3 py-2 text-xs font-semibold text-neutral-800 shadow-sm shadow-black/5 transition hover:bg-white hover:border-neutral-200 peer-checked:border-primary/35 peer-checked:bg-primary/8 peer-checked:ring-4 peer-checked:ring-primary/10"
+                                                    class="inline-flex items-center justify-center rounded-xl border-2 border-neutral-200 bg-white px-5 py-3.5 text-sm font-semibold text-neutral-700 transition hover:border-neutral-300 hover:bg-neutral-50 peer-checked:border-primary peer-checked:bg-primary/5 peer-checked:text-primary"
                                                 >
-                                                    Kuljetus ja logistiikka
+                                                    {{ trans:wizard.ind_logistics }}
                                                 </span>
                                             </label>
 
@@ -1059,9 +942,9 @@ Statamic form submissions). @set page.page_builder.contact_wizard #}}
                                                     value="services"
                                                 />
                                                 <span
-                                                    class="inline-flex items-center rounded-full border border-black/10 bg-white/70 px-3 py-2 text-xs font-semibold text-neutral-800 shadow-sm shadow-black/5 transition hover:bg-white hover:border-neutral-200 peer-checked:border-primary/35 peer-checked:bg-primary/8 peer-checked:ring-4 peer-checked:ring-primary/10"
+                                                    class="inline-flex items-center justify-center rounded-xl border-2 border-neutral-200 bg-white px-5 py-3.5 text-sm font-semibold text-neutral-700 transition hover:border-neutral-300 hover:bg-neutral-50 peer-checked:border-primary peer-checked:bg-primary/5 peer-checked:text-primary"
                                                 >
-                                                    Palvelut ja konsultointi
+                                                    {{ trans:wizard.ind_services }}
                                                 </span>
                                             </label>
 
@@ -1073,9 +956,9 @@ Statamic form submissions). @set page.page_builder.contact_wizard #}}
                                                     value="finance"
                                                 />
                                                 <span
-                                                    class="inline-flex items-center rounded-full border border-black/10 bg-white/70 px-3 py-2 text-xs font-semibold text-neutral-800 shadow-sm shadow-black/5 transition hover:bg-white hover:border-neutral-200 peer-checked:border-primary/35 peer-checked:bg-primary/8 peer-checked:ring-4 peer-checked:ring-primary/10"
+                                                    class="inline-flex items-center justify-center rounded-xl border-2 border-neutral-200 bg-white px-5 py-3.5 text-sm font-semibold text-neutral-700 transition hover:border-neutral-300 hover:bg-neutral-50 peer-checked:border-primary peer-checked:bg-primary/5 peer-checked:text-primary"
                                                 >
-                                                    Pankit ja rahoitus
+                                                    {{ trans:wizard.ind_finance }}
                                                 </span>
                                             </label>
 
@@ -1087,10 +970,9 @@ Statamic form submissions). @set page.page_builder.contact_wizard #}}
                                                     value="construction"
                                                 />
                                                 <span
-                                                    class="inline-flex items-center rounded-full border border-black/10 bg-white/70 px-3 py-2 text-xs font-semibold text-neutral-800 shadow-sm shadow-black/5 transition hover:bg-white hover:border-neutral-200 peer-checked:border-primary/35 peer-checked:bg-primary/8 peer-checked:ring-4 peer-checked:ring-primary/10"
+                                                    class="inline-flex items-center justify-center rounded-xl border-2 border-neutral-200 bg-white px-5 py-3.5 text-sm font-semibold text-neutral-700 transition hover:border-neutral-300 hover:bg-neutral-50 peer-checked:border-primary peer-checked:bg-primary/5 peer-checked:text-primary"
                                                 >
-                                                    Rakentaminen ja
-                                                    infrastruktuuri
+                                                    {{ trans:wizard.ind_construction }}
                                                 </span>
                                             </label>
 
@@ -1102,9 +984,9 @@ Statamic form submissions). @set page.page_builder.contact_wizard #}}
                                                     value="manufacturing"
                                                 />
                                                 <span
-                                                    class="inline-flex items-center rounded-full border border-black/10 bg-white/70 px-3 py-2 text-xs font-semibold text-neutral-800 shadow-sm shadow-black/5 transition hover:bg-white hover:border-neutral-200 peer-checked:border-primary/35 peer-checked:bg-primary/8 peer-checked:ring-4 peer-checked:ring-primary/10"
+                                                    class="inline-flex items-center justify-center rounded-xl border-2 border-neutral-200 bg-white px-5 py-3.5 text-sm font-semibold text-neutral-700 transition hover:border-neutral-300 hover:bg-neutral-50 peer-checked:border-primary peer-checked:bg-primary/5 peer-checked:text-primary"
                                                 >
-                                                    Teollisuus ja tuotanto
+                                                    {{ trans:wizard.ind_manufacturing }}
                                                 </span>
                                             </label>
 
@@ -1116,9 +998,9 @@ Statamic form submissions). @set page.page_builder.contact_wizard #}}
                                                     value="other"
                                                 />
                                                 <span
-                                                    class="inline-flex items-center rounded-full border border-black/10 bg-white/70 px-3 py-2 text-xs font-semibold text-neutral-800 shadow-sm shadow-black/5 transition hover:bg-white hover:border-neutral-200 peer-checked:border-primary/35 peer-checked:bg-primary/8 peer-checked:ring-4 peer-checked:ring-primary/10"
+                                                    class="inline-flex items-center justify-center rounded-xl border-2 border-neutral-200 bg-white px-5 py-3.5 text-sm font-semibold text-neutral-700 transition hover:border-neutral-300 hover:bg-neutral-50 peer-checked:border-primary peer-checked:bg-primary/5 peer-checked:text-primary"
                                                 >
-                                                    Muu
+                                                    {{ trans:wizard.ind_other }}
                                                 </span>
                                             </label>
                                         </div>
@@ -1126,23 +1008,23 @@ Statamic form submissions). @set page.page_builder.contact_wizard #}}
                                 </div>
 
                                 {{# STEP 4: contact fields #}}
-                                <div x-show="step === 4" x-transition.opacity>
+                                <div x-show="step === 4" x-transition.opacity class="min-h-[22rem]">
                                     <div class="grid gap-5 md:grid-cols-2">
                                         <div>
                                             <label
                                                 class="mb-2 block text-[11px] font-semibold tracking-widest text-neutral-500 uppercase"
                                             >
-                                                Nimi
+                                                {{ trans:wizard.field_name }}
                                                 <span class="text-rose-600"
                                                     >*</span
                                                 >
                                             </label>
                                             <input
-                                                class="input w-full rounded-xl border border-transparent bg-neutral-50/80 px-4 py-3 text-sm text-neutral-900 shadow-sm outline-none transition placeholder:text-neutral-400 hover:bg-white hover:border-neutral-200/70 focus:bg-white focus:border-[#519fc0]/40 focus:ring-4 focus:ring-[#519fc0]/12"
+                                                class="input w-full rounded-xl border border-neutral-300 bg-neutral-50 px-4 py-3 text-sm text-neutral-900 shadow-sm outline-none transition placeholder:text-neutral-400 hover:border-neutral-400 focus:bg-white focus:border-[#519fc0] focus:ring-4 focus:ring-[#519fc0]/12"
                                                 type="text"
                                                 name="name"
                                                 autocomplete="name"
-                                                placeholder="Etunimi Sukunimi"
+                                                placeholder="{{ trans:wizard.placeholder_name }}"
                                             />
                                         </div>
 
@@ -1150,14 +1032,14 @@ Statamic form submissions). @set page.page_builder.contact_wizard #}}
                                             <label
                                                 class="mb-2 block text-[11px] font-semibold tracking-widest text-neutral-500 uppercase"
                                             >
-                                                Yritys
+                                                {{ trans:wizard.field_company }}
                                             </label>
                                             <input
-                                                class="input w-full rounded-xl border border-transparent bg-neutral-50/80 px-4 py-3 text-sm text-neutral-900 shadow-sm outline-none transition placeholder:text-neutral-400 hover:bg-white hover:border-neutral-200/70 focus:bg-white focus:border-[#519fc0]/40 focus:ring-4 focus:ring-[#519fc0]/12"
+                                                class="input w-full rounded-xl border border-neutral-300 bg-neutral-50 px-4 py-3 text-sm text-neutral-900 shadow-sm outline-none transition placeholder:text-neutral-400 hover:border-neutral-400 focus:bg-white focus:border-[#519fc0] focus:ring-4 focus:ring-[#519fc0]/12"
                                                 type="text"
                                                 name="company"
                                                 autocomplete="organization"
-                                                placeholder="Yrityksen nimi"
+                                                placeholder="{{ trans:wizard.placeholder_company }}"
                                             />
                                         </div>
 
@@ -1165,17 +1047,17 @@ Statamic form submissions). @set page.page_builder.contact_wizard #}}
                                             <label
                                                 class="mb-2 block text-[11px] font-semibold tracking-widest text-neutral-500 uppercase"
                                             >
-                                                Sähköposti
+                                                {{ trans:wizard.field_email }}
                                                 <span class="text-rose-600"
                                                     >*</span
                                                 >
                                             </label>
                                             <input
-                                                class="input w-full rounded-xl border border-transparent bg-neutral-50/80 px-4 py-3 text-sm text-neutral-900 shadow-sm outline-none transition placeholder:text-neutral-400 hover:bg-white hover:border-neutral-200/70 focus:bg-white focus:border-[#519fc0]/40 focus:ring-4 focus:ring-[#519fc0]/12"
+                                                class="input w-full rounded-xl border border-neutral-300 bg-neutral-50 px-4 py-3 text-sm text-neutral-900 shadow-sm outline-none transition placeholder:text-neutral-400 hover:border-neutral-400 focus:bg-white focus:border-[#519fc0] focus:ring-4 focus:ring-[#519fc0]/12"
                                                 type="email"
                                                 name="email"
                                                 autocomplete="email"
-                                                placeholder="nimi@yritys.fi"
+                                                placeholder="{{ trans:wizard.placeholder_email }}"
                                             />
                                         </div>
 
@@ -1183,14 +1065,14 @@ Statamic form submissions). @set page.page_builder.contact_wizard #}}
                                             <label
                                                 class="mb-2 block text-[11px] font-semibold tracking-widest text-neutral-500 uppercase"
                                             >
-                                                Puhelinnumero
+                                                {{ trans:wizard.field_phone }}
                                             </label>
                                             <input
-                                                class="input w-full rounded-xl border border-transparent bg-neutral-50/80 px-4 py-3 text-sm text-neutral-900 shadow-sm outline-none transition placeholder:text-neutral-400 hover:bg-white hover:border-neutral-200/70 focus:bg-white focus:border-[#519fc0]/40 focus:ring-4 focus:ring-[#519fc0]/12"
+                                                class="input w-full rounded-xl border border-neutral-300 bg-neutral-50 px-4 py-3 text-sm text-neutral-900 shadow-sm outline-none transition placeholder:text-neutral-400 hover:border-neutral-400 focus:bg-white focus:border-[#519fc0] focus:ring-4 focus:ring-[#519fc0]/12"
                                                 type="text"
                                                 name="phone"
                                                 autocomplete="tel"
-                                                placeholder="+358 ..."
+                                                placeholder="{{ trans:wizard.placeholder_phone }}"
                                             />
                                         </div>
 
@@ -1198,27 +1080,20 @@ Statamic form submissions). @set page.page_builder.contact_wizard #}}
                                             <label
                                                 class="mb-2 block text-[11px] font-semibold tracking-widest text-neutral-500 uppercase"
                                             >
-                                                Viesti
+                                                {{ trans:wizard.field_message }}
                                                 <span class="text-rose-600"
                                                     >*</span
                                                 >
                                             </label>
                                             <textarea
-                                                class="input w-full rounded-xl border border-transparent bg-neutral-50/80 px-4 py-3 text-sm text-neutral-900 shadow-sm outline-none transition placeholder:text-neutral-400 hover:bg-white hover:border-neutral-200/70 focus:bg-white focus:border-[#519fc0]/40 focus:ring-4 focus:ring-[#519fc0]/12"
+                                                class="input w-full rounded-xl border border-neutral-300 bg-neutral-50 px-4 py-3 text-sm text-neutral-900 shadow-sm outline-none transition placeholder:text-neutral-400 hover:border-neutral-400 focus:bg-white focus:border-[#519fc0] focus:ring-4 focus:ring-[#519fc0]/12"
                                                 name="message_body"
                                                 rows="5"
-                                                placeholder="Kerro lyhyesti tilanteestanne ja mitä toivotte..."
+                                                placeholder="{{ trans:wizard.placeholder_message }}"
                                             ></textarea>
                                         </div>
                                     </div>
 
-                                    <p
-                                        class="mt-4 text-xs leading-relaxed text-neutral-600"
-                                    >
-                                        Lähettämällä lomakkeen hyväksyt, että
-                                        voimme olla sinuun yhteydessä antamiesi
-                                        tietojen perusteella.
-                                    </p>
                                 </div>
 
                                 {{# Footer actions #}}
@@ -1228,7 +1103,7 @@ Statamic form submissions). @set page.page_builder.contact_wizard #}}
                                     <button
                                         type="button"
                                         @click="back()"
-                                        class="inline-flex items-center justify-center gap-2 rounded-xl border border-black/10 bg-white/70 px-5 py-3 text-sm font-semibold text-neutral-800 shadow-sm shadow-black/5 transition hover:bg-white hover:border-neutral-200 focus:outline-none focus:ring-4 focus:ring-primary/12"
+                                        class="inline-flex items-center justify-center gap-2 rounded-xl border-2 border-neutral-200 bg-white px-5 py-3 text-sm font-semibold text-neutral-700 transition hover:border-neutral-300 hover:bg-neutral-50 focus:outline-none focus:ring-4 focus:ring-primary/12"
                                         :class="step === 1 ? 'opacity-50 pointer-events-none' : ''"
                                     >
                                         <svg
@@ -1243,7 +1118,7 @@ Statamic form submissions). @set page.page_builder.contact_wizard #}}
                                         >
                                             <path d="M15 18l-6-6 6-6"></path>
                                         </svg>
-                                        Takaisin
+                                        {{ trans:wizard.btn_back }}
                                     </button>
 
                                     <div
@@ -1253,9 +1128,9 @@ Statamic form submissions). @set page.page_builder.contact_wizard #}}
                                             type="button"
                                             @click="next()"
                                             x-show="step < 4"
-                                            class="inline-flex items-center justify-center gap-2 rounded-xl bg-primary px-7 py-3 text-sm font-semibold text-white shadow-md shadow-black/10 transition hover:brightness-110 hover:-translate-y-0.5 focus:outline-none focus:ring-4 focus:ring-primary/18"
+                                            class="inline-flex items-center justify-center gap-2 rounded-xl bg-primary px-7 py-3 text-sm font-semibold text-white shadow-md shadow-primary/20 transition hover:bg-primary/90 hover:-translate-y-0.5 focus:outline-none focus:ring-4 focus:ring-primary/20"
                                         >
-                                            Seuraava
+                                            {{ trans:wizard.btn_next }}
                                             <svg
                                                 viewBox="0 0 24 24"
                                                 class="h-4 w-4"
@@ -1274,7 +1149,7 @@ Statamic form submissions). @set page.page_builder.contact_wizard #}}
                                             type="submit"
                                             @click="attempted = true; attemptedStep4 = true"
                                             x-show="step === 4"
-                                            class="inline-flex items-center justify-center gap-2 rounded-xl bg-primary px-7 py-3 text-sm font-semibold text-white shadow-md shadow-black/10 transition hover:brightness-110 hover:-translate-y-0.5 focus:outline-none focus:ring-4 focus:ring-primary/18"
+                                            class="inline-flex items-center justify-center gap-2 rounded-xl bg-primary px-7 py-3 text-sm font-semibold text-white shadow-md shadow-primary/20 transition hover:bg-primary/90 hover:-translate-y-0.5 focus:outline-none focus:ring-4 focus:ring-primary/20"
                                         >
                                             <span>{{ submit_label }}</span>
                                             <span
@@ -1316,21 +1191,21 @@ Statamic form submissions). @set page.page_builder.contact_wizard #}}
                                         stepTitle() {
                                             return (
                                                 {
-                                                    1: "Mitä ratkaisua etsit?",
-                                                    2: "Mihin käyttöön ratkaisu tulee?",
-                                                    3: "Muutama lisätieto",
-                                                    4: "Yhteystiedot",
-                                                }[this.step] || "Yhteydenotto"
+                                                    1: "{{ trans:wizard.step1_title }}",
+                                                    2: "{{ trans:wizard.step2_title }}",
+                                                    3: "{{ trans:wizard.step3_title }}",
+                                                    4: "{{ trans:wizard.step4_title }}",
+                                                }[this.step] || "{{ trans:wizard.fallback_title }}"
                                             );
                                         },
 
                                         dotLabel(n) {
                                             return (
                                                 {
-                                                    1: "Tarve",
-                                                    2: "Käyttö",
-                                                    3: "Tiedot",
-                                                    4: "Yhteystiedot",
+                                                    1: "{{ trans:wizard.dot_step1 }}",
+                                                    2: "{{ trans:wizard.dot_step2 }}",
+                                                    3: "{{ trans:wizard.dot_step3 }}",
+                                                    4: "{{ trans:wizard.dot_step4 }}",
                                                 }[n] || ""
                                             );
                                         },
@@ -1342,16 +1217,9 @@ Statamic form submissions). @set page.page_builder.contact_wizard #}}
                                         },
 
                                         goTo(n) {
-                                            if (n <= this.step) {
+                                            if (n < this.step) {
                                                 this.step = n;
                                                 this.stepError = "";
-                                                return;
-                                            }
-                                            let target = n;
-                                            while (this.step < target) {
-                                                if (!this.validateCurrentStep())
-                                                    return;
-                                                this.step++;
                                             }
                                         },
 
@@ -1384,7 +1252,7 @@ Statamic form submissions). @set page.page_builder.contact_wizard #}}
                                                     ).length;
                                                 if (checked < 1) {
                                                     this.stepError =
-                                                        "Valitse vähintään yksi vaihtoehto.";
+                                                        "{{ trans:wizard.validate_select_one_or_more }}";
                                                     return false;
                                                 }
                                                 return true;
@@ -1397,7 +1265,7 @@ Statamic form submissions). @set page.page_builder.contact_wizard #}}
                                                     );
                                                 if (!usage) {
                                                     this.stepError =
-                                                        "Valitse yksi vaihtoehto.";
+                                                        "{{ trans:wizard.validate_select_one }}";
                                                     return false;
                                                 }
                                                 return true;
@@ -1429,7 +1297,7 @@ Statamic form submissions). @set page.page_builder.contact_wizard #}}
 
                                                 if (name.length < 2) {
                                                     this.stepError =
-                                                        "Täytä nimi (vähintään 2 merkkiä).";
+                                                        "{{ trans:wizard.validate_name }}";
                                                     return false;
                                                 }
                                                 if (
@@ -1437,12 +1305,12 @@ Statamic form submissions). @set page.page_builder.contact_wizard #}}
                                                     !email.includes("@")
                                                 ) {
                                                     this.stepError =
-                                                        "Täytä toimiva sähköpostiosoite.";
+                                                        "{{ trans:wizard.validate_email }}";
                                                     return false;
                                                 }
                                                 if (msg.length < 5) {
                                                     this.stepError =
-                                                        "Kirjoita viesti (vähintään 5 merkkiä).";
+                                                        "{{ trans:wizard.validate_message }}";
                                                     return false;
                                                 }
                                                 return true;

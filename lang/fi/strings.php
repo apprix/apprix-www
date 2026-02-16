@@ -18,6 +18,26 @@ return [
     'form_subject_sent' => 'Yhteydenottolomake lähetetty',
     'form_success' => 'Kiitos, vastaanotimme viestisi ja otamme sinuun yhteyttä mahdollisimman pian.',
     'form_required' => 'Pakollinen',
+    'form_success_sent' => 'Viesti lähetetty onnistuneesti.',
+    'form_error_check' => 'Tarkista lomakkeen kentät ja yritä uudelleen.',
+    'form_submitting' => 'Lähetetään…',
+    'form_field_name' => 'Nimi',
+    'form_field_company' => 'Yritys',
+    'form_field_email' => 'Sähköposti',
+    'form_field_phone' => 'Puhelinnumero',
+    'form_field_message' => 'Viesti',
+    'form_placeholder_name' => 'Etunimi Sukunimi',
+    'form_placeholder_company' => 'Yrityksen nimi',
+    'form_placeholder_email' => 'nimi@yritys.fi',
+    'form_placeholder_phone' => '+358 ...',
+    'form_placeholder_message' => 'Kerro lyhyesti tilanteestanne ja toiveistanne...',
+
+    // Team cards
+    'team_phone' => 'Puhelin',
+    'team_email' => 'Sähköposti',
+    'team_copy' => 'Kopioi',
+    'team_call' => 'Soita',
+    'team_shared_contact' => 'Yhteinen sähköposti',
 
     // Consent banner
     'consent_accept_all' => 'Hyväksy kaikki',
@@ -45,6 +65,10 @@ return [
 
     // Footer
     'on' => 'sivustolla',
+
+    // Language switcher
+    'language' => 'Kieli',
+    'change_language' => 'Vaihda kieli',
 
     // Navigation
     'close' => 'Sulje',

@@ -3,7 +3,7 @@ id: home
 blueprint: page
 title: Koti
 updated_by: 680e1400-32cd-4415-9b61-d630b47576db
-updated_at: 1770382545
+updated_at: 1771208243
 seo_noindex: true
 seo_nofollow: true
 seo_canonical_type: entry
@@ -76,92 +76,6 @@ page_builder:
       eyebrow: 'Palvelut & tuotteet'
       section_title: 'Tuotteet ja palvelut, joilla osaaminen pysyy näkyvänä'
   -
-    id: mkmnfgdt
-    eyebrow: VAATIMUSTENMUKAISUUS
-    eyebrow_style: subtle
-    title: 'Varmista osaaminen ja täytä viranomaisvaatimukset'
-    text: 'Checklist Engine ja Koemoottori auttavat varmistamaan, että osaaminen täyttää vaatimukset ja on todennettavissa tarvittaessa.'
-    bullets:
-      - 'Yhdenmukaiset perehdytyskortit ja osaamisvaatimukset'
-      - 'Testit ja kokeet osaamisen varmistamiseen'
-      - 'Selkeä dokumentaatio ja raportointi viranomaiskäyttöön'
-    image_style: card
-    tone: soft
-    accent: none
-    reverse: true
-    buttons:
-      -
-        id: mkmnh6zu
-        label: 'Checklist Engine'
-        link: /palvelut/checklist-engine
-        style: primary
-      -
-        id: mkmnifex
-        label: Koemoottori
-        link: /palvelut/koemoottori
-        style: secondary
-    type: feature_row
-    enabled: true
-    image: screenshots_diagonal_01.jpg
-  -
-    id: mkmnjie7
-    eyebrow: 'TUKI & SISÄLLÖT'
-    eyebrow_style: subtle
-    title: 'Saat sisällöt ja asiantuntijat tueksesi'
-    text: 'Tarjoamme asiantuntevaa tukea ja laadukasta sisältöä, jotta koulutukset vastaavat organisaatiosi tarpeita ja tavoitteita.'
-    bullets:
-      - 'Ammattimaisesti tuotetut koulutusmateriaalit'
-      - 'Asiantuntijat apuna käyttöönotossa ja kehityksessä'
-      - 'Räätälöidyt kokonaisuudet eri toimialoille'
-    image_style: card
-    tone: soft
-    accent: none
-    reverse: false
-    buttons:
-      -
-        id: mkmnks65
-        label: Asiantuntijapalvelut
-        link: /palvelut/asiantuntijapalvelut
-        style: primary
-      -
-        id: mkmnmdcl
-        label: Sisällöntuotanto
-        link: /palvelut/sisallontuotanto
-        style: secondary
-    type: feature_row
-    enabled: true
-    image: screenshots_diagonal_01.jpg
-  -
-    id: mknsml2b
-    eyebrow: 'Yhteistyö alkaa tästä'
-    title: 'Tehdään koulutusten hallinnasta selkeää'
-    text: 'Autamme organisaatioita luomaan selkeitä ja skaalautuvia ratkaisuja osaamisen kehittämiseen.'
-    primary_button: /yhteytta
-    tone: brand
-    type: cta
-    enabled: true
-    button: /yhteytta
-  -
-    id: mko0tg1u
-    heading: Ajankohtaista
-    limit: 3
-    show_button: true
-    button: 'entry::1237ccf1-20f4-4245-b8da-ca9c7322e24b'
-    type: articles_index
-    enabled: true
-    card_button_text: 'Lue lisää'
-    mode: latest
-    search_placeholder: 'Hae artikkeleista…'
-    search_button_text: Hae
-    results_label: Hakutulokset
-    sort_label: Järjestä
-    sort_newest: Uusimmat
-    sort_oldest: Vanhimmat
-    sort_az: A–Ö
-    sort_za: Ö–A
-    no_results_text: 'Ei hakutuloksia.'
-    no_articles_text: 'Ei vielä artikkeleita.'
-  -
     id: ml80w8lp
     title: 'Kerro tarpeestanne – me autamme eteenpäin'
     lead: 'Vastaa muutamaan kysymykseen, niin osaamme ohjata sinut oikealle asiantuntijalle ja ehdottaa juuri teille sopivaa ratkaisua.'
@@ -192,6 +106,92 @@ page_builder:
     img_usage_internal: contact/wizard/sisak.jpg
     img_usage_external: contact/wizard/ulkok.jpg
     img_usage_both: contact/wizard/sisajaulkok.jpg
+  -
+    id: mkmnfgdt
+    eyebrow: VAATIMUSTENMUKAISUUS
+    eyebrow_style: subtle
+    title: 'Varmista osaaminen ja täytä viranomaisvaatimukset'
+    text: 'Checklist Engine ja Koemoottori auttavat varmistamaan, että osaaminen täyttää vaatimukset ja on todennettavissa tarvittaessa.'
+    bullets:
+      - 'Yhdenmukaiset perehdytyskortit ja osaamisvaatimukset'
+      - 'Testit ja kokeet osaamisen varmistamiseen'
+      - 'Selkeä dokumentaatio ja raportointi viranomaiskäyttöön'
+    image_style: card
+    tone: soft
+    accent: none
+    reverse: true
+    buttons:
+      -
+        id: mkmnh6zu
+        label: 'Checklist Engine'
+        link: /palvelut/checklist-engine
+        style: primary
+      -
+        id: mkmnifex
+        label: Koemoottori
+        link: /palvelut/koemoottori
+        style: secondary
+    type: feature_row
+    enabled: true
+    image: screenshots_diagonal_01.jpg
+  -
+    id: mknsml2b
+    eyebrow: 'Yhteistyö alkaa tästä'
+    title: 'Tehdään koulutusten hallinnasta selkeää'
+    text: 'Autamme organisaatioita luomaan selkeitä ja skaalautuvia ratkaisuja osaamisen kehittämiseen.'
+    primary_button: /yhteytta
+    tone: brand
+    type: cta
+    enabled: true
+    button: /yhteytta
+  -
+    id: mkmnjie7
+    eyebrow: 'TUKI & SISÄLLÖT'
+    eyebrow_style: subtle
+    title: 'Saat sisällöt ja asiantuntijat tueksesi'
+    text: 'Tarjoamme asiantuntevaa tukea ja laadukasta sisältöä, jotta koulutukset vastaavat organisaatiosi tarpeita ja tavoitteita.'
+    bullets:
+      - 'Ammattimaisesti tuotetut koulutusmateriaalit'
+      - 'Asiantuntijat apuna käyttöönotossa ja kehityksessä'
+      - 'Räätälöidyt kokonaisuudet eri toimialoille'
+    image_style: card
+    tone: soft
+    accent: none
+    reverse: false
+    buttons:
+      -
+        id: mkmnks65
+        label: Asiantuntijapalvelut
+        link: /palvelut/asiantuntijapalvelut
+        style: primary
+      -
+        id: mkmnmdcl
+        label: Sisällöntuotanto
+        link: /palvelut/sisallontuotanto
+        style: secondary
+    type: feature_row
+    enabled: false
+    image: screenshots_diagonal_01.jpg
+  -
+    id: mko0tg1u
+    heading: Ajankohtaista
+    limit: 3
+    show_button: true
+    button: 'entry::1237ccf1-20f4-4245-b8da-ca9c7322e24b'
+    type: articles_index
+    enabled: true
+    card_button_text: 'Lue lisää'
+    mode: latest
+    search_placeholder: 'Hae artikkeleista…'
+    search_button_text: Hae
+    results_label: Hakutulokset
+    sort_label: Järjestä
+    sort_newest: Uusimmat
+    sort_oldest: Vanhimmat
+    sort_az: A–Ö
+    sort_za: Ö–A
+    no_results_text: 'Ei hakutuloksia.'
+    no_articles_text: 'Ei vielä artikkeleita.'
 seo_title: 'Digitaalinen koulutusalusta yrityksille – Apprix'
 og_title: 'Digitaalinen koulutusalusta yrityksille | Apprix'
 og_image: apprix_logo_rgb.png

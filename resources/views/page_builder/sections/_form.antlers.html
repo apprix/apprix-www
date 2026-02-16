@@ -10,18 +10,18 @@
         "
     ></div>
 
-    {{# Calmer overlays (less “hero”, more “section”) #}}
+    {{# Refined overlays #}}
     <div
-        class="pointer-events-none absolute inset-0 z-10 bg-gradient-to-r from-white/70 via-white/35 to-white/15"
+        class="pointer-events-none absolute inset-0 z-10 bg-gradient-to-r from-white/75 via-white/40 to-white/15"
     ></div>
     <div
-        class="pointer-events-none absolute inset-0 z-10 bg-gradient-to-b from-black/10 via-black/0 to-black/15 mix-blend-multiply"
+        class="pointer-events-none absolute inset-0 z-10 bg-gradient-to-b from-black/8 via-transparent to-black/12 mix-blend-multiply"
     ></div>
 
-    {{# Soft accent blobs (lighter) #}}
+    {{# Accent blobs #}}
     <div class="pointer-events-none absolute inset-0 z-10">
         <div
-            class="absolute -left-40 top-8 h-[22rem] w-[22rem] rounded-full bg-primary-200/16 blur-3xl"
+            class="absolute -left-40 top-8 h-[22rem] w-[22rem] rounded-full bg-primary/[0.06] blur-3xl"
         ></div>
         <div
             class="absolute -right-44 bottom-[-5rem] h-[26rem] w-[26rem] rounded-full bg-sky-200/16 blur-3xl"
@@ -31,7 +31,6 @@
         ></div>
     </div>
 
-    {{# IMPORTANT: more compact vertical rhythm, mobile-safe #}}
     <div class="relative z-20 fluid-grid py-10 md:py-14">
         <div class="span-content">
             <div class="mx-auto max-w-6xl">
@@ -42,10 +41,16 @@
                     <div class="lg:col-span-5">
                         <div class="h-full">
                             <div
-                                class="relative h-full overflow-hidden rounded-2xl bg-white/82 p-6 shadow-lg shadow-black/5 ring-1 ring-black/10 backdrop-blur-sm md:p-8"
+                                class="relative h-full overflow-hidden rounded-2xl border border-white/40 bg-white/80 p-7 shadow-xl shadow-black/[0.04] ring-1 ring-white/60 backdrop-blur-md md:p-9"
                             >
+                                {{# Accent line at top #}}
                                 <div
-                                    class="pointer-events-none absolute -right-16 -top-16 h-44 w-44 rounded-full bg-white/18 blur-2xl"
+                                    class="pointer-events-none absolute inset-x-0 top-0 h-[2px] bg-gradient-to-r from-transparent via-primary/40 to-transparent"
+                                ></div>
+
+                                {{# Decorative glow #}}
+                                <div
+                                    class="pointer-events-none absolute -right-16 -top-16 h-44 w-44 rounded-full bg-primary/[0.04] blur-2xl"
                                 ></div>
 
                                 <div class="w-full">
@@ -59,17 +64,16 @@
                                         class="text-balance pb-1"
                                         :content="block:title" } }}
                                         <span
-                                            class="pointer-events-none absolute left-12 -bottom-0.5 mx-auto h-[3px] w-[70%] rounded-full bg-gradient-to-r from-transparent via-primary/50 to-transparent"
+                                            class="pointer-events-none absolute left-12 -bottom-0.5 mx-auto h-[2px] w-[70%] rounded-full bg-gradient-to-r from-transparent via-primary/40 to-transparent"
                                         ></span>
                                     </div>
                                     {{ /if }}
                                 </div>
 
-                                {{ if block:bullets }} {{# Mobile-safe timeline:
-                                smaller spacing, thinner line, smaller dots #}}
+                                {{ if block:bullets }}
                                 <ol class="relative mt-7 space-y-9 pl-1">
                                     <span
-                                        class="absolute left-3 top-0 bottom-0 w-[2px] h-full rounded-full bg-primary/40"
+                                        class="absolute left-3 top-0 bottom-0 w-[2px] h-full rounded-full bg-primary/30"
                                     ></span>
 
                                     {{ block:bullets }}
@@ -102,9 +106,8 @@
                                 </ol>
                                 {{ /if }} {{ lead = (block:text_plain ??
                                 block:text ?? text_plain ?? text ?? '') }} {{ if
-                                lead }} {{# Fix invalid mt-18 -> mt-8, keep
-                                tighter #}}
-                                <div class="mt-8 border-t border-black/10 pt-4">
+                                lead }}
+                                <div class="mt-8 border-t border-neutral-200/60 pt-4">
                                     <p
                                         class="max-w-md text-sm leading-relaxed text-neutral-700 md:text-base"
                                     >
@@ -119,10 +122,11 @@
                     {{# RIGHT: form card #}}
                     <div class="lg:col-span-7">
                         <div
-                            class="group relative h-full overflow-hidden rounded-2xl bg-white/82 p-5 shadow-lg shadow-black/5 ring-1 ring-black/10 backdrop-blur-sm md:p-8"
+                            class="group relative h-full overflow-hidden rounded-2xl border border-white/40 bg-white/80 p-6 shadow-xl shadow-black/[0.04] ring-1 ring-white/60 backdrop-blur-md md:p-9"
                         >
+                            {{# Accent line at top #}}
                             <div
-                                class="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-primary/25 to-transparent"
+                                class="pointer-events-none absolute inset-x-0 top-0 h-[2px] bg-gradient-to-r from-transparent via-primary/30 to-transparent"
                             ></div>
 
                             {{ submit_label = (block:button_label ??
@@ -134,81 +138,204 @@
                                 x-init="attempted = false"
                                 class="flex flex-col gap-6"
                             >
+                                {{# Status messages #}}
                                 <div class="space-y-3">
                                     <div
                                         x-cloak
                                         x-show="success"
                                         x-transition
-                                        class="rounded-xl border border-emerald-200 bg-emerald-50/80 px-4 py-3 text-sm text-emerald-900"
+                                        class="rounded-xl border border-emerald-200/80 bg-emerald-50/60 px-5 py-3.5 text-sm font-medium text-emerald-800 backdrop-blur-sm"
                                     >
-                                        Viesti lähetetty onnistuneesti.
+                                        {{ trans:strings.form_success_sent }}
                                     </div>
 
                                     <div
                                         x-cloak
                                         x-show="attempted && hasErrors"
                                         x-transition
-                                        class="rounded-xl border border-rose-200 bg-rose-50/80 px-4 py-3 text-sm text-rose-900"
+                                        class="rounded-xl border border-rose-200/80 bg-rose-50/60 px-5 py-3.5 text-sm font-medium text-rose-800 backdrop-blur-sm"
                                     >
-                                        Tarkista lomakkeen kentät ja yritä
-                                        uudelleen.
+                                        {{ trans:strings.form_error_check }}
                                     </div>
                                 </div>
 
-                                {{ sections }} {{# Mobile fix: always 1 column,
-                                2 columns from md (not sm) #}}
+                                {{ sections }}
                                 <fieldset class="grid gap-5 md:grid-cols-2">
-                                    {{ fields }} {{# Only render the "old"
-                                    contact fields here #}} {{ if handle ==
-                                    "name" || handle == "company" || handle ==
-                                    "email" || handle == "phone" || handle ==
-                                    "message_body" }}
+                                    {{ fields }}
 
+                                    {{# Name field #}}
+                                    {{ if handle == "name" }}
                                     <template x-if="{{ show_field }}">
-                                        <div
-                                            class="{{ (type == 'textarea' || handle == 'message_body') ?= 'md:col-span-2' }}"
-                                        >
-                                            <div
-                                                class="mb-2 flex items-center justify-between gap-3"
+                                        <div>
+                                            <label for="name"
+                                                class="mb-2 flex items-center gap-1.5 text-[11px] font-semibold tracking-widest text-neutral-500 uppercase"
                                             >
-                                                <label
-                                                    class="text-[11px] font-semibold tracking-widest text-neutral-500 uppercase"
-                                                >
-                                                    {{ trans :key="display" }}
-                                                    <span
-                                                        x-cloak
-                                                        x-show="attempted && fieldError('{{ handle }}')"
-                                                        x-transition.opacity
-                                                        class="ml-1 text-rose-600"
-                                                        >*</span
-                                                    >
-                                                </label>
-                                            </div>
-
-                                            <div
-                                                class="[&_.input]:w-full [&_.input]:rounded-xl [&_.input]:border [&_.input]:border-transparent [&_.input]:bg-neutral-50/80 [&_.input]:px-4 [&_.input]:py-2.5 [&_.input]:text-sm [&_.input]:text-neutral-900 [&_.input]:placeholder:text-neutral-400 [&_.input]:shadow-sm [&_.input]:outline-none [&_.input]:transition [&_.input:hover]:bg-white [&_.input:hover]:border-neutral-200/70 [&_.input:focus]:bg-white [&_.input:focus]:border-[#519fc0]/40 [&_.input:focus]:ring-4 [&_.input:focus]:ring-[#519fc0]/12 [&_.input]:disabled:opacity-60 [&_.input]:disabled:cursor-not-allowed"
-                                            >
-                                                {{ field }}
-                                            </div>
-
+                                                {{ trans:strings.form_field_name }}
+                                                <span
+                                                    x-cloak
+                                                    x-show="attempted && fieldError('name')"
+                                                    x-transition.opacity
+                                                    class="text-rose-500"
+                                                >*</span>
+                                            </label>
+                                            <input
+                                                id="name"
+                                                name="name"
+                                                type="text"
+                                                x-model="form.name"
+                                                @change="form.validate('name')"
+                                                :aria-invalid="form.invalid('name')"
+                                                placeholder="{{ trans:strings.form_placeholder_name }}"
+                                                class="w-full rounded-xl border border-neutral-200/60 bg-neutral-50/50 px-4 py-3 text-sm text-neutral-900 shadow-sm outline-none transition-all duration-200 placeholder:text-neutral-400 hover:border-neutral-300 hover:bg-white focus:border-primary/40 focus:bg-white focus:ring-4 focus:ring-primary/8"
+                                            />
                                             <p
                                                 x-cloak
-                                                x-show="attempted && fieldError('{{ handle }}')"
-                                                x-text="fieldError('{{ handle }}')"
-                                                class="mt-2 text-xs font-medium text-rose-700"
+                                                x-show="attempted && fieldError('name')"
+                                                x-text="fieldError('name')"
+                                                class="mt-1.5 text-xs font-medium text-rose-600"
                                             ></p>
                                         </div>
                                     </template>
+                                    {{ /if }}
 
-                                    {{ /if }} {{ /fields }}
+                                    {{# Company field #}}
+                                    {{ if handle == "company" }}
+                                    <template x-if="{{ show_field }}">
+                                        <div>
+                                            <label for="company"
+                                                class="mb-2 flex items-center gap-1.5 text-[11px] font-semibold tracking-widest text-neutral-500 uppercase"
+                                            >
+                                                {{ trans:strings.form_field_company }}
+                                            </label>
+                                            <input
+                                                id="company"
+                                                name="company"
+                                                type="text"
+                                                x-model="form.company"
+                                                @change="form.validate('company')"
+                                                :aria-invalid="form.invalid('company')"
+                                                placeholder="{{ trans:strings.form_placeholder_company }}"
+                                                class="w-full rounded-xl border border-neutral-200/60 bg-neutral-50/50 px-4 py-3 text-sm text-neutral-900 shadow-sm outline-none transition-all duration-200 placeholder:text-neutral-400 hover:border-neutral-300 hover:bg-white focus:border-primary/40 focus:bg-white focus:ring-4 focus:ring-primary/8"
+                                            />
+                                            <p
+                                                x-cloak
+                                                x-show="attempted && fieldError('company')"
+                                                x-text="fieldError('company')"
+                                                class="mt-1.5 text-xs font-medium text-rose-600"
+                                            ></p>
+                                        </div>
+                                    </template>
+                                    {{ /if }}
+
+                                    {{# Email field #}}
+                                    {{ if handle == "email" }}
+                                    <template x-if="{{ show_field }}">
+                                        <div>
+                                            <label for="email"
+                                                class="mb-2 flex items-center gap-1.5 text-[11px] font-semibold tracking-widest text-neutral-500 uppercase"
+                                            >
+                                                {{ trans:strings.form_field_email }}
+                                                <span
+                                                    x-cloak
+                                                    x-show="attempted && fieldError('email')"
+                                                    x-transition.opacity
+                                                    class="text-rose-500"
+                                                >*</span>
+                                            </label>
+                                            <input
+                                                id="email"
+                                                name="email"
+                                                type="email"
+                                                x-model="form.email"
+                                                @change="form.validate('email')"
+                                                :aria-invalid="form.invalid('email')"
+                                                placeholder="{{ trans:strings.form_placeholder_email }}"
+                                                class="w-full rounded-xl border border-neutral-200/60 bg-neutral-50/50 px-4 py-3 text-sm text-neutral-900 shadow-sm outline-none transition-all duration-200 placeholder:text-neutral-400 hover:border-neutral-300 hover:bg-white focus:border-primary/40 focus:bg-white focus:ring-4 focus:ring-primary/8"
+                                            />
+                                            <p
+                                                x-cloak
+                                                x-show="attempted && fieldError('email')"
+                                                x-text="fieldError('email')"
+                                                class="mt-1.5 text-xs font-medium text-rose-600"
+                                            ></p>
+                                        </div>
+                                    </template>
+                                    {{ /if }}
+
+                                    {{# Phone field #}}
+                                    {{ if handle == "phone" }}
+                                    <template x-if="{{ show_field }}">
+                                        <div>
+                                            <label for="phone"
+                                                class="mb-2 flex items-center gap-1.5 text-[11px] font-semibold tracking-widest text-neutral-500 uppercase"
+                                            >
+                                                {{ trans:strings.form_field_phone }}
+                                            </label>
+                                            <input
+                                                id="phone"
+                                                name="phone"
+                                                type="tel"
+                                                x-model="form.phone"
+                                                @change="form.validate('phone')"
+                                                :aria-invalid="form.invalid('phone')"
+                                                placeholder="{{ trans:strings.form_placeholder_phone }}"
+                                                class="w-full rounded-xl border border-neutral-200/60 bg-neutral-50/50 px-4 py-3 text-sm text-neutral-900 shadow-sm outline-none transition-all duration-200 placeholder:text-neutral-400 hover:border-neutral-300 hover:bg-white focus:border-primary/40 focus:bg-white focus:ring-4 focus:ring-primary/8"
+                                            />
+                                            <p
+                                                x-cloak
+                                                x-show="attempted && fieldError('phone')"
+                                                x-text="fieldError('phone')"
+                                                class="mt-1.5 text-xs font-medium text-rose-600"
+                                            ></p>
+                                        </div>
+                                    </template>
+                                    {{ /if }}
+
+                                    {{# Message field #}}
+                                    {{ if handle == "message_body" }}
+                                    <template x-if="{{ show_field }}">
+                                        <div class="md:col-span-2">
+                                            <label for="message_body"
+                                                class="mb-2 flex items-center gap-1.5 text-[11px] font-semibold tracking-widest text-neutral-500 uppercase"
+                                            >
+                                                {{ trans:strings.form_field_message }}
+                                                <span
+                                                    x-cloak
+                                                    x-show="attempted && fieldError('message_body')"
+                                                    x-transition.opacity
+                                                    class="text-rose-500"
+                                                >*</span>
+                                            </label>
+                                            <textarea
+                                                id="message_body"
+                                                name="message_body"
+                                                rows="4"
+                                                x-model="form.message_body"
+                                                @change="form.validate('message_body')"
+                                                :aria-invalid="form.invalid('message_body')"
+                                                placeholder="{{ trans:strings.form_placeholder_message }}"
+                                                class="w-full resize-none rounded-xl border border-neutral-200/60 bg-neutral-50/50 px-4 py-3 text-sm text-neutral-900 shadow-sm outline-none transition-all duration-200 placeholder:text-neutral-400 hover:border-neutral-300 hover:bg-white focus:border-primary/40 focus:bg-white focus:ring-4 focus:ring-primary/8"
+                                            ></textarea>
+                                            <p
+                                                x-cloak
+                                                x-show="attempted && fieldError('message_body')"
+                                                x-text="fieldError('message_body')"
+                                                class="mt-1.5 text-xs font-medium text-rose-600"
+                                            ></p>
+                                        </div>
+                                    </template>
+                                    {{ /if }}
+
+                                    {{ /fields }}
                                 </fieldset>
-                                {{ /sections }} {{# Button: responsive width,
-                                less heavy shadow #}}
-                                <div class="flex justify-center pt-1">
+                                {{ /sections }}
+
+                                {{# Submit button #}}
+                                <div class="flex justify-center pt-2">
                                     <button
                                         type="submit"
                                         @click="attempted = true"
-                                        class="w-full sm:w-auto sm:min-w-[220px] rounded-xl bg-primary px-10 py-3 text-sm font-semibold text-white shadow-md shadow-black/10 transition hover:brightness-110 hover:-translate-y-0.5 focus:outline-none focus:ring-4 focus:ring-primary/18"
+                                        class="w-full sm:w-auto sm:min-w-[240px] rounded-xl bg-primary px-10 py-3.5 text-sm font-semibold text-white shadow-lg shadow-primary/15 transition-all duration-200 hover:brightness-110 hover:shadow-xl hover:shadow-primary/20 hover:-translate-y-0.5 focus:outline-none focus:ring-4 focus:ring-primary/20"
                                     >
                                         <span>{{ submit_label }}</span>
                                         <span
@@ -216,8 +343,7 @@
                                             x-show="submitting"
                                             x-transition.opacity
                                             class="ml-2 text-white/90"
-                                            >Lähetetään…</span
-                                        >
+                                        >{{ trans:strings.form_submitting }}</span>
                                     </button>
                                 </div>
                             </div>

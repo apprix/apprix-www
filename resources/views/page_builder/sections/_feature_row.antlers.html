@@ -26,63 +26,29 @@
         </div>
       {{ /if }}
 
-      {{# =========================================================
-         ORANGE "SNAKE" CONNECTOR (segment per card)
-         ========================================================= #}}
+      <div class="relative my-4 md:my-6">
 
-      <div class="relative">
+        {{# Feature card — premium rounded style with accent bar #}}
+        <div class="relative overflow-hidden rounded-2xl border border-neutral-200/70 bg-white shadow-lg shadow-black/[0.04] ring-1 ring-neutral-200/50">
 
-        {{# Feature card (NO rounded corners, no overflow clipping) #}}
-        <div class="relative border border-neutral-200 bg-white shadow-sm md:overflow-visible">
+          {{# Accent bar on card edge (md+) #}}
+          {{ if !reverse }}
+            <div class="absolute left-0 top-0 bottom-0 w-[3px] bg-gradient-to-b from-primary/80 via-primary to-primary/80 hidden md:block"></div>
+          {{ else }}
+            <div class="absolute right-0 top-0 bottom-0 w-[3px] bg-gradient-to-b from-primary/80 via-primary to-primary/80 hidden md:block"></div>
+          {{ /if }}
 
-          {{# Connector layer (md+)
-             - Keep line behind content
-             - Let the DOT sit above eyebrow
-          #}}
-          <div class="pointer-events-none absolute inset-0 z-10 hidden md:block">
-
-            {{ edge_offset = 0 }}
-            {{ elbow_len = 140 }}
-
-            {{# 1) Vertical spine - thicker + orange (behind content) #}}
-            {{ if !reverse }}
-              <div class="absolute -top-1 -bottom-0 left-[0px] w-[5px] bg-orange-500/90"></div>
-            {{ else }}
-              <div class="absolute -top-1 -bottom-0 right-[0px] w-[5px] bg-orange-500/90"></div>
-            {{ /if }}
-
-            {{# 2) Mid node (DOT above content) #}}
-            {{ if !reverse }}
-              <div class="absolute left-[-8px] top-15 -translate-y-1/2 z-50">
-                <span class="block h-10 w-10 rounded-l-full bg-orange-500 shadow-sm"></span>
-              </div>
-            {{ else }}
-              <div class="absolute right-[-6px] top-15 -translate-y-1/2 z-50">
-                <span class="block h-10 w-10 rounded-r-full bg-orange-500 shadow-sm"></span>
-              </div>
-            {{ /if }}
-
-            {{# 3) Bottom elbow (behind content) #}}
-            {{ if reverse }}
-              <div class="absolute left-[0px] bottom-0 h-[5px] w-full bg-orange-500/90"></div>
-            {{ else }}
-              <div class="absolute right-[0px] bottom-0 h-[5px] w-full bg-orange-500/90"></div>
-            {{ /if }}
-
-          </div>
-
-          {{# Content (above the line, below the dot) #}}
-          <div class="relative z-20 grid items-start gap-8 px-6 py-8 md:grid-cols-12 md:px-10 md:py-10">
+          {{# Content #}}
+          <div class="relative grid items-start gap-8 px-6 py-10 md:grid-cols-12 md:px-12 md:py-12">
 
             {{# TEXT #}}
             <div class="md:col-span-6 flex h-full flex-col {{ if reverse }}md:order-2{{ else }}md:order-1{{ /if }}">
 
-              {{# Eyebrow: aligns toward the snake edge for both sides #}}
+              {{# Eyebrow #}}
               {{ if eyebrow }}
                 <div class="mb-3 flex w-full {{ if reverse }}md:justify-end{{ else }}md:justify-start{{ /if }}">
-                  <span class="inline-flex items-center rounded-full border border-neutral-200 bg-white px-5 py-1.75 text-md font-semibold tracking-wide text-neutral-700 shadow-sm
-                    {{ if reverse }}md:-mr-8{{ else }}md:-ml-8{{ /if }}
-                  ">
+                  <span class="inline-flex items-center gap-2 rounded-full border border-primary/20 bg-primary/5 px-5 py-1.75 text-md font-semibold tracking-wide text-neutral-700 shadow-sm">
+                    <span class="h-1.5 w-1.5 rounded-full bg-primary"></span>
                     {{ eyebrow }}
                   </span>
                 </div>
@@ -96,7 +62,7 @@
                 <ul class="mt-5 space-y-4">
                   {{ bullets }}
                     <li class="flex items-start gap-4 text-base text-neutral-800">
-                      <span class="h-2.5 w-2.5 mt-2.5 rounded-full bg-orange-500"></span>
+                      <span class="h-2 w-2 mt-2.5 rounded-full bg-primary/80"></span>
                       <span class="leading-relaxed">
                         {{ value }}
                       </span>
@@ -118,7 +84,7 @@
                         <a
                           href="{{ link:url }}"
                           {{ if link:target == '_blank' }} target="_blank" rel="noopener noreferrer" {{ /if }}
-                          class="inline-flex w-full sm:w-[240px] items-center justify-center rounded-xl bg-orange-600 px-8 py-4 text-base font-semibold text-white shadow-sm transition hover:bg-orange-700 hover:shadow-md focus:outline-none focus:ring-2 focus:ring-orange-500/30"
+                          class="inline-flex w-full sm:w-[240px] items-center justify-center rounded-xl bg-primary px-8 py-4 text-base font-semibold text-white shadow-sm transition hover:brightness-110 hover:shadow-md focus:outline-none focus:ring-2 focus:ring-primary/30"
                         >
                           {{ label }}
                         </a>
@@ -127,7 +93,7 @@
                         <a
                           href="{{ link:url }}"
                           {{ if link:target == '_blank' }} target="_blank" rel="noopener noreferrer" {{ /if }}
-                          class="inline-flex w-full sm:w-[240px] items-center justify-center rounded-xl border border-neutral-300 bg-white px-8 py-4 text-base font-semibold text-orange-700 shadow-sm transition hover:bg-neutral-50 hover:shadow-md focus:outline-none focus:ring-2 focus:ring-orange-500/20"
+                          class="inline-flex w-full sm:w-[240px] items-center justify-center rounded-xl border border-neutral-300 bg-white px-8 py-4 text-base font-semibold text-primary shadow-sm transition hover:bg-neutral-50 hover:shadow-md focus:outline-none focus:ring-2 focus:ring-primary/20"
                         >
                           {{ label }}
                         </a>
@@ -139,7 +105,7 @@
                           class="group inline-flex w-full sm:w-[240px] items-center justify-center gap-2 rounded-xl border border-transparent px-7 py-4 text-base font-semibold text-neutral-700 transition hover:border-neutral-200 hover:bg-neutral-50 hover:text-neutral-900 focus:outline-none focus:ring-2 focus:ring-neutral-400/20"
                         >
                           <span>{{ label }}</span>
-                          <span aria-hidden="true" class="text-orange-600 transition-transform group-hover:translate-x-0.5">→</span>
+                          <span aria-hidden="true" class="text-primary transition-transform group-hover:translate-x-0.5">→</span>
                         </a>
                       {{ /if }}
 
@@ -154,9 +120,12 @@
             <div class="md:col-span-6 {{ if reverse }}md:order-1{{ else }}md:order-2{{ /if }}">
               {{ if image }}
                 <div class="relative md:ml-auto md:max-w-[520px]">
+                  {{# Decorative glow behind image #}}
+                  <div class="pointer-events-none absolute -inset-4 rounded-3xl bg-primary/[0.03] blur-2xl"></div>
+
                   <div class="relative transition duration-300 ease-out hover:-rotate-1 hover:scale-[1.01]">
-                    <div class="relative overflow-hidden rounded-3xl border border-neutral-200 bg-white shadow-xl">
-                      <div class="flex items-center gap-2 border-b border-neutral-200 bg-neutral-50 px-4 py-2">
+                    <div class="relative overflow-hidden rounded-2xl border border-neutral-200/80 bg-white shadow-xl shadow-black/[0.06]">
+                      <div class="flex items-center gap-2 border-b border-neutral-200/80 bg-neutral-50 px-4 py-2">
                         <span class="h-2.5 w-2.5 rounded-full bg-neutral-300"></span>
                         <span class="h-2.5 w-2.5 rounded-full bg-neutral-300"></span>
                         <span class="h-2.5 w-2.5 rounded-full bg-neutral-300"></span>

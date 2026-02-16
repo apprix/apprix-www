@@ -3,21 +3,25 @@
    @set page.page_builder.team_cards
 #}}
 
-<section class="relative overflow-hidden bg-neutral-50/60">
-  {{# subtle background wash (very light) #}}
-  <div class="pointer-events-none absolute inset-0">
-    <div class="absolute inset-x-0 top-0 h-56 bg-gradient-to-b from-white via-white/70 to-transparent"></div>
-  </div>
+<section class="relative overflow-hidden">
+  {{# Background #}}
+  <div class="pointer-events-none absolute inset-0 bg-gradient-to-b from-white via-neutral-50/80 to-neutral-50/60"></div>
 
-  <div class="fluid-grid pt-10 md:pt-16">
+  <div class="fluid-grid py-12 md:py-16">
     <div class="span-content relative">
 
       {{# Header #}}
-      <div class="mx-auto mb-10 max-w-3xl text-center md:mb-12">
+      <div class="mx-auto mb-10 max-w-3xl text-center md:mb-14">
         {{ if title }}
           <h2 class="text-balance text-2xl font-semibold tracking-tight text-neutral-900 md:text-3xl">
             {{ title }}
           </h2>
+        {{ /if }}
+
+        {{ if intro }}
+          <p class="mx-auto mt-4 max-w-2xl text-sm leading-relaxed text-neutral-600 md:text-base">
+            {{ intro | nl2br }}
+          </p>
         {{ /if }}
 
         <div class="mx-auto mt-6 h-px w-40 bg-gradient-to-r from-transparent via-neutral-200 to-transparent"></div>
@@ -25,33 +29,34 @@
 
       {{# People grid #}}
       {{ if people }}
-        {{# Wider cards: 2 cols until 2xl, then 3 cols #}}
         <div class="grid gap-6 md:grid-cols-2 2xl:grid-cols-3 2xl:gap-8">
           {{ people }}
             <article
-              class="group relative overflow-visible rounded-2xl border border-neutral-200/70 bg-white
-                     shadow-[0_10px_40px_-30px_rgba(0,0,0,0.35)] transition
-                     hover:-translate-y-0.5 hover:border-neutral-300/80 hover:shadow-[0_18px_60px_-40px_rgba(0,0,0,0.45)]"
+              class="group relative overflow-visible rounded-2xl border border-neutral-200/60 bg-white
+                     shadow-lg shadow-black/[0.03] ring-1 ring-neutral-100/80 transition-all duration-300
+                     hover:-translate-y-1 hover:shadow-xl hover:shadow-black/[0.06] hover:ring-neutral-200/80"
             >
+              {{# Inner clipped layer for gradients #}}
+              <div class="pointer-events-none absolute inset-0 overflow-hidden rounded-2xl">
+                {{# Accent gradient at top #}}
+                <div class="absolute inset-x-0 top-0 h-[2px] bg-gradient-to-r from-transparent via-primary/40 to-transparent"></div>
 
-              {{# 2) top wash slightly branded (reduces empty white) #}}
-              <div
-                class="pointer-events-none absolute inset-x-0 top-0 h-28
-                       bg-gradient-to-b from-primary-50/40 via-white/30 to-transparent"
-              ></div>
+                {{# Subtle top wash #}}
+                <div class="absolute inset-x-0 top-0 h-32 bg-gradient-to-b from-primary/[0.03] to-transparent"></div>
+              </div>
 
-              {{# Top-right segment label (driven by the first highlight) #}}
+              {{# Highlight badge #}}
               {{ if highlights }}
                 {{ highlights limit="1" }}
                   {{ if text }}
                     <div class="absolute right-4 -top-3 z-10">
                       <div
-                        class="inline-flex items-center gap-3 border border-neutral-200 py-1 bg-white/95 pl-1 pr-3.5
-                               shadow-[0_10px_28px_-22px_rgba(0,0,0,0.55)] backdrop-blur rounded-xl md:rounded-md"
+                        class="inline-flex items-center gap-2 rounded-xl border border-neutral-200/70 bg-white/95 py-1.5 pl-2 pr-3.5
+                               shadow-md shadow-black/[0.06] backdrop-blur-sm"
                         aria-label="{{ text }}"
                       >
-                        <span class="h-6 w-1.5 bg-primary"></span>
-                        <span class="text-xs md:text-sm font-semibold tracking-wide text-neutral-900">
+                        <span class="h-1.5 w-1.5 rounded-full bg-primary"></span>
+                        <span class="text-xs font-semibold tracking-wide text-neutral-700">
                           {{ text }}
                         </span>
                       </div>
@@ -60,14 +65,14 @@
                 {{ /highlights }}
               {{ /if }}
 
-              <div class="relative p-7 md:p-8 lg:p-9 min-h-[330px] flex flex-col">
-                {{# Top row: avatar + name/role #}}
-                <div class="flex items-center gap-4 md:gap-5">
+              <div class="relative flex min-h-[320px] flex-col p-7 md:p-8">
+                {{# Avatar + name/role #}}
+                <div class="flex items-center gap-5">
                   <div class="relative shrink-0">
-                    {{# soft halo #}}
-                    <div class="pointer-events-none absolute inset-0 -m-2 rounded-full bg-gradient-to-b from-white via-neutral-50 to-white"></div>
+                    {{# Glow behind avatar #}}
+                    <div class="pointer-events-none absolute -inset-2 rounded-full bg-gradient-to-b from-primary/[0.06] via-transparent to-transparent blur-lg"></div>
 
-                    <div class="relative h-16 w-16 md:h-18 md:w-18 lg:h-20 lg:w-20 overflow-hidden rounded-full ring-1 ring-neutral-200/70">
+                    <div class="relative h-16 w-16 overflow-hidden rounded-full ring-2 ring-white shadow-md shadow-black/[0.08] md:h-[4.5rem] md:w-[4.5rem]">
                       {{ if photo }}
                         <img
                           src="{{ photo:url }}"
@@ -76,72 +81,60 @@
                           loading="lazy"
                         />
                       {{ else }}
-                        <div class="flex h-full w-full items-center justify-center bg-neutral-100 text-sm font-semibold text-neutral-500">
-                          —
+                        <div class="flex h-full w-full items-center justify-center bg-neutral-100 text-sm font-semibold text-neutral-400">
+                          {{ name | substr:0:1 }}
                         </div>
                       {{ /if }}
                     </div>
                   </div>
 
-                  <div class="min-w-0 flex-1 pr-2">
+                  <div class="min-w-0 flex-1">
                     {{ if name }}
-                      <h3 class="text-base md:text-lg font-semibold tracking-tight text-neutral-900">
+                      <h3 class="text-base font-semibold tracking-tight text-neutral-900 md:text-lg">
                         {{ name }}
                       </h3>
                     {{ /if }}
 
                     {{ if role }}
-                      <p class="mt-0.5 text-sm md:text-base text-neutral-600">
+                      <p class="mt-0.5 text-sm text-neutral-500">
                         {{ role }}
                       </p>
                     {{ /if }}
                   </div>
                 </div>
 
-                {{# Bottom contact area (rows do the job) #}}
+                {{# Contact area #}}
                 {{ if phone || email }}
-                  <div class="mt-auto pt-7">
-                    <div class="border-t border-neutral-100/80 pt-6">
-                      {{# Contact details: left side opens tel/mail, right icon copies #}}
-                      <div class="space-y-3">
+                  <div class="mt-auto pt-6">
+                    <div class="border-t border-neutral-100 pt-5">
+                      <div class="space-y-2.5">
 
                         {{ if phone }}
                           <div
-                            class="flex items-center justify-between gap-3 rounded-2xl bg-neutral-50/80 px-4 py-3.5
-                                   ring-1 ring-neutral-200/70 transition
-                                   group-hover:ring-neutral-300/70
-                                   hover:-translate-y-[1px] hover:shadow-sm"
+                            class="flex items-center gap-3 rounded-xl bg-neutral-50/60 px-3.5 py-3
+                                   ring-1 ring-neutral-200/50 transition-all duration-200
+                                   hover:bg-white hover:ring-neutral-200 hover:shadow-sm"
                           >
                             <a
                               href="tel:{{ phone }}"
                               class="group/row flex min-w-0 flex-1 items-center gap-3"
-                              aria-label="Call {{ name }}"
-                              title="{{ phone }}"
+                              aria-label="{{ trans:strings.team_call }} {{ name }}"
                             >
                               <span
-                                class="inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-white
-                                       ring-1 ring-neutral-200/70 shadow-sm transition
-                                       group-hover/row:ring-primary-200/70"
+                                class="inline-flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-white
+                                       shadow-sm ring-1 ring-neutral-200/60 transition
+                                       group-hover/row:ring-primary/20 group-hover/row:shadow-md"
                               >
-                                <svg
-                                  viewBox="0 0 24 24"
-                                  class="h-5 w-5 text-neutral-800"
-                                  fill="none"
-                                  stroke="currentColor"
-                                  stroke-width="2"
-                                  stroke-linecap="round"
-                                  stroke-linejoin="round"
-                                >
-                                  <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.86 19.86 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.86 19.86 0 0 1 2.08 4.18 2 2 0 0 1 4.06 2h3a2 2 0 0 1 2 1.72" />
-                                  <path d="M9 6.22c.12.86.31 1.7.57 2.5a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.58-1.09a2 2 0 0 1 2.11-.45c.8.26 1.64.45 2.5.57A2 2 0 0 1 22 16.92" />
+                                <svg viewBox="0 0 24 24" class="h-4 w-4 text-neutral-600 transition group-hover/row:text-primary" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                  <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.86 19.86 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.86 19.86 0 0 1 2.08 4.18 2 2 0 0 1 4.06 2h3a2 2 0 0 1 2 1.72c.12.86.31 1.7.57 2.5a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.8.26 1.64.45 2.5.57A2 2 0 0 1 22 16.92" />
                                 </svg>
                               </span>
 
                               <div class="min-w-0">
-                                <div class="text-xs font-semibold uppercase tracking-wide text-neutral-500">
-                                  Puhelin
+                                <div class="text-[10px] font-semibold uppercase tracking-widest text-neutral-400">
+                                  {{ trans:strings.team_phone }}
                                 </div>
-                                <div class="min-w-0 truncate text-sm md:text-base font-semibold text-neutral-900 group-hover/row:text-primary-700">
+                                <div class="truncate text-sm font-semibold text-neutral-900 transition group-hover/row:text-primary">
                                   {{ phone }}
                                 </div>
                               </div>
@@ -149,23 +142,15 @@
 
                             <button
                               type="button"
-                              class="inline-flex h-10 w-10 items-center justify-center rounded-xl bg-white text-neutral-700
-                                     ring-1 ring-neutral-200/70 shadow-sm transition
-                                     hover:bg-neutral-50 hover:text-neutral-900 focus:outline-none focus:ring-2 focus:ring-primary-200"
+                              class="inline-flex h-8 w-8 shrink-0 items-center justify-center rounded-lg text-neutral-400
+                                     transition hover:bg-neutral-100 hover:text-neutral-600
+                                     focus:outline-none focus:ring-2 focus:ring-primary/20"
                               data-copy="{{ phone }}"
-                              aria-label="Copy phone"
-                              title="Copy"
+                              aria-label="{{ trans:strings.team_copy }}"
+                              title="{{ trans:strings.team_copy }}"
                               onclick="navigator.clipboard?.writeText(this.dataset.copy || '')"
                             >
-                              <svg
-                                viewBox="0 0 24 24"
-                                class="h-5 w-5"
-                                fill="none"
-                                stroke="currentColor"
-                                stroke-width="2"
-                                stroke-linecap="round"
-                                stroke-linejoin="round"
-                              >
+                              <svg viewBox="0 0 24 24" class="h-3.5 w-3.5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                 <rect x="9" y="9" width="13" height="13" rx="2"></rect>
                                 <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
                               </svg>
@@ -175,41 +160,31 @@
 
                         {{ if email }}
                           <div
-                            class="flex items-center justify-between gap-3 rounded-2xl bg-neutral-50/80 px-4 py-3.5
-                                   ring-1 ring-neutral-200/70 transition
-                                   group-hover:ring-neutral-300/70
-                                   hover:-translate-y-[1px] hover:shadow-sm"
+                            class="flex items-center gap-3 rounded-xl bg-neutral-50/60 px-3.5 py-3
+                                   ring-1 ring-neutral-200/50 transition-all duration-200
+                                   hover:bg-white hover:ring-neutral-200 hover:shadow-sm"
                           >
                             <a
                               href="mailto:{{ email }}"
                               class="group/row flex min-w-0 flex-1 items-center gap-3"
-                              aria-label="Email {{ name }}"
-                              title="{{ email }}"
+                              aria-label="{{ trans:strings.team_email }} {{ name }}"
                             >
                               <span
-                                class="inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-white
-                                       ring-1 ring-neutral-200/70 shadow-sm transition
-                                       group-hover/row:ring-primary-200/70"
+                                class="inline-flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-white
+                                       shadow-sm ring-1 ring-neutral-200/60 transition
+                                       group-hover/row:ring-primary/20 group-hover/row:shadow-md"
                               >
-                                <svg
-                                  viewBox="0 0 24 24"
-                                  class="h-5 w-5 text-neutral-800"
-                                  fill="none"
-                                  stroke="currentColor"
-                                  stroke-width="2"
-                                  stroke-linecap="round"
-                                  stroke-linejoin="round"
-                                >
-                                  <path d="M4 6h16v12H4z" />
-                                  <path d="m22 7-10 7L2 7" />
+                                <svg viewBox="0 0 24 24" class="h-4 w-4 text-neutral-600 transition group-hover/row:text-primary" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                  <rect x="2" y="4" width="20" height="16" rx="2" />
+                                  <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
                                 </svg>
                               </span>
 
                               <div class="min-w-0">
-                                <div class="text-xs font-semibold uppercase tracking-wide text-neutral-500">
-                                  Sähköposti
+                                <div class="text-[10px] font-semibold uppercase tracking-widest text-neutral-400">
+                                  {{ trans:strings.team_email }}
                                 </div>
-                                <div class="min-w-0 truncate text-sm md:text-base font-semibold text-neutral-900 group-hover/row:text-primary-700">
+                                <div class="truncate text-sm font-semibold text-neutral-900 transition group-hover/row:text-primary">
                                   {{ email }}
                                 </div>
                               </div>
@@ -217,23 +192,15 @@
 
                             <button
                               type="button"
-                              class="inline-flex h-10 w-10 items-center justify-center rounded-xl bg-white text-neutral-700
-                                     ring-1 ring-neutral-200/70 shadow-sm transition
-                                     hover:bg-neutral-50 hover:text-neutral-900 focus:outline-none focus:ring-2 focus:ring-primary-200"
+                              class="inline-flex h-8 w-8 shrink-0 items-center justify-center rounded-lg text-neutral-400
+                                     transition hover:bg-neutral-100 hover:text-neutral-600
+                                     focus:outline-none focus:ring-2 focus:ring-primary/20"
                               data-copy="{{ email }}"
-                              aria-label="Copy email"
-                              title="Copy"
+                              aria-label="{{ trans:strings.team_copy }}"
+                              title="{{ trans:strings.team_copy }}"
                               onclick="navigator.clipboard?.writeText(this.dataset.copy || '')"
                             >
-                              <svg
-                                viewBox="0 0 24 24"
-                                class="h-5 w-5"
-                                fill="none"
-                                stroke="currentColor"
-                                stroke-width="2"
-                                stroke-linecap="round"
-                                stroke-linejoin="round"
-                              >
+                              <svg viewBox="0 0 24 24" class="h-3.5 w-3.5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                 <rect x="9" y="9" width="13" height="13" rx="2"></rect>
                                 <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
                               </svg>
@@ -245,16 +212,23 @@
                     </div>
                   </div>
                 {{ /if }}
-
-                {{# featured badge (kept if used) #}}
-                {{ if featured }}
-                  <div class="absolute right-4 top-4 rounded-full bg-neutral-900 px-2.5 py-1 text-[11px] font-semibold text-white/90">
-                    Featured
-                  </div>
-                {{ /if }}
               </div>
             </article>
           {{ /people }}
+        </div>
+      {{ /if }}
+
+      {{# Shared contact #}}
+      {{ if shared_contact }}
+        <div class="mx-auto mt-10 max-w-md text-center md:mt-12">
+          <div class="inline-flex items-center gap-3 rounded-xl border border-neutral-200/60 bg-white px-5 py-3 shadow-sm ring-1 ring-neutral-100/60">
+            <svg viewBox="0 0 24 24" class="h-4 w-4 shrink-0 text-neutral-400" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="2" y="4" width="20" height="16" rx="2" />
+              <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
+            </svg>
+            <span class="text-sm text-neutral-500">{{ trans:strings.team_shared_contact }}:</span>
+            <span class="text-sm font-semibold text-neutral-700">{{ shared_contact }}</span>
+          </div>
         </div>
       {{ /if }}
 
