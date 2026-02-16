@@ -1,0 +1,207 @@
+{{#
+    @name Footer
+    @desc The sites footer rendered on each page.
+#}}
+
+<!-- /layout/_footer.antlers.html -->
+<footer class="mt-auto bg-neutral text-white">
+    {{# subtle top highlight (feels more "SaaS") #}}
+    <div class="h-px w-full bg-gradient-to-r from-transparent via-white/15 to-transparent"></div>
+
+    <div class="fluid-grid py-16">
+        <div class="span-content grid gap-12 md:grid-cols-12">
+            {{# Brand / Description #}}
+            <div class="md:col-span-5">
+                <div class="flex items-center">
+                    {{ partial:components/logo variant="footer" width="220" }}
+                </div>
+
+                {{ if configuration:footer_description }}
+                    <p class="mt-6 max-w-md text-base leading-relaxed text-white/80">
+                        {{ configuration:footer_description }}
+                    </p>
+                {{ /if }}
+
+                <p class="mt-8 text-sm text-white/70">
+                    &copy; {{ configuration:copyright_since }}
+                    {{ unless (now | format('Y')) == configuration:copyright_since }}
+                        – {{ now | format('Y') }}
+                    {{ /unless }}
+                    {{ configuration:copyright_name ?? config:app:name }}
+                </p>
+            </div>
+
+            {{# Contact #}}
+            <div class="md:col-span-4">
+                <p class="text-sm font-semibold tracking-wide text-white/90 uppercase">
+                    {{ configuration:footer_contact_title }}
+                </p>
+
+                {{ if configuration:footer_contacts }}
+                    <ul class="mt-5 space-y-6">
+                        {{ configuration:footer_contacts }}
+                            <li class="rounded-2xl">
+                                {{ if name }}
+                                    <div class="text-base font-semibold text-white">
+                                        {{ name }}
+                                    </div>
+                                {{ /if }}
+
+                                <div class="mt-3 space-y-2">
+                                    {{ if phone }}
+                                        <a
+                                            href="tel:{{ phone }}"
+                                            class="
+                                                group inline-flex items-center gap-2
+                                                rounded-xl px-2 py-1 -ml-2
+                                                text-sm text-white/75
+                                                hover:text-white hover:bg-white/10
+                                                transition
+                                            "
+                                        >
+                                            <span
+                                                class="inline-flex h-8 w-8 items-center justify-center rounded-xl bg-white/5 ring-1 ring-white/10
+                                                       group-hover:bg-white/10 group-hover:ring-white/15 transition"
+                                                aria-hidden="true"
+                                            >
+                                                <svg viewBox="0 0 24 24" class="h-4 w-4 fill-none stroke-current stroke-[1.8] text-white/80">
+                                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                                          d="M2.5 6.5c0-1.1.9-2 2-2h2.2c.7 0 1.3.4 1.6 1l1 2.3c.3.7.1 1.5-.4 2l-1.1 1.1a14.8 14.8 0 0 0 6.4 6.4l1.1-1.1c.5-.5 1.3-.7 2-.4l2.3 1c.6.3 1 1 1 1.6v2.2c0 1.1-.9 2-2 2H19c-9.1 0-16.5-7.4-16.5-16.5V6.5Z" />
+                                                </svg>
+                                            </span>
+
+                                            <span class="tracking-wide">{{ phone }}</span>
+                                        </a>
+                                    {{ /if }}
+
+                                    {{ if email }}
+                                        <a
+                                            href="mailto:{{ email }}"
+                                            class="
+                                                group inline-flex items-center gap-2
+                                                rounded-xl px-2 py-1 -ml-2
+                                                text-sm text-white/75
+                                                hover:text-white hover:bg-white/10
+                                                transition
+                                            "
+                                        >
+                                            <span
+                                                class="inline-flex h-8 w-8 items-center justify-center rounded-xl bg-white/5 ring-1 ring-white/10
+                                                       group-hover:bg-white/10 group-hover:ring-white/15 transition"
+                                                aria-hidden="true"
+                                            >
+                                                <svg viewBox="0 0 24 24" class="h-4 w-4 fill-none stroke-current stroke-[1.8] text-white/80">
+                                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                                          d="M4 6.75h16A2.25 2.25 0 0 1 22.25 9v10A2.25 2.25 0 0 1 20 21.25H4A2.25 2.25 0 0 1 1.75 19V9A2.25 2.25 0 0 1 4 6.75Z" />
+                                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                                          d="M3.5 8.2 12 13.4l8.5-5.2" />
+                                                </svg>
+                                            </span>
+
+                                            <span class="tracking-wide">{{ email }}</span>
+                                        </a>
+                                    {{ /if }}
+                                </div>
+                            </li>
+                        {{ /configuration:footer_contacts }}
+                    </ul>
+                {{ /if }}
+
+                {{ if configuration:footer_general_email }}
+                    <div class="mt-6">
+                        <a
+                            href="mailto:{{ configuration:footer_general_email }}"
+                            class="
+                                group inline-flex items-center gap-2
+                                rounded-2xl bg-white/5 px-4 py-3
+                                text-sm font-semibold text-white/80
+                                ring-1 ring-white/10
+                                hover:bg-white/10 hover:text-white
+                                transition
+                            "
+                        >
+                            <span
+                                class="inline-flex h-9 w-9 items-center justify-center rounded-xl bg-white/5 ring-1 ring-white/10
+                                       group-hover:bg-white/10 group-hover:ring-white/15 transition"
+                                aria-hidden="true"
+                            >
+                                <svg viewBox="0 0 24 24" class="h-4 w-4 fill-none stroke-current stroke-[1.8] text-white/85">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                          d="M4 6.75h16A2.25 2.25 0 0 1 22.25 9v10A2.25 2.25 0 0 1 20 21.25H4A2.25 2.25 0 0 1 1.75 19V9A2.25 2.25 0 0 1 4 6.75Z" />
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                          d="M3.5 8.2 12 13.4l8.5-5.2" />
+                                </svg>
+                            </span>
+                            <span>{{ configuration:footer_general_email }}</span>
+                        </a>
+                    </div>
+                {{ /if }}
+            </div>
+
+            {{# Links + Social #}}
+            <div class="md:col-span-3">
+                <p class="text-sm font-semibold tracking-wide text-white/90 uppercase">
+                    {{ configuration:footer_about_title }}
+                </p>
+
+                {{# Social icons #}}
+                {{ if social_media:social_media }}
+                    <div class="mt-5 flex items-center gap-3">
+                        {{ social_media:social_media }}
+                            {{ if enabled }}
+                                <a
+                                    href="{{ prefix }}{{ handle }}"
+                                    rel="noopener{{ type == 'mastodon' ?= ' me' }}"
+                                    aria-label="{{ config:app:name }} {{ trans:strings.on }} {{ type | title }}"
+                                    target="_blank"
+                                    class="
+                                        inline-flex h-11 w-11 items-center justify-center
+                                        rounded-2xl bg-white/5
+                                        text-white
+                                        ring-1 ring-white/10
+                                        hover:bg-white/10
+                                        focus:outline-none focus:ring-2 focus:ring-primary/40
+                                        transition
+                                    "
+                                >
+                                    {{ svg :src="type" attr:class="w-6 h-6 overflow-visible fill-current" attr:aria-hidden="true" }}
+                                </a>
+                            {{ /if }}
+                        {{ /social_media:social_media }}
+                    </div>
+                {{ /if }}
+
+                {{# Footer navigation (single nav: footer.yaml) #}}
+                <div class="mt-7 space-y-1 text-base">
+                    {{ nav:footer }}
+                        <a
+                            href="{{ url }}"
+                            class="
+                                group flex items-center justify-between
+                                rounded-xl px-3 py-2
+                                text-white/80
+                                hover:bg-white/10 hover:text-white
+                                focus:outline-none focus:ring-2 focus:ring-primary/40
+                                transition
+                            "
+                        >
+                            <span class="leading-tight">{{ title }}</span>
+                        </a>
+                    {{ /nav:footer }}
+                </div>
+            </div>
+        </div>
+
+        {{# Bottom row: divider + consent reset #}}
+        <div class="span-content mt-12 border-t border-white/10 pt-7">
+            <div class="flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
+                <p class="text-sm text-white/55"></p>
+
+                <div class="text-sm font-semibold text-white/65">
+                    {{ yield:reset_consent }}
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+<!-- End: /layout/_footer.antlers.html -->

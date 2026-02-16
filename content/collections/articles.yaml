@@ -1,0 +1,24 @@
+title: articles
+sites:
+  - default
+  - en
+  - sv
+propagate: false
+template: articles/show
+layout: layout
+search_index: articles
+mount: 1237ccf1-20f4-4245-b8da-ca9c7322e24b
+taxonomies:
+  - tags
+revisions: false
+route: '/{mount}/{slug}'
+date: true
+sort_dir: asc
+date_behavior:
+  past: public
+  future: private
+preview_targets:
+  -
+    label: Entry
+    url: '{permalink}'
+    refresh: true

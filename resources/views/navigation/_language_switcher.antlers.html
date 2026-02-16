@@ -1,0 +1,130 @@
+<!-- /navigation/_language_switcher.antlers.html -->
+<div
+  x-data="{ open: false }"
+  @keyup.escape.stop.prevent="open = false"
+  @click.outside="open = false"
+  class="relative"
+>
+  <button
+    x-ref="button"
+    type="button"
+    @click="open = !open"
+    :aria-expanded="open"
+    aria-label="Vaihda kieli"
+    class="
+      inline-flex items-center justify-center
+      h-11 w-11
+      rounded-xl
+      transition
+      focus:outline-none focus-visible:ring-2 focus-visible:ring-[#519fc0]/35
+    "
+    :class="open
+      ? 'bg-white/70 backdrop-blur ring-1 ring-inset ring-neutral-900/10 shadow-sm shadow-neutral-900/5'
+      : 'bg-white/20 hover:bg-white/45 hover:backdrop-blur ring-1 ring-inset ring-white/35'"
+  >
+    {{# Globe icon (inline SVG so you don't need a file) #}}
+    <span
+      class="text-neutral-900/70"
+      :class="open ? 'text-neutral-900' : 'text-neutral-900/70'"
+      aria-hidden="true"
+    >
+      <svg
+        class="h-5 w-5"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2.25"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      >
+        <circle cx="12" cy="12" r="9"></circle>
+        <path d="M3 12h18"></path>
+        <path d="M12 3a15 15 0 0 1 0 18"></path>
+        <path d="M12 3a15 15 0 0 0 0 18"></path>
+      </svg>
+    </span>
+  </button>
+
+  <div
+    x-ref="panel"
+    x-show="open"
+    x-transition:enter="transition ease-out duration-140"
+    x-transition:enter-start="opacity-0 translate-y-1"
+    x-transition:enter-end="opacity-100 translate-y-0"
+    x-transition:leave="transition ease-in duration-120"
+    x-transition:leave-start="opacity-100 translate-y-0"
+    x-transition:leave-end="opacity-0 translate-y-1"
+    x-cloak
+    class="absolute right-0 mt-2 z-50 w-56"
+  >
+    <div
+      class="
+        relative overflow-hidden rounded-2xl
+        bg-white/92 backdrop-blur
+        shadow-xl shadow-neutral-900/10
+        ring-1 ring-inset ring-neutral-900/10
+        p-2
+      "
+    >
+      <div class="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-[#519fc0]/35 to-transparent"></div>
+
+      <p class="px-3 pt-2 pb-1 text-[10px] font-semibold tracking-widest text-neutral-500 uppercase">
+        Kieli
+      </p>
+
+      <ul class="mt-1 grid gap-1 p-1">
+        {{ sites }}
+          <li>
+            <a
+              href="{{ url }}"
+              class="
+                group flex items-center justify-between
+                rounded-xl px-3 py-2.5
+                text-[13px] font-semibold
+                transition
+                focus:outline-none focus-visible:ring-2 focus-visible:ring-[#519fc0]/30
+                {{ if handle == site:handle }}
+                  bg-[#519fc0]/10 text-neutral-900
+                {{ else }}
+                  text-neutral-700 hover:bg-neutral-900/5 hover:text-neutral-900
+                {{ /if }}
+              "
+              {{ if handle == site:handle }}aria-current="true"{{ /if }}
+            >
+              <span class="inline-flex items-center gap-2.5">
+                <span
+                  class="
+                    inline-flex h-[18px] w-[26px]
+                    items-center justify-center overflow-hidden
+                    rounded-[6px]
+                    ring-1 ring-black/10
+                    shadow-[0_1px_0_rgba(0,0,0,0.04)]
+                    bg-white
+                  "
+                  aria-hidden="true"
+                >
+                  {{ if handle == "default" }}
+                    {{ svg:fi attr:class="h-full w-full" }}
+                  {{ elseif handle == "en" }}
+                    {{ svg:gb attr:class="h-full w-full" }}
+                  {{ elseif handle == "sv" }}
+                    {{ svg:se attr:class="h-full w-full" }}
+                  {{ /if }}
+                </span>
+
+                <span>{{ name }}</span>
+              </span>
+
+              {{ if handle == site:handle }}
+                <span class="text-[#519fc0]" aria-hidden="true">
+                  {{ svg:check attr:class="w-4 h-4 stroke-current stroke-[2.5]" }}
+                </span>
+              {{ /if }}
+            </a>
+          </li>
+        {{ /sites }}
+      </ul>
+    </div>
+  </div>
+</div>
+<!-- End: /navigation/_language_switcher.antlers.html -->

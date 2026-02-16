@@ -1,0 +1,28 @@
+title: 'Social media'
+data:
+  default:
+    social_media:
+      -
+        id: mkf8xj1e
+        handle: company/apprix-oy
+        prefix: 'https://www.linkedin.com/'
+        type: linkedin
+        enabled: true
+
+  en:
+    social_media:
+      -
+        id: mkf8xj1e
+        handle: company/apprix-oy
+        prefix: 'https://www.linkedin.com/'
+        type: linkedin
+        enabled: true
+
+  sv:
+    social_media:
+      -
+        id: mkf8xj1e
+        handle: company/apprix-oy
+        prefix: 'https://www.linkedin.com/'
+        type: linkedin
+        enabled: true

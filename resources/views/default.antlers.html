@@ -1,0 +1,21 @@
+<main id="content" class="m-0 p-0">
+
+  {{# Page builder blocks (no global stack spacing; each section controls its own py-*) #}}
+  {{ if page_builder }}
+    {{ page_builder scope="block" }}
+      <div class="block-wrap" data-block-type="{{ block:type }}">
+        {{ partial src="page_builder/block" }}
+      </div>
+    {{ /page_builder }}
+  {{ else }}
+    {{# fallback for pages that don't use page_builder #}}
+    <section class="fluid-grid py-10 md:py-14">
+      <div class="span-content">
+        {{ partial:typography/prose }}
+          {{ content ?? "" }}
+        {{ /partial:typography/prose }}
+      </div>
+    </section>
+  {{ /if }}
+
+</main>

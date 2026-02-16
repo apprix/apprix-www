@@ -1,0 +1,65 @@
+title: Hero
+fields:
+  -
+    handle: eyebrow
+    field:
+      type: text
+      display: Eyebrow
+      instructions: 'Small label above the heading (optional).'
+      localizable: true
+
+  -
+    handle: heading
+    field:
+      type: text
+      display: Heading
+      localizable: true
+      required: true
+
+  -
+    handle: text
+    field:
+      type: textarea
+      display: Text
+      localizable: true
+
+  -
+    handle: buttons
+    field:
+      type: grid
+      display: Buttons
+      instructions: 'Add 1–2 CTA buttons.'
+      localizable: true
+      max_rows: 2
+      fields:
+        -
+          handle: label
+          field:
+            type: text
+            display: Label
+            required: true
+        -
+          handle: link
+          field:
+            type: link
+            display: Link
+            required: true
+        -
+          handle: style
+          field:
+            type: select
+            display: Style
+            default: primary
+            options:
+              primary: Primary
+              secondary: Secondary
+
+  -
+    handle: image
+    field:
+      type: assets
+      display: Image
+      container: files
+      max_files: 1
+      mode: grid
+      localizable: false

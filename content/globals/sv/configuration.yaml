@@ -1,0 +1,27 @@
+error_404_entry: 059d4d8d-fc60-49f8-8823-7da10549e84e
+copyright_name: 'Apprix Oy'
+copyright_since: 2026
+privacy_statement_type: none
+cookie_notice_type: none
+footer_description: |-
+  Apprix Builder® är en digital utbildningsplattform som hjälper organisationer
+  att skapa, dela och följa upp kompetens på ett effektivt sätt.
+footer_contact_title: 'Kontakta oss'
+footer_contacts:
+  -
+    id: mkf8jegen
+    name: 'Martin Björksten'
+    phone: '+358 40 706 3871'
+    email: martin.bjorksten@apprix.fi
+  -
+    id: mkf8krj3
+    name: 'Mikko Eskelinen'
+    phone: '+358 40 078 7738'
+    email: mikko.eskelinen@apprix.fi
+  -
+    id: mkf8lgdm
+    name: 'Jesse Jokinen'
+    phone: '+358 40 501 9150'
+    email: jesse.jokinen@apprix.fi
+footer_email: etunimi.sukunimi@apprix.fi
+footer_about_title: 'Mer om Apprix'

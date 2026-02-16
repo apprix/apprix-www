@@ -1,0 +1,169 @@
+{{# @name Link cards @desc Exploratory link cards section (1–3 cards) to guide
+users to related pages (e.g. Customers, Case studies). @set
+page.page_builder.link_cards #}}
+
+<section class="relative overflow-hidden bg-neutral-50/60">
+    <div
+        class="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-neutral-200/80 to-transparent"
+    ></div>
+
+    {{# Background accents (BLUE ONLY, subtle) #}}
+    <div class="pointer-events-none absolute inset-0">
+        <div
+            class="absolute -left-44 top-8 h-80 w-80 rounded-full bg-[#519fc0]/8 blur-3xl"
+        ></div>
+        <div
+            class="absolute -right-44 bottom-0 h-96 w-96 rounded-full bg-[#519fc0]/6 blur-3xl"
+        ></div>
+        <div
+            class="absolute inset-x-0 top-0 h-56 bg-gradient-to-b from-white/80 via-neutral-50/45 to-transparent"
+        ></div>
+    </div>
+
+    <div class="fluid-grid py-14 md:py-18">
+        <div class="span-content relative">
+            {{ if eyebrow }}
+            <div
+                class="mx-auto mb-12 flex max-w-4xl items-center gap-4 md:mb-14"
+            >
+                <span
+                    class="h-px flex-1 bg-gradient-to-r from-transparent via-[#519fc0]/40 to-transparent"
+                ></span>
+
+                <span
+                    class="text-xs font-semibold tracking-widest uppercase text-[#3c89a8]"
+                >
+                    {{ eyebrow }}
+                </span>
+
+                <span
+                    class="h-px flex-1 bg-gradient-to-r from-transparent via-[#519fc0]/40 to-transparent"
+                ></span>
+            </div>
+            {{ /if }} {{ if cards }}
+            <div class="-mx-2 md:-mx-4">
+                <div
+                    class="mx-auto grid w-full max-w-screen-xl gap-6 md:grid-cols-2 md:gap-8"
+                >
+                    {{ cards }}
+
+                    <a
+                        href="{{ link }}"
+                        class="group relative overflow-hidden rounded-3xl border border-neutral-200/80 bg-white shadow-sm transition hover:-translate-y-1 hover:border-neutral-300 hover:shadow-lg focus:outline-none focus-visible:ring-2 focus-visible:ring-[#519fc0]/25"
+                    >
+                        {{# Top accent (blue, subtle) #}}
+                        <div
+                            class="pointer-events-none absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-[#519fc0]/60 via-[#519fc0]/20 to-transparent"
+                        ></div>
+
+                        {{# Very soft inset ring on hover (blue) #}}
+                        <div
+                            class="pointer-events-none absolute inset-0 opacity-0 transition-opacity duration-300 group-hover:opacity-100"
+                        >
+                            <div
+                                class="absolute inset-0 ring-1 ring-inset ring-[#519fc0]/12"
+                            ></div>
+                        </div>
+
+                        <div class="grid h-full md:grid-cols-[1fr_16rem]">
+                            {{# Content #}}
+                            <div class="p-7 md:p-8">
+                                <div
+                                    class="flex items-start justify-between gap-4"
+                                >
+                                    <div class="flex items-center gap-3">
+                                        {{# Icon bubble (blue tint) #}}
+                                        <div
+                                            class="grid h-11 w-11 place-items-center rounded-2xl bg-[#519fc0]/8 ring-1 ring-[#519fc0]/14"
+                                        >
+                                            {{ if icon == "users" }}
+                                            <span class="text-lg">👥</span>
+                                            {{ elseif icon == "case" }}
+                                            <span class="text-lg">📄</span>
+                                            {{ elseif icon == "info" }}
+                                            <span class="text-lg">ℹ️</span>
+                                            {{ else }}
+                                            <span class="text-lg">↗</span>
+                                            {{ /if }}
+                                        </div>
+
+                                        {{ if eyebrow }} {{# Eyebrow (blue) #}}
+                                        <p
+                                            class="text-xs font-semibold tracking-widest uppercase text-[#3c89a8]"
+                                        >
+                                            {{ eyebrow }}
+                                        </p>
+                                        {{ /if }}
+                                    </div>
+                                </div>
+
+                                <div class="mt-5">
+                                    {{ if title }}
+                                    <h3
+                                        class="text-balance text-xl font-semibold tracking-tight text-neutral-900 md:text-2xl"
+                                    >
+                                        {{ title }}
+                                    </h3>
+                                    {{ /if }} {{ if text }}
+                                    <p
+                                        class="mt-3 max-w-md text-sm leading-relaxed text-neutral-600"
+                                    >
+                                        {{ text }}
+                                    </p>
+                                    {{ /if }}
+                                </div>
+                            </div>
+
+                            {{# Visual panel (blue-only, very subtle — less
+                            "colored block") #}}
+                            <div
+                                class="relative overflow-hidden border-t border-neutral-200/70 bg-gradient-to-br from-[#519fc0]/6 via-white to-white md:border-l md:border-t-0"
+                            >
+                                {{ if image }} {{ image }}
+                                <div
+                                    class="flex h-full w-full items-end justify-center px-8 pb-10"
+                                >
+                                    <img
+                                        src="{{ url }}"
+                                        alt="{{ alt ?? title }}"
+                                        class="max-h-[72px] w-auto max-w-full object-contain transition duration-500 group-hover:scale-[1.03]"
+                                        loading="lazy"
+                                    />
+                                </div>
+                                {{ /image }} {{ else }}
+                                <div
+                                    class="absolute inset-0 bg-gradient-to-br from-neutral-100 to-white"
+                                ></div>
+                                {{ /if }} {{# depth #}}
+                                <div
+                                    class="pointer-events-none absolute inset-0 bg-gradient-to-t from-neutral-900/4 via-transparent to-transparent"
+                                ></div>
+
+                                {{# tiny blue blob (subtle) #}}
+                                <div
+                                    class="pointer-events-none absolute -right-20 -top-20 h-56 w-56 rounded-full bg-[#519fc0]/10 blur-3xl"
+                                ></div>
+                            </div>
+                        </div>
+
+                        {{# Soft hover sheen #}}
+                        <div
+                            class="pointer-events-none absolute inset-0 opacity-0 transition-opacity duration-300 group-hover:opacity-100"
+                        >
+                            <div
+                                class="absolute -left-24 top-0 h-full w-64 rotate-12 bg-gradient-to-r from-transparent via-white/28 to-transparent"
+                            ></div>
+                        </div>
+                    </a>
+
+                    {{ /cards }}
+                </div>
+            </div>
+            {{ /if }}
+
+            <div
+                class="mx-auto mt-12 h-px max-w-5xl bg-gradient-to-r from-transparent via-neutral-200/70 to-transparent"
+            ></div>
+        </div>
+    </div>
+</section>

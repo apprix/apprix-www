@@ -1,0 +1,39 @@
+title: 'Logo carousel'
+fields:
+  - handle: heading
+    field:
+      type: text
+      display: Heading
+      instructions: 'Optional small heading above the logos.'
+      localizable: true
+
+  - handle: logos
+    field:
+      type: assets
+      display: Logos
+      container: files
+      mode: grid
+      max_files: 24
+      instructions: 'Upload SVGs or small transparent PNG/WebP logos. Aim for similar height.'
+      localizable: false
+
+  - handle: speed
+    field:
+      type: select
+      display: Speed
+      options:
+        slow: Slow
+        normal: Normal
+        fast: Fast
+      default: normal
+      localizable: false
+
+  - handle: tone
+    field:
+      type: select
+      display: Tone
+      options:
+        light: Light background
+        muted: Muted background
+      default: muted
+      localizable: false

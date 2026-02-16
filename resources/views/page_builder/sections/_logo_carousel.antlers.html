@@ -1,0 +1,94 @@
+{{#
+  @name Logo carousel
+  @desc Lightweight animated trust section for logos (seamless loop)
+#}}
+
+<section class="relative overflow-hidden bg-gradient-to-b from-white via-neutral-50/60 to-white py-10 md:py-14">
+
+  {{# subtle section dividers (premium SaaS feel) #}}
+  <div class="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-neutral-300/40 to-transparent"></div>
+  <div class="pointer-events-none absolute inset-x-0 bottom-0 h-px bg-gradient-to-r from-transparent via-neutral-300/40 to-transparent"></div>
+
+  {{# subtle background accents (different from hero) #}}
+  <div class="pointer-events-none absolute inset-0">
+    <div class="absolute left-[-8rem] top-[-6rem] h-[16rem] w-[16rem] rounded-full bg-gradient-to-tr from-primary-200/18 via-white/0 to-sky-200/18 blur-3xl"></div>
+    <div class="absolute right-[-10rem] bottom-[-7rem] h-[18rem] w-[18rem] rounded-full bg-gradient-to-bl from-rose-200/14 via-white/0 to-primary-200/14 blur-3xl"></div>
+
+    {{# "divider band" wash (no box) #}}
+    <div class="absolute inset-x-0 top-1/2 h-28 -translate-y-1/2 bg-gradient-to-r from-transparent via-white/70 to-transparent"></div>
+  </div>
+
+  <div class="fluid-grid">
+    <div class="span-content relative">
+
+      {{ if logos }}
+        {{# keep the marquee wrapper EXACTLY as before (same -mx, same runner, same sets) #}}
+        <div class="relative -mx-[10vw] pt-2">
+
+          {{# edge fades – match section tint #}}
+          <div class="pointer-events-none absolute inset-y-0 left-0 z-10 w-24 bg-gradient-to-r from-neutral-50/90 to-transparent"></div>
+          <div class="pointer-events-none absolute inset-y-0 right-0 z-10 w-24 bg-gradient-to-l from-neutral-50/90 to-transparent"></div>
+
+          <div class="logo-marquee overflow-hidden">
+            <div
+              class="
+                logo-runner inline-flex items-center
+                {{ speed == 'slow' ? 'logo-speed-slow' : '' }}
+                {{ speed == 'fast' ? 'logo-speed-fast' : '' }}
+              "
+            >
+              {{# SET A #}}
+              <div class="logo-set inline-flex items-center gap-16 pr-16">
+                {{ logos }}
+                  <div
+                    class="
+                      logo-item shrink-0 w-40 h-12 flex items-center justify-center
+                      opacity-85 transition duration-300
+                      hover:opacity-100 hover:-translate-y-0.5
+                    "
+                  >
+                    <img
+                      src="{{ url }}"
+                      alt="{{ alt ?? title ?? 'Logo' }}"
+                      class="max-h-12 w-auto max-w-[200px] object-contain"
+                      loading="lazy"
+                      decoding="async"
+                    />
+                  </div>
+                {{ /logos }}
+              </div>
+
+              {{# SET B (duplicate for seamless loop) #}}
+              <div class="logo-set inline-flex items-center gap-16 pr-16" aria-hidden="true">
+                {{ logos }}
+                  <div
+                    class="
+                      logo-item shrink-0 w-40 h-12 flex items-center justify-center
+                      opacity-85 transition duration-300
+                      hover:opacity-100 hover:-translate-y-0.5
+                    "
+                  >
+                    <img
+                      src="{{ url }}"
+                      alt=""
+                      class="max-h-12 w-auto max-w-[200px] object-contain"
+                      loading="lazy"
+                      decoding="async"
+                    />
+                  </div>
+                {{ /logos }}
+              </div>
+            </div>
+          </div>
+        </div>
+      {{ else }}
+        {{ if logged_in }}
+          <p class="text-center text-sm text-neutral-500">
+            Add logos to this block to display the carousel.
+          </p>
+        {{ /if }}
+
+      {{ /if }}
+    </div>
+  </div>
+</section>

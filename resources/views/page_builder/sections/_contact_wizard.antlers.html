@@ -1,0 +1,1463 @@
+{{# @name Contact wizard @desc Premium step-by-step contact wizard (uses
+Statamic form submissions). @set page.page_builder.contact_wizard #}}
+
+<section class="relative isolate overflow-hidden">
+    {{ bg = (block:background_image ? block:background_image:url :
+    '/assets/images/contact/blue_bg2.jpg') }}
+
+    <div
+        class="pointer-events-none absolute inset-0 z-0 bg-cover bg-center"
+        style="background-image: url('{{ bg }}');"
+    ></div>
+
+    <div
+        class="pointer-events-none absolute inset-0 z-10 bg-gradient-to-r from-white/75 via-white/45 to-white/15"
+    ></div>
+    <div
+        class="pointer-events-none absolute inset-0 z-10 bg-gradient-to-b from-black/10 via-black/0 to-black/15 mix-blend-multiply"
+    ></div>
+
+    <div class="pointer-events-none absolute inset-0 z-10">
+        <div
+            class="absolute -left-44 top-8 h-[24rem] w-[24rem] rounded-full bg-primary-200/16 blur-3xl"
+        ></div>
+        <div
+            class="absolute -right-44 bottom-[-6rem] h-[28rem] w-[28rem] rounded-full bg-sky-200/16 blur-3xl"
+        ></div>
+        <div
+            class="absolute right-20 top-10 h-36 w-36 rounded-full bg-white/18 blur-2xl"
+        ></div>
+    </div>
+
+    <div class="relative z-20 fluid-grid py-8 md:py-12">
+        <div class="span-content">
+            <div class="mx-auto max-w-6xl">
+                <div
+                    class="relative overflow-hidden rounded-3xl bg-white/84 shadow-xl shadow-black/10 ring-1 ring-black/10 backdrop-blur-sm"
+                >
+                    <div
+                        class="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-primary/25 to-transparent"
+                    ></div>
+                    <div
+                        class="pointer-events-none absolute -right-24 -top-24 h-64 w-64 rounded-full bg-white/18 blur-3xl"
+                    ></div>
+
+                    <div class="p-6 md:p-10 lg:p-12">
+                        <div x-data="contactWizard()" class="relative">
+                            {{ form_handle = (block:form_handle ?? 'contact') }}
+                            {{ submit_label = (block:button_label ??
+                            trans:strings.form_send ?? 'Lähetä
+                            yhteydenottopyyntö') }}
+
+                            <div class="mb-1">
+                                <div
+                                    class="flex flex-wrap items-center justify-between gap-3"
+                                >
+                                    <h3
+                                        class="text-balance text-2xl font-semibold tracking-tight text-neutral-900 md:text-3xl"
+                                        x-text="stepTitle()"
+                                    ></h3>
+
+                                    <span
+                                        class="inline-flex items-center gap-2 rounded-full bg-neutral-900/5 px-3 py-1 text-xs font-semibold text-neutral-700 ring-1 ring-black/5 backdrop-blur-sm"
+                                    >
+                                        <svg
+                                            viewBox="0 0 24 24"
+                                            class="h-4 w-4 text-neutral-600"
+                                            fill="none"
+                                            stroke="currentColor"
+                                            stroke-width="2"
+                                            stroke-linecap="round"
+                                            stroke-linejoin="round"
+                                            aria-hidden="true"
+                                        >
+                                            <path
+                                                d="M4 6h16M4 12h10M4 18h16"
+                                            ></path>
+                                        </svg>
+                                        Vaihe
+                                        <span class="mx-1" x-text="step"></span
+                                        >/4
+                                    </span>
+                                </div>
+
+                                {{# PREMIUM PROGRESS (steps sit ON the bar) #}}
+                                <div class="mt-6">
+                                    <div class="relative pt-6">
+                                        {{# TRACK + FILL (bar behind the step
+                                        circles) #}}
+                                        <div
+                                            class="relative h-3 w-full overflow-hidden rounded-full bg-black/[0.04] ring-1 ring-black/10"
+                                        >
+                                            <div
+                                                class="pointer-events-none absolute inset-0 bg-gradient-to-b from-white/70 via-white/30 to-transparent"
+                                            ></div>
+
+                                            <div
+                                                class="absolute left-0 top-0 h-full rounded-full bg-primary/70 transition-all duration-500 ease-out will-change-[width]"
+                                                :style="`width: ${progress()}%`"
+                                            >
+                                                <div
+                                                    class="pointer-events-none absolute inset-0 bg-gradient-to-r from-white/25 via-white/0 to-white/20"
+                                                ></div>
+                                                <div
+                                                    class="pointer-events-none absolute inset-x-0 top-0 h-px bg-white/60"
+                                                ></div>
+                                            </div>
+                                        </div>
+
+                                        {{# STEP CIRCLES (attached to the bar)
+                                        #}}
+                                        <div
+                                            class="absolute left-0 right-0 top-8 -translate-y-1/2"
+                                        >
+                                            <div
+                                                class="relative flex items-center justify-between"
+                                            >
+                                                <template
+                                                    x-for="n in 4"
+                                                    :key="n"
+                                                >
+                                                    <button
+                                                        type="button"
+                                                        class="group relative inline-flex items-center justify-center"
+                                                        @click="goTo(n)"
+                                                    >
+                                                        {{# active halo (subtle)
+                                                        #}}
+                                                        <span
+                                                            class="pointer-events-none absolute inset-0 -m-2 rounded-full opacity-0 transition duration-300"
+                                                            :class="n === step ? 'opacity-100' : ''"
+                                                        >
+                                                            <span
+                                                                class="absolute inset-0 rounded-full bg-primary/15 blur-xl"
+                                                            ></span>
+                                                        </span>
+
+                                                        <span
+                                                            class="relative grid h-11 w-11 place-items-center rounded-full text-sm font-semibold transition duration-300 ring-1 ring-black/10 will-change-transform"
+                                                            :class="
+                      n < step
+                        ? 'bg-primary text-white shadow-md shadow-black/10'
+                        : (n === step
+                            ? 'bg-white text-neutral-900 ring-primary/30 shadow-sm shadow-black/10 scale-[1.06]'
+                            : 'bg-white/80 text-neutral-500 hover:bg-white')
+                    "
+                                                        >
+                                                            <span
+                                                                class="pointer-events-none absolute inset-0 rounded-full bg-gradient-to-b from-white/55 via-white/0 to-black/10 opacity-70"
+                                                            ></span>
+                                                            <span
+                                                                class="relative"
+                                                                x-text="n"
+                                                            ></span>
+                                                        </span>
+                                                    </button>
+                                                </template>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    {{# Error stays same #}}
+                                    <div
+                                        x-cloak
+                                        x-show="attempted && stepError"
+                                        x-transition
+                                        class="mt-6 rounded-xl border border-rose-200 bg-rose-50/80 px-4 py-3 text-sm text-rose-900"
+                                    >
+                                        <span x-text="stepError"></span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            {{ if form_handle }} {{ form:create
+                            :in="form_handle" js="alpine:form" attr:x-ref="form"
+                            }}
+                            <div class="flex flex-col gap-7">
+                                <div class="space-y-3">
+                                    <div
+                                        x-cloak
+                                        x-show="success"
+                                        x-transition
+                                        class="rounded-xl border border-emerald-200 bg-emerald-50/80 px-4 py-3 text-sm text-emerald-900"
+                                    >
+                                        Viesti lähetetty onnistuneesti.
+                                    </div>
+
+                                    <div
+                                        x-cloak
+                                        x-show="attempted && hasErrors"
+                                        x-transition
+                                        class="rounded-xl border border-rose-200 bg-rose-50/80 px-4 py-3 text-sm text-rose-900"
+                                    >
+                                        Tarkista lomakkeen kentät ja yritä
+                                        uudelleen.
+                                    </div>
+                                </div>
+
+                                {{# STEP 1 #}}
+                                <div x-show="step === 1" x-transition.opacity>
+                                    <div
+                                        class="mt-2 grid gap-5 sm:grid-cols-2 items-stretch"
+                                    >
+                                        {{# learning_environment #}}
+                                        <label class="group cursor-pointer">
+                                            <input
+                                                class="peer sr-only"
+                                                type="checkbox"
+                                                name="looking_for[]"
+                                                value="learning_environment"
+                                            />
+                                            <div
+                                                class="relative h-full min-h-[190px] overflow-hidden rounded-3xl border border-black/10 bg-white/70 shadow-sm shadow-black/5 transition hover:-translate-y-0.5 hover:bg-white hover:border-neutral-200 hover:shadow-md hover:shadow-black/10 peer-checked:border-primary/35 peer-checked:bg-white peer-checked:ring-4 peer-checked:ring-primary/12"
+                                            >
+                                                <div
+                                                    class="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-primary/25 to-transparent opacity-60"
+                                                ></div>
+                                                <div
+                                                    class="pointer-events-none absolute -right-10 -top-10 h-28 w-28 rounded-full bg-primary/10 blur-2xl opacity-0 transition group-hover:opacity-100"
+                                                ></div>
+
+                                                <div
+                                                    class="absolute right-6 top-6 hidden items-center gap-1 rounded-full bg-primary/10 px-2.5 py-1 text-[11px] font-semibold text-primary ring-1 ring-primary/15 peer-checked:inline-flex"
+                                                >
+                                                    <svg
+                                                        viewBox="0 0 24 24"
+                                                        class="h-3.5 w-3.5"
+                                                        fill="none"
+                                                        stroke="currentColor"
+                                                        stroke-width="2"
+                                                        stroke-linecap="round"
+                                                        stroke-linejoin="round"
+                                                        aria-hidden="true"
+                                                    >
+                                                        <path
+                                                            d="M20 6L9 17l-5-5"
+                                                        ></path>
+                                                    </svg>
+                                                    Valittu
+                                                </div>
+
+                                                <div
+                                                    class="flex h-full flex-col"
+                                                >
+                                                    <div
+                                                        class="grid h-full grid-cols-[240px_1fr]"
+                                                    >
+                                                        {{# LEFT IMAGE PANEL #}}
+                                                        {{ if
+                                                        block:img_learning_environment
+                                                        }} {{
+                                                        block:img_learning_environment
+                                                        }}
+                                                        <div
+                                                            class="relative h-full min-h-[190px] self-stretch overflow-hidden"
+                                                        >
+                                                            <img
+                                                                src="{{ url }}"
+                                                                alt="{{ alt ?? '' }}"
+                                                                class="absolute inset-0 h-full w-full object-cover"
+                                                                loading="lazy"
+                                                            />
+
+                                                            {{# premium depth:
+                                                            slight dark +
+                                                            vignette #}}
+                                                            <span
+                                                                class="pointer-events-none absolute inset-0 bg-gradient-to-b from-black/10 via-black/0 to-black/20"
+                                                            ></span>
+                                                            <span
+                                                                class="pointer-events-none absolute inset-0 [mask-image:radial-gradient(70%_70%_at_30%_50%,black,transparent)] bg-black/10"
+                                                            ></span>
+
+                                                            {{# the actual fade
+                                                            to the right (match
+                                                            your card bg) #}}
+                                                            <span
+                                                                class="pointer-events-none absolute inset-y-0 right-0 w-52 bg-gradient-to-r from-transparent via-white/70 to-white"
+                                                            ></span>
+
+                                                            {{# glass veil on
+                                                            the fade edge (adds
+                                                            premium blur) #}}
+                                                            <span
+                                                                class="pointer-events-none absolute inset-y-0 right-0 w-52 backdrop-blur-[2px]"
+                                                            ></span>
+
+                                                            {{# diagonal sheen
+                                                            highlight #}}
+                                                            <span
+                                                                class="pointer-events-none absolute -right-10 top-1/2 h-40 w-40 -translate-y-1/2 rotate-12 bg-gradient-to-r from-white/0 via-white/25 to-white/0 blur-2xl"
+                                                            ></span>
+
+                                                            {{# thin separator
+                                                            line #}}
+                                                            <span
+                                                                class="pointer-events-none absolute inset-y-6 right-0 w-px bg-gradient-to-b from-transparent via-white/40 to-transparent"
+                                                            ></span>
+                                                        </div>
+
+                                                        {{
+                                                        /block:img_learning_environment
+                                                        }} {{ else }}
+                                                        <div
+                                                            class="relative h-full min-h-[190px] bg-primary/5"
+                                                        >
+                                                            <span
+                                                                class="absolute inset-y-0 right-0 w-40 bg-gradient-to-r from-transparent via-white/60 to-white"
+                                                            ></span>
+                                                        </div>
+                                                        {{ /if }} {{# RIGHT TEXT
+                                                        AREA (this is where
+                                                        padding belongs) #}}
+                                                        <div
+                                                            class="flex min-w-0 flex-col justify-center px-6 py-6"
+                                                        >
+                                                            <p
+                                                                class="text-lg font-semibold tracking-tight text-neutral-900"
+                                                            >
+                                                                Oppimisympäristö
+                                                            </p>
+                                                            <p
+                                                                class="mt-2 text-sm leading-relaxed text-neutral-600"
+                                                            >
+                                                                LMS-alusta ja
+                                                                oppimisen
+                                                                hallinta.
+                                                            </p>
+
+                                                            <div
+                                                                class="mt-6 h-px w-full bg-gradient-to-r from-black/10 via-black/5 to-transparent"
+                                                            ></div>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="">
+                                                        <div
+                                                            class="h-px w-full bg-gradient-to-r from-transparent via-black/10 to-transparent"
+                                                        ></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </label>
+
+                                        {{# authoring_tool #}}
+                                        <label class="group cursor-pointer">
+                                            <input
+                                                class="peer sr-only"
+                                                type="checkbox"
+                                                name="looking_for[]"
+                                                value="authoring_tool"
+                                            />
+
+                                            <div
+                                                class="relative h-full min-h-[190px] overflow-hidden rounded-3xl border border-black/10 bg-white/70 shadow-sm shadow-black/5 transition hover:-translate-y-0.5 hover:bg-white hover:border-neutral-200 hover:shadow-md hover:shadow-black/10 peer-checked:border-primary/35 peer-checked:bg-white peer-checked:ring-4 peer-checked:ring-primary/12"
+                                            >
+                                                {{# top accent line #}}
+                                                <div
+                                                    class="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-primary/25 to-transparent opacity-60"
+                                                ></div>
+
+                                                {{# selected badge #}}
+                                                <div
+                                                    class="absolute right-6 top-6 hidden items-center gap-1 rounded-full bg-primary/10 px-2.5 py-1 text-[11px] font-semibold text-primary ring-1 ring-primary/15 peer-checked:inline-flex"
+                                                >
+                                                    <svg
+                                                        viewBox="0 0 24 24"
+                                                        class="h-3.5 w-3.5"
+                                                        fill="none"
+                                                        stroke="currentColor"
+                                                        stroke-width="2"
+                                                        stroke-linecap="round"
+                                                        stroke-linejoin="round"
+                                                        aria-hidden="true"
+                                                    >
+                                                        <path
+                                                            d="M20 6L9 17l-5-5"
+                                                        ></path>
+                                                    </svg>
+                                                    Valittu
+                                                </div>
+
+                                                {{# main layout #}}
+                                                <div
+                                                    class="grid h-full grid-cols-[240px_1fr]"
+                                                >
+                                                    {{# IMAGE SIDE #}} {{ if
+                                                    block:img_authoring_tool }}
+                                                    {{ block:img_authoring_tool
+                                                    }}
+                                                    <div
+                                                        class="relative h-full overflow-hidden"
+                                                    >
+                                                        <img
+                                                            src="{{ url }}"
+                                                            alt="{{ alt ?? '' }}"
+                                                            class="absolute inset-0 h-full w-full object-cover"
+                                                            loading="lazy"
+                                                        />
+
+                                                        {{# depth + vignette #}}
+                                                        <span
+                                                            class="pointer-events-none absolute inset-0 bg-gradient-to-b from-black/10 via-black/0 to-black/20"
+                                                        ></span>
+
+                                                        {{# fade to content side
+                                                        #}}
+                                                        <span
+                                                            class="pointer-events-none absolute inset-y-0 right-0 w-56 bg-gradient-to-r from-transparent via-white/75 to-white"
+                                                        ></span>
+                                                        <span
+                                                            class="pointer-events-none absolute inset-y-0 right-0 w-56 backdrop-blur-[2px]"
+                                                        ></span>
+
+                                                        {{# subtle highlight
+                                                        edge #}}
+                                                        <span
+                                                            class="pointer-events-none absolute inset-y-6 right-0 w-px bg-gradient-to-b from-transparent via-white/40 to-transparent"
+                                                        ></span>
+                                                    </div>
+                                                    {{ /block:img_authoring_tool
+                                                    }} {{ else }} {{# fallback
+                                                    icon if no image #}}
+                                                    <div
+                                                        class="flex items-center justify-center bg-primary/5"
+                                                    >
+                                                        <span
+                                                            class="grid h-14 w-14 place-items-center rounded-2xl bg-primary/10 text-primary ring-1 ring-primary/15"
+                                                        >
+                                                            <svg
+                                                                viewBox="0 0 24 24"
+                                                                class="h-6 w-6"
+                                                                fill="none"
+                                                                stroke="currentColor"
+                                                                stroke-width="2"
+                                                                stroke-linecap="round"
+                                                                stroke-linejoin="round"
+                                                                aria-hidden="true"
+                                                            >
+                                                                <path
+                                                                    d="M20 13a2 2 0 0 0 0-4h-1V7a2 2 0 0 0-2-2h-2a2 2 0 1 1-4 0H9a2 2 0 0 0-2 2v2H6a2 2 0 1 0 0 4h1v2a2 2 0 0 0 2 2h2a2 2 0 1 1 4 0h2a2 2 0 0 0 2-2v-2h1Z"
+                                                                ></path>
+                                                            </svg>
+                                                        </span>
+                                                    </div>
+                                                    {{ /if }} {{# TEXT SIDE #}}
+                                                    <div
+                                                        class="flex min-w-0 flex-col justify-center px-7 py-6"
+                                                    >
+                                                        <p
+                                                            class="text-lg font-semibold tracking-tight text-neutral-900"
+                                                        >
+                                                            Sisällöntuotannon
+                                                            työkalu
+                                                        </p>
+                                                        <p
+                                                            class="mt-2 text-sm leading-relaxed text-neutral-600"
+                                                        >
+                                                            Luo ja julkaise
+                                                            koulutussisältöä.
+                                                        </p>
+
+                                                        <div class="mt-6">
+                                                            <div
+                                                                class="h-px w-full bg-gradient-to-r from-transparent via-black/10 to-transparent"
+                                                            ></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </label>
+
+                                        {{# custom_trainings #}}
+                                        <label class="group cursor-pointer">
+                                            <input
+                                                class="peer sr-only"
+                                                type="checkbox"
+                                                name="looking_for[]"
+                                                value="custom_trainings"
+                                            />
+
+                                            <div
+                                                class="relative h-full min-h-[190px] overflow-hidden rounded-3xl border border-black/10 bg-white/70 shadow-sm shadow-black/5 transition hover:-translate-y-0.5 hover:bg-white hover:border-neutral-200 hover:shadow-md hover:shadow-black/10 peer-checked:border-primary/35 peer-checked:bg-white peer-checked:ring-4 peer-checked:ring-primary/12"
+                                            >
+                                                {{# top accent line #}}
+                                                <div
+                                                    class="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-primary/25 to-transparent opacity-60"
+                                                ></div>
+
+                                                {{# selected badge #}}
+                                                <div
+                                                    class="absolute right-6 top-6 hidden items-center gap-1 rounded-full bg-primary/10 px-2.5 py-1 text-[11px] font-semibold text-primary ring-1 ring-primary/15 peer-checked:inline-flex"
+                                                >
+                                                    <svg
+                                                        viewBox="0 0 24 24"
+                                                        class="h-3.5 w-3.5"
+                                                        fill="none"
+                                                        stroke="currentColor"
+                                                        stroke-width="2"
+                                                        stroke-linecap="round"
+                                                        stroke-linejoin="round"
+                                                        aria-hidden="true"
+                                                    >
+                                                        <path
+                                                            d="M20 6L9 17l-5-5"
+                                                        ></path>
+                                                    </svg>
+                                                    Valittu
+                                                </div>
+
+                                                {{# main layout #}}
+                                                <div
+                                                    class="grid h-full grid-cols-[240px_1fr]"
+                                                >
+                                                    {{# IMAGE SIDE #}} {{ if
+                                                    block:img_custom_trainings
+                                                    }} {{
+                                                    block:img_custom_trainings
+                                                    }}
+                                                    <div
+                                                        class="relative h-full overflow-hidden"
+                                                    >
+                                                        <img
+                                                            src="{{ url }}"
+                                                            alt="{{ alt ?? '' }}"
+                                                            class="absolute inset-0 h-full w-full object-cover"
+                                                            loading="lazy"
+                                                        />
+
+                                                        {{# depth + vignette #}}
+                                                        <span
+                                                            class="pointer-events-none absolute inset-0 bg-gradient-to-b from-black/10 via-black/0 to-black/20"
+                                                        ></span>
+
+                                                        {{# fade to content side
+                                                        #}}
+                                                        <span
+                                                            class="pointer-events-none absolute inset-y-0 right-0 w-56 bg-gradient-to-r from-transparent via-white/75 to-white"
+                                                        ></span>
+                                                        <span
+                                                            class="pointer-events-none absolute inset-y-0 right-0 w-56 backdrop-blur-[2px]"
+                                                        ></span>
+
+                                                        {{# subtle highlight
+                                                        edge #}}
+                                                        <span
+                                                            class="pointer-events-none absolute inset-y-6 right-0 w-px bg-gradient-to-b from-transparent via-white/40 to-transparent"
+                                                        ></span>
+                                                    </div>
+                                                    {{
+                                                    /block:img_custom_trainings
+                                                    }} {{ else }} {{# fallback
+                                                    icon if no image #}}
+                                                    <div
+                                                        class="flex items-center justify-center bg-primary/5"
+                                                    >
+                                                        <span
+                                                            class="grid h-14 w-14 place-items-center rounded-2xl bg-primary/10 text-primary ring-1 ring-primary/15"
+                                                        >
+                                                            <svg
+                                                                viewBox="0 0 24 24"
+                                                                class="h-6 w-6"
+                                                                fill="none"
+                                                                stroke="currentColor"
+                                                                stroke-width="2"
+                                                                stroke-linecap="round"
+                                                                stroke-linejoin="round"
+                                                                aria-hidden="true"
+                                                            >
+                                                                <path
+                                                                    d="M14.7 6.3a4 4 0 0 0-5.6 5.6l-6.1 6.1a2 2 0 0 0 2.8 2.8l6.1-6.1a4 4 0 0 0 5.6-5.6l-2 2-3-3 2-2Z"
+                                                                ></path>
+                                                            </svg>
+                                                        </span>
+                                                    </div>
+                                                    {{ /if }} {{# TEXT SIDE #}}
+                                                    <div
+                                                        class="flex min-w-0 flex-col justify-center px-7 py-6"
+                                                    >
+                                                        <p
+                                                            class="text-lg font-semibold tracking-tight text-neutral-900"
+                                                        >
+                                                            Räätälöidyt
+                                                            verkkokoulutukset
+                                                        </p>
+                                                        <p
+                                                            class="mt-2 text-sm leading-relaxed text-neutral-600"
+                                                        >
+                                                            Tarpeisiin
+                                                            suunniteltu
+                                                            kokonaisuus.
+                                                        </p>
+
+                                                        <div class="mt-6">
+                                                            <div
+                                                                class="h-px w-full bg-gradient-to-r from-transparent via-black/10 to-transparent"
+                                                            ></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </label>
+
+                                        {{# ready_trainings #}}
+                                        <label class="group cursor-pointer">
+                                            <input
+                                                class="peer sr-only"
+                                                type="checkbox"
+                                                name="looking_for[]"
+                                                value="ready_trainings"
+                                            />
+
+                                            <div
+                                                class="relative h-full min-h-[190px] overflow-hidden rounded-3xl border border-black/10 bg-white/70 shadow-sm shadow-black/5 transition hover:-translate-y-0.5 hover:bg-white hover:border-neutral-200 hover:shadow-md hover:shadow-black/10 peer-checked:border-primary/35 peer-checked:bg-white peer-checked:ring-4 peer-checked:ring-primary/12"
+                                            >
+                                                {{# top accent line #}}
+                                                <div
+                                                    class="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-primary/25 to-transparent opacity-60"
+                                                ></div>
+
+                                                {{# selected badge #}}
+                                                <div
+                                                    class="absolute right-6 top-6 hidden items-center gap-1 rounded-full bg-primary/10 px-2.5 py-1 text-[11px] font-semibold text-primary ring-1 ring-primary/15 peer-checked:inline-flex"
+                                                >
+                                                    <svg
+                                                        viewBox="0 0 24 24"
+                                                        class="h-3.5 w-3.5"
+                                                        fill="none"
+                                                        stroke="currentColor"
+                                                        stroke-width="2"
+                                                        stroke-linecap="round"
+                                                        stroke-linejoin="round"
+                                                        aria-hidden="true"
+                                                    >
+                                                        <path
+                                                            d="M20 6L9 17l-5-5"
+                                                        ></path>
+                                                    </svg>
+                                                    Valittu
+                                                </div>
+
+                                                {{# main layout #}}
+                                                <div
+                                                    class="grid h-full grid-cols-[240px_1fr]"
+                                                >
+                                                    {{# IMAGE SIDE #}} {{ if
+                                                    block:img_ready_trainings }}
+                                                    {{ block:img_ready_trainings
+                                                    }}
+                                                    <div
+                                                        class="relative h-full overflow-hidden"
+                                                    >
+                                                        <img
+                                                            src="{{ url }}"
+                                                            alt="{{ alt ?? '' }}"
+                                                            class="absolute inset-0 h-full w-full object-cover"
+                                                            loading="lazy"
+                                                        />
+
+                                                        {{# depth + vignette #}}
+                                                        <span
+                                                            class="pointer-events-none absolute inset-0 bg-gradient-to-b from-black/10 via-black/0 to-black/20"
+                                                        ></span>
+
+                                                        {{# fade to content side
+                                                        #}}
+                                                        <span
+                                                            class="pointer-events-none absolute inset-y-0 right-0 w-56 bg-gradient-to-r from-transparent via-white/75 to-white"
+                                                        ></span>
+                                                        <span
+                                                            class="pointer-events-none absolute inset-y-0 right-0 w-56 backdrop-blur-[2px]"
+                                                        ></span>
+
+                                                        {{# subtle highlight
+                                                        edge #}}
+                                                        <span
+                                                            class="pointer-events-none absolute inset-y-6 right-0 w-px bg-gradient-to-b from-transparent via-white/40 to-transparent"
+                                                        ></span>
+                                                    </div>
+                                                    {{
+                                                    /block:img_ready_trainings
+                                                    }} {{ else }} {{# fallback
+                                                    icon #}}
+                                                    <div
+                                                        class="flex items-center justify-center bg-primary/5"
+                                                    >
+                                                        <span
+                                                            class="grid h-14 w-14 place-items-center rounded-2xl bg-primary/10 text-primary ring-1 ring-primary/15"
+                                                        >
+                                                            <svg
+                                                                viewBox="0 0 24 24"
+                                                                class="h-6 w-6"
+                                                                fill="none"
+                                                                stroke="currentColor"
+                                                                stroke-width="2"
+                                                                stroke-linecap="round"
+                                                                stroke-linejoin="round"
+                                                                aria-hidden="true"
+                                                            >
+                                                                <path
+                                                                    d="M4 19a2 2 0 0 0 2 2h13"
+                                                                ></path>
+                                                                <path
+                                                                    d="M6 17V5a2 2 0 0 1 2-2h11v18H8a2 2 0 0 1-2-2Z"
+                                                                ></path>
+                                                            </svg>
+                                                        </span>
+                                                    </div>
+                                                    {{ /if }} {{# TEXT SIDE #}}
+                                                    <div
+                                                        class="flex min-w-0 flex-col justify-center px-7 py-6"
+                                                    >
+                                                        <p
+                                                            class="text-lg font-semibold tracking-tight text-neutral-900"
+                                                        >
+                                                            Valmiit
+                                                            verkkokoulutukset
+                                                        </p>
+                                                        <p
+                                                            class="mt-2 text-sm leading-relaxed text-neutral-600"
+                                                        >
+                                                            Nopea aloitus
+                                                            valmiilla
+                                                            sisällöillä.
+                                                        </p>
+
+                                                        <div class="mt-6">
+                                                            <div
+                                                                class="h-px w-full bg-gradient-to-r from-transparent via-black/10 to-transparent"
+                                                            ></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </label>
+                                    </div>
+                                </div>
+
+                                {{# STEP 2 (same fix) #}}
+                                <div x-show="step === 2" x-transition.opacity>
+                                    <div
+                                        class="mt-2 grid gap-5 md:grid-cols-2 items-stretch"
+                                    >
+                                        {{# INTERNAL #}}
+                                        <label class="group cursor-pointer">
+                                            <input
+                                                class="peer sr-only"
+                                                type="radio"
+                                                name="usage"
+                                                value="internal"
+                                            />
+
+                                            <div
+                                                class="relative h-full min-h-[190px] overflow-hidden rounded-3xl border border-black/10 bg-white/70 shadow-sm shadow-black/5 transition hover:-translate-y-0.5 hover:bg-white hover:border-neutral-200 hover:shadow-md hover:shadow-black/10 peer-checked:border-primary/35 peer-checked:bg-white peer-checked:ring-4 peer-checked:ring-primary/12"
+                                            >
+                                                <div
+                                                    class="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-primary/25 to-transparent opacity-60"
+                                                ></div>
+
+                                                <div
+                                                    class="grid h-full grid-cols-[240px_1fr]"
+                                                >
+                                                    {{ if
+                                                    block:img_usage_internal }}
+                                                    {{ block:img_usage_internal
+                                                    }}
+                                                    <div
+                                                        class="relative h-full overflow-hidden"
+                                                    >
+                                                        <img
+                                                            src="{{ url }}"
+                                                            alt="{{ alt ?? '' }}"
+                                                            class="absolute inset-0 h-full w-full object-cover"
+                                                            loading="lazy"
+                                                        />
+                                                        <span
+                                                            class="pointer-events-none absolute inset-0 bg-gradient-to-b from-black/10 via-black/0 to-black/20"
+                                                        ></span>
+                                                        <span
+                                                            class="pointer-events-none absolute inset-y-0 right-0 w-56 bg-gradient-to-r from-transparent via-white/75 to-white"
+                                                        ></span>
+                                                        <span
+                                                            class="pointer-events-none absolute inset-y-0 right-0 w-56 backdrop-blur-[2px]"
+                                                        ></span>
+                                                        <span
+                                                            class="pointer-events-none absolute inset-y-6 right-0 w-px bg-gradient-to-b from-transparent via-white/40 to-transparent"
+                                                        ></span>
+                                                    </div>
+                                                    {{ /block:img_usage_internal
+                                                    }} {{ else }}
+                                                    <div
+                                                        class="flex items-center justify-center bg-primary/5"
+                                                    >
+                                                        <span
+                                                            class="grid h-14 w-14 place-items-center rounded-2xl bg-primary/10 text-primary ring-1 ring-primary/15"
+                                                        >
+                                                            <svg
+                                                                viewBox="0 0 24 24"
+                                                                class="h-6 w-6"
+                                                                fill="none"
+                                                                stroke="currentColor"
+                                                                stroke-width="2"
+                                                            >
+                                                                <path
+                                                                    d="M3 21h18"
+                                                                ></path>
+                                                                <path
+                                                                    d="M7 21V5a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v16"
+                                                                ></path>
+                                                                <path
+                                                                    d="M9 7h1M9 11h1M9 15h1M14 7h1M14 11h1M14 15h1"
+                                                                ></path>
+                                                            </svg>
+                                                        </span>
+                                                    </div>
+                                                    {{ /if }}
+
+                                                    <div
+                                                        class="flex min-w-0 flex-col justify-center px-7 py-6"
+                                                    >
+                                                        <p
+                                                            class="text-lg font-semibold tracking-tight text-neutral-900"
+                                                        >
+                                                            Sisäiseen käyttöön
+                                                        </p>
+                                                        <p
+                                                            class="mt-2 text-sm leading-relaxed text-neutral-600"
+                                                        >
+                                                            Henkilöstön koulutus
+                                                            ja perehdytys.
+                                                        </p>
+                                                        <div
+                                                            class="mt-6 h-px w-full bg-gradient-to-r from-transparent via-black/10 to-transparent"
+                                                        ></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </label>
+
+                                        {{# EXTERNAL #}}
+                                        <label class="group cursor-pointer">
+                                            <input
+                                                class="peer sr-only"
+                                                type="radio"
+                                                name="usage"
+                                                value="external"
+                                            />
+
+                                            <div
+                                                class="relative h-full min-h-[190px] overflow-hidden rounded-3xl border border-black/10 bg-white/70 shadow-sm shadow-black/5 transition hover:-translate-y-0.5 hover:bg-white hover:border-neutral-200 hover:shadow-md hover:shadow-black/10 peer-checked:border-primary/35 peer-checked:bg-white peer-checked:ring-4 peer-checked:ring-primary/12"
+                                            >
+                                                <div
+                                                    class="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-primary/25 to-transparent opacity-60"
+                                                ></div>
+
+                                                <div
+                                                    class="grid h-full grid-cols-[240px_1fr]"
+                                                >
+                                                    {{ if
+                                                    block:img_usage_external }}
+                                                    {{ block:img_usage_external
+                                                    }}
+                                                    <div
+                                                        class="relative h-full overflow-hidden"
+                                                    >
+                                                        <img
+                                                            src="{{ url }}"
+                                                            alt="{{ alt ?? '' }}"
+                                                            class="absolute inset-0 h-full w-full object-cover"
+                                                            loading="lazy"
+                                                        />
+                                                        <span
+                                                            class="pointer-events-none absolute inset-0 bg-gradient-to-b from-black/10 via-black/0 to-black/20"
+                                                        ></span>
+                                                        <span
+                                                            class="pointer-events-none absolute inset-y-0 right-0 w-56 bg-gradient-to-r from-transparent via-white/75 to-white"
+                                                        ></span>
+                                                        <span
+                                                            class="pointer-events-none absolute inset-y-0 right-0 w-56 backdrop-blur-[2px]"
+                                                        ></span>
+                                                        <span
+                                                            class="pointer-events-none absolute inset-y-6 right-0 w-px bg-gradient-to-b from-transparent via-white/40 to-transparent"
+                                                        ></span>
+                                                    </div>
+                                                    {{ /block:img_usage_external
+                                                    }} {{ else }}
+                                                    <div
+                                                        class="flex items-center justify-center bg-primary/5"
+                                                    ></div>
+                                                    {{ /if }}
+
+                                                    <div
+                                                        class="flex min-w-0 flex-col justify-center px-7 py-6"
+                                                    >
+                                                        <p
+                                                            class="text-lg font-semibold tracking-tight text-neutral-900"
+                                                        >
+                                                            Ulkoiseen käyttöön
+                                                        </p>
+                                                        <p
+                                                            class="mt-2 text-sm leading-relaxed text-neutral-600"
+                                                        >
+                                                            Asiakkaat, kumppanit
+                                                            tai verkostot.
+                                                        </p>
+                                                        <div
+                                                            class="mt-6 h-px w-full bg-gradient-to-r from-transparent via-black/10 to-transparent"
+                                                        ></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </label>
+
+                                        {{# BOTH #}}
+                                        <label class="group cursor-pointer">
+                                            <input
+                                                class="peer sr-only"
+                                                type="radio"
+                                                name="usage"
+                                                value="both"
+                                            />
+
+                                            <div
+                                                class="relative h-full min-h-[190px] overflow-hidden rounded-3xl border border-black/10 bg-white/70 shadow-sm shadow-black/5 transition hover:-translate-y-0.5 hover:bg-white hover:border-neutral-200 hover:shadow-md hover:shadow-black/10 peer-checked:border-primary/35 peer-checked:bg-white peer-checked:ring-4 peer-checked:ring-primary/12"
+                                            >
+                                                <div
+                                                    class="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-primary/25 to-transparent opacity-60"
+                                                ></div>
+
+                                                <div
+                                                    class="grid h-full grid-cols-[240px_1fr]"
+                                                >
+                                                    {{ if block:img_usage_both
+                                                    }} {{ block:img_usage_both
+                                                    }}
+                                                    <div
+                                                        class="relative h-full overflow-hidden"
+                                                    >
+                                                        <img
+                                                            src="{{ url }}"
+                                                            alt="{{ alt ?? '' }}"
+                                                            class="absolute inset-0 h-full w-full object-cover"
+                                                            loading="lazy"
+                                                        />
+                                                        <span
+                                                            class="pointer-events-none absolute inset-0 bg-gradient-to-b from-black/10 via-black/0 to-black/20"
+                                                        ></span>
+                                                        <span
+                                                            class="pointer-events-none absolute inset-y-0 right-0 w-56 bg-gradient-to-r from-transparent via-white/75 to-white"
+                                                        ></span>
+                                                        <span
+                                                            class="pointer-events-none absolute inset-y-0 right-0 w-56 backdrop-blur-[2px]"
+                                                        ></span>
+                                                        <span
+                                                            class="pointer-events-none absolute inset-y-6 right-0 w-px bg-gradient-to-b from-transparent via-white/40 to-transparent"
+                                                        ></span>
+                                                    </div>
+                                                    {{ /block:img_usage_both }}
+                                                    {{ else }}
+                                                    <div
+                                                        class="flex items-center justify-center bg-primary/5"
+                                                    ></div>
+                                                    {{ /if }}
+
+                                                    <div
+                                                        class="flex min-w-0 flex-col justify-center px-7 py-6"
+                                                    >
+                                                        <p
+                                                            class="text-lg font-semibold tracking-tight text-neutral-900"
+                                                        >
+                                                            Molempiin
+                                                        </p>
+                                                        <p
+                                                            class="mt-2 text-sm leading-relaxed text-neutral-600"
+                                                        >
+                                                            Yksi ratkaisu useaan
+                                                            käyttötapaan.
+                                                        </p>
+                                                        <div
+                                                            class="mt-6 h-px w-full bg-gradient-to-r from-transparent via-black/10 to-transparent"
+                                                        ></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </label>
+                                    </div>
+                                </div>
+                                {{# STEP 3: optional industry chips (only
+                                visible on step 3) #}}
+                                <div x-show="step === 3" x-transition.opacity>
+                                    <div class="mt-2">
+                                        <p
+                                            class="text-[11px] font-semibold tracking-widest text-neutral-500 uppercase"
+                                        >
+                                            Toimiala (valinnainen)
+                                        </p>
+
+                                        <div class="mt-3 flex flex-wrap gap-2">
+                                            <label class="cursor-pointer">
+                                                <input
+                                                    class="peer sr-only"
+                                                    type="checkbox"
+                                                    name="industry[]"
+                                                    value="food"
+                                                />
+                                                <span
+                                                    class="inline-flex items-center rounded-full border border-black/10 bg-white/70 px-3 py-2 text-xs font-semibold text-neutral-800 shadow-sm shadow-black/5 transition hover:bg-white hover:border-neutral-200 peer-checked:border-primary/35 peer-checked:bg-primary/8 peer-checked:ring-4 peer-checked:ring-primary/10"
+                                                >
+                                                    Elintarviketeollisuus
+                                                </span>
+                                            </label>
+
+                                            <label class="cursor-pointer">
+                                                <input
+                                                    class="peer sr-only"
+                                                    type="checkbox"
+                                                    name="industry[]"
+                                                    value="energy"
+                                                />
+                                                <span
+                                                    class="inline-flex items-center rounded-full border border-black/10 bg-white/70 px-3 py-2 text-xs font-semibold text-neutral-800 shadow-sm shadow-black/5 transition hover:bg-white hover:border-neutral-200 peer-checked:border-primary/35 peer-checked:bg-primary/8 peer-checked:ring-4 peer-checked:ring-primary/10"
+                                                >
+                                                    Energia-ala
+                                                </span>
+                                            </label>
+
+                                            <label class="cursor-pointer">
+                                                <input
+                                                    class="peer sr-only"
+                                                    type="checkbox"
+                                                    name="industry[]"
+                                                    value="retail"
+                                                />
+                                                <span
+                                                    class="inline-flex items-center rounded-full border border-black/10 bg-white/70 px-3 py-2 text-xs font-semibold text-neutral-800 shadow-sm shadow-black/5 transition hover:bg-white hover:border-neutral-200 peer-checked:border-primary/35 peer-checked:bg-primary/8 peer-checked:ring-4 peer-checked:ring-primary/10"
+                                                >
+                                                    Kaupan ala
+                                                </span>
+                                            </label>
+
+                                            <label class="cursor-pointer">
+                                                <input
+                                                    class="peer sr-only"
+                                                    type="checkbox"
+                                                    name="industry[]"
+                                                    value="logistics"
+                                                />
+                                                <span
+                                                    class="inline-flex items-center rounded-full border border-black/10 bg-white/70 px-3 py-2 text-xs font-semibold text-neutral-800 shadow-sm shadow-black/5 transition hover:bg-white hover:border-neutral-200 peer-checked:border-primary/35 peer-checked:bg-primary/8 peer-checked:ring-4 peer-checked:ring-primary/10"
+                                                >
+                                                    Kuljetus ja logistiikka
+                                                </span>
+                                            </label>
+
+                                            <label class="cursor-pointer">
+                                                <input
+                                                    class="peer sr-only"
+                                                    type="checkbox"
+                                                    name="industry[]"
+                                                    value="services"
+                                                />
+                                                <span
+                                                    class="inline-flex items-center rounded-full border border-black/10 bg-white/70 px-3 py-2 text-xs font-semibold text-neutral-800 shadow-sm shadow-black/5 transition hover:bg-white hover:border-neutral-200 peer-checked:border-primary/35 peer-checked:bg-primary/8 peer-checked:ring-4 peer-checked:ring-primary/10"
+                                                >
+                                                    Palvelut ja konsultointi
+                                                </span>
+                                            </label>
+
+                                            <label class="cursor-pointer">
+                                                <input
+                                                    class="peer sr-only"
+                                                    type="checkbox"
+                                                    name="industry[]"
+                                                    value="finance"
+                                                />
+                                                <span
+                                                    class="inline-flex items-center rounded-full border border-black/10 bg-white/70 px-3 py-2 text-xs font-semibold text-neutral-800 shadow-sm shadow-black/5 transition hover:bg-white hover:border-neutral-200 peer-checked:border-primary/35 peer-checked:bg-primary/8 peer-checked:ring-4 peer-checked:ring-primary/10"
+                                                >
+                                                    Pankit ja rahoitus
+                                                </span>
+                                            </label>
+
+                                            <label class="cursor-pointer">
+                                                <input
+                                                    class="peer sr-only"
+                                                    type="checkbox"
+                                                    name="industry[]"
+                                                    value="construction"
+                                                />
+                                                <span
+                                                    class="inline-flex items-center rounded-full border border-black/10 bg-white/70 px-3 py-2 text-xs font-semibold text-neutral-800 shadow-sm shadow-black/5 transition hover:bg-white hover:border-neutral-200 peer-checked:border-primary/35 peer-checked:bg-primary/8 peer-checked:ring-4 peer-checked:ring-primary/10"
+                                                >
+                                                    Rakentaminen ja
+                                                    infrastruktuuri
+                                                </span>
+                                            </label>
+
+                                            <label class="cursor-pointer">
+                                                <input
+                                                    class="peer sr-only"
+                                                    type="checkbox"
+                                                    name="industry[]"
+                                                    value="manufacturing"
+                                                />
+                                                <span
+                                                    class="inline-flex items-center rounded-full border border-black/10 bg-white/70 px-3 py-2 text-xs font-semibold text-neutral-800 shadow-sm shadow-black/5 transition hover:bg-white hover:border-neutral-200 peer-checked:border-primary/35 peer-checked:bg-primary/8 peer-checked:ring-4 peer-checked:ring-primary/10"
+                                                >
+                                                    Teollisuus ja tuotanto
+                                                </span>
+                                            </label>
+
+                                            <label class="cursor-pointer">
+                                                <input
+                                                    class="peer sr-only"
+                                                    type="checkbox"
+                                                    name="industry[]"
+                                                    value="other"
+                                                />
+                                                <span
+                                                    class="inline-flex items-center rounded-full border border-black/10 bg-white/70 px-3 py-2 text-xs font-semibold text-neutral-800 shadow-sm shadow-black/5 transition hover:bg-white hover:border-neutral-200 peer-checked:border-primary/35 peer-checked:bg-primary/8 peer-checked:ring-4 peer-checked:ring-primary/10"
+                                                >
+                                                    Muu
+                                                </span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                {{# STEP 4: contact fields #}}
+                                <div x-show="step === 4" x-transition.opacity>
+                                    <div class="grid gap-5 md:grid-cols-2">
+                                        <div>
+                                            <label
+                                                class="mb-2 block text-[11px] font-semibold tracking-widest text-neutral-500 uppercase"
+                                            >
+                                                Nimi
+                                                <span class="text-rose-600"
+                                                    >*</span
+                                                >
+                                            </label>
+                                            <input
+                                                class="input w-full rounded-xl border border-transparent bg-neutral-50/80 px-4 py-3 text-sm text-neutral-900 shadow-sm outline-none transition placeholder:text-neutral-400 hover:bg-white hover:border-neutral-200/70 focus:bg-white focus:border-[#519fc0]/40 focus:ring-4 focus:ring-[#519fc0]/12"
+                                                type="text"
+                                                name="name"
+                                                autocomplete="name"
+                                                placeholder="Etunimi Sukunimi"
+                                            />
+                                        </div>
+
+                                        <div>
+                                            <label
+                                                class="mb-2 block text-[11px] font-semibold tracking-widest text-neutral-500 uppercase"
+                                            >
+                                                Yritys
+                                            </label>
+                                            <input
+                                                class="input w-full rounded-xl border border-transparent bg-neutral-50/80 px-4 py-3 text-sm text-neutral-900 shadow-sm outline-none transition placeholder:text-neutral-400 hover:bg-white hover:border-neutral-200/70 focus:bg-white focus:border-[#519fc0]/40 focus:ring-4 focus:ring-[#519fc0]/12"
+                                                type="text"
+                                                name="company"
+                                                autocomplete="organization"
+                                                placeholder="Yrityksen nimi"
+                                            />
+                                        </div>
+
+                                        <div>
+                                            <label
+                                                class="mb-2 block text-[11px] font-semibold tracking-widest text-neutral-500 uppercase"
+                                            >
+                                                Sähköposti
+                                                <span class="text-rose-600"
+                                                    >*</span
+                                                >
+                                            </label>
+                                            <input
+                                                class="input w-full rounded-xl border border-transparent bg-neutral-50/80 px-4 py-3 text-sm text-neutral-900 shadow-sm outline-none transition placeholder:text-neutral-400 hover:bg-white hover:border-neutral-200/70 focus:bg-white focus:border-[#519fc0]/40 focus:ring-4 focus:ring-[#519fc0]/12"
+                                                type="email"
+                                                name="email"
+                                                autocomplete="email"
+                                                placeholder="nimi@yritys.fi"
+                                            />
+                                        </div>
+
+                                        <div>
+                                            <label
+                                                class="mb-2 block text-[11px] font-semibold tracking-widest text-neutral-500 uppercase"
+                                            >
+                                                Puhelinnumero
+                                            </label>
+                                            <input
+                                                class="input w-full rounded-xl border border-transparent bg-neutral-50/80 px-4 py-3 text-sm text-neutral-900 shadow-sm outline-none transition placeholder:text-neutral-400 hover:bg-white hover:border-neutral-200/70 focus:bg-white focus:border-[#519fc0]/40 focus:ring-4 focus:ring-[#519fc0]/12"
+                                                type="text"
+                                                name="phone"
+                                                autocomplete="tel"
+                                                placeholder="+358 ..."
+                                            />
+                                        </div>
+
+                                        <div class="md:col-span-2">
+                                            <label
+                                                class="mb-2 block text-[11px] font-semibold tracking-widest text-neutral-500 uppercase"
+                                            >
+                                                Viesti
+                                                <span class="text-rose-600"
+                                                    >*</span
+                                                >
+                                            </label>
+                                            <textarea
+                                                class="input w-full rounded-xl border border-transparent bg-neutral-50/80 px-4 py-3 text-sm text-neutral-900 shadow-sm outline-none transition placeholder:text-neutral-400 hover:bg-white hover:border-neutral-200/70 focus:bg-white focus:border-[#519fc0]/40 focus:ring-4 focus:ring-[#519fc0]/12"
+                                                name="message_body"
+                                                rows="5"
+                                                placeholder="Kerro lyhyesti tilanteestanne ja mitä toivotte..."
+                                            ></textarea>
+                                        </div>
+                                    </div>
+
+                                    <p
+                                        class="mt-4 text-xs leading-relaxed text-neutral-600"
+                                    >
+                                        Lähettämällä lomakkeen hyväksyt, että
+                                        voimme olla sinuun yhteydessä antamiesi
+                                        tietojen perusteella.
+                                    </p>
+                                </div>
+
+                                {{# Footer actions #}}
+                                <div
+                                    class="mt-2 flex flex-col-reverse gap-3 sm:flex-row sm:items-center sm:justify-between"
+                                >
+                                    <button
+                                        type="button"
+                                        @click="back()"
+                                        class="inline-flex items-center justify-center gap-2 rounded-xl border border-black/10 bg-white/70 px-5 py-3 text-sm font-semibold text-neutral-800 shadow-sm shadow-black/5 transition hover:bg-white hover:border-neutral-200 focus:outline-none focus:ring-4 focus:ring-primary/12"
+                                        :class="step === 1 ? 'opacity-50 pointer-events-none' : ''"
+                                    >
+                                        <svg
+                                            viewBox="0 0 24 24"
+                                            class="h-4 w-4"
+                                            fill="none"
+                                            stroke="currentColor"
+                                            stroke-width="2"
+                                            stroke-linecap="round"
+                                            stroke-linejoin="round"
+                                            aria-hidden="true"
+                                        >
+                                            <path d="M15 18l-6-6 6-6"></path>
+                                        </svg>
+                                        Takaisin
+                                    </button>
+
+                                    <div
+                                        class="flex flex-col gap-3 sm:flex-row sm:items-center"
+                                    >
+                                        <button
+                                            type="button"
+                                            @click="next()"
+                                            x-show="step < 4"
+                                            class="inline-flex items-center justify-center gap-2 rounded-xl bg-primary px-7 py-3 text-sm font-semibold text-white shadow-md shadow-black/10 transition hover:brightness-110 hover:-translate-y-0.5 focus:outline-none focus:ring-4 focus:ring-primary/18"
+                                        >
+                                            Seuraava
+                                            <svg
+                                                viewBox="0 0 24 24"
+                                                class="h-4 w-4"
+                                                fill="none"
+                                                stroke="currentColor"
+                                                stroke-width="2"
+                                                stroke-linecap="round"
+                                                stroke-linejoin="round"
+                                                aria-hidden="true"
+                                            >
+                                                <path d="M9 18l6-6-6-6"></path>
+                                            </svg>
+                                        </button>
+
+                                        <button
+                                            type="submit"
+                                            @click="attempted = true; attemptedStep4 = true"
+                                            x-show="step === 4"
+                                            class="inline-flex items-center justify-center gap-2 rounded-xl bg-primary px-7 py-3 text-sm font-semibold text-white shadow-md shadow-black/10 transition hover:brightness-110 hover:-translate-y-0.5 focus:outline-none focus:ring-4 focus:ring-primary/18"
+                                        >
+                                            <span>{{ submit_label }}</span>
+                                            <span
+                                                x-cloak
+                                                x-show="submitting"
+                                                x-transition.opacity
+                                                class="text-white/90"
+                                            >
+                                                <span
+                                                    class="inline-flex items-center gap-1"
+                                                >
+                                                    <span
+                                                        class="h-1.5 w-1.5 rounded-full bg-white/70"
+                                                    ></span>
+                                                    <span
+                                                        class="h-1.5 w-1.5 rounded-full bg-white/70"
+                                                    ></span>
+                                                    <span
+                                                        class="h-1.5 w-1.5 rounded-full bg-white/70"
+                                                    ></span>
+                                                </span>
+                                            </span>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            {{ /form:create }} {{
+                            partial:statamic-peak-tools::snippets/form_handler
+                            }} {{ /if }}
+
+                            <script>
+                                function contactWizard() {
+                                    return {
+                                        step: 1,
+                                        attempted: false,
+                                        stepError: "",
+                                        attemptedStep4: false,
+
+                                        stepTitle() {
+                                            return (
+                                                {
+                                                    1: "Mitä ratkaisua etsit?",
+                                                    2: "Mihin käyttöön ratkaisu tulee?",
+                                                    3: "Muutama lisätieto",
+                                                    4: "Yhteystiedot",
+                                                }[this.step] || "Yhteydenotto"
+                                            );
+                                        },
+
+                                        dotLabel(n) {
+                                            return (
+                                                {
+                                                    1: "Tarve",
+                                                    2: "Käyttö",
+                                                    3: "Tiedot",
+                                                    4: "Yhteystiedot",
+                                                }[n] || ""
+                                            );
+                                        },
+
+                                        progress() {
+                                            return Math.round(
+                                                ((this.step - 1) / 3) * 100,
+                                            );
+                                        },
+
+                                        goTo(n) {
+                                            if (n <= this.step) {
+                                                this.step = n;
+                                                this.stepError = "";
+                                                return;
+                                            }
+                                            let target = n;
+                                            while (this.step < target) {
+                                                if (!this.validateCurrentStep())
+                                                    return;
+                                                this.step++;
+                                            }
+                                        },
+
+                                        back() {
+                                            if (this.step > 1) {
+                                                this.step--;
+                                                this.stepError = "";
+                                            }
+                                        },
+
+                                        next() {
+                                            this.attempted = true;
+                                            if (!this.validateCurrentStep())
+                                                return;
+                                            if (this.step < 4) {
+                                                this.step++;
+                                                this.stepError = "";
+                                            }
+                                        },
+
+                                        validateCurrentStep() {
+                                            this.stepError = "";
+                                            const form = this.$refs.form;
+                                            if (!form) return true;
+
+                                            if (this.step === 1) {
+                                                const checked =
+                                                    form.querySelectorAll(
+                                                        'input[name="looking_for[]"]:checked',
+                                                    ).length;
+                                                if (checked < 1) {
+                                                    this.stepError =
+                                                        "Valitse vähintään yksi vaihtoehto.";
+                                                    return false;
+                                                }
+                                                return true;
+                                            }
+
+                                            if (this.step === 2) {
+                                                const usage =
+                                                    form.querySelector(
+                                                        'input[name="usage"]:checked',
+                                                    );
+                                                if (!usage) {
+                                                    this.stepError =
+                                                        "Valitse yksi vaihtoehto.";
+                                                    return false;
+                                                }
+                                                return true;
+                                            }
+
+                                            if (this.step === 3) {
+                                                return true;
+                                            }
+
+                                            if (this.step === 4) {
+                                                const name =
+                                                    form
+                                                        .querySelector(
+                                                            'input[name="name"]',
+                                                        )
+                                                        ?.value?.trim() || "";
+                                                const email =
+                                                    form
+                                                        .querySelector(
+                                                            'input[name="email"]',
+                                                        )
+                                                        ?.value?.trim() || "";
+                                                const msg =
+                                                    form
+                                                        .querySelector(
+                                                            'textarea[name="message_body"]',
+                                                        )
+                                                        ?.value?.trim() || "";
+
+                                                if (name.length < 2) {
+                                                    this.stepError =
+                                                        "Täytä nimi (vähintään 2 merkkiä).";
+                                                    return false;
+                                                }
+                                                if (
+                                                    !email ||
+                                                    !email.includes("@")
+                                                ) {
+                                                    this.stepError =
+                                                        "Täytä toimiva sähköpostiosoite.";
+                                                    return false;
+                                                }
+                                                if (msg.length < 5) {
+                                                    this.stepError =
+                                                        "Kirjoita viesti (vähintään 5 merkkiä).";
+                                                    return false;
+                                                }
+                                                return true;
+                                            }
+
+                                            return true;
+                                        },
+                                    };
+                                }
+                            </script>
+                        </div>
+                    </div>
+                </div>
+                {{# /ONE premium card #}}
+            </div>
+        </div>
+    </div>
+</section>

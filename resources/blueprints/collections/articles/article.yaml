@@ -1,0 +1,171 @@
+title: Article
+tabs:
+  main:
+    sections:
+      -
+        fields:
+          - handle: title
+            field:
+              type: text
+              required: true
+              localizable: true
+              display: Otsikko
+
+          - handle: date
+            field:
+              type: date
+              required: true
+              localizable: false
+              display: Julkaisupäivä
+
+          - handle: intro
+            field:
+              type: textarea
+              localizable: true
+              display: Ingressi
+              instructions: "Näkyy listauksessa korttitekstinä (1–2 lausetta)."
+              character_limit: 220
+              rows: 3
+
+          - handle: image
+            field:
+              type: assets
+              container: files
+              max_files: 1
+              localizable: true
+              display: Kansikuva
+              instructions: "Näkyy listauksessa ja artikkelin yläosassa."
+
+          # ✅ Multi-language labels/URL for article navigation
+          - handle: back_label
+            field:
+              type: text
+              localizable: true
+              display: "Takaisin-linkin teksti"
+              instructions: "Esim. Ajankohtaista / News / Nyheter"
+              default: Ajankohtaista
+              width: 50
+
+          - handle: back_url
+            field:
+              type: text
+              localizable: true
+              display: "Takaisin-linkin URL"
+              instructions: "Esim. /ajankohtaista (tai /en/news)"
+              default: /ajankohtaista
+              width: 50
+
+          - handle: next_label
+            field:
+              type: text
+              localizable: true
+              display: "Seuraava-linkin teksti"
+              instructions: "Esim. Seuraava / Next / Nästa"
+              default: Seuraava
+              width: 50
+
+          # ✅ Article content
+          - handle: article
+            field:
+              type: bard
+              localizable: true
+              display: Sisältö
+              container: files
+              fullscreen: true
+              save_html: false
+              toolbar_mode: fixed
+              reading_time: true
+              allow_source: true
+              enable_input_rules: true
+              enable_paste_rules: true
+              smart_typography: true
+              remove_empty_nodes: true
+              buttons:
+                - h2
+                - h3
+                - bold
+                - italic
+                - unorderedlist
+                - orderedlist
+                - quote
+                - removeformat
+                - anchor
+              sets:
+                interactive:
+                  display: Interactive
+                  instructions: "Interactive sets."
+                  icon: programming-script-code
+                  sets:
+                    buttons:
+                      display: Buttons
+                      instructions: "Add one or multiple buttons."
+                      icon: link
+                      fields:
+                        - import: buttons
+
+                text:
+                  display: Text
+                  instructions: "Text based sets."
+                  icon: text-formatting-initial-letter
+                  sets:
+                    pull_quote:
+                      display: "Pull quote"
+                      instructions: "Add a pull quote with an optional author."
+                      icon: text-formatting-quotation
+                      fields:
+                        - import: pull_quote
+                    table:
+                      display: Table
+                      instructions: "Add a data table with headers, rows and columns."
+                      icon: layout-grid-dots
+                      fields:
+                        - import: table
+
+                image_video:
+                  display: "Image and video"
+                  instructions: "Sets with images or embeddable video's."
+                  icon: media-image-camera
+                  sets:
+                    image:
+                      display: Image
+                      instructions: "Add a single image with an optional caption."
+                      icon: media-image-picture-orientation
+                      fields:
+                        - import: image
+                    video:
+                      display: Video
+                      instructions: "Add a YouTube or Vimeo video with an optional caption."
+                      icon: media-webcam-video
+                      fields:
+                        - import: video
+
+  sidebar:
+    sections:
+      -
+        fields:
+          - handle: author
+            field:
+              type: text
+              localizable: true
+              display: Kirjoittaja
+              instructions: "Kirjoita artikkelin kirjoittajan nimi."
+              width: 50
+
+          - handle: tags
+            field:
+              type: terms
+              taxonomies:
+                - tags
+              mode: select
+              create: true
+              localizable: true
+              display: Tagit
+              instructions: "Lisää tai valitse artikkeliin liittyvät tagit."
+              width: 50
+
+          - handle: slug
+            field:
+              type: slug
+              localizable: true
+              validate: "max:200"
+              display: Slug

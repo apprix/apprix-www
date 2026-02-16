@@ -1,0 +1,126 @@
+@import "tailwindcss";
+@import "./peak.css";
+@import "./typography.css";
+
+/* =========================
+   Apprix palette
+   ========================= */
+@theme {
+    /* Core brand */
+    --color-brand-dark: #20252b;
+    --color-brand-text: #637283;
+
+    --color-brand-orange: #f87206; /* UI primary orange */
+    --color-brand-teal: #009688;
+    --color-brand-blue: #519fc0;
+    --color-brand-green: #9dc522;
+
+    /* Accent colors (use sparingly) */
+    --color-accent-magenta: #e50cbd;
+    --color-accent-orange: #ec4e00;
+    --color-accent-yellow: #fed712;
+    --color-accent-purple: #8b29e8;
+
+    /* Links (especially on dark backgrounds) */
+    --color-link: #00b0ee;
+    --color-link-visited: #8651ff;
+
+    /* Status */
+    --color-danger: #bb0000;
+
+    /* Semantic mapping */
+    --color-primary: var(--color-brand-orange);
+    --color-neutral: var(--color-brand-dark);
+
+    /* Neutral scale */
+    --color-neutral-50: var(--color-slate-50);
+    --color-neutral-100: var(--color-slate-100);
+    --color-neutral-200: var(--color-slate-200);
+    --color-neutral-300: var(--color-slate-300);
+    --color-neutral-400: var(--color-slate-400);
+    --color-neutral-500: var(--color-slate-500);
+    --color-neutral-600: var(--color-slate-600);
+    --color-neutral-700: var(--color-slate-700);
+    --color-neutral-800: var(--color-slate-800);
+    --color-neutral-900: var(--color-slate-900);
+    --color-neutral-950: var(--color-slate-950);
+
+    /* Extra semantic tokens */
+    --color-heading: var(--color-brand-dark);
+    --color-text: var(--color-brand-text);
+    --color-muted: color-mix(in oklab, var(--color-brand-text) 70%, white);
+
+    /* Font weights */
+    --font-weight-*: initial;
+    --font-weight-normal: 400;
+    --font-weight-bold: 700;
+}
+
+/* =========================
+   Base styles
+   ========================= */
+@layer base {
+    html {
+        color: var(--color-text);
+        font-family: var(--font-sans);
+        background-color: var(--color-white);
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+        color: var(--color-heading);
+    }
+
+    a {
+        color: var(--color-link);
+        text-underline-offset: 3px;
+    }
+
+    a:visited {
+        color: var(--color-link-visited);
+    }
+}
+
+/* =========================
+   Logo carousel animation
+   ========================= */
+
+/* Continuous marquee animation */
+@keyframes logo-marquee {
+    from {
+        transform: translate3d(0, 0, 0);
+    }
+    to {
+        transform: translate3d(-50%, 0, 0);
+    }
+}
+
+/* NOTE: updated from .logo-track -> .logo-runner to match your Antlers */
+.logo-runner {
+    animation: logo-marquee 30s linear infinite;
+
+    /* smoother + less hover “drift” */
+    transform: translate3d(0, 0, 0);
+    will-change: transform;
+}
+
+/* Speed modifiers */
+.logo-speed-slow {
+    animation-duration: 45s;
+}
+
+.logo-speed-fast {
+    animation-duration: 18s;
+}
+
+/* ✅ Pause on hover (fixes hover accuracy) */
+.logo-marquee:hover .logo-runner {
+    animation-play-state: paused;
+}
+
+/* Accessibility: respect reduced motion */
+@media (prefers-reduced-motion: reduce) {
+    .logo-runner {
+        animation: none !important;
+        transform: none !important;
+    }
+}

@@ -1,0 +1,14 @@
+default:
+  name: Suomi
+  url: /
+  locale: fi_FI
+
+en:
+  name: English
+  url: /en/
+  locale: en_US
+
+sv:
+  name: Svenska
+  url: /sv/
+  locale: sv_SE

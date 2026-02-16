@@ -1,0 +1,133 @@
+tabs:
+  main:
+    display: Main
+    sections:
+      -
+        fields:
+
+          # -------------------------
+          # Wizard fields (Step 1–3)
+          # -------------------------
+
+          - handle: looking_for
+            field:
+              display: What are you looking for?
+              type: checkboxes
+              options:
+                learning_environment: Learning environment (LMS)
+                authoring_tool: Content authoring tool
+                custom_trainings: Custom e-learning / training
+                ready_trainings: Ready-made e-learning / training
+              validate:
+                - required
+              localizable: false
+              width: 100
+              instructions: Select one or more.
+
+          - handle: usage
+            field:
+              display: Intended use
+              type: radio
+              options:
+                internal: Internal use
+                external: External use
+                both: Both
+              validate:
+                - required
+              localizable: false
+              width: 100
+
+          - handle: industry
+            field:
+              display: Industry
+              type: checkboxes
+              options:
+                food: Food industry
+                energy: Energy
+                retail: Retail
+                logistics: Transport & logistics
+                services: Services & consulting
+                finance: Banking & finance
+                construction: Construction & infrastructure
+                manufacturing: Manufacturing & production
+                other: Other
+              localizable: false
+              width: 50
+
+          - handle: contact_intent
+            field:
+              display: How should we continue?
+              type: radio
+              options:
+                book_demo: I want to book a free demo
+                contact_request: I want to leave a contact request
+              localizable: false
+              width: 50
+
+          - handle: timeline
+            field:
+              display: Timeline
+              type: radio
+              options:
+                asap: ASAP
+                month_1_3: 1–3 months
+                month_3_6: 3–6 months
+                exploring: Just exploring
+              localizable: false
+              width: 100
+
+          - handle: additional_info
+            field:
+              display: Additional info
+              type: textarea
+              localizable: false
+              width: 100
+
+          # -------------------------
+          # Contact fields (Step 4)
+          # -------------------------
+
+          - handle: name
+            field:
+              display: Name
+              type: text
+              validate:
+                - required
+                - 'min:2'
+              localizable: false
+              width: 50
+
+          - handle: company
+            field:
+              display: Company
+              type: text
+              localizable: false
+              width: 50
+
+          - handle: email
+            field:
+              display: Email address
+              type: text
+              input_type: email
+              validate:
+                - required
+                - email
+              localizable: false
+              width: 50
+
+          - handle: phone
+            field:
+              display: Phone number
+              type: text
+              localizable: false
+              width: 50
+
+          - handle: message_body
+            field:
+              display: Message
+              type: textarea
+              validate:
+                - required
+                - 'min:5'
+              localizable: false
+              width: 100

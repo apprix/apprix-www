@@ -1,0 +1,132 @@
+<section
+  class="
+    relative overflow-hidden bg-white
+    -mt-[88px] pt-[88px]
+    md:-mt-[154px] md:pt-[96px]
+  "
+>
+  {{# FULL-WIDTH VIDEO LAYER #}}
+  <div class="absolute inset-0 z-0">
+    <video
+      class="h-full w-full object-cover object-center opacity-0 transition-opacity duration-700"
+      autoplay
+      muted
+      loop
+      playsinline
+      preload="metadata"
+      onloadeddata="this.classList.add('opacity-100')"
+    >
+      <source src="/assets/videos/hero/herovideo_01.mp4" type="video/mp4" />
+    </video>
+
+    {{# Base readability washes #}}
+    <div class="absolute inset-0 bg-gradient-to-r from-white/90 via-white/35 to-transparent md:from-white/80 md:via-white/22"></div>
+    <div class="absolute inset-0 bg-gradient-to-tr from-neutral-900/10 via-transparent to-white/10"></div>
+
+    {{# LEFT BLUR SCRIM (stronger, cleaner reading area) #}}
+    <div
+      class="
+        absolute inset-y-0 left-0
+        w-[76%] sm:w-[64%] md:w-[56%] lg:w-[50%]
+        backdrop-blur-3xl
+        bg-white/35
+        ring-1 ring-white/30
+        [mask-image:linear-gradient(to_right,black_0%,black_72%,transparent_100%)]
+      "
+      aria-hidden="true"
+    ></div>
+
+    {{# Extra soft fade behind the text block (adds clarity) #}}
+    <div
+      class="
+        absolute left-0 top-0 h-full
+        w-[72%] sm:w-[60%] md:w-[54%] lg:w-[48%]
+        bg-gradient-to-r from-white/65 via-white/35 to-transparent
+      "
+      aria-hidden="true"
+    ></div>
+
+    {{# Bottom fade into page #}}
+    <div class="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-b from-transparent to-white"></div>
+  </div>
+
+  {{# CONTENT LAYER #}}
+  <div class="relative z-10 fluid-grid">
+    <div class="span-content py-20 md:py-24 lg:py-28">
+      <div class="max-w-[42rem] md:translate-y-1 lg:translate-y-2">
+
+        {{ if eyebrow }}
+          <div
+            class="
+              mb-6 inline-flex items-center gap-2
+              rounded-full border border-white/70 bg-white/70
+              px-4 py-2 text-sm font-semibold text-neutral-900
+              shadow-sm shadow-neutral-900/5 backdrop-blur
+            "
+          >
+            <span class="h-2 w-2 rounded-full bg-orange-500"></span>
+            <span>{{ eyebrow }}</span>
+          </div>
+        {{ /if }}
+
+        {{ if heading }}
+          <h1
+            class="
+              text-balance text-4xl font-semibold tracking-tight
+              text-neutral-950
+              md:text-5xl lg:text-6xl
+              leading-[1.03]
+
+            "
+          >
+            {{ heading }}
+          </h1>
+        {{ /if }}
+
+
+
+        {{ if buttons }}
+          <div class="mt-16 flex flex-wrap items-center gap-4">
+            {{ buttons }}
+              {{ if style == "primary" }}
+                <a
+                  href="{{ link:url }}"
+                  {{ if link:target == '_blank' }} target="_blank" rel="noopener noreferrer" {{ /if }}
+                  class="
+                    inline-flex items-center justify-center
+                    rounded-xl bg-orange-600 px-9 py-4
+                    text-base font-bold text-white
+                    shadow-md shadow-orange-400/35
+                    transition hover:brightness-110 hover:-translate-y-[1px]
+                    active:translate-y-0
+                    focus:outline-none focus:ring-2 focus:ring-orange-500/25 focus:ring-offset-2
+                  "
+                >
+                  {{ label }}
+                </a>
+              {{ else }}
+                <a
+                  href="{{ link:url }}"
+                  {{ if link:target == '_blank' }} target="_blank" rel="noopener noreferrer" {{ /if }}
+                  class="
+                    inline-flex items-center justify-center
+                    rounded-xl border border-white/70 bg-white/55 px-7 py-4
+                    text-base font-semibold text-neutral-900
+                    shadow-sm shadow-neutral-900/5
+                    backdrop-blur
+                    transition hover:bg-white/70 hover:-translate-y-[1px]
+                    active:translate-y-0
+                    focus:outline-none focus:ring-2 focus:ring-primary/20 focus:ring-offset-2
+                  "
+                >
+                  {{ label }}
+                </a>
+              {{ /if }}
+            {{ /buttons }}
+          </div>
+        {{ /if }}
+
+      </div>
+    </div>
+  </div>
+</section>

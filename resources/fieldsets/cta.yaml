@@ -1,0 +1,31 @@
+title: CTA
+fields:
+  - handle: eyebrow
+    field:
+      type: text
+      localizable: true
+      display: Eyebrow
+      instructions: "Optional short label above the title (e.g. 'Seuraava askel')."
+
+  - handle: title
+    field:
+      type: text
+      localizable: true
+      required: true
+      display: Title
+
+  - handle: text
+    field:
+      type: textarea
+      localizable: true
+      display: Text
+      instructions: "Keep it short (1–2 lines)."
+      rows: 3
+      character_limit: 240
+
+  - handle: button
+    field:
+      type: link
+      localizable: true
+      display: Button
+      instructions: "CTA button. Use text: Ota yhteyttä"

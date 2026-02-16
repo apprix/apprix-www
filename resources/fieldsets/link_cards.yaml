@@ -1,0 +1,89 @@
+title: Link cards
+fields:
+  -
+    handle: eyebrow
+    field:
+      type: text
+      display: Eyebrow
+      instructions: 'Optional small label above the heading.'
+      localizable: true
+
+  -
+    handle: heading
+    field:
+      type: text
+      display: Heading
+      instructions: 'Main section heading.'
+      localizable: true
+      required: true
+
+  -
+    handle: text
+    field:
+      type: textarea
+      display: Text
+      instructions: 'Short supporting text under the heading.'
+      localizable: true
+
+  -
+    handle: cards
+    field:
+      type: grid
+      display: Cards
+      instructions: 'Add 1–3 link cards.'
+      localizable: true
+      min_rows: 1
+      max_rows: 3
+      fields:
+        -
+          handle: eyebrow
+          field:
+            type: text
+            display: Card eyebrow
+            instructions: 'Small label above the card title.'
+            localizable: true
+
+        -
+          handle: title
+          field:
+            type: text
+            display: Title
+            required: true
+            localizable: true
+
+        -
+          handle: text
+          field:
+            type: textarea
+            display: Text
+            instructions: '1–2 lines describing the destination.'
+            localizable: true
+
+        -
+          handle: link
+          field:
+            type: link
+            display: Link
+            required: true
+
+        -
+          handle: image
+          field:
+            type: assets
+            display: Image
+            instructions: 'Optional image to make the card more visual.'
+            container: files
+            max_files: 1
+            mode: grid
+            localizable: false
+
+        -
+          handle: icon
+          field:
+            type: select
+            display: Icon
+            options:
+              users: Users
+              case: Case study
+              info: Info
+              arrow: Arrow

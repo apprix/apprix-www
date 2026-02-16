@@ -1,0 +1,91 @@
+{{#
+  @name CTA
+  @desc Full-width call-to-action section (brand-aligned, SaaS, image-backed).
+#}}
+
+<section class="relative isolate overflow-hidden mt-24">
+
+  {{# SECTION BACKGROUND — image-based #}}
+  <div class="absolute inset-0">
+
+    {{# background image #}}
+    <div
+      class="absolute inset-0 bg-cover bg-center"
+      style="background-image: url('/assets/images/cta/blue_bg.jpg');"
+    ></div>
+
+    {{# brand blue overlay (lighter so image shows more) #}}
+    <div class="absolute inset-0 bg-sky-900/55"></div>
+
+    {{# soft center glow (tighter + clearer) #}}
+    <div
+      class="pointer-events-none absolute left-1/2 top-1/2
+      h-[22rem] w-[34rem]
+      -translate-x-1/2 -translate-y-1/2
+      bg-white/20 blur-2xl"
+    ></div>
+
+    {{# softened vignette (less heavy on edges) #}}
+    <div class="absolute inset-0 bg-gradient-to-b from-black/5 via-transparent to-black/10"></div>
+
+    {{# orange accent rails (brand continuity) #}}
+    <div class="pointer-events-none absolute inset-x-0 top-0 h-[3px]
+      bg-gradient-to-r from-transparent via-orange-300/80 to-transparent"></div>
+    <div class="pointer-events-none absolute inset-x-0 bottom-0 h-[3px]
+      bg-gradient-to-r from-transparent via-orange-300/80 to-transparent"></div>
+  </div>
+
+  {{# CONTENT #}}
+  <div class="fluid-grid relative py-20 md:py-24">
+    <div class="span-content">
+
+      <div class="mx-auto max-w-3xl text-center">
+
+        <h2 class="text-balance text-3xl font-semibold tracking-tight text-white md:text-4xl">
+          {{ title }}
+        </h2>
+
+        {{ if text }}
+          <p class="mx-auto mt-4 max-w-2xl text-base leading-relaxed text-white/85">
+            {{ text }}
+          </p>
+        {{ /if }}
+
+        {{ if primary_button:url || button:url }}
+          <div class="mt-10 flex justify-center">
+            <a
+              href="{{ primary_button:url ?? button:url }}"
+              {{ if (primary_button:target ?? button:target) == '_blank' }}
+                target="_blank" rel="noopener noreferrer"
+              {{ /if }}
+              class="
+                inline-flex items-center justify-center
+                rounded-xl
+                bg-orange-600
+                px-12 py-4
+                text-md font-semibold text-white
+
+                shadow-lg shadow-orange-900/30
+                ring-1 ring-orange-400/40
+
+                transition
+                hover:bg-orange-700
+                hover:shadow-xl
+                focus:outline-none focus-visible:ring-2 focus-visible:ring-orange-300
+              "
+            >
+              Ota yhteyttä
+            </a>
+          </div>
+        {{ /if }}
+
+        {{ if note }}
+          <p class="mt-4 text-xs text-white/70">
+            {{ note }}
+          </p>
+        {{ /if }}
+
+      </div>
+    </div>
+  </div>
+</section>

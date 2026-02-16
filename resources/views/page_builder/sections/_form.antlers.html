@@ -1,0 +1,233 @@
+{{# @name Form @desc The form page builder block. @set page.page_builder.form
+#}}
+
+<section class="relative isolate overflow-hidden">
+    {{# Background image #}}
+    <div
+        class="pointer-events-none absolute inset-0 z-0 bg-cover bg-center"
+        style="
+            background-image: url(&quot;/assets/images/contact/blue_bg2.jpg&quot;);
+        "
+    ></div>
+
+    {{# Calmer overlays (less “hero”, more “section”) #}}
+    <div
+        class="pointer-events-none absolute inset-0 z-10 bg-gradient-to-r from-white/70 via-white/35 to-white/15"
+    ></div>
+    <div
+        class="pointer-events-none absolute inset-0 z-10 bg-gradient-to-b from-black/10 via-black/0 to-black/15 mix-blend-multiply"
+    ></div>
+
+    {{# Soft accent blobs (lighter) #}}
+    <div class="pointer-events-none absolute inset-0 z-10">
+        <div
+            class="absolute -left-40 top-8 h-[22rem] w-[22rem] rounded-full bg-primary-200/16 blur-3xl"
+        ></div>
+        <div
+            class="absolute -right-44 bottom-[-5rem] h-[26rem] w-[26rem] rounded-full bg-sky-200/16 blur-3xl"
+        ></div>
+        <div
+            class="absolute right-16 top-10 h-32 w-32 rounded-full bg-white/18 blur-2xl"
+        ></div>
+    </div>
+
+    {{# IMPORTANT: more compact vertical rhythm, mobile-safe #}}
+    <div class="relative z-20 fluid-grid py-10 md:py-14">
+        <div class="span-content">
+            <div class="mx-auto max-w-6xl">
+                <div
+                    class="grid gap-8 lg:grid-cols-12 lg:items-stretch lg:gap-10"
+                >
+                    {{# LEFT: info card #}}
+                    <div class="lg:col-span-5">
+                        <div class="h-full">
+                            <div
+                                class="relative h-full overflow-hidden rounded-2xl bg-white/82 p-6 shadow-lg shadow-black/5 ring-1 ring-black/10 backdrop-blur-sm md:p-8"
+                            >
+                                <div
+                                    class="pointer-events-none absolute -right-16 -top-16 h-44 w-44 rounded-full bg-white/18 blur-2xl"
+                                ></div>
+
+                                <div class="w-full">
+                                    {{ if block:side_title }} {{
+                                    partial:typography/h1 as="h2"
+                                    class="text-balance text-center"
+                                    :content="block:side_title" }} {{ else }}
+                                    <div class="relative w-full text-center">
+                                        {{ block:title ?= {
+                                        partial:typography/h1 as="h2"
+                                        class="text-balance pb-1"
+                                        :content="block:title" } }}
+                                        <span
+                                            class="pointer-events-none absolute left-12 -bottom-0.5 mx-auto h-[3px] w-[70%] rounded-full bg-gradient-to-r from-transparent via-primary/50 to-transparent"
+                                        ></span>
+                                    </div>
+                                    {{ /if }}
+                                </div>
+
+                                {{ if block:bullets }} {{# Mobile-safe timeline:
+                                smaller spacing, thinner line, smaller dots #}}
+                                <ol class="relative mt-7 space-y-9 pl-1">
+                                    <span
+                                        class="absolute left-3 top-0 bottom-0 w-[2px] h-full rounded-full bg-primary/40"
+                                    ></span>
+
+                                    {{ block:bullets }}
+                                    <li class="relative flex gap-4">
+                                        <div
+                                            class="relative mt-0.5 w-7 shrink-0"
+                                        >
+                                            <span
+                                                class="absolute left-[12px] -translate-x-1/2 h-5 w-5 rounded-full bg-primary shadow-sm ring-4 ring-white/90"
+                                            ></span>
+                                        </div>
+
+                                        <div class="min-w-0 pt-0.5">
+                                            <p
+                                                class="text-sm font-semibold leading-snug text-neutral-900 md:text-[18px]"
+                                            >
+                                                {{ value }}
+                                            </p>
+
+                                            {{ if description }}
+                                            <p
+                                                class="mt-1 text-sm leading-relaxed text-neutral-700"
+                                            >
+                                                {{ description }}
+                                            </p>
+                                            {{ /if }}
+                                        </div>
+                                    </li>
+                                    {{ /block:bullets }}
+                                </ol>
+                                {{ /if }} {{ lead = (block:text_plain ??
+                                block:text ?? text_plain ?? text ?? '') }} {{ if
+                                lead }} {{# Fix invalid mt-18 -> mt-8, keep
+                                tighter #}}
+                                <div class="mt-8 border-t border-black/10 pt-4">
+                                    <p
+                                        class="max-w-md text-sm leading-relaxed text-neutral-700 md:text-base"
+                                    >
+                                        {{ lead }}
+                                    </p>
+                                </div>
+                                {{ /if }}
+                            </div>
+                        </div>
+                    </div>
+
+                    {{# RIGHT: form card #}}
+                    <div class="lg:col-span-7">
+                        <div
+                            class="group relative h-full overflow-hidden rounded-2xl bg-white/82 p-5 shadow-lg shadow-black/5 ring-1 ring-black/10 backdrop-blur-sm md:p-8"
+                        >
+                            <div
+                                class="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-primary/25 to-transparent"
+                            ></div>
+
+                            {{ submit_label = (block:button_label ??
+                            trans:strings.form_send) }} {{ if form:handle }} {{
+                            form:create :in="form:handle" js="alpine:form"
+                            attr:x-ref="form" }}
+                            <div
+                                x-data="formHandler()"
+                                x-init="attempted = false"
+                                class="flex flex-col gap-6"
+                            >
+                                <div class="space-y-3">
+                                    <div
+                                        x-cloak
+                                        x-show="success"
+                                        x-transition
+                                        class="rounded-xl border border-emerald-200 bg-emerald-50/80 px-4 py-3 text-sm text-emerald-900"
+                                    >
+                                        Viesti lähetetty onnistuneesti.
+                                    </div>
+
+                                    <div
+                                        x-cloak
+                                        x-show="attempted && hasErrors"
+                                        x-transition
+                                        class="rounded-xl border border-rose-200 bg-rose-50/80 px-4 py-3 text-sm text-rose-900"
+                                    >
+                                        Tarkista lomakkeen kentät ja yritä
+                                        uudelleen.
+                                    </div>
+                                </div>
+
+                                {{ sections }} {{# Mobile fix: always 1 column,
+                                2 columns from md (not sm) #}}
+                                <fieldset class="grid gap-5 md:grid-cols-2">
+                                    {{ fields }} {{# Only render the "old"
+                                    contact fields here #}} {{ if handle ==
+                                    "name" || handle == "company" || handle ==
+                                    "email" || handle == "phone" || handle ==
+                                    "message_body" }}
+
+                                    <template x-if="{{ show_field }}">
+                                        <div
+                                            class="{{ (type == 'textarea' || handle == 'message_body') ?= 'md:col-span-2' }}"
+                                        >
+                                            <div
+                                                class="mb-2 flex items-center justify-between gap-3"
+                                            >
+                                                <label
+                                                    class="text-[11px] font-semibold tracking-widest text-neutral-500 uppercase"
+                                                >
+                                                    {{ trans :key="display" }}
+                                                    <span
+                                                        x-cloak
+                                                        x-show="attempted && fieldError('{{ handle }}')"
+                                                        x-transition.opacity
+                                                        class="ml-1 text-rose-600"
+                                                        >*</span
+                                                    >
+                                                </label>
+                                            </div>
+
+                                            <div
+                                                class="[&_.input]:w-full [&_.input]:rounded-xl [&_.input]:border [&_.input]:border-transparent [&_.input]:bg-neutral-50/80 [&_.input]:px-4 [&_.input]:py-2.5 [&_.input]:text-sm [&_.input]:text-neutral-900 [&_.input]:placeholder:text-neutral-400 [&_.input]:shadow-sm [&_.input]:outline-none [&_.input]:transition [&_.input:hover]:bg-white [&_.input:hover]:border-neutral-200/70 [&_.input:focus]:bg-white [&_.input:focus]:border-[#519fc0]/40 [&_.input:focus]:ring-4 [&_.input:focus]:ring-[#519fc0]/12 [&_.input]:disabled:opacity-60 [&_.input]:disabled:cursor-not-allowed"
+                                            >
+                                                {{ field }}
+                                            </div>
+
+                                            <p
+                                                x-cloak
+                                                x-show="attempted && fieldError('{{ handle }}')"
+                                                x-text="fieldError('{{ handle }}')"
+                                                class="mt-2 text-xs font-medium text-rose-700"
+                                            ></p>
+                                        </div>
+                                    </template>
+
+                                    {{ /if }} {{ /fields }}
+                                </fieldset>
+                                {{ /sections }} {{# Button: responsive width,
+                                less heavy shadow #}}
+                                <div class="flex justify-center pt-1">
+                                    <button
+                                        type="submit"
+                                        @click="attempted = true"
+                                        class="w-full sm:w-auto sm:min-w-[220px] rounded-xl bg-primary px-10 py-3 text-sm font-semibold text-white shadow-md shadow-black/10 transition hover:brightness-110 hover:-translate-y-0.5 focus:outline-none focus:ring-4 focus:ring-primary/18"
+                                    >
+                                        <span>{{ submit_label }}</span>
+                                        <span
+                                            x-cloak
+                                            x-show="submitting"
+                                            x-transition.opacity
+                                            class="ml-2 text-white/90"
+                                            >Lähetetään…</span
+                                        >
+                                    </button>
+                                </div>
+                            </div>
+                            {{ /form:create }} {{
+                            partial:statamic-peak-tools::snippets/form_handler
+                            }} {{ /if }}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

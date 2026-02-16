@@ -1,0 +1,262 @@
+{{#
+    @name Main mobile navigation
+    @desc The sites main mobile navigation rendered on each page. It's 2 levels deep by default and uses AlpineJS for interactivity.
+#}}
+
+<!-- /navigation/_main_mobile.antlers.html -->
+<nav
+    x-data="{ mobileNavOpen: false }"
+    class="md:hidden"
+    aria-label="{{ trans:strings.main_navigation_mobile }}"
+    x-trap.inert.noscroll.noautofocus="mobileNavOpen"
+    @keyup.escape.stop.prevent="mobileNavOpen = false"
+    x-cloak
+>
+    {{# Small toggle button (top-right) #}}
+    <button
+        @click.prevent.stop="mobileNavOpen = !mobileNavOpen"
+        class="
+            fixed top-9 right-7 z-50
+            inline-flex items-center justify-center
+            h-11 w-11 rounded-xl
+            bg-blue-950 shadow-lg shadow-neutral/15
+            hover:bg-blue-950/90
+            focus:outline-none focus:ring-2 focus:ring-primary/30 focus:ring-offset-2
+            transition
+        "
+        :aria-label="mobileNavOpen ? '{{ trans:strings.nav_close }}' : '{{ trans:strings.nav_open }}'"
+        :aria-expanded="mobileNavOpen"
+    >
+        <span class="sr-only" x-text="mobileNavOpen ? '{{ trans:strings.close }}' : '{{ trans:strings.menu }}'"></span>
+
+        {{# Icon #}}
+        <span class="relative block h-4 w-5" aria-hidden="true">
+            <span
+                class="absolute left-0 top-0 block h-0.5 w-5 rounded bg-white transition-transform duration-200"
+                :class="mobileNavOpen ? 'translate-y-[7px] rotate-45' : ''"
+            ></span>
+            <span
+                class="absolute left-0 top-[7px] block h-0.5 w-5 rounded bg-white transition-opacity duration-200"
+                :class="mobileNavOpen ? 'opacity-0' : 'opacity-100'"
+            ></span>
+            <span
+                class="absolute left-0 top-[14px] block h-0.5 w-5 rounded bg-white transition-transform duration-200"
+                :class="mobileNavOpen ? '-translate-y-[7px] -rotate-45' : ''"
+            ></span>
+        </span>
+    </button>
+
+    {{# Backdrop (tap anywhere outside to close) #}}
+    <div
+        x-show="mobileNavOpen"
+        x-transition.opacity
+        class="fixed inset-0 z-40"
+        @click="mobileNavOpen = false"
+        aria-hidden="true"
+    ></div>
+
+    {{# Dropdown panel under the header #}}
+    <div
+        x-show="mobileNavOpen"
+        x-transition.origin.top
+        x-cloak
+        class="
+            fixed left-0 right-0 z-40
+            top-[90px]
+            border-b border-neutral/10
+            bg-white/95 backdrop-blur
+            shadow-xl shadow-neutral/10
+        "
+    >
+        <div class="px-5 py-4">
+            <ul class="flex flex-col gap-2 max-h-[70vh] overflow-y-auto pr-1">
+                {{ nav:main max_depth="2" include_home="true" select="title|url" }}
+                    {{ unless no_results }}
+                        <li
+                            class="rounded-2xl"
+                            {{ if children }}
+                                x-data="{ subnavOpen: $root.querySelector('[aria-current=page]') ? true : false }"
+                                @focusin.window="!$refs.subnav.contains($event.target) && (subnavOpen = false)"
+                            {{ /if }}
+                        >
+                            {{ if children }}
+                                {{# REAL BUTTON (no fake href="#") #}}
+                                <button
+                                    type="button"
+                                    @click="subnavOpen = !subnavOpen"
+                                    class="
+                                        w-full flex items-center justify-between
+                                        rounded-2xl px-3 py-2.5 mx-1
+                                        text-base font-semibold
+                                        text-[var(--color-text)]
+                                        hover:bg-neutral/5 hover:text-neutral
+                                        focus:outline-none
+                                        transition-colors
+                                        {{ is_current || is_parent ? 'bg-primary/10 text-neutral' : '' }}
+                                    "
+                                    :aria-label="subnavOpen ? '{{ trans:strings.subnav_close }}' : '{{ trans:strings.subnav_open }}'"
+                                    :aria-expanded="subnavOpen"
+                                >
+                                    <span class="leading-tight">{{ title }}</span>
+
+                                    <span
+                                        class="ml-3 inline-flex h-10 w-10 items-center justify-center rounded-xl bg-neutral/5 text-neutral/60 transition-transform duration-200"
+                                        :class="subnavOpen ? 'rotate-180' : ''"
+                                        aria-hidden="true"
+                                    >
+                                        {{ svg:chevron_down attr:class="w-4 stroke-current" }}
+                                    </span>
+                                </button>
+                            {{ else }}
+                                <a
+                                    href="{{ url }}"
+                                    @click="mobileNavOpen = false"
+                                    class="
+                                        w-full flex items-center justify-between
+                                        rounded-2xl px-3 py-2.5 mx-1
+                                        text-base font-semibold
+                                        text-[var(--color-text)]
+                                        hover:bg-neutral/5 hover:text-neutral
+                                        focus:outline-none
+                                        transition-colors
+                                        {{ is_current || is_parent ? 'bg-primary/10 text-neutral' : '' }}
+                                    "
+                                    {{ is_current ?= 'aria-current="page"' }}
+                                >
+                                    <span class="leading-tight">{{ title }}</span>
+                                </a>
+                            {{ /if }}
+
+                            {{ if children }}
+                                <ul
+                                    x-show="subnavOpen"
+                                    x-ref="subnav"
+                                    x-collapse
+                                    class="mt-2 ml-1 flex flex-col gap-1 border-l border-neutral/70 pl-3"
+                                >
+                                    {{ children }}
+                                        <li>
+                                            <a
+                                                href="{{ url }}"
+                                                {{ is_current ?= 'aria-current="page"' }}
+                                                @click="mobileNavOpen = false"
+                                                class="
+                                                    block rounded-xl px-4 py-3
+                                                    text-sm font-medium
+                                                    text-[var(--color-text)]
+                                                    hover:bg-neutral/5 hover:text-neutral
+                                                    focus:outline-none focus:ring-2 focus:ring-primary/30
+                                                    transition-colors
+                                                    {{ is_current || is_parent ? 'bg-primary/10 text-neutral' : '' }}
+                                                "
+                                            >
+                                                {{ title }}
+                                            </a>
+                                        </li>
+                                    {{ /children }}
+                                </ul>
+                            {{ /if }}
+                        </li>
+                    {{ /unless }}
+                {{ /nav:main }}
+
+                {{# Language switcher (mobile menu row) #}}
+                <li class="mt-2 pt-2 border-t border-neutral/10" x-data="{ langOpen: false }">
+                    <button
+                        type="button"
+                        @click="langOpen = !langOpen"
+                        class="
+                            w-full flex items-center justify-between
+                            rounded-2xl px-3 py-2.5 mx-1
+                            text-base font-semibold
+                            text-[var(--color-text)]
+                            hover:bg-neutral/5 hover:text-neutral
+                            focus:outline-none
+                            transition-colors
+                        "
+                        :aria-expanded="langOpen"
+                        aria-label="Change language"
+                    >
+                        <span class="inline-flex items-center gap-3">
+                            <span
+                                class="inline-flex h-4 w-[24px] items-center justify-center overflow-hidden rounded-[5px] border border-neutral/10"
+                                aria-hidden="true"
+                            >
+                                {{ if site:handle == "default" }}
+                                    {{ svg:fi attr:class="h-full w-full" }}
+                                {{ elseif site:handle == "en" }}
+                                    {{ svg:gb attr:class="h-full w-full" }}
+                                {{ elseif site:handle == "sv" }}
+                                    {{ svg:se attr:class="h-full w-full" }}
+                                {{ /if }}
+                            </span>
+
+                            {{# Show current site name (prevents "strings.language" from appearing) #}}
+                            <span class="leading-tight">
+                                {{ sites }}
+                                    {{ if handle == site:handle }}
+                                        {{ name }}
+                                    {{ /if }}
+                                {{ /sites }}
+                            </span>
+                        </span>
+
+                        <span
+                            class="ml-3 inline-flex h-10 w-10 items-center justify-center rounded-xl bg-neutral/5 text-neutral/60 transition-transform duration-200"
+                            :class="langOpen ? 'rotate-180' : ''"
+                            aria-hidden="true"
+                        >
+                            {{ svg:chevron_down attr:class="w-4 stroke-current" }}
+                        </span>
+                    </button>
+
+                    <ul
+                        x-show="langOpen"
+                        x-collapse
+                        class="mt-2 ml-1 flex flex-col gap-1 border-l border-neutral/10 pl-3"
+                    >
+                        {{ sites }}
+                            <li>
+                                <a
+                                    href="{{ url }}"
+                                    @click="mobileNavOpen = false; langOpen = false"
+                                    class="
+                                        flex items-center justify-between rounded-xl px-4 py-3
+                                        text-sm font-medium
+                                        hover:bg-neutral/5 hover:text-neutral
+                                        focus:outline-none focus:ring-2 focus:ring-primary/30
+                                        transition-colors
+                                        {{ if handle == site:handle }}bg-primary/10 text-neutral{{ else }}text-[var(--color-text)]{{ /if }}
+                                    "
+                                    {{ if handle == site:handle }}aria-current="true"{{ /if }}
+                                >
+                                    <span class="inline-flex items-center gap-2">
+                                        <span
+                                            class="inline-flex h-3.5 w-[21px] items-center justify-center overflow-hidden rounded-[4px] border border-neutral/10"
+                                            aria-hidden="true"
+                                        >
+                                            {{ if handle == "default" }}
+                                                {{ svg:fi attr:class="h-full w-full" }}
+                                            {{ elseif handle == "en" }}
+                                                {{ svg:gb attr:class="h-full w-full" }}
+                                            {{ elseif handle == "sv" }}
+                                                {{ svg:se attr:class="h-full w-full" }}
+                                            {{ /if }}
+                                        </span>
+                                        <span>{{ name }}</span>
+                                    </span>
+
+                                    {{ if handle == site:handle }}
+                                        <span class="text-neutral/40" aria-hidden="true">✓</span>
+                                    {{ /if }}
+                                </a>
+                            </li>
+                        {{ /sites }}
+                    </ul>
+                </li>
+                {{# End language switcher #}}
+            </ul>
+        </div>
+    </div>
+</nav>
+<!-- End: /navigation/_main_mobile.antlers.html -->

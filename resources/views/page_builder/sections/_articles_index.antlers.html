@@ -1,0 +1,416 @@
+{{#
+  @name Articles index
+  @desc Lists latest articles from the `articles` collection.
+#}}
+
+<section class="relative overflow-hidden bg-orange-100/10">
+  {{# Browse-only soft wash behind header + filters (doesn't affect home/latest mode) #}}
+  {{ if mode == 'browse' }}
+    <div class="pointer-events-none absolute inset-0">
+      <div class="absolute inset-x-0 top-0 h-64 bg-gradient-to-b from-neutral-50/70 via-white to-transparent"></div>
+    </div>
+  {{ /if }}
+  <div class="fluid-grid {{ if mode == 'browse' }}py-10 md:py-12{{ else }}py-12 md:py-16{{ /if }}">
+    <div class="span-content relative">
+      {{# Block defaults / helpers #}}
+      {{ limit = limit ?? 12 }}
+      {{ mode = mode ?? 'latest' }}
+      {{ q = (get:q ?? '') | trim }}
+      {{ sort = (get:sort ?? 'newest') | trim }}
+      {{ tag = (get:tag ?? '') | trim }}
+    {{# Sorting mapping (works for both collection + search) #}}
+      {{ sort_param = 'date:desc' }}
+      {{ if sort == 'oldest' }}{{ sort_param = 'date:asc' }}{{ /if }}
+      {{ if sort == 'az' }}{{ sort_param = 'title:asc' }}{{ /if }}
+      {{ if sort == 'za' }}{{ sort_param = 'title:desc' }}{{ /if }}
+      {{ show_featured = false }}
+      {{ if mode == 'browse' && q == '' && sort == 'newest' }}
+        {{ show_featured = true }}
+      {{ /if }}
+
+      {{# Section header (from block fields) #}}
+      <div class="mx-auto {{ if mode == 'browse' }}mb-8 md:mb-9{{ else }}mb-10 md:mb-12{{ /if }} max-w-3xl text-center">
+        {{ if heading }}
+          <h2 class="text-balance text-2xl font-semibold tracking-tight text-neutral-900 md:text-4xl">
+            {{ heading }}
+          </h2>
+        {{ /if }}
+        {{ if lead }}
+          <p class="mx-auto mt-3 max-w-2xl text-sm leading-relaxed text-neutral-600 md:text-base">
+            {{ lead }}
+          </p>
+        {{ /if }}
+        <div class="mx-auto mt-6 h-px w-44 bg-gradient-to-r from-transparent via-neutral-300/70 to-transparent"></div>
+      </div>
+      {{# FILTER BAR (browse only) #}}
+      {{ if mode == 'browse' && show_search }}
+        <div class="mx-auto mb-10 max-w-5xl">
+          <div class="rounded-3xl border border-neutral-200/70 bg-white/70 p-5 shadow-sm backdrop-blur-sm md:p-6">
+            <form method="get" action="{{ current_url }}" class="flex flex-col gap-4">
+              <div class="flex flex-col gap-3 sm:flex-row sm:items-center">
+                {{# Premium pill input (native x clears; no separate clear button) #}}
+                <div class="relative flex-1">
+                  <span class="pointer-events-none absolute left-5 top-1/2 -translate-y-1/2 text-neutral-400">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                         stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                         class="h-5 w-5">
+                      <circle cx="11" cy="11" r="7"></circle>
+                      <path d="M21 21l-4.3-4.3"></path>
+                    </svg>
+                  </span>
+                  <input
+                    type="search"
+                    name="q"
+                    value="{{ q }}"
+                    placeholder="{{ search_placeholder ?? 'Hae artikkeleista…' }}"
+                    class="w-full rounded-full border border-neutral-200 bg-white py-4 pl-13 pr-5 text-base text-neutral-900
+                           placeholder:text-neutral-400 shadow-sm
+                           focus:border-neutral-300 focus:outline-none focus:ring-4 focus:ring-primary-200/50"
+                  />
+                </div>
+
+                <div class="flex items-center gap-2">
+                  <button
+                    type="submit"
+                    class="inline-flex items-center justify-center rounded-full border border-orange-200 bg-orange-600 px-7 py-4 text-sm font-semibold
+                           text-white shadow-sm transition hover:bg-orange-700 focus:outline-none focus:ring-4 focus:ring-orange-200/60"
+                  >
+                    {{ search_button_text ?? 'Hae' }}
+                  </button>
+                </div>
+              </div>
+
+              {{# Results + sorting row (only show results label when q exists) #}}
+             {{ if q || show_sort || tag }}
+  <div class="flex flex-col gap-2 border-t border-neutral-200/70 pt-4 sm:flex-row sm:items-center sm:justify-between">
+    <div class="text-xs text-neutral-500">
+      {{ if q }}
+        {{ results_label ?? 'Hakutulokset' }}:
+        <span class="font-semibold text-neutral-700">“{{ q }}”</span>
+      {{ /if }}
+    </div>
+
+    <div class="flex flex-col gap-2 sm:flex-row sm:items-center sm:gap-3">
+      {{# TAG FILTER (left of sort) #}}
+      <div class="flex items-center gap-2">
+        <label class="text-xs font-semibold text-neutral-600">
+          {{ tags_label ?? 'Tagit' }}
+        </label>
+
+        <select
+          name="tag"
+          class="rounded-full border border-neutral-200 bg-white px-4 py-2.5 text-xs font-semibold text-neutral-800 shadow-sm
+                 focus:outline-none focus:ring-4 focus:ring-primary-200/50"
+          onchange="this.form.submit()"
+        >
+          <option value="">{{ all_tags_label ?? 'Kaikki' }}</option>
+
+          {{ taxonomy:tags sort="title:asc" }}
+            <option value="{{ slug }}" {{ if tag == slug }}selected{{ /if }}>
+              {{ title }}
+            </option>
+          {{ /taxonomy:tags }}
+        </select>
+      </div>
+
+      {{# SORT (right side) #}}
+      {{ if show_sort }}
+        <div class="flex items-center gap-2">
+          <label class="text-xs font-semibold text-neutral-600">
+            {{ sort_label ?? 'Järjestä' }}
+          </label>
+
+          <select
+            name="sort"
+            class="rounded-full border border-neutral-200 bg-white px-4 py-2.5 text-xs font-semibold text-neutral-800 shadow-sm
+                   focus:outline-none focus:ring-4 focus:ring-primary-200/50"
+            onchange="this.form.submit()"
+          >
+            <option value="newest" {{ if sort == 'newest' }}selected{{ /if }}>{{ sort_newest ?? 'Uusimmat' }}</option>
+            <option value="oldest" {{ if sort == 'oldest' }}selected{{ /if }}>{{ sort_oldest ?? 'Vanhimmat' }}</option>
+            <option value="az" {{ if sort == 'az' }}selected{{ /if }}>{{ sort_az ?? 'A–Ö' }}</option>
+            <option value="za" {{ if sort == 'za' }}selected{{ /if }}>{{ sort_za ?? 'Ö–A' }}</option>
+          </select>
+        </div>
+      {{ /if }}
+    </div>
+  </div>
+{{ /if }}
+
+            </form>
+
+          </div>
+        </div>
+      {{ /if }}
+
+      {{# Browse-only: subtle section to break the whiteness + premium rhythm #}}
+      {{ if mode == 'browse' }}
+        <div class="rounded-3xl border border-neutral-200/60 bg-neutral-50/70 p-5 shadow-sm md:p-7">
+          <div class="mb-5 flex items-center justify-between">
+            <p class="text-xs font-semibold tracking-wide text-neutral-600">
+              {{ if q }}{{ results_label ?? 'Hakutulokset' }}{{ else }}{{ browse_section_label ?? 'Uusimmat artikkelit' }}{{ /if }}
+            </p>
+            <div class="ml-4 h-px flex-1 bg-gradient-to-r from-neutral-200/70 via-neutral-200/20 to-transparent"></div>
+          </div>
+      {{ /if }}
+
+      {{# LISTING #}}
+      {{ if mode == 'browse' && q }}
+        {{ search:results index="articles" for="{ q }" limit="{ limit }" sort="{ sort_param }" }}
+          {{ if no_results }}
+            <div class="mx-auto max-w-xl rounded-2xl border border-neutral-200 bg-white p-6 text-center text-sm text-neutral-600">
+              {{ no_results_text ?? 'Ei hakutuloksia.' }}
+            </div>
+          {{ else }}
+
+            {{ if first }}
+              <div class="grid gap-7 md:grid-cols-2 xl:grid-cols-3">
+            {{ /if }}
+
+              <a
+                href="{{ url }}"
+                class="group relative flex h-full flex-col overflow-hidden rounded-2xl border border-neutral-200/80 bg-white shadow-sm transition
+                       hover:-translate-y-1 hover:border-neutral-300 hover:shadow-xl
+                       focus:outline-none focus-visible:ring-4 focus-visible:ring-primary-200/60"
+              >
+                <div class="relative aspect-[16/10] overflow-hidden bg-neutral-100">
+                  {{ if image }}
+                    {{ image }}
+                      {{ partial:components/image
+                        class="h-full w-full object-cover object-center transition duration-500 ease-out group-hover:scale-[1.04]"
+                      }}
+                    {{ /image }}
+                  {{ else }}
+                    <div class="h-full w-full bg-gradient-to-br from-sky-100 via-white to-orange-100"></div>
+                  {{ /if }}
+
+                  <div class="pointer-events-none absolute inset-0 bg-gradient-to-tr from-white/10 via-transparent to-white/5"></div>
+                  <div class="pointer-events-none absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-black/25 to-transparent"></div>
+
+                  {{ if date }}
+                    <div class="absolute left-4 top-4">
+                      <span class="inline-flex items-center rounded-full border border-white/70 bg-white/90 px-3 py-1 text-xs font-semibold tracking-wide text-neutral-700 shadow-sm">
+                        {{ date format="d.m.Y" }}
+                      </span>
+                    </div>
+                  {{ /if }}
+                </div>
+
+                <div class="flex flex-1 flex-col p-7 pb-0">
+                  <h3 class="text-balance text-xl font-semibold tracking-tight text-neutral-900 md:text-2xl">
+                    {{ title }}
+                  </h3>
+
+                  {{ if intro }}
+                    <p class="mt-3 line-clamp-3 text-sm leading-relaxed text-neutral-600 md:text-base">
+                      {{ intro }}
+                    </p>
+                  {{ /if }}
+
+                  <div class="mt-auto">
+                    <div
+                      class="-mx-7 mt-6 flex items-center justify-between border-t border-neutral-200/80 bg-neutral-50 px-7 py-4
+                             text-sm font-semibold text-neutral-800 transition
+                             group-hover:bg-orange-50/60 group-hover:text-orange-800"
+                    >
+                      <span class="inline-flex items-center gap-2">
+                        {{ card_button_text ?? 'Lue lisää' }}
+                      </span>
+
+                      <span class="inline-flex items-center gap-2 text-orange-700">
+                        <span class="text-base transition group-hover:translate-x-0.5">➜</span>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="pointer-events-none absolute inset-0 opacity-0 transition group-hover:opacity-100
+                  bg-gradient-to-br from-orange-50/40 via-transparent to-sky-50/40"></div>
+              </a>
+
+            {{ if last }}
+              </div>
+            {{ /if }}
+
+          {{ /if }}
+        {{ /search:results }}
+
+      {{ else }}
+        {{ collection:articles sort="{ sort_param }" limit="{ limit }" }}
+          {{ if no_results }}
+            <div class="mx-auto max-w-xl rounded-2xl border border-neutral-200 bg-neutral-50 p-6 text-center text-sm text-neutral-600">
+              {{ no_articles_text ?? 'Ei vielä artikkeleita.' }}
+            </div>
+          {{ else }}
+
+            {{ if first }}
+              <div class="grid gap-7 md:grid-cols-2 xl:grid-cols-3">
+            {{ /if }}
+
+              {{# ✅ Nosto only on default browse view #}}
+              {{ if first && show_featured }}
+                <a
+                  href="{{ url }}"
+                  class="group relative overflow-hidden rounded-3xl border border-neutral-200/80 bg-white shadow-sm transition
+                         hover:-translate-y-1 hover:border-neutral-300 hover:shadow-xl
+                         focus:outline-none focus-visible:ring-4 focus-visible:ring-primary-200/60
+                         md:col-span-2"
+                >
+                  <div class="relative aspect-[16/9] overflow-hidden bg-neutral-100">
+                    {{ if image }}
+                      {{ image }}
+                        {{ partial:components/image
+                          class="h-full w-full object-cover object-center transition duration-500 ease-out group-hover:scale-[1.03]"
+                        }}
+                      {{ /image }}
+                    {{ else }}
+                      <div class="h-full w-full bg-gradient-to-br from-sky-100 via-white to-orange-100"></div>
+                    {{ /if }}
+
+                    <div class="pointer-events-none absolute inset-0 bg-gradient-to-tr from-black/10 via-transparent to-white/10"></div>
+                    <div class="pointer-events-none absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-black/35 to-transparent"></div>
+
+                    <div class="absolute left-5 top-5 flex items-center gap-2">
+                      <span class="inline-flex items-center rounded-full border border-white/70 bg-white/90 px-3 py-1 text-xs font-semibold text-neutral-700 shadow-sm">
+                        {{ featured_label ?? 'Nosto' }}
+                      </span>
+                      {{ if date }}
+                        <span class="inline-flex items-center rounded-full border border-white/70 bg-white/90 px-3 py-1 text-xs font-semibold text-neutral-700 shadow-sm">
+                          {{ date format="d.m.Y" }}
+                        </span>
+                      {{ /if }}
+                    </div>
+                  </div>
+
+                  <div class="px-7 md:px-8 pt-7 md:pt-7">
+                    <h3 class="text-balance text-2xl font-semibold tracking-tight text-neutral-900 md:text-3xl">
+                      {{ title }}
+                    </h3>
+
+                    {{ if intro }}
+                      <p class="mt-3 max-w-2xl text-sm leading-relaxed text-neutral-600 md:text-base">
+                        {{ intro }}
+                      </p>
+                    {{ /if }}
+
+                    {{# ✅ EXACT same footer as normal cards (full-width bar) #}}
+                    <div class="mt-6">
+                      <div
+                        class="-mx-7 md:-mx-8 flex items-center justify-between border-t border-neutral-200/80 bg-neutral-50 px-7 md:px-8 py-4
+                               text-sm font-semibold text-neutral-800 transition
+                               group-hover:bg-orange-50/60 group-hover:text-orange-800"
+                      >
+                        <span class="inline-flex items-center gap-2">
+                          {{ card_button_text ?? 'Lue lisää' }}
+                        </span>
+
+                        <span class="inline-flex items-center gap-2 text-orange-700">
+                          <span class="text-base transition group-hover:translate-x-0.5">➜</span>
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+              {{ else }}
+                <a
+                  href="{{ url }}"
+                  class="group relative flex h-full flex-col overflow-hidden rounded-2xl border border-neutral-200/80 bg-white shadow-sm transition
+                         hover:-translate-y-1 hover:border-neutral-300 hover:shadow-xl
+                         focus:outline-none focus-visible:ring-4 focus-visible:ring-primary-200/60"
+                >
+                  <div class="relative aspect-[16/10] overflow-hidden bg-neutral-100">
+                    {{ if image }}
+                      {{ image }}
+                        {{ partial:components/image
+                          class="h-full w-full object-cover object-center transition duration-500 ease-out group-hover:scale-[1.04]"
+                        }}
+                      {{ /image }}
+                    {{ else }}
+                      <div class="h-full w-full bg-gradient-to-br from-sky-100 via-white to-orange-100"></div>
+                    {{ /if }}
+
+                    <div class="pointer-events-none absolute inset-0 bg-gradient-to-tr from-white/10 via-transparent to-white/5"></div>
+                    <div class="pointer-events-none absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-black/25 to-transparent"></div>
+
+                    {{ if date }}
+                      <div class="absolute left-4 top-4">
+                        <span class="inline-flex items-center rounded-full border border-white/70 bg-white/90 px-3 py-1 text-xs font-semibold tracking-wide text-neutral-700 shadow-sm">
+                          {{ date format="d.m.Y" }}
+                        </span>
+                      </div>
+                    {{ /if }}
+                  </div>
+
+                  <div class="flex flex-1 flex-col p-7 pb-0">
+                    <h3 class="text-balance text-xl font-semibold tracking-tight text-neutral-900 md:text-2xl">
+                      {{ title }}
+                    </h3>
+
+                    {{ if intro }}
+                      <p class="mt-3 line-clamp-3 text-sm leading-relaxed text-neutral-600 md:text-base">
+                        {{ intro }}
+                      </p>
+                    {{ /if }}
+
+                    <div class="mt-auto">
+                      <div
+                        class="-mx-7 mt-6 flex items-center justify-between border-t border-neutral-200/80 bg-neutral-50 px-7 py-4
+                               text-sm font-semibold text-neutral-800 transition
+                               group-hover:bg-orange-50/60 group-hover:text-orange-800"
+                      >
+                        <span class="inline-flex items-center gap-2">
+                          {{ card_button_text ?? 'Lue lisää' }}
+                        </span>
+
+                        <span class="inline-flex items-center gap-2 text-orange-700">
+                          <span class="text-base transition group-hover:translate-x-0.5">➜</span>
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="pointer-events-none absolute inset-0 opacity-0 transition group-hover:opacity-100
+                    bg-gradient-to-br from-orange-50/40 via-transparent to-sky-50/40"></div>
+                </a>
+              {{ /if }}
+
+            {{ if last }}
+              </div>
+            {{ /if }}
+
+          {{ /if }}
+        {{ /collection:articles }}
+      {{ /if }}
+
+      {{ if mode == 'browse' }}
+        </div>
+      {{ /if }}
+
+     {{# Optional "Kaikki artikkelit" button (block fields) #}}
+{{ if show_button }}
+  <div class="mt-12 flex justify-center">
+    {{ btn_url = button:url ?? '/ajankohtaista' }}
+    {{ btn_label = button:label ?? button:text ?? card_button_text ?? 'Lue lisää' }}
+
+    <a
+      href="{{ btn_url }}"
+      {{ if button:target == '_blank' }} target="_blank" rel="noopener noreferrer" {{ /if }}
+      class="
+        inline-flex items-center justify-center
+        rounded-lg
+        bg-orange-600 px-14 py-4
+        text-md font-semibold text-white
+        transition-colors
+        hover:bg-orange-600
+        focus:outline-none focus:ring-2 focus:ring-orange-500/40
+      "
+    >
+      {{ btn_label }}
+    </a>
+  </div>
+{{ /if }}
+
+
+    </div>
+  </div>
+</section>

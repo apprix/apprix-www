@@ -1,0 +1,170 @@
+title: Articles index
+fields:
+  - handle: heading
+    field:
+      type: text
+      localizable: true
+      display: Otsikko
+      default: Ajankohtaista
+
+  - handle: lead
+    field:
+      type: textarea
+      localizable: true
+      display: "Kuvausteksti (optional)"
+      rows: 2
+      character_limit: 200
+
+  - handle: mode
+    field:
+      type: select
+      display: Tila
+      default: latest
+      options:
+        latest: "Nostot (etusivu tms.)"
+        browse: "Ajankohtaista-sivu (haku/suodatus)"
+      instructions: "Nostot = näytä vain uusimmat. Ajankohtaista-sivulla käytä Listaus-tilaa."
+
+  - handle: limit
+    field:
+      type: integer
+      display: Montako näytetään
+      default: 12
+      instructions: "Kuinka monta artikkelia näytetään (nostotilassa: uusimmat)."
+
+  - handle: card_button_text
+    field:
+      type: text
+      localizable: true
+      display: Artikkelikortin painiketeksti
+      default: "Lue lisää"
+      width: 50
+
+  - handle: show_button
+    field:
+      type: toggle
+      display: "Näytä “Kaikki artikkelit” -painike"
+      default: false
+
+  - handle: button
+    field:
+      type: link
+      localizable: true
+      display: "Painike (optional)"
+      instructions: "Jos show_button päällä, voit valita linkin (esim. /ajankohtaista)."
+      if:
+        show_button: true
+
+  # Search / filters
+  - handle: show_search
+    field:
+      type: toggle
+      display: Näytä haku
+      default: true
+      instructions: "Päälle yleensä vain Ajankohtaista-sivulla."
+      if:
+        mode: "equals browse"
+
+  - handle: search_placeholder
+    field:
+      type: text
+      localizable: true
+      display: Haun placeholder
+      default: "Hae artikkeleista…"
+      if:
+        show_search: true
+
+  - handle: search_button_text
+    field:
+      type: text
+      localizable: true
+      display: Haun painiketeksti
+      default: "Hae"
+      width: 50
+      if:
+        show_search: true
+
+  # Results label (only shown when q is present)
+  - handle: results_label
+    field:
+      type: text
+      localizable: true
+      display: Hakutulosten otsikko
+      default: Hakutulokset
+      if:
+        show_search: true
+
+  # Sort UI texts (browse only)
+  - handle: show_sort
+    field:
+      type: toggle
+      display: Näytä järjestäminen
+      default: true
+      if:
+        mode: "equals browse"
+
+  - handle: sort_label
+    field:
+      type: text
+      localizable: true
+      display: "Järjestä-label"
+      default: "Järjestä"
+      if:
+        show_sort: true
+
+  - handle: sort_newest
+    field:
+      type: text
+      localizable: true
+      display: "Sort: Uusimmat"
+      default: "Uusimmat"
+      width: 50
+      if:
+        show_sort: true
+
+  - handle: sort_oldest
+    field:
+      type: text
+      localizable: true
+      display: "Sort: Vanhimmat"
+      default: "Vanhimmat"
+      width: 50
+      if:
+        show_sort: true
+
+  - handle: sort_az
+    field:
+      type: text
+      localizable: true
+      display: "Sort: A–Ö"
+      default: "A–Ö"
+      width: 50
+      if:
+        show_sort: true
+
+  - handle: sort_za
+    field:
+      type: text
+      localizable: true
+      display: "Sort: Ö–A"
+      default: "Ö–A"
+      width: 50
+      if:
+        show_sort: true
+
+  # Empty states
+  - handle: no_results_text
+    field:
+      type: text
+      localizable: true
+      display: "Ei hakutuloksia -teksti"
+      default: "Ei hakutuloksia."
+      if:
+        show_search: true
+
+  - handle: no_articles_text
+    field:
+      type: text
+      localizable: true
+      display: "Ei artikkeleita -teksti"
+      default: "Ei vielä artikkeleita."

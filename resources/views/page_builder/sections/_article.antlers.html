@@ -1,0 +1,14 @@
+{{#
+  @name Article
+  @desc Article page builder block (sections-only). Must NOT call page_builder/block.
+#}}
+
+<section class="fluid-grid">
+  <div class="span-content">
+    {{ partial:typography/prose as="article" class="contents stack-8" }}
+      {{ article }}
+        {{ partial src="components/{type}" }}
+      {{ /article }}
+    {{ /partial:typography/prose }}
+  </div>
+</section>

@@ -1,0 +1,28 @@
+{{#
+    @name Logo
+    @desc Logo component. Supports `width`, `class`, and `variant` (default/footer).
+#}}
+
+<!-- /components/_logo.antlers.html -->
+{{ variant = variant ?? 'default' }}
+{{ width = width ?? '250' }}
+{{ class = class ?? '' }}
+
+{{ logo_src = (variant == 'footer') ? '/visuals/apprix_logo_white.png' : '/visuals/apprix_logo_rgb.png' }}
+{{ alt_text = alt ?? config:app:name }}
+
+<a
+    aria-label="{{ trans:strings.home }}"
+    href="{{ site:url }}"
+    class="inline-flex items-center"
+>
+    <img
+        src="{{ logo_src }}"
+        width="{{ width }}"
+        class="select-none {{ class }}"
+        alt="{{ alt_text }}"
+        loading="lazy"
+        decoding="async"
+    />
+</a>
+<!-- End: /components/_logo.antlers.html -->

@@ -1,0 +1,103 @@
+title: "Page builder"
+fields:
+  - handle: page_builder
+    field:
+      type: replicator
+      localizable: false
+      hide_display: true
+      collapse: true
+      listable: false
+      display: "Page builder"
+      button_label: "Add block"
+      sets:
+        image_and_text:
+          display: "Image and text"
+          instructions: "Image and text based blocks."
+          icon: text-formatting-initial-letter
+          sets:
+            article:
+              display: Article
+              instructions: "Long form content, can be expanded with media like figures, video, quotes or tables."
+              icon: text-formatting-image-bottom
+              fields:
+                - import: article
+
+        interactive:
+          display: Interactive
+          instructions: "Interactive blocks."
+          icon: programming-script-code
+          sets:
+            form:
+              display: Form
+              instructions: "Select and render a form."
+              icon: mail-chat-bubble-text
+              fields:
+                - import: form
+
+            contact_wizard:
+              display: Contact wizard
+              instructions: "Step-by-step contact wizard (premium multi-step form)."
+              icon: form-text-field
+              fields:
+                - import: contact_wizard
+
+            cards:
+              display: Cards
+              instructions: "Show linkable cards with text."
+              icon: link
+              fields:
+                - import: cards
+
+        marketing:
+          display: Marketing
+          instructions: "Homepage marketing sections."
+          icon: layout-dashboard
+          sets:
+            hero:
+              display: Hero
+              instructions: "Main hero section."
+              icon: text-formatting-title
+              fields:
+                - import: hero
+
+            logo_carousel:
+              display: Logo carousel
+              instructions: "Animated logo strip / trust section."
+              icon: media-image-picture-orientation
+              fields:
+                - import: logo_carousel
+
+            feature_row:
+              display: Feature row
+              instructions: "Text + image section, can be reversed."
+              icon: arrows-left-right
+              fields:
+                - import: feature_row
+
+            articles_index:
+              display: Ajankohtaista (listaus)
+              instructions: "Listaa uusimmat artikkelit (Articles collection)."
+              icon: content-book-open
+              fields:
+                - import: articles_index
+
+            cta:
+              display: Call to action
+              instructions: "Final CTA section."
+              icon: alert-alarm-bell
+              fields:
+                - import: cta
+
+            team_cards:
+              display: Team cards
+              instructions: "Team member cards section"
+              icon: user-multiple-group
+              fields:
+                - import: team_cards
+
+            link_cards:
+              display: Link cards
+              instructions: "Exploratory link cards (e.g. Customers, Case studies)."
+              icon: link
+              fields:
+                - import: link_cards

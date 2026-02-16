@@ -1,0 +1,73 @@
+title: Team cards
+fields:
+  - handle: title
+    field:
+      type: text
+      localizable: true
+      display: Title
+
+  - handle: intro
+    field:
+      type: textarea
+      localizable: true
+      display: Intro text
+      instructions: "Short intro under the title (1–2 lines)."
+      rows: 3
+
+  - handle: shared_contact
+    field:
+      type: text
+      localizable: true
+      display: Shared contact
+      instructions: "Shown below the team (e.g. etunimi.sukunimi@apprix.fi)."
+
+  - handle: people
+    field:
+      type: replicator
+      display: People
+      min_items: 1
+      sets:
+        person:
+          display: Person
+          fields:
+            - handle: name
+              field:
+                type: text
+                required: true
+                display: Name
+
+            - handle: role
+              field:
+                type: text
+                display: Role / title
+
+            - handle: photo
+              field:
+                type: assets
+                display: Photo
+                max_files: 1
+                container: images
+                folder: team
+
+            - handle: highlights
+              field:
+                type: grid
+                display: Highlights
+                instructions: "Add 1–4 lines under the role (e.g. eLearning Expert, Uudet asiakkaat)."
+                min_rows: 0
+                add_row: Add line
+                fields:
+                  - handle: text
+                    field:
+                      type: text
+                      display: Line
+
+            - handle: phone
+              field:
+                type: text
+                display: Phone
+
+            - handle: email
+              field:
+                type: text
+                display: Email

@@ -1,0 +1,149 @@
+<!-- /navigation/_main_desktop.antlers.html -->
+<nav class="hidden md:block" aria-label="{{ trans:strings.main_navigation_desktop }}">
+  <ul class="flex items-center justify-center gap-2">
+    {{ nav:main max_depth="2" include_home="true" select="title|url" }}
+      {{ unless no_results }}
+        <li
+          class="relative"
+          {{ if children }}
+            x-data="{ subnavOpen: false }"
+            @keyup.escape.stop.prevent="subnavOpen = false"
+            @focusin.window="!$refs.subnav.contains($event.target) && (subnavOpen = false)"
+            @mouseenter="subnavOpen = true"
+            @mouseleave="subnavOpen = false"
+          {{ /if }}
+        >
+          <a
+            class="
+              group relative inline-flex items-center gap-2
+              px-5 py-3
+              text-[15px] font-semibold tracking-[0.01em]
+              text-neutral-800 hover:text-neutral-950
+              transition-colors transition-transform
+              hover:-translate-y-[1px]
+              focus:outline-none focus-visible:ring-2 focus-visible:ring-primary/25 focus-visible:ring-offset-2
+            "
+            {{ if children }}
+              href="#"
+              @click.prevent="subnavOpen = !subnavOpen"
+              :aria-label="subnavOpen ? '{{ trans:strings.subnav_close }}' : '{{ trans:strings.subnav_open }}'"
+              :aria-expanded="subnavOpen"
+            {{ else }}
+              href="{{ url }}"
+            {{ /if }}
+            {{ is_current ?= 'aria-current="page"' }}
+          >
+            <span class="relative">
+              {{ title }}
+
+              <span
+                class="
+                  pointer-events-none absolute left-0 -bottom-1.5
+                  h-[3px] w-full origin-left scale-x-0
+                  rounded-full bg-primary
+                  transition-transform duration-200 ease-out
+                  group-hover:scale-x-100
+                  {{ is_current || is_parent ? 'scale-x-100' : '' }}
+                "
+                aria-hidden="true"
+              ></span>
+            </span>
+
+            {{ if children }}
+              <span
+                :class="{ 'rotate-180': subnavOpen }"
+                class="
+                  transition-transform duration-200
+                  text-neutral-400 group-hover:text-neutral-600
+                  group-hover:translate-y-0.5
+                "
+                aria-hidden="true"
+              >
+                {{ svg:chevron_down attr:class="w-3.5 h-3.5 stroke-current stroke-[2.25]" }}
+              </span>
+            {{ /if }}
+          </a>
+
+          {{ if children }}
+            <div
+              x-show="subnavOpen"
+              x-ref="subnav"
+              x-cloak
+              x-transition:enter="transition ease-out duration-150"
+              x-transition:enter-start="opacity-0 translate-y-1"
+              x-transition:enter-end="opacity-100 translate-y-0"
+              x-transition:leave="transition ease-in duration-120"
+              x-transition:leave-start="opacity-100 translate-y-0"
+              x-transition:leave-end="opacity-0 translate-y-1"
+              @click.outside="subnavOpen = false"
+              class="absolute left-0 mt-0 w-[640px]"
+            >
+              <div
+                class="
+                  relative overflow-hidden
+                  rounded-3xl border border-neutral-300/70
+                  bg-gradient-to-b from-white to-neutral-50
+                  shadow-2xl shadow-neutral-900/20
+                  ring-1 ring-neutral-900/5
+                  p-3
+                "
+              >
+                <!-- subtle top accent to separate from white sections -->
+                <div class="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-primary/50 via-primary/15 to-transparent"></div>
+
+                <ul class="grid grid-cols-2 gap-2">
+                  {{ children }}
+                    <li>
+                      <a
+                        href="{{ url }}"
+                        {{ is_current ?= 'aria-current="page"' }}
+                        class="
+                          group flex items-center gap-4
+                          rounded-2xl p-4
+                          bg-white
+                          border border-neutral-200/70
+                          hover:border-neutral-300 hover:bg-white
+                          focus:outline-none focus-visible:ring-2 focus-visible:ring-primary/25
+                          transition-colors
+                          {{ is_current || is_parent ? 'border-primary/25 bg-primary/5' : '' }}
+                        "
+                      >
+                        <!-- icon container (fixed size, visible on white) -->
+                        <span
+                          class="
+                            shrink-0 grid h-11 w-11 place-items-center rounded-xl
+                            border border-neutral-200
+                            bg-neutral-100
+                            text-neutral-700
+                            shadow-sm
+                            group-hover:bg-neutral-50 group-hover:text-neutral-900 group-hover:border-neutral-300
+                            transition-colors
+                            {{ is_current || is_parent ? 'border-primary/30 bg-primary/10 text-primary' : '' }}
+                          "
+                          aria-hidden="true"
+                        >
+                          {{ svg:sparkles attr:class="w-5 h-5 stroke-current" }}
+                        </span>
+
+                        <span class="min-w-0">
+                          <span class="block text-[15px] font-semibold text-neutral-900 leading-tight">
+                            {{ title }}
+                          </span>
+                        </span>
+
+                        <span class="ml-auto text-neutral-300 group-hover:text-neutral-700 transition-colors shrink-0" aria-hidden="true">
+                          {{ svg:chevron_right attr:class="w-5 stroke-current" }}
+                        </span>
+                      </a>
+                    </li>
+                  {{ /children }}
+                </ul>
+              </div>
+            </div>
+          {{ /if }}
+        </li>
+      {{ /unless }}
+    {{ /nav:main }}
+  </ul>
+</nav>
+<!-- End: /navigation/_main_desktop.antlers.html -->

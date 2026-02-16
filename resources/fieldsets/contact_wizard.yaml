@@ -1,0 +1,150 @@
+title: Contact wizard
+
+fields:
+  - handle: title
+    field:
+      type: text
+      display: Title
+      instructions: "Main heading for the wizard section."
+      width: 100
+
+  - handle: lead
+    field:
+      type: textarea
+      display: Lead
+      instructions: "Short intro under the title."
+      rows: 3
+      width: 100
+
+  # -------------------------
+  # Option images (no extra card config)
+  # Uses the form options as source of truth.
+  # -------------------------
+
+  - handle: option_images_step1
+    field:
+      type: section
+      display: "Step 1 option images"
+      instructions: "Upload one image per 'looking_for' option. Labels/text still come from the form options."
+
+  - handle: img_learning_environment
+    field:
+      type: assets
+      display: "Image: Learning environment (learning_environment)"
+      container: images
+      folder: contact/wizard
+      max_files: 1
+      mode: grid
+      width: 50
+
+  - handle: img_authoring_tool
+    field:
+      type: assets
+      display: "Image: Authoring tool (authoring_tool)"
+      container: images
+      folder: contact/wizard
+      max_files: 1
+      mode: grid
+      width: 50
+
+  - handle: img_custom_trainings
+    field:
+      type: assets
+      display: "Image: Custom trainings (custom_trainings)"
+      container: images
+      folder: contact/wizard
+      max_files: 1
+      mode: grid
+      width: 50
+
+  - handle: img_ready_trainings
+    field:
+      type: assets
+      display: "Image: Ready trainings (ready_trainings)"
+      container: images
+      folder: contact/wizard
+      max_files: 1
+      mode: grid
+      width: 50
+
+  - handle: option_images_step2
+    field:
+      type: section
+      display: "Step 2 option images"
+      instructions: "Upload one image per 'usage' option. Labels/text still come from the form options."
+
+  - handle: img_usage_internal
+    field:
+      type: assets
+      display: "Image: Internal (internal)"
+      container: images
+      folder: contact/wizard
+      max_files: 1
+      mode: grid
+      width: 33
+
+  - handle: img_usage_external
+    field:
+      type: assets
+      display: "Image: External (external)"
+      container: images
+      folder: contact/wizard
+      max_files: 1
+      mode: grid
+      width: 33
+
+  - handle: img_usage_both
+    field:
+      type: assets
+      display: "Image: Both (both)"
+      container: images
+      folder: contact/wizard
+      max_files: 1
+      mode: grid
+      width: 34
+
+  # -------------------------
+  # Form integration
+  # -------------------------
+
+  - handle: form_handle
+    field:
+      type: text
+      display: Form handle
+      instructions: "Statamic form handle to submit to (default: contact)."
+      default: contact
+      width: 50
+
+  - handle: button_label
+    field:
+      type: text
+      display: Submit button label (optional)
+      instructions: "Overrides the default submit label for the last step."
+      width: 50
+
+  - handle: bullets
+    field:
+      type: replicator
+      display: Promise bullets
+      instructions: "Optional bullets shown next to the wizard (e.g. response time, free demo, next steps)."
+      collapse: true
+      listable: false
+      sets:
+        bullet:
+          display: Bullet
+          fields:
+            - handle: value
+              field:
+                type: text
+                display: Text
+                width: 100
+
+  - handle: background_image
+    field:
+      type: assets
+      display: Background image (optional)
+      instructions: "If empty, the section uses the default styling."
+      max_files: 1
+      mode: grid
+      container: images
+      width: 100

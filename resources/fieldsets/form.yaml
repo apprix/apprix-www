@@ -1,0 +1,54 @@
+ititle: Form
+
+fields:
+  -
+    handle: title
+    field:
+      input_type: text
+      type: text
+      localizable: true
+      listable: hidden
+      display: Title
+
+  -
+    handle: text
+    field: common.text_plain
+
+  -
+    handle: bullets
+    field:
+      display: Bullets
+      instructions: Short supporting points shown next to the form
+      type: replicator
+      localizable: true
+      collapse: true
+      sets:
+        bullet:
+          display: Bullet
+          fields:
+            -
+              handle: value
+              field:
+                display: Text
+                type: text
+                validate:
+                  - required
+
+  -
+    handle: button_label
+    field:
+      display: Button label
+      instructions: Text shown on the submit button
+      type: text
+      localizable: true
+      width: 50
+
+  -
+    handle: form
+    field:
+      max_items: 1
+      type: form
+      listable: hidden
+      display: Form
+      validate:
+        - required
