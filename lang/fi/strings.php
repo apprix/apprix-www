@@ -88,6 +88,12 @@ return [
     'no_results' => 'Ei julkaisuja tällä hetkellä.',
     'no_script' => 'Tämä verkkosivusto vaatii Javascriptin toimiakseen kunnolla. Kokemuksesi voi vaihdella.',
 
+    // Articles
+    'article_previous' => 'Edellinen',
+    'article_next' => 'Seuraava',
+    'article_more' => 'Lisää artikkeleita',
+    'article_back_to_top' => 'Takaisin ylös',
+
     // Pagination
     'next' => 'seuraava',
     'of' => '/',

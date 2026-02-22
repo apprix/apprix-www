@@ -88,6 +88,12 @@ return [
     'no_results' => 'There are currently no posts.',
     'no_script' => 'This website requires Javascript for some parts to function properly. Your experience may vary.',
 
+    // Articles
+    'article_previous' => 'Previous',
+    'article_next' => 'Next',
+    'article_more' => 'More articles',
+    'article_back_to_top' => 'Back to top',
+
     // Pagination
     'next' => 'next',
     'of' => 'of',

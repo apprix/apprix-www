@@ -1,0 +1,55 @@
+{{#
+  @name Stats
+  @desc Key metric counters section with count-up animation.
+#}}
+
+<section class="relative">
+  <div class="fluid-grid relative py-16 md:py-20">
+    <div class="span-content">
+
+      {{# Section heading — simple text, no pill #}}
+      {{ if eyebrow || title }}
+        <div class="mx-auto mb-10 max-w-3xl text-center md:mb-14">
+
+          {{ if eyebrow }}
+            <p class="mb-2 text-sm font-medium uppercase tracking-widest text-primary">
+              {{ eyebrow }}
+            </p>
+          {{ /if }}
+
+          {{ if title }}
+            <h2 class="text-balance text-2xl font-semibold tracking-tight text-neutral-900 md:text-3xl">
+              {{ title }}
+            </h2>
+          {{ /if }}
+
+        </div>
+      {{ /if }}
+
+      {{# Stat cards with count-up animation #}}
+      {{ if stats }}
+        <div class="grid gap-6 sm:grid-cols-{{ stats | count }} md:gap-8">
+          {{ stats }}
+            <div
+              class="relative overflow-hidden rounded-2xl border border-neutral-200/70 bg-white px-6 py-10 text-center shadow-lg shadow-black/[0.04] ring-1 ring-neutral-200/50"
+              x-data="statCounter('{{ value }}')"
+              x-intersect.once="start()"
+            >
+
+              {{# Accent bar on top #}}
+              <div class="absolute inset-x-0 top-0 h-[3px] bg-gradient-to-r from-primary/80 via-primary to-primary/80"></div>
+
+              <p class="text-4xl font-bold tracking-tight text-neutral-900 md:text-5xl" x-text="display">
+                0
+              </p>
+              <p class="mt-3 text-sm leading-relaxed text-neutral-600">
+                {{ label }}
+              </p>
+            </div>
+          {{ /stats }}
+        </div>
+      {{ /if }}
+
+    </div>
+  </div>
+</section>

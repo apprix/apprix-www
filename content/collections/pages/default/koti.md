@@ -3,7 +3,7 @@ id: home
 blueprint: page
 title: Koti
 updated_by: 680e1400-32cd-4415-9b61-d630b47576db
-updated_at: 1771208243
+updated_at: 1771790846
 seo_noindex: true
 seo_nofollow: true
 seo_canonical_type: entry
@@ -144,6 +144,31 @@ page_builder:
     type: cta
     enabled: true
     button: /yhteytta
+  -
+    id: mkstats1
+    eyebrow: 'Apprix lukuina'
+    title: 'Tuloksia, joihin voi luottaa'
+    stats:
+      -
+        id: mkstat01
+        value: 50+
+        label: 'Kansainväliset avainasiakkaat'
+        type: stat
+        enabled: true
+      -
+        id: mkstat02
+        value: '1 500+'
+        label: Builder-verkkokoulutuksia
+        type: stat
+        enabled: true
+      -
+        id: mkstat03
+        value: 80k+
+        label: 'Koulutussuorituksia kuukaudessa'
+        type: stat
+        enabled: true
+    type: stats
+    enabled: true
   -
     id: mkmnjie7
     eyebrow: 'TUKI & SISÄLLÖT'

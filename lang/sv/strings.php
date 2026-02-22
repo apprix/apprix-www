@@ -88,6 +88,12 @@ return [
     'no_results' => 'Det finns inga inlägg för tillfället.',
     'no_script' => 'Denna webbplats kräver Javascript för att fungera korrekt. Din upplevelse kan variera.',
 
+    // Articles
+    'article_previous' => 'Föregående',
+    'article_next' => 'Nästa',
+    'article_more' => 'Fler artiklar',
+    'article_back_to_top' => 'Tillbaka till toppen',
+
     // Pagination
     'next' => 'nästa',
     'of' => 'av',
