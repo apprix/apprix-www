@@ -28,7 +28,7 @@
 
       {{# Stat cards with count-up animation #}}
       {{ if stats }}
-        <div class="grid gap-6 sm:grid-cols-{{ stats | count }} md:gap-8">
+        <div class="grid gap-6 grid-cols-1 md:grid-cols-{{ stats | count }} md:gap-8">
           {{ stats }}
             <div
               class="relative overflow-hidden rounded-2xl border border-neutral-200/70 bg-white px-6 py-10 text-center shadow-lg shadow-black/[0.04] ring-1 ring-neutral-200/50"
