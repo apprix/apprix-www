@@ -5,8 +5,21 @@
     md:-mt-[154px] md:pt-[96px]
   "
 >
-  {{# FULL-WIDTH VIDEO LAYER #}}
-  <div class="absolute inset-0 z-0">
+  {{# MOBILE: rich layered gradient background (no video) #}}
+  <div class="absolute inset-0 z-0 md:hidden" aria-hidden="true">
+    <div class="absolute inset-0 bg-gradient-to-br from-sky-50 via-white to-primary/[0.07]"></div>
+    <div class="absolute inset-0 bg-gradient-to-tr from-orange-50/40 via-transparent to-sky-100/30"></div>
+
+    {{# Accent blobs for depth #}}
+    <div class="absolute -left-20 top-16 h-64 w-64 rounded-full bg-primary/[0.08] blur-3xl"></div>
+    <div class="absolute -right-16 top-1/3 h-56 w-56 rounded-full bg-orange-300/[0.1] blur-3xl"></div>
+    <div class="absolute bottom-20 left-1/3 h-48 w-48 rounded-full bg-sky-200/20 blur-3xl"></div>
+
+    <div class="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-b from-transparent to-white"></div>
+  </div>
+
+  {{# DESKTOP: full-width video layer #}}
+  <div class="absolute inset-0 z-0 hidden md:block">
     <video
       class="h-full w-full object-cover object-center opacity-0 transition-opacity duration-700"
       autoplay
@@ -20,14 +33,14 @@
     </video>
 
     {{# Base readability washes #}}
-    <div class="absolute inset-0 bg-gradient-to-r from-white/90 via-white/35 to-transparent md:from-white/80 md:via-white/22"></div>
+    <div class="absolute inset-0 bg-gradient-to-r from-white/80 via-white/22 to-transparent"></div>
     <div class="absolute inset-0 bg-gradient-to-tr from-neutral-900/10 via-transparent to-white/10"></div>
 
     {{# LEFT BLUR SCRIM (stronger, cleaner reading area) #}}
     <div
       class="
         absolute inset-y-0 left-0
-        w-[76%] sm:w-[64%] md:w-[56%] lg:w-[50%]
+        w-[56%] lg:w-[50%]
         backdrop-blur-3xl
         bg-white/35
         ring-1 ring-white/30
@@ -40,7 +53,7 @@
     <div
       class="
         absolute left-0 top-0 h-full
-        w-[72%] sm:w-[60%] md:w-[54%] lg:w-[48%]
+        w-[54%] lg:w-[48%]
         bg-gradient-to-r from-white/65 via-white/35 to-transparent
       "
       aria-hidden="true"
@@ -52,7 +65,7 @@
 
   {{# CONTENT LAYER #}}
   <div class="relative z-10 fluid-grid">
-    <div class="span-content py-20 md:py-24 lg:py-28">
+    <div class="span-content py-16 md:py-24 lg:py-28">
       <div class="max-w-[42rem] md:translate-y-1 lg:translate-y-2">
 
         {{ if eyebrow }}
@@ -86,23 +99,26 @@
 
 
         {{ if buttons }}
-          <div class="mt-16 flex flex-wrap items-center gap-4">
+          <div class="mt-10 flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:items-center sm:gap-4 md:mt-16">
             {{ buttons }}
               {{ if style == "primary" }}
                 <a
                   href="{{ link:url }}"
                   {{ if link:target == '_blank' }} target="_blank" rel="noopener noreferrer" {{ /if }}
                   class="
-                    inline-flex items-center justify-center
-                    rounded-xl bg-orange-600 px-9 py-4
+                    inline-flex items-center justify-center gap-2
+                    rounded-xl bg-gradient-to-r from-orange-600 to-orange-500
+                    px-7 py-3.5 sm:px-9 sm:py-4
                     text-base font-bold text-white
-                    shadow-md shadow-orange-400/35
-                    transition hover:brightness-110 hover:-translate-y-[1px]
+                    shadow-lg shadow-orange-500/25
+                    ring-1 ring-inset ring-white/10
+                    transition hover:brightness-110 hover:-translate-y-[1px] hover:shadow-xl hover:shadow-orange-500/30
                     active:translate-y-0
                     focus:outline-none focus:ring-2 focus:ring-orange-500/25 focus:ring-offset-2
                   "
                 >
                   {{ label }}
+                  <svg class="h-4 w-4 sm:hidden" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M3 10a.75.75 0 01.75-.75h10.638L11.23 6.29a.75.75 0 111.04-1.08l4.5 4.25a.75.75 0 010 1.08l-4.5 4.25a.75.75 0 11-1.04-1.08l3.158-2.96H3.75A.75.75 0 013 10z" clip-rule="evenodd"/></svg>
                 </a>
               {{ else }}
                 <a
@@ -110,11 +126,12 @@
                   {{ if link:target == '_blank' }} target="_blank" rel="noopener noreferrer" {{ /if }}
                   class="
                     inline-flex items-center justify-center
-                    rounded-xl border border-white/70 bg-white/55 px-7 py-4
+                    rounded-xl border border-neutral-200 bg-white/80
+                    px-6 py-3.5 sm:px-7 sm:py-4
                     text-base font-semibold text-neutral-900
                     shadow-sm shadow-neutral-900/5
                     backdrop-blur
-                    transition hover:bg-white/70 hover:-translate-y-[1px]
+                    transition hover:bg-white hover:border-neutral-300 hover:-translate-y-[1px]
                     active:translate-y-0
                     focus:outline-none focus:ring-2 focus:ring-primary/20 focus:ring-offset-2
                   "
