@@ -7,8 +7,8 @@
 
       {{# SECTION INTRO — only fill on first row #}}
       {{ if section_intro.section_title || section_intro.eyebrow || section_intro.lead }}
-        {{# Keep intro spacing, but make it not add spacing between the cards #}}
-        <div class="mx-auto my-6 max-w-3xl text-center md:mb-8 md:mt-10">
+        {{# Keep intro spacing, but make it not add spacing between the cards. Hidden on mobile. #}}
+        <div class="mx-auto my-6 max-w-3xl text-center md:mb-8 md:mt-10 hidden md:block">
 
           {{ if section_intro.section_title }}
             <h2 class="text-balance text-2xl font-semibold tracking-tight text-neutral-900 md:text-3xl">
