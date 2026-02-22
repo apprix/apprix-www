@@ -11,7 +11,16 @@
     : 'border-b border-transparent bg-transparent supports-[backdrop-filter]:bg-transparent'"
   class="sticky top-0 z-50 transition-all duration-200"
 >
-  <div class="fluid-grid">
+  {{# Mobile: match hero gradient so header blends seamlessly (hidden on desktop + when scrolled) #}}
+  <div
+    x-show="!scrolled"
+    class="pointer-events-none absolute inset-0 z-0 md:hidden"
+    aria-hidden="true"
+  >
+    <div class="absolute inset-0 bg-gradient-to-br from-sky-50 via-white to-transparent"></div>
+  </div>
+
+  <div class="relative z-10 fluid-grid">
     <div class="span-content">
       <div class="grid grid-cols-[auto_1fr_auto] items-center gap-6 py-2.5 md:py-3">
 
@@ -20,7 +29,7 @@
           {{ partial:components/logo }}
         </div>
 
-        {{# Center: Main navigation inside a pill #}}
+        {{# Center: Main navigation inside a pill (desktop only) #}}
         <div class="justify-self-center">
           <div
             :class="scrolled
@@ -34,7 +43,7 @@
               transition-all duration-200
             "
           >
-            {{ partial:navigation/main }}
+            {{ partial:navigation/main_desktop }}
           </div>
         </div>
 
@@ -90,4 +99,6 @@
     </div>
   </div>
 </header>
+{{# Mobile navigation (hamburger + slide-down menu) — outside header to avoid affecting layout #}}
+{{ partial:navigation/main_mobile }}
 <!-- End: /layout/_header.antlers.html -->
