@@ -95,6 +95,13 @@ fields:
               fields:
                 - import: team_cards
 
+            stats:
+              display: Stats
+              instructions: "Key metric counters (e.g. customers, courses, completions)."
+              icon: number-list
+              fields:
+                - import: stats
+
             link_cards:
               display: Link cards
               instructions: "Exploratory link cards (e.g. Customers, Case studies)."

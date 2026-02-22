@@ -1,0 +1,43 @@
+title: Stats
+fields:
+  - handle: eyebrow
+    field:
+      type: text
+      localizable: true
+      display: Eyebrow
+      instructions: "Optional short label above the title."
+
+  - handle: title
+    field:
+      type: text
+      localizable: true
+      display: Title
+      instructions: "Section heading."
+
+  - handle: stats
+    field:
+      type: replicator
+      localizable: true
+      display: Stats
+      instructions: "Add stat counters."
+      button_label: "Add stat"
+      sets:
+        stat:
+          display: Stat
+          icon: number-list
+          fields:
+            - handle: value
+              field:
+                type: text
+                localizable: true
+                required: true
+                display: Value
+                instructions: "The number/value (e.g. '50+', '1500+', '80k+')."
+
+            - handle: label
+              field:
+                type: text
+                localizable: true
+                required: true
+                display: Label
+                instructions: "Description of the stat."
