@@ -1,85 +1,132 @@
 {{#
   @name Article
-  @desc Single article view for the articles collection.
+  @desc Premium single article view.
 #}}
 
-<section id="top" class="relative overflow-hidden bg-white">
-  <div class="fluid-grid py-10 md:py-14">
-    <article class="span-content mx-auto max-w-4xl">
+{{# Resolve prev/next within the sorted collection #}}
+{{ collection:articles sort="date:desc" }}
+  {{ if id == page:id }}
+    {{ prev_item = prev }}
+    {{ next_item = next }}
+  {{ /if }}
+{{ /collection:articles }}
 
-      {{# Resolve prev/next within the sorted collection (newest -> oldest) #}}
-      {{ collection:articles sort="date:desc" }}
-        {{ if id == page:id }}
-          {{ prev_item = prev }}
-          {{ next_item = next }}
-        {{ /if }}
-      {{ /collection:articles }}
+{{# ─── HERO HEADER ─── #}}
+<section class="relative overflow-hidden bg-gradient-to-b from-neutral-50 to-white">
 
-      {{# Back + Next row (labels/URL from blueprint fields for multi-lang) #}}
-      <div class="flex items-center justify-between gap-4">
+  {{# Subtle decorative glow #}}
+  <div class="pointer-events-none absolute left-1/2 top-0 h-[500px] w-[800px] -translate-x-1/2 bg-primary/[0.04] blur-3xl"></div>
+
+  <div class="fluid-grid relative py-10 md:py-16">
+    <div class="span-content mx-auto max-w-3xl">
+
+      {{# Breadcrumb row #}}
+      <div class="flex items-center gap-3 text-sm">
         <a
           href="{{ back_url ?? '/ajankohtaista' }}"
-          class="inline-flex items-center gap-2 text-sm font-semibold text-neutral-600 hover:text-neutral-900"
+          class="inline-flex items-center gap-1.5 font-medium text-neutral-500 transition hover:text-neutral-900"
         >
-          <span class="text-base">←</span> {{ back_label ?? 'Ajankohtaista' }}
+          <span>←</span> {{ back_label ?? 'Ajankohtaista' }}
         </a>
+      </div>
 
-        {{ if next_item }}
-          <a
-            href="{{ next_item:url }}"
-            class="group inline-flex items-center gap-2 rounded-full border border-neutral-200 bg-white px-4 py-2 text-sm font-semibold text-neutral-800 shadow-sm transition
-                   hover:border-neutral-300 hover:bg-neutral-50"
-            aria-label="{{ next_label ?? 'Seuraava' }}"
-          >
-            {{ next_label ?? 'Seuraava' }}
-            <span class="text-base text-orange-700 transition group-hover:translate-x-0.5">➜</span>
-          </a>
+      {{# Meta row: date + tags #}}
+      <div class="mt-6 flex flex-wrap items-center gap-3">
+        {{ if date }}
+          <time class="text-sm font-medium text-neutral-500">
+            {{ date format="d.m.Y" }}
+          </time>
+        {{ /if }}
+
+        {{ if tags }}
+          <span class="text-neutral-300">·</span>
+          {{ tags }}
+            <span class="inline-flex rounded-full bg-primary/8 px-3 py-0.5 text-xs font-semibold text-primary">
+              {{ title }}
+            </span>
+          {{ /tags }}
         {{ /if }}
       </div>
 
-      {{ if date }}
-        <div class="mt-6">
-          <span class="inline-flex items-center rounded-full border border-neutral-200 bg-white px-3 py-1 text-xs font-semibold tracking-wide text-neutral-600">
-            {{ date format="d.m.Y" }}
-          </span>
-        </div>
-      {{ /if }}
-
-      <h1 class="mt-4 text-balance text-3xl font-semibold tracking-tight text-neutral-900 md:text-5xl">
+      {{# Title #}}
+      <h1 class="mt-4 text-balance text-3xl font-bold tracking-tight text-neutral-900 md:text-5xl md:leading-[1.15]">
         {{ title }}
       </h1>
 
+      {{# Intro #}}
       {{ if intro }}
-        <p class="mt-4 text-base leading-relaxed text-neutral-600 md:text-lg">
+        <p class="mt-5 text-lg leading-relaxed text-neutral-600">
           {{ intro }}
         </p>
       {{ /if }}
 
-      {{ if image }}
-        <div class="mt-8 overflow-hidden rounded-2xl border border-neutral-200 bg-neutral-100">
-          <div class="relative aspect-[16/9] max-h-[460px] w-full">
-            {{ image }}
-              {{ partial:components/image class="absolute inset-0 h-full w-full object-cover" }}
-            {{ /image }}
+      {{# Author #}}
+      {{ if author }}
+        <div class="mt-6 flex items-center gap-3">
+          <div class="flex h-10 w-10 items-center justify-center rounded-full bg-primary/10 text-sm font-bold text-primary">
+            {{ author | upper | truncate:2:'' }}
+          </div>
+          <div>
+            <p class="text-sm font-semibold text-neutral-900">{{ author }}</p>
           </div>
         </div>
       {{ /if }}
 
-      {{# Body (Readable typography wrapper) #}}
+    </div>
+  </div>
+</section>
+
+{{# ─── COVER IMAGE ─── #}}
+{{ if image }}
+  <div class="fluid-grid">
+    <div class="span-content mx-auto max-w-4xl">
+      <div class="overflow-hidden rounded-2xl border border-neutral-200/70 shadow-lg shadow-black/[0.06]">
+        <div class="relative aspect-[2/1] w-full">
+          {{ image }}
+            {{
+              partial:statamic-peak-tools::components/picture
+              :image="image"
+              class="absolute inset-0 h-full w-full object-cover"
+              cover="true"
+              lazy="false"
+              sizes="(min-width: 1280px) 900px, 90vw"
+            }}
+          {{ /image }}
+        </div>
+      </div>
+    </div>
+  </div>
+{{ /if }}
+
+{{# ─── ARTICLE BODY ─── #}}
+<section id="content" class="relative bg-white">
+  <div class="fluid-grid py-12 md:py-16">
+    <article class="span-content mx-auto max-w-3xl">
+
       <div
-        class="mt-10
-               prose prose-neutral prose-lg
-               leading-[1.85]
-               prose-p:my-5
-               prose-headings:scroll-mt-24
-               prose-headings:mt-10 prose-headings:mb-4
-               prose-h2:text-2xl prose-h2:font-semibold
-               prose-h3:text-xl prose-h3:font-semibold
-               prose-a:font-semibold prose-a:text-orange-800 hover:prose-a:text-orange-900
-               prose-strong:text-neutral-900
-               prose-blockquote:border-l-orange-400 prose-blockquote:text-neutral-700
-               prose-hr:my-10
-               max-w-none"
+        class="
+          prose prose-neutral prose-lg
+          leading-[1.85]
+
+          prose-p:my-5
+          prose-headings:scroll-mt-24
+          prose-headings:mt-12 prose-headings:mb-4
+          prose-h2:text-2xl prose-h2:font-bold
+          prose-h3:text-xl prose-h3:font-semibold
+
+          prose-a:font-semibold prose-a:text-primary prose-a:decoration-primary/30 prose-a:underline-offset-2
+          hover:prose-a:decoration-primary
+
+          prose-strong:text-neutral-900
+
+          prose-blockquote:border-l-primary prose-blockquote:bg-neutral-50 prose-blockquote:rounded-r-xl prose-blockquote:py-4 prose-blockquote:pr-6 prose-blockquote:text-neutral-700
+
+          prose-hr:my-12
+
+          prose-img:rounded-xl
+
+          max-w-none
+        "
       >
         {{ article }}
           {{ if type == 'text' }}
@@ -101,42 +148,134 @@
               {{ partial:components/table }}
             </div>
           {{ elseif type == 'buttons' }}
-            <div class="not-prose mt-10">
-              {{ partial:components/buttons }}
+            <div class="not-prose mt-10 flex flex-wrap gap-4">
+              {{ buttons }}
+                {{ if button_type == 'inline' }}
+                  <a
+                    href="{{ url ?? entry:url ?? '#' }}"
+                    {{ if target_blank }}target="_blank" rel="noopener noreferrer"{{ /if }}
+                    class="group inline-flex items-center gap-1.5 text-base font-semibold text-primary transition hover:text-primary/80"
+                  >
+                    <span>{{ label }}</span>
+                    <span aria-hidden="true" class="transition-transform group-hover:translate-x-0.5">→</span>
+                  </a>
+                {{ else }}
+                  <a
+                    href="{{ url ?? entry:url ?? '#' }}"
+                    {{ if target_blank }}target="_blank" rel="noopener noreferrer"{{ /if }}
+                    class="inline-flex items-center justify-center rounded-xl bg-primary px-8 py-3.5 text-base font-semibold text-white shadow-sm transition hover:brightness-110 hover:shadow-md focus:outline-none focus:ring-2 focus:ring-primary/30"
+                  >
+                    {{ label }}
+                  </a>
+                {{ /if }}
+              {{ /buttons }}
             </div>
           {{ /if }}
         {{ /article }}
       </div>
 
-      {{# Related / more articles (optional) #}}
-      <div class="mt-14 border-t border-neutral-200/70 pt-10">
-        <h2 class="text-lg font-semibold tracking-tight text-neutral-900">Lisää artikkeleita</h2>
-
-        <div class="mt-6 grid gap-6 md:grid-cols-2">
-          {{ collection:articles limit="2" sort="date:desc" }}
-            {{ if id != page:id }}
-              <a href="{{ url }}" class="group rounded-2xl border border-neutral-200 bg-white p-5 shadow-sm transition hover:-translate-y-0.5 hover:shadow-md">
-                <div class="text-sm font-semibold text-neutral-900 group-hover:text-orange-800">{{ title }}</div>
-                {{ if date }}
-                  <div class="mt-2 text-xs font-semibold text-neutral-500">{{ date format="d.m.Y" }}</div>
-                {{ /if }}
-              </a>
-            {{ /if }}
-          {{ /collection:articles }}
-        </div>
-      </div>
-
     </article>
   </div>
+</section>
 
-  {{# Sticky "Back to top" button #}}
+{{# ─── ARTICLE FOOTER: PREV / NEXT ─── #}}
+{{ if prev_item || next_item }}
+  <section class="border-t border-neutral-200/70 bg-neutral-50">
+    <div class="fluid-grid py-10 md:py-14">
+      <div class="span-content mx-auto max-w-3xl">
+        <div class="grid gap-4 {{ if prev_item && next_item }}sm:grid-cols-2{{ /if }}">
+
+          {{ if prev_item }}
+            <a href="{{ prev_item:url }}" class="group flex items-start gap-4 rounded-2xl border border-neutral-200/70 bg-white p-5 shadow-sm transition hover:-translate-y-0.5 hover:shadow-md">
+              <span class="mt-0.5 text-lg text-primary transition-transform group-hover:-translate-x-0.5">←</span>
+              <div>
+                <p class="text-xs font-medium uppercase tracking-wider text-neutral-500">{{ trans:strings.article_previous }}</p>
+                <p class="mt-1 text-sm font-semibold text-neutral-900 group-hover:text-primary">{{ prev_item:title }}</p>
+              </div>
+            </a>
+          {{ /if }}
+
+          {{ if next_item }}
+            <a href="{{ next_item:url }}" class="group flex items-start gap-4 rounded-2xl border border-neutral-200/70 bg-white p-5 shadow-sm transition hover:-translate-y-0.5 hover:shadow-md {{ if prev_item }}text-right{{ /if }}">
+              <div class="flex-1">
+                <p class="text-xs font-medium uppercase tracking-wider text-neutral-500">{{ trans:strings.article_next }}</p>
+                <p class="mt-1 text-sm font-semibold text-neutral-900 group-hover:text-primary">{{ next_item:title }}</p>
+              </div>
+              <span class="mt-0.5 text-lg text-primary transition-transform group-hover:translate-x-0.5">→</span>
+            </a>
+          {{ /if }}
+
+        </div>
+      </div>
+    </div>
+  </section>
+{{ /if }}
+
+{{# ─── RELATED ARTICLES ─── #}}
+<section class="bg-white">
+  <div class="fluid-grid py-12 md:py-16">
+    <div class="span-content mx-auto max-w-4xl">
+
+      <h2 class="text-center text-xl font-semibold tracking-tight text-neutral-900 md:text-2xl">
+        {{ trans:strings.article_more }}
+      </h2>
+
+      <div class="mx-auto mt-4 h-px w-24 bg-gradient-to-r from-transparent via-primary/40 to-transparent"></div>
+
+      <div class="mt-8 grid gap-6 md:grid-cols-3">
+        {{ collection:articles limit="3" sort="date:desc" }}
+          {{ if id != page:id }}
+            <a href="{{ url }}" class="group relative overflow-hidden rounded-2xl border border-neutral-200/70 bg-white shadow-sm transition hover:-translate-y-1 hover:shadow-lg">
+
+              {{ if image }}
+                <div class="aspect-[16/10] overflow-hidden">
+                  {{ image }}
+                    {{
+                      partial:statamic-peak-tools::components/picture
+                      :image="image"
+                      class="h-full w-full object-cover transition duration-300 group-hover:scale-105"
+                      cover="true"
+                      lazy="true"
+                      sizes="(min-width: 768px) 300px, 90vw"
+                    }}
+                  {{ /image }}
+                </div>
+              {{ /if }}
+
+              <div class="p-5">
+                {{ if date }}
+                  <p class="text-xs font-medium text-neutral-500">{{ date format="d.m.Y" }}</p>
+                {{ /if }}
+                <h3 class="mt-1.5 text-sm font-semibold leading-snug text-neutral-900 group-hover:text-primary">
+                  {{ title }}
+                </h3>
+                {{ if intro }}
+                  <p class="mt-2 line-clamp-2 text-xs leading-relaxed text-neutral-500">{{ intro }}</p>
+                {{ /if }}
+              </div>
+
+            </a>
+          {{ /if }}
+        {{ /collection:articles }}
+      </div>
+
+    </div>
+  </div>
+</section>
+
+{{# ─── BACK TO TOP ─── #}}
+<div
+  x-data="{ show: false }"
+  x-init="window.addEventListener('scroll', () => { show = window.scrollY > 400 }, { passive: true })"
+  x-show="show"
+  x-transition.opacity
+  class="fixed bottom-6 right-6 z-50"
+>
   <a
-    href="#top"
-    class="fixed bottom-6 right-6 z-50 inline-flex h-11 w-11 items-center justify-center rounded-full border border-neutral-200 bg-white text-neutral-800 shadow-lg transition
-           hover:-translate-y-0.5 hover:border-neutral-300 hover:shadow-xl"
-    aria-label="Takaisin ylös"
-    title="Takaisin ylös"
+    href="#content"
+    class="inline-flex h-11 w-11 items-center justify-center rounded-full border border-neutral-200 bg-white text-neutral-700 shadow-lg transition hover:-translate-y-0.5 hover:shadow-xl"
+    aria-label="{{ trans:strings.article_back_to_top }}"
   >
     <span class="text-lg leading-none">↑</span>
   </a>
-</section>
+</div>
