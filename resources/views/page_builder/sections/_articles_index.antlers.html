@@ -52,41 +52,35 @@
   x-init="$watch('activeSort', () => reorder())"
 >
 
-  {{# ───────── HEADER AREA (medium-toned) ───────── #}}
-  <div class="relative overflow-hidden bg-gradient-to-br from-neutral-600 via-neutral-700 to-neutral-600">
-    {{# Decorative blobs #}}
-    <div class="pointer-events-none absolute inset-0">
-      <div class="absolute -left-40 -top-20 h-80 w-80 rounded-full bg-brand-blue/15 blur-3xl"></div>
-      <div class="absolute -right-32 bottom-0 h-72 w-72 rounded-full bg-brand-orange/12 blur-3xl"></div>
-      <div class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 h-96 w-96 rounded-full bg-white/[0.04] blur-3xl"></div>
-    </div>
-
-    <div class="fluid-grid relative py-14 md:py-20">
+  {{# ───────── COMPACT HEADER + TOOLBAR ───────── #}}
+  <section class="relative overflow-hidden bg-white">
+    <div class="fluid-grid relative py-10 md:py-14">
       <div class="span-content">
 
-        {{# Heading + lead #}}
-        <div class="mx-auto mb-10 max-w-3xl text-center md:mb-12">
+        {{# Heading + lead — compact #}}
+        <div class="mb-8 max-w-2xl">
           {{ if heading }}
-            <h2 class="text-balance text-3xl font-semibold tracking-tight text-white md:text-5xl">
+            <h1 class="text-balance text-2xl font-bold tracking-tight text-neutral-900 md:text-3xl">
               {{ heading }}
-            </h2>
+            </h1>
           {{ /if }}
           {{ if lead }}
-            <p class="mx-auto mt-4 max-w-2xl text-sm leading-relaxed text-white/70 md:text-base">
+            <p class="mt-2 text-sm leading-relaxed text-neutral-500">
               {{ lead }}
             </p>
           {{ /if }}
-          <div class="mx-auto mt-7 h-px w-44 bg-gradient-to-r from-transparent via-white/25 to-transparent"></div>
         </div>
 
-        {{# Search bar (clean — tags/sort moved below separator) #}}
-        {{ if show_search }}
-        <div class="mx-auto max-w-3xl">
-          <div class="relative">
-            <span class="pointer-events-none absolute left-5 top-1/2 -translate-y-1/2 text-white/40">
+        {{# Toolbar: search + filters in one row #}}
+        <div class="flex flex-col gap-3 border-b border-neutral-200 pb-6 sm:flex-row sm:items-center sm:justify-between">
+
+          {{# Search (compact) #}}
+          {{ if show_search }}
+          <div class="relative max-w-xs flex-1">
+            <span class="pointer-events-none absolute left-3.5 top-1/2 -translate-y-1/2 text-neutral-400">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                   class="h-5 w-5">
+                   class="h-4 w-4">
                 <circle cx="11" cy="11" r="7"></circle>
                 <path d="M21 21l-4.3-4.3"></path>
               </svg>
@@ -95,86 +89,55 @@
               type="search"
               x-model.debounce.250ms="query"
               placeholder="{{ search_placeholder ?? 'Hae artikkeleista…' }}"
-              class="w-full rounded-full border border-white/20 bg-white/15 py-4 pl-13 pr-5
-                     text-base text-white placeholder:text-white/40
-                     focus:border-white/30 focus:bg-white/20 focus:outline-none focus:ring-4 focus:ring-white/10"
+              class="w-full rounded-lg border border-neutral-200 bg-white py-2.5 pl-10 pr-4
+                     text-sm text-neutral-800 placeholder:text-neutral-400
+                     focus:border-primary/40 focus:outline-none focus:ring-2 focus:ring-primary/10"
             />
           </div>
-        </div>
-        {{ /if }}
-
-      </div>
-    </div>
-  </div>
-
-  {{# ───────── SEPARATOR (full width) ───────── #}}
-  <div class="relative h-[3px]">
-    <div class="absolute inset-0 bg-gradient-to-r from-transparent via-brand-orange/70 to-transparent"></div>
-  </div>
-
-  {{# ───────── ARTICLES AREA (light background, no card wrapper) ───────── #}}
-  <section class="relative overflow-hidden bg-gradient-to-b from-neutral-100 via-neutral-50/80 to-white">
-    <div class="pointer-events-none absolute inset-0">
-      <div class="absolute -left-32 top-16 h-72 w-72 rounded-full bg-sky-200/15 blur-3xl"></div>
-      <div class="absolute -right-32 top-48 h-72 w-72 rounded-full bg-orange-200/10 blur-3xl"></div>
-    </div>
-
-    <div class="fluid-grid relative py-10 md:py-14">
-      <div class="span-content">
-
-        {{# Toolbar: results label (left) + tag/sort controls (right) #}}
-        <div class="mb-6 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
-          <div class="text-xs text-neutral-500">
-            <template x-if="query.trim()">
-              <span>
-                {{ results_label ?? 'Hakutulokset' }}:
-                <span class="font-semibold text-neutral-700">&ldquo;<span x-text="query"></span>&rdquo;</span>
-                <span class="ml-1 text-neutral-400">(<span x-text="visibleCount"></span>)</span>
-              </span>
-            </template>
-          </div>
+          {{ /if }}
 
           <div class="flex flex-wrap items-center gap-3">
+            {{# Results count when searching #}}
+            <template x-if="query.trim()">
+              <span class="text-xs text-neutral-500">
+                <span class="font-semibold text-neutral-700" x-text="visibleCount"></span> {{ results_label ?? 'tulosta' }}
+              </span>
+            </template>
+
             {{# Tag filter #}}
-            <div class="flex items-center gap-2">
-              <label class="text-xs font-semibold text-neutral-500">
-                {{ tags_label ?? 'Tagit' }}
-              </label>
-              <select
-                x-model="activeTag"
-                class="rounded-full border border-neutral-200 bg-white px-4 py-2 text-xs font-semibold text-neutral-800 shadow-sm
-                       focus:outline-none focus:ring-4 focus:ring-primary-200/50"
-              >
-                <option value="">{{ all_tags_label ?? 'Kaikki' }}</option>
-                {{ taxonomy:tags sort="title:asc" }}
-                  <option value="{{ slug }}">{{ title }}</option>
-                {{ /taxonomy:tags }}
-              </select>
-            </div>
+            <select
+              x-model="activeTag"
+              class="appearance-none rounded-lg border border-neutral-200 bg-white py-2.5 pl-4 pr-9 text-sm font-medium text-neutral-700
+                     bg-[url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2020%2020%22%20fill%3D%22%236b7280%22%3E%3Cpath%20fill-rule%3D%22evenodd%22%20d%3D%22M5.23%207.21a.75.75%200%20011.06.02L10%2011.168l3.71-3.938a.75.75%200%20111.08%201.04l-4.25%204.5a.75.75%200%2001-1.08%200l-4.25-4.5a.75.75%200%2001.02-1.06z%22%20clip-rule%3D%22evenodd%22%2F%3E%3C%2Fsvg%3E')]
+                     bg-[length:1.25rem_1.25rem] bg-[position:right_0.5rem_center] bg-no-repeat
+                     focus:border-primary/40 focus:outline-none focus:ring-2 focus:ring-primary/10"
+            >
+              <option value="">{{ all_tags_label ?? 'Kaikki tagit' }}</option>
+              {{ taxonomy:tags sort="title:asc" }}
+                <option value="{{ slug }}">{{ title }}</option>
+              {{ /taxonomy:tags }}
+            </select>
 
             {{# Sort #}}
             {{ if show_sort }}
-            <div class="flex items-center gap-2">
-              <label class="text-xs font-semibold text-neutral-500">
-                {{ sort_label ?? 'Järjestä' }}
-              </label>
-              <select
-                x-model="activeSort"
-                class="rounded-full border border-neutral-200 bg-white px-4 py-2 text-xs font-semibold text-neutral-800 shadow-sm
-                       focus:outline-none focus:ring-4 focus:ring-primary-200/50"
-              >
-                <option value="newest">{{ sort_newest ?? 'Uusimmat' }}</option>
-                <option value="oldest">{{ sort_oldest ?? 'Vanhimmat' }}</option>
-                <option value="az">{{ sort_az ?? 'A–Ö' }}</option>
-                <option value="za">{{ sort_za ?? 'Ö–A' }}</option>
-              </select>
-            </div>
+            <select
+              x-model="activeSort"
+              class="appearance-none rounded-lg border border-neutral-200 bg-white py-2.5 pl-4 pr-9 text-sm font-medium text-neutral-700
+                     bg-[url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2020%2020%22%20fill%3D%22%236b7280%22%3E%3Cpath%20fill-rule%3D%22evenodd%22%20d%3D%22M5.23%207.21a.75.75%200%20011.06.02L10%2011.168l3.71-3.938a.75.75%200%20111.08%201.04l-4.25%204.5a.75.75%200%2001-1.08%200l-4.25-4.5a.75.75%200%2001.02-1.06z%22%20clip-rule%3D%22evenodd%22%2F%3E%3C%2Fsvg%3E')]
+                     bg-[length:1.25rem_1.25rem] bg-[position:right_0.5rem_center] bg-no-repeat
+                     focus:border-primary/40 focus:outline-none focus:ring-2 focus:ring-primary/10"
+            >
+              <option value="newest">{{ sort_newest ?? 'Uusimmat' }}</option>
+              <option value="oldest">{{ sort_oldest ?? 'Vanhimmat' }}</option>
+              <option value="az">{{ sort_az ?? 'A–Ö' }}</option>
+              <option value="za">{{ sort_za ?? 'Ö–A' }}</option>
+            </select>
             {{ /if }}
           </div>
         </div>
 
         {{# Article grid #}}
-        <div x-ref="grid" class="grid gap-7 md:grid-cols-2 xl:grid-cols-3">
+        <div x-ref="grid" class="mt-8 grid gap-7 md:grid-cols-2 xl:grid-cols-3">
           {{ collection:articles sort="date:desc" }}
             {{ unless no_results }}
             <a
@@ -296,7 +259,6 @@
       </div>
     </div>
   </section>
-
 </div>
 {{# ======================== END BROWSE MODE ======================== #}}
 
