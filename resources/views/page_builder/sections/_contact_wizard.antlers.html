@@ -70,7 +70,7 @@ Statamic form submissions). @set page.page_builder.contact_wizard #}}
                                                 </span>
                                                 <div class="h-0.5 flex-1 rounded-full transition-colors duration-500" :class="n < 4 ? (n < step ? 'bg-primary' : 'bg-neutral-200') : 'bg-transparent'"></div>
                                             </div>
-                                            <span class="text-[11px] font-semibold tracking-wide" :class="n <= step ? 'text-neutral-700' : 'text-neutral-400'" x-text="dotLabel(n)"></span>
+                                            <span class="hidden text-[11px] font-semibold tracking-wide sm:block" :class="n <= step ? 'text-neutral-700' : 'text-neutral-400'" x-text="dotLabel(n)"></span>
                                         </button>
                                     </template>
                                 </div>
@@ -150,7 +150,7 @@ Statamic form submissions). @set page.page_builder.contact_wizard #}}
                                                     class="flex h-full flex-col"
                                                 >
                                                     <div
-                                                        class="grid h-full grid-cols-[240px_1fr]"
+                                                        class="grid h-full sm:grid-cols-[200px_1fr] [&>:first-child]:hidden sm:[&>:first-child]:block"
                                                     >
                                                         {{# LEFT IMAGE PANEL #}}
                                                         {{ if
@@ -285,7 +285,7 @@ Statamic form submissions). @set page.page_builder.contact_wizard #}}
 
                                                 {{# main layout #}}
                                                 <div
-                                                    class="grid h-full grid-cols-[240px_1fr]"
+                                                    class="grid h-full sm:grid-cols-[200px_1fr] [&>:first-child]:hidden sm:[&>:first-child]:block"
                                                 >
                                                     {{# IMAGE SIDE #}} {{ if
                                                     block:img_authoring_tool }}
@@ -409,7 +409,7 @@ Statamic form submissions). @set page.page_builder.contact_wizard #}}
 
                                                 {{# main layout #}}
                                                 <div
-                                                    class="grid h-full grid-cols-[240px_1fr]"
+                                                    class="grid h-full sm:grid-cols-[200px_1fr] [&>:first-child]:hidden sm:[&>:first-child]:block"
                                                 >
                                                     {{# IMAGE SIDE #}} {{ if
                                                     block:img_custom_trainings
@@ -535,7 +535,7 @@ Statamic form submissions). @set page.page_builder.contact_wizard #}}
 
                                                 {{# main layout #}}
                                                 <div
-                                                    class="grid h-full grid-cols-[240px_1fr]"
+                                                    class="grid h-full sm:grid-cols-[200px_1fr] [&>:first-child]:hidden sm:[&>:first-child]:block"
                                                 >
                                                     {{# IMAGE SIDE #}} {{ if
                                                     block:img_ready_trainings }}
@@ -647,7 +647,7 @@ Statamic form submissions). @set page.page_builder.contact_wizard #}}
                                                 {{# top accent #}}
 
                                                 <div
-                                                    class="grid h-full grid-cols-[240px_1fr]"
+                                                    class="grid h-full sm:grid-cols-[200px_1fr] [&>:first-child]:hidden sm:[&>:first-child]:block"
                                                 >
                                                     {{ if
                                                     block:img_usage_internal }}
@@ -740,7 +740,7 @@ Statamic form submissions). @set page.page_builder.contact_wizard #}}
                                                 {{# top accent #}}
 
                                                 <div
-                                                    class="grid h-full grid-cols-[240px_1fr]"
+                                                    class="grid h-full sm:grid-cols-[200px_1fr] [&>:first-child]:hidden sm:[&>:first-child]:block"
                                                 >
                                                     {{ if
                                                     block:img_usage_external }}
@@ -811,7 +811,7 @@ Statamic form submissions). @set page.page_builder.contact_wizard #}}
                                                 {{# top accent #}}
 
                                                 <div
-                                                    class="grid h-full grid-cols-[240px_1fr]"
+                                                    class="grid h-full sm:grid-cols-[200px_1fr] [&>:first-child]:hidden sm:[&>:first-child]:block"
                                                 >
                                                     {{ if block:img_usage_both
                                                     }} {{ block:img_usage_both
