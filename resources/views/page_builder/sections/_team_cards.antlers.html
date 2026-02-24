@@ -5,7 +5,7 @@
 
 <section class="relative overflow-hidden">
   {{# Background #}}
-  <div class="pointer-events-none absolute inset-0 bg-gradient-to-b from-white via-neutral-50/80 to-neutral-50/60"></div>
+  <div class="pointer-events-none absolute inset-0 bg-gradient-to-b from-white via-neutral-50/80 to-neutral-50/60 dark:from-slate-900 dark:via-slate-850/80 dark:to-slate-850/60"></div>
 
   <div class="fluid-grid py-12 md:py-16">
     <div class="span-content relative">
@@ -13,18 +13,18 @@
       {{# Header #}}
       <div class="mx-auto mb-10 max-w-3xl text-center md:mb-14">
         {{ if title }}
-          <h2 class="text-balance text-2xl font-semibold tracking-tight text-neutral-900 md:text-3xl">
+          <h2 class="text-balance text-2xl font-semibold tracking-tight text-neutral-900 dark:text-slate-100 md:text-3xl">
             {{ title }}
           </h2>
         {{ /if }}
 
         {{ if intro }}
-          <p class="mx-auto mt-4 max-w-2xl text-sm leading-relaxed text-neutral-600 md:text-base">
+          <p class="mx-auto mt-4 max-w-2xl text-sm leading-relaxed text-neutral-600 dark:text-slate-400 md:text-base">
             {{ intro | nl2br }}
           </p>
         {{ /if }}
 
-        <div class="mx-auto mt-6 h-px w-40 bg-gradient-to-r from-transparent via-neutral-200 to-transparent"></div>
+        <div class="mx-auto mt-6 h-px w-40 bg-gradient-to-r from-transparent via-neutral-200 dark:via-slate-700 to-transparent"></div>
       </div>
 
       {{# People grid #}}
@@ -32,9 +32,9 @@
         <div class="grid gap-6 md:grid-cols-2 2xl:grid-cols-3 2xl:gap-8">
           {{ people }}
             <article
-              class="group relative overflow-visible rounded-2xl border border-neutral-200/60 bg-white
-                     shadow-lg shadow-black/[0.03] ring-1 ring-neutral-100/80 transition-all duration-300
-                     hover:-translate-y-1 hover:shadow-xl hover:shadow-black/[0.06] hover:ring-neutral-200/80"
+              class="group relative overflow-visible rounded-2xl border border-neutral-200/60 dark:border-slate-700 bg-white dark:bg-slate-800
+                     shadow-lg shadow-black/[0.03] ring-1 ring-neutral-100/80 dark:ring-slate-700/50 transition-all duration-300
+                     hover:-translate-y-1 hover:shadow-xl hover:shadow-black/[0.06] hover:ring-neutral-200/80 dark:hover:ring-slate-600/80"
             >
               {{# Inner clipped layer for gradients #}}
               <div class="pointer-events-none absolute inset-0 overflow-hidden rounded-2xl">
@@ -51,12 +51,12 @@
                   {{ if text }}
                     <div class="absolute right-4 -top-3 z-10">
                       <div
-                        class="inline-flex items-center gap-2 rounded-xl border border-neutral-200/70 bg-white/95 py-1.5 pl-2 pr-3.5
+                        class="inline-flex items-center gap-2 rounded-xl border border-neutral-200/70 dark:border-slate-600 bg-white/95 dark:bg-slate-800/95 py-1.5 pl-2 pr-3.5
                                shadow-md shadow-black/[0.06] backdrop-blur-sm"
                         aria-label="{{ text }}"
                       >
                         <span class="h-1.5 w-1.5 rounded-full bg-primary"></span>
-                        <span class="text-xs font-semibold tracking-wide text-neutral-700">
+                        <span class="text-xs font-semibold tracking-wide text-neutral-700 dark:text-slate-200">
                           {{ text }}
                         </span>
                       </div>
@@ -72,7 +72,7 @@
                     {{# Glow behind avatar #}}
                     <div class="pointer-events-none absolute -inset-2 rounded-full bg-gradient-to-b from-primary/[0.06] via-transparent to-transparent blur-lg"></div>
 
-                    <div class="relative h-16 w-16 overflow-hidden rounded-full ring-2 ring-white shadow-md shadow-black/[0.08] md:h-[4.5rem] md:w-[4.5rem]">
+                    <div class="relative h-16 w-16 overflow-hidden rounded-full ring-2 ring-white dark:ring-slate-700 shadow-md shadow-black/[0.08] md:h-[4.5rem] md:w-[4.5rem]">
                       {{ if photo }}
                         <img
                           src="{{ photo:url }}"
@@ -81,7 +81,7 @@
                           loading="lazy"
                         />
                       {{ else }}
-                        <div class="flex h-full w-full items-center justify-center bg-neutral-100 text-sm font-semibold text-neutral-400">
+                        <div class="flex h-full w-full items-center justify-center bg-neutral-100 dark:bg-slate-700 text-sm font-semibold text-neutral-400 dark:text-slate-400">
                           {{ name | substr:0:1 }}
                         </div>
                       {{ /if }}
@@ -90,13 +90,13 @@
 
                   <div class="min-w-0 flex-1">
                     {{ if name }}
-                      <h3 class="text-base font-semibold tracking-tight text-neutral-900 md:text-lg">
+                      <h3 class="text-base font-semibold tracking-tight text-neutral-900 dark:text-slate-100 md:text-lg">
                         {{ name }}
                       </h3>
                     {{ /if }}
 
                     {{ if role }}
-                      <p class="mt-0.5 text-sm text-neutral-500">
+                      <p class="mt-0.5 text-sm text-neutral-500 dark:text-slate-400">
                         {{ role }}
                       </p>
                     {{ /if }}
@@ -106,14 +106,14 @@
                 {{# Contact area #}}
                 {{ if phone || email }}
                   <div class="mt-auto pt-6">
-                    <div class="border-t border-neutral-100 pt-5">
+                    <div class="border-t border-neutral-100 dark:border-slate-700 pt-5">
                       <div class="space-y-2.5">
 
                         {{ if phone }}
                           <div
-                            class="flex items-center gap-3 rounded-xl bg-neutral-50/60 px-3.5 py-3
-                                   ring-1 ring-neutral-200/50 transition-all duration-200
-                                   hover:bg-white hover:ring-neutral-200 hover:shadow-sm"
+                            class="flex items-center gap-3 rounded-xl bg-neutral-50/60 dark:bg-slate-750/60 px-3.5 py-3
+                                   ring-1 ring-neutral-200/50 dark:ring-slate-600/50 transition-all duration-200
+                                   hover:bg-white dark:hover:bg-slate-700 hover:ring-neutral-200 dark:hover:ring-slate-600 hover:shadow-sm"
                           >
                             <a
                               href="tel:{{ phone }}"
@@ -121,20 +121,20 @@
                               aria-label="{{ trans:strings.team_call }} {{ name }}"
                             >
                               <span
-                                class="inline-flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-white
-                                       shadow-sm ring-1 ring-neutral-200/60 transition
+                                class="inline-flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-white dark:bg-slate-700
+                                       shadow-sm ring-1 ring-neutral-200/60 dark:ring-slate-600 transition
                                        group-hover/row:ring-primary/20 group-hover/row:shadow-md"
                               >
-                                <svg viewBox="0 0 24 24" class="h-4 w-4 text-neutral-600 transition group-hover/row:text-primary" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <svg viewBox="0 0 24 24" class="h-4 w-4 text-neutral-600 dark:text-slate-300 transition group-hover/row:text-primary" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                   <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.86 19.86 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.86 19.86 0 0 1 2.08 4.18 2 2 0 0 1 4.06 2h3a2 2 0 0 1 2 1.72c.12.86.31 1.7.57 2.5a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.8.26 1.64.45 2.5.57A2 2 0 0 1 22 16.92" />
                                 </svg>
                               </span>
 
                               <div class="min-w-0">
-                                <div class="text-[10px] font-semibold uppercase tracking-widest text-neutral-400">
+                                <div class="text-[10px] font-semibold uppercase tracking-widest text-neutral-400 dark:text-slate-500">
                                   {{ trans:strings.team_phone }}
                                 </div>
-                                <div class="truncate text-sm font-semibold text-neutral-900 transition group-hover/row:text-primary">
+                                <div class="truncate text-sm font-semibold text-neutral-900 dark:text-slate-100 transition group-hover/row:text-primary">
                                   {{ phone }}
                                 </div>
                               </div>
@@ -142,8 +142,8 @@
 
                             <button
                               type="button"
-                              class="inline-flex h-8 w-8 shrink-0 items-center justify-center rounded-lg text-neutral-400
-                                     transition hover:bg-neutral-100 hover:text-neutral-600
+                              class="inline-flex h-8 w-8 shrink-0 items-center justify-center rounded-lg text-neutral-400 dark:text-slate-500
+                                     transition hover:bg-neutral-100 dark:hover:bg-slate-600 hover:text-neutral-600 dark:hover:text-slate-300
                                      focus:outline-none focus:ring-2 focus:ring-primary/20"
                               data-copy="{{ phone }}"
                               aria-label="{{ trans:strings.team_copy }}"
@@ -160,9 +160,9 @@
 
                         {{ if email }}
                           <div
-                            class="flex items-center gap-3 rounded-xl bg-neutral-50/60 px-3.5 py-3
-                                   ring-1 ring-neutral-200/50 transition-all duration-200
-                                   hover:bg-white hover:ring-neutral-200 hover:shadow-sm"
+                            class="flex items-center gap-3 rounded-xl bg-neutral-50/60 dark:bg-slate-750/60 px-3.5 py-3
+                                   ring-1 ring-neutral-200/50 dark:ring-slate-600/50 transition-all duration-200
+                                   hover:bg-white dark:hover:bg-slate-700 hover:ring-neutral-200 dark:hover:ring-slate-600 hover:shadow-sm"
                           >
                             <a
                               href="mailto:{{ email }}"
@@ -170,21 +170,21 @@
                               aria-label="{{ trans:strings.team_email }} {{ name }}"
                             >
                               <span
-                                class="inline-flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-white
-                                       shadow-sm ring-1 ring-neutral-200/60 transition
+                                class="inline-flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-white dark:bg-slate-700
+                                       shadow-sm ring-1 ring-neutral-200/60 dark:ring-slate-600 transition
                                        group-hover/row:ring-primary/20 group-hover/row:shadow-md"
                               >
-                                <svg viewBox="0 0 24 24" class="h-4 w-4 text-neutral-600 transition group-hover/row:text-primary" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <svg viewBox="0 0 24 24" class="h-4 w-4 text-neutral-600 dark:text-slate-300 transition group-hover/row:text-primary" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                   <rect x="2" y="4" width="20" height="16" rx="2" />
                                   <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
                                 </svg>
                               </span>
 
                               <div class="min-w-0">
-                                <div class="text-[10px] font-semibold uppercase tracking-widest text-neutral-400">
+                                <div class="text-[10px] font-semibold uppercase tracking-widest text-neutral-400 dark:text-slate-500">
                                   {{ trans:strings.team_email }}
                                 </div>
-                                <div class="truncate text-sm font-semibold text-neutral-900 transition group-hover/row:text-primary">
+                                <div class="truncate text-sm font-semibold text-neutral-900 dark:text-slate-100 transition group-hover/row:text-primary">
                                   {{ email }}
                                 </div>
                               </div>
@@ -192,8 +192,8 @@
 
                             <button
                               type="button"
-                              class="inline-flex h-8 w-8 shrink-0 items-center justify-center rounded-lg text-neutral-400
-                                     transition hover:bg-neutral-100 hover:text-neutral-600
+                              class="inline-flex h-8 w-8 shrink-0 items-center justify-center rounded-lg text-neutral-400 dark:text-slate-500
+                                     transition hover:bg-neutral-100 dark:hover:bg-slate-600 hover:text-neutral-600 dark:hover:text-slate-300
                                      focus:outline-none focus:ring-2 focus:ring-primary/20"
                               data-copy="{{ email }}"
                               aria-label="{{ trans:strings.team_copy }}"
@@ -221,13 +221,13 @@
       {{# Shared contact #}}
       {{ if shared_contact }}
         <div class="mx-auto mt-10 max-w-md text-center md:mt-12">
-          <div class="inline-flex items-center gap-3 rounded-xl border border-neutral-200/60 bg-white px-5 py-3 shadow-sm ring-1 ring-neutral-100/60">
-            <svg viewBox="0 0 24 24" class="h-4 w-4 shrink-0 text-neutral-400" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <div class="inline-flex items-center gap-3 rounded-xl border border-neutral-200/60 dark:border-slate-700 bg-white dark:bg-slate-800 px-5 py-3 shadow-sm ring-1 ring-neutral-100/60 dark:ring-slate-700/50">
+            <svg viewBox="0 0 24 24" class="h-4 w-4 shrink-0 text-neutral-400 dark:text-slate-500" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
               <rect x="2" y="4" width="20" height="16" rx="2" />
               <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
             </svg>
-            <span class="text-sm text-neutral-500">{{ trans:strings.team_shared_contact }}:</span>
-            <span class="text-sm font-semibold text-neutral-700">{{ shared_contact }}</span>
+            <span class="text-sm text-neutral-500 dark:text-slate-400">{{ trans:strings.team_shared_contact }}:</span>
+            <span class="text-sm font-semibold text-neutral-700 dark:text-slate-200">{{ shared_contact }}</span>
           </div>
         </div>
       {{ /if }}

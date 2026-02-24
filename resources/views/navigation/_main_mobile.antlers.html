@@ -63,8 +63,8 @@
         class="
             fixed left-0 right-0 z-40
             top-[90px]
-            border-b border-neutral/10
-            bg-white/95 backdrop-blur
+            border-b border-neutral/10 dark:border-slate-700/60
+            bg-white/95 dark:bg-slate-900/95 backdrop-blur
             shadow-xl shadow-neutral/10
         "
     >
@@ -89,10 +89,10 @@
                                         rounded-2xl px-3 py-2.5 mx-1
                                         text-base font-semibold
                                         text-[var(--color-text)]
-                                        hover:bg-neutral/5 hover:text-neutral
+                                        hover:bg-neutral/5 dark:hover:bg-slate-800 hover:text-neutral dark:hover:text-white
                                         focus:outline-none
                                         transition-colors
-                                        {{ is_current || is_parent ? 'bg-primary/10 text-neutral' : '' }}
+                                        {{ is_current || is_parent ? 'bg-primary/10 text-neutral dark:text-white' : '' }}
                                     "
                                     :aria-label="subnavOpen ? '{{ trans:strings.subnav_close }}' : '{{ trans:strings.subnav_open }}'"
                                     :aria-expanded="subnavOpen"
@@ -100,7 +100,7 @@
                                     <span class="leading-tight">{{ title }}</span>
 
                                     <span
-                                        class="ml-3 inline-flex h-10 w-10 items-center justify-center rounded-xl bg-neutral/5 text-neutral/60 transition-transform duration-200"
+                                        class="ml-3 inline-flex h-10 w-10 items-center justify-center rounded-xl bg-neutral/5 dark:bg-slate-800 text-neutral/60 dark:text-slate-400 transition-transform duration-200"
                                         :class="subnavOpen ? 'rotate-180' : ''"
                                         aria-hidden="true"
                                     >
@@ -116,10 +116,10 @@
                                         rounded-2xl px-3 py-2.5 mx-1
                                         text-base font-semibold
                                         text-[var(--color-text)]
-                                        hover:bg-neutral/5 hover:text-neutral
+                                        hover:bg-neutral/5 dark:hover:bg-slate-800 hover:text-neutral dark:hover:text-white
                                         focus:outline-none
                                         transition-colors
-                                        {{ is_current || is_parent ? 'bg-primary/10 text-neutral' : '' }}
+                                        {{ is_current || is_parent ? 'bg-primary/10 text-neutral dark:text-white' : '' }}
                                     "
                                     {{ is_current ?= 'aria-current="page"' }}
                                 >
@@ -132,7 +132,7 @@
                                     x-show="subnavOpen"
                                     x-ref="subnav"
                                     x-collapse
-                                    class="mt-2 ml-1 flex flex-col gap-1 border-l border-neutral/70 pl-3"
+                                    class="mt-2 ml-1 flex flex-col gap-1 border-l border-neutral/70 dark:border-slate-700 pl-3"
                                 >
                                     {{ children }}
                                         <li>
@@ -144,10 +144,10 @@
                                                     block rounded-xl px-4 py-3
                                                     text-sm font-medium
                                                     text-[var(--color-text)]
-                                                    hover:bg-neutral/5 hover:text-neutral
+                                                    hover:bg-neutral/5 dark:hover:bg-slate-800 hover:text-neutral dark:hover:text-white
                                                     focus:outline-none focus:ring-2 focus:ring-primary/30
                                                     transition-colors
-                                                    {{ is_current || is_parent ? 'bg-primary/10 text-neutral' : '' }}
+                                                    {{ is_current || is_parent ? 'bg-primary/10 text-neutral dark:text-white' : '' }}
                                                 "
                                             >
                                                 {{ title }}
@@ -160,8 +160,61 @@
                     {{ /unless }}
                 {{ /nav:main }}
 
+                {{# Search button (mobile) #}}
+                <li class="mt-2 pt-2 border-t border-neutral/10 dark:border-slate-700/60">
+                    <button
+                        type="button"
+                        @click="mobileNavOpen = false; $dispatch('toggle-search')"
+                        class="
+                            w-full flex items-center gap-3
+                            rounded-2xl px-3 py-2.5 mx-1
+                            text-base font-semibold
+                            text-[var(--color-text)]
+                            hover:bg-neutral/5 dark:hover:bg-slate-800 hover:text-neutral dark:hover:text-white
+                            focus:outline-none
+                            transition-colors
+                        "
+                    >
+                        <svg class="h-5 w-5 text-neutral-400 dark:text-slate-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="11" cy="11" r="7"></circle>
+                            <path d="M21 21l-4.3-4.3"></path>
+                        </svg>
+                        <span class="leading-tight">Haku</span>
+                    </button>
+                </li>
+
+                {{# Dark mode toggle (mobile) #}}
+                <li>
+                    <button
+                        type="button"
+                        @click="darkMode = !darkMode"
+                        class="
+                            w-full flex items-center gap-3
+                            rounded-2xl px-3 py-2.5 mx-1
+                            text-base font-semibold
+                            text-[var(--color-text)]
+                            hover:bg-neutral/5 dark:hover:bg-slate-800 hover:text-neutral dark:hover:text-white
+                            focus:outline-none
+                            transition-colors
+                        "
+                    >
+                        <template x-if="darkMode">
+                            <svg class="h-5 w-5 text-amber-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="12" cy="12" r="5"></circle>
+                                <path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"></path>
+                            </svg>
+                        </template>
+                        <template x-if="!darkMode">
+                            <svg class="h-5 w-5 text-neutral-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                            </svg>
+                        </template>
+                        <span class="leading-tight" x-text="darkMode ? 'Vaalea tila' : 'Tumma tila'"></span>
+                    </button>
+                </li>
+
                 {{# Language switcher (mobile menu row) #}}
-                <li class="mt-2 pt-2 border-t border-neutral/10" x-data="{ langOpen: false }">
+                <li class="mt-2 pt-2 border-t border-neutral/10 dark:border-slate-700/60" x-data="{ langOpen: false }">
                     <button
                         type="button"
                         @click="langOpen = !langOpen"
@@ -170,7 +223,7 @@
                             rounded-2xl px-3 py-2.5 mx-1
                             text-base font-semibold
                             text-[var(--color-text)]
-                            hover:bg-neutral/5 hover:text-neutral
+                            hover:bg-neutral/5 dark:hover:bg-slate-800 hover:text-neutral dark:hover:text-white
                             focus:outline-none
                             transition-colors
                         "
@@ -179,7 +232,7 @@
                     >
                         <span class="inline-flex items-center gap-3">
                             <span
-                                class="inline-flex h-4 w-[24px] items-center justify-center overflow-hidden rounded-[5px] border border-neutral/10"
+                                class="inline-flex h-4 w-[24px] items-center justify-center overflow-hidden rounded-[5px] border border-neutral/10 dark:border-slate-600"
                                 aria-hidden="true"
                             >
                                 {{ if site:handle == "default" }}
@@ -202,7 +255,7 @@
                         </span>
 
                         <span
-                            class="ml-3 inline-flex h-10 w-10 items-center justify-center rounded-xl bg-neutral/5 text-neutral/60 transition-transform duration-200"
+                            class="ml-3 inline-flex h-10 w-10 items-center justify-center rounded-xl bg-neutral/5 dark:bg-slate-800 text-neutral/60 dark:text-slate-400 transition-transform duration-200"
                             :class="langOpen ? 'rotate-180' : ''"
                             aria-hidden="true"
                         >
@@ -213,7 +266,7 @@
                     <ul
                         x-show="langOpen"
                         x-collapse
-                        class="mt-2 ml-1 flex flex-col gap-1 border-l border-neutral/10 pl-3"
+                        class="mt-2 ml-1 flex flex-col gap-1 border-l border-neutral/10 dark:border-slate-700 pl-3"
                     >
                         {{ sites }}
                             <li>
@@ -223,16 +276,16 @@
                                     class="
                                         flex items-center justify-between rounded-xl px-4 py-3
                                         text-sm font-medium
-                                        hover:bg-neutral/5 hover:text-neutral
+                                        hover:bg-neutral/5 dark:hover:bg-slate-800 hover:text-neutral dark:hover:text-white
                                         focus:outline-none focus:ring-2 focus:ring-primary/30
                                         transition-colors
-                                        {{ if handle == site:handle }}bg-primary/10 text-neutral{{ else }}text-[var(--color-text)]{{ /if }}
+                                        {{ if handle == site:handle }}bg-primary/10 text-neutral dark:text-white{{ else }}text-[var(--color-text)]{{ /if }}
                                     "
                                     {{ if handle == site:handle }}aria-current="true"{{ /if }}
                                 >
                                     <span class="inline-flex items-center gap-2">
                                         <span
-                                            class="inline-flex h-3.5 w-[21px] items-center justify-center overflow-hidden rounded-[4px] border border-neutral/10"
+                                            class="inline-flex h-3.5 w-[21px] items-center justify-center overflow-hidden rounded-[4px] border border-neutral/10 dark:border-slate-600"
                                             aria-hidden="true"
                                         >
                                             {{ if handle == "default" }}
@@ -247,7 +300,7 @@
                                     </span>
 
                                     {{ if handle == site:handle }}
-                                        <span class="text-neutral/40" aria-hidden="true">✓</span>
+                                        <span class="text-neutral/40 dark:text-slate-500" aria-hidden="true">✓</span>
                                     {{ /if }}
                                 </a>
                             </li>
@@ -255,6 +308,24 @@
                     </ul>
                 </li>
                 {{# End language switcher #}}
+
+                {{# Mobile CTA button #}}
+                <li class="mt-2 pt-2 border-t border-neutral/10 dark:border-slate-700/60">
+                    <a
+                        href="/yritys"
+                        @click="mobileNavOpen = false"
+                        class="
+                            flex items-center justify-center
+                            rounded-xl bg-primary px-6 py-3
+                            text-base font-semibold text-white
+                            shadow-md shadow-primary/15
+                            transition hover:brightness-110
+                            focus:outline-none focus:ring-2 focus:ring-primary/30 focus:ring-offset-2
+                        "
+                    >
+                        Ota yhteyttä
+                    </a>
+                </li>
             </ul>
         </div>
     </div>

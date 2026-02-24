@@ -7,7 +7,7 @@
     window.addEventListener('scroll', onScroll, { passive: true });
   "
   :class="scrolled
-    ? 'border-b border-neutral-200/60 bg-white/85 supports-[backdrop-filter]:bg-white/75 shadow-sm backdrop-blur'
+    ? 'border-b border-neutral-200/60 dark:border-slate-700/60 bg-white/85 dark:bg-slate-900/85 supports-[backdrop-filter]:bg-white/75 dark:supports-[backdrop-filter]:bg-slate-900/75 shadow-sm backdrop-blur'
     : 'border-b border-transparent bg-transparent supports-[backdrop-filter]:bg-transparent'"
   class="sticky top-0 z-50 transition-all duration-200"
 >
@@ -17,7 +17,7 @@
     class="pointer-events-none absolute inset-0 z-0 md:hidden"
     aria-hidden="true"
   >
-    <div class="absolute inset-0 bg-gradient-to-br from-sky-50 via-white to-transparent"></div>
+    <div class="absolute inset-0 bg-gradient-to-br from-sky-50 via-white to-transparent dark:from-slate-800 dark:via-slate-900 dark:to-transparent"></div>
   </div>
 
   <div class="relative z-10 fluid-grid">
@@ -25,7 +25,7 @@
       <div class="grid grid-cols-[auto_1fr_auto] items-center gap-6 py-2.5 md:py-3">
 
         {{# Left: Logo #}}
-        <div class="w-[160px] shrink-0 md:w-[230px]">
+        <div class="w-[160px] shrink-0 md:w-[80px] xl:w-[230px]">
           {{ partial:components/logo }}
         </div>
 
@@ -33,8 +33,8 @@
         <div class="justify-self-center">
           <div
             :class="scrolled
-              ? 'bg-white/5 ring-0 rounded-none ring-neutral-900/10 shadow-none'
-              : 'bg-white/55 ring-white/30 shadow-none rounded-full ring-1 ring-inset backdrop-blur'"
+              ? 'bg-white/5 dark:bg-slate-800/5 ring-0 rounded-none ring-neutral-900/10 shadow-none'
+              : 'bg-white/55 dark:bg-slate-800/40 ring-white/30 dark:ring-slate-600/30 shadow-none rounded-full ring-1 ring-inset backdrop-blur'"
             class="
               hidden md:flex items-center
               rounded-full
@@ -47,19 +47,74 @@
           </div>
         </div>
 
-        {{# Right: Actions (Language + CTA) #}}
-        <div class="justify-self-end hidden gap-2 items-center md:flex">
+        {{# Right: Actions #}}
+        <div class="justify-self-end hidden gap-1.5 items-center lg:flex">
+
+          {{# Search trigger #}}
+          <button
+            type="button"
+            @click="$dispatch('toggle-search')"
+            class="
+              inline-flex items-center justify-center
+              h-9 w-9 rounded-lg
+              transition-all duration-200
+              bg-white/20 dark:bg-slate-700/40
+              hover:bg-white/45 dark:hover:bg-slate-700/70
+              hover:backdrop-blur
+              ring-1 ring-inset ring-white/35 dark:ring-slate-600/40
+              focus:outline-none focus-visible:ring-2 focus-visible:ring-primary/30
+            "
+            aria-label="Search"
+          >
+            <svg class="h-4 w-4 text-neutral-700 dark:text-slate-300" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="11" cy="11" r="7"></circle>
+              <path d="M21 21l-4.3-4.3"></path>
+            </svg>
+          </button>
+
+          {{# Dark mode toggle — hidden until xl #}}
+          <button
+            type="button"
+            @click="darkMode = !darkMode"
+            class="
+              hidden xl:inline-flex items-center justify-center
+              h-9 w-9
+              rounded-lg
+              transition-all duration-200
+              bg-white/20 dark:bg-slate-700/40
+              hover:bg-white/45 dark:hover:bg-slate-700/70
+              hover:backdrop-blur
+              ring-1 ring-inset ring-white/35 dark:ring-slate-600/40
+              focus:outline-none focus-visible:ring-2 focus-visible:ring-primary/30
+            "
+            :aria-label="darkMode ? 'Switch to light mode' : 'Switch to dark mode'"
+          >
+            {{# Sun icon (shown in dark mode) #}}
+            <template x-if="darkMode">
+              <svg class="h-[18px] w-[18px] text-amber-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="5"></circle>
+                <path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"></path>
+              </svg>
+            </template>
+            {{# Moon icon (shown in light mode) #}}
+            <template x-if="!darkMode">
+              <svg class="h-[18px] w-[18px] text-neutral-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+              </svg>
+            </template>
+          </button>
+
           {{ partial:navigation/language_switcher }}
 
+          {{# CTA — hidden on md, visible on lg+ #}}
           {{ if id == 'home' }}
-          {{# Homepage: translucent button that becomes primary on scroll #}}
           <a
             href="/yritys"
             :class="scrolled
               ? 'bg-primary text-white ring-black/5 shadow-md shadow-black/10 hover:brightness-110'
-              : 'bg-white/40 text-neutral-900 ring-white/40 shadow-none hover:bg-white/80 hover:shadow-md hover:shadow-black/[0.06] hover:ring-white/70'"
+              : 'bg-white/40 dark:bg-slate-700/50 text-neutral-900 dark:text-slate-100 ring-white/40 dark:ring-slate-600/40 shadow-none hover:bg-white/80 dark:hover:bg-slate-700/80 hover:shadow-md hover:shadow-black/[0.06] hover:ring-white/70'"
             class="
-              inline-flex items-center justify-center
+              hidden xl:inline-flex items-center justify-center
               rounded-lg px-7 py-3
               text-sm font-semibold
               ring-1 ring-inset
@@ -73,11 +128,10 @@
             Ota yhteyttä
           </a>
           {{ else }}
-          {{# Other pages: always primary button #}}
           <a
             href="/yritys"
             class="
-              inline-flex items-center justify-center
+              hidden xl:inline-flex items-center justify-center
               rounded-lg px-7 py-3
               text-sm font-semibold text-white
               bg-primary

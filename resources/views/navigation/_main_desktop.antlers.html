@@ -18,7 +18,7 @@
               group relative inline-flex items-center gap-2
               px-5 py-3
               text-[15px] font-semibold tracking-[0.01em]
-              text-neutral-800 hover:text-neutral-950
+              text-neutral-800 dark:text-slate-200 hover:text-neutral-950 dark:hover:text-white
               transition-colors transition-transform
               hover:-translate-y-[1px]
               focus:outline-none focus-visible:ring-2 focus-visible:ring-primary/25 focus-visible:ring-offset-2
@@ -54,7 +54,7 @@
                 :class="{ 'rotate-180': subnavOpen }"
                 class="
                   transition-transform duration-200
-                  text-neutral-400 group-hover:text-neutral-600
+                  text-neutral-400 dark:text-slate-500 group-hover:text-neutral-600 dark:group-hover:text-slate-300
                   group-hover:translate-y-0.5
                 "
                 aria-hidden="true"
@@ -81,10 +81,10 @@
               <div
                 class="
                   relative overflow-hidden
-                  rounded-3xl border border-neutral-300/70
-                  bg-gradient-to-b from-white to-neutral-50
+                  rounded-3xl border border-neutral-300/70 dark:border-slate-700
+                  bg-gradient-to-b from-white to-neutral-50 dark:from-slate-800 dark:to-slate-850
                   shadow-2xl shadow-neutral-900/20
-                  ring-1 ring-neutral-900/5
+                  ring-1 ring-neutral-900/5 dark:ring-slate-600/20
                   p-3
                 "
               >
@@ -100,23 +100,23 @@
                         class="
                           group flex items-center gap-4
                           rounded-2xl p-4
-                          bg-white
-                          border border-neutral-200/70
-                          hover:border-neutral-300 hover:bg-white
+                          bg-white dark:bg-slate-800
+                          border border-neutral-200/70 dark:border-slate-700
+                          hover:border-neutral-300 dark:hover:border-slate-600 hover:bg-white dark:hover:bg-slate-750
                           focus:outline-none focus-visible:ring-2 focus-visible:ring-primary/25
                           transition-colors
-                          {{ is_current || is_parent ? 'border-primary/25 bg-primary/5' : '' }}
+                          {{ is_current || is_parent ? 'border-primary/25 bg-primary/5 dark:bg-primary/10' : '' }}
                         "
                       >
                         <!-- icon container (fixed size, visible on white) -->
                         <span
                           class="
                             shrink-0 grid h-11 w-11 place-items-center rounded-xl
-                            border border-neutral-200
-                            bg-neutral-100
-                            text-neutral-700
+                            border border-neutral-200 dark:border-slate-600
+                            bg-neutral-100 dark:bg-slate-700
+                            text-neutral-700 dark:text-slate-300
                             shadow-sm
-                            group-hover:bg-neutral-50 group-hover:text-neutral-900 group-hover:border-neutral-300
+                            group-hover:bg-neutral-50 dark:group-hover:bg-slate-600 group-hover:text-neutral-900 dark:group-hover:text-white group-hover:border-neutral-300 dark:group-hover:border-slate-500
                             transition-colors
                             {{ is_current || is_parent ? 'border-primary/30 bg-primary/10 text-primary' : '' }}
                           "
@@ -126,12 +126,12 @@
                         </span>
 
                         <span class="min-w-0">
-                          <span class="block text-[15px] font-semibold text-neutral-900 leading-tight">
+                          <span class="block text-[15px] font-semibold text-neutral-900 dark:text-slate-100 leading-tight">
                             {{ title }}
                           </span>
                         </span>
 
-                        <span class="ml-auto text-neutral-300 group-hover:text-neutral-700 transition-colors shrink-0" aria-hidden="true">
+                        <span class="ml-auto text-neutral-300 dark:text-slate-600 group-hover:text-neutral-700 dark:group-hover:text-slate-300 transition-colors shrink-0" aria-hidden="true">
                           {{ svg:chevron_right attr:class="w-5 stroke-current" }}
                         </span>
                       </a>

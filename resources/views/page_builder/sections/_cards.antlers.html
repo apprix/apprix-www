@@ -16,7 +16,8 @@
         {{ block:cards }}
             <li
                 class="
-                    flex flex-col justify-between items-start p-6 border border-neutral/10 shadow-lg rounded
+                    flex flex-col justify-between items-start p-6 border border-neutral/10 dark:border-slate-700 shadow-lg rounded
+                    bg-white dark:bg-slate-800
                     {{ switch(
                         (total_results === 1) => 'md:col-span-8 md:col-start-3',
                         (total_results === 2) => 'md:col-span-6',

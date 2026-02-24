@@ -13,22 +13,22 @@
     aria-label="{{ trans:strings.change_language }}"
     class="
       inline-flex items-center justify-center
-      h-11 w-11
-      rounded-xl
+      h-9 w-9
+      rounded-lg
       transition-all duration-200
       focus:outline-none focus-visible:ring-2 focus-visible:ring-primary/30
     "
     :class="open
-      ? 'bg-white/80 backdrop-blur-md ring-1 ring-inset ring-neutral-900/8 shadow-sm'
-      : 'bg-white/20 hover:bg-white/45 hover:backdrop-blur ring-1 ring-inset ring-white/35'"
+      ? 'bg-white/80 dark:bg-slate-800/80 backdrop-blur-md ring-1 ring-inset ring-neutral-900/8 dark:ring-slate-600/40 shadow-sm'
+      : 'bg-white/20 dark:bg-slate-700/40 hover:bg-white/45 dark:hover:bg-slate-700/70 hover:backdrop-blur ring-1 ring-inset ring-white/35 dark:ring-slate-600/40'"
   >
     <span
       class="transition-colors duration-200"
-      :class="open ? 'text-neutral-900' : 'text-neutral-900/70'"
+      :class="open ? 'text-neutral-900 dark:text-slate-100' : 'text-neutral-900/70 dark:text-slate-300'"
       aria-hidden="true"
     >
       <svg
-        class="h-5 w-5"
+        class="h-[18px] w-[18px]"
         viewBox="0 0 24 24"
         fill="none"
         stroke="currentColor"
@@ -59,16 +59,16 @@
     <div
       class="
         relative overflow-hidden rounded-2xl
-        bg-white/95 backdrop-blur-xl
+        bg-white/95 dark:bg-slate-800/95 backdrop-blur-xl
         shadow-2xl shadow-black/[0.08]
-        ring-1 ring-neutral-200/60
+        ring-1 ring-neutral-200/60 dark:ring-slate-700/60
         p-1.5
       "
     >
       {{# Top accent line #}}
       <div class="pointer-events-none absolute inset-x-0 top-0 h-[2px] bg-gradient-to-r from-transparent via-primary/30 to-transparent"></div>
 
-      <p class="px-3 pt-2.5 pb-1.5 text-[10px] font-semibold tracking-widest text-neutral-400 uppercase">
+      <p class="px-3 pt-2.5 pb-1.5 text-[10px] font-semibold tracking-widest text-neutral-400 dark:text-slate-500 uppercase">
         {{ trans:strings.language }}
       </p>
 
@@ -84,9 +84,9 @@
                 transition-all duration-150
                 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary/25
                 {{ if handle == site:handle }}
-                  bg-primary/[0.07] text-neutral-900
+                  bg-primary/[0.07] text-neutral-900 dark:text-slate-100
                 {{ else }}
-                  text-neutral-600 hover:bg-neutral-100/80 hover:text-neutral-900
+                  text-neutral-600 dark:text-slate-300 hover:bg-neutral-100/80 dark:hover:bg-slate-700/60 hover:text-neutral-900 dark:hover:text-white
                 {{ /if }}
               "
               {{ if handle == site:handle }}aria-current="true"{{ /if }}
@@ -97,9 +97,9 @@
                     inline-flex h-[18px] w-[26px]
                     items-center justify-center overflow-hidden
                     rounded-[5px]
-                    ring-1 ring-black/8
+                    ring-1 ring-black/8 dark:ring-white/10
                     shadow-sm shadow-black/[0.04]
-                    bg-white
+                    bg-white dark:bg-slate-700
                   "
                   aria-hidden="true"
                 >

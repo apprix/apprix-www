@@ -4,10 +4,10 @@ page.page_builder.link_cards #}}
 
 <section class="relative overflow-hidden">
     {{# Tinted background to break from white sections above #}}
-    <div class="pointer-events-none absolute inset-0 bg-gradient-to-b from-neutral-50 via-neutral-100/50 to-neutral-50"></div>
+    <div class="pointer-events-none absolute inset-0 bg-gradient-to-b from-neutral-50 via-neutral-100/50 to-neutral-50 dark:from-slate-800/50 dark:via-slate-850/50 dark:to-slate-800/50"></div>
     <div class="pointer-events-none absolute inset-0 bg-gradient-to-br from-primary/[0.02] via-transparent to-primary/[0.015]"></div>
     <div
-        class="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-neutral-200/70 to-transparent"
+        class="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-neutral-200/70 dark:via-slate-700/70 to-transparent"
     ></div>
 
     <div class="fluid-grid py-14 md:py-20">
@@ -23,13 +23,13 @@ page.page_builder.link_cards #}}
                 {{ /if }}
 
                 {{ if heading }}
-                <h2 class="text-balance text-xl font-semibold tracking-tight text-neutral-900 md:text-2xl">
+                <h2 class="text-balance text-xl font-semibold tracking-tight text-neutral-900 dark:text-slate-100 md:text-2xl">
                     {{ heading }}
                 </h2>
                 {{ /if }}
 
                 {{ if text }}
-                <p class="mx-auto mt-3 max-w-lg text-sm leading-relaxed text-neutral-500">
+                <p class="mx-auto mt-3 max-w-lg text-sm leading-relaxed text-neutral-500 dark:text-slate-400">
                     {{ text }}
                 </p>
                 {{ /if }}
@@ -43,15 +43,15 @@ page.page_builder.link_cards #}}
 
                 <a
                     href="{{ link }}"
-                    class="group relative flex items-center gap-6 rounded-2xl border border-neutral-200/60 bg-white
-                           px-6 py-6 shadow-sm ring-1 ring-neutral-100/50 transition-all duration-300
-                           hover:border-neutral-200 hover:shadow-lg hover:shadow-black/[0.04]
+                    class="group relative flex items-center gap-6 rounded-2xl border border-neutral-200/60 dark:border-slate-700 bg-white dark:bg-slate-800
+                           px-6 py-6 shadow-sm ring-1 ring-neutral-100/50 dark:ring-slate-700/50 transition-all duration-300
+                           hover:border-neutral-200 dark:hover:border-slate-600 hover:shadow-lg hover:shadow-black/[0.04]
                            focus:outline-none focus-visible:ring-2 focus-visible:ring-primary/25
                            md:gap-8 md:px-8 md:py-7"
                 >
                     {{# Icon #}}
                     <div
-                        class="grid h-12 w-12 shrink-0 place-items-center rounded-xl bg-primary/[0.06] transition-colors duration-300 group-hover:bg-primary/[0.1] md:h-14 md:w-14"
+                        class="grid h-12 w-12 shrink-0 place-items-center rounded-xl bg-primary/[0.06] dark:bg-primary/[0.12] transition-colors duration-300 group-hover:bg-primary/[0.1] dark:group-hover:bg-primary/[0.18] md:h-14 md:w-14"
                     >
                         {{ if icon == "users" }}
                         <svg viewBox="0 0 24 24" class="h-5 w-5 text-primary/70 md:h-6 md:w-6" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
@@ -84,19 +84,19 @@ page.page_builder.link_cards #}}
                     {{# Content #}}
                     <div class="min-w-0 flex-1">
                         {{ if eyebrow }}
-                        <p class="mb-1 text-[11px] font-semibold tracking-widest uppercase text-neutral-400">
+                        <p class="mb-1 text-[11px] font-semibold tracking-widest uppercase text-neutral-400 dark:text-slate-500">
                             {{ eyebrow }}
                         </p>
                         {{ /if }}
 
                         {{ if title }}
-                        <h3 class="text-base font-semibold tracking-tight text-neutral-900 md:text-lg">
+                        <h3 class="text-base font-semibold tracking-tight text-neutral-900 dark:text-slate-100 md:text-lg">
                             {{ title }}
                         </h3>
                         {{ /if }}
 
                         {{ if text }}
-                        <p class="mt-1 text-sm leading-relaxed text-neutral-500 md:mt-1.5">
+                        <p class="mt-1 text-sm leading-relaxed text-neutral-500 dark:text-slate-400 md:mt-1.5">
                             {{ text }}
                         </p>
                         {{ /if }}
@@ -104,8 +104,8 @@ page.page_builder.link_cards #}}
 
                     {{# Arrow #}}
                     <div class="shrink-0">
-                        <div class="grid h-10 w-10 place-items-center rounded-xl bg-neutral-50 ring-1 ring-neutral-200/50 transition-all duration-300 group-hover:bg-primary/[0.06] group-hover:ring-primary/20">
-                            <svg viewBox="0 0 16 16" class="h-4 w-4 text-neutral-400 transition-all duration-300 group-hover:translate-x-0.5 group-hover:text-primary" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                        <div class="grid h-10 w-10 place-items-center rounded-xl bg-neutral-50 dark:bg-slate-700 ring-1 ring-neutral-200/50 dark:ring-slate-600/50 transition-all duration-300 group-hover:bg-primary/[0.06] dark:group-hover:bg-primary/[0.12] group-hover:ring-primary/20">
+                            <svg viewBox="0 0 16 16" class="h-4 w-4 text-neutral-400 dark:text-slate-500 transition-all duration-300 group-hover:translate-x-0.5 group-hover:text-primary" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
                                 <path d="M3.5 8h9" />
                                 <path d="M9 4.5L12.5 8 9 11.5" />
                             </svg>
