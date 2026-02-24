@@ -5,7 +5,12 @@
 
 <!-- /layout.antlers.html -->
 <!doctype html>
-<html lang="{{ site:short_locale }}" class="antialiased scroll-smooth scroll-pt-4">
+<html
+    lang="{{ site:short_locale }}"
+    class="antialiased scroll-smooth scroll-pt-4"
+    x-data="{ darkMode: $persist(false) }"
+    :class="{ 'dark': darkMode }"
+>
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -16,7 +21,7 @@
         {{ partial:statamic-peak-tools::snippets/live_preview }}
         {{ stack:head }}
     </head>
-    <body class="flex flex-col min-h-screen bg-white selection:bg-primary selection:text-white">
+    <body class="flex flex-col min-h-screen bg-white dark:bg-slate-900 selection:bg-primary selection:text-white transition-colors duration-300">
         {{ stack:seo_body }}
         {{ partial:statamic-peak-tools::snippets/noscript }}
         {{ partial:statamic-peak-tools::navigation/skip_links }}
@@ -25,6 +30,7 @@
         {{ partial:layout/header }}
         {{ template_content }}
         {{ partial:layout/footer }}
+        {{ partial:components/search }}
     </body>
 </html>
 <!-- End: /layout.antlers.html -->

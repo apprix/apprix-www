@@ -2,6 +2,9 @@
 @import "./peak.css";
 @import "./typography.css";
 
+/* Class-based dark mode (Tailwind 4) */
+@custom-variant dark (&:where(.dark, .dark *));
+
 /* =========================
    Apprix palette
    ========================= */
@@ -64,6 +67,11 @@
         color: var(--color-text);
         font-family: var(--font-sans);
         background-color: var(--color-white);
+        transition: background-color 0.3s, color 0.3s;
+    }
+
+    html.dark {
+        background-color: #0f172a; /* slate-900 */
     }
 
     h1, h2, h3, h4, h5, h6 {
@@ -78,6 +86,29 @@
     a:visited {
         color: var(--color-link-visited);
     }
+}
+
+/* =========================
+   Dark mode overrides
+   ========================= */
+.dark {
+    --color-heading: #f1f5f9;      /* slate-100 */
+    --color-text: #cbd5e1;         /* slate-300 */
+    --color-muted: #94a3b8;        /* slate-400 */
+    --color-link: #38bdf8;         /* sky-400 */
+    --color-link-visited: #a78bfa; /* violet-400 */
+    --color-neutral: #e2e8f0;      /* slate-200 — for text usage */
+    --color-neutral-50: #1e293b;
+    --color-neutral-100: #1e293b;
+    --color-neutral-200: #334155;
+    --color-neutral-300: #475569;
+    --color-neutral-400: #64748b;
+    --color-neutral-500: #94a3b8;
+    --color-neutral-600: #cbd5e1;
+    --color-neutral-700: #e2e8f0;
+    --color-neutral-800: #f1f5f9;
+    --color-neutral-900: #f8fafc;
+    --color-neutral-950: #ffffff;
 }
 
 /* =========================
