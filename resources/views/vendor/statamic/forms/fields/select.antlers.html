@@ -5,9 +5,9 @@
     :aria-invalid="form.invalid('{{ handle }}')"
     :class="{
         'border-red-600 focus:border-red-600 outline-red-600/50!': form.invalid('{{ handle }}'),
-        'border-neutral focus:border-primary': !form.invalid('{{ handle }}')
+        'border-neutral focus:border-primary dark:border-slate-600 dark:focus:border-primary': !form.invalid('{{ handle }}')
     }"
-    class="w-full rounded-sm"
+    class="w-full rounded-sm bg-white dark:bg-slate-800 dark:text-slate-100"
     id="{{ handle }}"
     name="{{ handle }}{{ multiple ?= "[]" }}"
     {{ instructions ?= 'aria-describedBy="{handle}-instructions"' }}
