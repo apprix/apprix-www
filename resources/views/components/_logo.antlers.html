@@ -8,21 +8,55 @@
 {{ width = width ?? '250' }}
 {{ class = class ?? '' }}
 
-{{ logo_src = (variant == 'footer') ? '/visuals/apprix_logo_white.png' : '/visuals/apprix_logo_rgb.png' }}
 {{ alt_text = alt ?? config:app:name }}
 
-<a
-    aria-label="{{ trans:strings.home }}"
-    href="{{ site:url }}"
-    class="inline-flex items-center"
->
-    <img
-        src="{{ logo_src }}"
-        width="{{ width }}"
-        class="select-none {{ class }}"
-        alt="{{ alt_text }}"
-        loading="lazy"
-        decoding="async"
-    />
-</a>
+{{ if variant == 'footer' }}
+  <a
+      aria-label="{{ trans:strings.home }}"
+      href="{{ site:url }}"
+      class="inline-flex items-center"
+  >
+      <img
+          src="/visuals/apprix_logo_white.png"
+          width="{{ width }}"
+          class="select-none {{ class }}"
+          alt="{{ alt_text }}"
+          loading="lazy"
+          decoding="async"
+      />
+  </a>
+{{ else }}
+  <a
+      aria-label="{{ trans:strings.home }}"
+      href="{{ site:url }}"
+      class="inline-flex items-center"
+  >
+      {{# Full wordmark: visible on mobile (<md) and desktop (xl+), hidden on tablet (md–xl) #}}
+      <img
+          src="/visuals/apprix_logo_rgb.png"
+          width="{{ width }}"
+          class="select-none dark:hidden md:hidden xl:block {{ class }}"
+          alt="{{ alt_text }}"
+          loading="lazy"
+          decoding="async"
+      />
+      <img
+          src="/visuals/apprix_logo_white.png"
+          width="{{ width }}"
+          class="select-none hidden dark:block dark:md:hidden dark:xl:block {{ class }}"
+          alt="{{ alt_text }}"
+          loading="lazy"
+          decoding="async"
+      />
+      {{# Symbol: visible only on tablet (md–xl) #}}
+      <img
+          src="/images/apprix_symbol.png"
+          width="72"
+          class="select-none hidden md:block xl:hidden {{ class }}"
+          alt="{{ alt_text }}"
+          loading="lazy"
+          decoding="async"
+      />
+  </a>
+{{ /if }}
 <!-- End: /components/_logo.antlers.html -->

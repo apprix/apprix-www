@@ -11,10 +11,10 @@
     class="
         rounded border p-4
         {{ switch(
-            (type == 'success') => 'bg-green-50 border-green-700',
-            (type == 'notice') => 'bg-yellow-50 border-yellow-700',
-            (type == 'error') => 'bg-red-50 border-red-700',
-            () => 'bg-gray-50 border-gray-700'
+            (type == 'success') => 'bg-green-50 dark:bg-green-950/30 border-green-700',
+            (type == 'notice') => 'bg-yellow-50 dark:bg-yellow-950/30 border-yellow-700',
+            (type == 'error') => 'bg-red-50 dark:bg-red-950/30 border-red-700',
+            () => 'bg-gray-50 dark:bg-gray-900 border-gray-700'
         )}}
         {{ class }}
     "
