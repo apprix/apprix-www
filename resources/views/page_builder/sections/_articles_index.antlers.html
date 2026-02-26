@@ -53,26 +53,26 @@
 >
 
   {{# ───────── COMPACT HEADER + TOOLBAR ───────── #}}
-  <section class="relative overflow-hidden bg-white">
+  <section class="relative overflow-hidden bg-white dark:bg-slate-900">
     <div class="fluid-grid relative py-10 md:py-14">
       <div class="span-content">
 
         {{# Heading + lead — compact #}}
         <div class="mb-8 max-w-2xl">
           {{ if heading }}
-            <h1 class="text-balance text-2xl font-bold tracking-tight text-neutral-900 md:text-3xl">
+            <h1 class="text-balance text-2xl font-bold tracking-tight text-neutral-900 dark:text-white md:text-3xl">
               {{ heading }}
             </h1>
           {{ /if }}
           {{ if lead }}
-            <p class="mt-2 text-sm leading-relaxed text-neutral-500">
+            <p class="mt-2 text-sm leading-relaxed text-neutral-500 dark:text-slate-400">
               {{ lead }}
             </p>
           {{ /if }}
         </div>
 
         {{# Toolbar: search + filters in one row #}}
-        <div class="flex flex-col gap-3 border-b border-neutral-200 pb-6 sm:flex-row sm:items-center sm:justify-between">
+        <div class="flex flex-col gap-3 border-b border-neutral-200 dark:border-slate-700 pb-6 sm:flex-row sm:items-center sm:justify-between">
 
           {{# Search (compact) #}}
           {{ if show_search }}
@@ -89,8 +89,8 @@
               type="search"
               x-model.debounce.250ms="query"
               placeholder="{{ search_placeholder ?? 'Hae artikkeleista…' }}"
-              class="w-full rounded-lg border border-neutral-200 bg-white py-2.5 pl-10 pr-4
-                     text-sm text-neutral-800 placeholder:text-neutral-400
+              class="w-full rounded-lg border border-neutral-200 dark:border-slate-700 bg-white dark:bg-slate-800 py-2.5 pl-10 pr-4
+                     text-sm text-neutral-800 dark:text-slate-200 placeholder:text-neutral-400 dark:placeholder:text-slate-500
                      focus:border-primary/40 focus:outline-none focus:ring-2 focus:ring-primary/10"
             />
           </div>
@@ -107,7 +107,7 @@
             {{# Tag filter #}}
             <select
               x-model="activeTag"
-              class="appearance-none rounded-lg border border-neutral-200 bg-white py-2.5 pl-4 pr-9 text-sm font-medium text-neutral-700
+              class="appearance-none rounded-lg border border-neutral-200 dark:border-slate-700 bg-white dark:bg-slate-800 py-2.5 pl-4 pr-9 text-sm font-medium text-neutral-700 dark:text-slate-300
                      bg-[url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2020%2020%22%20fill%3D%22%236b7280%22%3E%3Cpath%20fill-rule%3D%22evenodd%22%20d%3D%22M5.23%207.21a.75.75%200%20011.06.02L10%2011.168l3.71-3.938a.75.75%200%20111.08%201.04l-4.25%204.5a.75.75%200%2001-1.08%200l-4.25-4.5a.75.75%200%2001.02-1.06z%22%20clip-rule%3D%22evenodd%22%2F%3E%3C%2Fsvg%3E')]
                      bg-[length:1.25rem_1.25rem] bg-[position:right_0.5rem_center] bg-no-repeat
                      focus:border-primary/40 focus:outline-none focus:ring-2 focus:ring-primary/10"
@@ -122,7 +122,7 @@
             {{ if show_sort }}
             <select
               x-model="activeSort"
-              class="appearance-none rounded-lg border border-neutral-200 bg-white py-2.5 pl-4 pr-9 text-sm font-medium text-neutral-700
+              class="appearance-none rounded-lg border border-neutral-200 dark:border-slate-700 bg-white dark:bg-slate-800 py-2.5 pl-4 pr-9 text-sm font-medium text-neutral-700 dark:text-slate-300
                      bg-[url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2020%2020%22%20fill%3D%22%236b7280%22%3E%3Cpath%20fill-rule%3D%22evenodd%22%20d%3D%22M5.23%207.21a.75.75%200%20011.06.02L10%2011.168l3.71-3.938a.75.75%200%20111.08%201.04l-4.25%204.5a.75.75%200%2001-1.08%200l-4.25-4.5a.75.75%200%2001.02-1.06z%22%20clip-rule%3D%22evenodd%22%2F%3E%3C%2Fsvg%3E')]
                      bg-[length:1.25rem_1.25rem] bg-[position:right_0.5rem_center] bg-no-repeat
                      focus:border-primary/40 focus:outline-none focus:ring-2 focus:ring-primary/10"
@@ -154,11 +154,11 @@
               x-transition:leave="transition ease-in duration-150"
               x-transition:leave-start="opacity-100"
               x-transition:leave-end="opacity-0"
-              class="group relative flex h-full flex-col overflow-hidden rounded-lg border border-neutral-200/80 bg-white shadow-sm transition
-                     hover:-translate-y-0.5 hover:border-neutral-300 hover:shadow-lg
+              class="group relative flex h-full flex-col overflow-hidden rounded-lg border border-neutral-200/80 dark:border-slate-700 bg-white dark:bg-slate-800 shadow-sm transition
+                     hover:-translate-y-0.5 hover:border-neutral-300 dark:hover:border-slate-600 hover:shadow-lg
                      focus:outline-none focus-visible:ring-4 focus-visible:ring-primary-200/60"
             >
-              <div class="relative aspect-[16/10] overflow-hidden bg-neutral-100">
+              <div class="relative aspect-[16/10] overflow-hidden bg-neutral-100 dark:bg-slate-700">
                 {{ if image }}
                   {{ image }}
                     {{ partial:components/image
@@ -191,20 +191,20 @@
                   </div>
                 {{ /if }}
 
-                <h3 class="text-balance text-lg font-semibold leading-snug tracking-tight text-neutral-900 md:text-xl">
+                <h3 class="text-balance text-lg font-semibold leading-snug tracking-tight text-neutral-900 dark:text-slate-100 md:text-xl">
                   {{ title }}
                 </h3>
 
                 {{ if intro }}
-                  <p class="mt-2.5 line-clamp-3 text-sm leading-relaxed text-neutral-500">
+                  <p class="mt-2.5 line-clamp-3 text-sm leading-relaxed text-neutral-500 dark:text-slate-400">
                     {{ intro }}
                   </p>
                 {{ /if }}
 
                 <div class="mt-auto">
-                  <div class="-mx-6 mt-5 flex items-center justify-between border-t border-neutral-200/80 bg-neutral-50 px-6 py-3.5
-                              text-sm font-semibold text-neutral-700 transition
-                              group-hover:bg-orange-50/60 group-hover:text-orange-800">
+                  <div class="-mx-6 mt-5 flex items-center justify-between border-t border-neutral-200/80 dark:border-slate-700 bg-neutral-50 dark:bg-slate-700/50 px-6 py-3.5
+                              text-sm font-semibold text-neutral-700 dark:text-slate-300 transition
+                              group-hover:bg-orange-50/60 dark:group-hover:bg-primary/10 group-hover:text-orange-800 dark:group-hover:text-primary">
                     <span>{{ card_button_text ?? 'Lue lisää' }}</span>
                     <span class="text-brand-orange transition group-hover:translate-x-0.5">&#x2192;</span>
                   </div>
@@ -219,7 +219,7 @@
         <div
           x-show="totalCount > 0 && visibleCount === 0"
           x-cloak
-          class="mx-auto mt-8 max-w-xl rounded-2xl border border-neutral-200 bg-white p-6 text-center text-sm text-neutral-600"
+          class="mx-auto mt-8 max-w-xl rounded-2xl border border-neutral-200 dark:border-slate-700 bg-white dark:bg-slate-800 p-6 text-center text-sm text-neutral-600 dark:text-slate-400"
         >
           {{ no_results_text ?? 'Ei hakutuloksia.' }}
         </div>
@@ -228,7 +228,7 @@
         <div
           x-show="totalCount === 0"
           x-cloak
-          class="mx-auto max-w-xl rounded-2xl border border-neutral-200 bg-white p-6 text-center text-sm text-neutral-600"
+          class="mx-auto max-w-xl rounded-2xl border border-neutral-200 dark:border-slate-700 bg-white dark:bg-slate-800 p-6 text-center text-sm text-neutral-600 dark:text-slate-400"
         >
           {{ no_articles_text ?? 'Ei vielä artikkeleita.' }}
         </div>
@@ -264,7 +264,7 @@
 
 {{ else }}
 {{# ======================== LATEST MODE (unchanged) ======================== #}}
-<section class="relative overflow-hidden bg-gradient-to-b from-neutral-100 via-neutral-50 to-white">
+<section class="relative overflow-hidden bg-gradient-to-b from-neutral-100 via-neutral-50 to-white dark:from-slate-800 dark:via-slate-850 dark:to-slate-900">
   <div class="pointer-events-none absolute inset-0">
     <div class="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-neutral-300/50 to-transparent"></div>
     <div class="absolute -left-32 top-16 h-72 w-72 rounded-full bg-sky-200/20 blur-3xl"></div>
@@ -277,7 +277,7 @@
       {{# Section header #}}
       <div class="mx-auto mb-10 max-w-3xl text-center md:mb-12">
         {{ if heading }}
-          <h2 class="text-balance text-2xl font-semibold tracking-tight text-neutral-900 md:text-4xl">
+          <h2 class="text-balance text-2xl font-semibold tracking-tight text-neutral-900 dark:text-slate-100 md:text-4xl">
             {{ heading }}
           </h2>
         {{ /if }}
@@ -292,7 +292,7 @@
       {{# Article cards #}}
       {{ collection:articles sort="date:desc" limit="{ limit }" }}
         {{ if no_results }}
-          <div class="mx-auto max-w-xl rounded-2xl border border-neutral-200 bg-neutral-50 p-6 text-center text-sm text-neutral-600">
+          <div class="mx-auto max-w-xl rounded-2xl border border-neutral-200 dark:border-slate-700 bg-neutral-50 dark:bg-slate-800 p-6 text-center text-sm text-neutral-600 dark:text-slate-400">
             {{ no_articles_text ?? 'Ei vielä artikkeleita.' }}
           </div>
         {{ else }}
@@ -303,11 +303,11 @@
 
             <a
               href="{{ url }}"
-              class="group relative flex h-full flex-col overflow-hidden rounded-lg border border-neutral-200/80 bg-white shadow-sm transition
-                     hover:-translate-y-0.5 hover:border-neutral-300 hover:shadow-lg
+              class="group relative flex h-full flex-col overflow-hidden rounded-lg border border-neutral-200/80 dark:border-slate-700 bg-white dark:bg-slate-800 shadow-sm transition
+                     hover:-translate-y-0.5 hover:border-neutral-300 dark:hover:border-slate-600 hover:shadow-lg
                      focus:outline-none focus-visible:ring-4 focus-visible:ring-primary-200/60"
             >
-              <div class="relative aspect-[16/10] overflow-hidden bg-neutral-100">
+              <div class="relative aspect-[16/10] overflow-hidden bg-neutral-100 dark:bg-slate-700">
                 {{ if image }}
                   {{ image }}
                     {{ partial:components/image
@@ -340,20 +340,20 @@
                   </div>
                 {{ /if }}
 
-                <h3 class="text-balance text-lg font-semibold leading-snug tracking-tight text-neutral-900 md:text-xl">
+                <h3 class="text-balance text-lg font-semibold leading-snug tracking-tight text-neutral-900 dark:text-slate-100 md:text-xl">
                   {{ title }}
                 </h3>
 
                 {{ if intro }}
-                  <p class="mt-2.5 line-clamp-3 text-sm leading-relaxed text-neutral-500">
+                  <p class="mt-2.5 line-clamp-3 text-sm leading-relaxed text-neutral-500 dark:text-slate-400">
                     {{ intro }}
                   </p>
                 {{ /if }}
 
                 <div class="mt-auto">
-                  <div class="-mx-6 mt-5 flex items-center justify-between border-t border-neutral-200/80 bg-neutral-50 px-6 py-3.5
-                              text-sm font-semibold text-neutral-700 transition
-                              group-hover:bg-orange-50/60 group-hover:text-orange-800">
+                  <div class="-mx-6 mt-5 flex items-center justify-between border-t border-neutral-200/80 dark:border-slate-700 bg-neutral-50 dark:bg-slate-700/50 px-6 py-3.5
+                              text-sm font-semibold text-neutral-700 dark:text-slate-300 transition
+                              group-hover:bg-orange-50/60 dark:group-hover:bg-primary/10 group-hover:text-orange-800 dark:group-hover:text-primary">
                     <span>{{ card_button_text ?? 'Lue lisää' }}</span>
                     <span class="text-brand-orange transition group-hover:translate-x-0.5">&#x2192;</span>
                   </div>
@@ -377,9 +377,9 @@
           <a
             href="{{ btn_url }}"
             {{ if button:target == '_blank' }} target="_blank" rel="noopener noreferrer" {{ /if }}
-            class="inline-flex items-center gap-2 rounded-md border border-neutral-300 bg-white px-6 py-3
-                   text-sm font-semibold text-neutral-700 shadow-sm transition
-                   hover:border-brand-orange hover:text-brand-orange focus:outline-none focus:ring-4 focus:ring-brand-orange/10"
+            class="inline-flex items-center gap-2 rounded-md border border-neutral-300 dark:border-slate-600 bg-white dark:bg-slate-800 px-6 py-3
+                   text-sm font-semibold text-neutral-700 dark:text-slate-200 shadow-sm transition
+                   hover:border-brand-orange dark:hover:border-primary hover:text-brand-orange dark:hover:text-primary focus:outline-none focus:ring-4 focus:ring-brand-orange/10"
           >
             {{ btn_label }}
             <span class="text-sm">&#x2192;</span>
