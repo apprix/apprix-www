@@ -1,1 +1,8 @@
-{{ partial src="page_builder/sections/{type}" }}
+<div
+  x-data="{ shown: false }"
+  x-intersect.once.threshold.10="shown = true"
+  class="transition-all duration-700 ease-out motion-reduce:transition-none"
+  :class="shown ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'"
+>
+  {{ partial src="page_builder/sections/{type}" }}
+</div>
