@@ -1,0 +1,50 @@
+title: FAQ
+fields:
+  - handle: eyebrow
+    field:
+      type: text
+      localizable: true
+      display: Eyebrow
+      instructions: "Optional short label above the title."
+
+  - handle: title
+    field:
+      type: text
+      localizable: true
+      display: Title
+      instructions: "Section heading."
+
+  - handle: faq_items
+    field:
+      type: replicator
+      localizable: true
+      display: "FAQ items"
+      instructions: "Add questions and answers."
+      button_label: "Add question"
+      sets:
+        faq_item:
+          display: "Question & Answer"
+          icon: alert-help-question-mark
+          fields:
+            - handle: question
+              field:
+                type: text
+                localizable: true
+                required: true
+                display: Question
+                instructions: "The question."
+
+            - handle: answer
+              field:
+                type: bard
+                localizable: true
+                required: true
+                display: Answer
+                instructions: "The answer."
+                buttons:
+                  - bold
+                  - italic
+                  - unorderedList
+                  - orderedList
+                  - anchor
+                save_html: true

@@ -170,6 +170,49 @@ page_builder:
     type: stats
     enabled: true
   -
+    id: mkfaq001
+    eyebrow: 'USEIN KYSYTTYÄ'
+    title: 'Vastauksia yleisimpiin kysymyksiin'
+    faq_items:
+      -
+        id: mkfq0001
+        question: 'Mikä on Apprix?'
+        answer: '<p>Apprix on suomalainen, yli 20 vuotta toiminut digitaalisten koulutusratkaisujen edelläkävijä. Autamme organisaatioita rakentamaan, jakamaan ja hallinnoimaan verkkokoulutuksia yhdellä alustalla – olipa kyse perehdytyksestä, vaatimustenmukaisuudesta tai jatkuvasta osaamisen kehittämisestä.</p>'
+        type: faq_item
+        enabled: true
+      -
+        id: mkfq0002
+        question: 'Kenelle Apprixin palvelut sopivat?'
+        answer: '<p>Palvelumme on suunniteltu keskisuurille ja suurille organisaatioille, jotka tarvitsevat skaalautuvan tavan kouluttaa henkilöstöä, kumppaneita tai asiakkaita. Asiakkaitamme ovat mm. Stora Enso, Finavia, DHL, St1 ja Vantaan Energia.</p>'
+        type: faq_item
+        enabled: true
+      -
+        id: mkfq0003
+        question: 'Mitä tuotteita Apprix tarjoaa?'
+        answer: '<p>Apprix Builder on työkalumme interaktiivisten verkkokoulutusten luomiseen ilman teknistä osaamista. MyCourses on oppimisympäristö, joka kokoaa koulutukset, suoritukset ja seurannan yhteen näkymään. Lisäksi tarjoamme Checklist Enginen perehdytysten hallintaan ja Koemoottorin osaamisen testaamiseen.</p>'
+        type: faq_item
+        enabled: true
+      -
+        id: mkfq0004
+        question: 'Tarvitseeko koulutusten luomiseen teknistä osaamista?'
+        answer: '<p>Ei tarvitse. Apprix Builder on suunniteltu niin, että kuka tahansa voi rakentaa visuaalisia ja osallistavia verkkokoulutuksia ilman koodaus- tai suunnittelutaitoja. Tarjoamme myös koulutuksen ja tuen käyttöönottoon.</p>'
+        type: faq_item
+        enabled: true
+      -
+        id: mkfq0005
+        question: 'Miten pääsen alkuun?'
+        answer: '<p>Ota yhteyttä ja sovitaan maksuton 30–60 minuutin kartoitustapaaminen. Käymme läpi organisaationne koulutustarpeet ja ehdotamme sopivaa ratkaisua – ilman sitoutumispakkoa.</p>'
+        type: faq_item
+        enabled: true
+      -
+        id: mkfq0006
+        question: 'Tukeeko Apprix useita kieliä?'
+        answer: '<p>Kyllä. Alustamme ja koulutukset toimivat monikielisesti. Tällä hetkellä tuemme suomea, ruotsia ja englantia, ja uusia kieliä voidaan lisätä tarpeen mukaan.</p>'
+        type: faq_item
+        enabled: true
+    type: faq
+    enabled: true
+  -
     id: mkmnjie7
     eyebrow: 'TUKI & SISÄLLÖT'
     eyebrow_style: subtle

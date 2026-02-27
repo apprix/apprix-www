@@ -48,6 +48,13 @@ fields:
               fields:
                 - import: cards
 
+            faq:
+              display: FAQ
+              instructions: "Collapsible FAQ accordion section."
+              icon: alert-help-question-mark
+              fields:
+                - import: faq
+
         marketing:
           display: Marketing
           instructions: "Homepage marketing sections."
