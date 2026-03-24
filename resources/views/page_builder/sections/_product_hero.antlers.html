@@ -1,0 +1,382 @@
+{{#
+  @name Product hero
+  @desc Text-driven hero for product/service landing pages.
+  @set page.page_builder.product_hero
+#}}
+
+{{ if tone == "brand" }}
+
+  {{# ═══════════════════════════════════════════════
+      BRAND VARIANT — warm tinted bg with integrated stats
+  ═══════════════════════════════════════════════ #}}
+
+  <section class="relative overflow-hidden bg-slate-50 dark:bg-slate-900">
+
+    {{# Background — warm tinted layers #}}
+    <div class="absolute inset-0" aria-hidden="true">
+      <div class="absolute inset-0 bg-gradient-to-b from-orange-50/60 via-slate-50 to-white dark:from-slate-800/60 dark:via-slate-900 dark:to-slate-900"></div>
+      <div class="absolute inset-0 bg-gradient-to-tr from-orange-50/50 via-transparent to-sky-50/40 dark:from-orange-900/[0.08] dark:via-transparent dark:to-sky-900/[0.05]"></div>
+      <div class="absolute -left-32 -top-20 h-[30rem] w-[30rem] rounded-full bg-primary/[0.06] blur-[160px] dark:bg-primary/[0.08]"></div>
+      <div class="absolute -right-20 top-1/4 h-96 w-96 rounded-full bg-sky-200/30 blur-[140px] dark:bg-sky-500/[0.05]"></div>
+      <div class="absolute bottom-0 left-1/3 h-72 w-72 rounded-full bg-violet-100/30 blur-[120px] dark:bg-violet-500/[0.04]"></div>
+      <div class="absolute inset-0 bg-[radial-gradient(circle_at_1px_1px,rgba(0,0,0,0.025)_1px,transparent_0)] [background-size:24px_24px] dark:bg-[radial-gradient(circle_at_1px_1px,rgba(255,255,255,0.03)_1px,transparent_0)]"></div>
+
+      {{# Floating logos #}}
+      {{ if logos }}
+        <style>
+          .float-logos > :nth-child(1) { top: 8%;  left: 5%;  --duration:20s; --delay:-2s;  --dx:25px; --dy:-18px; --rot:3deg; }
+          .float-logos > :nth-child(2) { top: 65%; left: 8%;  --duration:24s; --delay:-6s;  --dx:20px; --dy:-25px; --rot:2deg; }
+          .float-logos > :nth-child(3) { top: 15%; left: 85%; --duration:22s; --delay:-4s;  --dx:-30px;--dy:-15px; --rot:4deg; }
+          .float-logos > :nth-child(4) { top: 70%; left: 82%; --duration:26s; --delay:-8s;  --dx:-20px;--dy:20px;  --rot:2deg; }
+          .float-logos > :nth-child(5) { top: 35%; left: 3%;  --duration:21s; --delay:-10s; --dx:35px; --dy:-12px; --rot:3deg; }
+          .float-logos > :nth-child(6) { top: 45%; left: 90%; --duration:23s; --delay:-3s;  --dx:-25px;--dy:-22px; --rot:5deg; }
+          .float-logos > :nth-child(7) { top: 85%; left: 45%; --duration:25s; --delay:-7s;  --dx:15px; --dy:-30px; --rot:2deg; }
+        </style>
+        <div class="float-logos absolute inset-0 overflow-hidden" aria-hidden="true">
+          {{ logos }}
+            <img
+              src="{{ url }}"
+              alt=""
+              class="float-logo pointer-events-none absolute h-8 w-auto opacity-[0.04] grayscale dark:opacity-[0.06] md:h-10"
+              loading="lazy"
+            />
+          {{ /logos }}
+        </div>
+      {{ /if }}
+    </div>
+
+    <div class="relative z-10">
+
+      {{# Hero content — centered #}}
+      <div class="fluid-grid">
+        <div class="span-content py-14 md:py-20 lg:py-24">
+          <div class="mx-auto max-w-3xl text-center">
+
+            {{ if eyebrow }}
+              <div class="mb-5">
+                <span
+                  class="
+                    inline-flex items-center gap-2.5
+                    rounded-full border border-neutral-200/80 dark:border-slate-700 bg-white/80 dark:bg-slate-800/70
+                    px-5 py-2 text-sm font-semibold text-neutral-700 dark:text-slate-200
+                    shadow-sm shadow-neutral-900/5 backdrop-blur-sm
+                  "
+                >
+                  <span class="h-2 w-2 rounded-full bg-primary shadow-[0_0_6px_rgba(248,114,6,0.5)]"></span>
+                  {{ eyebrow }}
+                </span>
+              </div>
+            {{ /if }}
+
+            {{ if heading }}
+              <h1
+                class="
+                  text-balance text-3xl font-semibold tracking-tight
+                  text-neutral-950 dark:text-white
+                  sm:text-4xl md:text-5xl lg:text-6xl
+                  leading-[1.08]
+                "
+              >
+                {{ heading }}
+              </h1>
+            {{ /if }}
+
+            {{ if text }}
+              <p class="mx-auto mt-6 max-w-2xl text-base leading-relaxed text-neutral-600 dark:text-slate-300 md:text-lg md:leading-relaxed">
+                {{ text }}
+              </p>
+            {{ /if }}
+
+            {{ if buttons }}
+              <div class="mt-8 flex flex-wrap justify-center gap-4">
+                {{ buttons }}
+                  <a
+                    href="{{ link:url }}"
+                    {{ if link:target == '_blank' }} target="_blank" rel="noopener noreferrer" {{ /if }}
+                    class="
+                      inline-flex items-center justify-center gap-2
+                      rounded-xl bg-gradient-to-r from-orange-600 to-orange-500
+                      px-8 py-4
+                      text-base font-bold text-white
+                      shadow-lg shadow-orange-500/25
+                      ring-1 ring-inset ring-white/10
+                      transition hover:brightness-110 hover:-translate-y-[1px] hover:shadow-xl hover:shadow-orange-500/30
+                      active:translate-y-0
+                      focus:outline-none focus-visible:ring-2 focus-visible:ring-orange-400/40 focus-visible:ring-offset-2
+                    "
+                  >
+                    {{ label }}
+                    <svg class="h-4 w-4" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M3 10a.75.75 0 01.75-.75h10.638L11.23 6.29a.75.75 0 111.04-1.08l4.5 4.25a.75.75 0 010 1.08l-4.5 4.25a.75.75 0 11-1.04-1.08l3.158-2.96H3.75A.75.75 0 013 10z" clip-rule="evenodd"/></svg>
+                  </a>
+                {{ /buttons }}
+              </div>
+            {{ /if }}
+
+          </div>
+        </div>
+      </div>
+
+      {{# Integrated stats — prominent cards #}}
+      {{ if stats }}
+        <div class="fluid-grid pb-14 md:pb-20">
+          <div class="span-content">
+
+            {{# Divider #}}
+            <div class="mb-10 h-px w-full bg-gradient-to-r from-transparent via-neutral-300/60 to-transparent dark:via-slate-700/60 md:mb-12"></div>
+
+            <div class="grid gap-4 grid-cols-1 sm:grid-cols-{{ stats | count }} sm:gap-5 md:gap-6">
+              {{ stats }}
+                <div
+                  class="group relative"
+                  x-data="statCounter('{{ value }}')"
+                  x-intersect.once="start()"
+                >
+                  {{# Card glow on hover #}}
+                  <div class="pointer-events-none absolute -inset-px rounded-[1.1rem] bg-gradient-to-br from-primary/20 via-transparent to-sky-400/20 opacity-0 transition-opacity duration-500 group-hover:opacity-100 dark:from-primary/30 dark:to-sky-400/25"></div>
+
+                  <div
+                    class="
+                      relative overflow-hidden rounded-2xl
+                      border border-neutral-200/60 dark:border-slate-700/80
+                      bg-white dark:bg-slate-800/80
+                      px-6 py-8 text-center
+                      shadow-md shadow-black/[0.03]
+                      transition-all duration-500
+                      hover:-translate-y-1 hover:shadow-xl hover:shadow-primary/[0.06]
+                      sm:py-10
+                    "
+                  >
+                    {{# Top accent #}}
+                    <div class="absolute inset-x-0 top-0 h-[2px] bg-gradient-to-r from-transparent via-primary/50 to-transparent opacity-60 transition-opacity duration-500 group-hover:opacity-100"></div>
+
+                    {{# Inner glow #}}
+                    <div class="pointer-events-none absolute -top-16 left-1/2 h-32 w-32 -translate-x-1/2 rounded-full bg-primary/[0.04] blur-[60px] opacity-0 transition-opacity duration-500 group-hover:opacity-100 dark:bg-primary/[0.08]"></div>
+
+                    <p class="relative text-4xl font-bold tracking-tight text-neutral-900 dark:text-white md:text-5xl" x-text="display">
+                      0
+                    </p>
+                    <p class="relative mt-3 text-sm leading-relaxed text-neutral-600 dark:text-slate-400">
+                      {{ label }}
+                    </p>
+                  </div>
+                </div>
+              {{ /stats }}
+            </div>
+
+            {{ if trust_line }}
+              <div class="mt-8 flex items-center justify-center gap-2">
+                <svg class="h-4 w-4 shrink-0 text-primary/50" viewBox="0 0 20 20" fill="currentColor">
+                  <path fill-rule="evenodd" d="M16.403 12.652a3 3 0 000-5.304 3 3 0 00-3.75-3.751 3 3 0 00-5.305 0 3 3 0 00-3.751 3.75 3 3 0 000 5.305 3 3 0 003.75 3.751 3 3 0 005.305 0 3 3 0 003.751-3.75zm-2.546-4.46a.75.75 0 10-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd" />
+                </svg>
+                <p class="text-sm leading-relaxed text-neutral-500 dark:text-slate-400">{{ trust_line }}</p>
+              </div>
+            {{ /if }}
+
+          </div>
+        </div>
+      {{ /if }}
+
+    </div>
+  </section>
+
+{{ else }}
+
+  {{# ═══════════════════════════════════════════════
+      DEFAULT LIGHT VARIANT
+  ═══════════════════════════════════════════════ #}}
+
+  <section class="relative overflow-hidden bg-white dark:bg-slate-900">
+
+    {{# GLOBAL BACKGROUND — gradient + texture (covers full section) #}}
+    <div class="absolute inset-0" aria-hidden="true">
+      <div class="absolute inset-0 bg-gradient-to-b from-slate-50 via-white to-white dark:from-slate-800/50 dark:via-slate-900 dark:to-slate-900"></div>
+      <div class="absolute inset-0 bg-gradient-to-tr from-orange-50/40 via-transparent to-sky-50/30 dark:from-orange-900/[0.06] dark:via-transparent dark:to-sky-900/[0.04]"></div>
+      <div class="absolute -left-32 top-0 h-[24rem] w-[24rem] rounded-full bg-primary/[0.04] blur-[120px] dark:bg-primary/[0.06]"></div>
+      <div class="absolute -right-20 top-1/3 h-72 w-72 rounded-full bg-sky-200/20 blur-[100px] dark:bg-sky-500/[0.04]"></div>
+      <div class="absolute inset-0 bg-[radial-gradient(circle_at_1px_1px,rgba(0,0,0,0.03)_1px,transparent_0)] [background-size:24px_24px] dark:bg-[radial-gradient(circle_at_1px_1px,rgba(255,255,255,0.03)_1px,transparent_0)]"></div>
+    </div>
+
+    <div class="relative z-10">
+
+      {{# ═══════════════════════════════════════════════
+           TOP ZONE: Message + Action (with bg image)
+           ═══════════════════════════════════════════════ #}}
+      <div class="relative overflow-hidden">
+
+        {{# Right-side image — flush to screen edge #}}
+        {{ if image }}
+          <div class="absolute inset-y-0 right-0 w-1/2 hidden md:block" aria-hidden="true">
+            {{ image }}
+              <img
+                src="{{ url }}"
+                alt=""
+                class="h-full w-full object-cover object-center"
+                loading="eager"
+              />
+            {{ /image }}
+            <div class="absolute inset-0 bg-gradient-to-r from-white via-white/60 to-transparent dark:from-slate-900 dark:via-slate-900/60 dark:to-transparent"></div>
+            <div class="absolute inset-x-0 bottom-0 h-24 bg-gradient-to-b from-transparent to-white dark:to-slate-900"></div>
+          </div>
+        {{ /if }}
+
+        {{# Message content — stays in grid #}}
+        <div class="relative fluid-grid">
+          <div class="span-content py-10 md:py-14 lg:py-16">
+
+            {{ if eyebrow }}
+              <div class="mb-4">
+                <span
+                  class="
+                    inline-flex items-center gap-2.5
+                    rounded-full border border-neutral-200/80 dark:border-slate-700 bg-white/80 dark:bg-slate-800/70
+                    px-5 py-2 text-sm font-semibold text-neutral-700 dark:text-slate-200
+                    shadow-sm shadow-neutral-900/5 backdrop-blur-sm
+                  "
+                >
+                  <span class="h-2 w-2 rounded-full bg-primary shadow-[0_0_6px_rgba(248,114,6,0.5)]"></span>
+                  {{ eyebrow }}
+                </span>
+              </div>
+            {{ /if }}
+
+            {{ if heading }}
+              <h1
+                class="
+                  max-w-3xl text-balance text-3xl font-semibold tracking-tight
+                  text-neutral-950 dark:text-white
+                  sm:text-4xl md:text-5xl
+                  leading-[1.08]
+                "
+              >
+                {{ heading }}
+              </h1>
+            {{ /if }}
+
+            {{ if text }}
+              <p class="mt-5 max-w-2xl text-base leading-relaxed text-neutral-600 dark:text-slate-300 md:text-lg md:leading-relaxed">
+                {{ text }}
+              </p>
+            {{ /if }}
+
+            {{ if buttons }}
+              <div class="mt-7 max-w-xl">
+                {{ buttons }}
+                  <a
+                    href="{{ link:url }}"
+                    {{ if link:target == '_blank' }} target="_blank" rel="noopener noreferrer" {{ /if }}
+                    class="
+                      flex w-full items-center justify-center gap-2
+                      rounded-xl bg-gradient-to-r from-orange-600 to-orange-500
+                      px-8 py-4
+                      text-base font-bold text-white
+                      shadow-lg shadow-orange-500/25
+                      ring-1 ring-inset ring-white/10
+                      transition hover:brightness-110 hover:-translate-y-[1px] hover:shadow-xl hover:shadow-orange-500/30
+                      active:translate-y-0
+                      focus:outline-none focus-visible:ring-2 focus-visible:ring-orange-400/40 focus-visible:ring-offset-2
+                    "
+                  >
+                    {{ label }}
+                    <svg class="h-4 w-4" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M3 10a.75.75 0 01.75-.75h10.638L11.23 6.29a.75.75 0 111.04-1.08l4.5 4.25a.75.75 0 010 1.08l-4.5 4.25a.75.75 0 11-1.04-1.08l3.158-2.96H3.75A.75.75 0 013 10z" clip-rule="evenodd"/></svg>
+                  </a>
+                {{ /buttons }}
+              </div>
+            {{ /if }}
+
+          </div>
+        </div>
+      </div>
+
+      {{# ═══════════════════════════════════════════════
+           BOTTOM ZONE: Proof bar + Scroll (clean bg)
+           ═══════════════════════════════════════════════ #}}
+      <div class="fluid-grid">
+        <div class="span-content">
+
+        {{ if stats || trust_line }}
+          <div class="relative pb-4">
+
+            {{# Divider #}}
+            <div class="h-px w-full bg-gradient-to-r from-neutral-200/80 via-neutral-200/40 to-transparent dark:from-slate-700/80 dark:via-slate-700/40 dark:to-transparent"></div>
+
+            <div class="pt-6 flex flex-col gap-6 md:flex-row md:items-center md:justify-between">
+
+              {{ if stats }}
+                <div class="flex items-center gap-0">
+                  {{ stats }}
+                    <div class="flex items-center">
+                      {{ unless first }}
+                        <div class="mx-5 h-9 w-px bg-neutral-200 dark:bg-slate-700 md:mx-7"></div>
+                      {{ /unless }}
+                      <div>
+                        <span class="text-2xl font-bold tracking-tight text-neutral-900 dark:text-white md:text-3xl">{{ value }}</span>
+                        <span class="ml-2 text-sm text-neutral-500 dark:text-slate-400">{{ label }}</span>
+                      </div>
+                    </div>
+                  {{ /stats }}
+                </div>
+              {{ /if }}
+
+              {{ if trust_line }}
+                <div class="relative md:max-w-xs pl-4 border-l-2 border-primary/30 dark:border-primary/40">
+                  <p class="text-sm leading-relaxed text-neutral-500 dark:text-slate-400">
+                    <svg class="inline-block -mt-0.5 mr-1 h-4 w-4 text-primary" viewBox="0 0 20 20" fill="currentColor">
+                      <path fill-rule="evenodd" d="M16.403 12.652a3 3 0 000-5.304 3 3 0 00-3.75-3.751 3 3 0 00-5.305 0 3 3 0 00-3.751 3.75 3 3 0 000 5.305 3 3 0 003.75 3.751 3 3 0 005.305 0 3 3 0 003.751-3.75zm-2.546-4.46a.75.75 0 10-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd" />
+                    </svg>
+                    {{ trust_line }}
+                  </p>
+                </div>
+              {{ /if }}
+
+            </div>
+          </div>
+        {{ /if }}
+
+        {{# Scroll indicator #}}
+        {{ if scroll_label }}
+          <div
+            class="py-4 flex cursor-pointer flex-col items-center gap-1"
+            onclick="this.closest('[data-block-type]').nextElementSibling?.scrollIntoView({ behavior: 'smooth', block: 'start' })"
+            role="button"
+            tabindex="0"
+            onkeydown="if(event.key==='Enter')this.click()"
+          >
+            <span class="text-xs font-medium tracking-wide text-neutral-400 dark:text-slate-500">{{ scroll_label }}</span>
+            <svg class="h-5 w-5 animate-bounce text-neutral-300 dark:text-slate-600" viewBox="0 0 20 20" fill="currentColor">
+              <path fill-rule="evenodd" d="M5.22 8.22a.75.75 0 0 1 1.06 0L10 11.94l3.72-3.72a.75.75 0 1 1 1.06 1.06l-4.25 4.25a.75.75 0 0 1-1.06 0L5.22 9.28a.75.75 0 0 1 0-1.06Z" clip-rule="evenodd" />
+            </svg>
+          </div>
+        {{ /if }}
+
+        </div>
+      </div>
+
+    </div>
+
+    {{# SoftwareApplication Schema.org JSON-LD for product pages #}}
+    {{ if heading && text }}
+      <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "SoftwareApplication",
+          "name": {{ heading | striptags | to_json }},
+          "description": {{ text | striptags | to_json }},
+          "url": "{{ permalink }}",
+          "applicationCategory": "BusinessApplication",
+          "operatingSystem": "Web",
+          "provider": {
+            "@type": "Organization",
+            "name": "Apprix Oy",
+            "url": "https://apprix.fi"
+          },
+          "offers": {
+            "@type": "Offer",
+            "availability": "https://schema.org/InStock",
+            "priceCurrency": "EUR"
+          }
+        }
+      </script>
+    {{ /if }}
+  </section>
+
+{{ /if }}

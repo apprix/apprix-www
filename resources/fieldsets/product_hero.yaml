@@ -1,0 +1,123 @@
+title: Product hero
+fields:
+  - handle: tone
+    field:
+      type: select
+      display: Tone
+      instructions: "Visual tone. 'Brand' uses a dark branded background with prominent stats."
+      default: light
+      options:
+        light: Light
+        brand: Brand (dark)
+      width: 33
+
+  - handle: eyebrow
+    field:
+      type: text
+      display: Eyebrow
+      instructions: "Product name or short label (e.g. 'Apprix Builder®')."
+      localizable: true
+
+  - handle: heading
+    field:
+      type: text
+      display: Heading
+      localizable: true
+      required: true
+
+  - handle: text
+    field:
+      type: textarea
+      display: Text
+      localizable: true
+      rows: 3
+
+  - handle: trust_line
+    field:
+      type: textarea
+      display: Trust line
+      instructions: "Highlighted proof statement shown as a callout box."
+      localizable: true
+      rows: 2
+
+  - handle: stats
+    field:
+      type: replicator
+      localizable: true
+      display: Inline stats
+      instructions: "Compact stat counters shown inside the hero."
+      button_label: "Add stat"
+      sets:
+        stat:
+          display: Stat
+          icon: number-list
+          fields:
+            - handle: value
+              field:
+                type: text
+                localizable: true
+                required: true
+                display: Value
+                instructions: "The number (e.g. '20+', '1 000+')."
+
+            - handle: label
+              field:
+                type: text
+                localizable: true
+                required: true
+                display: Label
+                instructions: "Short label (e.g. 'vuotta kokemusta')."
+
+  - handle: buttons
+    field:
+      type: grid
+      display: Buttons
+      instructions: "1–2 CTA buttons."
+      localizable: true
+      max_rows: 2
+      fields:
+        - handle: label
+          field:
+            type: text
+            display: Label
+            required: true
+        - handle: link
+          field:
+            type: link
+            display: Link
+            required: true
+        - handle: style
+          field:
+            type: select
+            display: Style
+            default: primary
+            options:
+              primary: Primary
+              secondary: Secondary
+
+  - handle: scroll_label
+    field:
+      type: text
+      display: Scroll label
+      instructions: "Text for the 'read more' chevron link that scrolls to the next section (e.g. 'Lue lisää')."
+      localizable: true
+
+  - handle: logos
+    field:
+      type: assets
+      display: Background logos
+      instructions: "Optional floating logos for the hero background (brand tone only)."
+      container: files
+      mode: grid
+      max_files: 24
+      localizable: false
+
+  - handle: image
+    field:
+      type: assets
+      display: Image
+      instructions: "Product screenshot or hero visual."
+      container: files
+      max_files: 1
+      mode: grid
+      localizable: false

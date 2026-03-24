@@ -1,0 +1,77 @@
+title: Feature grid
+fields:
+  - handle: eyebrow
+    field:
+      type: text
+      localizable: true
+      display: Eyebrow
+      instructions: "Optional short label above the title."
+
+  - handle: title
+    field:
+      type: text
+      localizable: true
+      required: true
+      display: Title
+
+  - handle: lead
+    field:
+      type: textarea
+      localizable: true
+      display: Lead text
+      instructions: "Short supporting text (1–2 lines)."
+      rows: 2
+
+  - handle: features
+    field:
+      type: replicator
+      localizable: true
+      display: Features
+      instructions: "Add 2–4 feature cards."
+      button_label: "Add feature"
+      sets:
+        feature:
+          display: Feature
+          icon: layout-dashboard
+          fields:
+            - handle: icon
+              field:
+                type: select
+                display: Icon
+                instructions: "Choose an icon for this feature."
+                default: pencil
+                options:
+                  pencil: Pencil (content/creation)
+                  target: Target (reach/goals)
+                  plug: Plug (integrations)
+                  chart: Chart (analytics/data)
+                  shield: Shield (security)
+                  users: Users (people/teams)
+
+            - handle: eyebrow
+              field:
+                type: text
+                localizable: true
+                display: Eyebrow
+                instructions: "Short category label (e.g. 'SISÄLLÖNTUOTANTO')."
+
+            - handle: title
+              field:
+                type: text
+                localizable: true
+                required: true
+                display: Title
+
+            - handle: text
+              field:
+                type: textarea
+                localizable: true
+                display: Description
+                rows: 3
+
+            - handle: bullets
+              field:
+                type: list
+                localizable: true
+                display: Key points
+                instructions: "1–4 short bullets."

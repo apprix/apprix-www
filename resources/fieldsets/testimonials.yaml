@@ -1,0 +1,59 @@
+title: Testimonials
+fields:
+  - handle: eyebrow
+    field:
+      type: text
+      localizable: true
+      display: Eyebrow
+      instructions: "Optional short label above the title."
+
+  - handle: title
+    field:
+      type: text
+      localizable: true
+      display: Title
+      instructions: "Section heading."
+
+  - handle: intro
+    field:
+      type: textarea
+      localizable: true
+      display: Intro
+      instructions: "Short intro text (1–2 lines)."
+      rows: 3
+
+  - handle: clients
+    field:
+      type: textarea
+      localizable: true
+      display: Client names
+      instructions: "List of client names for social proof (1 line)."
+      rows: 2
+
+  - handle: quotes
+    field:
+      type: replicator
+      localizable: true
+      display: Quotes
+      instructions: "Add testimonial quotes."
+      button_label: "Add quote"
+      sets:
+        quote:
+          display: Quote
+          icon: text-formatting-quotation-mark
+          fields:
+            - handle: text
+              field:
+                type: textarea
+                localizable: true
+                required: true
+                display: Quote text
+                instructions: "The testimonial quote."
+                rows: 3
+
+            - handle: author
+              field:
+                type: text
+                localizable: true
+                display: Author
+                instructions: "Name or role of the person (optional)."

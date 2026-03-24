@@ -1,10 +1,19 @@
 {{#
   @name FAQ
-  @desc Collapsible FAQ accordion section with schema.org FAQPage JSON-LD.
+  @desc Premium FAQ accordion section with schema.org FAQPage JSON-LD.
 #}}
 
-<section class="relative">
-  <div class="fluid-grid relative py-16 md:py-20">
+<section class="relative overflow-hidden">
+
+  {{# Background — rich ambient layers #}}
+  <div class="absolute inset-0" aria-hidden="true">
+    <div class="absolute inset-0 bg-gradient-to-b from-neutral-50/60 via-white to-white dark:from-slate-800/40 dark:via-slate-900 dark:to-slate-900"></div>
+    <div class="pointer-events-none absolute left-1/4 -top-20 h-[28rem] w-[28rem] rounded-full bg-primary/[0.04] blur-[140px] dark:bg-primary/[0.06]"></div>
+    <div class="pointer-events-none absolute right-0 bottom-20 h-72 w-72 rounded-full bg-sky-100/40 blur-[120px] dark:bg-sky-500/[0.04]"></div>
+    <div class="pointer-events-none absolute -left-10 bottom-0 h-60 w-60 rounded-full bg-violet-100/25 blur-[100px] dark:bg-violet-500/[0.03]"></div>
+  </div>
+
+  <div class="fluid-grid relative pt-8 pb-16 md:pt-10 md:pb-24">
     <div class="span-content">
 
       {{# Section heading #}}
@@ -12,7 +21,7 @@
         <div class="mx-auto mb-10 max-w-3xl text-center md:mb-14">
 
           {{ if eyebrow }}
-            <p class="mb-2 text-sm font-medium uppercase tracking-widest text-primary">
+            <p class="mb-2 text-sm font-semibold uppercase tracking-widest text-primary">
               {{ eyebrow }}
             </p>
           {{ /if }}
@@ -29,36 +38,84 @@
       {{# FAQ accordion #}}
       {{ if faq_items }}
         <div class="mx-auto max-w-3xl" x-data="{ active: null }">
-          <div class="divide-y divide-neutral-200/70 dark:divide-slate-700 rounded-2xl border border-neutral-200/70 dark:border-slate-700 bg-white dark:bg-slate-800 shadow-lg shadow-black/[0.04] ring-1 ring-neutral-200/50 dark:ring-slate-700/50 overflow-hidden">
+          <div class="space-y-3">
             {{ faq_items }}
-              <div>
-                <button
-                  @click="active = active === {{ index }} ? null : {{ index }}"
-                  class="flex w-full items-center justify-between gap-4 px-6 py-5 text-left transition-colors hover:bg-neutral-50 dark:hover:bg-slate-750 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary/30 focus-visible:ring-inset"
-                  :aria-expanded="active === {{ index }}"
-                >
-                  <span class="text-lg font-semibold text-neutral-900 dark:text-slate-100">
-                    {{ question }}
-                  </span>
-                  <svg
-                    class="h-5 w-5 shrink-0 text-neutral-500 dark:text-slate-400 transition-transform duration-300"
-                    :class="active === {{ index }} && 'rotate-180'"
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 20 20"
-                    fill="currentColor"
-                  >
-                    <path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clip-rule="evenodd" />
-                  </svg>
-                </button>
+              <div
+                class="group relative"
+              >
+                {{# Gradient border glow — visible when open #}}
+                <div
+                  class="pointer-events-none absolute -inset-px rounded-[1.1rem] bg-gradient-to-br from-primary/20 via-transparent to-sky-400/20 opacity-0 transition-opacity duration-500"
+                  :class="active === {{ index }} ? 'opacity-100' : 'group-hover:opacity-60'"
+                ></div>
 
                 <div
-                  x-show="active === {{ index }}"
-                  x-collapse
-                  x-cloak
+                  class="
+                    relative overflow-hidden rounded-2xl
+                    border border-neutral-200/60 dark:border-slate-700/80
+                    bg-white dark:bg-slate-800/80
+                    shadow-sm
+                    transition-all duration-500
+                  "
+                  :class="active === {{ index }} ? 'shadow-lg shadow-primary/[0.06]' : 'hover:shadow-md'"
                 >
-                  <div class="px-6 pb-5 prose dark:prose-invert prose-a:underline prose-a:decoration-primary prose-a:decoration-2 prose-a:hover:text-primary max-w-none text-neutral-700 dark:text-slate-300">
-                    {{ answer }}
+
+                  {{# Top accent line — visible when open #}}
+                  <div
+                    class="absolute inset-x-0 top-0 h-[2px] bg-gradient-to-r from-transparent via-primary/50 to-transparent transition-opacity duration-500"
+                    :class="active === {{ index }} ? 'opacity-100' : 'opacity-0'"
+                  ></div>
+
+                  {{# Question trigger #}}
+                  <button
+                    @click="active = active === {{ index }} ? null : {{ index }}"
+                    class="flex w-full items-center gap-5 px-7 py-6 text-left focus:outline-none focus-visible:ring-2 focus-visible:ring-primary/30 focus-visible:ring-inset"
+                    :aria-expanded="active === {{ index }}"
+                  >
+                    {{# Question text #}}
+                    <span
+                      class="flex-1 text-base font-semibold tracking-tight transition-colors duration-300 sm:text-lg"
+                      :class="active === {{ index }}
+                        ? 'text-primary dark:text-primary'
+                        : 'text-neutral-900 dark:text-slate-100'"
+                    >
+                      {{ question }}
+                    </span>
+
+                    {{# Chevron #}}
+                    <div
+                      class="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg transition-all duration-300"
+                      :class="active === {{ index }}
+                        ? 'bg-primary/10 dark:bg-primary/20'
+                        : 'bg-neutral-100 dark:bg-slate-700'"
+                    >
+                      <svg
+                        class="h-4 w-4 transition-transform duration-300"
+                        :class="[
+                          active === {{ index }} ? 'rotate-180 text-primary' : 'text-neutral-500 dark:text-slate-400'
+                        ]"
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 20 20"
+                        fill="currentColor"
+                      >
+                        <path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clip-rule="evenodd" />
+                      </svg>
+                    </div>
+                  </button>
+
+                  {{# Answer panel #}}
+                  <div
+                    x-show="active === {{ index }}"
+                    x-collapse
+                    x-cloak
+                  >
+                    <div class="px-7 pb-7">
+                      <div class="prose dark:prose-invert prose-a:underline prose-a:decoration-primary prose-a:decoration-2 hover:prose-a:text-primary max-w-none text-neutral-600 dark:text-slate-300 leading-relaxed">
+                        {{ answer }}
+                      </div>
+                    </div>
                   </div>
+
                 </div>
               </div>
             {{ /faq_items }}

@@ -3,7 +3,15 @@
   @desc Key metric counters section with count-up animation.
 #}}
 
-<section class="relative">
+<section class="relative overflow-hidden">
+
+  {{# Tinted background — gradient fade for smooth section transitions #}}
+  <div class="absolute inset-0" aria-hidden="true">
+    <div class="absolute inset-0 bg-gradient-to-b from-neutral-50 via-neutral-50/80 via-30% to-transparent dark:from-slate-800/60 dark:via-slate-800/40 dark:via-30% dark:to-transparent"></div>
+    <div class="pointer-events-none absolute left-1/3 -top-20 h-96 w-96 rounded-full bg-primary/[0.04] blur-[120px] dark:bg-primary/[0.06]"></div>
+    <div class="pointer-events-none absolute -right-20 bottom-0 h-60 w-60 rounded-full bg-sky-100/40 blur-[100px] dark:bg-sky-500/[0.04]"></div>
+  </div>
+
   <div class="fluid-grid relative py-16 md:py-20">
     <div class="span-content">
 

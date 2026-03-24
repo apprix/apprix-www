@@ -155,3 +155,130 @@
         transform: none !important;
     }
 }
+
+/* =========================
+   Floating hero logos
+   ========================= */
+
+@keyframes float-drift {
+    0%   { transform: translate(0, 0) rotate(0deg); }
+    25%  { transform: translate(var(--dx, 30px), var(--dy, -20px)) rotate(var(--rot, 3deg)); }
+    50%  { transform: translate(calc(var(--dx, 30px) * -0.6), calc(var(--dy, -20px) * 1.5)) rotate(calc(var(--rot, 3deg) * -0.5)); }
+    75%  { transform: translate(calc(var(--dx, 30px) * 0.8), calc(var(--dy, -20px) * -0.7)) rotate(calc(var(--rot, 3deg) * 0.8)); }
+    100% { transform: translate(0, 0) rotate(0deg); }
+}
+
+.float-logo {
+    animation: float-drift var(--duration, 20s) ease-in-out infinite;
+    animation-delay: var(--delay, 0s);
+    will-change: transform;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .float-logo {
+        animation: none !important;
+    }
+}
+
+/* =========================
+   Feature showcase progress
+   ========================= */
+
+/* Segmented progress track */
+.showcase-track {
+    display: flex;
+    gap: 4px;
+}
+
+.showcase-segment {
+    flex: 1;
+    height: 3px;
+    border-radius: 9999px;
+    background: rgba(0, 0, 0, 0.05);
+    overflow: hidden;
+    position: relative;
+    transition: background 0.3s ease;
+}
+
+.showcase-segment-active {
+    height: 3px;
+    background: rgba(248, 114, 6, 0.12);
+}
+
+.dark .showcase-segment {
+    background: rgba(255, 255, 255, 0.06);
+}
+
+.dark .showcase-segment-active {
+    background: rgba(248, 114, 6, 0.15);
+}
+
+/* Filled state for completed (past) segments */
+.showcase-segment-fill {
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    background: linear-gradient(90deg, #f87206, #fb923c);
+    transform-origin: left;
+    transform: scaleX(0);
+    will-change: transform;
+}
+
+/* Active segment: animated fill */
+.showcase-segment-fill[data-state="active"] {
+    transform: scaleX(var(--progress, 0));
+    box-shadow: 0 0 8px rgba(248, 114, 6, 0.4),
+                0 0 20px rgba(248, 114, 6, 0.15);
+}
+
+/* Completed segment */
+.showcase-segment-fill[data-state="done"] {
+    transform: scaleX(1);
+    opacity: 0.45;
+    box-shadow: none;
+    transition: opacity 0.3s ease;
+}
+
+/* Inactive/future segment */
+.showcase-segment-fill[data-state="idle"] {
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+/* Shimmer on active fill */
+.showcase-segment-fill[data-state="active"]::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    background: linear-gradient(
+        90deg,
+        transparent 0%,
+        rgba(255, 255, 255, 0.35) 50%,
+        transparent 100%
+    );
+    background-size: 200% 100%;
+    animation: showcase-shimmer 2s ease-in-out infinite;
+}
+
+@keyframes showcase-shimmer {
+    0%   { background-position: 200% 0; }
+    100% { background-position: -200% 0; }
+}
+
+/* Glow pulse on active segment container */
+.showcase-segment-active {
+    box-shadow: 0 0 6px rgba(248, 114, 6, 0.25);
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .showcase-segment-fill[data-state="active"]::after {
+        animation: none !important;
+    }
+    .showcase-segment-fill[data-state="active"] {
+        box-shadow: none;
+    }
+    .showcase-segment-active {
+        box-shadow: none;
+    }
+}

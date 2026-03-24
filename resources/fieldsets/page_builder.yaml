@@ -67,6 +67,13 @@ fields:
               fields:
                 - import: hero
 
+            product_hero:
+              display: Product hero
+              instructions: "Dark gradient hero for product/service landing pages."
+              icon: media-image-picture-landscape
+              fields:
+                - import: product_hero
+
             logo_carousel:
               display: Logo carousel
               instructions: "Animated logo strip / trust section."
@@ -80,6 +87,27 @@ fields:
               icon: arrows-left-right
               fields:
                 - import: feature_row
+
+            feature_grid:
+              display: Feature grid
+              instructions: "Numbered feature list for product pages."
+              icon: layout-grid
+              fields:
+                - import: feature_grid
+
+            feature_cards:
+              display: Feature cards
+              instructions: "Compact 2×2 icon card grid for product pages."
+              icon: layout-four-boxes
+              fields:
+                - import: feature_cards
+
+            feature_showcase:
+              display: Feature showcase
+              instructions: "Tabbed feature showcase with auto-rotation (replaces stacked feature rows)."
+              icon: media-image-picture-landscape
+              fields:
+                - import: feature_showcase
 
             articles_index:
               display: Ajankohtaista (listaus)
@@ -115,3 +143,10 @@ fields:
               icon: link
               fields:
                 - import: link_cards
+
+            testimonials:
+              display: Testimonials
+              instructions: "Quote cards with customer/learner feedback."
+              icon: text-formatting-quotation-mark
+              fields:
+                - import: testimonials
