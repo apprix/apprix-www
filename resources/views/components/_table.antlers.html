@@ -16,13 +16,13 @@
         )}}
     "
 >
-    <table class="w-full bg-light border-collapse min-w-[580px] sm:min-w-none">
+    <table class="w-full bg-light dark:bg-slate-800 border-collapse min-w-[580px] sm:min-w-none">
         {{ table }}
             {{ if first && first_row_headers }}
                 <thead>
                     <tr>
                         {{ cells }}
-                            <th class="px-3 py-3 text-xs font-bold tracking-wider text-left text-white uppercase border-b xl:px-6 border-neutral bg-neutral">{{ value }}</th>
+                            <th class="px-3 py-3 text-xs font-bold tracking-wider text-left text-white uppercase border-b xl:px-6 border-neutral bg-neutral dark:bg-slate-700 dark:border-slate-600">{{ value }}</th>
                         {{ /cells }}
                     </tr>
                 </thead>
@@ -34,9 +34,9 @@
                 <tr>
                     {{ cells }}
                         {{ if first && first_column_headers }}
-                            <th class="px-3 py-3 text-xs font-bold tracking-wider text-left text-white uppercase border-b xl:px-6 border-neutral bg-neutral">{{ value }}</th>
+                            <th class="px-3 py-3 text-xs font-bold tracking-wider text-left text-white uppercase border-b xl:px-6 border-neutral bg-neutral dark:bg-slate-700 dark:border-slate-600">{{ value }}</th>
                         {{ else }}
-                            <td class="px-3 py-3 text-sm border-b xl:px-6 border-neutral text-neutral align-top ">{{ value }}</td>
+                            <td class="px-3 py-3 text-sm border-b xl:px-6 border-neutral dark:border-slate-600 text-neutral align-top ">{{ value }}</td>
                         {{ /if }}
                     {{ /cells }}
                 </tr>

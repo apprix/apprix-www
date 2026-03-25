@@ -6,6 +6,7 @@ fields:
       type: text
       display: Title
       instructions: "Main heading for the wizard section."
+      localizable: true
       width: 100
 
   - handle: lead
@@ -13,6 +14,7 @@ fields:
       type: textarea
       display: Lead
       instructions: "Short intro under the title."
+      localizable: true
       rows: 3
       width: 100
 
@@ -120,6 +122,7 @@ fields:
       type: text
       display: Submit button label (optional)
       instructions: "Overrides the default submit label for the last step."
+      localizable: true
       width: 50
 
   - handle: bullets
@@ -127,6 +130,7 @@ fields:
       type: replicator
       display: Promise bullets
       instructions: "Optional bullets shown next to the wizard (e.g. response time, free demo, next steps)."
+      localizable: true
       collapse: true
       listable: false
       sets:

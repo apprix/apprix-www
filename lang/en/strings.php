@@ -9,7 +9,7 @@ return [
     'form_mail_closing' => 'Kind regards',
     'form_mail_from' => config('app.name'),
     'form_mail_greeting' => 'Dear',
-    'form_mail_logo' => config('app.url').'/visuals/statamic-peak-logo.png',
+    'form_mail_logo' => config('app.url').'/files/apprix_logo_rgb.png',
     'form_mail_submitted' => 'Submitted',
     'form_mail_title' => 'Contact form',
     'form_mail_url' => config('app.url'),
@@ -98,4 +98,43 @@ return [
     'next' => 'next',
     'of' => 'of',
     'previous' => 'previous',
+
+    // Search
+    'search' => 'Search',
+    'search_placeholder' => 'Search the site...',
+    'search_article' => 'Article',
+    'search_page' => 'Page',
+    'search_no_results' => 'No results found',
+    'search_try_another' => 'Try a different search term',
+    'search_start_typing' => 'Start typing to search',
+    'search_navigate' => 'navigate',
+    'search_select' => 'select',
+    'search_close' => 'close',
+
+    // Navigation descriptions
+    'contact_us' => 'Contact us',
+    'nav_desc_builder' => 'Create e-learning courses without technical skills',
+    'nav_desc_mycourses' => 'Smart learning environment and course management',
+    'nav_desc_checklist' => 'Digital onboarding and verification checklists',
+    'nav_desc_exam' => 'Complete digital exam management',
+    'nav_desc_content' => 'Expert-crafted training content',
+    'nav_desc_expert' => 'Training, consulting and support',
+
+    // UI
+    'scroll_to_top' => 'Scroll to top',
+    'light_mode' => 'Light mode',
+    'dark_mode' => 'Dark mode',
+
+    // Articles index
+    'search_articles' => 'Search articles…',
+    'results_count' => 'results',
+    'all_tags' => 'All tags',
+    'sort_newest' => 'Newest',
+    'sort_oldest' => 'Oldest',
+    'sort_az' => 'A–Z',
+    'sort_za' => 'Z–A',
+    'read_more' => 'Read more',
+    'no_search_results' => 'No results found.',
+    'no_articles_yet' => 'No articles yet.',
+    'back_to_articles' => 'News',
 ];

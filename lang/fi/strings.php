@@ -9,7 +9,7 @@ return [
     'form_mail_closing' => 'Ystävällisin terveisin',
     'form_mail_from' => config('app.name'),
     'form_mail_greeting' => 'Hei',
-    'form_mail_logo' => config('app.url').'/visuals/statamic-peak-logo.png',
+    'form_mail_logo' => config('app.url').'/files/apprix_logo_rgb.png',
     'form_mail_submitted' => 'Lähetetty',
     'form_mail_title' => 'Yhteydenottolomake',
     'form_mail_url' => config('app.url'),
@@ -98,4 +98,43 @@ return [
     'next' => 'seuraava',
     'of' => '/',
     'previous' => 'edellinen',
+
+    // Search
+    'search' => 'Haku',
+    'search_placeholder' => 'Hae sivustolta...',
+    'search_article' => 'Artikkeli',
+    'search_page' => 'Sivu',
+    'search_no_results' => 'Ei hakutuloksia',
+    'search_try_another' => 'Kokeile toista hakusanaa',
+    'search_start_typing' => 'Kirjoita hakusana aloittaaksesi',
+    'search_navigate' => 'navigoi',
+    'search_select' => 'valitse',
+    'search_close' => 'sulje',
+
+    // Navigation descriptions
+    'contact_us' => 'Ota yhteyttä',
+    'nav_desc_builder' => 'Luo verkkokoulutuksia ilman teknistä osaamista',
+    'nav_desc_mycourses' => 'Älykäs oppimisympäristö ja kurssien hallinta',
+    'nav_desc_checklist' => 'Sähköiset perehdytys- ja tarkistuslistat',
+    'nav_desc_exam' => 'Digitaalisten kokeiden koko prosessi',
+    'nav_desc_content' => 'Asiantuntijoidemme luomaa sisältöä',
+    'nav_desc_expert' => 'Koulutus, konsultointi ja tuki',
+
+    // UI
+    'scroll_to_top' => 'Selaa ylös',
+    'light_mode' => 'Vaalea tila',
+    'dark_mode' => 'Tumma tila',
+
+    // Articles index
+    'search_articles' => 'Hae artikkeleista…',
+    'results_count' => 'tulosta',
+    'all_tags' => 'Kaikki tagit',
+    'sort_newest' => 'Uusimmat',
+    'sort_oldest' => 'Vanhimmat',
+    'sort_az' => 'A–Ö',
+    'sort_za' => 'Ö–A',
+    'read_more' => 'Lue lisää',
+    'no_search_results' => 'Ei hakutuloksia.',
+    'no_articles_yet' => 'Ei vielä artikkeleita.',
+    'back_to_articles' => 'Ajankohtaista',
 ];

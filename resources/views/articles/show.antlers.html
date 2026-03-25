@@ -21,12 +21,17 @@
     <div class="span-content mx-auto max-w-3xl">
 
       {{# Breadcrumb row #}}
+      {{ if site:handle == 'default' }}
+        {{ articles_url = '/ajankohtaista' }}
+      {{ else }}
+        {{ articles_url = '{site:url}ajankohtaista' }}
+      {{ /if }}
       <div class="flex items-center gap-3 text-sm">
         <a
-          href="{{ back_url ?? '/ajankohtaista' }}"
+          href="{{ back_url ?? articles_url }}"
           class="inline-flex items-center gap-1.5 font-medium text-neutral-500 dark:text-slate-400 transition hover:text-neutral-900 dark:hover:text-white"
         >
-          <span>←</span> {{ back_label ?? 'Ajankohtaista' }}
+          <span>←</span> {{ back_label ?? {trans:strings.back_to_articles} }}
         </a>
       </div>
 

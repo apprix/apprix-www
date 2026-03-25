@@ -23,23 +23,21 @@ return [
     |
     */
 
-   'indexes' => [
+    'indexes' => [
 
-    'default' => [
-        'driver' => 'local',
-        'searchables' => 'all',
-        'fields' => ['title', 'page_builder'],
+        'default' => [
+            'driver' => 'local',
+            'searchables' => ['collection:pages'],
+            'fields' => ['title', 'page_builder', 'seo_title', 'seo_description'],
+        ],
+
+        'articles' => [
+            'driver' => 'local',
+            'searchables' => ['collection:articles'],
+            'fields' => ['title', 'intro', 'article', 'seo_title', 'seo_description'],
+        ],
+
     ],
-
-   'articles' => [
-    'driver' => 'local',
-    'searchables' => ['collection:articles'],
-    'fields' => ['title', 'intro', 'article'],
-    ],
-
-
-],
-
 
     /*
     |--------------------------------------------------------------------------

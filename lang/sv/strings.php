@@ -9,7 +9,7 @@ return [
     'form_mail_closing' => 'Med vänliga hälsningar',
     'form_mail_from' => config('app.name'),
     'form_mail_greeting' => 'Hej',
-    'form_mail_logo' => config('app.url').'/visuals/statamic-peak-logo.png',
+    'form_mail_logo' => config('app.url').'/files/apprix_logo_rgb.png',
     'form_mail_submitted' => 'Skickat',
     'form_mail_title' => 'Kontaktformulär',
     'form_mail_url' => config('app.url'),
@@ -98,4 +98,43 @@ return [
     'next' => 'nästa',
     'of' => 'av',
     'previous' => 'föregående',
+
+    // Search
+    'search' => 'Sök',
+    'search_placeholder' => 'Sök på webbplatsen...',
+    'search_article' => 'Artikel',
+    'search_page' => 'Sida',
+    'search_no_results' => 'Inga resultat hittades',
+    'search_try_another' => 'Prova ett annat sökord',
+    'search_start_typing' => 'Börja skriva för att söka',
+    'search_navigate' => 'navigera',
+    'search_select' => 'välj',
+    'search_close' => 'stäng',
+
+    // Navigation descriptions
+    'contact_us' => 'Kontakta oss',
+    'nav_desc_builder' => 'Skapa e-utbildningar utan teknisk kompetens',
+    'nav_desc_mycourses' => 'Smart lärmiljö och kurshantering',
+    'nav_desc_checklist' => 'Digitala introduktions- och kontrolllistor',
+    'nav_desc_exam' => 'Komplett digital provhantering',
+    'nav_desc_content' => 'Expertproducerat utbildningsinnehåll',
+    'nav_desc_expert' => 'Utbildning, konsultering och support',
+
+    // UI
+    'scroll_to_top' => 'Skrolla till toppen',
+    'light_mode' => 'Ljust läge',
+    'dark_mode' => 'Mörkt läge',
+
+    // Articles index
+    'search_articles' => 'Sök artiklar…',
+    'results_count' => 'resultat',
+    'all_tags' => 'Alla taggar',
+    'sort_newest' => 'Senaste',
+    'sort_oldest' => 'Äldsta',
+    'sort_az' => 'A–Ö',
+    'sort_za' => 'Ö–A',
+    'read_more' => 'Läs mer',
+    'no_search_results' => 'Inga resultat hittades.',
+    'no_articles_yet' => 'Inga artiklar ännu.',
+    'back_to_articles' => 'Aktuellt',
 ];

@@ -77,7 +77,7 @@
           {{# Search (compact) #}}
           {{ if show_search }}
           <div class="relative w-full sm:max-w-xs sm:flex-1">
-            <span class="pointer-events-none absolute left-3.5 top-1/2 -translate-y-1/2 text-neutral-400">
+            <span class="pointer-events-none absolute left-3.5 top-1/2 -translate-y-1/2 text-neutral-400 dark:text-slate-500">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
                    class="h-4 w-4">
@@ -88,7 +88,7 @@
             <input
               type="search"
               x-model.debounce.250ms="query"
-              placeholder="{{ search_placeholder ?? 'Hae artikkeleista…' }}"
+              placeholder="{{ search_placeholder ?? {trans:strings.search_articles} }}"
               class="w-full rounded-lg border border-neutral-200 dark:border-slate-700 bg-white dark:bg-slate-800 py-2.5 pl-10 pr-4
                      text-sm text-neutral-800 dark:text-slate-200 placeholder:text-neutral-400 dark:placeholder:text-slate-500
                      focus:border-primary/40 focus:outline-none focus:ring-2 focus:ring-primary/10"
@@ -99,8 +99,8 @@
           <div class="flex flex-wrap items-center gap-3">
             {{# Results count when searching #}}
             <template x-if="query.trim()">
-              <span class="text-xs text-neutral-500">
-                <span class="font-semibold text-neutral-700" x-text="visibleCount"></span> {{ results_label ?? 'tulosta' }}
+              <span class="text-xs text-neutral-500 dark:text-slate-400">
+                <span class="font-semibold text-neutral-700 dark:text-slate-300" x-text="visibleCount"></span> {{ results_label ?? {trans:strings.results_count} }}
               </span>
             </template>
 
@@ -112,7 +112,7 @@
                      bg-[length:1.25rem_1.25rem] bg-[position:right_0.5rem_center] bg-no-repeat
                      focus:border-primary/40 focus:outline-none focus:ring-2 focus:ring-primary/10"
             >
-              <option value="">{{ all_tags_label ?? 'Kaikki tagit' }}</option>
+              <option value="">{{ all_tags_label ?? {trans:strings.all_tags} }}</option>
               {{ taxonomy:tags sort="title:asc" }}
                 <option value="{{ slug }}">{{ title }}</option>
               {{ /taxonomy:tags }}
@@ -127,10 +127,10 @@
                      bg-[length:1.25rem_1.25rem] bg-[position:right_0.5rem_center] bg-no-repeat
                      focus:border-primary/40 focus:outline-none focus:ring-2 focus:ring-primary/10"
             >
-              <option value="newest">{{ sort_newest ?? 'Uusimmat' }}</option>
-              <option value="oldest">{{ sort_oldest ?? 'Vanhimmat' }}</option>
-              <option value="az">{{ sort_az ?? 'A–Ö' }}</option>
-              <option value="za">{{ sort_za ?? 'Ö–A' }}</option>
+              <option value="newest">{{ sort_newest ?? {trans:strings.sort_newest} }}</option>
+              <option value="oldest">{{ sort_oldest ?? {trans:strings.sort_oldest} }}</option>
+              <option value="az">{{ sort_az ?? {trans:strings.sort_az} }}</option>
+              <option value="za">{{ sort_za ?? {trans:strings.sort_za} }}</option>
             </select>
             {{ /if }}
           </div>
@@ -166,14 +166,14 @@
                     }}
                   {{ /image }}
                 {{ else }}
-                  <div class="h-full w-full bg-gradient-to-br from-sky-100 via-white to-orange-100"></div>
+                  <div class="h-full w-full bg-gradient-to-br from-sky-100 via-white to-orange-100 dark:from-slate-700 dark:via-slate-800 dark:to-slate-700"></div>
                 {{ /if }}
 
                 <div class="pointer-events-none absolute inset-x-0 bottom-0 h-20 bg-gradient-to-t from-black/20 to-transparent"></div>
 
                 {{ if date }}
                   <div class="absolute left-3.5 top-3.5">
-                    <span class="inline-flex items-center rounded-md bg-white/90 px-2.5 py-1 text-xs font-medium text-neutral-700 shadow-sm backdrop-blur-sm">
+                    <span class="inline-flex items-center rounded-md bg-white/90 dark:bg-slate-800/90 px-2.5 py-1 text-xs font-medium text-neutral-700 dark:text-slate-300 shadow-sm backdrop-blur-sm">
                       {{ date format="d.m.Y" }}
                     </span>
                   </div>
@@ -205,7 +205,7 @@
                   <div class="-mx-6 mt-5 flex items-center justify-between border-t border-neutral-200/80 dark:border-slate-700 bg-neutral-50 dark:bg-slate-700/50 px-6 py-3.5
                               text-sm font-semibold text-neutral-700 dark:text-slate-300 transition
                               group-hover:bg-orange-50/60 dark:group-hover:bg-primary/10 group-hover:text-orange-800 dark:group-hover:text-primary">
-                    <span>{{ card_button_text ?? 'Lue lisää' }}</span>
+                    <span>{{ card_button_text ?? {trans:strings.read_more} }}</span>
                     <span class="text-brand-orange transition group-hover:translate-x-0.5">&#x2192;</span>
                   </div>
                 </div>
@@ -221,7 +221,7 @@
           x-cloak
           class="mx-auto mt-8 max-w-xl rounded-2xl border border-neutral-200 dark:border-slate-700 bg-white dark:bg-slate-800 p-6 text-center text-sm text-neutral-600 dark:text-slate-400"
         >
-          {{ no_results_text ?? 'Ei hakutuloksia.' }}
+          {{ no_results_text ?? {trans:strings.no_search_results} }}
         </div>
 
         {{# No articles at all #}}
@@ -230,14 +230,14 @@
           x-cloak
           class="mx-auto max-w-xl rounded-2xl border border-neutral-200 dark:border-slate-700 bg-white dark:bg-slate-800 p-6 text-center text-sm text-neutral-600 dark:text-slate-400"
         >
-          {{ no_articles_text ?? 'Ei vielä artikkeleita.' }}
+          {{ no_articles_text ?? {trans:strings.no_articles_yet} }}
         </div>
 
         {{# Optional button #}}
         {{ if show_button }}
           <div class="mt-12 flex justify-center">
             {{ btn_url = button:url ?? '/ajankohtaista' }}
-            {{ btn_label = button:label ?? button:text ?? card_button_text ?? 'Lue lisää' }}
+            {{ btn_label = button:label ?? button:text ?? card_button_text ?? {trans:strings.read_more} }}
 
             <a
               href="{{ btn_url }}"
@@ -282,7 +282,7 @@
           </h2>
         {{ /if }}
         {{ if lead }}
-          <p class="mx-auto mt-3 max-w-2xl text-sm leading-relaxed text-neutral-600 md:text-base">
+          <p class="mx-auto mt-3 max-w-2xl text-sm leading-relaxed text-neutral-600 dark:text-slate-400 md:text-base">
             {{ lead }}
           </p>
         {{ /if }}
@@ -293,7 +293,7 @@
       {{ collection:articles sort="date:desc" limit="{ limit }" }}
         {{ if no_results }}
           <div class="mx-auto max-w-xl rounded-2xl border border-neutral-200 dark:border-slate-700 bg-neutral-50 dark:bg-slate-800 p-6 text-center text-sm text-neutral-600 dark:text-slate-400">
-            {{ no_articles_text ?? 'Ei vielä artikkeleita.' }}
+            {{ no_articles_text ?? {trans:strings.no_articles_yet} }}
           </div>
         {{ else }}
 
@@ -315,14 +315,14 @@
                     }}
                   {{ /image }}
                 {{ else }}
-                  <div class="h-full w-full bg-gradient-to-br from-sky-100 via-white to-orange-100"></div>
+                  <div class="h-full w-full bg-gradient-to-br from-sky-100 via-white to-orange-100 dark:from-slate-700 dark:via-slate-800 dark:to-slate-700"></div>
                 {{ /if }}
 
                 <div class="pointer-events-none absolute inset-x-0 bottom-0 h-20 bg-gradient-to-t from-black/20 to-transparent"></div>
 
                 {{ if date }}
                   <div class="absolute left-3.5 top-3.5">
-                    <span class="inline-flex items-center rounded-md bg-white/90 px-2.5 py-1 text-xs font-medium text-neutral-700 shadow-sm backdrop-blur-sm">
+                    <span class="inline-flex items-center rounded-md bg-white/90 dark:bg-slate-800/90 px-2.5 py-1 text-xs font-medium text-neutral-700 dark:text-slate-300 shadow-sm backdrop-blur-sm">
                       {{ date format="d.m.Y" }}
                     </span>
                   </div>
@@ -354,7 +354,7 @@
                   <div class="-mx-6 mt-5 flex items-center justify-between border-t border-neutral-200/80 dark:border-slate-700 bg-neutral-50 dark:bg-slate-700/50 px-6 py-3.5
                               text-sm font-semibold text-neutral-700 dark:text-slate-300 transition
                               group-hover:bg-orange-50/60 dark:group-hover:bg-primary/10 group-hover:text-orange-800 dark:group-hover:text-primary">
-                    <span>{{ card_button_text ?? 'Lue lisää' }}</span>
+                    <span>{{ card_button_text ?? {trans:strings.read_more} }}</span>
                     <span class="text-brand-orange transition group-hover:translate-x-0.5">&#x2192;</span>
                   </div>
                 </div>
@@ -372,7 +372,7 @@
       {{ if show_button }}
         <div class="mt-12 flex justify-center">
           {{ btn_url = button:url ?? '/ajankohtaista' }}
-          {{ btn_label = button:label ?? button:text ?? card_button_text ?? 'Lue lisää' }}
+          {{ btn_label = button:label ?? button:text ?? card_button_text ?? {trans:strings.read_more} }}
 
           <a
             href="{{ btn_url }}"

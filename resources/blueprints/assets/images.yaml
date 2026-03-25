@@ -12,6 +12,7 @@ tabs:
             field:
               display: 'Alt Text'
               type: textarea
+              localizable: true
               instructions: 'Description of the image'
               instructions_position: below
               focus: true

@@ -179,7 +179,7 @@
                             <circle cx="11" cy="11" r="7"></circle>
                             <path d="M21 21l-4.3-4.3"></path>
                         </svg>
-                        <span class="leading-tight">Haku</span>
+                        <span class="leading-tight">{{ trans:strings.search }}</span>
                     </button>
                 </li>
 
@@ -209,7 +209,7 @@
                                 <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
                             </svg>
                         </template>
-                        <span class="leading-tight" x-text="darkMode ? 'Vaalea tila' : 'Tumma tila'"></span>
+                        <span class="leading-tight" x-text="darkMode ? '{{ trans:strings.light_mode }}' : '{{ trans:strings.dark_mode }}'"></span>
                     </button>
                 </li>
 
@@ -228,7 +228,7 @@
                             transition-colors
                         "
                         :aria-expanded="langOpen"
-                        aria-label="Change language"
+                        aria-label="{{ trans:strings.change_language }}"
                     >
                         <span class="inline-flex items-center gap-3">
                             <span
@@ -312,7 +312,7 @@
                 {{# Mobile CTA button #}}
                 <li class="mt-2 pt-2 border-t border-neutral/10 dark:border-slate-700/60">
                     <a
-                        href="/yritys"
+                        href="/{{ if site:handle != 'default' }}{{ site:handle }}/{{ /if }}yritys"
                         @click="mobileNavOpen = false"
                         class="
                             flex items-center justify-center
@@ -323,7 +323,7 @@
                             focus:outline-none focus:ring-2 focus:ring-primary/30 focus:ring-offset-2
                         "
                     >
-                        Ota yhteyttä
+                        {{ trans:strings.contact_us }}
                     </a>
                 </li>
             </ul>
