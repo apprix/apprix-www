@@ -1,7 +1,7 @@
 ---
 id: 059d4d8d-fc60-49f8-8823-7da10549e84e
 blueprint: page
-title: 'Page not found'
+title: 'Sivua ei löytynyt'
 page_builder:
   -
     article:
@@ -12,13 +12,13 @@ page_builder:
         content:
           -
             type: text
-            text: '404 Page not found'
+            text: '404 Sivua ei löytynyt'
       -
         type: paragraph
         content:
           -
             type: text
-            text: 'The page you requested is not available (anymore).'
+            text: 'Etsimääsi sivua ei ole saatavilla (enää).'
     type: article
     enabled: true
 seo_noindex: true

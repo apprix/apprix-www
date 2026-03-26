@@ -2,8 +2,10 @@
 id: 1237ccf1-20f4-4245-b8da-ca9c7322e24b
 blueprint: page
 title: Ajankohtaista
-seo_noindex: true
-seo_nofollow: true
+seo_title: 'Ajankohtaista – Uutiset ja artikkelit | Apprix'
+seo_description: 'Apprixin uusimmat uutiset, artikkelit ja ajankohtaiset päivitykset verkkokoulutuksista, digitaalisesta oppimisesta ja osaamisen kehittämisestä.'
+seo_noindex: false
+seo_nofollow: false
 seo_canonical_type: entry
 sitemap_change_frequency: monthly
 sitemap_priority: '0.4'

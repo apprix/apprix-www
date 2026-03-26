@@ -4,12 +4,14 @@ noindex_production: false
 title_separator: '·'
 site_name: Apprix
 hreflang_auto: true
-json_ld_type: none
-breadcrumbs: false
+json_ld_type: organization
+organization_name: Apprix
+breadcrumbs: true
 use_social_image_generation: false
 use_sitemap: true
 sitemap_collections:
   - pages
+  - articles
 trackers_local: true
 trackers_staging: false
 trackers_production: true

@@ -2,8 +2,10 @@
 id: 797cd39d-4158-4acd-af50-a9b1dfaed133
 blueprint: page
 title: Tietoturvakuvaus
+seo_title: 'Tietoturvakuvaus | Apprix Oy'
+seo_description: 'Apprix Oy:n tietoturvakuvaus. Kuvaamme tietoturvaperiaatteemme, tekniset suojatoimenpiteemme ja tietojen käsittelykäytäntömme.'
 seo_noindex: true
-seo_nofollow: true
+seo_nofollow: false
 seo_canonical_type: entry
 sitemap_change_frequency: yearly
 sitemap_priority: '0.1'

@@ -1,15 +1,46 @@
 ---
 id: 0127ef44-ff0c-4713-ac5a-1b952954d66d
 blueprint: page
-title: Apprix
-seo_noindex: true
-seo_nofollow: true
+title: Yritys
+seo_title: 'Yritys – Apprix Oy | Digitaalisten koulutusratkaisujen asiantuntija vuodesta 2003'
+seo_description: 'Apprix Oy on vuonna 2003 perustettu helsinkiläinen ohjelmistoyritys, joka tarjoaa digitaalisia koulutusratkaisuja keskisuurille ja suurille organisaatioille. Yli 50 kansainvälistä asiakasta.'
+og_title: 'Apprix Oy – Digitaalisten koulutusratkaisujen asiantuntija vuodesta 2003'
+seo_noindex: false
+seo_nofollow: false
 seo_canonical_type: entry
-sitemap_change_frequency: yearly
-sitemap_priority: '0.4'
+sitemap_change_frequency: monthly
+sitemap_priority: '0.7'
 updated_by: 680e1400-32cd-4415-9b61-d630b47576db
 updated_at: 1770106908
 page_builder:
+  -
+    id: mkcompany01
+    type: product_hero
+    enabled: true
+    tone: brand
+    heading: 'Digitaalisten koulutusratkaisujen asiantuntija'
+    text: 'Apprix Oy on helsinkiläinen ohjelmistoyritys, joka on erikoistunut verkkokoulutusten rakentamiseen, oppimisen hallintaan ja osaamisen seurantaan. Tuoteperheeseen kuuluvat Apprix Builder® -sisällöntuotantotyökalu, MyCourses-oppimisympäristö, Checklist Engine ja Koemoottori.'
+    stats:
+      -
+        id: mkstat_y01
+        value: 20+
+        label: 'vuotta kokemusta'
+        type: stat
+        enabled: true
+      -
+        id: mkstat_y02
+        value: 50+
+        label: organisaatiota
+        type: stat
+        enabled: true
+      -
+        id: mkstat_y03
+        value: 1M+
+        label: 'suoritusta vuodessa'
+        type: stat
+        enabled: true
+    trust_line: 'Asiakkainamme mm. Finavia, DHL, Stora Enso, St1, Vantaan Energia ja Matkahuolto.'
+    scroll_label: 'Tutustu tiimiin'
   -
     id: mkxyqpta
     title: 'Ota yhteyttä'
@@ -68,19 +99,6 @@ page_builder:
         email: mikko.eskelinen@apprix.fi
         type: person
         enabled: true
-      -
-        id: ml50lwfb
-        name: 'Martin Björksten'
-        role: 'Account Manager'
-        photo: team/martin_bw.webp
-        highlights:
-          -
-            id: ml50mixi
-            text: 'Uudet asiakkaat'
-        phone: '+358 40 706 3871'
-        email: martin.bjorksten@apprix.fi
-        type: person
-        enabled: true
     type: team_cards
     enabled: true
   -
@@ -94,7 +112,7 @@ page_builder:
         eyebrow: Asiakkaat
         title: 'Ketkä luottavat Apprixin ratkaisuihin'
         text: 'Organisaatioita eri toimialoilta ja eri kokoisista yrityksistä.'
-        link: '/asiakkaat#asiakkaat'
+        link: '/referenssit#asiakkaat'
         icon: case
         image: apprix_logo_rgb.png
       -
@@ -102,7 +120,7 @@ page_builder:
         eyebrow: Caset
         title: 'Näe Apprix käytännössä'
         text: 'Tutustu todellisiin käyttötapauksiin ja saavutettuihin hyötyihin.'
-        link: '/asiakkaat#caset'
+        link: '/referenssit#caset'
         icon: case
         image: apprix_logo_rgb.png
     type: link_cards

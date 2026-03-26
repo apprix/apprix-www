@@ -4,28 +4,29 @@ blueprint: page
 title: Koti
 updated_by: 680e1400-32cd-4415-9b61-d630b47576db
 updated_at: 1771790846
-seo_noindex: true
-seo_nofollow: true
+seo_noindex: false
+seo_nofollow: false
 seo_canonical_type: entry
+seo_description: 'Apprix on suomalainen digitaalinen koulutusalusta yrityksille. Luo verkkokoulutuksia, hallinnoi oppimista ja seuraa osaamista yhdellä alustalla. Yli 20 vuoden kokemus ja yli miljoona koulutussuoritusta vuodessa.'
 sitemap_change_frequency: weekly
 sitemap_priority: '1.0'
 page_builder:
   -
     id: mkmbr96q
     eyebrow: 'Luotettu suomalaisissa organisaatioissa'
-    heading: 'Koulutusalusta, jolla osaaminen pysyy näkyvänä'
-    text: 'Luo ja jaa koulutuksia, seuraa osaamisen kehittymistä ja varmista, että oikea tieto löytyy oikealta ihmiseltä – yhdessä selkeässä näkymässä.'
+    heading: 'Luo vaikuttavat verkkokoulutukset markkinoiden ketterimmällä premium-ratkaisulla'
+    text: 'Yli 20 vuoden kokemuksella ja generatiivisella tekoälyllä — verkkokoulutusten rakentaminen, jakaminen ja seuranta yhdessä ekosysteemissä.'
     buttons:
       -
         id: mkmbszvb
         label: 'Pyydä demo'
-        link: /yhteytta
+        link: /yritys
         style: primary
       -
         id: mkmbukej
         label: 'Katso palvelut'
         link: /palvelut
-        style: primary
+        style: secondary
     image: screenshots_diagonal_01.jpg
     type: hero
     enabled: true
@@ -45,130 +46,180 @@ page_builder:
     type: logo_carousel
     enabled: true
   -
-    id: mkmmvull
-    eyebrow: 'KOULUTUSTEN HALLINTA'
-    eyebrow_style: subtle
-    title: 'Rakenna, jaa ja hallitse koulutuksia yhdessä näkymässä'
-    text: 'Apprix Builder mahdollistaa koulutusten helpon luomisen ja jakamisen. MyCourses kokoaa oppimisen yhteen paikkaan sekä käyttäjille että organisaatiolle.'
-    bullets:
-      - 'Rakenna osallistavia verkkokursseja ilman teknistä osaamista'
-      - 'Hallitse oppimispolkuja, käyttäjiä ja sisältöjä keskitetysti'
-      - 'Seuraa koulutusten etenemistä ja suorittamista reaaliajassa'
-    image_style: card
-    tone: soft
-    accent: none
-    reverse: false
-    buttons:
+    id: mkfcards1
+    premium: true
+    eyebrow: 'MIKSI APPRIX'
+    title: 'Kaikki osaamisen kehittämiseen yhdeltä kumppanilta'
+    lead: 'Yli 20 vuoden kokemus, tekoälytuettu sisällöntuotanto ja skaalautuva hinnoittelu – kerralla kuntoon.'
+    features:
       -
-        id: mkmncynq
-        label: 'Tutustu Builderiin'
-        link: /palvelut/builder
-        style: primary
-      -
-        id: mkmndlcc
-        label: MyCourses
-        link: /palvelut/mycourses
-        style: secondary
-    type: feature_row
-    enabled: true
-    image: screenshots_diagonal_01.jpg
-    section_intro:
-      eyebrow: 'Palvelut & tuotteet'
-      section_title: 'Tuotteet ja palvelut, joilla osaaminen pysyy näkyvänä'
-  -
-    id: ml80w8lp
-    title: 'Kerro tarpeestanne – me autamme eteenpäin'
-    lead: 'Vastaa muutamaan kysymykseen, niin osaamme ohjata sinut oikealle asiantuntijalle ja ehdottaa juuri teille sopivaa ratkaisua.'
-    form_handle: contact
-    button_label: 'Lähetä yhteydenottopyyntö'
-    bullets:
-      -
-        id: ml80ze12
-        value: 'Selkeä etenemissuunnitelma tarpeidenne pohjalta'
-        type: bullet
+        id: mkfc0001
+        icon: pencil
+        title: 'Sisällöntuotanto tekoälyn tuella'
+        text: 'Builder® + generatiivinen tekoäly, valmiit mediakirjastot ja sivupohjat'
+        type: feature
         enabled: true
       -
-        id: ml80zgk1
-        value: 'Ratkaisut sekä sisäiseen että ulkoiseen käyttöön'
-        type: bullet
+        id: mkfc0002
+        icon: book
+        title: 'Älykäs oppimisympäristö'
+        text: 'MyCourses kohdentaa kurssit automaattisesti HR-tietojen perusteella'
+        type: feature
         enabled: true
       -
-        id: ml80zqer
-        value: 'Tuki koko projektin ajan'
-        type: bullet
+        id: mkfc0003
+        icon: chart
+        title: 'Reaaliaikainen analytiikka'
+        text: 'Osaamisprofiileja ja suorituksia reaaliajassa, raportit HR-järjestelmiin'
+        type: feature
         enabled: true
-    type: contact_wizard
-    enabled: true
-    img_learning_environment: contact/wizard/oppimisy.jpg
-    img_authoring_tool: contact/wizard/sisallont.jpg
-    img_custom_trainings: contact/wizard/rverkkok.jpg
-    img_ready_trainings: contact/wizard/valmiitvk.jpg
-    img_usage_internal: contact/wizard/sisak.jpg
-    img_usage_external: contact/wizard/ulkok.jpg
-    img_usage_both: contact/wizard/sisajaulkok.jpg
-  -
-    id: mkmnfgdt
-    eyebrow: VAATIMUSTENMUKAISUUS
-    eyebrow_style: subtle
-    title: 'Varmista osaaminen ja täytä viranomaisvaatimukset'
-    text: 'Checklist Engine ja Koemoottori auttavat varmistamaan, että osaaminen täyttää vaatimukset ja on todennettavissa tarvittaessa.'
-    bullets:
-      - 'Yhdenmukaiset perehdytyskortit ja osaamisvaatimukset'
-      - 'Testit ja kokeet osaamisen varmistamiseen'
-      - 'Selkeä dokumentaatio ja raportointi viranomaiskäyttöön'
-    image_style: card
-    tone: soft
-    accent: none
-    reverse: true
-    buttons:
       -
-        id: mkmnh6zu
-        label: 'Checklist Engine'
-        link: /palvelut/checklist-engine
-        style: primary
-      -
-        id: mkmnifex
-        label: Koemoottori
-        link: /palvelut/koemoottori
-        style: secondary
-    type: feature_row
+        id: mkfc0004
+        icon: shield
+        title: 'Skaalautuva ja riskitön'
+        text: 'Maksat vain käytöstä, enterprise-integraatiot, 20+ vuoden luotettavuus'
+        type: feature
+        enabled: true
+    type: feature_cards
     enabled: true
-    image: screenshots_diagonal_01.jpg
   -
-    id: mknsml2b
-    eyebrow: 'Yhteistyö alkaa tästä'
-    title: 'Tehdään koulutusten hallinnasta selkeää'
-    text: 'Autamme organisaatioita luomaan selkeitä ja skaalautuvia ratkaisuja osaamisen kehittämiseen.'
-    primary_button: /yhteytta
-    tone: brand
-    type: cta
+    id: mkshowcase1
+    eyebrow: 'Palvelut & tuotteet'
+    title: 'Tuotteet ja palvelut, joilla osaaminen pysyy näkyvänä'
+    autoplay: true
+    autoplay_interval: 6
+    features:
+      -
+        id: mkshf001
+        tab_label: 'Builder & MyCourses'
+        icon: pencil
+        eyebrow: 'SISÄLLÖNTUOTANTO & OPPIMINEN'
+        title: 'Luo vaikuttavat verkkokoulutukset ja kohdenna ne oikeille oppijoille'
+        text: 'Apprix Builder® on markkinoiden ketterin sisällöntuotantotyökalu osallistavien verkkokoulutusten luomiseen. MyCourses-oppimisympäristö kokoaa ja kohdentaa kurssit automaattisesti oikeille osallistujille HR-tietojen perusteella.'
+        bullets:
+          - 'Rakenna osallistavia verkkokursseja ilman teknistä osaamista – tekoäly sisällöntuotannon tukena'
+          - 'Älykkäät käyttäjäryhmät ja automaattiset kohdennukset HR-integraatiolla'
+          - 'Opintopolut, priorisoidut näkymät ja vanhenevien suoritusten seuranta'
+        image: builder_bg.jpg
+        buttons:
+          -
+            id: mksb0001
+            label: 'Apprix Builder®'
+            link: /palvelut/builder
+            style: primary
+          -
+            id: mksb0002
+            label: MyCourses
+            link: /palvelut/mycourses
+            style: secondary
+        type: feature
+        enabled: true
+      -
+        id: mkshf002
+        tab_label: 'Checklist & Koemoottori'
+        icon: clipboard
+        eyebrow: 'PEREHDYTYS & OSAAMISEN VARMISTAMINEN'
+        title: 'Sähköiset perehdytyslistat ja viranomaisvaatimukset täyttävät kokeet'
+        text: 'Checklist Engine digitalisoi perehdytys- ja tarkistuslistat paperittomasti koko organisaatioon. Koemoottori kattaa digitaalisten kokeiden koko prosessin kysymysten luomisesta tulosten hyväksymiseen.'
+        bullets:
+          - 'Yhdenmukaiset perehdytyslistat ja sähköiset allekirjoitukset kaikissa toimipisteissä'
+          - 'Monipuoliset tehtävätyypit ja automatisoitu kokeiden tarkistus'
+          - 'Täysi jäljitettävyys, versiohallinta ja suoritustietojen automaattinen siirto HR-järjestelmiin'
+        image: checklist-engine-perehdytys.jpg
+        buttons:
+          -
+            id: mksb0003
+            label: 'Checklist Engine'
+            link: /palvelut/checklist-engine
+            style: primary
+          -
+            id: mksb0004
+            label: Koemoottori
+            link: /palvelut/koemoottori
+            style: secondary
+        type: feature
+        enabled: true
+      -
+        id: mkshf003
+        tab_label: Sisällöntuotanto
+        icon: sparkles
+        eyebrow: SISÄLLÖNTUOTANTOPALVELUT
+        title: 'Eikö oma aikasi riitä? Asiantuntijamme auttavat'
+        text: 'Tarvitsetpa satunnaista sparrausapua tai täysin valmiin verkkokurssin avaimet käteen -periaatteella – Apprixin sisällöntuotantotiimi on tukenasi.'
+        bullets:
+          - 'Kokonaisvaltaiset sisällöntuotantoprojektit: materiaalista valmiiksi kurssiksi'
+          - 'Boost, Polishing ja Refresh -paketit omatoimiseen rakentamiseen'
+          - 'Lisämausteet: pelillisyys, tarinallisuus, äänensävy ja 2D-animaatiot'
+        image: general_bg.jpg
+        buttons:
+          -
+            id: mksb0005
+            label: Sisällöntuotanto
+            link: /palvelut/sisallontuotanto
+            style: primary
+        type: feature
+        enabled: true
+    type: feature_showcase
     enabled: true
-    button: /yhteytta
   -
     id: mkstats1
     eyebrow: 'Apprix lukuina'
-    title: 'Tuloksia, joihin voi luottaa'
+    title: 'Luotettua koulutusosaamista vuodesta 2003'
     stats:
       -
         id: mkstat01
-        value: 50+
-        label: 'Kansainväliset avainasiakkaat'
+        value: 20+
+        label: 'Vuotta kokemusta'
         type: stat
         enabled: true
       -
         id: mkstat02
-        value: '1 500+'
-        label: Builder-verkkokoulutuksia
+        value: 1M+
+        label: 'Kurssisuoritusta vuodessa'
         type: stat
         enabled: true
       -
         id: mkstat03
-        value: 80k+
-        label: 'Koulutussuorituksia kuukaudessa'
+        value: 50+
+        label: 'Kansainvälistä avainasiakasta'
         type: stat
         enabled: true
     type: stats
     enabled: true
+  -
+    id: mktesti1
+    eyebrow: OPPIJAPALAUTE
+    title: 'Oppijapalaute puhuu puolestaan'
+    intro: 'Vuorovaikutteiset tehtävät, välitön palaute ja osallistavat elementit tekevät oppimisesta innostavaa.'
+    clients: 'Ratkaisuihimme luottavat mm. Elenia, Finavia, Valmet, Skanska, Lindström ja SOL Palvelut.'
+    quotes:
+      -
+        id: mktq0001
+        text: 'Todella hyvä koulutus. Kiva kun on tehty hauskaksi ja mielenkiintoiseksi!'
+        type: quote
+        enabled: true
+      -
+        id: mktq0002
+        text: 'Yksi parhaimmista verkkokoulutuksista, jonka olen käynyt.'
+        type: quote
+        enabled: true
+      -
+        id: mktq0003
+        text: 'Selkeä ja monipuolinen. Tehtävät olivat kivoja ja auttoivat ymmärtämään asioita paremmin.'
+        type: quote
+        enabled: true
+    type: testimonials
+    enabled: true
+  -
+    id: mknsml2b
+    eyebrow: 'Varaa maksuton kartoitustapaaminen'
+    title: 'Oletko valmis viemään osaamisen kehittämisen uudelle tasolle?'
+    text: 'Tarjoamme 30–60 minuutin demon, johon sisältyy koulutustarpeen kartoitus. Käyttöönotto on riskitöntä – maksat vain kun alustaa käytetään.'
+    primary_button: /yritys
+    tone: brand
+    type: cta
+    enabled: true
+    button: /yritys
   -
     id: mkfaq001
     eyebrow: 'USEIN KYSYTTYÄ'
@@ -213,33 +264,36 @@ page_builder:
     type: faq
     enabled: true
   -
-    id: mkmnjie7
-    eyebrow: 'TUKI & SISÄLLÖT'
-    eyebrow_style: subtle
-    title: 'Saat sisällöt ja asiantuntijat tueksesi'
-    text: 'Tarjoamme asiantuntevaa tukea ja laadukasta sisältöä, jotta koulutukset vastaavat organisaatiosi tarpeita ja tavoitteita.'
+    id: ml80w8lp
+    title: 'Kerro tarpeestanne – me autamme eteenpäin'
+    lead: 'Vastaa muutamaan kysymykseen, niin osaamme ohjata sinut oikealle asiantuntijalle ja ehdottaa juuri teille sopivaa ratkaisua.'
+    form_handle: contact
+    button_label: 'Lähetä yhteydenottopyyntö'
     bullets:
-      - 'Ammattimaisesti tuotetut koulutusmateriaalit'
-      - 'Asiantuntijat apuna käyttöönotossa ja kehityksessä'
-      - 'Räätälöidyt kokonaisuudet eri toimialoille'
-    image_style: card
-    tone: soft
-    accent: none
-    reverse: false
-    buttons:
       -
-        id: mkmnks65
-        label: Asiantuntijapalvelut
-        link: /palvelut/asiantuntijapalvelut
-        style: primary
+        id: ml80ze12
+        value: 'Selkeä etenemissuunnitelma tarpeidenne pohjalta'
+        type: bullet
+        enabled: true
       -
-        id: mkmnmdcl
-        label: Sisällöntuotanto
-        link: /palvelut/sisallontuotanto
-        style: secondary
-    type: feature_row
-    enabled: false
-    image: screenshots_diagonal_01.jpg
+        id: ml80zgk1
+        value: 'Ratkaisut sekä sisäiseen että ulkoiseen käyttöön'
+        type: bullet
+        enabled: true
+      -
+        id: ml80zqer
+        value: 'Tuki koko projektin ajan'
+        type: bullet
+        enabled: true
+    type: contact_wizard
+    enabled: true
+    img_learning_environment: contact/wizard/oppimisy.jpg
+    img_authoring_tool: contact/wizard/sisallont.jpg
+    img_custom_trainings: contact/wizard/rverkkok.jpg
+    img_ready_trainings: contact/wizard/valmiitvk.jpg
+    img_usage_internal: contact/wizard/sisak.jpg
+    img_usage_external: contact/wizard/ulkok.jpg
+    img_usage_both: contact/wizard/sisajaulkok.jpg
   -
     id: mko0tg1u
     heading: Ajankohtaista

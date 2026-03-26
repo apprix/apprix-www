@@ -1,0 +1,9 @@
+---
+id: 6bdd5bdd-1e0a-4f23-ba3d-92f64fea9bfd
+origin: 797cd39d-4158-4acd-af50-a9b1dfaed133
+title: 'Information Security Description'
+seo_title: 'Information Security Description | Apprix Oy'
+seo_description: 'Apprix Oy information security description. We describe our information security principles, technical safeguards, and data processing practices.'
+updated_by: 680e1400-32cd-4415-9b61-d630b47576db
+updated_at: 1769434299
+---
