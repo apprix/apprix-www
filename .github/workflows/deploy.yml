@@ -26,11 +26,11 @@ jobs:
           php-version: '8.4'
 
       - name: Install Composer dependencies
-        run: composer install --optimize-autoloader --no-interaction
+        run: composer install --no-dev --optimize-autoloader --no-interaction
 
       - name: Deploy via Deployer
         uses: deployphp/action@v1
         with:
           private-key: ${{ secrets.SSH_PRIVATE_KEY }}
-          deployer-binary: vendor/bin/dep
+          deployer-version: '7.x'
           dep: deploy production
