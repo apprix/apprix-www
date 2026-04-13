@@ -27,8 +27,14 @@ task('deploy:assets', function () {
     upload('public/build/', '{{release_path}}/public/build/');
 });
 
+// Sync repo assets (images, videos) into shared public/assets
+task('deploy:sync-assets', function () {
+    upload('public/assets/', '{{deploy_path}}/shared/public/assets/');
+});
+
 // Deploy steps
 after('deploy:vendors', 'deploy:assets');
+after('deploy:vendors', 'deploy:sync-assets');
 after('deploy:vendors', 'artisan:config:cache');
 after('deploy:vendors', 'artisan:route:cache');
 
