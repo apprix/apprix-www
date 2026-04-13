@@ -5,7 +5,7 @@ Company website for [Apprix Oy](https://apprix.fi) — built with Statamic 5, La
 ## Tech stack
 
 - **CMS**: Statamic 5 (flat-file) with [Peak](https://peak.1702.nl/) starter
-- **Backend**: Laravel 12 (PHP 8.2+)
+- **Backend**: Laravel 12 (PHP 8.4)
 - **Templating**: Antlers
 - **Styling**: Tailwind CSS 4
 - **JS**: Alpine.js 3
@@ -40,6 +40,12 @@ composer dev
 npm run build
 ```
 
+## Deployment
+
+Automated via GitHub Actions. Push to `main` triggers deployment to the Hetzner server.
+
+See [DEPLOYMENT.md](DEPLOYMENT.md) for full documentation.
+
 ## Multisite
 
 Three locales are configured:
@@ -63,4 +69,6 @@ resources/
   forms/           Form definitions (contact)
 config/statamic/   Statamic configuration (sites, search, caching, etc.)
 public/            Static assets (images, videos, favicons)
+deploy.php         Deployer configuration
+.github/workflows/ GitHub Actions CI/CD pipeline
 ```
