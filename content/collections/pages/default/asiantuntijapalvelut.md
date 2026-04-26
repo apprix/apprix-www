@@ -15,12 +15,12 @@ page_builder:
     id: asp-hero
     eyebrow: Asiantuntijapalvelut
     heading: 'Saumattomat ratkaisut oppimiseen ja integraatioihin'
-    text: 'Yli 20 vuoden kokemuksella ja vahvalla asiantuntemuksella Apprix on osallistavien ja vuorovaikutteisten verkkokoulutusten suomalainen pioneeri. Olemme suunnitelleet satoja ratkaisuja, jotka integroituvat saumattomasti asiakkaidemme prosesseihin ja järjestelmiin.'
+    text: 'Yli 25 vuoden kokemuksella ja vahvalla asiantuntemuksella Apprix on osallistavien ja vuorovaikutteisten verkkokoulutusten suomalainen pioneeri. Olemme suunnitelleet satoja ratkaisuja, jotka integroituvat saumattomasti asiakkaidemme prosesseihin ja järjestelmiin.'
     trust_line: 'Yhdistämme datan, sisällöt ja pedagogiikan – koulutukset tavoittavat oikean kohderyhmän missä ja milloin vain.'
     stats:
       -
         id: asp-stat01
-        value: 20+
+        value: 25+
         label: 'vuotta kokemusta'
         type: stat
         enabled: true
@@ -32,7 +32,7 @@ page_builder:
         enabled: true
       -
         id: asp-stat03
-        value: 50+
+        value: 100+
         label: 'kansainvälistä asiakasta'
         type: stat
         enabled: true

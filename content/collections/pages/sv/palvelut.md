@@ -2,14 +2,14 @@
 id: 4770fe7c-1dba-447b-9a70-aa9ac7c8aa71
 origin: 2c1cbc43-eba8-47be-ae47-a9a21aa1a88e
 title: 'Tjänster & produkter'
-seo_description: 'Apprix erbjuder en komplett produktfamilj för webbutbildningar, introduktioner och kompetensmätning. Finsk kvalitet sedan 2003.'
+seo_description: 'Apprix erbjuder en komplett produktfamilj för webbutbildningar, introduktioner och kompetensmätning. Finsk kvalitet sedan 2001.'
 page_builder:
   -
     id: plv-hero
     eyebrow: 'Tjänster & produkter'
     heading: 'Alla verktyg för kompetensutveckling från en partner'
     text: 'Apprix erbjuder en komplett produktfamilj för att skapa och distribuera webbutbildningar, hantera introduktioner och mäta kompetens. Välj de verktyg som passar dig eller dra nytta av hela helheten.'
-    trust_line: 'Finsk kvalitet sedan 2003 – över 50 internationella nyckelkunder och en miljon utbildningsgenomföranden per år.'
+    trust_line: 'Finsk kvalitet sedan 2001 – över 100 internationella nyckelkunder och en miljon utbildningsgenomföranden per år.'
     stats:
       -
         id: plv-stat01
@@ -19,7 +19,7 @@ page_builder:
         enabled: true
       -
         id: plv-stat02
-        value: 20+
+        value: 25+
         label: 'års erfarenhet'
         type: stat
         enabled: true

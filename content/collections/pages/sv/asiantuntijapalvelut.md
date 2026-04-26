@@ -2,18 +2,18 @@
 id: f8f0234c-dba8-49c9-b40b-f5b55610eac9
 origin: ca1bc143-a016-40a2-b2c5-02bfd3dd1ba3
 title: 'Experttjänster – Sömlösa lösningar för lärande'
-seo_description: 'Apprix experttjänster: över 20 års erfarenhet av engagerande webbutbildningar. Sömlösa integrationer med era processer och system.'
+seo_description: 'Apprix experttjänster: över 25 års erfarenhet av engagerande webbutbildningar. Sömlösa integrationer med era processer och system.'
 page_builder:
   -
     id: asp-hero
     eyebrow: Experttjänster
     heading: 'Sömlösa lösningar för lärande och integrationer'
-    text: 'Med över 20 års erfarenhet och stark expertis är Apprix en finsk pionjär inom engagerande och interaktiva webbutbildningar. Vi har designat hundratals lösningar som integreras sömlöst med våra kunders processer och system.'
+    text: 'Med över 25 års erfarenhet och stark expertis är Apprix en finsk pionjär inom engagerande och interaktiva webbutbildningar. Vi har designat hundratals lösningar som integreras sömlöst med våra kunders processer och system.'
     trust_line: 'Vi kombinerar data, innehåll och pedagogik – utbildningarna når rätt målgrupp var och när som helst.'
     stats:
       -
         id: asp-stat01
-        value: 20+
+        value: 25+
         label: 'års erfarenhet'
         type: stat
         enabled: true
@@ -25,7 +25,7 @@ page_builder:
         enabled: true
       -
         id: asp-stat03
-        value: 50+
+        value: 100+
         label: 'internationella kunder'
         type: stat
         enabled: true

@@ -16,7 +16,7 @@ page_builder:
     eyebrow: 'Palvelut & tuotteet'
     heading: 'Kaikki osaamisen kehittämisen työkalut yhdeltä kumppanilta'
     text: 'Apprix tarjoaa kattavan tuoteperheen verkkokoulutusten luomiseen, jakeluun, perehdytysten hallintaan ja osaamisen mittaamiseen. Valitse itsellesi sopivat työkalut tai hyödynnä koko kokonaisuus.'
-    trust_line: 'Suomalaista laatua vuodesta 2003 – yli 50 kansainvälistä avainasiakasta ja miljoona koulutussuoritusta vuodessa.'
+    trust_line: 'Suomalaista laatua vuodesta 2001 – yli 100 kansainvälistä avainasiakasta ja miljoona koulutussuoritusta vuodessa.'
     stats:
       -
         id: plv-stat01
@@ -26,7 +26,7 @@ page_builder:
         enabled: true
       -
         id: plv-stat02
-        value: 20+
+        value: 25+
         label: 'vuotta kokemusta'
         type: stat
         enabled: true

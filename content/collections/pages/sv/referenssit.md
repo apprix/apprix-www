@@ -23,11 +23,11 @@ page_builder:
       - storaenso.png
       - finavia.png
       - edf.png
-    text: 'Över 50 internationella organisationer litar på Apprix för sin kompetensutveckling — över en miljon utbildningsgenomföranden per år och över 20 års erfarenhet av digitala utbildningslösningar.'
+    text: 'Över 100 internationella organisationer litar på Apprix för sin kompetensutveckling — över en miljon utbildningsgenomföranden per år och över 25 års erfarenhet av digitala utbildningslösningar.'
     stats:
       -
         id: mkrs01
-        value: 50+
+        value: 100+
         label: 'Internationella nyckelkunder'
         type: stat
         enabled: true

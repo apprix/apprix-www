@@ -12,12 +12,12 @@ page_builder:
     id: bldr-hero
     eyebrow: 'Apprix Builder®'
     heading: 'Skapa engagerande och interaktiva webbutbildningar enkelt'
-    text: 'Apprix är en finsk pionjär inom interaktiva webbutbildningar med över 20 års erfarenhet. Det nya läroverktyget Apprix Builder® är marknadens smidigaste lösning som gör kompetensutvecklingen i din organisation skalbar, inspirerande och mätbar.'
-    trust_line: 'Över 1 000 genomföranden och en miljon kursavslut per år – finsk kvalitet sedan 2003.'
+    text: 'Apprix är en finsk pionjär inom interaktiva webbutbildningar med över 25 års erfarenhet. Det nya läroverktyget Apprix Builder® är marknadens smidigaste lösning som gör kompetensutvecklingen i din organisation skalbar, inspirerande och mätbar.'
+    trust_line: 'Över 1 000 genomföranden och en miljon kursavslut per år – finsk kvalitet sedan 2001.'
     stats:
       -
         id: bldr-stat01
-        value: 20+
+        value: 25+
         label: 'års erfarenhet'
         type: stat
         enabled: true

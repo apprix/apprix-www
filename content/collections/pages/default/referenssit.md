@@ -28,11 +28,11 @@ page_builder:
       - storaenso.png
       - finavia.png
       - edf.png
-    text: 'Yli 50 kansainvälistä organisaatiota luottaa Apprixiin henkilöstönsä osaamisen kehittämisessä — yli miljoona kurssisuoritusta vuodessa ja yli 20 vuoden kokemus digitaalisista koulutusratkaisuista.'
+    text: 'Yli 100 kansainvälistä organisaatiota luottaa Apprixiin henkilöstönsä osaamisen kehittämisessä — yli miljoona kurssisuoritusta vuodessa ja yli 25 vuoden kokemus digitaalisista koulutusratkaisuista.'
     stats:
       -
         id: mkrs01
-        value: 50+
+        value: 100+
         label: 'Kansainvälistä avainasiakasta'
         type: stat
         enabled: true

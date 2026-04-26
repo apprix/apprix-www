@@ -2,9 +2,9 @@
 id: 29b94e7e-7736-4848-a0b4-879f5e6453eb
 origin: 0127ef44-ff0c-4713-ac5a-1b952954d66d
 title: Företag
-seo_title: 'Företag – Apprix Oy | Expert på digitala utbildningslösningar sedan 2003'
-seo_description: 'Apprix Oy är ett Helsingforsbaserat mjukvaruföretag grundat 2003 som erbjuder digitala utbildningslösningar för medelstora och stora organisationer. Över 50 internationella kunder.'
-og_title: 'Apprix Oy – Expert på digitala utbildningslösningar sedan 2003'
+seo_title: 'Företag – Apprix Oy | Expert på digitala utbildningslösningar sedan 2001'
+seo_description: 'Apprix Oy är ett Helsingforsbaserat mjukvaruföretag grundat 2001 som erbjuder digitala utbildningslösningar för medelstora och stora organisationer. Över 100 internationella kunder.'
+og_title: 'Apprix Oy – Expert på digitala utbildningslösningar sedan 2001'
 updated_by: 680e1400-32cd-4415-9b61-d630b47576db
 updated_at: 1710720000
 page_builder:
@@ -18,13 +18,13 @@ page_builder:
     stats:
       -
         id: mkstat_y01
-        value: 20+
+        value: 25+
         label: 'års erfarenhet'
         type: stat
         enabled: true
       -
         id: mkstat_y02
-        value: 50+
+        value: 100+
         label: organisationer
         type: stat
         enabled: true

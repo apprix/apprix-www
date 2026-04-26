@@ -12,12 +12,12 @@ page_builder:
     id: bldr-hero
     eyebrow: 'Apprix Builder®'
     heading: 'Create impactful and engaging online courses with ease'
-    text: 'Apprix is a Finnish pioneer in interactive and engaging e-learning with over 20 years of experience. The next-generation learning tool Apprix Builder® is the most agile solution on the market, enabling you to make your organization''s competence development scalable, inspiring, and measurable.'
-    trust_line: 'Over 1,000 implementations and one million course completions per year – Finnish quality since 2003.'
+    text: 'Apprix is a Finnish pioneer in interactive and engaging e-learning with over 25 years of experience. The next-generation learning tool Apprix Builder® is the most agile solution on the market, enabling you to make your organization''s competence development scalable, inspiring, and measurable.'
+    trust_line: 'Over 1,000 implementations and one million course completions per year – Finnish quality since 2001.'
     stats:
       -
         id: bldr-stat01
-        value: 20+
+        value: 25+
         label: 'years of experience'
         type: stat
         enabled: true

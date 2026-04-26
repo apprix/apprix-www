@@ -42,7 +42,7 @@ page_builder:
     premium: true
     eyebrow: 'VARFÖR APPRIX'
     title: 'Allt för kompetensutveckling från en partner'
-    lead: 'Över 20 års erfarenhet, AI-driven innehållsproduktion och skalbar prissättning — allt ordnat på en gång.'
+    lead: 'Över 25 års erfarenhet, AI-driven innehållsproduktion och skalbar prissättning — allt ordnat på en gång.'
     features:
       -
         id: mkfc0001
@@ -69,7 +69,7 @@ page_builder:
         id: mkfc0004
         icon: shield
         title: 'Skalbart och riskfritt'
-        text: 'Betala bara för användning, enterprise-integrationer, 20+ års tillförlitlighet'
+        text: 'Betala bara för användning, enterprise-integrationer, 25+ års tillförlitlighet'
         type: feature
         enabled: true
     type: feature_cards
@@ -160,7 +160,7 @@ page_builder:
     stats:
       -
         id: mkstat01
-        value: 50+
+        value: 100+
         label: 'Internationella nyckelkunder'
         type: stat
         enabled: true
@@ -220,7 +220,7 @@ page_builder:
       -
         id: mkfq0001
         question: 'Vad är Apprix?'
-        answer: '<p>Apprix är en finsk pionjär inom digitala utbildningslösningar med över 20 års erfarenhet. Vi hjälper organisationer att bygga, dela och hantera webbutbildningar på en plattform — oavsett om det gäller introduktion, regelefterlevnad eller kontinuerlig kompetensutveckling.</p>'
+        answer: '<p>Apprix är en finsk pionjär inom digitala utbildningslösningar med över 25 års erfarenhet. Vi hjälper organisationer att bygga, dela och hantera webbutbildningar på en plattform — oavsett om det gäller introduktion, regelefterlevnad eller kontinuerlig kompetensutveckling.</p>'
         type: faq_item
         enabled: true
       -
@@ -307,7 +307,7 @@ page_builder:
     no_results_text: 'Inga resultat hittades.'
     no_articles_text: 'Inga artiklar ännu.'
 seo_title: 'Digital utbildningsplattform för företag – Apprix'
-seo_description: 'Apprix är en finsk digital utbildningsplattform för företag. Skapa webbutbildningar, hantera lärande och följ kompetens på en plattform. Över 20 års erfarenhet och en miljon utbildningsgenomföranden per år.'
+seo_description: 'Apprix är en finsk digital utbildningsplattform för företag. Skapa webbutbildningar, hantera lärande och följ kompetens på en plattform. Över 25 års erfarenhet och en miljon utbildningsgenomföranden per år.'
 og_title: 'Digital utbildningsplattform för företag | Apprix'
 og_image: apprix_logo_rgb.png
 updated_by: 680e1400-32cd-4415-9b61-d630b47576db
