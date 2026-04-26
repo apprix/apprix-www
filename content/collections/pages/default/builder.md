@@ -15,12 +15,12 @@ page_builder:
     id: bldr-hero
     eyebrow: 'Apprix Builder®'
     heading: 'Luo vaikuttavat ja osallistavat verkkokoulutukset helposti'
-    text: 'Apprix on osallistavien ja vuorovaikutteisten verkkokoulutusten suomalainen pioneeri yli 20 vuoden kokemuksella. Uuden aikakauden oppimistyökalu Apprix Builder® on markkinoiden ketterin ratkaisu, jonka avulla teet organisaatiosi osaamisen kehittämisestä skaalautuvaa, innostavaa ja mitattavaa.'
-    trust_line: 'Yli 1 000 toteutusta ja miljoona kurssisuoritusta vuodessa – suomalaista laatua vuodesta 2003.'
+    text: 'Apprix on osallistavien ja vuorovaikutteisten verkkokoulutusten suomalainen pioneeri yli 25 vuoden kokemuksella. Uuden aikakauden oppimistyökalu Apprix Builder® on markkinoiden ketterin ratkaisu, jonka avulla teet organisaatiosi osaamisen kehittämisestä skaalautuvaa, innostavaa ja mitattavaa.'
+    trust_line: 'Yli 1 000 toteutusta ja miljoona kurssisuoritusta vuodessa – suomalaista laatua vuodesta 2001.'
     stats:
       -
         id: bldr-stat01
-        value: 20+
+        value: 25+
         label: 'vuotta kokemusta'
         type: stat
         enabled: true

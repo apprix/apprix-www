@@ -12,12 +12,12 @@ page_builder:
     id: asp-hero
     eyebrow: 'Expert Services'
     heading: 'Seamless solutions for learning and integrations'
-    text: 'With over 20 years of experience and deep expertise, Apprix is a Finnish pioneer in engaging and interactive online training. We have designed hundreds of solutions that integrate seamlessly into our clients'' processes and systems.'
+    text: 'With over 25 years of experience and deep expertise, Apprix is a Finnish pioneer in engaging and interactive online training. We have designed hundreds of solutions that integrate seamlessly into our clients'' processes and systems.'
     trust_line: 'We combine data, content, and pedagogy — training reaches the right audience anywhere, anytime.'
     stats:
       -
         id: asp-stat01
-        value: 20+
+        value: 25+
         label: 'years of experience'
         type: stat
         enabled: true
@@ -29,7 +29,7 @@ page_builder:
         enabled: true
       -
         id: asp-stat03
-        value: 50+
+        value: 100+
         label: 'international clients'
         type: stat
         enabled: true

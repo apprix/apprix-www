@@ -42,7 +42,7 @@ page_builder:
     premium: true
     eyebrow: 'WHY APPRIX'
     title: 'Everything for competence development from one partner'
-    lead: 'Over 20 years of experience, AI-powered content production and scalable pricing — all sorted at once.'
+    lead: 'Over 25 years of experience, AI-powered content production and scalable pricing — all sorted at once.'
     features:
       -
         id: mkfc0001
@@ -69,7 +69,7 @@ page_builder:
         id: mkfc0004
         icon: shield
         title: 'Scalable and risk-free'
-        text: 'Pay only for usage, enterprise integrations, 20+ years of reliability'
+        text: 'Pay only for usage, enterprise integrations, 25+ years of reliability'
         type: feature
         enabled: true
     type: feature_cards
@@ -160,7 +160,7 @@ page_builder:
     stats:
       -
         id: mkstat01
-        value: 50+
+        value: 100+
         label: 'International key accounts'
         type: stat
         enabled: true
@@ -220,7 +220,7 @@ page_builder:
       -
         id: mkfq0001
         question: 'What is Apprix?'
-        answer: '<p>Apprix is a Finnish pioneer in digital training solutions with over 20 years of experience. We help organizations build, share and manage online training on a single platform — whether it&#039;s onboarding, compliance or continuous competence development.</p>'
+        answer: '<p>Apprix is a Finnish pioneer in digital training solutions with over 25 years of experience. We help organizations build, share and manage online training on a single platform — whether it&#039;s onboarding, compliance or continuous competence development.</p>'
         type: faq_item
         enabled: true
       -
@@ -307,7 +307,7 @@ page_builder:
     no_results_text: 'No results found.'
     no_articles_text: 'No articles yet.'
 seo_title: 'Digital training platform for businesses – Apprix'
-seo_description: 'Apprix is a Finnish digital training platform for businesses. Create e-learning courses, manage learning and track competence on one platform. Over 20 years of experience and one million course completions per year.'
+seo_description: 'Apprix is a Finnish digital training platform for businesses. Create e-learning courses, manage learning and track competence on one platform. Over 25 years of experience and one million course completions per year.'
 og_title: 'Digital training platform for businesses | Apprix'
 og_image: apprix_logo_rgb.png
 updated_by: 680e1400-32cd-4415-9b61-d630b47576db

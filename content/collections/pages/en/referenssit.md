@@ -23,11 +23,11 @@ page_builder:
       - storaenso.png
       - finavia.png
       - edf.png
-    text: 'Over 50 international organizations trust Apprix for their workforce competence development — over one million course completions per year and over 20 years of experience in digital training solutions.'
+    text: 'Over 100 international organizations trust Apprix for their workforce competence development — over one million course completions per year and over 25 years of experience in digital training solutions.'
     stats:
       -
         id: mkrs01
-        value: 50+
+        value: 100+
         label: 'International key accounts'
         type: stat
         enabled: true

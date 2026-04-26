@@ -3,8 +3,8 @@
   @desc Article page builder block (sections-only). Must NOT call page_builder/block.
 #}}
 
-<section class="fluid-grid">
-  <div class="span-content">
+<section class="fluid-grid py-10 md:py-14">
+  <div class="span-lg">
     {{ partial:typography/prose as="article" class="contents stack-8" }}
       {{ article }}
         {{ partial src="components/{type}" }}

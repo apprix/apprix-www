@@ -2,9 +2,9 @@
 id: 0127ef44-ff0c-4713-ac5a-1b952954d66d
 blueprint: page
 title: Yritys
-seo_title: 'Yritys – Apprix Oy | Digitaalisten koulutusratkaisujen asiantuntija vuodesta 2003'
-seo_description: 'Apprix Oy on vuonna 2003 perustettu helsinkiläinen ohjelmistoyritys, joka tarjoaa digitaalisia koulutusratkaisuja keskisuurille ja suurille organisaatioille. Yli 50 kansainvälistä asiakasta.'
-og_title: 'Apprix Oy – Digitaalisten koulutusratkaisujen asiantuntija vuodesta 2003'
+seo_title: 'Yritys – Apprix Oy | Digitaalisten koulutusratkaisujen asiantuntija vuodesta 2001'
+seo_description: 'Apprix Oy on vuonna 2001 perustettu helsinkiläinen ohjelmistoyritys, joka tarjoaa digitaalisia koulutusratkaisuja keskisuurille ja suurille organisaatioille. Yli 100 kansainvälistä asiakasta.'
+og_title: 'Apprix Oy – Digitaalisten koulutusratkaisujen asiantuntija vuodesta 2001'
 seo_noindex: false
 seo_nofollow: false
 seo_canonical_type: entry
@@ -23,13 +23,13 @@ page_builder:
     stats:
       -
         id: mkstat_y01
-        value: 20+
+        value: 25+
         label: 'vuotta kokemusta'
         type: stat
         enabled: true
       -
         id: mkstat_y02
-        value: 50+
+        value: 100+
         label: organisaatiota
         type: stat
         enabled: true

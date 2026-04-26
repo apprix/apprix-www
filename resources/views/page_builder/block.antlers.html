@@ -1,8 +1,14 @@
 <div
   x-data="{ shown: false }"
+  x-init="
+    const rect = $el.getBoundingClientRect();
+    if (rect.top < window.innerHeight * 1.1) {
+      shown = true;
+    }
+  "
   x-intersect.once.threshold.10="shown = true"
-  class="transition-all duration-700 ease-out motion-reduce:transition-none"
   :class="shown ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'"
+  class="transition-all duration-700 ease-out will-change-[opacity,transform] motion-reduce:!opacity-100 motion-reduce:!translate-y-0 motion-reduce:!transition-none"
 >
   {{ partial src="page_builder/sections/{type}" }}
 </div>

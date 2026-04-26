@@ -7,7 +7,7 @@ updated_at: 1771790846
 seo_noindex: false
 seo_nofollow: false
 seo_canonical_type: entry
-seo_description: 'Apprix on suomalainen digitaalinen koulutusalusta yrityksille. Luo verkkokoulutuksia, hallinnoi oppimista ja seuraa osaamista yhdellä alustalla. Yli 20 vuoden kokemus ja yli miljoona koulutussuoritusta vuodessa.'
+seo_description: 'Apprix on suomalainen digitaalinen koulutusalusta yrityksille. Luo verkkokoulutuksia, hallinnoi oppimista ja seuraa osaamista yhdellä alustalla. Yli 25 vuoden kokemus ja yli miljoona koulutussuoritusta vuodessa.'
 sitemap_change_frequency: weekly
 sitemap_priority: '1.0'
 page_builder:
@@ -15,7 +15,7 @@ page_builder:
     id: mkmbr96q
     eyebrow: 'Luotettu suomalaisissa organisaatioissa'
     heading: 'Luo vaikuttavat verkkokoulutukset markkinoiden ketterimmällä premium-ratkaisulla'
-    text: 'Yli 20 vuoden kokemuksella ja generatiivisella tekoälyllä — verkkokoulutusten rakentaminen, jakaminen ja seuranta yhdessä ekosysteemissä.'
+    text: 'Yli 25 vuoden kokemuksella ja generatiivisella tekoälyllä — verkkokoulutusten rakentaminen, jakaminen ja seuranta yhdessä ekosysteemissä.'
     buttons:
       -
         id: mkmbszvb
@@ -50,7 +50,7 @@ page_builder:
     premium: true
     eyebrow: 'MIKSI APPRIX'
     title: 'Kaikki osaamisen kehittämiseen yhdeltä kumppanilta'
-    lead: 'Yli 20 vuoden kokemus, tekoälytuettu sisällöntuotanto ja skaalautuva hinnoittelu – kerralla kuntoon.'
+    lead: 'Yli 25 vuoden kokemus, tekoälytuettu sisällöntuotanto ja skaalautuva hinnoittelu – kerralla kuntoon.'
     features:
       -
         id: mkfc0001
@@ -77,7 +77,7 @@ page_builder:
         id: mkfc0004
         icon: shield
         title: 'Skaalautuva ja riskitön'
-        text: 'Maksat vain käytöstä, enterprise-integraatiot, 20+ vuoden luotettavuus'
+        text: 'Maksat vain käytöstä, enterprise-integraatiot, 25+ vuoden luotettavuus'
         type: feature
         enabled: true
     type: feature_cards
@@ -164,11 +164,11 @@ page_builder:
   -
     id: mkstats1
     eyebrow: 'Apprix lukuina'
-    title: 'Luotettua koulutusosaamista vuodesta 2003'
+    title: 'Luotettua koulutusosaamista vuodesta 2001'
     stats:
       -
         id: mkstat01
-        value: 20+
+        value: 25+
         label: 'Vuotta kokemusta'
         type: stat
         enabled: true
@@ -180,7 +180,7 @@ page_builder:
         enabled: true
       -
         id: mkstat03
-        value: 50+
+        value: 100+
         label: 'Kansainvälistä avainasiakasta'
         type: stat
         enabled: true
@@ -228,7 +228,7 @@ page_builder:
       -
         id: mkfq0001
         question: 'Mikä on Apprix?'
-        answer: '<p>Apprix on suomalainen, yli 20 vuotta toiminut digitaalisten koulutusratkaisujen edelläkävijä. Autamme organisaatioita rakentamaan, jakamaan ja hallinnoimaan verkkokoulutuksia yhdellä alustalla – olipa kyse perehdytyksestä, vaatimustenmukaisuudesta tai jatkuvasta osaamisen kehittämisestä.</p>'
+        answer: '<p>Apprix on suomalainen, yli 25 vuotta toiminut digitaalisten koulutusratkaisujen edelläkävijä. Autamme organisaatioita rakentamaan, jakamaan ja hallinnoimaan verkkokoulutuksia yhdellä alustalla – olipa kyse perehdytyksestä, vaatimustenmukaisuudesta tai jatkuvasta osaamisen kehittämisestä.</p>'
         type: faq_item
         enabled: true
       -

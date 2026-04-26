@@ -13,7 +13,7 @@ page_builder:
     eyebrow: 'Services & Products'
     heading: 'All competence development tools from one partner'
     text: 'Apprix offers a comprehensive product family for creating and distributing online training, managing onboarding, and measuring competence. Choose the tools that suit you or leverage the entire suite.'
-    trust_line: 'Finnish quality since 2003 — over 50 international key accounts and one million course completions per year.'
+    trust_line: 'Finnish quality since 2001 — over 100 international key accounts and one million course completions per year.'
     stats:
       -
         id: plv-stat01
@@ -23,7 +23,7 @@ page_builder:
         enabled: true
       -
         id: plv-stat02
-        value: 20+
+        value: 25+
         label: 'years of experience'
         type: stat
         enabled: true
