@@ -1,0 +1,43 @@
+title: FAQ Item
+tabs:
+  main:
+    display: Sisältö
+    sections:
+      -
+        fields:
+          - handle: title
+            field:
+              type: text
+              required: true
+              localizable: true
+              display: Kysymys
+              instructions: "The FAQ question."
+
+          - handle: category
+            field:
+              type: text
+              required: true
+              localizable: false
+              display: Kategoria
+              instructions: "e.g. Yleiset, Sisäänkirjautuminen, Video..."
+
+          - handle: order
+            field:
+              type: integer
+              localizable: false
+              display: Järjestys
+              instructions: "Order within the category. Lower = first."
+              default: 0
+              width: 25
+
+          - handle: answer
+            field:
+              type: bard
+              required: true
+              localizable: true
+              display: Vastaus
+              save_html: false
+              toolbar_mode: fixed
+              allow_source: false
+              enable_input_rules: true
+              enable_paste_rules: true

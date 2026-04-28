@@ -1,0 +1,317 @@
+{{#
+    @name Docs Layout
+    @desc Layout for the Help / Docs section at /help
+#}}
+
+<!-- /layout_docs.antlers.html -->
+<!doctype html>
+<html
+    lang="{{ site:short_locale }}"
+    class="antialiased scroll-smooth"
+    x-data="{ sidebarOpen: false }"
+>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+        {{ vite src="resources/css/site.css|resources/js/site.js" }}
+        {{ partial:statamic-peak-seo::snippets/seo }}
+        {{ stack:head }}
+    </head>
+    <body class="flex flex-col min-h-screen bg-white text-neutral-900">
+
+        {{# ─── TOP BAR ─── #}}
+        <header class="sticky top-0 z-40 border-b border-neutral-200 bg-white">
+            <div class="mx-auto flex h-14 max-w-screen-2xl items-center gap-4 px-4 md:px-6">
+
+                {{# Mobile sidebar toggle #}}
+                <button
+                    type="button"
+                    class="inline-flex items-center justify-center rounded-lg p-2 text-neutral-500 hover:bg-neutral-100 hover:text-neutral-900 lg:hidden"
+                    @click="sidebarOpen = !sidebarOpen"
+                    :aria-expanded="sidebarOpen"
+                    aria-label="Toggle navigation"
+                >
+                    <svg x-show="!sidebarOpen" class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+                    <svg x-show="sidebarOpen" class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+                </button>
+
+                {{# Logo #}}
+                <a href="/" class="shrink-0">
+                    <img src="/visuals/apprix_logo_rgb.png" alt="Apprix" class="h-7 w-auto">
+                </a>
+
+                {{# Section label #}}
+                <span class="hidden text-sm font-medium text-neutral-400 md:block">/ Ohjeet</span>
+
+                {{# Spacer #}}
+                <div class="flex-1"></div>
+
+                {{# Back to main site #}}
+                <a
+                    href="/"
+                    class="inline-flex items-center gap-1.5 rounded-lg px-3 py-1.5 text-sm font-medium text-neutral-600 transition hover:bg-neutral-100 hover:text-neutral-900"
+                >
+                    <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"/></svg>
+                    Apprix.fi
+                </a>
+
+            </div>
+        </header>
+
+        {{# ─── MAIN WRAPPER ─── #}}
+        <div class="mx-auto flex w-full max-w-screen-2xl flex-1">
+
+            {{# ─── SIDEBAR ─── #}}
+            <aside
+                class="fixed inset-y-0 left-0 z-30 w-72 translate-x-0 overflow-y-auto border-r border-neutral-200 bg-white pt-14 transition-transform duration-200 lg:sticky lg:top-14 lg:h-[calc(100vh-3.5rem)] lg:w-64 lg:translate-x-0 xl:w-72"
+                :class="sidebarOpen ? 'translate-x-0' : '-translate-x-full lg:translate-x-0'"
+            >
+                <nav class="px-4 py-6">
+
+                    <ul class="space-y-0.5" id="docs-nav">
+                        {{ collection:docs }}
+                            <li>
+                                <a
+                                    href="{{ url }}"
+                                    data-section="{{ slug }}"
+                                    data-depth="{{ depth }}"
+                                    class="flex items-center rounded-lg px-3 py-2 text-sm transition {{ if depth > 1 }}ml-4 pl-2 text-[0.8125rem] text-neutral-400 hover:bg-neutral-50 hover:text-neutral-600{{ else }}font-medium text-neutral-700 hover:bg-neutral-100 hover:text-neutral-900{{ /if }}"
+                                >
+                                    {{ title }}
+                                </a>
+                            </li>
+                        {{ /collection:docs }}
+                    </ul>
+
+                </nav>
+            </aside>
+
+            {{# Sidebar overlay for mobile #}}
+            <div
+                x-show="sidebarOpen"
+                x-transition:enter="transition-opacity duration-200"
+                x-transition:enter-start="opacity-0"
+                x-transition:enter-end="opacity-100"
+                x-transition:leave="transition-opacity duration-200"
+                x-transition:leave-start="opacity-100"
+                x-transition:leave-end="opacity-0"
+                class="fixed inset-0 z-20 bg-black/40 lg:hidden"
+                @click="sidebarOpen = false"
+                aria-hidden="true"
+            ></div>
+
+            {{# ─── CONTENT AREA ─── #}}
+            <main class="min-w-0 flex-1 px-4 py-8 md:px-8 md:py-10 lg:px-12">
+                {{ template_content }}
+            </main>
+
+        </div>
+
+        {{# ─── FOOTER ─── #}}
+        <footer class="border-t border-neutral-200 bg-neutral-50">
+            <div class="mx-auto max-w-screen-2xl px-4 py-6 md:px-6">
+                <p class="text-center text-xs text-neutral-400">
+                    &copy; {{ now format="Y" }} Apprix Oy.
+                    <a href="/" class="hover:text-neutral-600 hover:underline">Apprix.fi</a>
+                </p>
+            </div>
+        </footer>
+
+        <script>
+        (function () {
+            // Active state: highlight the link whose href matches the current page
+            var currentPath = window.location.pathname;
+            var activeTopLink = null;
+            document.querySelectorAll('#docs-nav a[data-section]').forEach(function (a) {
+                if (new URL(a.href).pathname === currentPath) {
+                    a.classList.add('bg-primary/8', 'text-primary');
+                    a.classList.remove('text-neutral-700');
+                    activeTopLink = a;
+                }
+            });
+
+            // Scroll the sidebar so the active section is visible
+            if (activeTopLink) {
+                var aside = activeTopLink.closest('aside');
+                if (aside) {
+                    var linkRect = activeTopLink.getBoundingClientRect();
+                    var asideRect = aside.getBoundingClientRect();
+                    aside.scrollTop += linkRect.top - asideRect.top - aside.clientHeight / 3;
+                }
+            }
+
+            // Scroll spy
+            var sections = Array.from(document.querySelectorAll('main section[id]'));
+            if (!sections.length) return;
+
+            // Build a set of section IDs that are actually on this page
+            var sectionIds = {};
+            sections.forEach(function (s) { sectionIds[s.id] = true; });
+
+            // Only use sidebar links whose slug matches a section on this page
+            var childLinks = Array.from(document.querySelectorAll('#docs-nav a[data-section]')).filter(function (a) {
+                return sectionIds[a.dataset.section];
+            });
+
+            if (childLinks.length) {
+                childLinks.forEach(function (a) { a.href = '#' + a.dataset.section; });
+
+                function setActive(id) {
+                    var activeLink = null;
+                    childLinks.forEach(function (a) {
+                        var active = a.dataset.section === id;
+                        if (active) {
+                            a.style.fontWeight = '600';
+                            a.style.boxShadow = 'inset 3px 0 0 #f87206';
+                            activeLink = a;
+                        } else {
+                            a.style.fontWeight = '';
+                            a.style.boxShadow = 'inset 3px 0 0 rgba(248,114,6,0.25)';
+                        }
+                    });
+                    if (activeLink) {
+                        var aside2 = activeLink.closest('aside');
+                        if (aside2) {
+                            var lr2 = activeLink.getBoundingClientRect();
+                            var ar2 = aside2.getBoundingClientRect();
+                            aside2.scrollTop += lr2.top - ar2.top - aside2.clientHeight / 2;
+                        }
+                    }
+                }
+
+                var observer = new IntersectionObserver(function (entries) {
+                    entries.forEach(function (entry) {
+                        if (entry.isIntersecting) setActive(entry.target.id);
+                    });
+                }, { rootMargin: '-80px 0px -60% 0px' });
+
+                sections.forEach(function (s) { observer.observe(s); });
+            }
+
+            // ── 3. Bottom nav + sticky bar (show pages only) ──
+            var bottomNav = document.getElementById('docs-bottom-nav');
+            var nextBar   = document.getElementById('next-bar');
+            if (!bottomNav) return;
+
+            var allSidebarLinks = Array.from(document.querySelectorAll('#docs-nav a'));
+
+            // Detect real depth from section-number prefix in title text ("7" → 1, "7.6" → 2, "7.6.1" → 3).
+            // Statamic returns relative depth=1 for grandchildren in a flat collection loop, so
+            // data-depth is unreliable for depth-3 entries. Title parsing is always accurate.
+            function entryDepth(a) {
+                var m = a.textContent.trim().match(/^(\d+(?:\.\d+)*)\s/);
+                return m ? m[1].split('.').length : 1;
+            }
+
+            var topLinks = allSidebarLinks.filter(function (a) { return entryDepth(a) === 1; });
+
+            // Square left corners on child/grandchild links via inline style
+            allSidebarLinks.forEach(function (a) {
+                if (entryDepth(a) > 1) {
+                    a.style.borderTopLeftRadius = '0';
+                    a.style.borderBottomLeftRadius = '0';
+                }
+            });
+
+            var idx = -1;
+            topLinks.forEach(function (a, i) {
+                if (new URL(a.href).pathname === currentPath) idx = i;
+            });
+
+            // If on a child/grandchild page, find the nearest parent top-level section
+            if (idx < 0 && activeTopLink) {
+                var curDomIdx = allSidebarLinks.indexOf(activeTopLink);
+                if (curDomIdx >= 0) {
+                    for (var ti = topLinks.length - 1; ti >= 0; ti--) {
+                        if (allSidebarLinks.indexOf(topLinks[ti]) < curDomIdx) {
+                            idx = ti;
+                            break;
+                        }
+                    }
+                }
+            }
+            if (idx < 0) return;
+
+            var prevLink = idx > 0                   ? topLinks[idx - 1] : null;
+            var nextLink = idx < topLinks.length - 1  ? topLinks[idx + 1] : null;
+
+            // ── Orange left-border on all child/grandchild links of the active section ──
+            var parentLiIdx   = allSidebarLinks.indexOf(topLinks[idx]);
+            var nextParentIdx = nextLink ? allSidebarLinks.indexOf(nextLink) : allSidebarLinks.length;
+            for (var ci = parentLiIdx + 1; ci < nextParentIdx; ci++) {
+                if (entryDepth(allSidebarLinks[ci]) > 1) {
+                    allSidebarLinks[ci].style.boxShadow = 'inset 3px 0 0 rgba(248,114,6,0.25)';
+                }
+            }
+
+            var grid = document.createElement('div');
+            grid.className = 'grid gap-4 sm:grid-cols-2';
+
+            if (prevLink) {
+                grid.insertAdjacentHTML('beforeend',
+                    '<a href="' + prevLink.href + '" class="group flex items-center gap-4 rounded-2xl border border-neutral-200 bg-neutral-50 p-5 transition hover:border-primary/30 hover:bg-white hover:shadow-sm">' +
+                    '<span class="flex h-9 w-9 shrink-0 items-center justify-center rounded-full border border-neutral-200 bg-white text-sm text-neutral-400 transition group-hover:text-primary">←</span>' +
+                    '<div class="min-w-0"><p class="text-xs font-medium uppercase tracking-wider text-neutral-400">Edellinen</p>' +
+                    '<p class="mt-0.5 truncate font-semibold text-neutral-800 group-hover:text-primary">' + prevLink.textContent.trim() + '</p></div></a>');
+            } else {
+                grid.insertAdjacentHTML('beforeend', '<div></div>');
+            }
+
+            if (nextLink) {
+                grid.insertAdjacentHTML('beforeend',
+                    '<a href="' + nextLink.href + '" class="group flex items-center justify-between gap-4 rounded-2xl border border-neutral-200 bg-neutral-50 p-5 transition hover:border-primary/30 hover:bg-white hover:shadow-sm">' +
+                    '<div class="min-w-0"><p class="text-xs font-medium uppercase tracking-wider text-neutral-400">Seuraava</p>' +
+                    '<p class="mt-0.5 truncate font-semibold text-neutral-800 group-hover:text-primary">' + nextLink.textContent.trim() + '</p></div>' +
+                    '<span class="flex h-9 w-9 shrink-0 items-center justify-center rounded-full border border-neutral-200 bg-white text-sm text-neutral-400 transition group-hover:text-primary">→</span></a>');
+            }
+
+            bottomNav.appendChild(grid);
+
+            // ── 4. Sticky section label at top of sidebar ──
+            var sidebarAside = document.querySelector('aside');
+            var sidebarNavEl = document.getElementById('docs-nav');
+            var activeTopEl  = topLinks[idx];
+            if (sidebarAside && sidebarNavEl && activeTopEl) {
+                var pill = document.createElement('div');
+                pill.style.cssText = 'position:sticky;top:0;z-index:10;display:none;background:#fff;border-bottom:1px solid #f3f4f6;margin:-1.5rem -1rem 0.5rem;padding:0.5rem 1rem;';
+
+                var pillLink = document.createElement('a');
+                pillLink.href = activeTopEl.href;
+                pillLink.style.cssText = 'display:flex;align-items:center;gap:0.375rem;font-size:0.8125rem;font-weight:600;color:#374151;text-decoration:none;overflow:hidden;';
+                pillLink.innerHTML = '<span style="font-size:0.7rem;opacity:0.5;flex-shrink:0;">↑</span>' +
+                                     '<span style="overflow:hidden;text-overflow:ellipsis;white-space:nowrap;">' + activeTopEl.textContent.trim() + '</span>';
+                pill.appendChild(pillLink);
+
+                // Insert before <ul>, as sibling inside <nav> (not inside <ul>)
+                sidebarNavEl.parentNode.insertBefore(pill, sidebarNavEl);
+
+                // Show pill when the active section link has scrolled above the sidebar's visible area
+                function updatePill() {
+                    var linkRect  = activeTopEl.getBoundingClientRect();
+                    var asideRect = sidebarAside.getBoundingClientRect();
+                    pill.style.display = linkRect.bottom < asideRect.top ? 'block' : 'none';
+                }
+
+                sidebarAside.addEventListener('scroll', updatePill, { passive: true });
+                updatePill();
+            }
+
+            if (nextBar && nextLink) {
+                var barLink  = document.getElementById('next-bar-link');
+                var barTitle = document.getElementById('next-bar-title');
+                if (barLink)  barLink.href = nextLink.href;
+                if (barTitle) barTitle.textContent = nextLink.textContent.trim();
+
+                window.addEventListener('scroll', function () {
+                    var show = (window.scrollY + window.innerHeight) > document.documentElement.scrollHeight * 0.75;
+                    nextBar.style.transform = show ? 'translateY(0)' : 'translateY(100%)';
+                    nextBar.setAttribute('aria-hidden', show ? 'false' : 'true');
+                }, { passive: true });
+            }
+        }());
+        </script>
+
+    </body>
+</html>
+<!-- End: /layout_docs.antlers.html -->

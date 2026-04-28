@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Route;
 use Statamic\Facades\Search;
 use Statamic\Entries\Entry;
 
+
 Route::get('/api/search', function (Request $request) {
     $query = $request->input('q', '');
 

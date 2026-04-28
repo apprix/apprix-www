@@ -1,0 +1,88 @@
+title: Doc
+tabs:
+  main:
+    display: Sisältö
+    sections:
+      -
+        fields:
+          - handle: title
+            field:
+              type: text
+              required: true
+              localizable: true
+              display: Otsikko
+
+          - handle: intro
+            field:
+              type: textarea
+              localizable: true
+              display: Lyhyt kuvaus
+              instructions: "Valinnainen. Näkyy hakutuloksissa ja sivun alussa."
+              character_limit: 300
+              rows: 3
+
+          - handle: content
+            field:
+              type: bard
+              localizable: true
+              display: Sisältö
+              container: files
+              fullscreen: true
+              save_html: true
+              toolbar_mode: fixed
+              reading_time: true
+              allow_source: true
+              enable_input_rules: true
+              enable_paste_rules: true
+              sets:
+                text:
+                  display: Teksti
+                  fields:
+                    - handle: text
+                      field:
+                        type: bard
+                        display: Teksti
+                image:
+                  display: Kuva
+                  fields:
+                    - handle: image
+                      field:
+                        type: assets
+                        container: files
+                        max_files: 1
+                        display: Kuva
+                video:
+                  display: Video
+                  fields:
+                    - handle: url
+                      field:
+                        type: text
+                        display: Video URL
+                        instructions: "YouTube tai Vimeo URL"
+  seo:
+    display: SEO
+    sections:
+      -
+        display: Basic
+        instructions: 'Basic SEO settings.'
+        fields:
+          -
+            import: 'statamic-peak-seo::seo_basic'
+      -
+        display: Advanced
+        instructions: 'Advanced SEO settings.'
+        fields:
+          -
+            import: 'statamic-peak-seo::seo_advanced'
+      -
+        display: 'Open Graph'
+        instructions: 'Open Graph meta tags for social sharing.'
+        fields:
+          -
+            import: 'statamic-peak-seo::seo_open_graph'
+      -
+        display: Sitemap
+        instructions: 'Sitemap configuration.'
+        fields:
+          -
+            import: 'statamic-peak-seo::seo_sitemap'
