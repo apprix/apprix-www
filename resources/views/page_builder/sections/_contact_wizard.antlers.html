@@ -7,20 +7,20 @@ Statamic form submissions). @set page.page_builder.contact_wizard #}}
 
     {{# Background image #}}
     <div
-        class="pointer-events-none absolute inset-0 z-0 bg-cover bg-center"
+        class="pointer-events-none absolute inset-0 z-0 bg-cover bg-center max-md:hidden"
         style="background-image: url('{{ bg }}');"
     ></div>
 
     {{# Overlays — let the blue show through more #}}
     <div
-        class="pointer-events-none absolute inset-0 z-10 bg-gradient-to-r from-white/55 via-white/25 to-transparent dark:from-slate-900/70 dark:via-slate-900/40 dark:to-transparent"
+        class="pointer-events-none absolute inset-0 z-10 bg-gradient-to-r from-white/55 via-white/25 to-transparent dark:from-slate-900/70 dark:via-slate-900/40 dark:to-transparent max-md:hidden"
     ></div>
     <div
-        class="pointer-events-none absolute inset-0 z-10 bg-gradient-to-b from-white/30 via-transparent to-black/10 mix-blend-multiply dark:from-slate-900/30 dark:to-black/30"
+        class="pointer-events-none absolute inset-0 z-10 bg-gradient-to-b from-white/30 via-transparent to-black/10 mix-blend-multiply dark:from-slate-900/30 dark:to-black/30 max-md:hidden"
     ></div>
 
     {{# Accent blobs #}}
-    <div class="pointer-events-none absolute inset-0 z-10">
+    <div class="pointer-events-none absolute inset-0 z-10 max-md:hidden">
         <div
             class="absolute -left-44 top-8 h-[24rem] w-[24rem] rounded-full bg-primary/[0.08] blur-3xl"
         ></div>
@@ -29,14 +29,14 @@ Statamic form submissions). @set page.page_builder.contact_wizard #}}
         ></div>
     </div>
 
-    <div class="relative z-20 fluid-grid py-8 md:py-12">
+    <div class="relative z-20 fluid-grid max-md:py-0 md:py-12">
         <div class="span-content">
-            <div class="mx-auto max-w-6xl">
+            <div class="mx-auto max-w-6xl max-md:max-w-none">
                 <div
-                    class="relative overflow-hidden rounded-2xl bg-white dark:bg-slate-800 shadow-xl shadow-black/6 ring-1 ring-neutral-200/70 dark:ring-slate-700/70"
+                    class="relative overflow-hidden bg-white dark:bg-slate-800 max-md:rounded-none max-md:shadow-none max-md:ring-0 rounded-2xl shadow-xl shadow-black/6 ring-1 ring-neutral-200/70 dark:ring-slate-700/70"
                 >
                     <div
-                        class="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-neutral-200 dark:via-slate-600 to-transparent"
+                        class="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-neutral-200 dark:via-slate-600 to-transparent max-md:hidden"
                     ></div>
 
                     <div class="p-4 sm:p-6 md:p-10 lg:p-12">
@@ -49,34 +49,34 @@ Statamic form submissions). @set page.page_builder.contact_wizard #}}
                             {{# ── STEP INDICATOR ── #}}
                             <div class="mb-2">
                                 <h3
-                                    class="text-balance text-2xl font-semibold tracking-tight text-neutral-900 dark:text-slate-100 md:text-3xl"
+                                    class="text-balance text-2xl font-semibold tracking-tight text-neutral-900 dark:text-slate-100 max-md:text-center md:text-3xl"
                                     x-text="stepTitle()"
                                 ></h3>
 
                                 {{# Horizontal stepper with labels #}}
-                                <div class="mt-5 sm:mt-8 grid grid-cols-4">
+                                <div class="mt-6 sm:mt-8 grid grid-cols-4 max-md:-mx-4 max-md:px-2">
                                     <template x-for="n in 4" :key="n">
-                                        <button type="button" @click="goTo(n)" class="group flex flex-col items-center gap-2.5">
+                                        <button type="button" @click="goTo(n)" class="group flex flex-col items-center gap-3">
                                             <div class="flex w-full items-center">
-                                                <div class="h-0.5 flex-1 rounded-full transition-colors duration-500" :class="n > 1 ? (n <= step ? 'bg-primary' : 'bg-neutral-200 dark:bg-slate-600') : 'bg-transparent'"></div>
-                                                <span class="relative grid h-8 w-8 sm:h-10 sm:w-10 shrink-0 place-items-center rounded-full text-xs sm:text-sm font-bold transition-all duration-300"
+                                                <div class="h-1 sm:h-0.5 flex-1 rounded-full transition-colors duration-500" :class="n > 1 ? (n <= step ? 'bg-primary' : 'bg-neutral-200 dark:bg-slate-600') : 'bg-transparent'"></div>
+                                                <span class="relative grid h-10 w-10 sm:h-10 sm:w-10 shrink-0 place-items-center rounded-full text-sm font-bold transition-all duration-300"
                                                     :class="n < step
                                                         ? 'bg-primary text-white shadow-sm'
                                                         : (n === step
                                                             ? 'bg-primary text-white shadow-lg shadow-primary/25 scale-110'
                                                             : 'bg-neutral-100 dark:bg-slate-700 text-neutral-400 dark:text-slate-500 group-hover:bg-neutral-200 dark:group-hover:bg-slate-600')">
-                                                    <svg x-cloak x-show="n < step" class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"></path></svg>
+                                                    <svg x-cloak x-show="n < step" class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"></path></svg>
                                                     <span x-show="n >= step" x-text="n"></span>
                                                 </span>
-                                                <div class="h-0.5 flex-1 rounded-full transition-colors duration-500" :class="n < 4 ? (n < step ? 'bg-primary' : 'bg-neutral-200 dark:bg-slate-600') : 'bg-transparent'"></div>
+                                                <div class="h-1 sm:h-0.5 flex-1 rounded-full transition-colors duration-500" :class="n < 4 ? (n < step ? 'bg-primary' : 'bg-neutral-200 dark:bg-slate-600') : 'bg-transparent'"></div>
                                             </div>
-                                            <span class="hidden text-[11px] font-semibold tracking-wide sm:block" :class="n <= step ? 'text-neutral-700 dark:text-slate-200' : 'text-neutral-400 dark:text-slate-500'" x-text="dotLabel(n)"></span>
+                                            <span class="block text-xs font-semibold tracking-wide" :class="n <= step ? 'text-neutral-700 dark:text-slate-200' : 'text-neutral-400 dark:text-slate-500'" x-text="dotLabel(n)"></span>
                                         </button>
                                     </template>
                                 </div>
 
                                 {{# Error (fixed height so it doesn't push content) #}}
-                                <div class="mt-4 flex h-8 items-center">
+                                <div class="mt-2 flex h-6 items-center md:mt-4 md:h-8">
                                     <p x-cloak x-show="attempted && stepError" x-transition.opacity class="text-sm font-medium text-rose-600" x-text="stepError"></p>
                                 </div>
                             </div>
@@ -84,7 +84,7 @@ Statamic form submissions). @set page.page_builder.contact_wizard #}}
                             {{ if form_handle }} {{ form:create
                             :in="form_handle" js="alpine:form" attr:x-ref="form"
                             }}
-                            <div class="flex flex-col gap-4">
+                            <div class="flex flex-col gap-2 md:gap-4">
                                 <div class="space-y-3">
                                     <div
                                         x-cloak
@@ -108,7 +108,7 @@ Statamic form submissions). @set page.page_builder.contact_wizard #}}
                                 {{# STEP 1 #}}
                                 <div x-show="step === 1" x-transition.opacity class="sm:min-h-[22rem]">
                                     <div
-                                        class="grid gap-2.5 sm:gap-4 sm:grid-cols-2 items-stretch"
+                                        class="grid gap-3 sm:gap-4 sm:grid-cols-2 items-stretch max-md:-mx-4"
                                     >
                                         {{# learning_environment #}}
                                         <label class="group cursor-pointer">
@@ -119,7 +119,7 @@ Statamic form submissions). @set page.page_builder.contact_wizard #}}
                                                 value="learning_environment"
                                             />
                                             <div
-                                                class="relative h-full sm:min-h-[190px] overflow-hidden rounded-xl border-2 border-neutral-200 dark:border-slate-600 border-t-primary/30 sm:border-t-neutral-200 dark:border-t-primary/30 dark:sm:border-t-slate-600 bg-white dark:bg-slate-700 shadow-sm transition hover:-translate-y-0.5 hover:border-neutral-300 dark:hover:border-slate-500 hover:shadow-md peer-checked:border-primary peer-checked:bg-primary/[0.04] dark:peer-checked:bg-primary/10 peer-checked:shadow-md peer-checked:shadow-primary/10"
+                                                class="relative h-full min-h-[80px] sm:min-h-[190px] overflow-hidden rounded-xl border-2 border-neutral-200 dark:border-slate-600 border-t-primary/30 sm:border-t-neutral-200 dark:border-t-primary/30 dark:sm:border-t-slate-600 bg-white dark:bg-slate-700 shadow-sm transition hover:-translate-y-0.5 hover:border-neutral-300 dark:hover:border-slate-500 hover:shadow-md peer-checked:border-primary peer-checked:bg-primary/[0.04] dark:peer-checked:bg-primary/10 peer-checked:shadow-md peer-checked:shadow-primary/10"
                                             >
                                                 {{# top accent #}}
                                                 <div
@@ -127,7 +127,7 @@ Statamic form submissions). @set page.page_builder.contact_wizard #}}
                                                 ></div>
 
                                                 <div
-                                                    class="absolute right-6 top-6 hidden items-center gap-1 rounded-full bg-primary/10 px-2.5 py-1 text-[11px] font-semibold text-primary ring-1 ring-primary/15 peer-checked:inline-flex"
+                                                    class="absolute right-6 top-6 hidden items-center gap-1 rounded-full bg-primary/10 px-2.5 py-1 text-xs font-semibold text-primary ring-1 ring-primary/15 peer-checked:inline-flex"
                                                 >
                                                     <svg
                                                         viewBox="0 0 24 24"
@@ -219,7 +219,7 @@ Statamic form submissions). @set page.page_builder.contact_wizard #}}
                                                         AREA (this is where
                                                         padding belongs) #}}
                                                         <div
-                                                            class="flex min-w-0 flex-col justify-center px-4 py-3 sm:px-6 sm:py-6"
+                                                            class="flex min-w-0 flex-col justify-center px-5 py-5 sm:px-6 sm:py-6"
                                                         >
                                                             <p
                                                                 class="text-base sm:text-lg font-semibold tracking-tight text-neutral-900 dark:text-slate-100"
@@ -257,14 +257,14 @@ Statamic form submissions). @set page.page_builder.contact_wizard #}}
                                             />
 
                                             <div
-                                                class="relative h-full sm:min-h-[190px] overflow-hidden rounded-xl border-2 border-neutral-200 dark:border-slate-600 border-t-primary/30 sm:border-t-neutral-200 dark:border-t-primary/30 dark:sm:border-t-slate-600 bg-white dark:bg-slate-700 shadow-sm transition hover:-translate-y-0.5 hover:border-neutral-300 dark:hover:border-slate-500 hover:shadow-md peer-checked:border-primary peer-checked:bg-primary/[0.04] dark:peer-checked:bg-primary/10 peer-checked:shadow-md peer-checked:shadow-primary/10"
+                                                class="relative h-full min-h-[80px] sm:min-h-[190px] overflow-hidden rounded-xl border-2 border-neutral-200 dark:border-slate-600 border-t-primary/30 sm:border-t-neutral-200 dark:border-t-primary/30 dark:sm:border-t-slate-600 bg-white dark:bg-slate-700 shadow-sm transition hover:-translate-y-0.5 hover:border-neutral-300 dark:hover:border-slate-500 hover:shadow-md peer-checked:border-primary peer-checked:bg-primary/[0.04] dark:peer-checked:bg-primary/10 peer-checked:shadow-md peer-checked:shadow-primary/10"
                                             >
                                                 {{# top accent line #}}
                                                 {{# top accent #}}
 
                                                 {{# selected badge #}}
                                                 <div
-                                                    class="absolute right-6 top-6 hidden items-center gap-1 rounded-full bg-primary/10 px-2.5 py-1 text-[11px] font-semibold text-primary ring-1 ring-primary/15 peer-checked:inline-flex"
+                                                    class="absolute right-6 top-6 hidden items-center gap-1 rounded-full bg-primary/10 px-2.5 py-1 text-xs font-semibold text-primary ring-1 ring-primary/15 peer-checked:inline-flex"
                                                 >
                                                     <svg
                                                         viewBox="0 0 24 24"
@@ -348,7 +348,7 @@ Statamic form submissions). @set page.page_builder.contact_wizard #}}
                                                     </div>
                                                     {{ /if }} {{# TEXT SIDE #}}
                                                     <div
-                                                        class="flex min-w-0 flex-col justify-center px-4 py-3 sm:px-7 sm:py-6"
+                                                        class="flex min-w-0 flex-col justify-center px-5 py-5 sm:px-7 sm:py-6"
                                                     >
                                                         <p
                                                             class="text-base sm:text-lg font-semibold tracking-tight text-neutral-900 dark:text-slate-100"
@@ -381,14 +381,14 @@ Statamic form submissions). @set page.page_builder.contact_wizard #}}
                                             />
 
                                             <div
-                                                class="relative h-full sm:min-h-[190px] overflow-hidden rounded-xl border-2 border-neutral-200 dark:border-slate-600 border-t-primary/30 sm:border-t-neutral-200 dark:border-t-primary/30 dark:sm:border-t-slate-600 bg-white dark:bg-slate-700 shadow-sm transition hover:-translate-y-0.5 hover:border-neutral-300 dark:hover:border-slate-500 hover:shadow-md peer-checked:border-primary peer-checked:bg-primary/[0.04] dark:peer-checked:bg-primary/10 peer-checked:shadow-md peer-checked:shadow-primary/10"
+                                                class="relative h-full min-h-[80px] sm:min-h-[190px] overflow-hidden rounded-xl border-2 border-neutral-200 dark:border-slate-600 border-t-primary/30 sm:border-t-neutral-200 dark:border-t-primary/30 dark:sm:border-t-slate-600 bg-white dark:bg-slate-700 shadow-sm transition hover:-translate-y-0.5 hover:border-neutral-300 dark:hover:border-slate-500 hover:shadow-md peer-checked:border-primary peer-checked:bg-primary/[0.04] dark:peer-checked:bg-primary/10 peer-checked:shadow-md peer-checked:shadow-primary/10"
                                             >
                                                 {{# top accent line #}}
                                                 {{# top accent #}}
 
                                                 {{# selected badge #}}
                                                 <div
-                                                    class="absolute right-6 top-6 hidden items-center gap-1 rounded-full bg-primary/10 px-2.5 py-1 text-[11px] font-semibold text-primary ring-1 ring-primary/15 peer-checked:inline-flex"
+                                                    class="absolute right-6 top-6 hidden items-center gap-1 rounded-full bg-primary/10 px-2.5 py-1 text-xs font-semibold text-primary ring-1 ring-primary/15 peer-checked:inline-flex"
                                                 >
                                                     <svg
                                                         viewBox="0 0 24 24"
@@ -474,7 +474,7 @@ Statamic form submissions). @set page.page_builder.contact_wizard #}}
                                                     </div>
                                                     {{ /if }} {{# TEXT SIDE #}}
                                                     <div
-                                                        class="flex min-w-0 flex-col justify-center px-4 py-3 sm:px-7 sm:py-6"
+                                                        class="flex min-w-0 flex-col justify-center px-5 py-5 sm:px-7 sm:py-6"
                                                     >
                                                         <p
                                                             class="text-base sm:text-lg font-semibold tracking-tight text-neutral-900 dark:text-slate-100"
@@ -507,14 +507,14 @@ Statamic form submissions). @set page.page_builder.contact_wizard #}}
                                             />
 
                                             <div
-                                                class="relative h-full sm:min-h-[190px] overflow-hidden rounded-xl border-2 border-neutral-200 dark:border-slate-600 border-t-primary/30 sm:border-t-neutral-200 dark:border-t-primary/30 dark:sm:border-t-slate-600 bg-white dark:bg-slate-700 shadow-sm transition hover:-translate-y-0.5 hover:border-neutral-300 dark:hover:border-slate-500 hover:shadow-md peer-checked:border-primary peer-checked:bg-primary/[0.04] dark:peer-checked:bg-primary/10 peer-checked:shadow-md peer-checked:shadow-primary/10"
+                                                class="relative h-full min-h-[80px] sm:min-h-[190px] overflow-hidden rounded-xl border-2 border-neutral-200 dark:border-slate-600 border-t-primary/30 sm:border-t-neutral-200 dark:border-t-primary/30 dark:sm:border-t-slate-600 bg-white dark:bg-slate-700 shadow-sm transition hover:-translate-y-0.5 hover:border-neutral-300 dark:hover:border-slate-500 hover:shadow-md peer-checked:border-primary peer-checked:bg-primary/[0.04] dark:peer-checked:bg-primary/10 peer-checked:shadow-md peer-checked:shadow-primary/10"
                                             >
                                                 {{# top accent line #}}
                                                 {{# top accent #}}
 
                                                 {{# selected badge #}}
                                                 <div
-                                                    class="absolute right-6 top-6 hidden items-center gap-1 rounded-full bg-primary/10 px-2.5 py-1 text-[11px] font-semibold text-primary ring-1 ring-primary/15 peer-checked:inline-flex"
+                                                    class="absolute right-6 top-6 hidden items-center gap-1 rounded-full bg-primary/10 px-2.5 py-1 text-xs font-semibold text-primary ring-1 ring-primary/15 peer-checked:inline-flex"
                                                 >
                                                     <svg
                                                         viewBox="0 0 24 24"
@@ -602,7 +602,7 @@ Statamic form submissions). @set page.page_builder.contact_wizard #}}
                                                     </div>
                                                     {{ /if }} {{# TEXT SIDE #}}
                                                     <div
-                                                        class="flex min-w-0 flex-col justify-center px-4 py-3 sm:px-7 sm:py-6"
+                                                        class="flex min-w-0 flex-col justify-center px-5 py-5 sm:px-7 sm:py-6"
                                                     >
                                                         <p
                                                             class="text-base sm:text-lg font-semibold tracking-tight text-neutral-900 dark:text-slate-100"
@@ -642,7 +642,7 @@ Statamic form submissions). @set page.page_builder.contact_wizard #}}
                                             />
 
                                             <div
-                                                class="relative h-full sm:min-h-[190px] overflow-hidden rounded-xl border-2 border-neutral-200 dark:border-slate-600 border-t-primary/30 sm:border-t-neutral-200 dark:border-t-primary/30 dark:sm:border-t-slate-600 bg-white dark:bg-slate-700 shadow-sm transition hover:-translate-y-0.5 hover:border-neutral-300 dark:hover:border-slate-500 hover:shadow-md peer-checked:border-primary peer-checked:bg-primary/[0.04] dark:peer-checked:bg-primary/10 peer-checked:shadow-md peer-checked:shadow-primary/10"
+                                                class="relative h-full min-h-[80px] sm:min-h-[190px] overflow-hidden rounded-xl border-2 border-neutral-200 dark:border-slate-600 border-t-primary/30 sm:border-t-neutral-200 dark:border-t-primary/30 dark:sm:border-t-slate-600 bg-white dark:bg-slate-700 shadow-sm transition hover:-translate-y-0.5 hover:border-neutral-300 dark:hover:border-slate-500 hover:shadow-md peer-checked:border-primary peer-checked:bg-primary/[0.04] dark:peer-checked:bg-primary/10 peer-checked:shadow-md peer-checked:shadow-primary/10"
                                             >
                                                 {{# top accent #}}
 
@@ -705,7 +705,7 @@ Statamic form submissions). @set page.page_builder.contact_wizard #}}
                                                     {{ /if }}
 
                                                     <div
-                                                        class="flex min-w-0 flex-col justify-center px-4 py-3 sm:px-7 sm:py-6"
+                                                        class="flex min-w-0 flex-col justify-center px-5 py-5 sm:px-7 sm:py-6"
                                                     >
                                                         <p
                                                             class="text-base sm:text-lg font-semibold tracking-tight text-neutral-900 dark:text-slate-100"
@@ -735,7 +735,7 @@ Statamic form submissions). @set page.page_builder.contact_wizard #}}
                                             />
 
                                             <div
-                                                class="relative h-full sm:min-h-[190px] overflow-hidden rounded-xl border-2 border-neutral-200 dark:border-slate-600 border-t-primary/30 sm:border-t-neutral-200 dark:border-t-primary/30 dark:sm:border-t-slate-600 bg-white dark:bg-slate-700 shadow-sm transition hover:-translate-y-0.5 hover:border-neutral-300 dark:hover:border-slate-500 hover:shadow-md peer-checked:border-primary peer-checked:bg-primary/[0.04] dark:peer-checked:bg-primary/10 peer-checked:shadow-md peer-checked:shadow-primary/10"
+                                                class="relative h-full min-h-[80px] sm:min-h-[190px] overflow-hidden rounded-xl border-2 border-neutral-200 dark:border-slate-600 border-t-primary/30 sm:border-t-neutral-200 dark:border-t-primary/30 dark:sm:border-t-slate-600 bg-white dark:bg-slate-700 shadow-sm transition hover:-translate-y-0.5 hover:border-neutral-300 dark:hover:border-slate-500 hover:shadow-md peer-checked:border-primary peer-checked:bg-primary/[0.04] dark:peer-checked:bg-primary/10 peer-checked:shadow-md peer-checked:shadow-primary/10"
                                             >
                                                 {{# top accent #}}
 
@@ -776,7 +776,7 @@ Statamic form submissions). @set page.page_builder.contact_wizard #}}
                                                     {{ /if }}
 
                                                     <div
-                                                        class="flex min-w-0 flex-col justify-center px-4 py-3 sm:px-7 sm:py-6"
+                                                        class="flex min-w-0 flex-col justify-center px-5 py-5 sm:px-7 sm:py-6"
                                                     >
                                                         <p
                                                             class="text-base sm:text-lg font-semibold tracking-tight text-neutral-900 dark:text-slate-100"
@@ -806,7 +806,7 @@ Statamic form submissions). @set page.page_builder.contact_wizard #}}
                                             />
 
                                             <div
-                                                class="relative h-full sm:min-h-[190px] overflow-hidden rounded-xl border-2 border-neutral-200 dark:border-slate-600 border-t-primary/30 sm:border-t-neutral-200 dark:border-t-primary/30 dark:sm:border-t-slate-600 bg-white dark:bg-slate-700 shadow-sm transition hover:-translate-y-0.5 hover:border-neutral-300 dark:hover:border-slate-500 hover:shadow-md peer-checked:border-primary peer-checked:bg-primary/[0.04] dark:peer-checked:bg-primary/10 peer-checked:shadow-md peer-checked:shadow-primary/10"
+                                                class="relative h-full min-h-[80px] sm:min-h-[190px] overflow-hidden rounded-xl border-2 border-neutral-200 dark:border-slate-600 border-t-primary/30 sm:border-t-neutral-200 dark:border-t-primary/30 dark:sm:border-t-slate-600 bg-white dark:bg-slate-700 shadow-sm transition hover:-translate-y-0.5 hover:border-neutral-300 dark:hover:border-slate-500 hover:shadow-md peer-checked:border-primary peer-checked:bg-primary/[0.04] dark:peer-checked:bg-primary/10 peer-checked:shadow-md peer-checked:shadow-primary/10"
                                             >
                                                 {{# top accent #}}
 
@@ -846,7 +846,7 @@ Statamic form submissions). @set page.page_builder.contact_wizard #}}
                                                     {{ /if }}
 
                                                     <div
-                                                        class="flex min-w-0 flex-col justify-center px-4 py-3 sm:px-7 sm:py-6"
+                                                        class="flex min-w-0 flex-col justify-center px-5 py-5 sm:px-7 sm:py-6"
                                                     >
                                                         <p
                                                             class="text-base sm:text-lg font-semibold tracking-tight text-neutral-900 dark:text-slate-100"
@@ -872,7 +872,7 @@ Statamic form submissions). @set page.page_builder.contact_wizard #}}
                                 <div x-show="step === 3" x-transition.opacity class="sm:min-h-[22rem]">
                                     <div
                                         <p
-                                            class="text-[11px] font-semibold tracking-widest text-neutral-500 dark:text-slate-400 uppercase"
+                                            class="text-xs font-semibold tracking-widest text-neutral-500 dark:text-slate-400 uppercase"
                                         >
                                             {{ trans:wizard.industry_label }}
                                         </p>
@@ -1012,7 +1012,7 @@ Statamic form submissions). @set page.page_builder.contact_wizard #}}
                                     <div class="grid gap-5 md:grid-cols-2">
                                         <div>
                                             <label
-                                                class="mb-2 block text-[11px] font-semibold tracking-widest text-neutral-500 dark:text-slate-400 uppercase"
+                                                class="mb-2 block text-xs font-semibold tracking-widest text-neutral-500 dark:text-slate-400 uppercase"
                                             >
                                                 {{ trans:wizard.field_name }}
                                                 <span class="text-rose-600"
@@ -1030,7 +1030,7 @@ Statamic form submissions). @set page.page_builder.contact_wizard #}}
 
                                         <div>
                                             <label
-                                                class="mb-2 block text-[11px] font-semibold tracking-widest text-neutral-500 dark:text-slate-400 uppercase"
+                                                class="mb-2 block text-xs font-semibold tracking-widest text-neutral-500 dark:text-slate-400 uppercase"
                                             >
                                                 {{ trans:wizard.field_company }}
                                             </label>
@@ -1045,7 +1045,7 @@ Statamic form submissions). @set page.page_builder.contact_wizard #}}
 
                                         <div>
                                             <label
-                                                class="mb-2 block text-[11px] font-semibold tracking-widest text-neutral-500 dark:text-slate-400 uppercase"
+                                                class="mb-2 block text-xs font-semibold tracking-widest text-neutral-500 dark:text-slate-400 uppercase"
                                             >
                                                 {{ trans:wizard.field_email }}
                                                 <span class="text-rose-600"
@@ -1063,7 +1063,7 @@ Statamic form submissions). @set page.page_builder.contact_wizard #}}
 
                                         <div>
                                             <label
-                                                class="mb-2 block text-[11px] font-semibold tracking-widest text-neutral-500 dark:text-slate-400 uppercase"
+                                                class="mb-2 block text-xs font-semibold tracking-widest text-neutral-500 dark:text-slate-400 uppercase"
                                             >
                                                 {{ trans:wizard.field_phone }}
                                             </label>
@@ -1078,7 +1078,7 @@ Statamic form submissions). @set page.page_builder.contact_wizard #}}
 
                                         <div class="md:col-span-2">
                                             <label
-                                                class="mb-2 block text-[11px] font-semibold tracking-widest text-neutral-500 dark:text-slate-400 uppercase"
+                                                class="mb-2 block text-xs font-semibold tracking-widest text-neutral-500 dark:text-slate-400 uppercase"
                                             >
                                                 {{ trans:wizard.field_message }}
                                                 <span class="text-rose-600"
@@ -1103,7 +1103,7 @@ Statamic form submissions). @set page.page_builder.contact_wizard #}}
                                     <button
                                         type="button"
                                         @click="back()"
-                                        class="inline-flex items-center justify-center gap-2 rounded-xl border-2 border-neutral-200 dark:border-slate-600 bg-white dark:bg-slate-700 px-5 py-3 text-sm font-semibold text-neutral-700 dark:text-slate-200 transition hover:border-neutral-300 dark:hover:border-slate-500 hover:bg-neutral-50 dark:hover:bg-slate-600 focus:outline-none focus:ring-4 focus:ring-primary/12"
+                                        class="inline-flex items-center justify-center gap-2 rounded-xl border-2 border-neutral-200 dark:border-slate-600 bg-white dark:bg-slate-700 px-5 py-3 max-md:w-full max-md:py-4 text-sm font-semibold text-neutral-700 dark:text-slate-200 transition hover:border-neutral-300 dark:hover:border-slate-500 hover:bg-neutral-50 dark:hover:bg-slate-600 focus:outline-none focus:ring-4 focus:ring-primary/12"
                                         :class="step === 1 ? 'opacity-50 pointer-events-none' : ''"
                                     >
                                         <svg
@@ -1122,13 +1122,13 @@ Statamic form submissions). @set page.page_builder.contact_wizard #}}
                                     </button>
 
                                     <div
-                                        class="flex flex-col gap-3 sm:flex-row sm:items-center"
+                                        class="flex flex-col gap-3 sm:flex-row sm:items-center max-md:w-full"
                                     >
                                         <button
                                             type="button"
                                             @click="next()"
                                             x-show="step < 4"
-                                            class="inline-flex items-center justify-center gap-2 rounded-xl bg-primary px-7 py-3 text-sm font-semibold text-white shadow-md shadow-primary/20 transition hover:bg-primary/90 hover:-translate-y-0.5 focus:outline-none focus:ring-4 focus:ring-primary/20"
+                                            class="inline-flex items-center justify-center gap-2 rounded-xl bg-primary px-7 py-3 max-md:w-full max-md:py-4 text-sm font-semibold text-white shadow-md shadow-primary/20 transition hover:bg-primary/90 hover:-translate-y-0.5 focus:outline-none focus:ring-4 focus:ring-primary/20"
                                         >
                                             {{ trans:wizard.btn_next }}
                                             <svg
@@ -1149,7 +1149,7 @@ Statamic form submissions). @set page.page_builder.contact_wizard #}}
                                             type="submit"
                                             @click="attempted = true; attemptedStep4 = true"
                                             x-show="step === 4"
-                                            class="inline-flex items-center justify-center gap-2 rounded-xl bg-primary px-7 py-3 text-sm font-semibold text-white shadow-md shadow-primary/20 transition hover:bg-primary/90 hover:-translate-y-0.5 focus:outline-none focus:ring-4 focus:ring-primary/20"
+                                            class="inline-flex items-center justify-center gap-2 rounded-xl bg-primary px-7 py-3 max-md:w-full max-md:py-4 text-sm font-semibold text-white shadow-md shadow-primary/20 transition hover:bg-primary/90 hover:-translate-y-0.5 focus:outline-none focus:ring-4 focus:ring-primary/20"
                                         >
                                             <span>{{ submit_label }}</span>
                                             <span

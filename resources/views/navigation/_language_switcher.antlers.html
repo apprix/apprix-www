@@ -24,7 +24,7 @@
   >
     <span
       class="transition-colors duration-200"
-      :class="open ? 'text-neutral-900 dark:text-slate-100' : 'text-neutral-900/70 dark:text-slate-300'"
+      :class="open ? 'text-neutral-900 dark:text-slate-100' : 'text-neutral-700 dark:text-slate-300'"
       aria-hidden="true"
     >
       <svg
@@ -68,7 +68,7 @@
       {{# Top accent line #}}
       <div class="pointer-events-none absolute inset-x-0 top-0 h-[2px] bg-gradient-to-r from-transparent via-primary/30 to-transparent"></div>
 
-      <p class="px-3 pt-2.5 pb-1.5 text-[10px] font-semibold tracking-widest text-neutral-400 dark:text-slate-500 uppercase">
+      <p class="px-3 pt-2.5 pb-1.5 text-xs font-semibold tracking-widest text-neutral-400 dark:text-slate-500 uppercase">
         {{ trans:strings.language }}
       </p>
 
@@ -80,7 +80,7 @@
               class="
                 group flex items-center justify-between
                 rounded-xl px-3 py-2.5
-                text-[13px] font-semibold
+                text-sm font-semibold
                 transition-all duration-150
                 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary/25
                 {{ if handle == site:handle }}
