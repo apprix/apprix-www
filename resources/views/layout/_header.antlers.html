@@ -6,26 +6,20 @@
     onScroll();
     window.addEventListener('scroll', onScroll, { passive: true });
   "
-  :class="scrolled
-    ? 'border-b border-neutral-200/60 dark:border-slate-700/60 bg-white/85 dark:bg-slate-900/85 supports-[backdrop-filter]:bg-white/75 dark:supports-[backdrop-filter]:bg-slate-900/75 shadow-sm backdrop-blur'
-    : 'border-b border-transparent bg-transparent supports-[backdrop-filter]:bg-transparent'"
+  :class="mobileNavOpen
+    ? 'border-b border-transparent bg-white dark:bg-slate-900'
+    : scrolled
+      ? 'border-b border-neutral-200/60 dark:border-slate-700/60 bg-white/85 dark:bg-slate-900/85 supports-[backdrop-filter]:bg-white/75 dark:supports-[backdrop-filter]:bg-slate-900/75 shadow-sm backdrop-blur'
+      : 'border-b border-transparent bg-transparent'"
   class="sticky top-0 z-50 transition-all duration-200"
 >
-  {{# Mobile: match hero gradient so header blends seamlessly (hidden on desktop + when scrolled) #}}
-  <div
-    x-show="!scrolled"
-    class="pointer-events-none absolute inset-0 z-0 md:hidden"
-    aria-hidden="true"
-  >
-    <div class="absolute inset-0 bg-gradient-to-br from-sky-50 via-white to-transparent dark:from-slate-800 dark:via-slate-900 dark:to-transparent"></div>
-  </div>
 
   <div class="relative z-10 fluid-grid">
     <div class="span-content">
       <div class="grid grid-cols-[auto_1fr_auto] items-center gap-6 py-2.5 md:py-3">
 
         {{# Left: Logo #}}
-        <div class="w-[160px] shrink-0 md:w-[80px] xl:w-[230px]">
+        <div class="w-[160px] shrink-0 md:w-[80px] xl:w-[230px] translate-y-[5px]">
           {{ partial:components/logo }}
         </div>
 
@@ -99,7 +93,7 @@
             </template>
             {{# Moon icon (shown in light mode) #}}
             <template x-if="!darkMode">
-              <svg class="h-[18px] w-[18px] text-neutral-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <svg class="h-[18px] w-[18px] text-neutral-700" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                 <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
               </svg>
             </template>

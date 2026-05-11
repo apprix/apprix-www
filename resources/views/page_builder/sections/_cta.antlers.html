@@ -14,19 +14,8 @@
       style="background-image: url('/assets/images/cta/blue_bg.jpg');"
     ></div>
 
-    {{# brand blue overlay (lighter so image shows more) #}}
-    <div class="absolute inset-0 bg-sky-900/55 dark:bg-slate-900/80"></div>
-
-    {{# soft center glow (tighter + clearer) #}}
-    <div
-      class="pointer-events-none absolute left-1/2 top-1/2
-      h-[22rem] w-[34rem]
-      -translate-x-1/2 -translate-y-1/2
-      bg-white/20 dark:bg-white/5 blur-2xl"
-    ></div>
-
-    {{# softened vignette (less heavy on edges) #}}
-    <div class="absolute inset-0 bg-gradient-to-b from-black/5 via-transparent to-black/10 dark:from-black/20 dark:to-black/30"></div>
+    {{# light overlay — keeps text readable without hiding image #}}
+    <div class="absolute inset-0 bg-sky-900/30 dark:bg-slate-900/70"></div>
 
     {{# accent rails (brand continuity) #}}
     <div class="pointer-events-none absolute inset-x-0 top-0 h-[2px]
@@ -46,7 +35,7 @@
         </h2>
 
         {{ if text }}
-          <p class="mx-auto mt-4 max-w-2xl text-base leading-relaxed text-white/85">
+          <p class="hidden md:block mx-auto mt-4 max-w-2xl text-base leading-relaxed text-white/85">
             {{ text }}
           </p>
         {{ /if }}
@@ -63,7 +52,7 @@
                 rounded-xl
                 bg-primary
                 px-12 py-4
-                text-md font-semibold text-white
+                text-base font-semibold text-white
 
                 shadow-lg shadow-black/20
                 ring-1 ring-white/15

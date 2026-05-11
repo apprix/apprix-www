@@ -4,7 +4,7 @@
   @set page.page_builder.testimonials
 #}}
 
-<section class="relative overflow-hidden">
+<section class="relative overflow-x-clip">
 
   {{# Background — gradient fade for smooth section transitions #}}
   <div class="absolute inset-0" aria-hidden="true">
@@ -16,20 +16,28 @@
   <div class="fluid-grid relative py-10 md:py-14">
     <div class="span-content">
 
-      {{# Section header — compact inline #}}
-      {{ if eyebrow || title }}
-        <div class="mb-6 flex flex-wrap items-baseline gap-x-3 gap-y-1 md:mb-8">
+      {{# Section header — centered, matches other blocks #}}
+      {{ if eyebrow || title || intro }}
+        <div class="mx-auto mb-10 max-w-3xl text-center md:mb-14">
+
           {{ if eyebrow }}
-            <span class="text-sm font-semibold uppercase tracking-widest text-primary">{{ eyebrow }}</span>
-            <span class="text-neutral-300 dark:text-slate-600">/</span>
+            <p class="mb-3 text-sm font-semibold uppercase tracking-widest text-primary">
+              {{ eyebrow }}
+            </p>
           {{ /if }}
+
           {{ if title }}
-            <h2 class="text-lg font-semibold tracking-tight text-neutral-900 dark:text-slate-100 md:text-xl">{{ title }}</h2>
+            <h2 class="text-balance text-2xl font-semibold tracking-tight text-neutral-900 dark:text-slate-100 md:text-3xl">
+              {{ title }}
+            </h2>
           {{ /if }}
+
           {{ if intro }}
-            <span class="hidden text-neutral-300 dark:text-slate-600 md:inline">&mdash;</span>
-            <p class="w-full text-sm leading-relaxed text-neutral-500 dark:text-slate-400 md:w-auto">{{ intro }}</p>
+            <p class="mx-auto mt-4 max-w-xl text-base leading-relaxed text-neutral-600 dark:text-slate-400">
+              {{ intro }}
+            </p>
           {{ /if }}
+
         </div>
       {{ /if }}
 

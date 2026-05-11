@@ -56,7 +56,12 @@
 
               {{# Step number #}}
               <div class="flex items-start">
-                <span class="text-7xl font-black tracking-tighter text-primary/25 dark:text-primary/15 md:text-8xl">
+                <span class="text-7xl font-black tracking-tighter md:text-8xl {{ switch(
+                  (index == 0) => 'text-brand-orange/30 dark:text-brand-orange/20',
+                  (index == 1) => 'text-brand-green/30 dark:text-brand-green/20',
+                  (index == 2) => 'text-brand-blue/30 dark:text-brand-blue/20',
+                  () => 'text-primary/25 dark:text-primary/15'
+                ) }}">
                   {{ if index == 0 }}01{{ elseif index == 1 }}02{{ elseif index == 2 }}03{{ elseif index == 3 }}04{{ elseif index == 4 }}05{{ elseif index == 5 }}06{{ /if }}
                 </span>
               </div>

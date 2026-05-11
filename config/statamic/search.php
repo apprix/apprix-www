@@ -28,13 +28,13 @@ return [
         'default' => [
             'driver' => 'local',
             'searchables' => ['collection:pages'],
-            'fields' => ['title', 'page_builder', 'seo_title', 'seo_description'],
+            'fields' => ['title', 'seo_title', 'seo_description'],
         ],
 
         'articles' => [
             'driver' => 'local',
             'searchables' => ['collection:articles'],
-            'fields' => ['title', 'intro', 'article', 'seo_title', 'seo_description'],
+            'fields' => ['title', 'intro', 'seo_title', 'seo_description'],
         ],
 
     ],

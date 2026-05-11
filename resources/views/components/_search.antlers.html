@@ -75,6 +75,23 @@
             if (this.results[this.selectedIndex]) {
                 this.navigate(this.results[this.selectedIndex].url);
             }
+        },
+
+        escapeHtml(text) {
+            const div = document.createElement('div');
+            div.appendChild(document.createTextNode(text));
+            return div.innerHTML;
+        },
+
+        highlight(text, query) {
+            const safe = this.escapeHtml(text);
+            const q = query.trim();
+            if (!q) return safe;
+            const terms = q.split(/\s+/).filter(Boolean).map(t =>
+                t.replace(/[.*+?^${}()|[\]\\]/g, m => '\\' + m)
+            );
+            const regex = new RegExp('(' + terms.join('|') + ')', 'gi');
+            return safe.replace(regex, m => '<mark>' + m + '</mark>');
         }
     }"
     @toggle-search.window="toggle()"
@@ -176,11 +193,11 @@
                                     </template>
 
                                     <div class="min-w-0 flex-1">
-                                        <span class="block truncate text-sm font-semibold" x-text="result.title"></span>
+                                        <span class="block truncate text-sm font-semibold" x-html="highlight(result.title, query)"></span>
                                     </div>
 
                                     <span
-                                        class="shrink-0 rounded-md px-2 py-0.5 text-[10px] font-semibold uppercase tracking-wider"
+                                        class="shrink-0 rounded-md px-2 py-0.5 text-xs font-semibold uppercase tracking-wider"
                                         :class="result.collection === 'articles'
                                             ? 'bg-primary/10 text-primary dark:bg-primary/20'
                                             : 'bg-neutral-100 dark:bg-slate-700 text-neutral-500 dark:text-slate-400'"
@@ -225,16 +242,16 @@
             <div class="flex items-center justify-between border-t border-neutral-200/70 dark:border-slate-700 px-5 py-3">
                 <div class="flex items-center gap-3 text-xs text-neutral-400 dark:text-slate-500">
                     <span class="inline-flex items-center gap-1">
-                        <kbd class="rounded border border-neutral-300/60 dark:border-slate-600 bg-neutral-100 dark:bg-slate-700 px-1.5 py-0.5 text-[10px] font-semibold">↑↓</kbd>
+                        <kbd class="rounded border border-neutral-300/60 dark:border-slate-600 bg-neutral-100 dark:bg-slate-700 px-1.5 py-0.5 text-xs font-semibold">↑↓</kbd>
                         {{ trans:strings.search_navigate }}
                     </span>
                     <span class="inline-flex items-center gap-1">
-                        <kbd class="rounded border border-neutral-300/60 dark:border-slate-600 bg-neutral-100 dark:bg-slate-700 px-1.5 py-0.5 text-[10px] font-semibold">↵</kbd>
+                        <kbd class="rounded border border-neutral-300/60 dark:border-slate-600 bg-neutral-100 dark:bg-slate-700 px-1.5 py-0.5 text-xs font-semibold">↵</kbd>
                         {{ trans:strings.search_select }}
                     </span>
                 </div>
                 <span class="inline-flex items-center gap-1 text-xs text-neutral-400 dark:text-slate-500">
-                    <kbd class="rounded border border-neutral-300/60 dark:border-slate-600 bg-neutral-100 dark:bg-slate-700 px-1.5 py-0.5 text-[10px] font-semibold">Esc</kbd>
+                    <kbd class="rounded border border-neutral-300/60 dark:border-slate-600 bg-neutral-100 dark:bg-slate-700 px-1.5 py-0.5 text-xs font-semibold">Esc</kbd>
                     {{ trans:strings.search_close }}
                 </span>
             </div>

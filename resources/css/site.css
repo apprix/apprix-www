@@ -42,7 +42,7 @@
     --color-neutral-300: var(--color-slate-300);
     --color-neutral-400: var(--color-slate-400);
     --color-neutral-500: var(--color-slate-500);
-    --color-neutral-600: var(--color-slate-600);
+    --color-neutral-600: #637283;
     --color-neutral-700: var(--color-slate-700);
     --color-neutral-800: var(--color-slate-800);
     --color-neutral-900: var(--color-slate-900);
@@ -53,10 +53,38 @@
     --color-text: var(--color-brand-text);
     --color-muted: color-mix(in oklab, var(--color-brand-text) 70%, white);
 
+    /* Font family */
+    --font-sans: "Open Sans", "Century Gothic", sans-serif;
+
     /* Font weights */
     --font-weight-*: initial;
+    --font-weight-light: 300;
     --font-weight-normal: 400;
     --font-weight-bold: 700;
+    --font-weight-extrabold: 800;
+
+    /* =========================
+       6-step type scale
+       xs · sm · base · 2xl · 3xl · 5xl
+       Intermediate sizes remapped to nearest step so
+       existing template classes automatically use the scale.
+       ========================= */
+
+    /* text-lg  → base  (1 rem) */
+    --text-lg: 1rem;
+    --text-lg--line-height: 1.625;
+
+    /* text-xl  → 2xl  (1.5 rem) */
+    --text-xl: 1.5rem;
+    --text-xl--line-height: 2rem;
+
+    /* text-4xl → 3xl  (1.875 rem) */
+    --text-4xl: 1.875rem;
+    --text-4xl--line-height: 2.25rem;
+
+    /* text-6xl → 5xl  (3 rem) */
+    --text-6xl: 3rem;
+    --text-6xl--line-height: 1;
 }
 
 /* =========================
@@ -110,6 +138,17 @@
     --color-neutral-900: #f8fafc;
     --color-neutral-950: #ffffff;
 }
+
+/* =========================
+   Section colour themes
+   Add e.g. class="theme-teal" to a section wrapper to re-accent all
+   text-primary / bg-primary / border-primary etc. inside that section.
+   ========================= */
+.theme-orange { --color-primary: var(--color-brand-orange); }
+.theme-green  { --color-primary: var(--color-brand-green); }
+.theme-blue   { --color-primary: var(--color-brand-blue); }
+.theme-teal   { --color-primary: var(--color-brand-teal); }
+.theme-dark   { --color-primary: var(--color-brand-dark); }
 
 /* =========================
    Logo carousel animation
@@ -281,4 +320,12 @@
     .showcase-segment-active {
         box-shadow: none;
     }
+}
+
+/* Search result highlight */
+[x-data] mark {
+    background-color: color-mix(in srgb, var(--color-primary) 15%, transparent);
+    color: var(--color-primary);
+    border-radius: 2px;
+    font-style: normal;
 }
