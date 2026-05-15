@@ -13,4 +13,4 @@ esim. ”Klikkaa tästä tutustuaksesi aiheeseen lisää”.
 
 <h6 class="p1">Miten elementin tekstiä muokataan?</h6>
 
-<figure class="doc-image"><img src="https://faq.apprix.fi/wp-content/uploads/2021/08/Tekstin_editoiminen_elementissa.gif" alt="" loading="lazy"></figure>
+<figure class="doc-image"><img src="/files/docs/2021/08/Tekstin_editoiminen_elementissa.gif" alt="" loading="lazy"></figure>

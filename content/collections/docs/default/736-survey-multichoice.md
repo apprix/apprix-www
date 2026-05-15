@@ -21,12 +21,12 @@ title: '7.36 Survey Multichoice'
 
 <h5>Elementin asetukset editointinäkymässä:</h5>
 
-<figure class="doc-image"><img src="https://faq.apprix.fi/wp-content/uploads/2021/08/Survey_Multichoice_FI-1.gif" alt="" loading="lazy"></figure>
+<figure class="doc-image"><img src="/files/docs/2021/08/Survey_Multichoice_FI-1.gif" alt="" loading="lazy"></figure>
 
-<figure class="doc-image"><img src="https://faq.apprix.fi/wp-content/uploads/2021/08/Survey_Multichoice_Edit_FI-1.gif" alt="" loading="lazy"></figure>
+<figure class="doc-image"><img src="/files/docs/2021/08/Survey_Multichoice_Edit_FI-1.gif" alt="" loading="lazy"></figure>
 
-<figure class="doc-image"><img src="https://faq.apprix.fi/wp-content/uploads/2021/06/survey1.png" alt="" loading="lazy"></figure>
+<figure class="doc-image"><img src="/files/docs/2021/06/survey1.png" alt="" loading="lazy"></figure>
 
-<figure class="doc-image"><img src="https://faq.apprix.fi/wp-content/uploads/2021/06/Survey2.png" alt="" loading="lazy"></figure>
+<figure class="doc-image"><img src="/files/docs/2021/06/Survey2.png" alt="" loading="lazy"></figure>
 
-<figure class="doc-image"><img src="https://faq.apprix.fi/wp-content/uploads/2021/06/Survey3.png" alt="" loading="lazy"></figure>
+<figure class="doc-image"><img src="/files/docs/2021/06/Survey3.png" alt="" loading="lazy"></figure>

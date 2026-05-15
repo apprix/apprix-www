@@ -15,4 +15,4 @@ Jos näin on,  klikkaa <strong>Upload new image</strong>. Valitse kuva tiedosto
 
 <h6>Miten lisäät kuvia moduuleihin kuvakirjaston (Image Library) avulla?</h6>
 
-<figure class="doc-image"><img src="https://faq.apprix.fi/wp-content/uploads/2023/04/Image_library1-1.png" alt="" loading="lazy"></figure>
+<figure class="doc-image"><img src="/files/docs/2023/04/Image_library1-1.png" alt="" loading="lazy"></figure>

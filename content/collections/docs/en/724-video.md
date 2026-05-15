@@ -122,12 +122,12 @@ To upload multiple video files with different formats simultaneously, please cli
 
 <h5 class="p1">Element settings in Edit Element Contents view:</h5>
 
-<figure class="doc-image"><img src="https://faq.apprix.fi/wp-content/uploads/2021/08/Video_EN.gif" alt="" loading="lazy"></figure>
+<figure class="doc-image"><img src="/files/docs/2021/08/Video_EN.gif" alt="" loading="lazy"></figure>
 
-<figure class="doc-image"><img src="https://faq.apprix.fi/wp-content/uploads/2022/01/video-1.png" alt="" loading="lazy"></figure>
+<figure class="doc-image"><img src="/files/docs/2022/01/video-1.png" alt="" loading="lazy"></figure>
 
-<figure class="doc-image"><img src="https://faq.apprix.fi/wp-content/uploads/2021/08/Video_Edit_EN.gif" alt="" loading="lazy"></figure>
+<figure class="doc-image"><img src="/files/docs/2021/08/Video_Edit_EN.gif" alt="" loading="lazy"></figure>
 
-<figure class="doc-image"><img src="https://faq.apprix.fi/wp-content/uploads/2022/05/video-ohje4.gif" alt="" loading="lazy"></figure>
+<figure class="doc-image"><img src="/files/docs/2022/05/video-ohje4.gif" alt="" loading="lazy"></figure>
 
-<figure class="doc-image"><img src="https://faq.apprix.fi/wp-content/uploads/2021/12/video-1.png" alt="" loading="lazy"></figure>
+<figure class="doc-image"><img src="/files/docs/2021/12/video-1.png" alt="" loading="lazy"></figure>

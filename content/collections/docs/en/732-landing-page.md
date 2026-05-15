@@ -51,14 +51,14 @@ When the trainee hovers with the mouse over the course, the Mouseover text, e.g.
 
 <h6>You can also use this element to store links and documentation.</h6>
 
-<figure class="doc-image"><img src="https://faq.apprix.fi/wp-content/uploads/2025/05/LP-esimerkki.png" alt="" loading="lazy"></figure>
+<figure class="doc-image"><img src="/files/docs/2025/05/LP-esimerkki.png" alt="" loading="lazy"></figure>
 
-<figure class="doc-image"><img src="https://faq.apprix.fi/wp-content/uploads/2025/05/LP-button-settings.png" alt="" loading="lazy"></figure>
+<figure class="doc-image"><img src="/files/docs/2025/05/LP-button-settings.png" alt="" loading="lazy"></figure>
 
-<figure class="doc-image"><img src="https://faq.apprix.fi/wp-content/uploads/2025/05/LPStart.gif" alt="" loading="lazy"></figure>
+<figure class="doc-image"><img src="/files/docs/2025/05/LPStart.gif" alt="" loading="lazy"></figure>
 
-<figure class="doc-image"><img src="https://faq.apprix.fi/wp-content/uploads/2025/05/DLV-Start21-1.gif" alt="" loading="lazy"></figure>
+<figure class="doc-image"><img src="/files/docs/2025/05/DLV-Start21-1.gif" alt="" loading="lazy"></figure>
 
-<figure class="doc-image"><img src="https://faq.apprix.fi/wp-content/uploads/2025/05/LP-Preview-0105.gif" alt="" loading="lazy"></figure>
+<figure class="doc-image"><img src="/files/docs/2025/05/LP-Preview-0105.gif" alt="" loading="lazy"></figure>
 
-<figure class="doc-image"><img src="https://faq.apprix.fi/wp-content/uploads/2025/05/DLP-for-links-and-documentation.png" alt="" loading="lazy"></figure>
+<figure class="doc-image"><img src="/files/docs/2025/05/DLP-for-links-and-documentation.png" alt="" loading="lazy"></figure>

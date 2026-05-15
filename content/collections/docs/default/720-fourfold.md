@@ -29,6 +29,6 @@ Elementin taustakuvan kuin myös asteikon taustakuvan voi vaihtaa aiheeseen sopi
 
 <h5 class="p1 fusion-responsive-typography-calculated" data-fontsize="12" data-lineheight="18px">Elementin asetukset editointinäkymässä:</h5>
 
-<figure class="doc-image"><img src="https://faq.apprix.fi/wp-content/uploads/2021/08/Fourfold_FIN-1.gif" alt="" loading="lazy"></figure>
+<figure class="doc-image"><img src="/files/docs/2021/08/Fourfold_FIN-1.gif" alt="" loading="lazy"></figure>
 
-<figure class="doc-image"><img src="https://faq.apprix.fi/wp-content/uploads/2021/08/Fourfold_Edit_FI-1.gif" alt="" loading="lazy"></figure>
+<figure class="doc-image"><img src="/files/docs/2021/08/Fourfold_Edit_FI-1.gif" alt="" loading="lazy"></figure>

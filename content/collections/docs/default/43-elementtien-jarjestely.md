@@ -7,4 +7,4 @@ title: '4.3 Elementtien järjestely'
 
 <h6>Miten asetat elementit järjestykseen?</h6>
 
-<figure class="doc-image"><img src="https://faq.apprix.fi/wp-content/uploads/2021/08/Elementtien_siirtely.gif" alt="" loading="lazy"></figure>
+<figure class="doc-image"><img src="/files/docs/2021/08/Elementtien_siirtely.gif" alt="" loading="lazy"></figure>

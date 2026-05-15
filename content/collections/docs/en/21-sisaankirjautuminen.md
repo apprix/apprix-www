@@ -17,4 +17,4 @@ Once you get the new password via email, you are invited to change it.
 
 <h6 class="p1">Builder Login</h6>
 
-<figure class="doc-image"><img src="https://faq.apprix.fi/wp-content/uploads/2025/03/2.1-Sisaankirjautuminen-Login-1.png" alt="" loading="lazy"></figure>
+<figure class="doc-image"><img src="/files/docs/2025/03/2.1-Sisaankirjautuminen-Login-1.png" alt="" loading="lazy"></figure>

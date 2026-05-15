@@ -40,8 +40,8 @@ Tehtävän loppuun voi asettaa yhteenvetoruudun, jossa esitetään tiivistelmä 
 
 <h6>Voit lisätä vastaustekstin kuhunkin hotspot-kentän viestiruutuun erikseen klikkaamalla</h6>
 
-<figure class="doc-image"><img src="https://faq.apprix.fi/wp-content/uploads/2024/08/Hotspot-multichoice-video-optimized.gif" alt="" loading="lazy"></figure>
+<figure class="doc-image"><img src="/files/docs/2024/08/Hotspot-multichoice-video-optimized.gif" alt="" loading="lazy"></figure>
 
-<figure class="doc-image"><img src="https://faq.apprix.fi/wp-content/uploads/2024/08/Hotspot-multichoice-video-settings-opt2.gif" alt="" loading="lazy"></figure>
+<figure class="doc-image"><img src="/files/docs/2024/08/Hotspot-multichoice-video-settings-opt2.gif" alt="" loading="lazy"></figure>
 
-<figure class="doc-image"><img src="https://faq.apprix.fi/wp-content/uploads/2024/08/Hotspot-multichoice-video-items-opt-3-1.gif" alt="" loading="lazy"></figure>
+<figure class="doc-image"><img src="/files/docs/2024/08/Hotspot-multichoice-video-items-opt-3-1.gif" alt="" loading="lazy"></figure>

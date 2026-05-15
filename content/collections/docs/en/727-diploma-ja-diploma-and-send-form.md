@@ -23,8 +23,8 @@ On the right is an example of an email with basic information about the course 
 
 <h5>Diploma &amp; Send Form in Element Edit view</h5>
 
-<figure class="doc-image"><img src="https://faq.apprix.fi/wp-content/uploads/2021/10/Diploma_EN_.jpg" alt="" loading="lazy"></figure>
+<figure class="doc-image"><img src="/files/docs/2021/10/Diploma_EN_.jpg" alt="" loading="lazy"></figure>
 
-<figure class="doc-image"><img src="https://faq.apprix.fi/wp-content/uploads/2021/10/Diploma_Send_Form_EN-1.jpg" alt="" loading="lazy"></figure>
+<figure class="doc-image"><img src="/files/docs/2021/10/Diploma_Send_Form_EN-1.jpg" alt="" loading="lazy"></figure>
 
-<figure class="doc-image"><img src="https://faq.apprix.fi/wp-content/uploads/2021/10/msg.png" alt="" loading="lazy"></figure>
+<figure class="doc-image"><img src="/files/docs/2021/10/msg.png" alt="" loading="lazy"></figure>

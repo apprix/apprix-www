@@ -23,4 +23,4 @@ Common uses for the element:
 
 <h6 class="p1"><b>Click on the images to enlarge them.</b></h6>
 
-<figure class="doc-image"><img src="https://faq.apprix.fi/wp-content/uploads/2022/01/multicoice-critical-1.gif" alt="" loading="lazy"></figure>
+<figure class="doc-image"><img src="/files/docs/2022/01/multicoice-critical-1.gif" alt="" loading="lazy"></figure>

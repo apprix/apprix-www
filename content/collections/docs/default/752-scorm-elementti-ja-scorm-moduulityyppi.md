@@ -42,8 +42,8 @@ Apprixin osoitteisiin tehtävissä kutsuissa käytetään HTTPS-protokollaa tiet
 
 Lisätietoja SCORMista löydät Builderin usein kysyttyjen kysymysten osiosta.
 
-ZIP/SCORM-Tiedosto: https://faq.apprix.fi/
+ZIP/SCORM-Tiedosto: <a href="/faq">/faq</a>
 
 <h6 class="p1">Miten luodaan moduuli, jossa käytetään SCORM-moduulityyppiä?</h6>
 
-<figure class="doc-image"><img src="https://faq.apprix.fi/wp-content/uploads/2025/04/SCORM-module-creation2.gif" alt="" loading="lazy"></figure>
+<figure class="doc-image"><img src="/files/docs/2025/04/SCORM-module-creation2.gif" alt="" loading="lazy"></figure>

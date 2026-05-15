@@ -16,6 +16,6 @@ title: '7.12 True/False'
 
 <h5 class="p1 fusion-responsive-typography-calculated" data-fontsize="12" data-lineheight="18px">Elementin asetukset muokkaustilassa.</h5>
 
-<figure class="doc-image"><img src="https://faq.apprix.fi/wp-content/uploads/2021/08/TrueFalse_FI-1.gif" alt="" loading="lazy"></figure>
+<figure class="doc-image"><img src="/files/docs/2021/08/TrueFalse_FI-1.gif" alt="" loading="lazy"></figure>
 
-<figure class="doc-image"><img src="https://faq.apprix.fi/wp-content/uploads/2021/08/TrueFalse_Edit_FI-1.gif" alt="" loading="lazy"></figure>
+<figure class="doc-image"><img src="/files/docs/2021/08/TrueFalse_Edit_FI-1.gif" alt="" loading="lazy"></figure>

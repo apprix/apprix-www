@@ -48,10 +48,10 @@ Jokainen kuvakkeella varustettu kuutio sisältää submoduulin. Kurssilaisen on 
 
 <h6 class="p1">Klikkaa kuvia suurentaaksesi niitä.</h6>
 
-<figure class="doc-image"><img src="https://faq.apprix.fi/wp-content/uploads/2023/07/Submenu-hotspot.jpg" alt="" loading="lazy"></figure>
+<figure class="doc-image"><img src="/files/docs/2023/07/Submenu-hotspot.jpg" alt="" loading="lazy"></figure>
 
-<figure class="doc-image"><img src="https://faq.apprix.fi/wp-content/uploads/2023/07/Submenu-hotspot-summary.jpg" alt="" loading="lazy"></figure>
+<figure class="doc-image"><img src="/files/docs/2023/07/Submenu-hotspot-summary.jpg" alt="" loading="lazy"></figure>
 
-<figure class="doc-image"><img src="https://faq.apprix.fi/wp-content/uploads/2023/07/Submenu-hotspot.gif" alt="" loading="lazy"></figure>
+<figure class="doc-image"><img src="/files/docs/2023/07/Submenu-hotspot.gif" alt="" loading="lazy"></figure>
 
-<figure class="doc-image"><img src="https://faq.apprix.fi/wp-content/uploads/2023/07/Submenu-hotspot-how-to-link-a-submodule-1.gif" alt="" loading="lazy"></figure>
+<figure class="doc-image"><img src="/files/docs/2023/07/Submenu-hotspot-how-to-link-a-submodule-1.gif" alt="" loading="lazy"></figure>

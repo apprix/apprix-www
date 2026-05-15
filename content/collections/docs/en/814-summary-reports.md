@@ -27,7 +27,7 @@ More information on this feature can be found here:
 
 <strong>8.8 Extended Reports</strong>
 
-<a href="https://faq.apprix.fi/builder-help-en/#extendedreports">https://faq.apprix.fi/builder-help-en/#extendedreports</a>
+<a href="/help/88-extended-reports">8.8 Extended Reports</a>
 
 <h6>Access rights to the Summary Reports tool are granted in Administrate → Users.</h6>
 
@@ -35,8 +35,8 @@ More information on this feature can be found here:
 
 <h6>An example of available filters in the Reports tool</h6>
 
-<figure class="doc-image"><img src="https://faq.apprix.fi/wp-content/uploads/2025/02/Admin-Summary-reports-2.png" alt="" loading="lazy"></figure>
+<figure class="doc-image"><img src="/files/docs/2025/02/Admin-Summary-reports-2.png" alt="" loading="lazy"></figure>
 
-<figure class="doc-image"><img src="https://faq.apprix.fi/wp-content/uploads/2025/02/Reports-button-1.png" alt="" loading="lazy"></figure>
+<figure class="doc-image"><img src="/files/docs/2025/02/Reports-button-1.png" alt="" loading="lazy"></figure>
 
-<figure class="doc-image"><img src="https://faq.apprix.fi/wp-content/uploads/2025/02/Reports-filters-1.png" alt="" loading="lazy"></figure>
+<figure class="doc-image"><img src="/files/docs/2025/02/Reports-filters-1.png" alt="" loading="lazy"></figure>

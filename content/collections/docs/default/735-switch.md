@@ -18,12 +18,12 @@ title: '7.35 Switch'
 
 <h5>Elementin asetukset editointinäkymässä:</h5>
 
-<figure class="doc-image"><img src="https://faq.apprix.fi/wp-content/uploads/2021/08/Switch_FI-1.gif" alt="" loading="lazy"></figure>
+<figure class="doc-image"><img src="/files/docs/2021/08/Switch_FI-1.gif" alt="" loading="lazy"></figure>
 
-<figure class="doc-image"><img src="https://faq.apprix.fi/wp-content/uploads/2021/08/Switch_Edit_FI-1.gif" alt="" loading="lazy"></figure>
+<figure class="doc-image"><img src="/files/docs/2021/08/Switch_Edit_FI-1.gif" alt="" loading="lazy"></figure>
 
-<figure class="doc-image"><img src="https://faq.apprix.fi/wp-content/uploads/2021/06/Switch1.png" alt="" loading="lazy"></figure>
+<figure class="doc-image"><img src="/files/docs/2021/06/Switch1.png" alt="" loading="lazy"></figure>
 
-<figure class="doc-image"><img src="https://faq.apprix.fi/wp-content/uploads/2021/06/Switch2.png" alt="" loading="lazy"></figure>
+<figure class="doc-image"><img src="/files/docs/2021/06/Switch2.png" alt="" loading="lazy"></figure>
 
-<figure class="doc-image"><img src="https://faq.apprix.fi/wp-content/uploads/2021/06/Switch3.png" alt="" loading="lazy"></figure>
+<figure class="doc-image"><img src="/files/docs/2021/06/Switch3.png" alt="" loading="lazy"></figure>

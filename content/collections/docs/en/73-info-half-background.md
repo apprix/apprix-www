@@ -19,6 +19,6 @@ title: '7.3 Info Half Background'
 
 <h5 class="p1">Element settings in Edit Element Contents view:</h5>
 
-<figure class="doc-image"><img src="https://faq.apprix.fi/wp-content/uploads/2021/08/Info_Half_Background_EN.gif" alt="" loading="lazy"></figure>
+<figure class="doc-image"><img src="/files/docs/2021/08/Info_Half_Background_EN.gif" alt="" loading="lazy"></figure>
 
-<figure class="doc-image"><img src="https://faq.apprix.fi/wp-content/uploads/2021/08/Info_Half_Background_Edit_EN.gif" alt="" loading="lazy"></figure>
+<figure class="doc-image"><img src="/files/docs/2021/08/Info_Half_Background_Edit_EN.gif" alt="" loading="lazy"></figure>

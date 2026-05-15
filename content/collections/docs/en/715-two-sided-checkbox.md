@@ -40,6 +40,6 @@ If you want to activate the <b>Answer Mode</b> option, click the gear icon on th
 
 <h6 class="p1"><b>Click on the images to enlarge them.</b></h6>
 
-<figure class="doc-image"><img src="https://faq.apprix.fi/wp-content/uploads/2022/04/Two-sided-checkbox-END-USER-ENG-1.gif" alt="" loading="lazy"></figure>
+<figure class="doc-image"><img src="/files/docs/2022/04/Two-sided-checkbox-END-USER-ENG-1.gif" alt="" loading="lazy"></figure>
 
-<figure class="doc-image"><img src="https://faq.apprix.fi/wp-content/uploads/2022/04/Two-sided-checkbox-Editor-ENG-1.gif" alt="" loading="lazy"></figure>
+<figure class="doc-image"><img src="/files/docs/2022/04/Two-sided-checkbox-Editor-ENG-1.gif" alt="" loading="lazy"></figure>

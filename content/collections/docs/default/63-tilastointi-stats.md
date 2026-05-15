@@ -60,14 +60,14 @@ Kun moduuli on julkaistu, (<b>Published</b>), se alkaa kerryttää tilastoa. Voi
 
 <h6>Feedback-elementti kerryttää tilastoa Feedback-välilehdelle.</h6>
 
-<figure class="doc-image"><img src="https://faq.apprix.fi/wp-content/uploads/2024/05/All-modules-stats.png" alt="" loading="lazy"></figure>
+<figure class="doc-image"><img src="/files/docs/2024/05/All-modules-stats.png" alt="" loading="lazy"></figure>
 
-<figure class="doc-image"><img src="https://faq.apprix.fi/wp-content/uploads/2024/05/Edit-module-stats.png" alt="" loading="lazy"></figure>
+<figure class="doc-image"><img src="/files/docs/2024/05/Edit-module-stats.png" alt="" loading="lazy"></figure>
 
-<figure class="doc-image"><img src="https://faq.apprix.fi/wp-content/uploads/2021/02/Stats.png" alt="" loading="lazy"></figure>
+<figure class="doc-image"><img src="/files/docs/2021/02/Stats.png" alt="" loading="lazy"></figure>
 
-<figure class="doc-image"><img src="https://faq.apprix.fi/wp-content/uploads/2021/02/Stats1.png" alt="" loading="lazy"></figure>
+<figure class="doc-image"><img src="/files/docs/2021/02/Stats1.png" alt="" loading="lazy"></figure>
 
-<figure class="doc-image"><img src="https://faq.apprix.fi/wp-content/uploads/2021/02/Stats2.png" alt="" loading="lazy"></figure>
+<figure class="doc-image"><img src="/files/docs/2021/02/Stats2.png" alt="" loading="lazy"></figure>
 
-<figure class="doc-image"><img src="https://faq.apprix.fi/wp-content/uploads/2021/02/Stats3.png" alt="" loading="lazy"></figure>
+<figure class="doc-image"><img src="/files/docs/2021/02/Stats3.png" alt="" loading="lazy"></figure>

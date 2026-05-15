@@ -27,18 +27,18 @@ You can preview a single element by:
 <strong>Additional information</strong>
 
 <strong>4.6 Copying Elements with their content</strong>
-<a href="https://faq.apprix.fi/builder-help-en/#copying-elements">https://faq.apprix.fi/builder-help-en/#copying-elements</a>
+<a href="/help/46-elementtien-kopiointi-sisaltoineen-copy-element">4.6 Copying Elements with their content</a>
 
 <h6 class="p1">How are elements previewed?</h6>
 
 <h6 class="p1">Preview Toolbar (Max, Min, Draft)</h6>
 
-<figure class="doc-image"><img src="https://faq.apprix.fi/wp-content/uploads/2025/06/Preview-element-1.jpg" alt="" loading="lazy"></figure>
+<figure class="doc-image"><img src="/files/docs/2025/06/Preview-element-1.jpg" alt="" loading="lazy"></figure>
 
-<figure class="doc-image"><img src="https://faq.apprix.fi/wp-content/uploads/2025/06/Preview-element-in-new-tab-1.png" alt="" loading="lazy"></figure>
+<figure class="doc-image"><img src="/files/docs/2025/06/Preview-element-in-new-tab-1.png" alt="" loading="lazy"></figure>
 
-<figure class="doc-image"><img src="https://faq.apprix.fi/wp-content/uploads/2025/06/Preview-mode-max-1.png" alt="" loading="lazy"></figure>
+<figure class="doc-image"><img src="/files/docs/2025/06/Preview-mode-max-1.png" alt="" loading="lazy"></figure>
 
-<figure class="doc-image"><img src="https://faq.apprix.fi/wp-content/uploads/2025/06/Preview-mode-min-1.png" alt="" loading="lazy"></figure>
+<figure class="doc-image"><img src="/files/docs/2025/06/Preview-mode-min-1.png" alt="" loading="lazy"></figure>
 
-<figure class="doc-image"><img src="https://faq.apprix.fi/wp-content/uploads/2025/06/Preview-mode-draft-1.png" alt="" loading="lazy"></figure>
+<figure class="doc-image"><img src="/files/docs/2025/06/Preview-mode-draft-1.png" alt="" loading="lazy"></figure>

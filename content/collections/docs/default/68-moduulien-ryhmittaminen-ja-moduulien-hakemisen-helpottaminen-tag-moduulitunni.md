@@ -18,7 +18,7 @@ title: '6.8 Moduulien ryhmittäminen ja moduulien hakemisen helpottaminen Tag-mo
  <li>Poista tunnisteen valinta hakukentässä klikkaamalla <strong>ruksia (X)</strong> hakukentän oikeassa laidassa.</li>
 </ul>
 </li>
- <li>Jos haluat poistaa valitun tunnisteen moduulista, klikkaa <strong>ruksia (X)</strong> tunnisteen nimen perässä.  <img class="alignnone wp-image-3262" src="https://faq.apprix.fi/wp-content/uploads/2021/01/esim-tag.png" alt="" width="108" height="27" data-wp-editing="1" /></li>
+ <li>Jos haluat poistaa valitun tunnisteen moduulista, klikkaa <strong>ruksia (X)</strong> tunnisteen nimen perässä.  <img class="alignnone wp-image-3262" src="/files/docs/2021/01/esim-tag.png" alt="" width="108" height="27" data-wp-editing="1" /></li>
  <li>Jos haluat pysyvästi poistaa jo olemassa olevan tunnisteen, klikkaa <strong>REMOVE TAG, </strong>valitse tunniste <strong>Select tag to remove</strong> -ikkunan listasta ja klikkaa <strong>REMOVE</strong>.  Klikkaa lopuksi <strong>SAVE</strong>.
 <ul>
  <li>Huomioithan, että voit poistaa tunnisteen vain, jos sinulla on muokkausoikeudet kaikkiin moduuleihin, joissa tunniste on käytössä.</li>
@@ -30,6 +30,6 @@ title: '6.8 Moduulien ryhmittäminen ja moduulien hakemisen helpottaminen Tag-mo
 
 <h6 class="p1">Miten luot uuden tagin ja liität sen moduuliin?</h6>
 
-<figure class="doc-image"><img src="https://faq.apprix.fi/wp-content/uploads/2024/08/Add-a-tag.gif" alt="" loading="lazy"></figure>
+<figure class="doc-image"><img src="/files/docs/2024/08/Add-a-tag.gif" alt="" loading="lazy"></figure>
 
-<figure class="doc-image"><img src="https://faq.apprix.fi/wp-content/uploads/2024/08/Add-a-tag-2.gif" alt="" loading="lazy"></figure>
+<figure class="doc-image"><img src="/files/docs/2024/08/Add-a-tag-2.gif" alt="" loading="lazy"></figure>

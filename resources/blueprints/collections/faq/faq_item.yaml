@@ -15,11 +15,21 @@ tabs:
 
           - handle: category
             field:
-              type: text
+              type: select
               required: true
               localizable: false
               display: Kategoria
-              instructions: "e.g. Yleiset, Sisäänkirjautuminen, Video..."
+              instructions: "Valitse osio johon tämä kysymys kuuluu."
+              options:
+                - 'Yleiset'
+                - 'Sisäänkirjautuminen'
+                - 'Video'
+                - 'Zip/SCORM-tiedostot'
+                - 'Käyttäjäoikeuksien hallinta'
+                - 'Moduulit ja submoduulit'
+                - 'Elementit'
+                - 'Tilastot'
+                - 'Tuetut selaimet'
 
           - handle: order
             field:
@@ -36,7 +46,7 @@ tabs:
               required: true
               localizable: true
               display: Vastaus
-              save_html: false
+              save_html: true
               toolbar_mode: fixed
               allow_source: false
               enable_input_rules: true

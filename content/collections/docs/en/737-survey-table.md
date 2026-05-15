@@ -45,16 +45,16 @@ The survey result (number of options chosen from the first and second column) is
 
 <h5 class="p1">Element settings in Edit Element Contents view:</h5>
 
-<figure class="doc-image"><img src="https://faq.apprix.fi/wp-content/uploads/2021/08/Survey_Table_EN.gif" alt="" loading="lazy"></figure>
+<figure class="doc-image"><img src="/files/docs/2021/08/Survey_Table_EN.gif" alt="" loading="lazy"></figure>
 
-<figure class="doc-image"><img src="https://faq.apprix.fi/wp-content/uploads/2021/08/Survey_Table_Edit_EN.gif" alt="" loading="lazy"></figure>
+<figure class="doc-image"><img src="/files/docs/2021/08/Survey_Table_Edit_EN.gif" alt="" loading="lazy"></figure>
 
-<figure class="doc-image"><img src="https://faq.apprix.fi/wp-content/uploads/2021/06/s1-1.png" alt="" loading="lazy"></figure>
+<figure class="doc-image"><img src="/files/docs/2021/06/s1-1.png" alt="" loading="lazy"></figure>
 
-<figure class="doc-image"><img src="https://faq.apprix.fi/wp-content/uploads/2021/06/s2-1.png" alt="" loading="lazy"></figure>
+<figure class="doc-image"><img src="/files/docs/2021/06/s2-1.png" alt="" loading="lazy"></figure>
 
-<figure class="doc-image"><img src="https://faq.apprix.fi/wp-content/uploads/2021/06/s3-1.png" alt="" loading="lazy"></figure>
+<figure class="doc-image"><img src="/files/docs/2021/06/s3-1.png" alt="" loading="lazy"></figure>
 
-<figure class="doc-image"><img src="https://faq.apprix.fi/wp-content/uploads/2021/06/s4-1.png" alt="" loading="lazy"></figure>
+<figure class="doc-image"><img src="/files/docs/2021/06/s4-1.png" alt="" loading="lazy"></figure>
 
-<figure class="doc-image"><img src="https://faq.apprix.fi/wp-content/uploads/2021/06/s5-1.png" alt="" loading="lazy"></figure>
+<figure class="doc-image"><img src="/files/docs/2021/06/s5-1.png" alt="" loading="lazy"></figure>

@@ -28,4 +28,4 @@ Make sure that the content to be embedded is visible to the users:
 
 <h6 class="p1"><b>Click on the video to enlarge it.</b></h6>
 
-<figure class="doc-image"><img src="https://faq.apprix.fi/wp-content/uploads/2024/07/Embed-document-element-1.gif" alt="" loading="lazy"></figure>
+<figure class="doc-image"><img src="/files/docs/2024/07/Embed-document-element-1.gif" alt="" loading="lazy"></figure>

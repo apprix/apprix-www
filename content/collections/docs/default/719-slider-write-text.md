@@ -11,6 +11,6 @@ Elementtiä voi myös käyttää esimerkiksi datan keräämiseen käyttäen sama
 
 <h5>Elementin asetukset editointinäkymässä:</h5>
 
-<figure class="doc-image"><img src="https://faq.apprix.fi/wp-content/uploads/2021/08/Slider_Write_Text_FI-1.gif" alt="" loading="lazy"></figure>
+<figure class="doc-image"><img src="/files/docs/2021/08/Slider_Write_Text_FI-1.gif" alt="" loading="lazy"></figure>
 
-<figure class="doc-image"><img src="https://faq.apprix.fi/wp-content/uploads/2021/08/Slider_Write_Text_FI_Edit-1.gif" alt="" loading="lazy"></figure>
+<figure class="doc-image"><img src="/files/docs/2021/08/Slider_Write_Text_FI_Edit-1.gif" alt="" loading="lazy"></figure>

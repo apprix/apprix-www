@@ -9,4 +9,4 @@ title: '2.2.1 Käyttäjäsalasanan vaihtaminen Change Password -toiminnolla'
 
 <h6 class="p1">Miten vaihdat Builder-salasanasi?</h6>
 
-<figure class="doc-image"><img src="https://faq.apprix.fi/wp-content/uploads/2025/03/2.2.1-Change-Password-Function-1.gif" alt="" loading="lazy"></figure>
+<figure class="doc-image"><img src="/files/docs/2025/03/2.2.1-Change-Password-Function-1.gif" alt="" loading="lazy"></figure>

@@ -33,6 +33,6 @@ Oikealla alhaalla on tekstilaatikoiden summa ja oikealla ylhäällä kyseisen ai
 
 <h6 class="p1">Klikkaa kuvia suurentaaksesi niitä.</h6>
 
-<figure class="doc-image"><img src="https://faq.apprix.fi/wp-content/uploads/2023/07/Pictures-and-captions-preview-video-1.gif" alt="" loading="lazy"></figure>
+<figure class="doc-image"><img src="/files/docs/2023/07/Pictures-and-captions-preview-video-1.gif" alt="" loading="lazy"></figure>
 
-<figure class="doc-image"><img src="https://faq.apprix.fi/wp-content/uploads/2023/07/Pictures-and-captions-element-editing-video-1.gif" alt="" loading="lazy"></figure>
+<figure class="doc-image"><img src="/files/docs/2023/07/Pictures-and-captions-element-editing-video-1.gif" alt="" loading="lazy"></figure>

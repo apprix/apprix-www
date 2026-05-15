@@ -24,10 +24,10 @@ When all the cards have been successfully inserted, a message box with further i
 
 <h6 class="p1">An example of how to use it.</h6>
 
-<figure class="doc-image"><img src="https://faq.apprix.fi/wp-content/uploads/2025/03/DragandDropWastedoing-1.gif" alt="" loading="lazy"></figure>
+<figure class="doc-image"><img src="/files/docs/2025/03/DragandDropWastedoing-1.gif" alt="" loading="lazy"></figure>
 
-<figure class="doc-image"><img src="https://faq.apprix.fi/wp-content/uploads/2025/03/DragandDropEditWasteedit2-1.gif" alt="" loading="lazy"></figure>
+<figure class="doc-image"><img src="/files/docs/2025/03/DragandDropEditWasteedit2-1.gif" alt="" loading="lazy"></figure>
 
-<figure class="doc-image"><img src="https://faq.apprix.fi/wp-content/uploads/2021/08/Drag_and_Drop_Edit_EN.gif" alt="" loading="lazy"></figure>
+<figure class="doc-image"><img src="/files/docs/2021/08/Drag_and_Drop_Edit_EN.gif" alt="" loading="lazy"></figure>
 
-<figure class="doc-image"><img src="https://faq.apprix.fi/wp-content/uploads/2021/05/dragdrop.png" alt="" loading="lazy"></figure>
+<figure class="doc-image"><img src="/files/docs/2021/05/dragdrop.png" alt="" loading="lazy"></figure>

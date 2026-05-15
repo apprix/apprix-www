@@ -20,8 +20,8 @@ Klikkaa huutomerkkipainiketta, ja <strong>Settings for this element</strong> -po
 
 <h6>Elementti muokkaustilassa</h6>
 
-<figure class="doc-image"><img src="https://faq.apprix.fi/wp-content/uploads/2024/06/Checkboxcritical-preview.gif" alt="" loading="lazy"></figure>
+<figure class="doc-image"><img src="/files/docs/2024/06/Checkboxcritical-preview.gif" alt="" loading="lazy"></figure>
 
-<figure class="doc-image"><img src="https://faq.apprix.fi/wp-content/uploads/2024/06/Checkboxcritical-edit1a.gif" alt="" loading="lazy"></figure>
+<figure class="doc-image"><img src="/files/docs/2024/06/Checkboxcritical-edit1a.gif" alt="" loading="lazy"></figure>
 
-<figure class="doc-image"><img src="https://faq.apprix.fi/wp-content/uploads/2024/06/Checkboxcritical-edit1.gif" alt="" loading="lazy"></figure>
+<figure class="doc-image"><img src="/files/docs/2024/06/Checkboxcritical-edit1.gif" alt="" loading="lazy"></figure>

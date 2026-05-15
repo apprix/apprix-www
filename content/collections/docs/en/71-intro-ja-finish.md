@@ -24,8 +24,8 @@ In the <b>Finish</b> element, you may thank or congratulate the trainee for comp
 
 <h5 class="p1">Finish element</h5>
 
-<figure class="doc-image"><img src="https://faq.apprix.fi/wp-content/uploads/2021/08/Intro_EN.gif" alt="" loading="lazy"></figure>
+<figure class="doc-image"><img src="/files/docs/2021/08/Intro_EN.gif" alt="" loading="lazy"></figure>
 
-<figure class="doc-image"><img src="https://faq.apprix.fi/wp-content/uploads/2021/08/Intro_Edit_EN_.gif" alt="" loading="lazy"></figure>
+<figure class="doc-image"><img src="/files/docs/2021/08/Intro_Edit_EN_.gif" alt="" loading="lazy"></figure>
 
-<figure class="doc-image"><img src="https://faq.apprix.fi/wp-content/uploads/2021/08/Finish_EN.jpg" alt="" loading="lazy"></figure>
+<figure class="doc-image"><img src="/files/docs/2021/08/Finish_EN.jpg" alt="" loading="lazy"></figure>

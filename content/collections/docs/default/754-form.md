@@ -88,10 +88,10 @@ Avaa <strong>Element Settings</strong> â€‘valikko rataskuvakkeesta elementin ylÃ
 
 <h6>Lomakkeen muokkaaminen</h6>
 
-<figure class="doc-image"><img src="https://faq.apprix.fi/wp-content/uploads/2025/12/Form-First-name-5-1.png" alt="" loading="lazy"></figure>
+<figure class="doc-image"><img src="/files/docs/2025/12/Form-First-name-5-1.png" alt="" loading="lazy"></figure>
 
-<figure class="doc-image"><img src="https://faq.apprix.fi/wp-content/uploads/2025/12/Form-First-Name-1.png" alt="" loading="lazy"></figure>
+<figure class="doc-image"><img src="/files/docs/2025/12/Form-First-Name-1.png" alt="" loading="lazy"></figure>
 
-<figure class="doc-image"><img src="https://faq.apprix.fi/wp-content/uploads/2025/12/Form-First-Name2-1.png" alt="" loading="lazy"></figure>
+<figure class="doc-image"><img src="/files/docs/2025/12/Form-First-Name2-1.png" alt="" loading="lazy"></figure>
 
-<figure class="doc-image"><img src="https://faq.apprix.fi/wp-content/uploads/2025/12/Form-First-name-4-OK-1.png" alt="" loading="lazy"></figure>
+<figure class="doc-image"><img src="/files/docs/2025/12/Form-First-name-4-OK-1.png" alt="" loading="lazy"></figure>

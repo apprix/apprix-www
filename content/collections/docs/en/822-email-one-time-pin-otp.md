@@ -24,14 +24,14 @@ This login (authentication) method eliminates the need for course participants t
  <li>The participant pastes the PIN code into the <strong>authentication pop‑up window</strong>.</li>
  <li>The course is ready to start.</li>
 </ol>
-<img class="aligncenter wp-image-6740 " src="https://faq.apprix.fi/wp-content/uploads/2025/12/Welcome-page.png" alt="" width="398" height="312" />
+<img class="aligncenter wp-image-6740 " src="/files/docs/2025/12/Welcome-page.png" alt="" width="398" height="312" />
 
 <div class="fusion-text fusion-text-180"><strong>Note! The user’s email address, first name, and last name must be unique</strong>
 <div>
 <div>
 <div class="fusion-text fusion-text-180">
 
-<img class="aligncenter wp-image-6742 " src="https://faq.apprix.fi/wp-content/uploads/2025/12/pin-code-message.png" alt="" width="408" height="382" />
+<img class="aligncenter wp-image-6742 " src="/files/docs/2025/12/pin-code-message.png" alt="" width="408" height="382" />
 
 <strong>Important notes</strong>
 <ul>
@@ -43,7 +43,7 @@ This login (authentication) method eliminates the need for course participants t
 </ul>
 <div class="fusion-text fusion-text-180">
 
-<img class="aligncenter wp-image-6741 " src="https://faq.apprix.fi/wp-content/uploads/2025/12/Time-out-page.png" alt="" width="403" height="239" />
+<img class="aligncenter wp-image-6741 " src="/files/docs/2025/12/Time-out-page.png" alt="" width="403" height="239" />
 <p><strong>Course participants must authenticate within 10 minutes.</strong></p>
 
 <div class="fusion-text fusion-text-180">

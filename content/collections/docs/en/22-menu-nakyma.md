@@ -50,8 +50,8 @@ You’ll find the Quick Filters tool in the <strong>top right corner</strong> of
 
 <h6 class="p1"><strong>Quick Filters tool</strong></h6>
 
-<figure class="doc-image"><img src="https://faq.apprix.fi/wp-content/uploads/2025/11/All-Modules-Menu-with-the-name-filter-1.png" alt="" loading="lazy"></figure>
+<figure class="doc-image"><img src="/files/docs/2025/11/All-Modules-Menu-with-the-name-filter-1.png" alt="" loading="lazy"></figure>
 
-<figure class="doc-image"><img src="https://faq.apprix.fi/wp-content/uploads/2025/11/All-Modules-Menu-1.png" alt="" loading="lazy"></figure>
+<figure class="doc-image"><img src="/files/docs/2025/11/All-Modules-Menu-1.png" alt="" loading="lazy"></figure>
 
-<figure class="doc-image"><img src="https://faq.apprix.fi/wp-content/uploads/2025/11/sort-and-filter-modules-tool-1.png" alt="" loading="lazy"></figure>
+<figure class="doc-image"><img src="/files/docs/2025/11/sort-and-filter-modules-tool-1.png" alt="" loading="lazy"></figure>

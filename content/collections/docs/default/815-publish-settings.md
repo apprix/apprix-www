@@ -33,6 +33,6 @@ Lisätietoja saat napsauttamalla <a href="https://drive.google.com/file/d/10ipvO
 
 <h6>Miten Publish Settings toimii?</h6>
 
-<figure class="doc-image"><img src="https://faq.apprix.fi/wp-content/uploads/2025/08/Publish-settings-1-1000x839.png" alt="" loading="lazy"></figure>
+<figure class="doc-image"><img src="/files/docs/2025/08/Publish-settings-1-1000x839.png" alt="" loading="lazy"></figure>
 
-<figure class="doc-image"><img src="https://faq.apprix.fi/wp-content/uploads/2025/08/publish-settings-demo.gif" alt="" loading="lazy"></figure>
+<figure class="doc-image"><img src="/files/docs/2025/08/publish-settings-demo.gif" alt="" loading="lazy"></figure>

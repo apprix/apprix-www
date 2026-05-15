@@ -10,8 +10,8 @@ title: '1 Getting Familiar With Builder Terms'
 
 Long course modules can be divided into <b>Submodule</b> <b>Structures </b>that can be easier for a trainee to discern. In this case, the module structure is split into a <b>Main Module</b> and <b>Submodules</b> that branch from the main module. Submodules are usually structured in a way that they focus on a specific topic or subject area of a wider concept or course subject.
 
-<figure class="doc-image"><img src="https://faq.apprix.fi/wp-content/uploads/2020/05/elements_group-1.jpg" alt="" loading="lazy"></figure>
+<figure class="doc-image"><img src="/files/docs/2020/05/elements_group-1.jpg" alt="" loading="lazy"></figure>
 
-<figure class="doc-image"><img src="https://faq.apprix.fi/wp-content/uploads/2020/02/moduuli_rakenne-1-1000x80.jpg" alt="" loading="lazy"></figure>
+<figure class="doc-image"><img src="/files/docs/2020/02/moduuli_rakenne-1-1000x80.jpg" alt="" loading="lazy"></figure>
 
-<figure class="doc-image"><img src="https://faq.apprix.fi/wp-content/uploads/2020/02/esimerkkikoulutus_moduulinakyma_1-1.jpg" alt="" loading="lazy"></figure>
+<figure class="doc-image"><img src="/files/docs/2020/02/esimerkkikoulutus_moduulinakyma_1-1.jpg" alt="" loading="lazy"></figure>

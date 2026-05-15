@@ -22,6 +22,6 @@ Click the orange gear icon at the top of the <strong>Edit Module</strong> view t
 
 <h5 class="p1">Element settings in Edit Element Contents view:</h5>
 
-<figure class="doc-image"><img src="https://faq.apprix.fi/wp-content/uploads/2021/09/Multichoice_More_Text_EN_Small.gif" alt="" loading="lazy"></figure>
+<figure class="doc-image"><img src="/files/docs/2021/09/Multichoice_More_Text_EN_Small.gif" alt="" loading="lazy"></figure>
 
-<figure class="doc-image"><img src="https://faq.apprix.fi/wp-content/uploads/2021/09/Multichoice_More_Text_Edit_EN_Small.gif" alt="" loading="lazy"></figure>
+<figure class="doc-image"><img src="/files/docs/2021/09/Multichoice_More_Text_Edit_EN_Small.gif" alt="" loading="lazy"></figure>

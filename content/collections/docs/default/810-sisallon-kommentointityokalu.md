@@ -152,10 +152,10 @@ Puhekupla-ikoni submoduulin kohdalla tarkoittaa, että submoduulissa (tai sen dr
 
 <h6>Parametri ” Enable preview sharing for this main module and its submodule ” Share module preview -ikkunassa</h6>
 
-<figure class="doc-image"><img src="https://faq.apprix.fi/wp-content/uploads/2023/12/Comment-edit-module.gif" alt="" loading="lazy"></figure>
+<figure class="doc-image"><img src="/files/docs/2023/12/Comment-edit-module.gif" alt="" loading="lazy"></figure>
 
-<figure class="doc-image"><img src="https://faq.apprix.fi/wp-content/uploads/2023/12/2.-Comment-resolve-and-delete.gif" alt="" loading="lazy"></figure>
+<figure class="doc-image"><img src="/files/docs/2023/12/2.-Comment-resolve-and-delete.gif" alt="" loading="lazy"></figure>
 
-<figure class="doc-image"><img src="https://faq.apprix.fi/wp-content/uploads/2023/12/Anomym-resolved.png" alt="" loading="lazy"></figure>
+<figure class="doc-image"><img src="/files/docs/2023/12/Anomym-resolved.png" alt="" loading="lazy"></figure>
 
-<figure class="doc-image"><img src="https://faq.apprix.fi/wp-content/uploads/2023/12/4.-Preview-link.png" alt="" loading="lazy"></figure>
+<figure class="doc-image"><img src="/files/docs/2023/12/4.-Preview-link.png" alt="" loading="lazy"></figure>

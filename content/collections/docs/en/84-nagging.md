@@ -129,6 +129,6 @@ If the Nagging and Expiration features are enabled at the same time:
 
 <h6 class="p1">Examples in the Participants Table</h6>
 
-<figure class="doc-image"><img src="https://faq.apprix.fi/wp-content/uploads/2025/12/PR-123.png" alt="" loading="lazy"></figure>
+<figure class="doc-image"><img src="/files/docs/2025/12/PR-123.png" alt="" loading="lazy"></figure>
 
-<figure class="doc-image"><img src="https://faq.apprix.fi/wp-content/uploads/2025/12/Picture1-1.png" alt="" loading="lazy"></figure>
+<figure class="doc-image"><img src="/files/docs/2025/12/Picture1-1.png" alt="" loading="lazy"></figure>

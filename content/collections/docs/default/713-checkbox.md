@@ -34,8 +34,8 @@ Jos haluat aktivoida <b>Answer Mode</b> -toiminnallisuuden, klikkaa rataskuvaket
 
 <h5 class="p1 fusion-responsive-typography-calculated" data-fontsize="12" data-lineheight="18px">Elementin asetukset editointinäkymässä:</h5>
 
-<figure class="doc-image"><img src="https://faq.apprix.fi/wp-content/uploads/2021/08/Checkbox_FI_-1.gif" alt="" loading="lazy"></figure>
+<figure class="doc-image"><img src="/files/docs/2021/08/Checkbox_FI_-1.gif" alt="" loading="lazy"></figure>
 
-<figure class="doc-image"><img src="https://faq.apprix.fi/wp-content/uploads/2021/08/Checkbox_Edit_FI_-1.gif" alt="" loading="lazy"></figure>
+<figure class="doc-image"><img src="/files/docs/2021/08/Checkbox_Edit_FI_-1.gif" alt="" loading="lazy"></figure>
 
-<figure class="doc-image"><img src="https://faq.apprix.fi/wp-content/uploads/2022/04/CheckBox.gif" alt="" loading="lazy"></figure>
+<figure class="doc-image"><img src="/files/docs/2022/04/CheckBox.gif" alt="" loading="lazy"></figure>

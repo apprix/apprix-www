@@ -22,6 +22,6 @@ Topics are grouped by Comments elements in the drop-down menu. Therefore, it is 
 
 <h6 class="p1">Remember to name the Comments elements!</h6>
 
-<figure class="doc-image"><img src="https://faq.apprix.fi/wp-content/uploads/2025/03/Comments-rate-1.gif" alt="" loading="lazy"></figure>
+<figure class="doc-image"><img src="/files/docs/2025/03/Comments-rate-1.gif" alt="" loading="lazy"></figure>
 
-<figure class="doc-image"><img src="https://faq.apprix.fi/wp-content/uploads/2025/03/Rate-Comments1-1.png" alt="" loading="lazy"></figure>
+<figure class="doc-image"><img src="/files/docs/2025/03/Rate-Comments1-1.png" alt="" loading="lazy"></figure>

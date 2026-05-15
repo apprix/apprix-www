@@ -29,4 +29,4 @@ Muokkaa tarvittaessa tekstikenttiä.
 
 <h5>Diploma autoforward -elementti</h5>
 
-<figure class="doc-image"><img src="https://faq.apprix.fi/wp-content/uploads/2022/01/diploma-autoforward.png" alt="" loading="lazy"></figure>
+<figure class="doc-image"><img src="/files/docs/2022/01/diploma-autoforward.png" alt="" loading="lazy"></figure>

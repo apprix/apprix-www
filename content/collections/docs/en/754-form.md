@@ -92,10 +92,10 @@ How to edit the items in the Form text box:
 
 <h6>Editing the Form</h6>
 
-<figure class="doc-image"><img src="https://faq.apprix.fi/wp-content/uploads/2025/12/Form-First-name-5.png" alt="" loading="lazy"></figure>
+<figure class="doc-image"><img src="/files/docs/2025/12/Form-First-name-5.png" alt="" loading="lazy"></figure>
 
-<figure class="doc-image"><img src="https://faq.apprix.fi/wp-content/uploads/2025/12/Form-First-Name.png" alt="" loading="lazy"></figure>
+<figure class="doc-image"><img src="/files/docs/2025/12/Form-First-Name.png" alt="" loading="lazy"></figure>
 
-<figure class="doc-image"><img src="https://faq.apprix.fi/wp-content/uploads/2025/12/Form-First-Name2.png" alt="" loading="lazy"></figure>
+<figure class="doc-image"><img src="/files/docs/2025/12/Form-First-Name2.png" alt="" loading="lazy"></figure>
 
-<figure class="doc-image"><img src="https://faq.apprix.fi/wp-content/uploads/2025/12/Form-First-name-4-OK.png" alt="" loading="lazy"></figure>
+<figure class="doc-image"><img src="/files/docs/2025/12/Form-First-name-4-OK.png" alt="" loading="lazy"></figure>

@@ -37,4 +37,4 @@ Kun Header Title -otsikko asetetaan Intro-elementin kautta koko moduuliin, näky
 
 <h6>Miten asetat koko moduulin Header-otsikon Intro-elementin kautta?</h6>
 
-<figure class="doc-image"><img src="https://faq.apprix.fi/wp-content/uploads/2021/11/Header_Title_FI-1-1000x685.jpg" alt="" loading="lazy"></figure>
+<figure class="doc-image"><img src="/files/docs/2021/11/Header_Title_FI-1-1000x685.jpg" alt="" loading="lazy"></figure>

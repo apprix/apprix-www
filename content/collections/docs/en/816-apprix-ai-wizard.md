@@ -13,4 +13,4 @@ Through the link below, you can access the AI Wizard user guide, which helps you
 
 For further information, please see the <a href="https://drive.google.com/file/d/1X9rp_UqU87evcTbvILE9twdoAqUyyhll/view?usp=sharing" target="_blank" rel="noopener">AI Wizard user guide</a>
 
-<figure class="doc-image"><img src="https://faq.apprix.fi/wp-content/uploads/2026/01/Apprix-AI-Wizard.png" alt="" loading="lazy"></figure>
+<figure class="doc-image"><img src="/files/docs/2026/01/Apprix-AI-Wizard.png" alt="" loading="lazy"></figure>

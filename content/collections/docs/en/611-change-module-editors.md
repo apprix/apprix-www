@@ -13,4 +13,4 @@ Note! This is a customer-specific feature. Please contact Apprix HelpDesk or you
 
 <h6 class="p1"><b>Click on the images to enlarge them.</b></h6>
 
-<figure class="doc-image"><img src="https://faq.apprix.fi/wp-content/uploads/2022/04/R_Change_module_editor.jpg" alt="" loading="lazy"></figure>
+<figure class="doc-image"><img src="/files/docs/2022/04/R_Change_module_editor.jpg" alt="" loading="lazy"></figure>

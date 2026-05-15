@@ -71,12 +71,12 @@ A wrench icon is at the top left of the Competence 2 element.  Click it. The Co
 
 <h6 class="p1"><em>Competence 2 – Competence options</em></h6>
 
-<figure class="doc-image"><img src="https://faq.apprix.fi/wp-content/uploads/2022/04/Competence1-1.gif" alt="" loading="lazy"></figure>
+<figure class="doc-image"><img src="/files/docs/2022/04/Competence1-1.gif" alt="" loading="lazy"></figure>
 
-<figure class="doc-image"><img src="https://faq.apprix.fi/wp-content/uploads/2022/04/Eng2-600x262.png" alt="" loading="lazy"></figure>
+<figure class="doc-image"><img src="/files/docs/2022/04/Eng2-600x262.png" alt="" loading="lazy"></figure>
 
-<figure class="doc-image"><img src="https://faq.apprix.fi/wp-content/uploads/2022/04/Eng3-600x264.png" alt="" loading="lazy"></figure>
+<figure class="doc-image"><img src="/files/docs/2022/04/Eng3-600x264.png" alt="" loading="lazy"></figure>
 
-<figure class="doc-image"><img src="https://faq.apprix.fi/wp-content/uploads/2022/04/Competence2-1.gif" alt="" loading="lazy"></figure>
+<figure class="doc-image"><img src="/files/docs/2022/04/Competence2-1.gif" alt="" loading="lazy"></figure>
 
-<figure class="doc-image"><img src="https://faq.apprix.fi/wp-content/uploads/2024/10/Competence-options-1.jpg" alt="" loading="lazy"></figure>
+<figure class="doc-image"><img src="/files/docs/2024/10/Competence-options-1.jpg" alt="" loading="lazy"></figure>

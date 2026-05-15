@@ -26,6 +26,6 @@ You can copy an element in <strong>Preview</strong> mode by pressing <strong>'Co
 
 <h6 class="p1">How do you paste the element?</h6>
 
-<figure class="doc-image"><img src="https://faq.apprix.fi/wp-content/uploads/2025/06/Copy-button-1.jpg" alt="" loading="lazy"></figure>
+<figure class="doc-image"><img src="/files/docs/2025/06/Copy-button-1.jpg" alt="" loading="lazy"></figure>
 
-<figure class="doc-image"><img src="https://faq.apprix.fi/wp-content/uploads/2025/06/Paste-element-1.jpg" alt="" loading="lazy"></figure>
+<figure class="doc-image"><img src="/files/docs/2025/06/Paste-element-1.jpg" alt="" loading="lazy"></figure>

@@ -15,4 +15,4 @@ Copy the link inside the browser URL box if you want to create a hyperlink. Writ
 
 <h6 class="p1"><b>Click on the images to enlarge them.</b></h6>
 
-<figure class="doc-image"><img src="https://faq.apprix.fi/wp-content/uploads/2021/08/Tekstin_editoiminen_elementissa-1.gif" alt="" loading="lazy"></figure>
+<figure class="doc-image"><img src="/files/docs/2021/08/Tekstin_editoiminen_elementissa-1.gif" alt="" loading="lazy"></figure>

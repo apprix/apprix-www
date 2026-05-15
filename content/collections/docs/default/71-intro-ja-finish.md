@@ -24,8 +24,8 @@ Kirjoita <strong>Intro-elementtiin</strong> tervetulotoivotus ja esittelyteksti,
 
 <h6>Finish-elementti</h6>
 
-<figure class="doc-image"><img src="https://faq.apprix.fi/wp-content/uploads/2021/08/Intro_FI-1.gif" alt="" loading="lazy"></figure>
+<figure class="doc-image"><img src="/files/docs/2021/08/Intro_FI-1.gif" alt="" loading="lazy"></figure>
 
-<figure class="doc-image"><img src="https://faq.apprix.fi/wp-content/uploads/2021/08/Intro_Edit_FI_.gif" alt="" loading="lazy"></figure>
+<figure class="doc-image"><img src="/files/docs/2021/08/Intro_Edit_FI_.gif" alt="" loading="lazy"></figure>
 
-<figure class="doc-image"><img src="https://faq.apprix.fi/wp-content/uploads/2021/08/Finish_FI.jpg" alt="" loading="lazy"></figure>
+<figure class="doc-image"><img src="/files/docs/2021/08/Finish_FI.jpg" alt="" loading="lazy"></figure>

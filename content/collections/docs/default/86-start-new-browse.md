@@ -38,14 +38,14 @@ Ominaisuus löytyy käyttöönoton jälkeen moduulin editointinäkymän (Edit Mo
 
 <h6>Helpot asetukset!</h6>
 
-<figure class="doc-image"><img src="https://faq.apprix.fi/wp-content/uploads/2025/02/Settings.png" alt="" loading="lazy"></figure>
+<figure class="doc-image"><img src="/files/docs/2025/02/Settings.png" alt="" loading="lazy"></figure>
 
-<figure class="doc-image"><img src="https://faq.apprix.fi/wp-content/uploads/2025/02/Start-the-course-button.png" alt="" loading="lazy"></figure>
+<figure class="doc-image"><img src="/files/docs/2025/02/Start-the-course-button.png" alt="" loading="lazy"></figure>
 
-<figure class="doc-image"><img src="https://faq.apprix.fi/wp-content/uploads/2025/02/Continue-button.png" alt="" loading="lazy"></figure>
+<figure class="doc-image"><img src="/files/docs/2025/02/Continue-button.png" alt="" loading="lazy"></figure>
 
-<figure class="doc-image"><img src="https://faq.apprix.fi/wp-content/uploads/2025/02/Browse-this-course-content-31.gif" alt="" loading="lazy"></figure>
+<figure class="doc-image"><img src="/files/docs/2025/02/Browse-this-course-content-31.gif" alt="" loading="lazy"></figure>
 
-<figure class="doc-image"><img src="https://faq.apprix.fi/wp-content/uploads/2025/02/Reminder-text-box.png" alt="" loading="lazy"></figure>
+<figure class="doc-image"><img src="/files/docs/2025/02/Reminder-text-box.png" alt="" loading="lazy"></figure>
 
-<figure class="doc-image"><img src="https://faq.apprix.fi/wp-content/uploads/2025/02/Start-Course-settings.png" alt="" loading="lazy"></figure>
+<figure class="doc-image"><img src="/files/docs/2025/02/Start-Course-settings.png" alt="" loading="lazy"></figure>

@@ -85,16 +85,16 @@ The <b>Pass / Fail Always</b> element appears also after a successful test (when
 
 <h5 class="p1">"<strong>Retry from here</strong>" arrow in the <strong>Pass/Fail</strong> element.</h5>
 
-<figure class="doc-image"><img src="https://faq.apprix.fi/wp-content/uploads/2024/03/PassAndFail-element.png" alt="" loading="lazy"></figure>
+<figure class="doc-image"><img src="/files/docs/2024/03/PassAndFail-element.png" alt="" loading="lazy"></figure>
 
-<figure class="doc-image"><img src="https://faq.apprix.fi/wp-content/uploads/2021/09/Passfail_1.jpg" alt="" loading="lazy"></figure>
+<figure class="doc-image"><img src="/files/docs/2021/09/Passfail_1.jpg" alt="" loading="lazy"></figure>
 
-<figure class="doc-image"><img src="https://faq.apprix.fi/wp-content/uploads/2021/09/passfail_2.jpg" alt="" loading="lazy"></figure>
+<figure class="doc-image"><img src="/files/docs/2021/09/passfail_2.jpg" alt="" loading="lazy"></figure>
 
-<figure class="doc-image"><img src="https://faq.apprix.fi/wp-content/uploads/2021/09/PassFail_Edit_EN.gif" alt="" loading="lazy"></figure>
+<figure class="doc-image"><img src="/files/docs/2021/09/PassFail_Edit_EN.gif" alt="" loading="lazy"></figure>
 
-<figure class="doc-image"><img src="https://faq.apprix.fi/wp-content/uploads/2024/03/Help-PassAndFail-text.png" alt="" loading="lazy"></figure>
+<figure class="doc-image"><img src="/files/docs/2024/03/Help-PassAndFail-text.png" alt="" loading="lazy"></figure>
 
-<figure class="doc-image"><img src="https://faq.apprix.fi/wp-content/uploads/2020/09/test-1000x648.jpg" alt="" loading="lazy"></figure>
+<figure class="doc-image"><img src="/files/docs/2020/09/test-1000x648.jpg" alt="" loading="lazy"></figure>
 
-<figure class="doc-image"><img src="https://faq.apprix.fi/wp-content/uploads/2020/09/passfail2.png" alt="" loading="lazy"></figure>
+<figure class="doc-image"><img src="/files/docs/2020/09/passfail2.png" alt="" loading="lazy"></figure>

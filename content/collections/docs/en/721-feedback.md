@@ -19,6 +19,6 @@ View the module statistics every now and then to browse the feedback. In the ope
 
 <h5 class="p1">Element settings in Edit Element Contents view:</h5>
 
-<figure class="doc-image"><img src="https://faq.apprix.fi/wp-content/uploads/2021/08/Feedback_EN_.gif" alt="" loading="lazy"></figure>
+<figure class="doc-image"><img src="/files/docs/2021/08/Feedback_EN_.gif" alt="" loading="lazy"></figure>
 
-<figure class="doc-image"><img src="https://faq.apprix.fi/wp-content/uploads/2021/08/Feedback_Edit_EN_small.gif" alt="" loading="lazy"></figure>
+<figure class="doc-image"><img src="/files/docs/2021/08/Feedback_Edit_EN_small.gif" alt="" loading="lazy"></figure>

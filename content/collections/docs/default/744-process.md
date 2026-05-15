@@ -39,8 +39,8 @@ Kun elementti on suoritettu loppuun, tulee ohjeet siitä, miten kurssia voi jatk
 
 <h6 class="p1">Process-elementti muokkaustilassa</h6>
 
-<figure class="doc-image"><img src="https://faq.apprix.fi/wp-content/uploads/2024/09/Process-animation.gif" alt="" loading="lazy"></figure>
+<figure class="doc-image"><img src="/files/docs/2024/09/Process-animation.gif" alt="" loading="lazy"></figure>
 
-<figure class="doc-image"><img src="https://faq.apprix.fi/wp-content/uploads/2023/07/Process-video-1-.gif" alt="" loading="lazy"></figure>
+<figure class="doc-image"><img src="/files/docs/2023/07/Process-video-1-.gif" alt="" loading="lazy"></figure>
 
-<figure class="doc-image"><img src="https://faq.apprix.fi/wp-content/uploads/2024/09/Process-gif-animation.jpg" alt="" loading="lazy"></figure>
+<figure class="doc-image"><img src="/files/docs/2024/09/Process-gif-animation.jpg" alt="" loading="lazy"></figure>

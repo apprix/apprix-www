@@ -13,4 +13,4 @@ Kuvakirjastossa (<strong>Image Library</strong>) voit lisätä ja poistaa kuvia,
 
 <h6 class="p1">Mistä kuvakirjasto (Image Library) löytyy?</h6>
 
-<figure class="doc-image"><img src="https://faq.apprix.fi/wp-content/uploads/2024/04/5.3-Open-image-library.png" alt="" loading="lazy"></figure>
+<figure class="doc-image"><img src="/files/docs/2024/04/5.3-Open-image-library.png" alt="" loading="lazy"></figure>

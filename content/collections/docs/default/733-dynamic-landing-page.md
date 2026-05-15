@@ -19,6 +19,6 @@ Jos jokin toinen kurssi on suoritettava ennen valittua kurssia, valitse ensin se
 
 <h6>Miten toiminto ”Valitse, onko toinen kurssi suoritettava ennen tätä kurssia” toimii Dynamic Landing Page-elementissä?</h6>
 
-<figure class="doc-image"><img src="https://faq.apprix.fi/wp-content/uploads/2025/05/DLP-button-settings-01052025-1.png" alt="" loading="lazy"></figure>
+<figure class="doc-image"><img src="/files/docs/2025/05/DLP-button-settings-01052025-1.png" alt="" loading="lazy"></figure>
 
-<figure class="doc-image"><img src="https://faq.apprix.fi/wp-content/uploads/2025/05/DLP-Preview-0105-2.gif" alt="" loading="lazy"></figure>
+<figure class="doc-image"><img src="/files/docs/2025/05/DLP-Preview-0105-2.gif" alt="" loading="lazy"></figure>

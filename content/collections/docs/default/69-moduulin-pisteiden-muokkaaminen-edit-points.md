@@ -13,4 +13,4 @@ Jos moduulin loppupäässä on lopputesti sekä läpipääsyä säätelevä <a h
 
 <h6 class="p1">Miten muokkaat elementtipisteitä ja moduulin lopputestin läpäisyyn tarvittavien pisteiden prosenttiosuutta?</h6>
 
-<figure class="doc-image"><img src="https://faq.apprix.fi/wp-content/uploads/2024/08/Edit-Points.gif" alt="" loading="lazy"></figure>
+<figure class="doc-image"><img src="/files/docs/2024/08/Edit-Points.gif" alt="" loading="lazy"></figure>

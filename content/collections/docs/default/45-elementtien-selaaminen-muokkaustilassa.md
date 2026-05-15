@@ -7,4 +7,4 @@ Elementin muokkaustilan yläreunassa näkyy ratasvalikon molemmille puolille ora
 
 <h6>Miten selaat elementtejä muokkaustilassa?</h6>
 
-<figure class="doc-image"><img src="https://faq.apprix.fi/wp-content/uploads/2024/05/Move_buttons.png" alt="" loading="lazy"></figure>
+<figure class="doc-image"><img src="/files/docs/2024/05/Move_buttons.png" alt="" loading="lazy"></figure>

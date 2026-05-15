@@ -21,6 +21,6 @@ Add the background image and edit any fields as needed.
 
 <h6 class="p1"><b>Click on the images to enlarge them.</b></h6>
 
-<figure class="doc-image"><img src="https://faq.apprix.fi/wp-content/uploads/2022/04/Upload-END-USER-ENG.gif" alt="" loading="lazy"></figure>
+<figure class="doc-image"><img src="/files/docs/2022/04/Upload-END-USER-ENG.gif" alt="" loading="lazy"></figure>
 
-<figure class="doc-image"><img src="https://faq.apprix.fi/wp-content/uploads/2022/04/Upload-Edit-ENG.gif" alt="" loading="lazy"></figure>
+<figure class="doc-image"><img src="/files/docs/2022/04/Upload-Edit-ENG.gif" alt="" loading="lazy"></figure>

@@ -1,7 +1,6 @@
 title: Help
 sites:
   - default
-  - en
 template: docs/show
 layout: layout_docs
 route: '/help/{slug}'

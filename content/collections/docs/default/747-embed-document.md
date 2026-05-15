@@ -26,4 +26,4 @@ Varmista seuraavat asiat, jotta upotettava sisältö näkyy koulutusta suorittav
 
 <h6 class="p1">Elementin muokkaustilassa</h6>
 
-<figure class="doc-image"><img src="https://faq.apprix.fi/wp-content/uploads/2024/07/Embed-document-element.gif" alt="" loading="lazy"></figure>
+<figure class="doc-image"><img src="/files/docs/2024/07/Embed-document-element.gif" alt="" loading="lazy"></figure>

@@ -15,6 +15,6 @@ If a module has a final quiz or test with a <b><a href="#passfail">Pass/Fail</a>
 
 <h6 class="p1"><b>Click on the images to enlarge them.</b></h6>
 
-<figure class="doc-image"><img src="https://faq.apprix.fi/wp-content/uploads/2022/03/R_edit_points-1.jpg" alt="" loading="lazy"></figure>
+<figure class="doc-image"><img src="/files/docs/2022/03/R_edit_points-1.jpg" alt="" loading="lazy"></figure>
 
-<figure class="doc-image"><img src="https://faq.apprix.fi/wp-content/uploads/2020/08/editpoints2-887x1000.jpg" alt="" loading="lazy"></figure>
+<figure class="doc-image"><img src="/files/docs/2020/08/editpoints2-887x1000.jpg" alt="" loading="lazy"></figure>

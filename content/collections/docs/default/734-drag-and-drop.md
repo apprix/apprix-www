@@ -26,10 +26,10 @@ Kun kaikki kortit on asetettu onnistuneesti, kurssin suorittajalle näytetään 
 
 <h6 class="p1">Esimerkki sen käytöstä.</h6>
 
-<figure class="doc-image"><img src="https://faq.apprix.fi/wp-content/uploads/2025/03/DragandDropWastedoing.gif" alt="" loading="lazy"></figure>
+<figure class="doc-image"><img src="/files/docs/2025/03/DragandDropWastedoing.gif" alt="" loading="lazy"></figure>
 
-<figure class="doc-image"><img src="https://faq.apprix.fi/wp-content/uploads/2025/03/DragandDropEditWasteedit2.gif" alt="" loading="lazy"></figure>
+<figure class="doc-image"><img src="/files/docs/2025/03/DragandDropEditWasteedit2.gif" alt="" loading="lazy"></figure>
 
-<figure class="doc-image"><img src="https://faq.apprix.fi/wp-content/uploads/2021/08/Drag_and_Drop_Edit_FI_1_new.gif" alt="" loading="lazy"></figure>
+<figure class="doc-image"><img src="/files/docs/2021/08/Drag_and_Drop_Edit_FI_1_new.gif" alt="" loading="lazy"></figure>
 
-<figure class="doc-image"><img src="https://faq.apprix.fi/wp-content/uploads/2021/05/dragdrop-1.png" alt="" loading="lazy"></figure>
+<figure class="doc-image"><img src="/files/docs/2021/05/dragdrop-1.png" alt="" loading="lazy"></figure>

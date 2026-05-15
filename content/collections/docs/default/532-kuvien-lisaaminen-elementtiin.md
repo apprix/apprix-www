@@ -17,4 +17,4 @@ Kun haluat lisätä kuvan elementtiin, noudata näitä ohjeita:
 
 <h6 class="p1">Miten lisäät kuvia elementteihin kuvakirjaston (Image Library) avulla?</h6>
 
-<figure class="doc-image"><img src="https://faq.apprix.fi/wp-content/uploads/2024/04/5.3.2-2-Kuvien-lisaaminen-elementtiin.gif" alt="" loading="lazy"></figure>
+<figure class="doc-image"><img src="/files/docs/2024/04/5.3.2-2-Kuvien-lisaaminen-elementtiin.gif" alt="" loading="lazy"></figure>

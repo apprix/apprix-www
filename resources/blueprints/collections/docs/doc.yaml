@@ -12,15 +12,6 @@ tabs:
               localizable: true
               display: Otsikko
 
-          - handle: intro
-            field:
-              type: textarea
-              localizable: true
-              display: Lyhyt kuvaus
-              instructions: "Valinnainen. Näkyy hakutuloksissa ja sivun alussa."
-              character_limit: 300
-              rows: 3
-
           - handle: content
             field:
               type: bard
@@ -34,31 +25,41 @@ tabs:
               allow_source: true
               enable_input_rules: true
               enable_paste_rules: true
+
+          - handle: videos
+            field:
+              type: replicator
+              display: Videot
+              instructions: 'Lisää Vimeo- tai MP4-videoita. Näkyvät sisällön lopussa.'
+              localizable: true
+              collapse: true
               sets:
-                text:
-                  display: Teksti
-                  fields:
-                    - handle: text
-                      field:
-                        type: bard
-                        display: Teksti
-                image:
-                  display: Kuva
-                  fields:
-                    - handle: image
-                      field:
-                        type: assets
-                        container: files
-                        max_files: 1
-                        display: Kuva
-                video:
-                  display: Video
-                  fields:
-                    - handle: url
-                      field:
-                        type: text
-                        display: Video URL
-                        instructions: "YouTube tai Vimeo URL"
+                media:
+                  display: Media
+                  icon: media-image-camera
+                  sets:
+                    vimeo:
+                      display: Vimeo-video
+                      icon: media-webcam-video
+                      instructions: 'Lisää Vimeo-video ID:llä.'
+                      fields:
+                        - handle: vimeo_id
+                          field:
+                            type: text
+                            display: Vimeo Video ID
+                            instructions: 'Video ID Vimeo-osoitteesta. Esim. vimeo.com/video/328168769 → ID on 328168769'
+                            placeholder: '328168769'
+                    mp4:
+                      display: MP4-video
+                      icon: media-webcam-video
+                      instructions: 'Lisää oma MP4-videotiedosto.'
+                      fields:
+                        - handle: file
+                          field:
+                            type: assets
+                            display: Video-tiedosto
+                            container: files
+                            max_files: 1
   seo:
     display: SEO
     sections:

@@ -151,10 +151,10 @@ Facilitator with editing rights for a module</h6>
 
 <h6 class="p1">Parameter " Enable preview sharing for this main module and its submodule " Share module preview window.</h6>
 
-<figure class="doc-image"><img src="https://faq.apprix.fi/wp-content/uploads/2023/12/1.-Comment-edit-module-1.gif" alt="" loading="lazy"></figure>
+<figure class="doc-image"><img src="/files/docs/2023/12/1.-Comment-edit-module-1.gif" alt="" loading="lazy"></figure>
 
-<figure class="doc-image"><img src="https://faq.apprix.fi/wp-content/uploads/2023/12/2.-Comment-resolve-and-delete-3.gif" alt="" loading="lazy"></figure>
+<figure class="doc-image"><img src="/files/docs/2023/12/2.-Comment-resolve-and-delete-3.gif" alt="" loading="lazy"></figure>
 
-<figure class="doc-image"><img src="https://faq.apprix.fi/wp-content/uploads/2023/12/Anomym-resolved-1.png" alt="" loading="lazy"></figure>
+<figure class="doc-image"><img src="/files/docs/2023/12/Anomym-resolved-1.png" alt="" loading="lazy"></figure>
 
-<figure class="doc-image"><img src="https://faq.apprix.fi/wp-content/uploads/2023/12/4.-Preview-link-1.png" alt="" loading="lazy"></figure>
+<figure class="doc-image"><img src="/files/docs/2023/12/4.-Preview-link-1.png" alt="" loading="lazy"></figure>

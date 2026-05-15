@@ -15,6 +15,6 @@ Click <strong>Upload new image</strong>. Choose the image from your files and th
 
 <h6 class="p1"><b>Click on the images to enlarge them.</b></h6>
 
-<figure class="doc-image"><img src="https://faq.apprix.fi/wp-content/uploads/2023/04/Image_library2.png" alt="" loading="lazy"></figure>
+<figure class="doc-image"><img src="/files/docs/2023/04/Image_library2.png" alt="" loading="lazy"></figure>
 
-<figure class="doc-image"><img src="https://faq.apprix.fi/wp-content/uploads/2023/04/Image_library1.png" alt="" loading="lazy"></figure>
+<figure class="doc-image"><img src="/files/docs/2023/04/Image_library1.png" alt="" loading="lazy"></figure>

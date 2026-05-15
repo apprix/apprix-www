@@ -9,4 +9,4 @@ Kun submoduuli on suoritettu, ohjataan suorittaja takaisin valikkoon. Lue lisä�
 
 <h6 class="p1">Klikkaa kuvia suurentaaksesi niitä.</h6>
 
-<figure class="doc-image"><img src="https://faq.apprix.fi/wp-content/uploads/2020/04/Submodule_buttons.gif" alt="" loading="lazy"></figure>
+<figure class="doc-image"><img src="/files/docs/2020/04/Submodule_buttons.gif" alt="" loading="lazy"></figure>

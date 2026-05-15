@@ -124,12 +124,12 @@ Kaavio
 
 <h6>Kaavio - Slider write text (slider_ability)</h6>
 
-<figure class="doc-image"><img src="https://faq.apprix.fi/wp-content/uploads/2023/03/8-Slider-bars-task-1.png" alt="" loading="lazy"></figure>
+<figure class="doc-image"><img src="/files/docs/2023/03/8-Slider-bars-task-1.png" alt="" loading="lazy"></figure>
 
-<figure class="doc-image"><img src="https://faq.apprix.fi/wp-content/uploads/2023/03/9-Slider-bars-single-1.png" alt="" loading="lazy"></figure>
+<figure class="doc-image"><img src="/files/docs/2023/03/9-Slider-bars-single-1.png" alt="" loading="lazy"></figure>
 
-<figure class="doc-image"><img src="https://faq.apprix.fi/wp-content/uploads/2023/03/10-Fourfold-1.png" alt="" loading="lazy"></figure>
+<figure class="doc-image"><img src="/files/docs/2023/03/10-Fourfold-1.png" alt="" loading="lazy"></figure>
 
-<figure class="doc-image"><img src="https://faq.apprix.fi/wp-content/uploads/2023/03/11-Slider-icons-1.png" alt="" loading="lazy"></figure>
+<figure class="doc-image"><img src="/files/docs/2023/03/11-Slider-icons-1.png" alt="" loading="lazy"></figure>
 
-<figure class="doc-image"><img src="https://faq.apprix.fi/wp-content/uploads/2023/03/12-Slider-write-text.png" alt="" loading="lazy"></figure>
+<figure class="doc-image"><img src="/files/docs/2023/03/12-Slider-write-text.png" alt="" loading="lazy"></figure>

@@ -48,6 +48,6 @@ Kurssilaisen jättämiä kommentteja pystyy muokkaamaan elementissä ollessaan. 
 
 <h6 class="p1">Miten tekstiruutu muokataan?</h6>
 
-<figure class="doc-image"><img src="https://faq.apprix.fi/wp-content/uploads/2025/03/Comment-1.gif" alt="" loading="lazy"></figure>
+<figure class="doc-image"><img src="/files/docs/2025/03/Comment-1.gif" alt="" loading="lazy"></figure>
 
-<figure class="doc-image"><img src="https://faq.apprix.fi/wp-content/uploads/2025/03/Com-task-box-1.gif" alt="" loading="lazy"></figure>
+<figure class="doc-image"><img src="/files/docs/2025/03/Com-task-box-1.gif" alt="" loading="lazy"></figure>

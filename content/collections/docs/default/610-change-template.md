@@ -11,6 +11,6 @@ Jos Builder-asiakasympäristössäsi on useampi kuin yksi malli (template), voit
 
 <h6 class="p1">Voit samalla vaihtaa myös submoduulien mallin (template).</h6>
 
-<figure class="doc-image"><img src="https://faq.apprix.fi/wp-content/uploads/2024/08/Change-template.gif" alt="" loading="lazy"></figure>
+<figure class="doc-image"><img src="/files/docs/2024/08/Change-template.gif" alt="" loading="lazy"></figure>
 
-<figure class="doc-image"><img src="https://faq.apprix.fi/wp-content/uploads/2024/08/Change-template2.gif" alt="" loading="lazy"></figure>
+<figure class="doc-image"><img src="/files/docs/2024/08/Change-template2.gif" alt="" loading="lazy"></figure>

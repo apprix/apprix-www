@@ -9,4 +9,4 @@ Jos kuitenkin sinä tai joku muu henkilö organisaatiossasi on poistanut moduuli
 
 <h6 class="p1">Miten poistat moduulin?</h6>
 
-<figure class="doc-image"><img src="https://faq.apprix.fi/wp-content/uploads/2024/05/Delete-module-1.gif" alt="" loading="lazy"></figure>
+<figure class="doc-image"><img src="/files/docs/2024/05/Delete-module-1.gif" alt="" loading="lazy"></figure>

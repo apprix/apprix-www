@@ -11,13 +11,13 @@ Kirjautumislomake on ensimmäinen sivu, jonka kurssilainen näkee, kun hän aloi
 
 Kirjautumislomakkeessa on sähköpostikenttä.  Kun sähköpostikenttä on täytetty, kurssilainen klikkaa <strong>Seuraava</strong> tai painaa enter, jolloin järjestelmä etsii, onko tili olemassa vai ei.
 
-<img class="wp-image-5446 aligncenter" src="https://faq.apprix.fi/wp-content/uploads/2024/02/Picture1-Login-form-1.png" alt="" width="342" height="266" />
+<img class="wp-image-5446 aligncenter" src="/files/docs/2024/02/Picture1-Login-form-1.png" alt="" width="342" height="266" />
 <ol>
  <li><strong>Jos tiliä ei ole vielä olemassa</strong></li>
 </ol>
 Jos tiliä ei ole olemassa, kun ilmoittautumislomake avautuu, kurssilainen voi lisätä sinne tietonsa (etunimi, sukunimi ja salasana) ja klikata <strong>Rekisteröidy</strong>-painiketta.
 
-<img class="wp-image-5447 aligncenter" src="https://faq.apprix.fi/wp-content/uploads/2024/02/Picture-2-Registration-Form-1.png" alt="" width="298" height="277" />
+<img class="wp-image-5447 aligncenter" src="/files/docs/2024/02/Picture-2-Registration-Form-1.png" alt="" width="298" height="277" />
 
 <strong>Huom! Käyttäjän sähköpostiosoitteen, puhelinnumeron ja kirjautumistunnuksen tulee olla yksilöllisiä.</strong>
 
@@ -43,11 +43,11 @@ Vahvat salasanat vaativat lisäksi vähintään yhden erikoissymbolin tästä sa
 
 Sen jälkeen, että kurssilainen on klikannut <strong>Rekisteröidy</strong>-painiketta uusi ponnahdusikkuna avautuu. Siinä kysytään kurssilaiselta, haluaako hän saada pin-koodin sähköpostitse tai puhelimitse. Kun hän on valinnut jommankumman vaihtoehdon, hän saa pin-koodin, joka hänen on syötettävä lomakkeeseen. Tämän jälkeen hän voi aloittaa kurssin.
 
-<img class="wp-image-5448 aligncenter" src="https://faq.apprix.fi/wp-content/uploads/2024/02/Picture3-Send-PIN-code-1.png" alt="" width="317" height="235" />
+<img class="wp-image-5448 aligncenter" src="/files/docs/2024/02/Picture3-Send-PIN-code-1.png" alt="" width="317" height="235" />
 
 <strong>Huom! Kurssilaisen on suoritettava tunnistautuminen 10 minuutin sisällä.</strong>
 
-<img class="wp-image-5449 aligncenter" src="https://faq.apprix.fi/wp-content/uploads/2024/02/Picture4-Insert-PIN-Code-1.png" alt="" width="327" height="248" />
+<img class="wp-image-5449 aligncenter" src="/files/docs/2024/02/Picture4-Insert-PIN-Code-1.png" alt="" width="327" height="248" />
 <h4>Pin-koodivahvistus</h4>
 PIN-koodivarmennus voidaan tehdä käyttämällä käyttäjän sähköpostiosoitetta tai puhelinnumeroa.
 

@@ -26,4 +26,4 @@ Elementtejä on erilaisia ja ne voidaan jakaa karkeasti neljään kategoriaan:
 </p>
 <p class="p1">Jos löydät tehtävään tilanteita oikeasta elämästä tai keksit konkreettisia, suorittajaa puhuttelevia esimerkkejä – aina parempi! Mieti etenkin sisällön mahdollisia avain- tai ongelmakohtia ja pysäytä niissä kohdissa suorittaja ajattelemaan tehtävien tai kyselyjen avulla.</p>
 
-<figure class="doc-image"><img src="https://faq.apprix.fi/wp-content/uploads/2024/08/How-you-can-get-to-know-the-elements.gif" alt="" loading="lazy"></figure>
+<figure class="doc-image"><img src="/files/docs/2024/08/How-you-can-get-to-know-the-elements.gif" alt="" loading="lazy"></figure>

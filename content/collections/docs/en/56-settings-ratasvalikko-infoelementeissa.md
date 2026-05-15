@@ -19,4 +19,4 @@ The purpose of this tool is to allow you to adjust the position (top, middle, bo
 
 <h6 class="p1"><b>Settings bar</b></h6>
 
-<figure class="doc-image"><img src="https://faq.apprix.fi/wp-content/uploads/2020/06/info_toolbar-1000x218.png" alt="" loading="lazy"></figure>
+<figure class="doc-image"><img src="/files/docs/2020/06/info_toolbar-1000x218.png" alt="" loading="lazy"></figure>

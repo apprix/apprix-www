@@ -17,7 +17,7 @@ Valitse ratassymbolista <strong>Edit Module</strong> -editointinäkymän ylälai
 
 <strong>Expiration and reminder settings</strong> -ikkuna aukeaa.
 
-Ikkunan vasemmalla puoliskolla voit muokata vanhenemistoiminnon ilmoittamaa viestiä kurssin ensimmäisessä Intr<a class="fusion-builder-modal-save" href="https://faq.apprix.fi/wp-admin/post.php?post=3017&amp;action=edit#"> Save </a>o-elementissä, jossa muistutetaan suorittajaa kurssin voimassaoloajasta.
+Ikkunan vasemmalla puoliskolla voit muokata vanhenemistoiminnon ilmoittamaa viestiä kurssin ensimmäisessä Intro-elementissä, jossa muistutetaan suorittajaa kurssin voimassaoloajasta.
 
 Myös <strong>Reminder</strong>-toiminnon asetuksia voi muokata ikkunan oikealla puoliskolla, jos <b>Expiration and Reminder</b> -toiminto on aktiivinen eli ruutu näkymässä on raksittu.
 
@@ -72,10 +72,18 @@ Kun suorittaja aloittaa kurssin, johon on asetettu voimassaoloaika, hän näkee 
 <h6>Expiration-tekstiboksi:
 Kurssin suorittäjä on suorittanut kurssin kahdesti. Ensimmäinen suoritus on vanhentunut ja toinen on edelleen voimassa.</h6>
 
-<figure class="doc-image"><img src="https://faq.apprix.fi/wp-content/uploads/2024/05/8.5.1-Expiration.png" alt="" loading="lazy"></figure>
+<figure class="doc-image"><img src="/files/docs/2024/05/8.5.1-Expiration.png" alt="" loading="lazy"></figure>
 
-<figure class="doc-image"><img src="https://faq.apprix.fi/wp-content/uploads/2024/05/8.5.2-Expiration.png" alt="" loading="lazy"></figure>
+<figure class="doc-image"><img src="/files/docs/2024/05/8.5.2-Expiration.png" alt="" loading="lazy"></figure>
 
-<figure class="doc-image"><img src="https://faq.apprix.fi/wp-content/uploads/2024/05/8.5.3-Expiration-2.png" alt="" loading="lazy"></figure>
+<figure class="doc-image"><img src="/files/docs/2024/05/8.5.3-Expiration-2.png" alt="" loading="lazy"></figure>
 
-<figure class="doc-image"><img src="https://faq.apprix.fi/wp-content/uploads/2024/05/8.5.4-Expiration-2.png" alt="" loading="lazy"></figure>
+<figure class="doc-image"><img src="/files/docs/2024/05/8.5.4-Expiration-2.png" alt="" loading="lazy"></figure>
+
+<video controls preload="metadata" style="width:100%;border-radius:0.75rem;box-shadow:0 1px 2px 0 rgba(0,0,0,.08);margin-top:1rem">
+    <source src="/files/docs/2026/01/Send-manually-191225.mp4" type="video/mp4">
+</video>
+
+<video controls preload="metadata" style="width:100%;border-radius:0.75rem;box-shadow:0 1px 2px 0 rgba(0,0,0,.08);margin-top:1rem">
+    <source src="/files/docs/2026/01/Aut-reminder-set.mp4" type="video/mp4">
+</video>

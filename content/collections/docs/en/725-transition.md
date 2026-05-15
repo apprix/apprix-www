@@ -15,8 +15,8 @@ If needed, you can lock the element and add an audio file by clicking the gear i
 
 In the enhanced ‘Transition’ element, you can set the background and/or box colours by clicking the tool icon in the top-left corner.
 
-<img class="aligncenter wp-image-6851" src="https://faq.apprix.fi/wp-content/uploads/2026/03/Transition-settings.gif" alt="" width="542" height="373" />
+<img class="aligncenter wp-image-6851" src="/files/docs/2026/03/Transition-settings.gif" alt="" width="542" height="373" />
 
 <h6 class="p1"><b>Transition element</b></h6>
 
-<figure class="doc-image"><img src="https://faq.apprix.fi/wp-content/uploads/2021/08/transition-1000x618.jpg" alt="" loading="lazy"></figure>
+<figure class="doc-image"><img src="/files/docs/2021/08/transition-1000x618.jpg" alt="" loading="lazy"></figure>

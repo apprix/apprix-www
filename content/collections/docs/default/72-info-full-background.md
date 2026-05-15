@@ -15,6 +15,6 @@ title: '7.2 Info Full Background'
 
 <h6>Miten elementin asetuksia muutetaan muokkaustilassa?</h6>
 
-<figure class="doc-image"><img src="https://faq.apprix.fi/wp-content/uploads/2021/08/Info_Full_Background_FI-1.gif" alt="" loading="lazy"></figure>
+<figure class="doc-image"><img src="/files/docs/2021/08/Info_Full_Background_FI-1.gif" alt="" loading="lazy"></figure>
 
-<figure class="doc-image"><img src="https://faq.apprix.fi/wp-content/uploads/2021/08/Info_Full_Background_Edit_FI_small_new-1.gif" alt="" loading="lazy"></figure>
+<figure class="doc-image"><img src="/files/docs/2021/08/Info_Full_Background_Edit_FI_small_new-1.gif" alt="" loading="lazy"></figure>

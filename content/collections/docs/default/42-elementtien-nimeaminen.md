@@ -8,4 +8,4 @@ title: '4.2 Elementtien nimeäminen'
 
 <h6 class="p1">Miten elementti nimetään?</h6>
 
-<figure class="doc-image"><img src="https://faq.apprix.fi/wp-content/uploads/2021/08/Elementin_nimeaminen.gif" alt="" loading="lazy"></figure>
+<figure class="doc-image"><img src="/files/docs/2021/08/Elementin_nimeaminen.gif" alt="" loading="lazy"></figure>

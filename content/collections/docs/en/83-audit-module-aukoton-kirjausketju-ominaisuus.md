@@ -24,15 +24,15 @@ There are three types of user’s permissions:
  <li>In this case, the user will be able to activate or deactivate all modules <b>Audit Module / Set Module Audit Off</b> parameters</li>
 </ul>
 <div>
-<img class="wp-image-2380 aligncenter" src="https://faq.apprix.fi/wp-content/uploads/2020/08/Userpermissions1.png" alt="" width="244" height="130" />
+<img class="wp-image-2380 aligncenter" src="/files/docs/2020/08/Userpermissions1.png" alt="" width="244" height="130" />
 <ul>
  <li>Also in this case, the user will be able to activate or deactivate all modules <b>Audit Module / Set Module Audit Off </b>parameters.</li>
 </ul>
-<img class="wp-image-2385 aligncenter" src="https://faq.apprix.fi/wp-content/uploads/2020/08/none_edit1.png" alt="" width="229" height="135" />
+<img class="wp-image-2385 aligncenter" src="/files/docs/2020/08/none_edit1.png" alt="" width="229" height="135" />
 <ul>
  <li>In this case, the user is the owner of <b>Module ABCD New</b>. The user will be able to activate or deactivate <u>only</u> his/her module’s <b>Audit Module / Set Module Audit Off</b> parameters.</li>
 </ul>
-<img class="wp-image-2383 aligncenter" src="https://faq.apprix.fi/wp-content/uploads/2020/08/noneview1.png" alt="" width="242" height="129" />
+<img class="wp-image-2383 aligncenter" src="/files/docs/2020/08/noneview1.png" alt="" width="242" height="129" />
 
 On the right side, you can see an example of the Module ABCDE change history.
 <ol>
@@ -58,16 +58,16 @@ Below is a detailed list of what kind of information is tracked when <b>Audit Tr
 
 <h6 class="p1"><b>Click on the images to enlarge them.</b></h6>
 
-<figure class="doc-image"><img src="https://faq.apprix.fi/wp-content/uploads/2022/03/R_audit_module-1.png" alt="" loading="lazy"></figure>
+<figure class="doc-image"><img src="/files/docs/2022/03/R_audit_module-1.png" alt="" loading="lazy"></figure>
 
-<figure class="doc-image"><img src="https://faq.apprix.fi/wp-content/uploads/2020/08/audit3-1000x299.png" alt="" loading="lazy"></figure>
+<figure class="doc-image"><img src="/files/docs/2020/08/audit3-1000x299.png" alt="" loading="lazy"></figure>
 
-<figure class="doc-image"><img src="https://faq.apprix.fi/wp-content/uploads/2020/08/audit2.png" alt="" loading="lazy"></figure>
+<figure class="doc-image"><img src="/files/docs/2020/08/audit2.png" alt="" loading="lazy"></figure>
 
-<figure class="doc-image"><img src="https://faq.apprix.fi/wp-content/uploads/2020/08/Userpermissions2.png" alt="" loading="lazy"></figure>
+<figure class="doc-image"><img src="/files/docs/2020/08/Userpermissions2.png" alt="" loading="lazy"></figure>
 
-<figure class="doc-image"><img src="https://faq.apprix.fi/wp-content/uploads/2020/08/none_edit2.png" alt="" loading="lazy"></figure>
+<figure class="doc-image"><img src="/files/docs/2020/08/none_edit2.png" alt="" loading="lazy"></figure>
 
-<figure class="doc-image"><img src="https://faq.apprix.fi/wp-content/uploads/2020/08/noneview2.png" alt="" loading="lazy"></figure>
+<figure class="doc-image"><img src="/files/docs/2020/08/noneview2.png" alt="" loading="lazy"></figure>
 
-<figure class="doc-image"><img src="https://faq.apprix.fi/wp-content/uploads/2020/08/Userpermissions3-1000x585.png" alt="" loading="lazy"></figure>
+<figure class="doc-image"><img src="/files/docs/2020/08/Userpermissions3-1000x585.png" alt="" loading="lazy"></figure>

@@ -15,4 +15,4 @@ You can preview elements functions by hovering the mouse over the info icon loca
 
 <h6 class="p1"><b>Click on the images to enlarge them.</b></h6>
 
-<figure class="doc-image"><img src="https://faq.apprix.fi/wp-content/uploads/2021/08/Add_elements_small-2.gif" alt="" loading="lazy"></figure>
+<figure class="doc-image"><img src="/files/docs/2021/08/Add_elements_small-2.gif" alt="" loading="lazy"></figure>

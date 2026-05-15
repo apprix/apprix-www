@@ -21,12 +21,12 @@ Now edit one speech bubble at a time:
 </ol>
 From the <b>tool </b>icon at the top left, you can set the<b> Dialogue</b> <b>settings</b>. You can choose between showing dialogues one by one or all at once.
 
-<img class="wp-image-6840 aligncenter" src="https://faq.apprix.fi/wp-content/uploads/2026/03/Dialogue-settings.png" alt="" width="585" height="253" />
+<img class="wp-image-6840 aligncenter" src="/files/docs/2026/03/Dialogue-settings.png" alt="" width="585" height="253" />
 
 <h6 class="p1"><b>Dialogue example.</b></h6>
 
 <h5 class="p1">How to edit a speech bubble.</h5>
 
-<figure class="doc-image"><img src="https://faq.apprix.fi/wp-content/uploads/2026/03/First-Dialogue-example.gif" alt="" loading="lazy"></figure>
+<figure class="doc-image"><img src="/files/docs/2026/03/First-Dialogue-example.gif" alt="" loading="lazy"></figure>
 
-<figure class="doc-image"><img src="https://faq.apprix.fi/wp-content/uploads/2026/03/First-Dialogue.gif" alt="" loading="lazy"></figure>
+<figure class="doc-image"><img src="/files/docs/2026/03/First-Dialogue.gif" alt="" loading="lazy"></figure>

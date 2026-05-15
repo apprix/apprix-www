@@ -29,8 +29,8 @@ If the <strong>Element Locking</strong> value in the Administrate tool is set to
 
 <h6 class="p1">Administrate Tool Settings</h6>
 
-<figure class="doc-image"><img src="https://faq.apprix.fi/wp-content/uploads/2024/09/Locking-element-1-1.jpg" alt="" loading="lazy"></figure>
+<figure class="doc-image"><img src="/files/docs/2024/09/Locking-element-1-1.jpg" alt="" loading="lazy"></figure>
 
-<figure class="doc-image"><img src="https://faq.apprix.fi/wp-content/uploads/2024/09/Locking-element-2-1.jpg" alt="" loading="lazy"></figure>
+<figure class="doc-image"><img src="/files/docs/2024/09/Locking-element-2-1.jpg" alt="" loading="lazy"></figure>
 
-<figure class="doc-image"><img src="https://faq.apprix.fi/wp-content/uploads/2024/09/Locking-element-3-1.jpg" alt="" loading="lazy"></figure>
+<figure class="doc-image"><img src="/files/docs/2024/09/Locking-element-3-1.jpg" alt="" loading="lazy"></figure>

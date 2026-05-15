@@ -125,12 +125,12 @@ Chart
 
 <h6><em>Chart: Slider write text (slider_ability)</em></h6>
 
-<figure class="doc-image"><img src="https://faq.apprix.fi/wp-content/uploads/2023/03/8-Slider-bars-task.png" alt="" loading="lazy"></figure>
+<figure class="doc-image"><img src="/files/docs/2023/03/8-Slider-bars-task.png" alt="" loading="lazy"></figure>
 
-<figure class="doc-image"><img src="https://faq.apprix.fi/wp-content/uploads/2023/03/9-Slider-bars-single.png" alt="" loading="lazy"></figure>
+<figure class="doc-image"><img src="/files/docs/2023/03/9-Slider-bars-single.png" alt="" loading="lazy"></figure>
 
-<figure class="doc-image"><img src="https://faq.apprix.fi/wp-content/uploads/2023/03/10-Fourfold.png" alt="" loading="lazy"></figure>
+<figure class="doc-image"><img src="/files/docs/2023/03/10-Fourfold.png" alt="" loading="lazy"></figure>
 
-<figure class="doc-image"><img src="https://faq.apprix.fi/wp-content/uploads/2023/03/11-Slider-icons.png" alt="" loading="lazy"></figure>
+<figure class="doc-image"><img src="/files/docs/2023/03/11-Slider-icons.png" alt="" loading="lazy"></figure>
 
-<figure class="doc-image"><img src="https://faq.apprix.fi/wp-content/uploads/2023/03/12-Slider-write-text-1.png" alt="" loading="lazy"></figure>
+<figure class="doc-image"><img src="/files/docs/2023/03/12-Slider-write-text-1.png" alt="" loading="lazy"></figure>

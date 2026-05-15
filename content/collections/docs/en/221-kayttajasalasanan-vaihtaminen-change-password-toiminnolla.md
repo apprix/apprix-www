@@ -9,4 +9,4 @@ title: '2.2.1 Change Password Function'
 
 <h6 class="p1">How do you change your Builder password?</h6>
 
-<figure class="doc-image"><img src="https://faq.apprix.fi/wp-content/uploads/2025/03/2.2.1-Change-Password-Function.gif" alt="" loading="lazy"></figure>
+<figure class="doc-image"><img src="/files/docs/2025/03/2.2.1-Change-Password-Function.gif" alt="" loading="lazy"></figure>

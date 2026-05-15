@@ -41,14 +41,14 @@ Oletetaan, että haluat ilmoittaa suorittajille, että tietty kurssimoduuli tule
 
 <h6>Voit käyttää tätä elementtiä myös linkkien ja dokumentaation tallentamiseen.</h6>
 
-<figure class="doc-image"><img src="https://faq.apprix.fi/wp-content/uploads/2025/05/LP-esimerkki-1.png" alt="" loading="lazy"></figure>
+<figure class="doc-image"><img src="/files/docs/2025/05/LP-esimerkki-1.png" alt="" loading="lazy"></figure>
 
-<figure class="doc-image"><img src="https://faq.apprix.fi/wp-content/uploads/2025/05/LP-button-settings-1.png" alt="" loading="lazy"></figure>
+<figure class="doc-image"><img src="/files/docs/2025/05/LP-button-settings-1.png" alt="" loading="lazy"></figure>
 
-<figure class="doc-image"><img src="https://faq.apprix.fi/wp-content/uploads/2025/05/LPStart-1.gif" alt="" loading="lazy"></figure>
+<figure class="doc-image"><img src="/files/docs/2025/05/LPStart-1.gif" alt="" loading="lazy"></figure>
 
-<figure class="doc-image"><img src="https://faq.apprix.fi/wp-content/uploads/2025/05/DLV-Start21-2.gif" alt="" loading="lazy"></figure>
+<figure class="doc-image"><img src="/files/docs/2025/05/DLV-Start21-2.gif" alt="" loading="lazy"></figure>
 
-<figure class="doc-image"><img src="https://faq.apprix.fi/wp-content/uploads/2025/05/LP-Preview-0105-1.gif" alt="" loading="lazy"></figure>
+<figure class="doc-image"><img src="/files/docs/2025/05/LP-Preview-0105-1.gif" alt="" loading="lazy"></figure>
 
-<figure class="doc-image"><img src="https://faq.apprix.fi/wp-content/uploads/2025/05/DLP-for-links-and-documentation-1.png" alt="" loading="lazy"></figure>
+<figure class="doc-image"><img src="/files/docs/2025/05/DLP-for-links-and-documentation-1.png" alt="" loading="lazy"></figure>

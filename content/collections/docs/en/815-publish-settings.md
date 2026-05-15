@@ -41,6 +41,6 @@ For further information, please click the <a href="https://drive.google.com/file
 <h6>How do you choose in a module the training type?</h6>
 <h6></h6>
 
-<figure class="doc-image"><img src="https://faq.apprix.fi/wp-content/uploads/2025/08/Publish-settings-1000x839.png" alt="" loading="lazy"></figure>
+<figure class="doc-image"><img src="/files/docs/2025/08/Publish-settings-1000x839.png" alt="" loading="lazy"></figure>
 
-<figure class="doc-image"><img src="https://faq.apprix.fi/wp-content/uploads/2025/08/publish-settings-demo-1.gif" alt="" loading="lazy"></figure>
+<figure class="doc-image"><img src="/files/docs/2025/08/publish-settings-demo-1.gif" alt="" loading="lazy"></figure>

@@ -29,10 +29,10 @@ Access for viewing can be granted separately, e.g. for a manager to view his/her
 
 <h6>The user can use the Filter function to filter the report performance data. In the Reports view, the user can search for specific data, select which fields are displayed and download the data in CSV or Excel file format.</h6>
 
-<figure class="doc-image"><img src="https://faq.apprix.fi/wp-content/uploads/2025/02/Extended-report-1-settings.png" alt="" loading="lazy"></figure>
+<figure class="doc-image"><img src="/files/docs/2025/02/Extended-report-1-settings.png" alt="" loading="lazy"></figure>
 
-<figure class="doc-image"><img src="https://faq.apprix.fi/wp-content/uploads/2025/02/Reports-button-2.png" alt="" loading="lazy"></figure>
+<figure class="doc-image"><img src="/files/docs/2025/02/Reports-button-2.png" alt="" loading="lazy"></figure>
 
-<figure class="doc-image"><img src="https://faq.apprix.fi/wp-content/uploads/2025/02/Extended-report-settings-3.png" alt="" loading="lazy"></figure>
+<figure class="doc-image"><img src="/files/docs/2025/02/Extended-report-settings-3.png" alt="" loading="lazy"></figure>
 
-<figure class="doc-image"><img src="https://faq.apprix.fi/wp-content/uploads/2025/02/Filters-4.png" alt="" loading="lazy"></figure>
+<figure class="doc-image"><img src="/files/docs/2025/02/Filters-4.png" alt="" loading="lazy"></figure>

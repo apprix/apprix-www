@@ -32,8 +32,8 @@ In this element, the trainee first reads the task instructions and/or other rele
 
 <h5 class="p1">How can I use the element? Here is an example.</h5>
 
-<figure class="doc-image"><img src="https://faq.apprix.fi/wp-content/uploads/2021/08/Hotspot_Mouseover_EN.gif" alt="" loading="lazy"></figure>
+<figure class="doc-image"><img src="/files/docs/2021/08/Hotspot_Mouseover_EN.gif" alt="" loading="lazy"></figure>
 
-<figure class="doc-image"><img src="https://faq.apprix.fi/wp-content/uploads/2021/08/Hotspot_Mouseover_Edit_EN.gif" alt="" loading="lazy"></figure>
+<figure class="doc-image"><img src="/files/docs/2021/08/Hotspot_Mouseover_Edit_EN.gif" alt="" loading="lazy"></figure>
 
-<figure class="doc-image"><img src="https://faq.apprix.fi/wp-content/uploads/2024/06/hotspot-mouseover-2.gif" alt="" loading="lazy"></figure>
+<figure class="doc-image"><img src="/files/docs/2024/06/hotspot-mouseover-2.gif" alt="" loading="lazy"></figure>

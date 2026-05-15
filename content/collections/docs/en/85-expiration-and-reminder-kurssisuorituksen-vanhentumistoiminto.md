@@ -68,10 +68,18 @@ When a trainee starts a course that has a validity period, a message will appear
 
 <h6>Expiration textbox: The course participant has completed the course twice. The first has expired, and the second is still valid.</h6>
 
-<figure class="doc-image"><img src="https://faq.apprix.fi/wp-content/uploads/2024/05/8.5.1-Expiration-1.png" alt="" loading="lazy"></figure>
+<figure class="doc-image"><img src="/files/docs/2024/05/8.5.1-Expiration-1.png" alt="" loading="lazy"></figure>
 
-<figure class="doc-image"><img src="https://faq.apprix.fi/wp-content/uploads/2024/05/8.5.2-Expiration-1.png" alt="" loading="lazy"></figure>
+<figure class="doc-image"><img src="/files/docs/2024/05/8.5.2-Expiration-1.png" alt="" loading="lazy"></figure>
 
-<figure class="doc-image"><img src="https://faq.apprix.fi/wp-content/uploads/2024/05/8.5.3-Expiration-3.png" alt="" loading="lazy"></figure>
+<figure class="doc-image"><img src="/files/docs/2024/05/8.5.3-Expiration-3.png" alt="" loading="lazy"></figure>
 
-<figure class="doc-image"><img src="https://faq.apprix.fi/wp-content/uploads/2024/05/8.5.4-Expiration-3.png" alt="" loading="lazy"></figure>
+<figure class="doc-image"><img src="/files/docs/2024/05/8.5.4-Expiration-3.png" alt="" loading="lazy"></figure>
+
+<video controls preload="metadata" style="width:100%;border-radius:0.75rem;box-shadow:0 1px 2px 0 rgba(0,0,0,.08);margin-top:1rem">
+    <source src="/files/docs/2025/12/Send-manualli-191225.mp4" type="video/mp4">
+</video>
+
+<video controls preload="metadata" style="width:100%;border-radius:0.75rem;box-shadow:0 1px 2px 0 rgba(0,0,0,.08);margin-top:1rem">
+    <source src="/files/docs/2025/12/Aut-reminder-set.mp4" type="video/mp4">
+</video>

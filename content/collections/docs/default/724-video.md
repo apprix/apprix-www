@@ -20,7 +20,7 @@ Suosittelemme käyttämään upotuskoodeja Vimeosta. Apprixilla on yritystili, j
 </ol>
 Jos haluat tietää, miten upotat videon Vimeo-kanavaltasi Builderiin, katso FAQ:
 
-<a href="https://faq.apprix.fi/">https://faq.apprix.fi/</a> : “<strong>Miten upotan videon omalta Vimeo-kanavalta?</strong>”
+<a href=”/faq”>/faq</a>: “<strong>Miten upotan videon omalta Vimeo-kanavalta?</strong>”
 
 <ol>
  <li>Avaa video, klikkaa <strong>Share/Jaa</strong>-nappia sen alapuolella ja valitse <strong>Embed/Upota</strong>.</li>
@@ -98,12 +98,12 @@ Kunkin lähetettävän tiedoston enimmäiskoko on 100 Mt.
 
 <h5 class="p1 fusion-responsive-typography-calculated" data-fontsize="12" data-lineheight="18px">Elementin asetukset editointinäkymässä:</h5>
 
-<figure class="doc-image"><img src="https://faq.apprix.fi/wp-content/uploads/2021/08/Video_FI-1.gif" alt="" loading="lazy"></figure>
+<figure class="doc-image"><img src="/files/docs/2021/08/Video_FI-1.gif" alt="" loading="lazy"></figure>
 
-<figure class="doc-image"><img src="https://faq.apprix.fi/wp-content/uploads/2022/01/video.png" alt="" loading="lazy"></figure>
+<figure class="doc-image"><img src="/files/docs/2022/01/video.png" alt="" loading="lazy"></figure>
 
-<figure class="doc-image"><img src="https://faq.apprix.fi/wp-content/uploads/2021/08/Video_Edit_FI-1.gif" alt="" loading="lazy"></figure>
+<figure class="doc-image"><img src="/files/docs/2021/08/Video_Edit_FI-1.gif" alt="" loading="lazy"></figure>
 
-<figure class="doc-image"><img src="https://faq.apprix.fi/wp-content/uploads/2022/05/video-ohje4-1.gif" alt="" loading="lazy"></figure>
+<figure class="doc-image"><img src="/files/docs/2022/05/video-ohje4-1.gif" alt="" loading="lazy"></figure>
 
-<figure class="doc-image"><img src="https://faq.apprix.fi/wp-content/uploads/2021/12/video.png" alt="" loading="lazy"></figure>
+<figure class="doc-image"><img src="/files/docs/2021/12/video.png" alt="" loading="lazy"></figure>

@@ -38,10 +38,10 @@ Click the <strong>tool icon</strong> at the top left of the element, and then <s
 
 <h6 class="p1">Do you want to allow only numbers or numbers and letters in the white boxes?</h6>
 
-<figure class="doc-image"><img src="https://faq.apprix.fi/wp-content/uploads/2024/11/Fill-in-in-Published-mode-1-1.jpg" alt="" loading="lazy"></figure>
+<figure class="doc-image"><img src="/files/docs/2024/11/Fill-in-in-Published-mode-1-1.jpg" alt="" loading="lazy"></figure>
 
-<figure class="doc-image"><img src="https://faq.apprix.fi/wp-content/uploads/2024/11/Fill-in-in-Published-mode-2.jpg" alt="" loading="lazy"></figure>
+<figure class="doc-image"><img src="/files/docs/2024/11/Fill-in-in-Published-mode-2.jpg" alt="" loading="lazy"></figure>
 
-<figure class="doc-image"><img src="https://faq.apprix.fi/wp-content/uploads/2024/11/Fill-in-in-Edit-mode-1.jpg" alt="" loading="lazy"></figure>
+<figure class="doc-image"><img src="/files/docs/2024/11/Fill-in-in-Edit-mode-1.jpg" alt="" loading="lazy"></figure>
 
-<figure class="doc-image"><img src="https://faq.apprix.fi/wp-content/uploads/2024/11/Fill-in-task-settings-1.png" alt="" loading="lazy"></figure>
+<figure class="doc-image"><img src="/files/docs/2024/11/Fill-in-task-settings-1.png" alt="" loading="lazy"></figure>

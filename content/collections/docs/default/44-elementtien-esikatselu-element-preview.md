@@ -27,18 +27,18 @@ Voit esikatsella yksittäistä elementtiä seuraavasti:
 <strong>Lisätietoja:</strong>
 
 <strong>4.6 Elementtien kopiointi sisältöineen</strong>
-<a href="https://help.apprix.fi/#elementti-kopiointi">https://help.apprix.fi/#elementti-kopiointi</a>
+<a href="/help/46-elementtien-kopiointi-sisaltoineen-copy-element">4.6 Elementtien kopiointi sisältöineen</a>
 
 <h6>Miten elementtejä esikatsellaan?</h6>
 
 <h6 class="fusion-responsive-typography-calculated" data-fontsize="21" data-lineheight="31.5px"><strong>Preview-työkalupalkki (Max, Min, Draft) </strong></h6>
 
-<figure class="doc-image"><img src="https://faq.apprix.fi/wp-content/uploads/2025/06/Preview-element.jpg" alt="" loading="lazy"></figure>
+<figure class="doc-image"><img src="/files/docs/2025/06/Preview-element.jpg" alt="" loading="lazy"></figure>
 
-<figure class="doc-image"><img src="https://faq.apprix.fi/wp-content/uploads/2025/06/Preview-element-in-new-tab.png" alt="" loading="lazy"></figure>
+<figure class="doc-image"><img src="/files/docs/2025/06/Preview-element-in-new-tab.png" alt="" loading="lazy"></figure>
 
-<figure class="doc-image"><img src="https://faq.apprix.fi/wp-content/uploads/2025/06/Preview-mode-max.png" alt="" loading="lazy"></figure>
+<figure class="doc-image"><img src="/files/docs/2025/06/Preview-mode-max.png" alt="" loading="lazy"></figure>
 
-<figure class="doc-image"><img src="https://faq.apprix.fi/wp-content/uploads/2025/06/Preview-mode-min.png" alt="" loading="lazy"></figure>
+<figure class="doc-image"><img src="/files/docs/2025/06/Preview-mode-min.png" alt="" loading="lazy"></figure>
 
-<figure class="doc-image"><img src="https://faq.apprix.fi/wp-content/uploads/2025/06/Preview-mode-draft.png" alt="" loading="lazy"></figure>
+<figure class="doc-image"><img src="/files/docs/2025/06/Preview-mode-draft.png" alt="" loading="lazy"></figure>

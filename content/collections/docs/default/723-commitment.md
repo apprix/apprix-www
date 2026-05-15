@@ -9,4 +9,4 @@ Lisää taustakuva ja muokkaa sitoumustekstiä.
 
 <h6 class="p1">Klikkaa kuvia suurentaaksesi niitä.</h6>
 
-<figure class="doc-image"><img src="https://faq.apprix.fi/wp-content/uploads/2021/08/Sitoumus_small.gif" alt="" loading="lazy"></figure>
+<figure class="doc-image"><img src="/files/docs/2021/08/Sitoumus_small.gif" alt="" loading="lazy"></figure>

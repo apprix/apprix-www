@@ -11,4 +11,4 @@ title: '4.1 Elementtien lisääminen (Add Element)'
 
 <h6>Miten lisäät elementtejä moduuliin?</h6>
 
-<figure class="doc-image"><img src="https://faq.apprix.fi/wp-content/uploads/2021/08/Add_elements_small.gif" alt="" loading="lazy"></figure>
+<figure class="doc-image"><img src="/files/docs/2021/08/Add_elements_small.gif" alt="" loading="lazy"></figure>

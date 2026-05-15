@@ -13,4 +13,4 @@ Huom! Tämä on asiakaskohtainen ominaisuus. Otathan yhteyttä asiakastukeemme (
 
 <h6 class="p1">Miten voit vaihtaa moduulin muokkaajia?</h6>
 
-<figure class="doc-image"><img src="https://faq.apprix.fi/wp-content/uploads/2024/08/Change-module-editor.gif" alt="" loading="lazy"></figure>
+<figure class="doc-image"><img src="/files/docs/2024/08/Change-module-editor.gif" alt="" loading="lazy"></figure>

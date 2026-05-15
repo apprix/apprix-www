@@ -62,8 +62,8 @@ The <strong>Normal</strong> option checking logic:
 
 <h6 class="p1"><b>The element settings in Edit mode</b></h6>
 
-<figure class="doc-image"><img src="https://faq.apprix.fi/wp-content/uploads/2024/12/Phrases-element-demo-1.gif" alt="" loading="lazy"></figure>
+<figure class="doc-image"><img src="/files/docs/2024/12/Phrases-element-demo-1.gif" alt="" loading="lazy"></figure>
 
-<figure class="doc-image"><img src="https://faq.apprix.fi/wp-content/uploads/2024/12/Phrases-element-settings-image-1.png" alt="" loading="lazy"></figure>
+<figure class="doc-image"><img src="/files/docs/2024/12/Phrases-element-settings-image-1.png" alt="" loading="lazy"></figure>
 
-<figure class="doc-image"><img src="https://faq.apprix.fi/wp-content/uploads/2024/12/Phrase-asetukset-1.png" alt="" loading="lazy"></figure>
+<figure class="doc-image"><img src="/files/docs/2024/12/Phrase-asetukset-1.png" alt="" loading="lazy"></figure>

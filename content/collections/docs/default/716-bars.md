@@ -32,12 +32,12 @@ Napsauta kunkin palkin vasemmassa alareunassa olevaa ”info” -ikonia. Ponnahd
 
 <h5 class="p1 fusion-responsive-typography-calculated" data-fontsize="12" data-lineheight="18px">Elementin asetukset editointinäkymässä:</h5>
 
-<figure class="doc-image"><img src="https://faq.apprix.fi/wp-content/uploads/2021/08/Bars_Task_FI-1.gif" alt="" loading="lazy"></figure>
+<figure class="doc-image"><img src="/files/docs/2021/08/Bars_Task_FI-1.gif" alt="" loading="lazy"></figure>
 
-<figure class="doc-image"><img src="https://faq.apprix.fi/wp-content/uploads/2021/08/Bars_Task_Edit_FI_Small-1.gif" alt="" loading="lazy"></figure>
+<figure class="doc-image"><img src="/files/docs/2021/08/Bars_Task_Edit_FI_Small-1.gif" alt="" loading="lazy"></figure>
 
-<figure class="doc-image"><img src="https://faq.apprix.fi/wp-content/uploads/2022/04/7.15-1-600x308.png" alt="" loading="lazy"></figure>
+<figure class="doc-image"><img src="/files/docs/2022/04/7.15-1-600x308.png" alt="" loading="lazy"></figure>
 
-<figure class="doc-image"><img src="https://faq.apprix.fi/wp-content/uploads/2022/04/7.15-2-600x309.png" alt="" loading="lazy"></figure>
+<figure class="doc-image"><img src="/files/docs/2022/04/7.15-2-600x309.png" alt="" loading="lazy"></figure>
 
-<figure class="doc-image"><img src="https://faq.apprix.fi/wp-content/uploads/2022/04/7.15-3-600x371.png" alt="" loading="lazy"></figure>
+<figure class="doc-image"><img src="/files/docs/2022/04/7.15-3-600x371.png" alt="" loading="lazy"></figure>

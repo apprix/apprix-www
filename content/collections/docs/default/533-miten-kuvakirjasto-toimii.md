@@ -20,4 +20,4 @@ Kuvakirjastossa voit:
 
 <h6>Miten kuvakirjasto (Image Library) toimii?</h6>
 
-<figure class="doc-image"><img src="https://faq.apprix.fi/wp-content/uploads/2024/06/elementin-taustakuva-1.gif" alt="" loading="lazy"></figure>
+<figure class="doc-image"><img src="/files/docs/2024/06/elementin-taustakuva-1.gif" alt="" loading="lazy"></figure>

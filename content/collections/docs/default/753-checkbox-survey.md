@@ -43,8 +43,8 @@ Alla on muutamia yleisiä käyttötapauksia, joissa vastaukset valitaan asteikol
 
 <h6>Kuinka saat sen valmiiksi?</h6>
 
-<figure class="doc-image"><img src="https://faq.apprix.fi/wp-content/uploads/2025/05/Checkbox-Survey-2.gif" alt="" loading="lazy"></figure>
+<figure class="doc-image"><img src="/files/docs/2025/05/Checkbox-Survey-2.gif" alt="" loading="lazy"></figure>
 
-<figure class="doc-image"><img src="https://faq.apprix.fi/wp-content/uploads/2025/05/Checkbox-Survey-Ins-1-2.gif" alt="" loading="lazy"></figure>
+<figure class="doc-image"><img src="/files/docs/2025/05/Checkbox-Survey-Ins-1-2.gif" alt="" loading="lazy"></figure>
 
-<figure class="doc-image"><img src="https://faq.apprix.fi/wp-content/uploads/2025/05/CheckboxSurveyIns2.2O-2.gif" alt="" loading="lazy"></figure>
+<figure class="doc-image"><img src="/files/docs/2025/05/CheckboxSurveyIns2.2O-2.gif" alt="" loading="lazy"></figure>

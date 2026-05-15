@@ -88,10 +88,10 @@ Click the Reset Password button to <strong>reset the user's password</strong>. 
 
 <h6 class="p1"><b>How do you reset the password and/or deactivate the user?</b></h6>
 
-<figure class="doc-image"><img src="https://faq.apprix.fi/wp-content/uploads/2025/03/2.2.2.-add-users.png" alt="" loading="lazy"></figure>
+<figure class="doc-image"><img src="/files/docs/2025/03/2.2.2.-add-users.png" alt="" loading="lazy"></figure>
 
-<figure class="doc-image"><img src="https://faq.apprix.fi/wp-content/uploads/2025/03/2.2.2.user-permission2.png" alt="" loading="lazy"></figure>
+<figure class="doc-image"><img src="/files/docs/2025/03/2.2.2.user-permission2.png" alt="" loading="lazy"></figure>
 
-<figure class="doc-image"><img src="https://faq.apprix.fi/wp-content/uploads/2025/03/2.2.2.-module-editing-permission.png" alt="" loading="lazy"></figure>
+<figure class="doc-image"><img src="/files/docs/2025/03/2.2.2.-module-editing-permission.png" alt="" loading="lazy"></figure>
 
-<figure class="doc-image"><img src="https://faq.apprix.fi/wp-content/uploads/2025/03/2.2.2.-reset-password2.png" alt="" loading="lazy"></figure>
+<figure class="doc-image"><img src="/files/docs/2025/03/2.2.2.-reset-password2.png" alt="" loading="lazy"></figure>

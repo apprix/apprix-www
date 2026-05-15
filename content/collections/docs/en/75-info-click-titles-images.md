@@ -62,8 +62,8 @@ The instructions for editing the element are identical to the Info Click titles 
 
 <h5>Mandatory and Image icons</h5>
 
-<figure class="doc-image"><img src="https://faq.apprix.fi/wp-content/uploads/2021/08/Info_Click_Titles_Images_EN.gif" alt="" loading="lazy"></figure>
+<figure class="doc-image"><img src="/files/docs/2021/08/Info_Click_Titles_Images_EN.gif" alt="" loading="lazy"></figure>
 
-<figure class="doc-image"><img src="https://faq.apprix.fi/wp-content/uploads/2021/08/Info_Click_Titles_Images_Edit_EN.gif" alt="" loading="lazy"></figure>
+<figure class="doc-image"><img src="/files/docs/2021/08/Info_Click_Titles_Images_Edit_EN.gif" alt="" loading="lazy"></figure>
 
-<figure class="doc-image"><img src="https://faq.apprix.fi/wp-content/uploads/2024/10/Click-and-Scroll-1.png" alt="" loading="lazy"></figure>
+<figure class="doc-image"><img src="/files/docs/2024/10/Click-and-Scroll-1.png" alt="" loading="lazy"></figure>

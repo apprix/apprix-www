@@ -19,4 +19,4 @@ Työkalupalkin avulla on mahdollista säätää tekstilaatikoiden paikkaa (ylös
 
 <h6>Miten Settings-työkalupalkki toimii infoelementeissä?</h6>
 
-<figure class="doc-image"><img src="https://faq.apprix.fi/wp-content/uploads/2024/05/5.6-Settings-ratasvalikko-infoelementeissa.gif" alt="" loading="lazy"></figure>
+<figure class="doc-image"><img src="/files/docs/2024/05/5.6-Settings-ratasvalikko-infoelementeissa.gif" alt="" loading="lazy"></figure>

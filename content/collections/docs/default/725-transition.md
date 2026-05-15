@@ -15,8 +15,8 @@ Tarvittaessa voit lukita elementin ja lisätä äänitiedoston napsauttamalla el
 
 Laajennetussa ‘Transition’-elementissä voit määrittää taustan ja/tai laatikoiden värit napsauttamalla vasemmassa yläkulmassa olevaa työkalukuvaketta.
 
-<img class="aligncenter wp-image-6853" src="https://faq.apprix.fi/wp-content/uploads/2026/03/Transition-settings-1.gif" alt="" width="585" height="402" />
+<img class="aligncenter wp-image-6853" src="/files/docs/2026/03/Transition-settings-1.gif" alt="" width="585" height="402" />
 
 <h6 class="p1">Transition-elementti</h6>
 
-<figure class="doc-image"><img src="https://faq.apprix.fi/wp-content/uploads/2026/03/Transition-preview.gif" alt="" loading="lazy"></figure>
+<figure class="doc-image"><img src="/files/docs/2026/03/Transition-preview.gif" alt="" loading="lazy"></figure>

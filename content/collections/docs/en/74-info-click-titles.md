@@ -40,6 +40,6 @@ The trainee reads the main info on the left side of the element, then s/he click
 
 <h5>Element in Preview mode</h5>
 
-<figure class="doc-image"><img src="https://faq.apprix.fi/wp-content/uploads/2024/06/InfoClicktitle11-1.gif" alt="" loading="lazy"></figure>
+<figure class="doc-image"><img src="/files/docs/2024/06/InfoClicktitle11-1.gif" alt="" loading="lazy"></figure>
 
-<figure class="doc-image"><img src="https://faq.apprix.fi/wp-content/uploads/2024/06/InfoClicktitle12-1.gif" alt="" loading="lazy"></figure>
+<figure class="doc-image"><img src="/files/docs/2024/06/InfoClicktitle12-1.gif" alt="" loading="lazy"></figure>

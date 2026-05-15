@@ -13,4 +13,4 @@ From here, you can:
 
 <h6 class="p1">How do you download the module's contents as a zip file to your computer?</h6>
 
-<figure class="doc-image"><img src="https://faq.apprix.fi/wp-content/uploads/2024/05/6.7-Zip-tiedoston-luominen.png" alt="" loading="lazy"></figure>
+<figure class="doc-image"><img src="/files/docs/2024/05/6.7-Zip-tiedoston-luominen.png" alt="" loading="lazy"></figure>

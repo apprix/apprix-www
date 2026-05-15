@@ -22,15 +22,15 @@ Käyttäjähallinta-asetuksien <b>User's Permissions</b> -valikossa on kolme lup
  <li>Alla näkyvillä asetuksilla käyttäjä voi aktivoida tai kytkeä pois päältä kaikkien olemassa olevien moduulien <b>Audit Module</b> -toiminnon.</li>
 </ul>
 <div>
-<img class="wp-image-2380 aligncenter" src="https://faq.apprix.fi/wp-content/uploads/2020/08/Userpermissions1.png" alt="" width="244" height="130" />
+<img class="wp-image-2380 aligncenter" src="/files/docs/2020/08/Userpermissions1.png" alt="" width="244" height="130" />
 <ul>
  <li>Alla näkyvillä asetuksilla käyttäjä voi aktivoida tai kytkeä pois päältä kaikkien olemassa olevien moduulien <b>Audit Module</b> -toiminnon.</li>
 </ul>
-<img class="wp-image-2385 aligncenter" src="https://faq.apprix.fi/wp-content/uploads/2020/08/none_edit1.png" alt="" width="229" height="135" />
+<img class="wp-image-2385 aligncenter" src="/files/docs/2020/08/none_edit1.png" alt="" width="229" height="135" />
 <ul>
  <li>Alla näkyvillä asetuksilla käyttäjä pystyy hallinnoimaan <b>Audit Module</b> -toimintoa ainoastaan itse luomissaan moduuleissa, mutta ei muissa olemassa olevissa moduuleissa.</li>
 </ul>
-<img class="wp-image-2383 aligncenter" src="https://faq.apprix.fi/wp-content/uploads/2020/08/noneview1.png" alt="" width="242" height="129" />
+<img class="wp-image-2383 aligncenter" src="/files/docs/2020/08/noneview1.png" alt="" width="242" height="129" />
 
 Sivulla olevassa kuvassa näkyy ABCDE-esimerkkimoduulin kirjattu muutoshistoria <b>Audit Module</b> -toiminnolla:
 
@@ -55,16 +55,16 @@ Seuraavat tiedot kirjataan muutoshistoriaan, kun <b>Audit Module</b> -toiminto o
 
 <h6 class="p1">Klikkaa kuvia suurentaaksesi niitä.</h6>
 
-<figure class="doc-image"><img src="https://faq.apprix.fi/wp-content/uploads/2022/03/R_audit_module.png" alt="" loading="lazy"></figure>
+<figure class="doc-image"><img src="/files/docs/2022/03/R_audit_module.png" alt="" loading="lazy"></figure>
 
-<figure class="doc-image"><img src="https://faq.apprix.fi/wp-content/uploads/2020/08/audit3.png" alt="" loading="lazy"></figure>
+<figure class="doc-image"><img src="/files/docs/2020/08/audit3.png" alt="" loading="lazy"></figure>
 
-<figure class="doc-image"><img src="https://faq.apprix.fi/wp-content/uploads/2020/08/audit2.png" alt="" loading="lazy"></figure>
+<figure class="doc-image"><img src="/files/docs/2020/08/audit2.png" alt="" loading="lazy"></figure>
 
-<figure class="doc-image"><img src="https://faq.apprix.fi/wp-content/uploads/2020/08/Userpermissions2.png" alt="" loading="lazy"></figure>
+<figure class="doc-image"><img src="/files/docs/2020/08/Userpermissions2.png" alt="" loading="lazy"></figure>
 
-<figure class="doc-image"><img src="https://faq.apprix.fi/wp-content/uploads/2020/08/none_edit2.png" alt="" loading="lazy"></figure>
+<figure class="doc-image"><img src="/files/docs/2020/08/none_edit2.png" alt="" loading="lazy"></figure>
 
-<figure class="doc-image"><img src="https://faq.apprix.fi/wp-content/uploads/2020/08/noneview2.png" alt="" loading="lazy"></figure>
+<figure class="doc-image"><img src="/files/docs/2020/08/noneview2.png" alt="" loading="lazy"></figure>
 
-<figure class="doc-image"><img src="https://faq.apprix.fi/wp-content/uploads/2020/08/Userpermissions3.png" alt="" loading="lazy"></figure>
+<figure class="doc-image"><img src="/files/docs/2020/08/Userpermissions3.png" alt="" loading="lazy"></figure>

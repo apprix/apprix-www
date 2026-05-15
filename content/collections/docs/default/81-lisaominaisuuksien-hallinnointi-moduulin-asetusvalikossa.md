@@ -31,4 +31,4 @@ Tässä asetusvalikon mahdollinen sisältö:
 
 <h6 class="p1">Klikkaa kuvia suurentaaksesi niitä.</h6>
 
-<figure class="doc-image"><img src="https://faq.apprix.fi/wp-content/uploads/2022/03/ratasmenut-400x399.jpg" alt="" loading="lazy"></figure>
+<figure class="doc-image"><img src="/files/docs/2022/03/ratasmenut-400x399.jpg" alt="" loading="lazy"></figure>

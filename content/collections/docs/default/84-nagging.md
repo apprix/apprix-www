@@ -139,6 +139,6 @@ Jos Nagging- ja Expiration-ominaisuudet ovat käytössä samanaikaisesti:
 <h6 class="p1"> Esimerkkejä osallistujataulukossa
 </h6>
 
-<figure class="doc-image"><img src="https://faq.apprix.fi/wp-content/uploads/2026/01/PR-123.png" alt="" loading="lazy"></figure>
+<figure class="doc-image"><img src="/files/docs/2026/01/PR-123.png" alt="" loading="lazy"></figure>
 
-<figure class="doc-image"><img src="https://faq.apprix.fi/wp-content/uploads/2026/01/Picture1.png" alt="" loading="lazy"></figure>
+<figure class="doc-image"><img src="/files/docs/2026/01/Picture1.png" alt="" loading="lazy"></figure>

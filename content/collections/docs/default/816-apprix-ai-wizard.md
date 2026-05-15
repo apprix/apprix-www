@@ -15,4 +15,4 @@ Lisätietoja saat napsauttamalla <a href="https://drive.google.com/file/d/1kkJzw
 
 <h6>Apprix AI Wizard</h6>
 
-<figure class="doc-image"><img src="https://faq.apprix.fi/wp-content/uploads/2026/01/Apprix-AI-Wizard-1.png" alt="" loading="lazy"></figure>
+<figure class="doc-image"><img src="/files/docs/2026/01/Apprix-AI-Wizard-1.png" alt="" loading="lazy"></figure>

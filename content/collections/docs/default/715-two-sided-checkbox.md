@@ -33,6 +33,6 @@ Jos haluat aktivoida <b>Answer Mode</b> -toiminnallisuuden, klikkaa rataskuvaket
 
 <h6 class="p1">Klikkaa kuvia suurentaaksesi niitä.</h6>
 
-<figure class="doc-image"><img src="https://faq.apprix.fi/wp-content/uploads/2022/04/Two-sided-checkbox-END-USER-ENG.gif" alt="" loading="lazy"></figure>
+<figure class="doc-image"><img src="/files/docs/2022/04/Two-sided-checkbox-END-USER-ENG.gif" alt="" loading="lazy"></figure>
 
-<figure class="doc-image"><img src="https://faq.apprix.fi/wp-content/uploads/2022/04/Two-sided-checkbox-Editor-ENG.gif" alt="" loading="lazy"></figure>
+<figure class="doc-image"><img src="/files/docs/2022/04/Two-sided-checkbox-Editor-ENG.gif" alt="" loading="lazy"></figure>

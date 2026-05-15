@@ -45,10 +45,10 @@ A pop-up window will inform the learner how to proceed when all chapters have be
 
 <h6 class="p1"><b>Click on the images to enlarge them.</b></h6>
 
-<figure class="doc-image"><img src="https://faq.apprix.fi/wp-content/uploads/2023/07/Submenu-hotspot-1.jpg" alt="" loading="lazy"></figure>
+<figure class="doc-image"><img src="/files/docs/2023/07/Submenu-hotspot-1.jpg" alt="" loading="lazy"></figure>
 
-<figure class="doc-image"><img src="https://faq.apprix.fi/wp-content/uploads/2023/07/Submenu-hotspot-summary-1.jpg" alt="" loading="lazy"></figure>
+<figure class="doc-image"><img src="/files/docs/2023/07/Submenu-hotspot-summary-1.jpg" alt="" loading="lazy"></figure>
 
-<figure class="doc-image"><img src="https://faq.apprix.fi/wp-content/uploads/2023/07/Submenu-hotspot-1.gif" alt="" loading="lazy"></figure>
+<figure class="doc-image"><img src="/files/docs/2023/07/Submenu-hotspot-1.gif" alt="" loading="lazy"></figure>
 
-<figure class="doc-image"><img src="https://faq.apprix.fi/wp-content/uploads/2023/07/Submenu-hotspot-how-to-link-a-submodule.gif" alt="" loading="lazy"></figure>
+<figure class="doc-image"><img src="/files/docs/2023/07/Submenu-hotspot-how-to-link-a-submodule.gif" alt="" loading="lazy"></figure>

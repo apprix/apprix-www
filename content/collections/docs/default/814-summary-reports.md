@@ -27,7 +27,7 @@ Lisätietoja tästä ominaisuudesta löytyy:
 
 <strong>8.8 Extended Reports</strong>
 
-<a href="https://help.apprix.fi/#extended-reports">https://help.apprix.fi/#extended-reports</a>
+<a href="/help/88-extended-reports">8.8 Extended Reports</a>
 
 <h6>Summary Reports-käyttöoikeudet on myönnetty <strong>Administrate</strong> → <strong>Users </strong>-työkalussa.</h6>
 
@@ -35,8 +35,8 @@ Lisätietoja tästä ominaisuudesta löytyy:
 
 <h6>Esimerkki raporttityökalun käytettävissä olevista suodattimista</h6>
 
-<figure class="doc-image"><img src="https://faq.apprix.fi/wp-content/uploads/2025/02/Admin-Summary-reports-1.png" alt="" loading="lazy"></figure>
+<figure class="doc-image"><img src="/files/docs/2025/02/Admin-Summary-reports-1.png" alt="" loading="lazy"></figure>
 
-<figure class="doc-image"><img src="https://faq.apprix.fi/wp-content/uploads/2025/02/Reports-button.png" alt="" loading="lazy"></figure>
+<figure class="doc-image"><img src="/files/docs/2025/02/Reports-button.png" alt="" loading="lazy"></figure>
 
-<figure class="doc-image"><img src="https://faq.apprix.fi/wp-content/uploads/2025/02/Reports-filters.png" alt="" loading="lazy"></figure>
+<figure class="doc-image"><img src="/files/docs/2025/02/Reports-filters.png" alt="" loading="lazy"></figure>

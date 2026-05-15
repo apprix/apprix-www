@@ -17,6 +17,6 @@ Jos et halua tallentaa juuri päivitettyä mutta tallentamatonta moduulin nimeä
 
 <h6 class="p1">Saat ilmoituksen jos nimeät moduulin samalla nimellä kuin olemassa olevan tai poistetun moduulin.</h6>
 
-<figure class="doc-image"><img src="https://faq.apprix.fi/wp-content/uploads/2024/05/reload-side.png" alt="" loading="lazy"></figure>
+<figure class="doc-image"><img src="/files/docs/2024/05/reload-side.png" alt="" loading="lazy"></figure>
 
-<figure class="doc-image"><img src="https://faq.apprix.fi/wp-content/uploads/2024/05/module-with-the-same-name.png" alt="" loading="lazy"></figure>
+<figure class="doc-image"><img src="/files/docs/2024/05/module-with-the-same-name.png" alt="" loading="lazy"></figure>

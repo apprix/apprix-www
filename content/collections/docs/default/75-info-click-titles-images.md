@@ -63,8 +63,8 @@ Ohjeet elementin muokkaamiseen ovat samat kuin Info Click titles Images-elementi
 
 <h5 class="p1 fusion-responsive-typography-calculated" data-fontsize="12" data-lineheight="18px">Mandatory ja Image-kuvakkeet</h5>
 
-<figure class="doc-image"><img src="https://faq.apprix.fi/wp-content/uploads/2021/08/Info_Click_Titles_Images_.gif" alt="" loading="lazy"></figure>
+<figure class="doc-image"><img src="/files/docs/2021/08/Info_Click_Titles_Images_.gif" alt="" loading="lazy"></figure>
 
-<figure class="doc-image"><img src="https://faq.apprix.fi/wp-content/uploads/2021/08/Info_Click_Titles_Images_Edit_FI_.gif" alt="" loading="lazy"></figure>
+<figure class="doc-image"><img src="/files/docs/2021/08/Info_Click_Titles_Images_Edit_FI_.gif" alt="" loading="lazy"></figure>
 
-<figure class="doc-image"><img src="https://faq.apprix.fi/wp-content/uploads/2024/10/Click-and-Scroll.png" alt="" loading="lazy"></figure>
+<figure class="doc-image"><img src="/files/docs/2024/10/Click-and-Scroll.png" alt="" loading="lazy"></figure>

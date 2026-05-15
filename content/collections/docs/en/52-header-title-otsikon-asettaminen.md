@@ -41,6 +41,6 @@ When the header title is set through the Intro element, it will only appear in t
 
 <h5>Setting an element-specific header title:</h5>
 
-<figure class="doc-image"><img src="https://faq.apprix.fi/wp-content/uploads/2021/11/Header_Title_EN-1000x687.jpg" alt="" loading="lazy"></figure>
+<figure class="doc-image"><img src="/files/docs/2021/11/Header_Title_EN-1000x687.jpg" alt="" loading="lazy"></figure>
 
-<figure class="doc-image"><img src="https://faq.apprix.fi/wp-content/uploads/2021/11/Element_Header_Title_EN_-1000x685.jpg" alt="" loading="lazy"></figure>
+<figure class="doc-image"><img src="/files/docs/2021/11/Element_Header_Title_EN_-1000x685.jpg" alt="" loading="lazy"></figure>

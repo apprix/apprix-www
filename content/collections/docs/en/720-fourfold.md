@@ -29,6 +29,6 @@ You can also change the background of the fourfold field to fit the topic, for e
 
 <h5 class="p1">Element settings in Edit Element Contents view:</h5>
 
-<figure class="doc-image"><img src="https://faq.apprix.fi/wp-content/uploads/2021/09/Fourfold_EN_new.gif" alt="" loading="lazy"></figure>
+<figure class="doc-image"><img src="/files/docs/2021/09/Fourfold_EN_new.gif" alt="" loading="lazy"></figure>
 
-<figure class="doc-image"><img src="https://faq.apprix.fi/wp-content/uploads/2021/09/Fourfold_Edit_EN_new-1.gif" alt="" loading="lazy"></figure>
+<figure class="doc-image"><img src="/files/docs/2021/09/Fourfold_Edit_EN_new-1.gif" alt="" loading="lazy"></figure>

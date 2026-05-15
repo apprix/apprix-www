@@ -44,8 +44,8 @@ Below are some everyday use cases when using three to five options:
 
 <h6>How do you complete it?</h6>
 
-<figure class="doc-image"><img src="https://faq.apprix.fi/wp-content/uploads/2025/05/Checkbox-Survey-1.gif" alt="" loading="lazy"></figure>
+<figure class="doc-image"><img src="/files/docs/2025/05/Checkbox-Survey-1.gif" alt="" loading="lazy"></figure>
 
-<figure class="doc-image"><img src="https://faq.apprix.fi/wp-content/uploads/2025/05/Checkbox-Survey-Ins-1-1.gif" alt="" loading="lazy"></figure>
+<figure class="doc-image"><img src="/files/docs/2025/05/Checkbox-Survey-Ins-1-1.gif" alt="" loading="lazy"></figure>
 
-<figure class="doc-image"><img src="https://faq.apprix.fi/wp-content/uploads/2025/05/CheckboxSurveyIns2.2O-1.gif" alt="" loading="lazy"></figure>
+<figure class="doc-image"><img src="/files/docs/2025/05/CheckboxSurveyIns2.2O-1.gif" alt="" loading="lazy"></figure>

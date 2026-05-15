@@ -13,4 +13,4 @@ Tästä voit:
 
 <h6>Miten lataat moduulin sisällön zip-tiedostona koneellesi?</h6>
 
-<figure class="doc-image"><img src="https://faq.apprix.fi/wp-content/uploads/2024/04/6.7-Zip-tiedoston-luominen.png" alt="" loading="lazy"></figure>
+<figure class="doc-image"><img src="/files/docs/2024/04/6.7-Zip-tiedoston-luominen.png" alt="" loading="lazy"></figure>

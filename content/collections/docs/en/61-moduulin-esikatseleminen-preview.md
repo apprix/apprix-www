@@ -48,8 +48,16 @@ The <strong>IP Guard feature</strong> restricts external testers' use of the pre
 
 <h6 class="p1"><b>How to share the module's Preview link?</b></h6>
 
-<figure class="doc-image"><img src="https://faq.apprix.fi/wp-content/uploads/2025/06/Preview-module-feature-1.gif" alt="" loading="lazy"></figure>
+<figure class="doc-image"><img src="/files/docs/2025/06/Preview-module-feature-1.gif" alt="" loading="lazy"></figure>
 
-<figure class="doc-image"><img src="https://faq.apprix.fi/wp-content/uploads/2025/06/Preview-element-in-new-tab-1.gif" alt="" loading="lazy"></figure>
+<figure class="doc-image"><img src="/files/docs/2025/06/Preview-element-in-new-tab-1.gif" alt="" loading="lazy"></figure>
 
-<figure class="doc-image"><img src="https://faq.apprix.fi/wp-content/uploads/2025/06/Preview-share-link.gif" alt="" loading="lazy"></figure>
+<figure class="doc-image"><img src="/files/docs/2025/06/Preview-share-link.gif" alt="" loading="lazy"></figure>
+
+<video controls preload="metadata" style="width:100%;border-radius:0.75rem;box-shadow:0 1px 2px 0 rgba(0,0,0,.08);margin-top:1rem">
+    <source src="/files/docs/2023/01/Draft-link-and-preview-NEW-6-opt-1.mp4" type="video/mp4">
+</video>
+
+<video controls preload="metadata" style="width:100%;border-radius:0.75rem;box-shadow:0 1px 2px 0 rgba(0,0,0,.08);margin-top:1rem">
+    <source src="/files/docs/2023/01/Audit-7-opt-1.mp4" type="video/mp4">
+</video>

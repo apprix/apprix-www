@@ -36,4 +36,4 @@ If necessary, you can remove the audio by selecting Remove Audio from the gear i
 
 <h6 class="p1"><b>How do you add an audio file?</b></h6>
 
-<figure class="doc-image"><img src="https://faq.apprix.fi/wp-content/uploads/2023/12/5.7-Adding-an-Audio-File-.gif" alt="" loading="lazy"></figure>
+<figure class="doc-image"><img src="/files/docs/2023/12/5.7-Adding-an-Audio-File-.gif" alt="" loading="lazy"></figure>

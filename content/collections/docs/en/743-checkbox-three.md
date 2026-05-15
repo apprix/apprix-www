@@ -31,8 +31,8 @@ After all the checkboxes have been clicked, a summary box will open with further
 
 <h6 class="p1"><b>Click on the images to enlarge them.</b></h6>
 
-<figure class="doc-image"><img src="https://faq.apprix.fi/wp-content/uploads/2023/07/Checkbox-three-OK-video-1.gif" alt="" loading="lazy"></figure>
+<figure class="doc-image"><img src="/files/docs/2023/07/Checkbox-three-OK-video-1.gif" alt="" loading="lazy"></figure>
 
-<figure class="doc-image"><img src="https://faq.apprix.fi/wp-content/uploads/2023/07/Checkbox-three-1-1.png" alt="" loading="lazy"></figure>
+<figure class="doc-image"><img src="/files/docs/2023/07/Checkbox-three-1-1.png" alt="" loading="lazy"></figure>
 
-<figure class="doc-image"><img src="https://faq.apprix.fi/wp-content/uploads/2023/07/Checkbox-three-2-1.png" alt="" loading="lazy"></figure>
+<figure class="doc-image"><img src="/files/docs/2023/07/Checkbox-three-2-1.png" alt="" loading="lazy"></figure>

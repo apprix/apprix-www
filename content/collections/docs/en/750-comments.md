@@ -52,6 +52,6 @@ Comments left by the participant can be edited while they are in the element. Ho
 
 <h6 class="p1">How to edit the task box?</h6>
 
-<figure class="doc-image"><img src="https://faq.apprix.fi/wp-content/uploads/2025/03/Comment-2.gif" alt="" loading="lazy"></figure>
+<figure class="doc-image"><img src="/files/docs/2025/03/Comment-2.gif" alt="" loading="lazy"></figure>
 
-<figure class="doc-image"><img src="https://faq.apprix.fi/wp-content/uploads/2025/03/Com-task-box-2.gif" alt="" loading="lazy"></figure>
+<figure class="doc-image"><img src="/files/docs/2025/03/Com-task-box-2.gif" alt="" loading="lazy"></figure>

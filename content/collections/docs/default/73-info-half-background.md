@@ -21,6 +21,6 @@ title: '7.3 Info Half Background'
 
 <h6 class="p1 fusion-responsive-typography-calculated" data-fontsize="12" data-lineheight="18px">Miten elementin asetuksia muutetaan muokkaustilassa?</h6>
 
-<figure class="doc-image"><img src="https://faq.apprix.fi/wp-content/uploads/2021/08/Info_Half_Background_FI-1.gif" alt="" loading="lazy"></figure>
+<figure class="doc-image"><img src="/files/docs/2021/08/Info_Half_Background_FI-1.gif" alt="" loading="lazy"></figure>
 
-<figure class="doc-image"><img src="https://faq.apprix.fi/wp-content/uploads/2021/08/Info_Half_Background_Edit_FI_-1.gif" alt="" loading="lazy"></figure>
+<figure class="doc-image"><img src="/files/docs/2021/08/Info_Half_Background_Edit_FI_-1.gif" alt="" loading="lazy"></figure>

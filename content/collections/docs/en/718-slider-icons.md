@@ -26,10 +26,10 @@ You can edit all texts and add also additional information in the info boxes by 
 
 <h5 class="p1">Forward icon opens the additional information text box</h5>
 
-<figure class="doc-image"><img src="https://faq.apprix.fi/wp-content/uploads/2021/08/Slider_Icons_EN.gif" alt="" loading="lazy"></figure>
+<figure class="doc-image"><img src="/files/docs/2021/08/Slider_Icons_EN.gif" alt="" loading="lazy"></figure>
 
-<figure class="doc-image"><img src="https://faq.apprix.fi/wp-content/uploads/2021/08/Slider_Icons_Edit_EN_.gif" alt="" loading="lazy"></figure>
+<figure class="doc-image"><img src="/files/docs/2021/08/Slider_Icons_Edit_EN_.gif" alt="" loading="lazy"></figure>
 
-<figure class="doc-image"><img src="https://faq.apprix.fi/wp-content/uploads/2022/03/7.17-1-600x281.png" alt="" loading="lazy"></figure>
+<figure class="doc-image"><img src="/files/docs/2022/03/7.17-1-600x281.png" alt="" loading="lazy"></figure>
 
-<figure class="doc-image"><img src="https://faq.apprix.fi/wp-content/uploads/2022/03/7.17-2-600x321.png" alt="" loading="lazy"></figure>
+<figure class="doc-image"><img src="/files/docs/2022/03/7.17-2-600x321.png" alt="" loading="lazy"></figure>

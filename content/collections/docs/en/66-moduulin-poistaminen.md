@@ -11,4 +11,4 @@ Nevertheless, if you or someone in your organization has deleted a module by acc
 
 <h6 class="p1">Click on the video file to enlarge it.</h6>
 
-<figure class="doc-image"><img src="https://faq.apprix.fi/wp-content/uploads/2024/05/Delete-module.gif" alt="" loading="lazy"></figure>
+<figure class="doc-image"><img src="/files/docs/2024/05/Delete-module.gif" alt="" loading="lazy"></figure>

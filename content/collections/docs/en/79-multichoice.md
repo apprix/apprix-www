@@ -27,8 +27,8 @@ If you want longer question-and-answer texts, click on the tool icon on the top 
 
 <h5 class="p1">NEW! Element Multichoice 2.0 – Switch page layout feature</h5>
 
-<figure class="doc-image"><img src="https://faq.apprix.fi/wp-content/uploads/2021/08/Multichoice_EN_.gif" alt="" loading="lazy"></figure>
+<figure class="doc-image"><img src="/files/docs/2021/08/Multichoice_EN_.gif" alt="" loading="lazy"></figure>
 
-<figure class="doc-image"><img src="https://faq.apprix.fi/wp-content/uploads/2021/08/Multichoice_Edit_Small.gif" alt="" loading="lazy"></figure>
+<figure class="doc-image"><img src="/files/docs/2021/08/Multichoice_Edit_Small.gif" alt="" loading="lazy"></figure>
 
-<figure class="doc-image"><img src="https://faq.apprix.fi/wp-content/uploads/2025/03/Multichoice-new-feature.gif" alt="" loading="lazy"></figure>
+<figure class="doc-image"><img src="/files/docs/2025/03/Multichoice-new-feature.gif" alt="" loading="lazy"></figure>

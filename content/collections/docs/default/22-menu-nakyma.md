@@ -49,8 +49,8 @@ Jos kuulut organisaatiosi pääkäyttäjiin, voi sinulla näkyä myös näkymäs
 
 <h6><strong>Quick Filters -työkalu</strong></h6>
 
-<figure class="doc-image"><img src="https://faq.apprix.fi/wp-content/uploads/2025/11/All-Modules-Menu-with-the-name-filter.png" alt="" loading="lazy"></figure>
+<figure class="doc-image"><img src="/files/docs/2025/11/All-Modules-Menu-with-the-name-filter.png" alt="" loading="lazy"></figure>
 
-<figure class="doc-image"><img src="https://faq.apprix.fi/wp-content/uploads/2025/11/All-Modules-Menu.png" alt="" loading="lazy"></figure>
+<figure class="doc-image"><img src="/files/docs/2025/11/All-Modules-Menu.png" alt="" loading="lazy"></figure>
 
-<figure class="doc-image"><img src="https://faq.apprix.fi/wp-content/uploads/2025/11/sort-and-filter-modules-tool.png" alt="" loading="lazy"></figure>
+<figure class="doc-image"><img src="/files/docs/2025/11/sort-and-filter-modules-tool.png" alt="" loading="lazy"></figure>

@@ -32,12 +32,12 @@ Depending on the element's settings, the facilitator can determine whether to sh
 
 <h6>Bars Survey - The average of other participants' answers</h6>
 
-<figure class="doc-image"><img src="https://faq.apprix.fi/wp-content/uploads/2021/08/Bars_Slider_Single_EN-2.gif" alt="" loading="lazy"></figure>
+<figure class="doc-image"><img src="/files/docs/2021/08/Bars_Slider_Single_EN-2.gif" alt="" loading="lazy"></figure>
 
-<figure class="doc-image"><img src="https://faq.apprix.fi/wp-content/uploads/2021/08/Bars_Slider_Single_Edit_EN-1.gif" alt="" loading="lazy"></figure>
+<figure class="doc-image"><img src="/files/docs/2021/08/Bars_Slider_Single_Edit_EN-1.gif" alt="" loading="lazy"></figure>
 
-<figure class="doc-image"><img src="https://faq.apprix.fi/wp-content/uploads/2022/04/7.16-1-600x324.png" alt="" loading="lazy"></figure>
+<figure class="doc-image"><img src="/files/docs/2022/04/7.16-1-600x324.png" alt="" loading="lazy"></figure>
 
-<figure class="doc-image"><img src="https://faq.apprix.fi/wp-content/uploads/2024/12/Bars-Survey-options-1.png" alt="" loading="lazy"></figure>
+<figure class="doc-image"><img src="/files/docs/2024/12/Bars-Survey-options-1.png" alt="" loading="lazy"></figure>
 
-<figure class="doc-image"><img src="https://faq.apprix.fi/wp-content/uploads/2024/12/Bars-Survey-Statistics-1.png" alt="" loading="lazy"></figure>
+<figure class="doc-image"><img src="/files/docs/2024/12/Bars-Survey-Statistics-1.png" alt="" loading="lazy"></figure>

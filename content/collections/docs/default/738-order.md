@@ -37,14 +37,14 @@ Lisää otsikko tarvittaessa.
 
 <h6 class="p1">Klikkaa kuvia suurentaaksesi niitä.</h6>
 
-<figure class="doc-image"><img src="https://faq.apprix.fi/wp-content/uploads/2022/04/Order-element-2.gif" alt="" loading="lazy"></figure>
+<figure class="doc-image"><img src="/files/docs/2022/04/Order-element-2.gif" alt="" loading="lazy"></figure>
 
-<figure class="doc-image"><img src="https://faq.apprix.fi/wp-content/uploads/2022/04/Order-image-fin-1-600x348.png" alt="" loading="lazy"></figure>
+<figure class="doc-image"><img src="/files/docs/2022/04/Order-image-fin-1-600x348.png" alt="" loading="lazy"></figure>
 
-<figure class="doc-image"><img src="https://faq.apprix.fi/wp-content/uploads/2022/04/Order-image-fin-2-600x338.png" alt="" loading="lazy"></figure>
+<figure class="doc-image"><img src="/files/docs/2022/04/Order-image-fin-2-600x338.png" alt="" loading="lazy"></figure>
 
-<figure class="doc-image"><img src="https://faq.apprix.fi/wp-content/uploads/2022/04/Order-image-fin-3.png" alt="" loading="lazy"></figure>
+<figure class="doc-image"><img src="/files/docs/2022/04/Order-image-fin-3.png" alt="" loading="lazy"></figure>
 
-<figure class="doc-image"><img src="https://faq.apprix.fi/wp-content/uploads/2022/04/Order-image-fin-4-600x545.png" alt="" loading="lazy"></figure>
+<figure class="doc-image"><img src="/files/docs/2022/04/Order-image-fin-4-600x545.png" alt="" loading="lazy"></figure>
 
-<figure class="doc-image"><img src="https://faq.apprix.fi/wp-content/uploads/2022/04/Order-image-fin-5-600x384.png" alt="" loading="lazy"></figure>
+<figure class="doc-image"><img src="/files/docs/2022/04/Order-image-fin-5-600x384.png" alt="" loading="lazy"></figure>

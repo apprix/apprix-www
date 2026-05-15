@@ -96,10 +96,10 @@ Klikkaa ” Add User...” -painiketta Administrate-näkymässä.</h6>
 <h6 class="p1">Palauta käyttäjän salasana klikkaamalla Reset Password -painiketta.</h6>
 <h6 class="p1">Deaktivoi ja poista käyttäjän oikeudet klikkaamalla Deactivate User -painiketta.</h6>
 
-<figure class="doc-image"><img src="https://faq.apprix.fi/wp-content/uploads/2025/03/2.2.2.-add-users-1.png" alt="" loading="lazy"></figure>
+<figure class="doc-image"><img src="/files/docs/2025/03/2.2.2.-add-users-1.png" alt="" loading="lazy"></figure>
 
-<figure class="doc-image"><img src="https://faq.apprix.fi/wp-content/uploads/2025/03/2.2.2.user-permission2-1.png" alt="" loading="lazy"></figure>
+<figure class="doc-image"><img src="/files/docs/2025/03/2.2.2.user-permission2-1.png" alt="" loading="lazy"></figure>
 
-<figure class="doc-image"><img src="https://faq.apprix.fi/wp-content/uploads/2025/03/2.2.2.-module-editing-permission-1.png" alt="" loading="lazy"></figure>
+<figure class="doc-image"><img src="/files/docs/2025/03/2.2.2.-module-editing-permission-1.png" alt="" loading="lazy"></figure>
 
-<figure class="doc-image"><img src="https://faq.apprix.fi/wp-content/uploads/2025/03/2.2.2.-reset-password2-1.png" alt="" loading="lazy"></figure>
+<figure class="doc-image"><img src="/files/docs/2025/03/2.2.2.-reset-password2-1.png" alt="" loading="lazy"></figure>

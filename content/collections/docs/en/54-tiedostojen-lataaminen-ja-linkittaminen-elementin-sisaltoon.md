@@ -13,8 +13,8 @@ You can upload a document (pdf, excel, word format etc.) to an element by follow
 
 <h6 class="p1"><b>Click on the images to enlarge them.</b></h6>
 
-<figure class="doc-image"><img src="https://faq.apprix.fi/wp-content/uploads/2020/09/Kuva1-1-1000x500.png" alt="" loading="lazy"></figure>
+<figure class="doc-image"><img src="/files/docs/2020/09/Kuva1-1-1000x500.png" alt="" loading="lazy"></figure>
 
-<figure class="doc-image"><img src="https://faq.apprix.fi/wp-content/uploads/2020/09/Kuva2_file-1-1000x227.jpg" alt="" loading="lazy"></figure>
+<figure class="doc-image"><img src="/files/docs/2020/09/Kuva2_file-1-1000x227.jpg" alt="" loading="lazy"></figure>
 
-<figure class="doc-image"><img src="https://faq.apprix.fi/wp-content/uploads/2020/09/Kuva3-1.png" alt="" loading="lazy"></figure>
+<figure class="doc-image"><img src="/files/docs/2020/09/Kuva3-1.png" alt="" loading="lazy"></figure>

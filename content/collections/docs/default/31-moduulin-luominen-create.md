@@ -7,4 +7,4 @@ title: '3.1 Moduulin luominen (Create)'
 
 <h6 class="p1">Miten luot uuden moduulin?</h6>
 
-<figure class="doc-image"><img src="https://faq.apprix.fi/wp-content/uploads/2021/08/Moduuli_luominen.gif" alt="" loading="lazy"></figure>
+<figure class="doc-image"><img src="/files/docs/2021/08/Moduuli_luominen.gif" alt="" loading="lazy"></figure>

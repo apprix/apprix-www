@@ -20,9 +20,9 @@ Tämä kirjautumistapa poistaa tarpeen muistaa salasanoja. Kurssin osallistuja s
  <li>Osallistuja liittää PIN-koodin <strong>tunnistautumisen ponnahdusikkunaan</strong>.</li>
  <li>Kurssi on valmis alkamaan.</li>
 </ul>
-<img class="aligncenter wp-image-6747 " src="https://faq.apprix.fi/wp-content/uploads/2025/12/Welcome-page-1.png" alt="" width="474" height="372" />
+<img class="aligncenter wp-image-6747 " src="/files/docs/2025/12/Welcome-page-1.png" alt="" width="474" height="372" />
 <p><strong>Huom! Käyttäjän sähköpostiosoitteen, etunimen ja sukunimen on oltava yksilöllisiä.</strong></p>
-<img class="aligncenter wp-image-6748 " src="https://faq.apprix.fi/wp-content/uploads/2025/12/pin-code-message-1.png" alt="" width="488" height="457" />
+<img class="aligncenter wp-image-6748 " src="/files/docs/2025/12/pin-code-message-1.png" alt="" width="488" height="457" />
 
 <strong>Tärkeät huomiot</strong>
 <ul>
@@ -32,5 +32,5 @@ Tämä kirjautumistapa poistaa tarpeen muistaa salasanoja. Kurssin osallistuja s
  <li>Menetelmä säilyttää kirjautumisen muissa <strong>OTP-</strong>moduuleissa saman istunnon aikana.</li>
  <li>Suositellaan erityisesti ulkopuolisille kurssin osallistujille ja suorittavan työn tekijöille.</li>
 </ul>
-<img class="aligncenter wp-image-6749 " src="https://faq.apprix.fi/wp-content/uploads/2025/12/Time-out-page-1.png" alt="" width="500" height="296" />
+<img class="aligncenter wp-image-6749 " src="/files/docs/2025/12/Time-out-page-1.png" alt="" width="500" height="296" />
 <p><strong>Huom! Kurssilaisen on suoritettava tunnistautuminen 10 minuutin sisällä.</strong></p>

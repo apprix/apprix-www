@@ -7,7 +7,7 @@ title: '7.29 Login'
 <p class="p2">Huomaathan, että suorittaja on tunnistettava, jotta hänestä voidaan kerätä yksilöitävää tilastotietoa. Tyypillisimmin tämä saavutetaan moduulikohtaisesti päälle kytkettävällä asetuksella, kuten <a href="#sso"><b>SSO:lla</b></a>. Jos Login-elementti on räätälöity vaatimaan yksilöllistä tunnistetta (esim. sähköpostiosoite, verotunnus), sitä mahdollisesti voidaan käyttää myös suorittajan tunnistamistarkoitukseen. Lisätietoa organisaationne räätälöidystä Login-elementistä voit saada tarkastelemalla elementtiä sen editointinäkymässä.</p>
 <strong>Vinkki:</strong> <strong>Form</strong>‑elementti on parannettu versio Login‑elementistä.
 Saat lisätietoa Form‑elementistä tästä linkistä:
-<a href="https://help.apprix.fi/#form-element">https://help.apprix.fi/#form-element</a>
+<a href="/help/754-form">7.54 Form</a>
 
 <h6 class="p1">Klikkaa kuvia suurentaaksesi niitä.</h6>
 
@@ -15,8 +15,8 @@ Saat lisätietoa Form‑elementistä tästä linkistä:
 
 <h5>Myös ryhmäkirjautumiselle on oma Login-elementtinsä.</h5>
 
-<figure class="doc-image"><img src="https://faq.apprix.fi/wp-content/uploads/2021/08/Login_FI.jpg" alt="" loading="lazy"></figure>
+<figure class="doc-image"><img src="/files/docs/2021/08/Login_FI.jpg" alt="" loading="lazy"></figure>
 
-<figure class="doc-image"><img src="https://faq.apprix.fi/wp-content/uploads/2021/08/Login_Edit_FI.gif" alt="" loading="lazy"></figure>
+<figure class="doc-image"><img src="/files/docs/2021/08/Login_Edit_FI.gif" alt="" loading="lazy"></figure>
 
-<figure class="doc-image"><img src="https://faq.apprix.fi/wp-content/uploads/2021/08/Group_Login_FI.jpg" alt="" loading="lazy"></figure>
+<figure class="doc-image"><img src="/files/docs/2021/08/Group_Login_FI.jpg" alt="" loading="lazy"></figure>

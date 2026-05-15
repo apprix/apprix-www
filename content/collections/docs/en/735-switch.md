@@ -24,12 +24,12 @@ title: '7.35 Switch'
 
 <h6 class="p1"><b>Click on the images to enlarge them.</b></h6>
 
-<figure class="doc-image"><img src="https://faq.apprix.fi/wp-content/uploads/2021/08/Switch_EN.gif" alt="" loading="lazy"></figure>
+<figure class="doc-image"><img src="/files/docs/2021/08/Switch_EN.gif" alt="" loading="lazy"></figure>
 
-<figure class="doc-image"><img src="https://faq.apprix.fi/wp-content/uploads/2021/08/Switch_Edit_EN.gif" alt="" loading="lazy"></figure>
+<figure class="doc-image"><img src="/files/docs/2021/08/Switch_Edit_EN.gif" alt="" loading="lazy"></figure>
 
-<figure class="doc-image"><img src="https://faq.apprix.fi/wp-content/uploads/2021/06/Switch1-1.png" alt="" loading="lazy"></figure>
+<figure class="doc-image"><img src="/files/docs/2021/06/Switch1-1.png" alt="" loading="lazy"></figure>
 
-<figure class="doc-image"><img src="https://faq.apprix.fi/wp-content/uploads/2021/06/Switch2-1.png" alt="" loading="lazy"></figure>
+<figure class="doc-image"><img src="/files/docs/2021/06/Switch2-1.png" alt="" loading="lazy"></figure>
 
-<figure class="doc-image"><img src="https://faq.apprix.fi/wp-content/uploads/2021/06/Switch3-1.png" alt="" loading="lazy"></figure>
+<figure class="doc-image"><img src="/files/docs/2021/06/Switch3-1.png" alt="" loading="lazy"></figure>

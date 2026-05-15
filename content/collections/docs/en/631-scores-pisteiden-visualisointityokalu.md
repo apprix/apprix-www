@@ -27,4 +27,4 @@ The module’s general information shows the number of participants who complete
 
 <h6><em>Scores tool's view</em></h6>
 
-<figure class="doc-image"><img src="https://faq.apprix.fi/wp-content/uploads/2023/03/21-nuovo.png" alt="" loading="lazy"></figure>
+<figure class="doc-image"><img src="/files/docs/2023/03/21-nuovo.png" alt="" loading="lazy"></figure>

@@ -19,6 +19,6 @@ For further information about this element, please <a href="https://drive.google
 
 <h6>How does the feature "Choose if another course has to be completed before this course" work in the Dynamic Landing Page element?</h6>
 
-<figure class="doc-image"><img src="https://faq.apprix.fi/wp-content/uploads/2025/05/DLP-button-settings-01052025.png" alt="" loading="lazy"></figure>
+<figure class="doc-image"><img src="/files/docs/2025/05/DLP-button-settings-01052025.png" alt="" loading="lazy"></figure>
 
-<figure class="doc-image"><img src="https://faq.apprix.fi/wp-content/uploads/2025/05/DLP-Preview-0105-1.gif" alt="" loading="lazy"></figure>
+<figure class="doc-image"><img src="/files/docs/2025/05/DLP-Preview-0105-1.gif" alt="" loading="lazy"></figure>

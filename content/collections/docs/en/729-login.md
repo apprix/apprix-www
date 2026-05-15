@@ -9,7 +9,7 @@ Please note that the trainees need to be identified so that a Builder module is 
 
 <strong>Tip</strong>: The <strong>Form</strong> element offers an improved version of the Login element.
 You can find more details at the link below:
-<a href="https://faq.apprix.fi/builder-help-en/#form-element">https://faq.apprix.fi/builder-help-en/#form-element</a>
+<a href="/help/754-form">7.54 Form</a>
 
 <h6 class="p1"><b>Click on the images to enlarge them.</b></h6>
 
@@ -17,8 +17,8 @@ You can find more details at the link below:
 
 <h5 class="p1">Group Login element (Login 2)</h5>
 
-<figure class="doc-image"><img src="https://faq.apprix.fi/wp-content/uploads/2021/09/Login_EN.jpg" alt="" loading="lazy"></figure>
+<figure class="doc-image"><img src="/files/docs/2021/09/Login_EN.jpg" alt="" loading="lazy"></figure>
 
-<figure class="doc-image"><img src="https://faq.apprix.fi/wp-content/uploads/2021/09/Login_Edit_EN.gif" alt="" loading="lazy"></figure>
+<figure class="doc-image"><img src="/files/docs/2021/09/Login_Edit_EN.gif" alt="" loading="lazy"></figure>
 
-<figure class="doc-image"><img src="https://faq.apprix.fi/wp-content/uploads/2021/09/Group_Login_EN.jpg" alt="" loading="lazy"></figure>
+<figure class="doc-image"><img src="/files/docs/2021/09/Group_Login_EN.jpg" alt="" loading="lazy"></figure>

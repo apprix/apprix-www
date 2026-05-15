@@ -33,12 +33,12 @@ Fasilitaattori voi elementin asetuksissa määrittää, näytetäänkö suoritta
 
 <h6>Bars Survey - Muiden osallistujien vastausten keskiarvo</h6>
 
-<figure class="doc-image"><img src="https://faq.apprix.fi/wp-content/uploads/2021/08/Bars_Slider_Single_FI_.gif" alt="" loading="lazy"></figure>
+<figure class="doc-image"><img src="/files/docs/2021/08/Bars_Slider_Single_FI_.gif" alt="" loading="lazy"></figure>
 
-<figure class="doc-image"><img src="https://faq.apprix.fi/wp-content/uploads/2021/08/Bars_Slider_Single_Edit_FI_.gif" alt="" loading="lazy"></figure>
+<figure class="doc-image"><img src="/files/docs/2021/08/Bars_Slider_Single_Edit_FI_.gif" alt="" loading="lazy"></figure>
 
-<figure class="doc-image"><img src="https://faq.apprix.fi/wp-content/uploads/2022/04/7.16-1-1-600x324.png" alt="" loading="lazy"></figure>
+<figure class="doc-image"><img src="/files/docs/2022/04/7.16-1-1-600x324.png" alt="" loading="lazy"></figure>
 
-<figure class="doc-image"><img src="https://faq.apprix.fi/wp-content/uploads/2024/12/Bars-Survey-options.png" alt="" loading="lazy"></figure>
+<figure class="doc-image"><img src="/files/docs/2024/12/Bars-Survey-options.png" alt="" loading="lazy"></figure>
 
-<figure class="doc-image"><img src="https://faq.apprix.fi/wp-content/uploads/2024/12/Bars-Survey-Statistics.png" alt="" loading="lazy"></figure>
+<figure class="doc-image"><img src="/files/docs/2024/12/Bars-Survey-Statistics.png" alt="" loading="lazy"></figure>

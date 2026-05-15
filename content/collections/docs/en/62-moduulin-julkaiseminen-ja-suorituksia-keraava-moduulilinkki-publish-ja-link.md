@@ -31,8 +31,8 @@ From this link menu, you can copy the link and QR code of the module, and downlo
 
 <h6 class="p1"><b> What is the difference between the published and preview link?</b></h6>
 
-<figure class="doc-image"><img src="https://faq.apprix.fi/wp-content/uploads/2025/06/Publish-link-1.gif" alt="" loading="lazy"></figure>
+<figure class="doc-image"><img src="/files/docs/2025/06/Publish-link-1.gif" alt="" loading="lazy"></figure>
 
-<figure class="doc-image"><img src="https://faq.apprix.fi/wp-content/uploads/2025/06/Published-link-all-modules.gif" alt="" loading="lazy"></figure>
+<figure class="doc-image"><img src="/files/docs/2025/06/Published-link-all-modules.gif" alt="" loading="lazy"></figure>
 
-<figure class="doc-image"><img src="https://faq.apprix.fi/wp-content/uploads/2025/06/Publish-preview.gif" alt="" loading="lazy"></figure>
+<figure class="doc-image"><img src="/files/docs/2025/06/Publish-preview.gif" alt="" loading="lazy"></figure>

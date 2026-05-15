@@ -9,8 +9,8 @@ title: '1 Builder-sanastoa'
 
 Pitkistä koulutusmoduuleista voi muodostaa helpommin hahmotettavia <strong>submoduuli</strong>rakenteita. Tällöin moduulirakenne jakautuu niin sanottuun päämoduuliin ja siitä haarautuviin submoduuleihin, jotka ovat käytännössä kurssin osioita tai aihealueita.
 
-<figure class="doc-image"><img src="https://faq.apprix.fi/wp-content/uploads/2020/05/elements_group-1-400x168.jpg" alt="" loading="lazy"></figure>
+<figure class="doc-image"><img src="/files/docs/2020/05/elements_group-1-400x168.jpg" alt="" loading="lazy"></figure>
 
-<figure class="doc-image"><img src="https://faq.apprix.fi/wp-content/uploads/2020/02/moduuli_rakenne-1-600x48.jpg" alt="" loading="lazy"></figure>
+<figure class="doc-image"><img src="/files/docs/2020/02/moduuli_rakenne-1-600x48.jpg" alt="" loading="lazy"></figure>
 
-<figure class="doc-image"><img src="https://faq.apprix.fi/wp-content/uploads/2020/02/esimerkkikoulutus_moduulinakyma_1-1-600x273.jpg" alt="" loading="lazy"></figure>
+<figure class="doc-image"><img src="/files/docs/2020/02/esimerkkikoulutus_moduulinakyma_1-1-600x273.jpg" alt="" loading="lazy"></figure>

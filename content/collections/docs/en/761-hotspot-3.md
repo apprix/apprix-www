@@ -34,6 +34,6 @@ The <strong>Settings</strong> window opens. In this window, you can select the f
 
 <h5 class="p1">Settings window</h5>
 
-<figure class="doc-image"><img src="https://faq.apprix.fi/wp-content/uploads/2022/08/HotSpot3-colour-1.gif" alt="" loading="lazy"></figure>
+<figure class="doc-image"><img src="/files/docs/2022/08/HotSpot3-colour-1.gif" alt="" loading="lazy"></figure>
 
-<figure class="doc-image"><img src="https://faq.apprix.fi/wp-content/uploads/2024/06/hotspot3-1.png" alt="" loading="lazy"></figure>
+<figure class="doc-image"><img src="/files/docs/2024/06/hotspot3-1.png" alt="" loading="lazy"></figure>

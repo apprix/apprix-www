@@ -46,8 +46,16 @@ Tämän jälkeen esikatselu ei vaadi muuta tunnistautumista.
 
 <h6 class="p1">Kuinka tallennat ja jaat esikatselulinkin?</h6>
 
-<figure class="doc-image"><img src="https://faq.apprix.fi/wp-content/uploads/2025/06/Preview-module-feature.gif" alt="" loading="lazy"></figure>
+<figure class="doc-image"><img src="/files/docs/2025/06/Preview-module-feature.gif" alt="" loading="lazy"></figure>
 
-<figure class="doc-image"><img src="https://faq.apprix.fi/wp-content/uploads/2025/06/Preview-element-in-new-tab.gif" alt="" loading="lazy"></figure>
+<figure class="doc-image"><img src="/files/docs/2025/06/Preview-element-in-new-tab.gif" alt="" loading="lazy"></figure>
 
-<figure class="doc-image"><img src="https://faq.apprix.fi/wp-content/uploads/2024/07/Preview-share-link.gif" alt="" loading="lazy"></figure>
+<figure class="doc-image"><img src="/files/docs/2024/07/Preview-share-link.gif" alt="" loading="lazy"></figure>
+
+<video controls preload="metadata" style="width:100%;border-radius:0.75rem;box-shadow:0 1px 2px 0 rgba(0,0,0,.08);margin-top:1rem">
+    <source src="/files/docs/2023/01/Draft-link-and-preview-NEW-6-opt.mp4" type="video/mp4">
+</video>
+
+<video controls preload="metadata" style="width:100%;border-radius:0.75rem;box-shadow:0 1px 2px 0 rgba(0,0,0,.08);margin-top:1rem">
+    <source src="/files/docs/2023/01/Audit-7-opt.mp4" type="video/mp4">
+</video>

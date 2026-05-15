@@ -27,8 +27,8 @@ Tästä linkkivalikosta voit kopioida moduulin linkin ja QR-koodin, ladata QR-ko
 
 <h6 class="p1">Mikä on ero julkaistun ja esikatselulinkin välillä?</h6>
 
-<figure class="doc-image"><img src="https://faq.apprix.fi/wp-content/uploads/2024/07/Publish-link.gif" alt="" loading="lazy"></figure>
+<figure class="doc-image"><img src="/files/docs/2024/07/Publish-link.gif" alt="" loading="lazy"></figure>
 
-<figure class="doc-image"><img src="https://faq.apprix.fi/wp-content/uploads/2024/07/Published-link-all-modules.gif" alt="" loading="lazy"></figure>
+<figure class="doc-image"><img src="/files/docs/2024/07/Published-link-all-modules.gif" alt="" loading="lazy"></figure>
 
-<figure class="doc-image"><img src="https://faq.apprix.fi/wp-content/uploads/2025/06/Publish-preview-1.gif" alt="" loading="lazy"></figure>
+<figure class="doc-image"><img src="/files/docs/2025/06/Publish-preview-1.gif" alt="" loading="lazy"></figure>

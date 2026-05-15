@@ -60,8 +60,8 @@ Prosentin laskemisessa tarkastellaan kolmea asiaa:
 
 <h6 class="p1">Elementin asetukset muokkaustilassa</h6>
 
-<figure class="doc-image"><img src="https://faq.apprix.fi/wp-content/uploads/2024/12/Phrases-element-demo.gif" alt="" loading="lazy"></figure>
+<figure class="doc-image"><img src="/files/docs/2024/12/Phrases-element-demo.gif" alt="" loading="lazy"></figure>
 
-<figure class="doc-image"><img src="https://faq.apprix.fi/wp-content/uploads/2024/12/Phrases-element-settings-image.png" alt="" loading="lazy"></figure>
+<figure class="doc-image"><img src="/files/docs/2024/12/Phrases-element-settings-image.png" alt="" loading="lazy"></figure>
 
-<figure class="doc-image"><img src="https://faq.apprix.fi/wp-content/uploads/2024/12/Phrase-asetukset.png" alt="" loading="lazy"></figure>
+<figure class="doc-image"><img src="/files/docs/2024/12/Phrase-asetukset.png" alt="" loading="lazy"></figure>

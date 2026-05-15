@@ -11,4 +11,4 @@ title: '2.1 Sisäänkirjautuminen'
 
 <h6 class="p1">Sisäänkirjautuminen - Builder Login</h6>
 
-<figure class="doc-image"><img src="https://faq.apprix.fi/wp-content/uploads/2025/11/2.1-Builder-login.png" alt="" loading="lazy"></figure>
+<figure class="doc-image"><img src="/files/docs/2025/11/2.1-Builder-login.png" alt="" loading="lazy"></figure>

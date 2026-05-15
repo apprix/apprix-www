@@ -13,4 +13,4 @@ Voit ladata dokumentin ja likinttää sen elementin tekstiin (esim. pdf, excel, 
 
 <h6 class="p1">Miten lataat ja linkität tiedostoja elementin sisältöön?</h6>
 
-<figure class="doc-image"><img src="https://faq.apprix.fi/wp-content/uploads/2024/07/Uploading-files-and-linking.gif" alt="" loading="lazy"></figure>
+<figure class="doc-image"><img src="/files/docs/2024/07/Uploading-files-and-linking.gif" alt="" loading="lazy"></figure>

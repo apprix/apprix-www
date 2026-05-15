@@ -75,18 +75,18 @@ Huom! Your points/Pisteesi -kohtaa ei pysty muokkaamaan, sillä suorittajan pist
 
 <h5>Pass/Fail Always -elementti: Suorittaja ei läpäissyt testiä / Suorittaja läpäisi testin</h5>
 
-<figure class="doc-image"><img src="https://faq.apprix.fi/wp-content/uploads/2021/09/PassFail_1_FI.jpg" alt="" loading="lazy"></figure>
+<figure class="doc-image"><img src="/files/docs/2021/09/PassFail_1_FI.jpg" alt="" loading="lazy"></figure>
 
-<figure class="doc-image"><img src="https://faq.apprix.fi/wp-content/uploads/2021/09/PassFail_2_FI.jpg" alt="" loading="lazy"></figure>
+<figure class="doc-image"><img src="/files/docs/2021/09/PassFail_2_FI.jpg" alt="" loading="lazy"></figure>
 
-<figure class="doc-image"><img src="https://faq.apprix.fi/wp-content/uploads/2021/09/PassFail_Edit_FI.gif" alt="" loading="lazy"></figure>
+<figure class="doc-image"><img src="/files/docs/2021/09/PassFail_Edit_FI.gif" alt="" loading="lazy"></figure>
 
-<figure class="doc-image"><img src="https://faq.apprix.fi/wp-content/uploads/2020/09/passfail1-1.png" alt="" loading="lazy"></figure>
+<figure class="doc-image"><img src="/files/docs/2020/09/passfail1-1.png" alt="" loading="lazy"></figure>
 
-<figure class="doc-image"><img src="https://faq.apprix.fi/wp-content/uploads/2020/09/test-1.jpg" alt="" loading="lazy"></figure>
+<figure class="doc-image"><img src="/files/docs/2020/09/test-1.jpg" alt="" loading="lazy"></figure>
 
-<figure class="doc-image"><img src="https://faq.apprix.fi/wp-content/uploads/2020/09/passfail2-1.png" alt="" loading="lazy"></figure>
+<figure class="doc-image"><img src="/files/docs/2020/09/passfail2-1.png" alt="" loading="lazy"></figure>
 
-<figure class="doc-image"><img src="https://faq.apprix.fi/wp-content/uploads/2020/09/passfail3-1.png" alt="" loading="lazy"></figure>
+<figure class="doc-image"><img src="/files/docs/2020/09/passfail3-1.png" alt="" loading="lazy"></figure>
 
-<figure class="doc-image"><img src="https://faq.apprix.fi/wp-content/uploads/2021/10/PassFail_Always-1.png" alt="" loading="lazy"></figure>
+<figure class="doc-image"><img src="/files/docs/2021/10/PassFail_Always-1.png" alt="" loading="lazy"></figure>

@@ -99,14 +99,14 @@ Once you have created the main module and submodules, you can link the submodule
 
 <h6 class="p1">A green ball appears next to the published submodules in the submodule list.</h6>
 
-<figure class="doc-image"><img src="https://faq.apprix.fi/wp-content/uploads/2020/09/Example_Training-1000x453.png" alt="" loading="lazy"></figure>
+<figure class="doc-image"><img src="/files/docs/2020/09/Example_Training-1000x453.png" alt="" loading="lazy"></figure>
 
-<figure class="doc-image"><img src="https://faq.apprix.fi/wp-content/uploads/2020/09/Submenu_1-1000x628.png" alt="" loading="lazy"></figure>
+<figure class="doc-image"><img src="/files/docs/2020/09/Submenu_1-1000x628.png" alt="" loading="lazy"></figure>
 
-<figure class="doc-image"><img src="https://faq.apprix.fi/wp-content/uploads/2024/07/Main-module-submodule-1-2.gif" alt="" loading="lazy"></figure>
+<figure class="doc-image"><img src="/files/docs/2024/07/Main-module-submodule-1-2.gif" alt="" loading="lazy"></figure>
 
-<figure class="doc-image"><img src="https://faq.apprix.fi/wp-content/uploads/2024/07/Main-module-submodule-2-1.gif" alt="" loading="lazy"></figure>
+<figure class="doc-image"><img src="/files/docs/2024/07/Main-module-submodule-2-1.gif" alt="" loading="lazy"></figure>
 
-<figure class="doc-image"><img src="https://faq.apprix.fi/wp-content/uploads/2024/07/Main-module-submodule-3-2.gif" alt="" loading="lazy"></figure>
+<figure class="doc-image"><img src="/files/docs/2024/07/Main-module-submodule-3-2.gif" alt="" loading="lazy"></figure>
 
-<figure class="doc-image"><img src="https://faq.apprix.fi/wp-content/uploads/2024/07/published-submodules-green-balls-1.png" alt="" loading="lazy"></figure>
+<figure class="doc-image"><img src="/files/docs/2024/07/published-submodules-green-balls-1.png" alt="" loading="lazy"></figure>

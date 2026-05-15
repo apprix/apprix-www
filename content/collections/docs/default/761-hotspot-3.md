@@ -34,8 +34,8 @@ Settings-ikkuna avautuu. Tässä ikkunassa voit valita seuraavat vaihtoehdot:
 
 <h6>Muistathan, että olet esikatselutilassa, kun punainen esikatselupalkki näkyy ikkunan alareunassa!</h6>
 
-<figure class="doc-image"><img src="https://faq.apprix.fi/wp-content/uploads/2022/08/HotSpot3-colour.gif" alt="" loading="lazy"></figure>
+<figure class="doc-image"><img src="/files/docs/2022/08/HotSpot3-colour.gif" alt="" loading="lazy"></figure>
 
-<figure class="doc-image"><img src="https://faq.apprix.fi/wp-content/uploads/2024/06/hotspot3.png" alt="" loading="lazy"></figure>
+<figure class="doc-image"><img src="/files/docs/2024/06/hotspot3.png" alt="" loading="lazy"></figure>
 
-<figure class="doc-image"><img src="https://faq.apprix.fi/wp-content/uploads/2024/08/Hotspot3-truefalse-opt2-1.gif" alt="" loading="lazy"></figure>
+<figure class="doc-image"><img src="/files/docs/2024/08/Hotspot3-truefalse-opt2-1.gif" alt="" loading="lazy"></figure>

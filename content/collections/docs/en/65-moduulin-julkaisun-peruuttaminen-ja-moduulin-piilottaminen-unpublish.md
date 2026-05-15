@@ -9,4 +9,4 @@ In case you decide to unpublish a module, please remember that the module will n
 
 <h6 class="p1"><b>Click on the video to enlarge it.</b></h6>
 
-<figure class="doc-image"><img src="https://faq.apprix.fi/wp-content/uploads/2024/05/Unpublish-module.gif" alt="" loading="lazy"></figure>
+<figure class="doc-image"><img src="/files/docs/2024/05/Unpublish-module.gif" alt="" loading="lazy"></figure>

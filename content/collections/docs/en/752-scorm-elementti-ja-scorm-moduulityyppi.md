@@ -44,8 +44,8 @@ Requests made to Apprix domain use the HTTPS protocol to fetch and send data sec
 
 For further information about the SCORM, please check the Builder's FAQ.
 
-<strong>Zip/ SCORM files:</strong> https://faq.apprix.fi/en/
+<strong>Zip/ SCORM files:</strong> <a href="/faq">/faq</a>
 
 <h6 class="p1">How do you create a module with the SCORM module type?</h6>
 
-<figure class="doc-image"><img src="https://faq.apprix.fi/wp-content/uploads/2025/04/SCORM-module-creation2-1.gif" alt="" loading="lazy"></figure>
+<figure class="doc-image"><img src="/files/docs/2025/04/SCORM-module-creation2-1.gif" alt="" loading="lazy"></figure>

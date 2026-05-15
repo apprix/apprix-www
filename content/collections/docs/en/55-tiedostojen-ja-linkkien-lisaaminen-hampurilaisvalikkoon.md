@@ -43,18 +43,18 @@ If needed, you can also remove a file/ link from the <b>Media Library</b>, by se
 
 <h6 class="p1"><b>Click on the images to enlarge them.</b></h6>
 
-<figure class="doc-image"><img src="https://faq.apprix.fi/wp-content/uploads/2020/11/hamburger1-3-1000x353.png" alt="" loading="lazy"></figure>
+<figure class="doc-image"><img src="/files/docs/2020/11/hamburger1-3-1000x353.png" alt="" loading="lazy"></figure>
 
-<figure class="doc-image"><img src="https://faq.apprix.fi/wp-content/uploads/2020/11/hamburger2-2.png" alt="" loading="lazy"></figure>
+<figure class="doc-image"><img src="/files/docs/2020/11/hamburger2-2.png" alt="" loading="lazy"></figure>
 
-<figure class="doc-image"><img src="https://faq.apprix.fi/wp-content/uploads/2020/11/hamburger3-2.png" alt="" loading="lazy"></figure>
+<figure class="doc-image"><img src="/files/docs/2020/11/hamburger3-2.png" alt="" loading="lazy"></figure>
 
-<figure class="doc-image"><img src="https://faq.apprix.fi/wp-content/uploads/2020/11/Hamburger4-3-1000x803.png" alt="" loading="lazy"></figure>
+<figure class="doc-image"><img src="/files/docs/2020/11/Hamburger4-3-1000x803.png" alt="" loading="lazy"></figure>
 
-<figure class="doc-image"><img src="https://faq.apprix.fi/wp-content/uploads/2020/11/hamburger5-2.png" alt="" loading="lazy"></figure>
+<figure class="doc-image"><img src="/files/docs/2020/11/hamburger5-2.png" alt="" loading="lazy"></figure>
 
-<figure class="doc-image"><img src="https://faq.apprix.fi/wp-content/uploads/2020/11/hamburger6-2-1000x589.png" alt="" loading="lazy"></figure>
+<figure class="doc-image"><img src="/files/docs/2020/11/hamburger6-2-1000x589.png" alt="" loading="lazy"></figure>
 
-<figure class="doc-image"><img src="https://faq.apprix.fi/wp-content/uploads/2020/11/hamburger7-2.png" alt="" loading="lazy"></figure>
+<figure class="doc-image"><img src="/files/docs/2020/11/hamburger7-2.png" alt="" loading="lazy"></figure>
 
-<figure class="doc-image"><img src="https://faq.apprix.fi/wp-content/uploads/2020/11/hamburger8-2.png" alt="" loading="lazy"></figure>
+<figure class="doc-image"><img src="/files/docs/2020/11/hamburger8-2.png" alt="" loading="lazy"></figure>

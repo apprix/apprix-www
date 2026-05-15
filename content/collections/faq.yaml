@@ -1,7 +1,6 @@
 title: FAQ
 sites:
   - default
-  - en
 template: false
 layout: false
 route: false

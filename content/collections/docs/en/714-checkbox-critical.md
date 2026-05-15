@@ -21,8 +21,8 @@ This is an upgraded version of the Checkbox element. In this element you can cho
 
 <h6 class="p1"><b>Element in edit mode</b></h6>
 
-<figure class="doc-image"><img src="https://faq.apprix.fi/wp-content/uploads/2024/06/Checkboxcritical-preview-1.gif" alt="" loading="lazy"></figure>
+<figure class="doc-image"><img src="/files/docs/2024/06/Checkboxcritical-preview-1.gif" alt="" loading="lazy"></figure>
 
-<figure class="doc-image"><img src="https://faq.apprix.fi/wp-content/uploads/2024/06/Checkboxcritical-edit1a-1.gif" alt="" loading="lazy"></figure>
+<figure class="doc-image"><img src="/files/docs/2024/06/Checkboxcritical-edit1a-1.gif" alt="" loading="lazy"></figure>
 
-<figure class="doc-image"><img src="https://faq.apprix.fi/wp-content/uploads/2024/06/Checkboxcritical-edit1-1.gif" alt="" loading="lazy"></figure>
+<figure class="doc-image"><img src="/files/docs/2024/06/Checkboxcritical-edit1-1.gif" alt="" loading="lazy"></figure>

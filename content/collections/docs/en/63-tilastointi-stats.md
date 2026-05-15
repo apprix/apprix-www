@@ -53,14 +53,14 @@ Note! The data are collected separately for each module and submodule. 
 
 <h6><em>Feedback element, the statistics of which you may view from the Feedback tab.</em></h6>
 
-<figure class="doc-image"><img src="https://faq.apprix.fi/wp-content/uploads/2024/05/All-modules-stats-1.png" alt="" loading="lazy"></figure>
+<figure class="doc-image"><img src="/files/docs/2024/05/All-modules-stats-1.png" alt="" loading="lazy"></figure>
 
-<figure class="doc-image"><img src="https://faq.apprix.fi/wp-content/uploads/2024/05/Edit-module-stats-1.png" alt="" loading="lazy"></figure>
+<figure class="doc-image"><img src="/files/docs/2024/05/Edit-module-stats-1.png" alt="" loading="lazy"></figure>
 
-<figure class="doc-image"><img src="https://faq.apprix.fi/wp-content/uploads/2021/02/Stats-1-1000x530.png" alt="" loading="lazy"></figure>
+<figure class="doc-image"><img src="/files/docs/2021/02/Stats-1-1000x530.png" alt="" loading="lazy"></figure>
 
-<figure class="doc-image"><img src="https://faq.apprix.fi/wp-content/uploads/2021/02/Stats1-1-1000x425.png" alt="" loading="lazy"></figure>
+<figure class="doc-image"><img src="/files/docs/2021/02/Stats1-1-1000x425.png" alt="" loading="lazy"></figure>
 
-<figure class="doc-image"><img src="https://faq.apprix.fi/wp-content/uploads/2021/02/Stats2-1-1000x328.png" alt="" loading="lazy"></figure>
+<figure class="doc-image"><img src="/files/docs/2021/02/Stats2-1-1000x328.png" alt="" loading="lazy"></figure>
 
-<figure class="doc-image"><img src="https://faq.apprix.fi/wp-content/uploads/2021/02/Stats3-1-1000x543.png" alt="" loading="lazy"></figure>
+<figure class="doc-image"><img src="/files/docs/2021/02/Stats3-1-1000x543.png" alt="" loading="lazy"></figure>

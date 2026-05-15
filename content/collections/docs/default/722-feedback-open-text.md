@@ -15,6 +15,6 @@ title: '7.22 Feedback Open Text'
 
 <h5 class="p1">Elementin asetukset editointinäkymässä:</h5>
 
-<figure class="doc-image"><img src="https://faq.apprix.fi/wp-content/uploads/2021/08/Feedback_Open_Text_FI-1.png" alt="" loading="lazy"></figure>
+<figure class="doc-image"><img src="/files/docs/2021/08/Feedback_Open_Text_FI-1.png" alt="" loading="lazy"></figure>
 
-<figure class="doc-image"><img src="https://faq.apprix.fi/wp-content/uploads/2021/08/Feedback_Open_Text_Edit_FI-2.gif" alt="" loading="lazy"></figure>
+<figure class="doc-image"><img src="/files/docs/2021/08/Feedback_Open_Text_Edit_FI-2.gif" alt="" loading="lazy"></figure>

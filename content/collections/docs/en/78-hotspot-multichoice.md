@@ -38,12 +38,12 @@ If an explanation has been added, the trainee may receive a summary box at the e
 
 <h5 class="p1">Element settings in Edit Element Contents view:</h5>
 
-<figure class="doc-image"><img src="https://faq.apprix.fi/wp-content/uploads/2021/09/Hotspot_Multichoice_EN.gif" alt="" loading="lazy"></figure>
+<figure class="doc-image"><img src="/files/docs/2021/09/Hotspot_Multichoice_EN.gif" alt="" loading="lazy"></figure>
 
-<figure class="doc-image"><img src="https://faq.apprix.fi/wp-content/uploads/2021/09/Hotspot_Multichoice_Edit_1_EN_-3.gif" alt="" loading="lazy"></figure>
+<figure class="doc-image"><img src="/files/docs/2021/09/Hotspot_Multichoice_Edit_1_EN_-3.gif" alt="" loading="lazy"></figure>
 
-<figure class="doc-image"><img src="https://faq.apprix.fi/wp-content/uploads/2021/09/Hotspot_Multichoice_Edit_2_EN.gif" alt="" loading="lazy"></figure>
+<figure class="doc-image"><img src="/files/docs/2021/09/Hotspot_Multichoice_Edit_2_EN.gif" alt="" loading="lazy"></figure>
 
-<figure class="doc-image"><img src="https://faq.apprix.fi/wp-content/uploads/2021/05/HS_multoichoice1.png" alt="" loading="lazy"></figure>
+<figure class="doc-image"><img src="/files/docs/2021/05/HS_multoichoice1.png" alt="" loading="lazy"></figure>
 
-<figure class="doc-image"><img src="https://faq.apprix.fi/wp-content/uploads/2021/05/HS_multichoice2.png" alt="" loading="lazy"></figure>
+<figure class="doc-image"><img src="/files/docs/2021/05/HS_multichoice2.png" alt="" loading="lazy"></figure>

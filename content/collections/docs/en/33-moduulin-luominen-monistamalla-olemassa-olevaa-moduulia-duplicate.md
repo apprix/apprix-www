@@ -11,4 +11,4 @@ Remember to rename your duplicated module.
 
 <h6 class="p1"><b>Click on the images to enlarge them.</b></h6>
 
-<figure class="doc-image"><img src="https://faq.apprix.fi/wp-content/uploads/2020/04/Duplicate_module.jpg" alt="" loading="lazy"></figure>
+<figure class="doc-image"><img src="/files/docs/2020/04/Duplicate_module.jpg" alt="" loading="lazy"></figure>

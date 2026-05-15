@@ -18,7 +18,7 @@ title: '6.8 Grouping Modules and Facilitating Module Search with Tags (Edit Tags
  <li>Deselect the selected tag by clicking on<strong> the cross icon (X) </strong>on the right side of the search bar.</li>
 </ul>
 </li>
- <li>If you wish to remove a selected tag from the module you are currently editing, click on <strong>the cross icon (X)</strong> on the right side of the name of a selected tag. <img class="alignnone wp-image-3263" src="https://faq.apprix.fi/wp-content/uploads/2021/01/example-tag.png" alt="" width="113" height="30" /></li>
+ <li>If you wish to remove a selected tag from the module you are currently editing, click on <strong>the cross icon (X)</strong> on the right side of the name of a selected tag. <img class="alignnone wp-image-3263" src="/files/docs/2021/01/example-tag.png" alt="" width="113" height="30" /></li>
  <li>If you wish to permanently remove an existing tag, click <strong>REMOVE TAG </strong>and choose the tag from the list in the <strong>Select tag to remove </strong>window<strong>. </strong>Click <strong>SAVE</strong>.
 <ul>
  <li>Please note that you can remove a tag only if you have editing access to every module that uses that specific tag.</li>
@@ -28,8 +28,8 @@ title: '6.8 Grouping Modules and Facilitating Module Search with Tags (Edit Tags
 
 <h6 class="p1"><b>Click on the images to enlarge them.</b></h6>
 
-<figure class="doc-image"><img src="https://faq.apprix.fi/wp-content/uploads/2022/03/R_Edit_tags-1.jpg" alt="" loading="lazy"></figure>
+<figure class="doc-image"><img src="/files/docs/2022/03/R_Edit_tags-1.jpg" alt="" loading="lazy"></figure>
 
-<figure class="doc-image"><img src="https://faq.apprix.fi/wp-content/uploads/2024/05/Edit-tag.jpg" alt="" loading="lazy"></figure>
+<figure class="doc-image"><img src="/files/docs/2024/05/Edit-tag.jpg" alt="" loading="lazy"></figure>
 
-<figure class="doc-image"><img src="https://faq.apprix.fi/wp-content/uploads/2021/01/Select_tags_to_remove.png" alt="" loading="lazy"></figure>
+<figure class="doc-image"><img src="/files/docs/2021/01/Select_tags_to_remove.png" alt="" loading="lazy"></figure>

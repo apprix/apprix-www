@@ -34,6 +34,6 @@ The sum of the text boxes is shown at the bottom right, and the topic title is a
 
 <h6 class="p1"><b>Click on the images to enlarge them.</b></h6>
 
-<figure class="doc-image"><img src="https://faq.apprix.fi/wp-content/uploads/2023/07/Pictures-and-captions-preview-video-2.gif" alt="" loading="lazy"></figure>
+<figure class="doc-image"><img src="/files/docs/2023/07/Pictures-and-captions-preview-video-2.gif" alt="" loading="lazy"></figure>
 
-<figure class="doc-image"><img src="https://faq.apprix.fi/wp-content/uploads/2023/07/Pictures-and-captions-element-editing-video-2.gif" alt="" loading="lazy"></figure>
+<figure class="doc-image"><img src="/files/docs/2023/07/Pictures-and-captions-element-editing-video-2.gif" alt="" loading="lazy"></figure>
