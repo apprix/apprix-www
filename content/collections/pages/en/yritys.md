@@ -34,7 +34,7 @@ page_builder:
         label: 'completions per year'
         type: stat
         enabled: true
-    trust_line: 'Trusted by Finavia, DHL, Stora Enso, St1, Vantaan Energia, and Matkahuolto.'
+    trust_line: 'Trusted by Finavia, DHL, Atria, Loimua, Gasum and Matkahuolto.'
     scroll_label: 'Meet the team'
   -
     id: mkxyqpta

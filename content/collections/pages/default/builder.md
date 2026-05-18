@@ -61,7 +61,7 @@ page_builder:
           - 'Valmiit elementit, mediakirjastot ja yritysilmeen mukaiset sivupohjat'
           - 'Rakenna koulutuksia nopeasti ilman teknistä osaamista'
           - 'Generatiivinen tekoäly sisällöntuotannon tukena'
-          - 'Checklist Engine tehostaa koulutusprosesseja'
+          - 'Kätevät preview-näkymät ja ryhmätyökalut sisällön tarkistukseen ennen julkaisua'
         type: feature
         enabled: true
       -
@@ -75,6 +75,7 @@ page_builder:
           - 'Työturvallisuus- ja ympäristökoulutukset'
           - 'Compliance- ja vastuullisuuskoulutukset (GDPR, ESG, DEI)'
           - 'Skaalautuu organisaation laajuisiin tarpeisiin'
+          - 'Toimii sekä sisäisille että ulkoisille kohderyhmille'
         type: feature
         enabled: true
       -
@@ -84,7 +85,7 @@ page_builder:
         title: 'Liitä saumattomasti omaan toimintaympäristöösi'
         text: 'Builder integroituu turvallisesti yrityksesi omiin järjestelmiin ja tukee useita käteviä kirjautumistapoja.'
         bullets:
-          - 'HR- ja kulunvalvontajärjestelmät (Mepco, SuccessFactors, Once by Pinja)'
+          - 'HR- ja kulunvalvontajärjestelmät (mm. Mepco, Sympa, SuccessFactors, Workday, Megaflex, Zeroni, Once by Pinja…)'
           - 'SSO-kertakirjautuminen ja sähköpostitunnistautuminen'
           - 'Kertakäyttöinen pin-koodi ja veronumerotarkistus'
           - 'Valttikorttitarkistus ja muut turvalliset kirjautumistavat'
@@ -99,7 +100,7 @@ page_builder:
         bullets:
           - 'Seuraa suorituksia ja osaamisprofiileja reaaliajassa'
           - 'Kerää ja analysoi palautedataa koulutuksen kehittämiseksi'
-          - 'Vie raportit data-hubiin, portaaliin, Exceliin tai PowerPointiin'
+          - 'Vie raportit data-hubeihin, Power Bi:hin, portaaliin tai Exceliin'
           - 'Selkeä näkymä oppimisen etenemiseen organisaatiotasolla'
         type: feature
         enabled: true
@@ -109,13 +110,19 @@ page_builder:
     id: bldr-logos
     heading: 'Luotettu kumppani huippuorganisaatioille'
     logos:
-      - vantaan-energia-seeklogo.png
+      - vantaan-energia.svg
       - matkahuolto.png
-      - st1_logo.png
       - dhl-seeklogo.png
-      - storaenso.png
       - finavia.png
-      - edf.png
+      - atria.svg
+      - loimua.png
+      - suomen-golfliitto.png
+      - keva.png
+      - nyab.png
+      - gasum.svg
+      - helsingin-satama.png
+      - honkajoki.png
+      - grk.jpg
     speed: normal
     tone: light
     type: logo_carousel

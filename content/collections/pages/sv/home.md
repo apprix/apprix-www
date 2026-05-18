@@ -26,13 +26,19 @@ page_builder:
     id: mkmgwpi7
     heading: 'En betrodd partner inom kompetensutveckling'
     logos:
-      - vantaan-energia-seeklogo.png
+      - vantaan-energia.svg
       - matkahuolto.png
-      - st1_logo.png
       - dhl-seeklogo.png
-      - storaenso.png
       - finavia.png
-      - edf.png
+      - atria.svg
+      - loimua.png
+      - suomen-golfliitto.png
+      - keva.png
+      - nyab.png
+      - gasum.svg
+      - helsingin-satama.png
+      - honkajoki.png
+      - grk.jpg
     speed: normal
     tone: light
     type: logo_carousel
@@ -226,7 +232,7 @@ page_builder:
       -
         id: mkfq0002
         question: 'Vem passar Apprix tjänster för?'
-        answer: '<p>Våra tjänster är utformade för medelstora och stora organisationer som behöver ett skalbart sätt att utbilda personal, partners eller kunder. Bland våra kunder finns Stora Enso, Finavia, DHL, St1 och Vantaan Energia.</p>'
+        answer: '<p>Våra tjänster är utformade för medelstora och stora organisationer som behöver ett skalbart sätt att utbilda personal, partners eller kunder. Bland våra kunder finns Finavia, DHL, Atria, Loimua och Gasum.</p>'
         type: faq_item
         enabled: true
       -

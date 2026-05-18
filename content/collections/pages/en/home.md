@@ -26,13 +26,19 @@ page_builder:
     id: mkmgwpi7
     heading: 'A trusted partner in competence development'
     logos:
-      - vantaan-energia-seeklogo.png
+      - vantaan-energia.svg
       - matkahuolto.png
-      - st1_logo.png
       - dhl-seeklogo.png
-      - storaenso.png
       - finavia.png
-      - edf.png
+      - atria.svg
+      - loimua.png
+      - suomen-golfliitto.png
+      - keva.png
+      - nyab.png
+      - gasum.svg
+      - helsingin-satama.png
+      - honkajoki.png
+      - grk.jpg
     speed: normal
     tone: light
     type: logo_carousel
@@ -226,7 +232,7 @@ page_builder:
       -
         id: mkfq0002
         question: 'Who are Apprix services for?'
-        answer: '<p>Our services are designed for mid-sized and large organizations that need a scalable way to train employees, partners or customers. Our clients include Stora Enso, Finavia, DHL, St1 and Vantaan Energia.</p>'
+        answer: '<p>Our services are designed for mid-sized and large organizations that need a scalable way to train employees, partners or customers. Our clients include Finavia, DHL, Atria, Loimua and Gasum.</p>'
         type: faq_item
         enabled: true
       -

@@ -42,7 +42,8 @@
                 {{ logos }}
                   <div
                     class="
-                      logo-item shrink-0 w-40 h-12 flex items-center justify-center
+                      logo-item shrink-0 w-40 flex items-center justify-center
+                      {{ if filename | contains('finavia') || filename | contains('suomen-golfliitto') || filename | contains('matkahuolto') }}h-20{{ else }}h-12{{ /if }}
                       opacity-85 transition duration-300
                       hover:opacity-100 hover:-translate-y-0.5
                       dark:brightness-125 dark:hover:brightness-150
@@ -51,7 +52,7 @@
                     <img
                       src="{{ url }}"
                       alt="{{ alt ?? title ?? 'Logo' }}"
-                      class="max-h-12 w-auto max-w-[200px] object-contain"
+                      class="{{ if filename | contains('finavia') || filename | contains('suomen-golfliitto') || filename | contains('matkahuolto') }}max-h-20{{ else }}max-h-12{{ /if }} w-auto max-w-[200px] object-contain {{ if filename | contains('honkajoki') }}dark:invert{{ /if }}"
                       loading="lazy"
                       decoding="async"
                     />
@@ -64,7 +65,8 @@
                 {{ logos }}
                   <div
                     class="
-                      logo-item shrink-0 w-40 h-12 flex items-center justify-center
+                      logo-item shrink-0 w-40 flex items-center justify-center
+                      {{ if filename | contains('finavia') || filename | contains('suomen-golfliitto') || filename | contains('matkahuolto') }}h-20{{ else }}h-12{{ /if }}
                       opacity-85 transition duration-300
                       hover:opacity-100 hover:-translate-y-0.5
                       dark:brightness-125 dark:hover:brightness-150
@@ -73,7 +75,7 @@
                     <img
                       src="{{ url }}"
                       alt=""
-                      class="max-h-12 w-auto max-w-[200px] object-contain"
+                      class="{{ if filename | contains('finavia') || filename | contains('suomen-golfliitto') || filename | contains('matkahuolto') }}max-h-20{{ else }}max-h-12{{ /if }} w-auto max-w-[200px] object-contain {{ if filename | contains('honkajoki') }}dark:invert{{ /if }}"
                       loading="lazy"
                       decoding="async"
                     />

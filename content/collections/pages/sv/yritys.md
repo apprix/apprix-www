@@ -34,7 +34,7 @@ page_builder:
         label: 'genomföranden per år'
         type: stat
         enabled: true
-    trust_line: 'Betrodd av Finavia, DHL, Stora Enso, St1, Vantaan Energia och Matkahuolto.'
+    trust_line: 'Betrodd av Finavia, DHL, Atria, Loimua, Gasum och Matkahuolto.'
     scroll_label: 'Möt teamet'
   -
     id: mkxyqpta

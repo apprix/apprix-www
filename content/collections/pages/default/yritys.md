@@ -19,7 +19,7 @@ page_builder:
     enabled: true
     tone: brand
     heading: 'Digitaalisten koulutusratkaisujen asiantuntija'
-    text: 'Apprix Oy on helsinkiläinen ohjelmistoyritys, joka on erikoistunut verkkokoulutusten rakentamiseen, oppimisen hallintaan ja osaamisen seurantaan. Tuoteperheeseen kuuluvat Apprix Builder® -sisällöntuotantotyökalu, MyCourses-oppimisympäristö, Checklist Engine ja Koemoottori.'
+    text: 'Apprix Oy on kannattava suomalainen ohjelmistoyritys, joka on erikoistunut verkkokoulutusten rakentamiseen, oppimisen hallintaan ja osaamisen seurantaan. Tuoteperheeseen kuuluvat Apprix Builder® -sisällöntuotantotyökalu, MyCourses-oppimisympäristö, Checklist Engine ja Koemoottori. Apprixin missio: Tarjoamme parhaat digitaaliset, vuorovaikutteiset työkalut ja palvelut nykyaikaiseen oppimiseen erilaisissa tilanteissa ja työympäristöissä.'
     stats:
       -
         id: mkstat_y01
@@ -39,7 +39,7 @@ page_builder:
         label: 'suoritusta vuodessa'
         type: stat
         enabled: true
-    trust_line: 'Asiakkainamme mm. Finavia, DHL, Stora Enso, St1, Vantaan Energia ja Matkahuolto.'
+    trust_line: 'Asiakkainamme mm. Finavia, DHL, Atria, Loimua, Gasum ja Matkahuolto.'
     scroll_label: 'Tutustu tiimiin'
   -
     id: mkxyqpta

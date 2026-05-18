@@ -17,25 +17,6 @@ page_builder:
     heading: 'Moderni ja älykäs oppimisympäristö organisaatiollesi'
     text: 'MyCourses on helppokäyttöinen oppimisympäristö (LMS), joka tekee henkilöstön kouluttamisesta, perehdyttämisestä ja osaamisen kehittämisestä vaivatonta.'
     trust_line: 'Toimii saumattomasti Apprix Builderin kanssa – luodut verkkokurssit kootaan ja kohdennetaan MyCoursesissa oikeille osallistujille.'
-    stats:
-      -
-        id: mc-stat01
-        value: LMS
-        label: oppimisalusta
-        type: stat
-        enabled: true
-      -
-        id: mc-stat02
-        value: 24/7
-        label: saatavilla
-        type: stat
-        enabled: true
-      -
-        id: mc-stat03
-        value: SSO
-        label: kertakirjautuminen
-        type: stat
-        enabled: true
     buttons:
       -
         id: mc-hero-btn1
@@ -100,51 +81,40 @@ page_builder:
           - 'Kurssien suoritustiedot viedään automaattisesti takaisin HR-järjestelmään'
         type: feature
         enabled: true
+      -
+        id: mc-f5
+        icon: shield
+        eyebrow: YLLÄPITÄJÄROOLIT
+        title: 'Joustavat ylläpitäjäroolit'
+        text: 'Ylläpitäjien roolit voidaan räätälöidä täysin asiakaskohtaisesti teidän organisaationne tarpeisiin.'
+        bullets:
+          - 'Pääkäyttäjä – täydet oikeudet kaikkeen sisältöön ja hallintaan'
+          - 'Sisällöntuottaja – oikeus lisätä ja muokata kursseja, mutta ei pääsyä käyttäjien henkilötietoihin'
+          - 'Esihenkilö – näkymä vain omien alaisten kurssisuorituksiin'
+        type: feature
+        enabled: true
     type: feature_grid
     enabled: true
   -
     id: mc-logos
     heading: 'Luotettu kumppani huippuorganisaatioille'
     logos:
-      - vantaan-energia-seeklogo.png
+      - vantaan-energia.svg
       - matkahuolto.png
-      - st1_logo.png
       - dhl-seeklogo.png
-      - storaenso.png
       - finavia.png
-      - edf.png
+      - atria.svg
+      - loimua.png
+      - suomen-golfliitto.png
+      - keva.png
+      - nyab.png
+      - gasum.svg
+      - helsingin-satama.png
+      - honkajoki.png
+      - grk.jpg
     speed: normal
     tone: light
     type: logo_carousel
-    enabled: true
-  -
-    id: mc-roles
-    eyebrow: YLLÄPITÄJÄROOLIT
-    title: 'Joustavat ylläpitäjäroolit'
-    lead: 'Ylläpitäjien roolit voidaan räätälöidä täysin asiakaskohtaisesti teidän organisaationne tarpeisiin.'
-    features:
-      -
-        id: mc-r1
-        icon: shield
-        title: Pääkäyttäjä
-        text: 'Täydet oikeudet kaikkeen sisältöön ja hallintaan.'
-        type: feature
-        enabled: true
-      -
-        id: mc-r2
-        icon: pencil
-        title: Sisällöntuottaja
-        text: 'Oikeus lisätä ja muokata kursseja, mutta ei pääsyä käyttäjien henkilötietoihin.'
-        type: feature
-        enabled: true
-      -
-        id: mc-r3
-        icon: users
-        title: Esihenkilö
-        text: 'Näkymä vain omien alaisten kurssisuorituksiin.'
-        type: feature
-        enabled: true
-    type: feature_cards
     enabled: true
   -
     id: mc-xsell
