@@ -102,13 +102,19 @@ page_builder:
     id: asp-logos
     heading: 'En betrodd partner för ledande organisationer'
     logos:
-      - vantaan-energia-seeklogo.png
+      - vantaan-energia.svg
       - matkahuolto.png
-      - st1_logo.png
       - dhl-seeklogo.png
-      - storaenso.png
       - finavia.png
-      - edf.png
+      - atria.svg
+      - loimua.png
+      - suomen-golfliitto.png
+      - keva.png
+      - nyab.png
+      - gasum.svg
+      - helsingin-satama.png
+      - honkajoki.png
+      - grk.jpg
     speed: normal
     tone: light
     type: logo_carousel

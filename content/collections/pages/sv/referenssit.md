@@ -3,7 +3,7 @@ id: 907f68b1-c1e8-4a72-b4d5-0700cf60212e
 origin: b1a3f5c0-d70b-472e-aa07-b4fe4e8c4ea5
 title: 'Kunder & case'
 seo_title: 'Kunder & case – Referenser | Apprix'
-seo_description: 'Bland Apprix kunder finns bl.a. Finavia, DHL, Stora Enso, St1, Vantaan Energia och Matkahuolto. Utforska kundcase och användningsområden.'
+seo_description: 'Bland Apprix kunder finns bl.a. Finavia, DHL, Atria, Loimua, Gasum och Matkahuolto. Utforska kundcase och användningsområden.'
 og_title: 'Kunder & case – Apprix-referenser'
 updated_by: 680e1400-32cd-4415-9b61-d630b47576db
 updated_at: 1768563981
@@ -16,13 +16,19 @@ page_builder:
     eyebrow: Referenser
     heading: 'Kunder & case'
     logos:
-      - vantaan-energia-seeklogo.png
+      - vantaan-energia.svg
       - matkahuolto.png
-      - st1_logo.png
       - dhl-seeklogo.png
-      - storaenso.png
       - finavia.png
-      - edf.png
+      - atria.svg
+      - loimua.png
+      - suomen-golfliitto.png
+      - keva.png
+      - nyab.png
+      - gasum.svg
+      - helsingin-satama.png
+      - honkajoki.png
+      - grk.jpg
     text: 'Över 100 internationella organisationer litar på Apprix för sin kompetensutveckling — över en miljon utbildningsgenomföranden per år och över 25 års erfarenhet av digitala utbildningslösningar.'
     stats:
       -
@@ -49,7 +55,7 @@ page_builder:
     enabled: true
     eyebrow: Kundfeedback
     title: 'Våra kunder berättar'
-    clients: 'Våra lösningar används av bl.a. Elenia, Finavia, Valmet, Stora Enso, DHL, SOL Palvelut och Vantaan Energia.'
+    clients: 'Våra lösningar används av bl.a. Finavia, DHL, Atria, Loimua, Gasum, Elenia och Matkahuolto.'
     quotes:
       -
         id: mkrq01

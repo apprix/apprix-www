@@ -10,7 +10,7 @@ sitemap_priority: '0.6'
 updated_by: 680e1400-32cd-4415-9b61-d630b47576db
 updated_at: 1769434243
 seo_title: 'Asiakkaat & caset – Referenssit | Apprix'
-seo_description: 'Apprixin asiakkaisiin kuuluvat mm. Finavia, DHL, Stora Enso, St1, Vantaan Energia ja Matkahuolto. Tutustu asiakascaseihin ja käyttötapauksiin.'
+seo_description: 'Apprixin asiakkaisiin kuuluvat mm. Finavia, DHL, Atria, Loimua, Gasum ja Matkahuolto. Tutustu asiakascaseihin ja käyttötapauksiin.'
 og_title: 'Asiakkaat & caset – Apprix-referenssit'
 page_builder:
   -
@@ -21,13 +21,19 @@ page_builder:
     eyebrow: Referenssit
     heading: 'Asiakkaat & caset'
     logos:
-      - vantaan-energia-seeklogo.png
+      - vantaan-energia.svg
       - matkahuolto.png
-      - st1_logo.png
       - dhl-seeklogo.png
-      - storaenso.png
       - finavia.png
-      - edf.png
+      - atria.svg
+      - loimua.png
+      - suomen-golfliitto.png
+      - keva.png
+      - nyab.png
+      - gasum.svg
+      - helsingin-satama.png
+      - honkajoki.png
+      - grk.jpg
     text: 'Yli 100 kansainvälistä organisaatiota luottaa Apprixiin henkilöstönsä osaamisen kehittämisessä — yli miljoona kurssisuoritusta vuodessa ja yli 25 vuoden kokemus digitaalisista koulutusratkaisuista.'
     stats:
       -
@@ -54,7 +60,7 @@ page_builder:
     enabled: true
     eyebrow: Asiakaspalaute
     title: 'Asiakkaamme kertovat'
-    clients: 'Ratkaisuihimme luottavat mm. Elenia, Finavia, Valmet, Stora Enso, DHL, SOL Palvelut ja Vantaan Energia.'
+    clients: 'Ratkaisuihimme luottavat mm. Finavia, DHL, Atria, Loimua, Gasum, Elenia ja Matkahuolto.'
     quotes:
       -
         id: mkrq01

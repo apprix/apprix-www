@@ -18,8 +18,6 @@ tabs:
                 authoring_tool: Content authoring tool
                 custom_trainings: Custom e-learning / training
                 ready_trainings: Ready-made e-learning / training
-              validate:
-                - required
               localizable: false
               width: 100
               instructions: Select one or more.
@@ -32,8 +30,6 @@ tabs:
                 internal: Internal use
                 external: External use
                 both: Both
-              validate:
-                - required
               localizable: false
               width: 100
 

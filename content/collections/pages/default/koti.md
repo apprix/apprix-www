@@ -34,13 +34,19 @@ page_builder:
     id: mkmgwpi7
     heading: 'Luotettu osaamisen kehittämisen kumppani'
     logos:
-      - vantaan-energia-seeklogo.png
+      - vantaan-energia.svg
       - matkahuolto.png
-      - st1_logo.png
       - dhl-seeklogo.png
-      - storaenso.png
       - finavia.png
-      - edf.png
+      - atria.svg
+      - loimua.png
+      - suomen-golfliitto.png
+      - keva.png
+      - nyab.png
+      - gasum.svg
+      - helsingin-satama.png
+      - honkajoki.png
+      - grk.jpg
     speed: normal
     tone: light
     type: logo_carousel
@@ -49,7 +55,7 @@ page_builder:
     id: mkfcards1
     premium: true
     eyebrow: 'MIKSI APPRIX'
-    title: 'Kaikki osaamisen kehittämiseen yhdeltä kumppanilta'
+    title: 'Kaikki verkkokoulutustyökalut yhdeltä kumppanilta'
     lead: 'Yli 25 vuoden kokemus, tekoälytuettu sisällöntuotanto ja skaalautuva hinnoittelu – kerralla kuntoon.'
     features:
       -
@@ -149,7 +155,7 @@ page_builder:
         bullets:
           - 'Kokonaisvaltaiset sisällöntuotantoprojektit: materiaalista valmiiksi kurssiksi'
           - 'Boost, Polishing ja Refresh -paketit omatoimiseen rakentamiseen'
-          - 'Lisämausteet: pelillisyys, tarinallisuus, äänensävy ja 2D-animaatiot'
+          - 'Lisämausteet: pelillisyys, tarinallisuus, tone of voice ja animaatiot'
         image: general_bg.jpg
         buttons:
           -
@@ -214,7 +220,7 @@ page_builder:
     id: mknsml2b
     eyebrow: 'Varaa maksuton kartoitustapaaminen'
     title: 'Oletko valmis viemään osaamisen kehittämisen uudelle tasolle?'
-    text: 'Tarjoamme 30–60 minuutin demon, johon sisältyy koulutustarpeen kartoitus. Käyttöönotto on riskitöntä – maksat vain kun alustaa käytetään.'
+    text: 'Tarjoamme 30–60 minuutin demon, johon sisältyy koulutustarpeen kartoitus. Voimme laittaa sinulle myös testiympäristön veloituksetta käyttöön.'
     primary_button: /yritys
     tone: brand
     type: cta
@@ -228,13 +234,19 @@ page_builder:
       -
         id: mkfq0001
         question: 'Mikä on Apprix?'
-        answer: '<p>Apprix on suomalainen, yli 25 vuotta toiminut digitaalisten koulutusratkaisujen edelläkävijä. Autamme organisaatioita rakentamaan, jakamaan ja hallinnoimaan verkkokoulutuksia yhdellä alustalla – olipa kyse perehdytyksestä, vaatimustenmukaisuudesta tai jatkuvasta osaamisen kehittämisestä.</p>'
+        answer: '<p>Apprix on suomalainen, yli 25 vuotta toiminut digitaalisten koulutusratkaisujen edelläkävijä. Autamme organisaatioita rakentamaan, jakamaan ja hallinnoimaan verkkokoulutuksia – olipa kyse perehdytyksestä, vaatimustenmukaisuudesta tai jatkuvasta osaamisen kehittämisestä. Apprix on ylpeä paljon kiitosta saaneesta asiakaspalvelusta ja erinomaisesta Helpdesk-palvelusta.</p>'
         type: faq_item
         enabled: true
       -
         id: mkfq0002
         question: 'Kenelle Apprixin palvelut sopivat?'
-        answer: '<p>Palvelumme on suunniteltu keskisuurille ja suurille organisaatioille, jotka tarvitsevat skaalautuvan tavan kouluttaa henkilöstöä, kumppaneita tai asiakkaita. Asiakkaitamme ovat mm. Stora Enso, Finavia, DHL, St1 ja Vantaan Energia.</p>'
+        answer: '<p>Palvelumme on suunniteltu suurille ja keskisuurille organisaatioille, jotka tarvitsevat skaalautuvan tavan kouluttaa henkilöstöä, kumppaneita tai asiakkaita. Asiakkaitamme ovat mm. Finavia, DHL, Atria, Loimua ja Gasum.</p>'
+        type: faq_item
+        enabled: true
+      -
+        id: mkfq0006
+        question: 'Tukeeko Apprix useita kieliä?'
+        answer: '<p>Kyllä. Alustamme ja koulutukset toimivat monikielisesti.</p>'
         type: faq_item
         enabled: true
       -
@@ -253,12 +265,6 @@ page_builder:
         id: mkfq0005
         question: 'Miten pääsen alkuun?'
         answer: '<p>Ota yhteyttä ja sovitaan maksuton 30–60 minuutin kartoitustapaaminen. Käymme läpi organisaationne koulutustarpeet ja ehdotamme sopivaa ratkaisua – ilman sitoutumispakkoa.</p>'
-        type: faq_item
-        enabled: true
-      -
-        id: mkfq0006
-        question: 'Tukeeko Apprix useita kieliä?'
-        answer: '<p>Kyllä. Alustamme ja koulutukset toimivat monikielisesti. Tällä hetkellä tuemme suomea, ruotsia ja englantia, ja uusia kieliä voidaan lisätä tarpeen mukaan.</p>'
         type: faq_item
         enabled: true
     type: faq

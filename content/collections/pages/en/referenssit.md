@@ -3,7 +3,7 @@ id: 510b5c0a-4faa-49ce-8b12-257cbfa50da3
 origin: b1a3f5c0-d70b-472e-aa07-b4fe4e8c4ea5
 title: 'Customers & Cases'
 seo_title: 'Customers & Cases – References | Apprix'
-seo_description: 'Apprix clients include Finavia, DHL, Stora Enso, St1, Vantaan Energia, and Matkahuolto. Explore client cases and use cases.'
+seo_description: 'Apprix clients include Finavia, DHL, Atria, Loimua, Gasum, and Matkahuolto. Explore client cases and use cases.'
 og_title: 'Customers & Cases – Apprix references'
 updated_by: 680e1400-32cd-4415-9b61-d630b47576db
 updated_at: 1769434243
@@ -16,13 +16,19 @@ page_builder:
     eyebrow: References
     heading: 'Customers & Cases'
     logos:
-      - vantaan-energia-seeklogo.png
+      - vantaan-energia.svg
       - matkahuolto.png
-      - st1_logo.png
       - dhl-seeklogo.png
-      - storaenso.png
       - finavia.png
-      - edf.png
+      - atria.svg
+      - loimua.png
+      - suomen-golfliitto.png
+      - keva.png
+      - nyab.png
+      - gasum.svg
+      - helsingin-satama.png
+      - honkajoki.png
+      - grk.jpg
     text: 'Over 100 international organizations trust Apprix for their workforce competence development — over one million course completions per year and over 25 years of experience in digital training solutions.'
     stats:
       -
@@ -49,7 +55,7 @@ page_builder:
     enabled: true
     eyebrow: 'Client feedback'
     title: 'Our customers share their experience'
-    clients: 'Our solutions are trusted by Elenia, Finavia, Valmet, Stora Enso, DHL, SOL Services and Vantaan Energia, among others.'
+    clients: 'Our solutions are trusted by Finavia, DHL, Atria, Loimua, Gasum, Elenia and Matkahuolto, among others.'
     quotes:
       -
         id: mkrq01
