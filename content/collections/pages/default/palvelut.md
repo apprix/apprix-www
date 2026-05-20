@@ -40,7 +40,7 @@ page_builder:
       -
         id: plv-hero-btn1
         label: 'Varaa maksuton demo'
-        link: /yritys
+        link: /yritys#mkxyqpta
         style: primary
     scroll_label: 'Tutustu palveluihin'
     image: screenshots_diagonal_01.jpg
@@ -204,7 +204,7 @@ page_builder:
     eyebrow: 'Aloitetaan yhdessä'
     title: 'Löydetään organisaatiollenne sopiva ratkaisu'
     text: 'Varaa maksuton 30–60 minuutin kartoitustapaaminen, jossa käymme läpi tarpeenne ja ehdotamme sopivaa kokonaisuutta – ilman sitoutumispakkoa.'
-    button: /yritys
+    button: /yritys#mkxyqpta
     type: cta
     enabled: true
   -

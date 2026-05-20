@@ -20,7 +20,7 @@ page_builder:
       -
         id: mkmbszvb
         label: 'Pyydä demo'
-        link: /yritys
+        link: /yritys#mkxyqpta
         style: primary
       -
         id: mkmbukej
@@ -221,11 +221,11 @@ page_builder:
     eyebrow: 'Varaa maksuton kartoitustapaaminen'
     title: 'Oletko valmis viemään osaamisen kehittämisen uudelle tasolle?'
     text: 'Tarjoamme 30–60 minuutin demon, johon sisältyy koulutustarpeen kartoitus. Voimme laittaa sinulle myös testiympäristön veloituksetta käyttöön.'
-    primary_button: /yritys
+    primary_button: /yritys#mkxyqpta
     tone: brand
     type: cta
     enabled: true
-    button: /yritys
+    button: /yritys#mkxyqpta
   -
     id: mkfaq001
     eyebrow: 'USEIN KYSYTTYÄ'
