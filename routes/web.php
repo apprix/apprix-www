@@ -6,31 +6,42 @@ use Statamic\Facades\Search;
 use Statamic\Facades\Entry;
 
 
-Route::get('/faq/search.json', [\App\Http\Controllers\FaqSearchController::class, 'index']);
-Route::statamic('/faq', 'faq/index', ['layout' => 'layout_faq', 'title' => 'FAQ']);
+// Builder auth gateway (unprotected — handles the session check flow)
+Route::get('/builder-auth/check', [\App\Http\Controllers\BuilderAuthController::class, 'check']);
+Route::post('/builder-auth/verify', [\App\Http\Controllers\BuilderAuthController::class, 'verify']);
+Route::get('/builder-auth/logout', [\App\Http\Controllers\BuilderAuthController::class, 'logout']);
 
-Route::get('/help', function () {
-    // /help has no URL prefix so it is always the Finnish (default) site
-    $section1 = Entry::query()
-        ->where('collection', 'docs')
-        ->where('site', 'default')
-        ->get()
-        ->filter(fn ($e) => preg_match('/^1\s/', (string) ($e->value('title') ?? '')))
-        ->first();
+// Protected: requires valid Builder session
+Route::middleware(\App\Http\Middleware\RequireBuilderAuth::class)->group(function () {
 
-    if ($section1) {
-        return redirect($section1->url());
-    }
+    Route::get('/faq/search.json', [\App\Http\Controllers\FaqSearchController::class, 'index']);
+    Route::statamic('/faq', 'faq/index', ['layout' => 'layout_faq', 'title' => 'FAQ']);
 
-    // Fallback: first docs entry
-    $first = Entry::query()
-        ->where('collection', 'docs')
-        ->where('site', 'default')
-        ->first();
+    Route::get('/help', function () {
+        // /help has no URL prefix so it is always the Finnish (default) site
+        $section1 = Entry::query()
+            ->where('collection', 'docs')
+            ->where('site', 'default')
+            ->get()
+            ->filter(fn ($e) => preg_match('/^1\s/', (string) ($e->value('title') ?? '')))
+            ->first();
 
-    return $first ? redirect($first->url()) : abort(404);
+        if ($section1) {
+            return redirect($section1->url());
+        }
+
+        // Fallback: first docs entry
+        $first = Entry::query()
+            ->where('collection', 'docs')
+            ->where('site', 'default')
+            ->first();
+
+        return $first ? redirect($first->url()) : abort(404);
+    });
+
+    Route::get('/help/search.json', [\App\Http\Controllers\DocsSearchController::class, 'index']);
+
 });
-Route::get('/help/search.json', [\App\Http\Controllers\DocsSearchController::class, 'index']);
 
 Route::get('/api/search', function (Request $request) {
     $query = $request->input('q', '');
