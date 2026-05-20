@@ -34,7 +34,7 @@ Route::get('/builder-auth-test', function () {
         const resultEl = document.getElementById('result');
         const detailEl = document.getElementById('detail');
 
-        fetch('https://builder.apprix.fi/b/api/checkli', {
+        fetch('https://test.apprix.fi/b_dev_1/login/checkli', {
             method: 'GET',
             credentials: 'include',
         })
