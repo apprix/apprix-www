@@ -12,7 +12,9 @@ Route::post('/builder-auth/verify', [\App\Http\Controllers\BuilderAuthController
 Route::get('/builder-auth/logout', [\App\Http\Controllers\BuilderAuthController::class, 'logout']);
 
 // Protected: requires valid Builder session
-Route::middleware(\App\Http\Middleware\RequireBuilderAuth::class)->group(function () {
+// TODO: uncomment middleware before going live on www3.apprix.fi
+// Route::middleware(\App\Http\Middleware\RequireBuilderAuth::class)->group(function () {
+Route::group([], function () {
 
     Route::get('/faq/search.json', [\App\Http\Controllers\FaqSearchController::class, 'index']);
     Route::statamic('/faq', 'faq/index', ['layout' => 'layout_faq', 'title' => 'FAQ']);
