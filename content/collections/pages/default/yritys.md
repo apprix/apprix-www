@@ -123,6 +123,13 @@ page_builder:
         link: '/referenssit#caset'
         icon: case
         image: apprix_logo_rgb.png
+      -
+        id: ml6helpdesk
+        eyebrow: Asiakastuki
+        title: 'Helpdesk – Tekninen tuki'
+        text: 'Kysymyksiä Builderista tai teknistä apua? Ota yhteyttä suoraan tukitiimiimme.'
+        link: 'mailto:helpdesk@apprix.fi'
+        icon: arrow
     type: link_cards
     enabled: true
 ---
