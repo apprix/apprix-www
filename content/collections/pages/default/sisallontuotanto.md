@@ -21,7 +21,7 @@ page_builder:
       -
         id: st-hero-btn1
         label: 'Kysy lisää'
-        link: /yritys
+        link: /yritys#yhteydenotto
         style: primary
     scroll_label: 'Lue lisää'
     image: general_bg.jpg
@@ -151,7 +151,7 @@ page_builder:
     eyebrow: 'Ota yhteyttä'
     title: 'Suunnitellaan juuri sinun tarpeisiisi sopiva paketti'
     text: 'Yhteinen tavoitteemme on luoda sinulle ja organisaatiollesi THE BEST E-LEARNING EVER. Kysy lisää ja varaa maksuton kartoituskeskustelu.'
-    button: /yritys
+    button: /yritys#yhteydenotto
     type: cta
     enabled: true
   -

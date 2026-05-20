@@ -40,7 +40,7 @@ page_builder:
       -
         id: bldr-hero-btn1
         label: 'Varaa maksuton demo'
-        link: /yritys
+        link: /yritys#yhteydenotto
         style: primary
     scroll_label: 'Lue lisää'
     image: builder_bg.jpg
@@ -185,7 +185,7 @@ page_builder:
     eyebrow: 'Varaa maksuton demo'
     title: 'Oletko valmis viemään organisaatiosi osaamisen uudelle tasolle?'
     text: 'Tarjoamme 30 tai 60 minuutin mittaisen demon, johon sisältyy organisaatiosi yksilöllinen koulutustarpeen kartoitus. Käyttöönotto on riskitöntä: maksat vain niiltä kuukausilta, kun verkkokurssia oikeasti käytetään.'
-    button: /yritys
+    button: /yritys#yhteydenotto
     type: cta
     enabled: true
   -

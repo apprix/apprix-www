@@ -24,9 +24,7 @@
               focus:outline-none focus-visible:ring-2 focus-visible:ring-primary/25 focus-visible:ring-offset-2
             "
             {{ if children }}
-              href="#"
-              @click.prevent="subnavOpen = !subnavOpen"
-              :aria-label="subnavOpen ? '{{ trans:strings.subnav_close }}' : '{{ trans:strings.subnav_open }}'"
+              href="{{ url }}"
               :aria-expanded="subnavOpen"
             {{ else }}
               href="{{ url }}"

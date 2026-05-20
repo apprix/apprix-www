@@ -37,7 +37,7 @@ page_builder:
     trust_line: 'Betrodd av Finavia, DHL, Atria, Loimua, Gasum och Matkahuolto.'
     scroll_label: 'Möt teamet'
   -
-    id: mkxyqpta
+    id: yhteydenotto
     title: 'Kontakta oss'
     text: 'Vi kan gå igenom era behov tillsammans och se hur Apprix kan hjälpa.'
     form: contact

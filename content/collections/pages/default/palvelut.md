@@ -40,7 +40,7 @@ page_builder:
       -
         id: plv-hero-btn1
         label: 'Varaa maksuton demo'
-        link: /yritys
+        link: /yritys#yhteydenotto
         style: primary
     scroll_label: 'Tutustu palveluihin'
     image: screenshots_diagonal_01.jpg
@@ -57,6 +57,7 @@ page_builder:
         icon: pencil
         title: 'Apprix Builder®'
         text: 'Markkinoiden ketterin työkalu osallistavien ja vuorovaikutteisten verkkokoulutusten luomiseen – ilman teknistä osaamista.'
+        link: /palvelut/builder
         type: feature
         enabled: true
       -
@@ -64,6 +65,7 @@ page_builder:
         icon: target
         title: 'Apprix MyCourses'
         text: 'Älykäs oppimisympäristö (LMS), joka kohdentaa kurssit automaattisesti oikeille oppijoille HR-tietojen perusteella.'
+        link: /palvelut/mycourses
         type: feature
         enabled: true
       -
@@ -71,6 +73,7 @@ page_builder:
         icon: shield
         title: 'Checklist Engine'
         text: 'Sähköiset perehdytys- ja tarkistuslistat, jotka varmistavat yhdenmukaiset käytännöt kaikissa toimipisteissä.'
+        link: /palvelut/checklist-engine
         type: feature
         enabled: true
       -
@@ -78,6 +81,7 @@ page_builder:
         icon: chart
         title: Koemoottori
         text: 'Digitaalisten kokeiden hallinta kysymysten luomisesta tulosten hyväksymiseen – täysi jäljitettävyys ja automatisoitu tarkistus.'
+        link: /palvelut/koemoottori
         type: feature
         enabled: true
       -
@@ -85,6 +89,7 @@ page_builder:
         icon: users
         title: Sisällöntuotanto
         text: 'Asiantuntijamme luovat puolestasi vaikuttavat verkkokoulutukset – avaimet käteen tai joustavina tukipaketteina.'
+        link: /palvelut/sisallontuotanto
         type: feature
         enabled: true
       -
@@ -92,6 +97,7 @@ page_builder:
         icon: plug
         title: Asiantuntijapalvelut
         text: 'Strategista konsultointia, koulutustarpeiden kartoitusta ja käyttöönoton tukea kokeneilta ammattilaisilta.'
+        link: /palvelut/asiantuntijapalvelut
         type: feature
         enabled: true
     type: feature_cards
@@ -204,7 +210,7 @@ page_builder:
     eyebrow: 'Aloitetaan yhdessä'
     title: 'Löydetään organisaatiollenne sopiva ratkaisu'
     text: 'Varaa maksuton 30–60 minuutin kartoitustapaaminen, jossa käymme läpi tarpeenne ja ehdotamme sopivaa kokonaisuutta – ilman sitoutumispakkoa.'
-    button: /yritys
+    button: /yritys#yhteydenotto
     type: cta
     enabled: true
   -

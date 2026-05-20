@@ -40,7 +40,7 @@ page_builder:
       -
         id: asp-hero-btn1
         label: 'Varaa kartoitustapaaminen'
-        link: /yritys
+        link: /yritys#yhteydenotto
         style: primary
     scroll_label: 'Lue lisää'
     image: general_bg.jpg
@@ -145,7 +145,7 @@ page_builder:
     eyebrow: 'Aloitetaan yhdessä'
     title: 'Kartoitetaan organisaationne koulutustarpeet'
     text: 'Varaa maksuton 30–60 minuutin kartoitustapaaminen, jossa käymme läpi tarpeenne ja ehdotamme sopivaa kokonaisuutta – ilman sitoutumispakkoa.'
-    button: /yritys
+    button: /yritys#yhteydenotto
     type: cta
     enabled: true
   -

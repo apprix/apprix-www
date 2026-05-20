@@ -104,5 +104,5 @@ page_builder:
     enabled: true
     title: 'Haluatko kuulla, miten Apprix voisi auttaa teidän organisaatiotanne?'
     text: 'Varaa maksuton kartoitustapaaminen ja selvitetään, miten digitaaliset koulutusratkaisut hyödyttäisivät organisaatiotanne.'
-    button: /yritys
+    button: /yritys#yhteydenotto
 ---

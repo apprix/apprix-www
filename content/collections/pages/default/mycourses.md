@@ -21,7 +21,7 @@ page_builder:
       -
         id: mc-hero-btn1
         label: 'Kysy lisää'
-        link: /yritys
+        link: /yritys#yhteydenotto
         style: primary
     scroll_label: 'Lue lisää'
     image: mycourses_bg.jpg
@@ -150,7 +150,7 @@ page_builder:
     eyebrow: 'Räätälöitävissä tarpeisiinne'
     title: 'Tehosta organisaatiosi osaamisen kehittäminen'
     text: 'MyCoursesia voidaan räätälöidä monin tavoin juuri teidän tarpeisiinne sopivaksi. Kysy meiltä lisää ja varaa maksuton esittely.'
-    button: /yritys
+    button: /yritys#yhteydenotto
     type: cta
     enabled: true
   -

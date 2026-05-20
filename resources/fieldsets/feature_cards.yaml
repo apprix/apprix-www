@@ -65,3 +65,10 @@ fields:
                 localizable: true
                 display: Text
                 rows: 2
+
+            - handle: link
+              field:
+                type: text
+                display: Link
+                instructions: "Optional URL this card links to (e.g. /palvelut/builder)"
+                width: 50

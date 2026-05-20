@@ -48,7 +48,7 @@
         {{ if features }}
           <div class="grid gap-5 sm:grid-cols-2 md:gap-6">
             {{ features }}
-              <div class="group relative">
+              {{ if link }}<a href="{{ link }}" class="group relative block">{{ else }}<div class="group relative">{{ /if }}
 
                 {{# Gradient border glow on hover #}}
                 <div class="pointer-events-none absolute -inset-px rounded-[1.1rem] bg-gradient-to-br via-transparent to-sky-400/20 opacity-0 transition-opacity duration-500 group-hover:opacity-100 dark:to-sky-400/25
@@ -146,7 +146,7 @@
                   <div class="absolute inset-x-6 bottom-0 h-px bg-gradient-to-r from-transparent via-primary/20 to-transparent opacity-0 transition-opacity duration-500 group-hover:opacity-100"></div>
 
                 </div>
-              </div>
+              {{ if link }}</a>{{ else }}</div>{{ /if }}
             {{ /features }}
           </div>
         {{ /if }}
@@ -208,7 +208,7 @@
         {{ if features }}
           <div class="grid gap-4 sm:grid-cols-2 md:gap-5">
             {{ features }}
-              <div class="group relative rounded-2xl border border-neutral-200/70 dark:border-slate-700 bg-white dark:bg-slate-800/60 p-7 md:p-8 shadow-sm transition-all duration-300 hover:shadow-lg hover:shadow-black/[0.05] hover:-translate-y-0.5">
+              {{ if link }}<a href="{{ link }}" class="group relative block rounded-2xl border border-neutral-200/70 dark:border-slate-700 bg-white dark:bg-slate-800/60 p-7 md:p-8 shadow-sm transition-all duration-300 hover:shadow-lg hover:shadow-black/[0.05] hover:-translate-y-0.5">{{ else }}<div class="group relative rounded-2xl border border-neutral-200/70 dark:border-slate-700 bg-white dark:bg-slate-800/60 p-7 md:p-8 shadow-sm transition-all duration-300 hover:shadow-lg hover:shadow-black/[0.05] hover:-translate-y-0.5">{{ /if }}
 
                 {{# Icon #}}
                 <div class="mb-4 inline-flex h-10 w-10 items-center justify-center rounded-lg ring-1
@@ -271,7 +271,7 @@
                   </p>
                 {{ /if }}
 
-              </div>
+              {{ if link }}</a>{{ else }}</div>{{ /if }}
             {{ /features }}
           </div>
         {{ /if }}
