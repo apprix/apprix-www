@@ -42,7 +42,7 @@ page_builder:
     trust_line: 'Asiakkainamme mm. Finavia, DHL, Atria, Loimua, Gasum ja Matkahuolto.'
     scroll_label: 'Tutustu tiimiin'
   -
-    id: mkxyqpta
+    id: yhteydenotto
     title: 'Ota yhteyttä'
     text: 'Voimme käydä yhdessä läpi tarpeesi ja katsoa, miten Apprix voisi auttaa.'
     form: contact

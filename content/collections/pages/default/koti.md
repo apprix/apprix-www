@@ -20,7 +20,7 @@ page_builder:
       -
         id: mkmbszvb
         label: 'Pyydä demo'
-        link: /yritys#mkxyqpta
+        link: /yritys#yhteydenotto
         style: primary
       -
         id: mkmbukej
@@ -63,6 +63,7 @@ page_builder:
         icon: pencil
         title: 'Sisällöntuotanto tekoälyn tuella'
         text: 'Builder® + generatiivinen tekoäly, valmiit mediakirjastot ja sivupohjat'
+        link: /palvelut
         type: feature
         enabled: true
       -
@@ -70,6 +71,7 @@ page_builder:
         icon: book
         title: 'Älykäs oppimisympäristö'
         text: 'MyCourses kohdentaa kurssit automaattisesti HR-tietojen perusteella'
+        link: /palvelut
         type: feature
         enabled: true
       -
@@ -77,6 +79,7 @@ page_builder:
         icon: chart
         title: 'Reaaliaikainen analytiikka'
         text: 'Osaamisprofiileja ja suorituksia reaaliajassa, raportit HR-järjestelmiin'
+        link: /palvelut
         type: feature
         enabled: true
       -
@@ -84,6 +87,7 @@ page_builder:
         icon: shield
         title: 'Skaalautuva ja riskitön'
         text: 'Maksat vain käytöstä, enterprise-integraatiot, 25+ vuoden luotettavuus'
+        link: /palvelut
         type: feature
         enabled: true
     type: feature_cards
@@ -221,11 +225,11 @@ page_builder:
     eyebrow: 'Varaa maksuton kartoitustapaaminen'
     title: 'Oletko valmis viemään osaamisen kehittämisen uudelle tasolle?'
     text: 'Tarjoamme 30–60 minuutin demon, johon sisältyy koulutustarpeen kartoitus. Voimme laittaa sinulle myös testiympäristön veloituksetta käyttöön.'
-    primary_button: /yritys#mkxyqpta
+    primary_button: /yritys#yhteydenotto
     tone: brand
     type: cta
     enabled: true
-    button: /yritys#mkxyqpta
+    button: /yritys#yhteydenotto
   -
     id: mkfaq001
     eyebrow: 'USEIN KYSYTTYÄ'

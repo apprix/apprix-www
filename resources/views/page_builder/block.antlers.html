@@ -1,4 +1,5 @@
 <div
+  {{ if id }}id="{{ id }}"{{ /if }}
   x-data="{ shown: false }"
   x-init="
     const rect = $el.getBoundingClientRect();

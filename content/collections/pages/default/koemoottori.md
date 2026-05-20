@@ -40,10 +40,10 @@ page_builder:
       -
         id: km-hero-btn1
         label: 'Kysy lisää'
-        link: /yritys#mkxyqpta
+        link: /yritys#yhteydenotto
         style: primary
     scroll_label: 'Lue lisää'
-    image: checklist-engine-perehdytys.jpg
+    image: laptop_hands_01.jpg
     type: product_hero
     enabled: true
   -
@@ -177,7 +177,7 @@ page_builder:
     eyebrow: 'Räätälöitävissä tarpeisiinne'
     title: 'Vie organisaatiosi osaamisen mittaaminen uudelle tasolle'
     text: 'Koemoottori on joustava ja se voidaan räätälöidä monin tavoin juuri teidän organisaationne tarpeisiin sopivaksi. Kysy lisää ja varaa maksuton esittely.'
-    button: /yritys#mkxyqpta
+    button: /yritys#yhteydenotto
     type: cta
     enabled: true
   -

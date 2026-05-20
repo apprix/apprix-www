@@ -40,7 +40,7 @@ page_builder:
       -
         id: ce-hero-btn1
         label: 'Kysy lisää'
-        link: /yritys#mkxyqpta
+        link: /yritys#yhteydenotto
         style: primary
     scroll_label: 'Lue lisää'
     image: checklist-engine-perehdytys.jpg
@@ -176,7 +176,7 @@ page_builder:
     eyebrow: 'Räätälöitävissä tarpeisiinne'
     title: 'Tehosta organisaatiosi perehdytysprosessit jo tänään'
     text: 'Checklist Engine voidaan räätälöidä monin eri tavoin juuri teidän organisaationne tarpeisiin sopivaksi. Kysy lisää ja varaa maksuton esittely.'
-    button: /yritys#mkxyqpta
+    button: /yritys#yhteydenotto
     type: cta
     enabled: true
   -
