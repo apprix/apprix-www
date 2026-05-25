@@ -1082,6 +1082,38 @@
                 });
             }
 
+            // ── Pair consecutive h6 image labels with their figures ──
+            // Content files store all h6 captions first then all figures;
+            // this reorders them so each label sits directly above its image.
+            function pairImageLabels(container) {
+                (container || document).querySelectorAll('.prose').forEach(function (prose) {
+                    var els = Array.from(prose.children);
+                    var i = 0;
+                    while (i < els.length) {
+                        if (els[i].tagName !== 'H6') { i++; continue; }
+                        // Collect run of consecutive h6 elements
+                        var h6s = [], j = i;
+                        while (j < els.length && els[j].tagName === 'H6') h6s.push(els[j++]);
+                        if (h6s.length < 2) { i++; continue; }
+                        // Collect immediately-following figures (must match count)
+                        var figs = [];
+                        while (j < els.length && els[j].tagName === 'FIGURE') figs.push(els[j++]);
+                        if (figs.length !== h6s.length) { i = j; continue; }
+                        // Remove all, then reinsert interleaved: h6[0], fig[0], h6[1], fig[1]…
+                        var anchor = figs[figs.length - 1].nextSibling;
+                        h6s.concat(figs).forEach(function (el) { el.parentNode.removeChild(el); });
+                        for (var k = 0; k < h6s.length; k++) {
+                            prose.insertBefore(h6s[k], anchor);
+                            prose.insertBefore(figs[k], anchor);
+                        }
+                        // Refresh element list after DOM mutation
+                        els = Array.from(prose.children);
+                        i = anchor ? els.indexOf(anchor) : els.length;
+                        if (i < 0) i = els.length;
+                    }
+                });
+            }
+
             function addHeadingAnchors(container) {
                 ensureHeadingIds(container);
                 container.querySelectorAll('h2[id], h3[id]').forEach(function(h) {
@@ -1122,6 +1154,7 @@
 
             // ── Master enhancer (called on page load + each infinite-scroll section) ──
             function docsEnhance(container) {
+                pairImageLabels(container);
                 addHeadingAnchors(container);
             }
             window.docsEnhance = docsEnhance; // hoisted for loadSection hook
