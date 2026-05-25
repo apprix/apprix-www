@@ -9,11 +9,11 @@ Jos elementtiä käytetään lopputestin yhteydessä eikä muilla kuin lopputest
 
 Submoduulirakenteessa, jossa on testi lopussa, lisätään testissä mukana olevat elementit ja <b>Pass/Fail</b>-elementti yleensä submoduulivalikon (<b>Submenu Buttons</b>) jälkeen päämoduuliin. 
 
-<b>Huom!</b> <b>Pass/Fail</b>-elementtiä ei tule lisätä <u>viimeiseksi elementiksi ennen </u><b><u>Finish</u></b><u>-elementtiä</u>, sillä Pass/Fail-elementti ei tällöin toimi oikein.
+<b>Huom!</b> <b>Pass/Fail</b>-elementtiä ei tule lisätä <strong>viimeiseksi elementiksi ennen </strong><b>Finish</b><strong>-elementtiä</strong>, sillä Pass/Fail-elementti ei tällöin toimi oikein.
 
 Erillisellä lisätyöllä voi <b>Pass/Fail</b> -elementin saada toimimaan myös submoduulien lopussa, jolloin submoduulit pitää läpäistä hyväksytysti päästäkseen eteenpäin kurssissa. Jos submoduulirakenteen loppuun ei tule testiä ja on tärkeää, että kaikki submoduulien pisteet otetaan huomioon läpipääsyn suhteen, lisätään tällöin <b>Pass/Fail</b>-elementti jokaisen submoduulin viimeiseksi elementiksi. Tällöin suorittaja ohjataan submoduulista submoduulivalikkoon (<b>Submenu Buttons</b>) vasta päästessään submoduulin hyväksyttävästi läpi. Jos suorittaja ei saa tarpeeksi pisteitä <span>submoduulista läpäistäkseen sen, hänet ohjataan takaisin submoduulin alkuun. <b><a href="#yhteystiedot">Otathan yhteyttä Apprixiin</a></b>,</span> jos edellä kuvatulle toiminnallisuudelle ilmenee organisaatiossasi tarve tai haluatte kuulla siitä lisää.
 
-<b>Huom!</b> <b>Pass/Fail </b>-elementtinäkymä ilmestyy suorittajalle <u>vain silloin</u>, jos suorittaja <u>ei läpäise</u> lopputestiä.
+<b>Huom!</b> <b>Pass/Fail </b>-elementtinäkymä ilmestyy suorittajalle <strong>vain silloin</strong>, jos suorittaja <strong>ei läpäise</strong> lopputestiä.
 
 Kun suorittaja on käyttänyt mahdolliset testin uusimisyritykset, hän joutuu palaamaan takaisin kertaamaan kurssimateriaaleja ja aloittamaan uudelleen alusta. Suorittajan lopullinen suoritustulos sekä epäonnistuneet yritykset tallennetaan tilastoihin. Käyttämällä <a href="#login"><b>Login-elementtiä</b></a> ja <a href="#sso"><b>SSO-ominaisuutta</b></a> voidaan suodattaa epäonnistuneet yritykset, kun halutaan tarkastella vain lopullista suoritustulosta.
 
@@ -50,7 +50,7 @@ Huom! Your points/Pisteesi -kohtaa ei pysty muokkaamaan, sillä suorittajan pist
 
 <b>Huomioithan myös, että...</b>
 <ul>
- <li>jos moduulissa on <b>Hotspot</b>-elementtejä, joihin on lisätty yksi tai useampi <b>True/False</b>-kysymys, on nämä pisteet käytettävissä <b>Edit Points</b> -ikkunassa, mutta <u>niitä ei lasketa tai huomioida Pass/Fail -elementissä</u>. 
+ <li>jos moduulissa on <b>Hotspot</b>-elementtejä, joihin on lisätty yksi tai useampi <b>True/False</b>-kysymys, on nämä pisteet käytettävissä <b>Edit Points</b> -ikkunassa, mutta <strong>niitä ei lasketa tai huomioida Pass/Fail -elementissä</strong>. 
 <ul>
  <li>Tämä tarkoittaa, että Edit Points -ikkunassa on asetettava 0 pistettä Hotspot-elementille, sillä Edit Points -ominaisuus laskee Hotspot-elementin True/False-kysymysten pisteet, mutta Pass/Fail-elementti ei käytä eikä huomoi niitä laskettaessa lopullisia pisteitä.</li>
 </ul>

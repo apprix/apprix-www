@@ -12,7 +12,7 @@ Katseluoikeudet on mahdollista myöntää käyttäjäkohtaisesti, esimerkiksi es
  <li>Kun pääkäyttäjä on säätänyt<b> Extended report</b> -valinnat sopiviksi, käyttäjä voi aktivoida Report-ominaisuuden klikkaamalla <b>Report</b>-toimintoa näkymän vasemmassa laidassa.</li>
  <li>Tämän jälkeen käyttäjä voi käyttää <b>Filter</b>-toimintoa, jonka avulla raportin suoritusdataa voi suodattaa (esimerkiksi suorittajien yritykset, kurssimoduulit, päivämäärän/ajanjakson valinta). <b>Report</b>-näkymässä käyttäjä voi myös etsiä tiettyä tietoa ja valita mitkä kentät näkyvät (<b>Column visibility</b> -toiminto) tai ladata tiedot CSV- tai Excel-tiedostomuodossa.</li>
 </ul>
-Huomioithan, että ainoastaan <u>julkaistujen moduulien tiedot</u> on saatavilla raporteissa.
+Huomioithan, että ainoastaan <strong>julkaistujen moduulien tiedot</strong> on saatavilla raporteissa.
 
 <h6>Käyttöoikeudet Extended -raporttiin myönnetään ” <strong>Administrate</strong> → <strong>Users</strong>” -työkalussa.</h6>
 
