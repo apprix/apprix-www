@@ -13,8 +13,8 @@ title: '7.22 Feedback Open Text'
 
 <h6 class="p1">Klikkaa kuvia suurentaaksesi niitä.</h6>
 
-<h5 class="p1">Elementin asetukset editointinäkymässä:</h5>
-
 <figure class="doc-image"><img src="/files/docs/2021/08/Feedback_Open_Text_FI-1.png" alt="" loading="lazy"></figure>
+
+<h5 class="p1">Elementin asetukset editointinäkymässä:</h5>
 
 <figure class="doc-image"><img src="/files/docs/2021/08/Feedback_Open_Text_Edit_FI-2.gif" alt="" loading="lazy"></figure>

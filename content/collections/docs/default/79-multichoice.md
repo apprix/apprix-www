@@ -23,12 +23,12 @@ Jos haluat käyttää pidempiä kysymys-vastaus-tekstejä, klikkaa vasemmassa yl
 
 <h6 class="p1">Elementti julkaisutilassa</h6>
 
-<h6 class="p1 fusion-responsive-typography-calculated" data-fontsize="12" data-lineheight="18px">Elementin asetukset muokkaustilassa.</h6>
-
-<h6 class="p1 fusion-responsive-typography-calculated" data-fontsize="12" data-lineheight="18px">UUTTA! Elementti Multichoice 2.0 - Switch page layout -ominaisuus.</h6>
-
 <figure class="doc-image"><img src="/files/docs/2021/08/Multichoice_FI_Small.gif" alt="" loading="lazy"></figure>
 
+<h6 class="p1 fusion-responsive-typography-calculated" data-fontsize="12" data-lineheight="18px">Elementin asetukset muokkaustilassa.</h6>
+
 <figure class="doc-image"><img src="/files/docs/2021/08/Multichoice_Edit_FI_Small.gif" alt="" loading="lazy"></figure>
+
+<h6 class="p1 fusion-responsive-typography-calculated" data-fontsize="12" data-lineheight="18px">UUTTA! Elementti Multichoice 2.0 - Switch page layout -ominaisuus.</h6>
 
 <figure class="doc-image"><img src="/files/docs/2024/09/Multichoice-new-feature.gif" alt="" loading="lazy"></figure>

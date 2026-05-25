@@ -46,8 +46,8 @@ Kurssilaisen jättämiä kommentteja pystyy muokkaamaan elementissä ollessaan. 
 
 <h6 class="p1">Miten kurssilainen antaa kommentteja?</h6>
 
-<h6 class="p1">Miten tekstiruutu muokataan?</h6>
-
 <figure class="doc-image"><img src="/files/docs/2025/03/Comment-1.gif" alt="" loading="lazy"></figure>
+
+<h6 class="p1">Miten tekstiruutu muokataan?</h6>
 
 <figure class="doc-image"><img src="/files/docs/2025/03/Com-task-box-1.gif" alt="" loading="lazy"></figure>

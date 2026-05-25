@@ -50,24 +50,24 @@ Kun moduuli on julkaistu, (<b>Published</b>), se alkaa kerryttää tilastoa. Voi
 
 <h6 class="p1">Voit tarkastella moduulin tilastoja klikkaamalla Stats-nappia.</h6>
 
-<h6>Mistä löydät moduulin Big Datan (tilastot)?</h6>
-
-<h6><strong><i>Jos kurssimoduuli on suoritettu onnistuneesti loppuun asti, </i><i>Finished</i><i>-sarakkeen arvo on 1. Jos kurssimoduulin suorittaminen loppuun asti on epäonnistunut, Finished-sarakkeen arvo on 0.</i></strong></h6>
-
-<h6>Miten tilastotietoja voidaan etsiä ja viedä Big Datasta?</h6>
-
-<h6>Feedback-näkymässä näet koulutuksen loppuun asti suorittaneiden palautteet.</h6>
-
-<h6>Feedback-elementti kerryttää tilastoa Feedback-välilehdelle.</h6>
-
 <figure class="doc-image"><img src="/files/docs/2024/05/All-modules-stats.png" alt="" loading="lazy"></figure>
+
+<h6>Mistä löydät moduulin Big Datan (tilastot)?</h6>
 
 <figure class="doc-image"><img src="/files/docs/2024/05/Edit-module-stats.png" alt="" loading="lazy"></figure>
 
+<h6><strong><i>Jos kurssimoduuli on suoritettu onnistuneesti loppuun asti, </i><i>Finished</i><i>-sarakkeen arvo on 1. Jos kurssimoduulin suorittaminen loppuun asti on epäonnistunut, Finished-sarakkeen arvo on 0.</i></strong></h6>
+
 <figure class="doc-image"><img src="/files/docs/2021/02/Stats.png" alt="" loading="lazy"></figure>
+
+<h6>Miten tilastotietoja voidaan etsiä ja viedä Big Datasta?</h6>
 
 <figure class="doc-image"><img src="/files/docs/2021/02/Stats1.png" alt="" loading="lazy"></figure>
 
+<h6>Feedback-näkymässä näet koulutuksen loppuun asti suorittaneiden palautteet.</h6>
+
 <figure class="doc-image"><img src="/files/docs/2021/02/Stats2.png" alt="" loading="lazy"></figure>
+
+<h6>Feedback-elementti kerryttää tilastoa Feedback-välilehdelle.</h6>
 
 <figure class="doc-image"><img src="/files/docs/2021/02/Stats3.png" alt="" loading="lazy"></figure>

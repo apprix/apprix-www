@@ -54,20 +54,20 @@ MyCourses kurssiin linkitetyt Builder moduulit tulee ryhmittää Module Groups o
 
 <h6><strong>Group Modules &amp; MyCourse - esimerkki</strong></h6>
 
-<h6> Group Modules &amp; Landing Page - esimerkki</h6>
-
-<h6>Group Modules - asetukset</h6>
-
-<h6> Tässä esimerkkikuva tilanteesta, jossa moduuli on lisätty moduuliryhmään nimeltä “Group modules Euro”.</h6>
-
-<h6>Participants &amp; Reminders - asetukset</h6>
-
 <figure class="doc-image"><img src="/files/docs/2025/02/End-user.png" alt="" loading="lazy"></figure>
+
+<h6> Group Modules &amp; Landing Page - esimerkki</h6>
 
 <figure class="doc-image"><img src="/files/docs/2025/02/Landing-page-for-gropu-modules.png" alt="" loading="lazy"></figure>
 
+<h6>Group Modules - asetukset</h6>
+
 <figure class="doc-image"><img src="/files/docs/2025/02/Module-group-2.png" alt="" loading="lazy"></figure>
 
+<h6> Tässä esimerkkikuva tilanteesta, jossa moduuli on lisätty moduuliryhmään nimeltä “Group modules Euro”.</h6>
+
 <figure class="doc-image"><img src="/files/docs/2025/02/Module-Group-3.png" alt="" loading="lazy"></figure>
+
+<h6>Participants &amp; Reminders - asetukset</h6>
 
 <figure class="doc-image"><img src="/files/docs/2025/02/Participants-and-reminders.png" alt="" loading="lazy"></figure>

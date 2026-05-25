@@ -17,12 +17,12 @@ Huom! Jos johdannon tekstikenttä jätetään tyhjäksi muokkaustilassa, suoritt
 
 <h6 class="p1">Elementti julkaisutilassa</h6>
 
-<h5 class="p1 fusion-responsive-typography-calculated" data-fontsize="12" data-lineheight="18px">Elementin asetukset muokkaustilassa</h5>
-
-<h5 class="p1 fusion-responsive-typography-calculated" data-fontsize="12" data-lineheight="18px">Miten elementtiä käytetään? Tässä on esimerkki.</h5>
-
 <figure class="doc-image"><img src="/files/docs/2021/08/Hotspot_Mouseover_FI-1.gif" alt="" loading="lazy"></figure>
 
+<h5 class="p1 fusion-responsive-typography-calculated" data-fontsize="12" data-lineheight="18px">Elementin asetukset muokkaustilassa</h5>
+
 <figure class="doc-image"><img src="/files/docs/2021/08/Hotspot_Mouseover_Edit_FI-1.gif" alt="" loading="lazy"></figure>
+
+<h5 class="p1 fusion-responsive-typography-calculated" data-fontsize="12" data-lineheight="18px">Miten elementtiä käytetään? Tässä on esimerkki.</h5>
 
 <figure class="doc-image"><img src="/files/docs/2024/06/hotspot-mouseover-1.gif" alt="" loading="lazy"></figure>

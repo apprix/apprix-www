@@ -67,14 +67,14 @@ Kun suorittaja aloittaa kurssin, johon on asetettu voimassaoloaika, hän näkee 
 
 <h6 class="p1">Klikkaa kuvia suurentaaksesi niitä.</h6>
 
+<figure class="doc-image"><img src="/files/docs/2024/05/8.5.1-Expiration.png" alt="" loading="lazy"></figure>
+
 <h6>Expiration-tekstiboksi: Kurssin suorittäjä ei suorittanut kurssia aiemmin.</h6>
+
+<figure class="doc-image"><img src="/files/docs/2024/05/8.5.2-Expiration.png" alt="" loading="lazy"></figure>
 
 <h6>Expiration-tekstiboksi:
 Kurssin suorittäjä on suorittanut kurssin kahdesti. Ensimmäinen suoritus on vanhentunut ja toinen on edelleen voimassa.</h6>
-
-<figure class="doc-image"><img src="/files/docs/2024/05/8.5.1-Expiration.png" alt="" loading="lazy"></figure>
-
-<figure class="doc-image"><img src="/files/docs/2024/05/8.5.2-Expiration.png" alt="" loading="lazy"></figure>
 
 <figure class="doc-image"><img src="/files/docs/2024/05/8.5.3-Expiration-2.png" alt="" loading="lazy"></figure>
 

@@ -31,24 +31,24 @@ Oletetaan, että haluat ilmoittaa suorittajille, että tietty kurssimoduuli tule
 
 <h6 class="p1">Esimerkki Landing Page -elementistä.</h6>
 
-<h6 class="p1">Landing Page -Button Settings</h6>
-
-<h6>Miten Landing Page -elementin rakentaminen aloitetaan?</h6>
-
-<h6>Miten lisäät uuden painikkeen (kurssi) Landing Page -elementtiin?</h6>
-
-<h6>Miten voit esikatsella Landing Page -elementin sisältöä?</h6>
-
-<h6>Voit käyttää tätä elementtiä myös linkkien ja dokumentaation tallentamiseen.</h6>
-
 <figure class="doc-image"><img src="/files/docs/2025/05/LP-esimerkki-1.png" alt="" loading="lazy"></figure>
+
+<h6 class="p1">Landing Page -Button Settings</h6>
 
 <figure class="doc-image"><img src="/files/docs/2025/05/LP-button-settings-1.png" alt="" loading="lazy"></figure>
 
+<h6>Miten Landing Page -elementin rakentaminen aloitetaan?</h6>
+
 <figure class="doc-image"><img src="/files/docs/2025/05/LPStart-1.gif" alt="" loading="lazy"></figure>
+
+<h6>Miten lisäät uuden painikkeen (kurssi) Landing Page -elementtiin?</h6>
 
 <figure class="doc-image"><img src="/files/docs/2025/05/DLV-Start21-2.gif" alt="" loading="lazy"></figure>
 
+<h6>Miten voit esikatsella Landing Page -elementin sisältöä?</h6>
+
 <figure class="doc-image"><img src="/files/docs/2025/05/LP-Preview-0105-1.gif" alt="" loading="lazy"></figure>
+
+<h6>Voit käyttää tätä elementtiä myös linkkien ja dokumentaation tallentamiseen.</h6>
 
 <figure class="doc-image"><img src="/files/docs/2025/05/DLP-for-links-and-documentation-1.png" alt="" loading="lazy"></figure>

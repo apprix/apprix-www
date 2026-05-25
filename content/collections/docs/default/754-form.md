@@ -82,16 +82,16 @@ Avaa <strong>Element Settings</strong> ‑valikko rataskuvakkeesta elementin yl�
 
 <h6>Form-elementti? Tässä esimerkki</h6>
 
-<h6>Row options - "Choose field type"</h6>
-
-<h6>Kuinka aloittaa elementin muokkaaminen?</h6>
-
-<h6>Lomakkeen muokkaaminen</h6>
-
 <figure class="doc-image"><img src="/files/docs/2025/12/Form-First-name-5-1.png" alt="" loading="lazy"></figure>
+
+<h6>Row options - "Choose field type"</h6>
 
 <figure class="doc-image"><img src="/files/docs/2025/12/Form-First-Name-1.png" alt="" loading="lazy"></figure>
 
+<h6>Kuinka aloittaa elementin muokkaaminen?</h6>
+
 <figure class="doc-image"><img src="/files/docs/2025/12/Form-First-Name2-1.png" alt="" loading="lazy"></figure>
+
+<h6>Lomakkeen muokkaaminen</h6>
 
 <figure class="doc-image"><img src="/files/docs/2025/12/Form-First-name-4-OK-1.png" alt="" loading="lazy"></figure>

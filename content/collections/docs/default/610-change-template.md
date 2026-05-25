@@ -9,8 +9,8 @@ Jos Builder-asiakasympäristössäsi on useampi kuin yksi malli (template), voit
 
 <h6 class="p1">Miten voit vaihtaa moduulin mallia (template)?</h6>
 
-<h6 class="p1">Voit samalla vaihtaa myös submoduulien mallin (template).</h6>
-
 <figure class="doc-image"><img src="/files/docs/2024/08/Change-template.gif" alt="" loading="lazy"></figure>
+
+<h6 class="p1">Voit samalla vaihtaa myös submoduulien mallin (template).</h6>
 
 <figure class="doc-image"><img src="/files/docs/2024/08/Change-template2.gif" alt="" loading="lazy"></figure>

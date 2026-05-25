@@ -88,18 +88,18 @@ Deaktivoi ja poista käyttäjän oikeudet klikkaamalla Administrate-valikossa k�
 <h6>Miten luot uuden käyttäjän?
 Klikkaa ” Add User...” -painiketta Administrate-näkymässä.</h6>
 
+<figure class="doc-image"><img src="/files/docs/2025/03/2.2.2.-add-users-1.png" alt="" loading="lazy"></figure>
+
 <h6>User’s Permissions -valikko</h6>
 <h6>Miten annat käyttöoikeudet uudelle käyttäjälle?</h6>
 
+<figure class="doc-image"><img src="/files/docs/2025/03/2.2.2.user-permission2-1.png" alt="" loading="lazy"></figure>
+
 <h6 class="p1">Yksittäisten moduulien muokkausoikeus (User’s Module Edit &amp; Stats Permissions -valikko)</h6>
+
+<figure class="doc-image"><img src="/files/docs/2025/03/2.2.2.-module-editing-permission-1.png" alt="" loading="lazy"></figure>
 
 <h6 class="p1">Palauta käyttäjän salasana klikkaamalla Reset Password -painiketta.</h6>
 <h6 class="p1">Deaktivoi ja poista käyttäjän oikeudet klikkaamalla Deactivate User -painiketta.</h6>
-
-<figure class="doc-image"><img src="/files/docs/2025/03/2.2.2.-add-users-1.png" alt="" loading="lazy"></figure>
-
-<figure class="doc-image"><img src="/files/docs/2025/03/2.2.2.user-permission2-1.png" alt="" loading="lazy"></figure>
-
-<figure class="doc-image"><img src="/files/docs/2025/03/2.2.2.-module-editing-permission-1.png" alt="" loading="lazy"></figure>
 
 <figure class="doc-image"><img src="/files/docs/2025/03/2.2.2.-reset-password2-1.png" alt="" loading="lazy"></figure>

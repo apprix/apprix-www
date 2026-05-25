@@ -73,17 +73,17 @@ Submoduulirakenteita voi luoda monessa eri toimintajärjestyksessä, mutta täss
 
 <h6>Miten Submenu Buttons -elementti lisätään päämoduuliin ja miten sen alavalikon asetuksia (Submenu settings) muokataan?</h6>
 
-<h6>Miten tehdä moduulista submoduuli ja linkittää se sitten päämoduuliin?</h6>
-
-<h6>Miten päämoduuliin linkitetyt submoduulit julkaistaan?</h6>
-
-<h6>Julkaistujen submoduulien viereen ilmestyy submoduulilistauksessa vihreä pallo.</h6>
-
 <figure class="doc-image"><img src="/files/docs/2020/04/Esimerkki_submoduulit.png" alt="" loading="lazy"></figure>
+
+<h6>Miten tehdä moduulista submoduuli ja linkittää se sitten päämoduuliin?</h6>
 
 <figure class="doc-image"><img src="/files/docs/2020/09/Esimerkkikoulutus_menu.jpg" alt="" loading="lazy"></figure>
 
+<h6>Miten päämoduuliin linkitetyt submoduulit julkaistaan?</h6>
+
 <figure class="doc-image"><img src="/files/docs/2024/07/Main-module-submodule-1.gif" alt="" loading="lazy"></figure>
+
+<h6>Julkaistujen submoduulien viereen ilmestyy submoduulilistauksessa vihreä pallo.</h6>
 
 <figure class="doc-image"><img src="/files/docs/2024/07/Main-module-submodule-2.gif" alt="" loading="lazy"></figure>
 

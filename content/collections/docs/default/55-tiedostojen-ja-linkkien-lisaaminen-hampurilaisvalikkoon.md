@@ -42,8 +42,8 @@ Jos haluat poistaa linkin ja tiedoston näkyvistä <strong>Media Library </stron
 
 <h6 class="p1">Miten lisäät linkkejä hampurilaisvalikkoon?</h6>
 
-<h6 class="p1">Miten lisäät tiedostoja hampurilaisvalikkoon?</h6>
-
 <figure class="doc-image"><img src="/files/docs/2024/07/Hamburger-link.gif" alt="" loading="lazy"></figure>
+
+<h6 class="p1">Miten lisäät tiedostoja hampurilaisvalikkoon?</h6>
 
 <figure class="doc-image"><img src="/files/docs/2024/07/Hamburger-file.gif" alt="" loading="lazy"></figure>

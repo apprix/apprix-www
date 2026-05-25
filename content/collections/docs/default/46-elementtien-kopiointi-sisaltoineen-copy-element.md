@@ -25,8 +25,8 @@ Elementin kopiointi onnistuu elementin <strong>Preview-tilassa </strong>painamal
 
 <h6>Miten kopioit elementin?</h6>
 
-<h6>Miten liität elementin?</h6>
-
 <figure class="doc-image"><img src="/files/docs/2025/06/Copy-button.jpg" alt="" loading="lazy"></figure>
+
+<h6>Miten liität elementin?</h6>
 
 <figure class="doc-image"><img src="/files/docs/2025/06/Paste-element.jpg" alt="" loading="lazy"></figure>

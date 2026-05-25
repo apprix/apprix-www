@@ -71,13 +71,13 @@ Huom! Your points/Pisteesi -kohtaa ei pysty muokkaamaan, sillä suorittajan pist
 
 <h6 class="p1">Klikkaa kuvia suurentaaksesi niitä.</h6>
 
-<h5 class="p1 fusion-responsive-typography-calculated" data-fontsize="12" data-lineheight="18px">Elementin asetukset editointinäkymässä:</h5>
-
-<h5>Pass/Fail Always -elementti: Suorittaja ei läpäissyt testiä / Suorittaja läpäisi testin</h5>
-
 <figure class="doc-image"><img src="/files/docs/2021/09/PassFail_1_FI.jpg" alt="" loading="lazy"></figure>
 
+<h5 class="p1 fusion-responsive-typography-calculated" data-fontsize="12" data-lineheight="18px">Elementin asetukset editointinäkymässä:</h5>
+
 <figure class="doc-image"><img src="/files/docs/2021/09/PassFail_2_FI.jpg" alt="" loading="lazy"></figure>
+
+<h5>Pass/Fail Always -elementti: Suorittaja ei läpäissyt testiä / Suorittaja läpäisi testin</h5>
 
 <figure class="doc-image"><img src="/files/docs/2021/09/PassFail_Edit_FI.gif" alt="" loading="lazy"></figure>
 

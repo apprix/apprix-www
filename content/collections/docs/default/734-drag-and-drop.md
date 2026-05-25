@@ -22,13 +22,13 @@ Kun kaikki kortit on asetettu onnistuneesti, kurssin suorittajalle näytetään 
 
 <h6 class="p1">Miten Drag and Drop -elementti toimii?</h6>
 
-<h6 class="p1">Miten elementtiä muokataan?</h6>
-
-<h6 class="p1">Esimerkki sen käytöstä.</h6>
-
 <figure class="doc-image"><img src="/files/docs/2025/03/DragandDropWastedoing.gif" alt="" loading="lazy"></figure>
 
+<h6 class="p1">Miten elementtiä muokataan?</h6>
+
 <figure class="doc-image"><img src="/files/docs/2025/03/DragandDropEditWasteedit2.gif" alt="" loading="lazy"></figure>
+
+<h6 class="p1">Esimerkki sen käytöstä.</h6>
 
 <figure class="doc-image"><img src="/files/docs/2021/08/Drag_and_Drop_Edit_FI_1_new.gif" alt="" loading="lazy"></figure>
 

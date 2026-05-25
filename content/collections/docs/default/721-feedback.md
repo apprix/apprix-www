@@ -17,8 +17,8 @@ Tarkastele tilastoja satunnaisesti selataksesi palautteita. Avoimen palautteen k
 
 <h6 class="p1">Klikkaa kuvia suurentaaksesi niitä.</h6>
 
-<h5 class="p1">Elementin asetukset editointinäkymässä:</h5>
-
 <figure class="doc-image"><img src="/files/docs/2021/08/Feedback_FI_small-1.gif" alt="" loading="lazy"></figure>
+
+<h5 class="p1">Elementin asetukset editointinäkymässä:</h5>
 
 <figure class="doc-image"><img src="/files/docs/2021/08/Feedback_Edit_FI_new-1.gif" alt="" loading="lazy"></figure>

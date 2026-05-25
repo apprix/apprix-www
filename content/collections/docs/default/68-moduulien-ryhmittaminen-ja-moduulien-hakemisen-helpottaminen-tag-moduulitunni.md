@@ -28,8 +28,8 @@ title: '6.8 Moduulien ryhmittäminen ja moduulien hakemisen helpottaminen Tag-mo
 
 <h6 class="p1">Miten lisäät tagin moduuliin?</h6>
 
-<h6 class="p1">Miten luot uuden tagin ja liität sen moduuliin?</h6>
-
 <figure class="doc-image"><img src="/files/docs/2024/08/Add-a-tag.gif" alt="" loading="lazy"></figure>
+
+<h6 class="p1">Miten luot uuden tagin ja liität sen moduuliin?</h6>
 
 <figure class="doc-image"><img src="/files/docs/2024/08/Add-a-tag-2.gif" alt="" loading="lazy"></figure>

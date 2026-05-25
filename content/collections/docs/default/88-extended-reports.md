@@ -16,16 +16,16 @@ Huomioithan, että ainoastaan <u>julkaistujen moduulien tiedot</u> on saatavilla
 
 <h6>Käyttöoikeudet Extended -raporttiin myönnetään ” <strong>Administrate</strong> → <strong>Users</strong>” -työkalussa.</h6>
 
-<h6>Reports -painike tulee näkyviin, kun Extended Reports -käyttöoikeudet on myönnetty.</h6>
-
-<h6>Katseluoikeudet voi myöntää ja räätälöidä käyttäjäkohtaisesti, esimerkiksi esimiehille ja kolmansille osapuolille, Extended Report Settings:ssä, Administrate-valikon kautta.</h6>
-
-<h6>Käyttäjä voi suodattaa raportin suoritustietoja Filter-toiminnolla. Reports-näkymässä käyttäjä voi hakea tiettyjä suoritustietoja, valita, mitkä kentät näytetään, ja ladata suoritustiedot CSV- tai Excel-tiedostomuodossa.</h6>
-
 <figure class="doc-image"><img src="/files/docs/2025/02/Extended-report-1-settings-1.png" alt="" loading="lazy"></figure>
+
+<h6>Reports -painike tulee näkyviin, kun Extended Reports -käyttöoikeudet on myönnetty.</h6>
 
 <figure class="doc-image"><img src="/files/docs/2025/02/Reports-button-2-1.png" alt="" loading="lazy"></figure>
 
+<h6>Katseluoikeudet voi myöntää ja räätälöidä käyttäjäkohtaisesti, esimerkiksi esimiehille ja kolmansille osapuolille, Extended Report Settings:ssä, Administrate-valikon kautta.</h6>
+
 <figure class="doc-image"><img src="/files/docs/2025/02/Extended-report-settings-3-1.png" alt="" loading="lazy"></figure>
+
+<h6>Käyttäjä voi suodattaa raportin suoritustietoja Filter-toiminnolla. Reports-näkymässä käyttäjä voi hakea tiettyjä suoritustietoja, valita, mitkä kentät näytetään, ja ladata suoritustiedot CSV- tai Excel-tiedostomuodossa.</h6>
 
 <figure class="doc-image"><img src="/files/docs/2025/02/Filters-4-1.png" alt="" loading="lazy"></figure>

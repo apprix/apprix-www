@@ -42,13 +42,13 @@ Tämän jälkeen esikatselu ei vaadi muuta tunnistautumista.
 
 <h6 class="p1">Kuinka esikatsella moduulia?</h6>
 
-<h6 class="p1">Kuinka esikatsella elementti käyttämällä 'Preview Element in New Tab' -vaihtoehtoa?</h6>
-
-<h6 class="p1">Kuinka tallennat ja jaat esikatselulinkin?</h6>
-
 <figure class="doc-image"><img src="/files/docs/2025/06/Preview-module-feature.gif" alt="" loading="lazy"></figure>
 
+<h6 class="p1">Kuinka esikatsella elementti käyttämällä 'Preview Element in New Tab' -vaihtoehtoa?</h6>
+
 <figure class="doc-image"><img src="/files/docs/2025/06/Preview-element-in-new-tab.gif" alt="" loading="lazy"></figure>
+
+<h6 class="p1">Kuinka tallennat ja jaat esikatselulinkin?</h6>
 
 <figure class="doc-image"><img src="/files/docs/2024/07/Preview-share-link.gif" alt="" loading="lazy"></figure>
 

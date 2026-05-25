@@ -19,9 +19,9 @@ title: '7.36 Survey Multichoice'
 
 <h6 class="p1">Klikkaa kuvia suurentaaksesi niitä.</h6>
 
-<h5>Elementin asetukset editointinäkymässä:</h5>
-
 <figure class="doc-image"><img src="/files/docs/2021/08/Survey_Multichoice_FI-1.gif" alt="" loading="lazy"></figure>
+
+<h5>Elementin asetukset editointinäkymässä:</h5>
 
 <figure class="doc-image"><img src="/files/docs/2021/08/Survey_Multichoice_Edit_FI-1.gif" alt="" loading="lazy"></figure>
 

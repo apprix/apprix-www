@@ -22,12 +22,12 @@ muokata, poistaa, poistaa lukituksen ja muuttaa lukittujen elementtien sijaintia
 
 <h6><strong>Miten elementti lukitaan?</strong></h6>
 
-<h6>Muokkaustilassa lukko näkyy lukitun elementin päällä.</h6>
-
-<h6><strong>Administrate -työkalun asetukset</strong></h6>
-
 <figure class="doc-image"><img src="/files/docs/2024/09/Locking-element-1.jpg" alt="" loading="lazy"></figure>
 
+<h6>Muokkaustilassa lukko näkyy lukitun elementin päällä.</h6>
+
 <figure class="doc-image"><img src="/files/docs/2024/09/Locking-element-2.jpg" alt="" loading="lazy"></figure>
+
+<h6><strong>Administrate -työkalun asetukset</strong></h6>
 
 <figure class="doc-image"><img src="/files/docs/2024/09/Locking-element-3.jpg" alt="" loading="lazy"></figure>

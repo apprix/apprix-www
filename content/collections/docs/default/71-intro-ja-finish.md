@@ -20,12 +20,12 @@ Kirjoita <strong>Intro-elementtiin</strong> tervetulotoivotus ja esittelyteksti,
 
 <h6>Intro-elementti julkaisutilassa (Published mode)</h6>
 
-<h6>Miten elementin asetuksia muutetaan muokkaustilassa?</h6>
-
-<h6>Finish-elementti</h6>
-
 <figure class="doc-image"><img src="/files/docs/2021/08/Intro_FI-1.gif" alt="" loading="lazy"></figure>
 
+<h6>Miten elementin asetuksia muutetaan muokkaustilassa?</h6>
+
 <figure class="doc-image"><img src="/files/docs/2021/08/Intro_Edit_FI_.gif" alt="" loading="lazy"></figure>
+
+<h6>Finish-elementti</h6>
 
 <figure class="doc-image"><img src="/files/docs/2021/08/Finish_FI.jpg" alt="" loading="lazy"></figure>

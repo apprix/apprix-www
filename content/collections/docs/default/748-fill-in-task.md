@@ -32,16 +32,16 @@ Klikkaa sitten elementin vasemmassa yläkulmassa olevaa työkalukuvaketta ja val
 
 <h6 class="p1">Elementin julkaisutilassa</h6>
 
-<h6 class="p1">Käyttäjä tarkistaa, että vastaukset ovat oikeita.</h6>
-
-<h6 class="p1">Elementin muokkaustilassa</h6>
-
-<h6>Haluatko sallia vain numerot vai numerot ja kirjaimet valkoisissa laatikoissa?</h6>
-
 <figure class="doc-image"><img src="/files/docs/2024/11/Fill-in-in-Published-mode-1.jpg" alt="" loading="lazy"></figure>
+
+<h6 class="p1">Käyttäjä tarkistaa, että vastaukset ovat oikeita.</h6>
 
 <figure class="doc-image"><img src="/files/docs/2024/11/Fill-in-in-Published-mode.jpg" alt="" loading="lazy"></figure>
 
+<h6 class="p1">Elementin muokkaustilassa</h6>
+
 <figure class="doc-image"><img src="/files/docs/2024/11/Fill-in-in-Edit-mode.jpg" alt="" loading="lazy"></figure>
+
+<h6>Haluatko sallia vain numerot vai numerot ja kirjaimet valkoisissa laatikoissa?</h6>
 
 <figure class="doc-image"><img src="/files/docs/2024/11/Fill-in-task-settings.png" alt="" loading="lazy"></figure>

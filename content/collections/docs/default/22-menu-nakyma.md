@@ -45,12 +45,12 @@ Jos kuulut organisaatiosi pääkäyttäjiin, voi sinulla näkyä myös näkymäs
 
 <h6><strong>Menunäkymä, jossa kurssimoduulit on suodatettu nimen mukaan.</strong></h6>
 
-<h6><strong>Menunäkymä, jossa kurssimoduulit on suodatettu Quick Filters -työkalun avulla</strong></h6>
-
-<h6><strong>Quick Filters -työkalu</strong></h6>
-
 <figure class="doc-image"><img src="/files/docs/2025/11/All-Modules-Menu-with-the-name-filter.png" alt="" loading="lazy"></figure>
 
+<h6><strong>Menunäkymä, jossa kurssimoduulit on suodatettu Quick Filters -työkalun avulla</strong></h6>
+
 <figure class="doc-image"><img src="/files/docs/2025/11/All-Modules-Menu.png" alt="" loading="lazy"></figure>
+
+<h6><strong>Quick Filters -työkalu</strong></h6>
 
 <figure class="doc-image"><img src="/files/docs/2025/11/sort-and-filter-modules-tool.png" alt="" loading="lazy"></figure>
