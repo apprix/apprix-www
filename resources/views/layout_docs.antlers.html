@@ -114,6 +114,7 @@
                             <template x-for="(result, i) in results" :key="result.url">
                                 <a
                                     :href="result.url"
+                                    @click="query = ''; results = []"
                                     @mouseenter="active = i"
                                     class="flex items-center gap-3 border-l-2 px-4 py-3 transition-colors"
                                     :class="active === i ? 'border-orange-500 bg-orange-50' : 'border-transparent hover:bg-neutral-50'"
@@ -200,7 +201,7 @@
 
             {{# ─── CONTENT AREA ─── #}}
             <main class="min-w-0 flex-1 bg-white">
-                <div class="mx-auto max-w-3xl px-6 py-10 md:px-10 md:py-12">
+                <div class="ml-[12%] mr-auto max-w-3xl px-6 py-10 md:px-10 md:py-12">
                     {{ template_content }}
                 </div>
             </main>
@@ -377,11 +378,29 @@
 
                 go() {
                     if (this.results[this.active]) {
-                        window.location.href = this.results[this.active].url;
+                        const url = this.results[this.active].url;
+                        this.query = '';
+                        this.results = [];
+                        window.location.href = url;
                     }
                 },
             };
         }
+        </script>
+
+        <script>
+        // Capture hash before any history.replaceState can strip it
+        var _initialDocHash = window.location.hash;
+        // Re-scroll to hash after all images and JS (heading IDs) have loaded
+        window.addEventListener('load', function () {
+            const hash = _initialDocHash;
+            if (!hash) return;
+            const el = document.querySelector(hash);
+            if (!el) return;
+            const headerHeight = 64; // h-16
+            const top = el.getBoundingClientRect().top + window.pageYOffset - headerHeight - 16;
+            window.scrollTo({ top: Math.max(0, top), behavior: 'instant' });
+        });
         </script>
 
         <script>
