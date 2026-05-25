@@ -1120,7 +1120,8 @@
                 ensureHeadingIds(container);
                 container.querySelectorAll('h1[data-url]').forEach(function(h) {
                     if (h.querySelector('.heading-anchor')) return;
-                    var pageUrl = h.dataset.url;
+                    var rawUrl  = h.dataset.url;
+                    var pageUrl = rawUrl.startsWith('http') ? rawUrl : window.location.origin + rawUrl;
                     var a = document.createElement('a');
                     a.href      = pageUrl;
                     a.className = 'heading-anchor';
