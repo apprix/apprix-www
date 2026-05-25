@@ -1,0 +1,9 @@
+title: FAQ
+sites:
+  - default
+template: false
+layout: false
+route: false
+revisions: false
+sort_field: order
+sort_dir: asc

@@ -102,7 +102,6 @@ return [
         storage_path('forms'),
         public_path('images'),
         public_path('favicons'),
-        public_path('files'),
         public_path('social_images'),
     ],
 

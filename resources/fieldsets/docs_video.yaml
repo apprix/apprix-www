@@ -1,0 +1,32 @@
+title: Docs Video
+fields:
+  -
+    handle: video_type
+    field:
+      type: select
+      display: Videotyyppi
+      options:
+        vimeo: Vimeo
+        mp4: Oma tiedosto (MP4)
+      default: vimeo
+      required: true
+      instructions: 'Valitse Vimeo tai oma MP4-tiedosto.'
+  -
+    handle: vimeo_id
+    field:
+      type: text
+      display: Vimeo Video ID
+      instructions: 'Video ID Vimeo-osoitteesta. Esim. vimeo.com/video/328168769 — ID on 328168769'
+      placeholder: '328168769'
+      if:
+        video_type: vimeo
+  -
+    handle: file
+    field:
+      type: assets
+      display: Video-tiedosto (MP4)
+      container: files
+      max_files: 1
+      instructions: 'Lataa tai valitse MP4-videotiedosto Files-kirjastosta.'
+      if:
+        video_type: mp4

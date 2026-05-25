@@ -1,0 +1,17 @@
+title: Help
+sites:
+  - default
+template: docs/show
+layout: layout_docs
+route: '/help/{slug}'
+revisions: false
+structure:
+  root: false
+  max_depth: 3
+sort_field: order
+sort_dir: asc
+preview_targets:
+  -
+    label: Entry
+    url: '{permalink}'
+    refresh: true

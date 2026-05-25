@@ -1,0 +1,256 @@
+{{#
+    @name FAQ Layout
+    @desc Layout for the FAQ section at /faq — docs-style header with FAQ search, no sidebar.
+#}}
+
+<!-- /layout_faq.antlers.html -->
+<!doctype html>
+<html
+    lang="{{ site:short_locale }}"
+    class="antialiased scroll-smooth"
+>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+        {{ vite src="resources/css/site.css|resources/js/site.js" }}
+        {{ partial:statamic-peak-seo::snippets/seo }}
+        {{ stack:head }}
+    </head>
+    <body class="flex flex-col min-h-screen bg-white text-neutral-900">
+
+        {{# ─── TOP BAR ─── #}}
+        <header class="sticky top-0 z-40 h-16 border-b border-neutral-200/80 bg-white/95 backdrop-blur-md">
+            <div class="grid h-full grid-cols-[auto_1fr_auto] items-center px-6 md:px-10">
+
+                {{# Left: logo #}}
+                <div class="flex h-full items-center">
+                    <a href="/" class="shrink-0 flex items-center">
+                        <img src="/visuals/apprix_logo_rgb.png" alt="Apprix" class="h-12 w-auto">
+                    </a>
+                </div>
+
+                {{# Center: FAQ search #}}
+                <div
+                    x-data="faqSearch()"
+                    class="relative min-w-0 px-16"
+                    @click.outside="results = []"
+                >
+                    <div class="relative w-full">
+                        <div class="relative">
+                            <input
+                                x-ref="input"
+                                x-model="query"
+                                @input.debounce.150ms="search()"
+                                @keydown.arrow-down.prevent="navigate(1)"
+                                @keydown.arrow-up.prevent="navigate(-1)"
+                                @keydown.enter.prevent="go()"
+                                type="text"
+                                placeholder="Hae kysymyksistä..."
+                                class="min-w-0 w-full rounded-xl border border-neutral-200 bg-neutral-50 py-2.5 pl-4 pr-10 text-base text-neutral-700 placeholder-neutral-400 outline-none transition-colors focus:border-neutral-300 focus:bg-white"
+                                autocomplete="off"
+                            >
+                            <div
+                                x-show="!query"
+                                class="pointer-events-none absolute inset-y-0 right-3 flex items-center"
+                            >
+                                <svg class="h-4 w-4 text-neutral-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>
+                            </div>
+                        </div>
+
+                        {{# Backdrop #}}
+                        <template x-teleport="body">
+                            <div
+                                x-show="results.length > 0 || (query.length > 0 && !loading) || loading"
+                                x-transition:enter="transition-opacity duration-200"
+                                x-transition:enter-start="opacity-0"
+                                x-transition:enter-end="opacity-100"
+                                x-transition:leave="transition-opacity duration-150"
+                                x-transition:leave-start="opacity-100"
+                                x-transition:leave-end="opacity-0"
+                                class="fixed inset-x-0 bottom-0 top-16 z-[39] bg-neutral-900/20 backdrop-blur-sm"
+                                @click="query = ''; results = []"
+                                aria-hidden="true"
+                                style="display:none;"
+                            ></div>
+                        </template>
+
+                        {{# Results dropdown #}}
+                        <div
+                            x-show="results.length > 0 || (query.length > 0 && !loading) || loading"
+                            x-ref="list"
+                            class="absolute left-0 right-0 top-full z-50 mt-1 max-h-[70vh] overflow-y-auto rounded-xl border border-neutral-200 bg-white shadow-xl"
+                            style="display:none;"
+                        >
+                            <div x-show="results.length > 0" class="py-2">
+                                <template x-for="(result, i) in results" :key="result.id">
+                                    <a
+                                        :href="'#faq-' + result.id"
+                                        @mouseenter="active = i"
+                                        @click="query = ''; results = []"
+                                        class="flex items-center gap-3 border-l-2 px-4 py-3 transition-colors"
+                                        :class="active === i ? 'border-orange-500 bg-orange-50' : 'border-transparent hover:bg-neutral-50'"
+                                    >
+                                        <div class="min-w-0 flex-1">
+                                            <p class="text-sm font-medium text-neutral-900" x-html="highlight(result.question, query)"></p>
+                                            <p class="mt-0.5 text-xs text-neutral-400" x-text="result.category"></p>
+                                        </div>
+                                        <svg class="h-4 w-4 shrink-0 text-neutral-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+                                    </a>
+                                </template>
+                            </div>
+                            <div x-show="results.length === 0 && query.length > 0 && !loading" class="py-10 text-center text-sm text-neutral-400">
+                                Ei tuloksia haulle &ldquo;<span x-text="query"></span>&rdquo;
+                            </div>
+                            <div x-show="loading" class="py-8 text-center text-sm text-neutral-400">
+                                Ladataan...
+                            </div>
+                            <div x-show="results.length > 0" class="border-t border-neutral-100 px-4 py-2 text-xs text-neutral-400">
+                                <span class="font-mono">↑↓</span> navigoi &nbsp;
+                                <span class="font-mono">↵</span> avaa &nbsp;
+                                <span class="font-mono">Esc</span> sulje
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                {{# Right: Builder button #}}
+                <div class="flex h-full items-center justify-end">
+                    <a
+                        href="https://builder.apprix.fi/b/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="inline-flex items-center rounded-lg border border-neutral-200 bg-white px-5 py-2.5 text-sm font-semibold text-neutral-700 shadow-sm transition hover:border-neutral-300 hover:bg-neutral-50 hover:text-neutral-900"
+                    >
+                        Builder
+                    </a>
+                </div>
+
+            </div>
+        </header>
+
+        {{# ─── CONTENT ─── #}}
+        <main class="flex flex-1 min-h-0">
+            {{ template_content }}
+        </main>
+
+        {{# ─── FOOTER ─── #}}
+        <footer class="border-t border-neutral-200 bg-neutral-50">
+            <div class="px-6 py-5 md:px-10">
+                <p class="text-center text-xs text-neutral-400">
+                    &copy; {{ now format="Y" }} Apprix Oy &mdash;
+                    <a href="/" class="hover:text-neutral-600 hover:underline">Apprix.fi</a>
+                </p>
+            </div>
+        </footer>
+
+        <script>
+        function faqSearch() {
+            return {
+                query:   '',
+                results: [],
+                active:  0,
+                cache:   null,
+                loading: false,
+
+                init() {
+                    // Preload index in the background
+                    this.loadIndex();
+
+                    document.addEventListener('keydown', (e) => {
+                        // Cmd/Ctrl+K — focus search
+                        if ((e.metaKey || e.ctrlKey) && e.key === 'k') {
+                            e.preventDefault();
+                            if (this.$refs.input) this.$refs.input.focus();
+                            return;
+                        }
+                        // Esc — close results
+                        if (e.key === 'Escape') {
+                            if (this.query || this.results.length) {
+                                e.preventDefault();
+                                this.query   = '';
+                                this.results = [];
+                            }
+                            return;
+                        }
+                        // Already typing here
+                        if (document.activeElement === this.$refs.input) return;
+                        // Another form element — leave it alone
+                        const tag = document.activeElement?.tagName;
+                        if (tag === 'INPUT' || tag === 'TEXTAREA' || tag === 'SELECT') return;
+                        // Any printable character — focus search
+                        if (e.key.length === 1 && !e.metaKey && !e.ctrlKey && !e.altKey) {
+                            this.$refs.input.focus();
+                        }
+                    });
+                },
+
+                async loadIndex() {
+                    if (this.cache) return;
+                    this.loading = true;
+                    try {
+                        const r    = await fetch('/faq/search.json');
+                        this.cache = await r.json();
+                    } catch (err) {
+                        console.error('FAQ search index failed to load', err);
+                    }
+                    this.loading = false;
+                    if (this.query) this.search();
+                },
+
+                search() {
+                    if (!this.cache) { this.loadIndex(); return; }
+                    const q = this.query.toLowerCase().trim();
+                    if (!q) { this.results = []; return; }
+
+                    const terms = q.split(/\s+/).filter(Boolean);
+
+                    const scored = this.cache.map(item => {
+                        const title = item.question.toLowerCase();
+                        let score = 0;
+                        if (title === q)               score += 200;
+                        else if (title.startsWith(q))  score += 150;
+                        else if (title.includes(q))    score += 100;
+                        else {
+                            const hits = terms.filter(t => title.includes(t)).length;
+                            score += (hits === terms.length) ? 80 : hits * 20;
+                        }
+                        return { ...item, _score: score };
+                    })
+                    .filter(item => item._score > 0)
+                    .sort((a, b) => b._score - a._score)
+                    .slice(0, 12);
+
+                    this.results = scored;
+                    this.active  = 0;
+                },
+
+                navigate(dir) {
+                    this.active = Math.max(0, Math.min(this.results.length - 1, this.active + dir));
+                    this.$nextTick(() => {
+                        const el = this.$refs.list?.querySelectorAll('a')[this.active];
+                        el?.scrollIntoView({ block: 'nearest' });
+                    });
+                },
+
+                go() {
+                    if (this.results[this.active]) {
+                        window.location.hash = 'faq-' + this.results[this.active].id;
+                        this.query   = '';
+                        this.results = [];
+                    }
+                },
+
+                highlight(text, q) {
+                    if (!q || !text) return text;
+                    const esc = q.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+                    return text.replace(new RegExp(esc, 'gi'),
+                        m => `<mark class="bg-amber-100 text-orange-700 rounded px-0.5">${m}</mark>`);
+                },
+            };
+        }
+        </script>
+
+    </body>
+</html>
+<!-- End: /layout_faq.antlers.html -->

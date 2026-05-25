@@ -12,7 +12,7 @@ page_builder:
       -
         id: mkmbszvb
         label: 'Request a demo'
-        link: /en/yritys
+        link: /en/yritys#contact
         style: primary
       -
         id: mkmbukej
@@ -213,11 +213,11 @@ page_builder:
     eyebrow: 'Collaboration starts here'
     title: "Let's make training management clear"
     text: 'We help organizations create clear and scalable solutions for competence development.'
-    primary_button: /en/yritys
+    primary_button: /en/yritys#contact
     tone: brand
     type: cta
     enabled: true
-    button: /en/yritys
+    button: /en/yritys#contact
   -
     id: mkfaq001
     eyebrow: FAQ

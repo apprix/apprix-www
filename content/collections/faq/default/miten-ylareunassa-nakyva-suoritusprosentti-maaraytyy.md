@@ -1,0 +1,8 @@
+---
+id: fd2ecc31-f58c-4924-aada-f690ef6304c3
+blueprint: faq_item
+title: 'Miten yläreunassa näkyvä suoritusprosentti määräytyy?'
+category: 'Moduulit ja submoduulit'
+order: 14
+answer: '<p>Builder-työkalulla luodussa verkkokoulutuksessa on päämoduuli (esim. ”Työmaaperehdytys), joka voi sisältää useita submoduuleja (kuin kirjan lukuja), kuten tässä tapauksessa ”Submodule 1 – Security issues”, ”Submodule 2 - Contact persons” ja niin edelleen.</p><p>Builder alkaa laskea päämoduulissa koulutuksen suoritusprosenttia 0 %:sta alkaen.</p><p>(Työmaaperehdytys- moduuli Builderissa: päämoduuli + submoduulit)</p><p>Kun kurssin suorittaja saapuu tälle sivulle (Submenu buttons -elementti) ja klikkaa jotakin ikkunan oikealla puolella olevasta sinisestä painikkeesta, hän avaa submoduulin (esim. ”Submodule 1: Security issues”).</p><p>(Tämä on Submenu buttons -elementti päämoduulissa)</p><p>Builder alkaa laskea uudelleen prosenttiosuutta, koska tämä on uusi submoduuli. Kuten kuvasta näkyy, submoduuli ei sisällä Finish-elementtiä.</p><p>Prosenttiosuus kussakin submoduulissa alkaa jälleen 0 %:sta. Submoduuleissa viimeinen elementti on aina "Back to menu", mutta sitä ei ikinä näytetä kurssin suorittajalle, siksi ”100 %” ei näy submoduulissa.</p><p>Kun kurssin suorittaja on suorittanut kaikki pakolliset submoduulit, hän palaa jälleen Submenu buttons -elementtiin. Kaikki pakolliset submoduulit merkitään suoritetuiksi ja hän voi jatkaa päämoduulia. Prosenttiosuus jatkuu normaalisti päämoduulissa, koska tämä on eri moduuli kuin submoduulit.</p><p>Eli toisin sanoen päämoduuli ja submoduulit lasketaan erikseen.</p><p>(Finish -elementti on päämoduulin viimeinen elementti)</p>'
+---

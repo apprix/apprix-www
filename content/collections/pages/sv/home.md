@@ -12,7 +12,7 @@ page_builder:
       -
         id: mkmbszvb
         label: 'Begär demo'
-        link: /sv/yritys
+        link: /sv/yritys#contact
         style: primary
       -
         id: mkmbukej
@@ -213,11 +213,11 @@ page_builder:
     eyebrow: 'Samarbetet börjar här'
     title: 'Låt oss göra utbildningshanteringen tydlig'
     text: 'Vi hjälper organisationer att skapa tydliga och skalbara lösningar för kompetensutveckling.'
-    primary_button: /sv/yritys
+    primary_button: /sv/yritys#contact
     tone: brand
     type: cta
     enabled: true
-    button: /sv/yritys
+    button: /sv/yritys#contact
   -
     id: mkfaq001
     eyebrow: 'VANLIGA FRÅGOR'

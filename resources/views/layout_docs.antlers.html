@@ -1,0 +1,1107 @@
+{{#
+    @name Docs Layout
+    @desc Layout for the Help / Docs section at /help
+#}}
+
+<!-- /layout_docs.antlers.html -->
+<!doctype html>
+<html
+    lang="{{ site:short_locale }}"
+    class="antialiased scroll-smooth"
+    x-data="{ sidebarOpen: false }"
+>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+        {{ vite src="resources/css/site.css|resources/js/site.js" }}
+        {{ partial:statamic-peak-seo::snippets/seo }}
+        {{ stack:head }}
+        <style>
+
+/* ── Heading anchor links ── */
+        .heading-anchor {
+            display: inline-flex; align-items: center;
+            margin-left: 0.4rem; opacity: 1;
+            color: #9ca3af; text-decoration: none;
+            vertical-align: middle;
+            transition: color 0.15s;
+        }
+        .heading-anchor:hover { color: #f87206; }
+
+</style>
+    </head>
+    <body class="flex flex-col min-h-screen bg-white text-neutral-900">
+
+        {{# ─── TOP BAR ─── #}}
+        <header class="sticky top-0 z-40 h-16 border-b border-neutral-200/80 bg-white/95 backdrop-blur-md">
+            <div class="grid h-full grid-cols-[auto_1fr_auto] items-center px-6 md:px-10">
+
+                {{# Left: hamburger + logo + section label #}}
+                <div class="flex h-full items-center gap-3">
+                    <button
+                        type="button"
+                        class="inline-flex items-center justify-center rounded-lg p-2 text-neutral-500 hover:bg-neutral-100 hover:text-neutral-900 lg:hidden"
+                        @click="sidebarOpen = !sidebarOpen"
+                        :aria-expanded="sidebarOpen"
+                        aria-label="Toggle navigation"
+                    >
+                        <svg x-show="!sidebarOpen" class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+                        <svg x-show="sidebarOpen" class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+                    </button>
+                    <a href="/" class="shrink-0 flex items-center">
+                        <img src="/visuals/apprix_logo_rgb.png" alt="Apprix" class="h-12 w-auto">
+                    </a>
+                </div>
+
+                {{# Center: search — flat, no card #}}
+                <div
+                    x-data="docsSearch('{{ site:handle }}')"
+                    class="relative min-w-0 px-16"
+                    @click.outside="results = []"
+                >
+                    {{# 90% wide inner wrapper — input + dropdown share the same bounds #}}
+                    <div class="relative w-full">
+                        <div class="relative">
+                            <input
+                                x-ref="input"
+                                x-model="query"
+                                @input.debounce.150ms="search()"
+                                @keydown.arrow-down.prevent="navigate(1)"
+                                @keydown.arrow-up.prevent="navigate(-1)"
+                                @keydown.enter.prevent="go()"
+                                type="text"
+                                placeholder="Hae ohjeet..."
+                                class="min-w-0 w-full rounded-xl border border-neutral-200 bg-neutral-50 py-2.5 pl-4 pr-10 text-base text-neutral-700 placeholder-neutral-400 outline-none transition-colors focus:border-neutral-300 focus:bg-white"
+                                autocomplete="off"
+                            >
+                            {{# Search icon — right side, hidden once user starts typing #}}
+                            <div
+                                x-show="!query"
+                                class="pointer-events-none absolute inset-y-0 right-3 flex items-center"
+                            >
+                                <svg class="h-4 w-4 text-neutral-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>
+                            </div>
+                        </div>
+
+                    {{# Backdrop — dims sidebar/content while search is active.
+                         Teleported to body so its z-index is in the root stacking
+                         context (below header z-40, above sidebar z-30). #}}
+                    <template x-teleport="body">
+                        <div
+                            x-show="results.length > 0 || (query.length > 0 && !loading) || loading"
+                            x-transition:enter="transition-opacity duration-200"
+                            x-transition:enter-start="opacity-0"
+                            x-transition:enter-end="opacity-100"
+                            x-transition:leave="transition-opacity duration-150"
+                            x-transition:leave-start="opacity-100"
+                            x-transition:leave-end="opacity-0"
+                            class="fixed inset-x-0 bottom-0 top-16 z-[39] bg-neutral-900/20 backdrop-blur-sm"
+                            @click="query = ''; results = []"
+                            aria-hidden="true"
+                            style="display:none;"
+                        ></div>
+                    </template>
+
+                    {{# Results dropdown #}}
+                    <div
+                        x-show="results.length > 0 || (query.length > 0 && !loading) || loading"
+                        x-ref="list"
+                        class="absolute left-0 right-0 top-full z-50 mt-1 max-h-[70vh] overflow-y-auto rounded-xl border border-neutral-200 bg-white shadow-xl"
+                        style="display:none;"
+                    >
+                        <div x-show="results.length > 0" class="py-2">
+                            <template x-for="(result, i) in results" :key="result.url">
+                                <a
+                                    :href="result.url"
+                                    @mouseenter="active = i"
+                                    class="flex items-center gap-3 border-l-2 px-4 py-3 transition-colors"
+                                    :class="active === i ? 'border-orange-500 bg-orange-50' : 'border-transparent hover:bg-neutral-50'"
+                                >
+                                    <div class="min-w-0 flex-1">
+                                        <p class="truncate text-sm font-medium text-neutral-900" x-html="highlight(result.title, query)"></p>
+                                        <p x-show="result.depth > 1 && parentTitle(result)" class="mt-0.5 truncate text-xs text-neutral-400" x-text="parentTitle(result)"></p>
+                                        <p x-show="result.body" class="mt-0.5 text-xs text-neutral-500" x-html="snippet(result.body, query)"></p>
+                                    </div>
+                                    <svg class="h-4 w-4 shrink-0 text-neutral-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+                                </a>
+                            </template>
+                        </div>
+                        <div x-show="results.length === 0 && query.length > 0 && !loading" class="py-10 text-center text-sm text-neutral-400">
+                            Ei tuloksia haulle "<span x-text="query"></span>"
+                        </div>
+                        <div x-show="loading" class="py-8 text-center text-sm text-neutral-400">Ladataan...</div>
+                        <div x-show="results.length > 0" class="border-t border-neutral-100 px-4 py-2 text-xs text-neutral-400">
+                            <span class="font-mono">↑↓</span> navigoi &nbsp;
+                            <span class="font-mono">↵</span> avaa &nbsp;
+                            <span class="font-mono">Esc</span> sulje
+                        </div>
+                    </div>
+                    </div>{{# end w-[90%] wrapper #}}
+                </div>
+
+                {{# Right: back to main site #}}
+                <div class="flex h-full items-center justify-end">
+                    <a
+                        href="https://builder.apprix.fi/b/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="inline-flex items-center rounded-lg border border-neutral-200 bg-white px-5 py-2.5 text-sm font-semibold text-neutral-700 shadow-sm transition hover:border-neutral-300 hover:bg-neutral-50 hover:text-neutral-900"
+                    >
+                        Builder
+                    </a>
+                </div>
+
+            </div>
+        </header>
+
+        {{# ─── MAIN WRAPPER — no max-width so sidebar sits flush left ─── #}}
+        <div class="flex flex-1">
+
+            {{# ─── SIDEBAR ─── #}}
+            <aside
+                class="fixed inset-y-0 left-0 z-30 w-80 overflow-y-auto border-r border-neutral-200/80 bg-neutral-50 pt-16 transition-transform duration-200 lg:sticky lg:top-16 lg:h-[calc(100vh-4rem)] lg:translate-x-0 lg:shrink-0 lg:pt-0"
+                :class="sidebarOpen ? 'translate-x-0' : '-translate-x-full lg:translate-x-0'"
+            >
+                <nav class="py-5">
+                    <p class="mb-3 px-5 text-[0.6875rem] font-semibold uppercase tracking-widest text-neutral-400">Ohjeet</p>
+                    {{# Flat list — JS below restructures this into a collapsible tree #}}
+                    <ul class="space-y-px" id="docs-nav">
+                        {{ collection:docs }}
+                            <li data-depth="{{ depth }}">
+                                <a
+                                    href="{{ url }}"
+                                    data-section="{{ slug }}"
+                                    data-depth="{{ depth }}"
+                                    class="flex items-center py-1.5 pr-4 text-sm transition-colors
+                                        {{ if depth == 1 }}pl-5 font-semibold text-neutral-800 hover:bg-neutral-100 hover:text-neutral-900
+                                        {{ elseif depth == 2 }}pl-9 text-sm text-neutral-600 hover:bg-neutral-50 hover:text-neutral-900
+                                        {{ else }}pl-[3.25rem] text-[0.8125rem] text-neutral-500 hover:text-neutral-700{{ /if }}"
+                                >{{ title }}</a>
+                            </li>
+                        {{ /collection:docs }}
+                    </ul>
+                </nav>
+            </aside>
+
+            {{# Sidebar overlay for mobile #}}
+            <div
+                x-show="sidebarOpen"
+                x-transition:enter="transition-opacity duration-200"
+                x-transition:enter-start="opacity-0"
+                x-transition:enter-end="opacity-100"
+                x-transition:leave="transition-opacity duration-200"
+                x-transition:leave-start="opacity-100"
+                x-transition:leave-end="opacity-0"
+                class="fixed inset-0 z-20 bg-black/40 lg:hidden"
+                @click="sidebarOpen = false"
+                aria-hidden="true"
+            ></div>
+
+            {{# ─── CONTENT AREA ─── #}}
+            <main class="min-w-0 flex-1 bg-white">
+                <div class="mx-auto max-w-3xl px-6 py-10 md:px-10 md:py-12">
+                    {{ template_content }}
+                </div>
+            </main>
+
+
+        </div>
+
+        {{# ─── FOOTER ─── #}}
+        <footer class="border-t border-neutral-200 bg-neutral-50">
+            <div class="px-6 py-5 md:px-10">
+                <p class="text-center text-xs text-neutral-400">
+                    &copy; {{ now format="Y" }} Apprix Oy &mdash;
+                    <a href="/" class="hover:text-neutral-600 hover:underline">Apprix.fi</a>
+                </p>
+            </div>
+        </footer>
+
+        <script>
+        function docsSearch(site) {
+            return {
+                query: '',
+                results: [],
+                active: 0,
+                cache: null,
+                loading: false,
+                site: site,
+
+                init() {
+                    // Preload index in the background so first keystroke is instant
+                    this.loadIndex();
+                    document.addEventListener('keydown', (e) => {
+                        // Cmd/Ctrl+K — focus search
+                        if ((e.metaKey || e.ctrlKey) && e.key === 'k') {
+                            e.preventDefault();
+                            if (this.$refs.input) this.$refs.input.focus();
+                            return;
+                        }
+                        // Escape — close results (works whether input is focused or not)
+                        if (e.key === 'Escape') {
+                            if (this.query || this.results.length) {
+                                e.preventDefault();
+                                this.query = '';
+                                this.results = [];
+                            }
+                            return;
+                        }
+                        // Already in this input — leave it alone
+                        if (document.activeElement === this.$refs.input) return;
+                        // Another form control is focused — don't steal
+                        const tag = document.activeElement?.tagName;
+                        if (tag && ['INPUT', 'TEXTAREA', 'SELECT'].includes(tag)) return;
+                        // Ignore modifier combos, special keys (Backspace, Arrow, etc.)
+                        if (e.key.length !== 1 || e.metaKey || e.ctrlKey || e.altKey) return;
+                        // Printable character — capture it into the search bar
+                        e.preventDefault();
+                        this.query += e.key;
+                        this.search();
+                        this.$nextTick(() => {
+                            if (!this.$refs.input) return;
+                            this.$refs.input.focus();
+                            const len = this.$refs.input.value.length;
+                            this.$refs.input.setSelectionRange(len, len);
+                        });
+                    });
+                },
+
+                async loadIndex() {
+                    if (this.cache !== null || this.loading) return;
+                    this.loading = true;
+                    try {
+                        const r = await fetch('/help/search.json?site=' + this.site);
+                        this.cache = await r.json();
+                    } catch (e) {
+                        this.cache = [];
+                    } finally {
+                        this.loading = false;
+                        if (this.query) this.search();
+                    }
+                },
+
+                search() {
+                    if (!this.cache || !this.query.trim()) {
+                        this.results = [];
+                        return;
+                    }
+                    const q = this.query.toLowerCase().trim();
+                    const words = q.split(/\s+/).filter(Boolean);
+
+                    const scored = this.cache.map(entry => {
+                        const t = entry.title.toLowerCase();
+                        const body = (entry.body || '').toLowerCase();
+                        let score = 0;
+
+                        // Title scoring
+                        if (t === q)                                        score += 200;
+                        else if (t.startsWith(q))                           score += 150;
+                        else if (t.includes(q))                             score += 100;
+                        else if (words.length > 1 && words.every(w => t.includes(w))) score += 80;
+                        else if (words.some(w => t.includes(w)))            score += 40;
+
+                        // Body scoring
+                        if (body.includes(q))                               score += 10;
+                        else words.forEach(w => { if (body.includes(w))    score += 5; });
+
+                        // Depth-1 bonus
+                        if (score > 0 && entry.depth === 1)                 score += 10;
+
+                        return { ...entry, score };
+                    }).filter(e => e.score > 0)
+                      .sort((a, b) => b.score - a.score)
+                      .slice(0, 12);
+
+                    this.results = scored;
+                    this.active = 0;
+                },
+
+                _markRe(q) {
+                    const esc = s => s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+                    const phrase = q.trim();
+                    const words = phrase.split(/\s+/).filter(Boolean);
+                    // Phrase first so it takes priority in the alternation; then individual words
+                    const parts = words.length > 1 ? [esc(phrase), ...words.map(esc)] : [esc(phrase)];
+                    return new RegExp('(' + parts.join('|') + ')', 'gi');
+                },
+
+                highlight(text, q) {
+                    const safe = this.esc(text || '');
+                    if (!q || !q.trim()) return safe;
+                    return safe.replace(this._markRe(q), '<mark class="bg-amber-100 text-orange-700 rounded-sm">$1</mark>');
+                },
+
+                esc(text) {
+                    return String(text || '')
+                        .replace(/&/g, '&amp;')
+                        .replace(/</g, '&lt;')
+                        .replace(/>/g, '&gt;');
+                },
+
+                snippet(body, q) {
+                    if (!body) return '';
+                    const phrase = (q || '').trim();
+                    const needle = phrase.toLowerCase();
+                    const idx = needle ? body.toLowerCase().indexOf(needle) : -1;
+                    const start = idx < 0 ? 0 : Math.max(0, idx - 30);
+                    const end   = idx < 0 ? Math.min(body.length, 110) : Math.min(body.length, idx + 80);
+                    const prefix = start > 0 ? '…' : '';
+                    const suffix = end < body.length ? '…' : '';
+                    const slice  = this.esc(body.slice(start, end));
+                    if (!phrase) return prefix + slice + suffix;
+                    return prefix + slice.replace(this._markRe(phrase), '<mark class="bg-amber-100 text-orange-700 rounded-sm">$1</mark>') + suffix;
+                },
+
+                parentTitle(entry) {
+                    if (entry.depth <= 1 || !this.cache) return '';
+                    const m = entry.title.match(/^(\d+)[.\s]/);
+                    if (!m) return '';
+                    const topNum = m[1];
+                    const parent = this.cache.find(e =>
+                        e.depth === 1 && new RegExp('^' + topNum + '\\s').test(e.title)
+                    );
+                    return parent ? parent.title : '';
+                },
+
+                navigate(dir) {
+                    if (!this.results.length) return;
+                    this.active = (this.active + dir + this.results.length) % this.results.length;
+                    this.$nextTick(() => {
+                        const list = this.$refs.list;
+                        if (!list) return;
+                        const items = list.querySelectorAll('a');
+                        if (items[this.active]) items[this.active].scrollIntoView({ block: 'nearest' });
+                    });
+                },
+
+                go() {
+                    if (this.results[this.active]) {
+                        window.location.href = this.results[this.active].url;
+                    }
+                },
+            };
+        }
+        </script>
+
+        <script>
+        (function () {
+
+            // ── 0. Build collapsible tree from flat list ──
+            var nav = document.getElementById('docs-nav');
+            if (nav) {
+                var flatItems = Array.from(nav.querySelectorAll('li[data-depth]'));
+                // Determine real depth from the numeric prefix in the title
+                // e.g. "2 Login" → 1, "2.1 Login" → 2, "2.2.1 Menu" → 3
+                function titleDepth(text) {
+                    var t = text.trim();
+                    var m = t.match(/^(\d+(?:\.\d+)*)\s/);
+                    if (m) return m[1].split('.').length;
+                    // "N. Something" — Finnish ordinal format (e.g. "2. osion video")
+                    // is a child entry, not a top-level section.
+                    if (/^\d+\.\s/.test(t)) return 2;
+                    return 1;
+                }
+
+                // Collect structured data from flat list
+                var data = flatItems.map(function (li) {
+                    var a = li.querySelector('a');
+                    var text = a.textContent.trim();
+                    return { depth: titleDepth(text), href: a.href, section: a.dataset.section, text: text };
+                });
+
+                // Group into sections (depth-1 + their depth-2/3 descendants)
+                var sections = [];
+                var i = 0;
+                while (i < data.length) {
+                    if (data[i].depth === 1) {
+                        var sec = { item: data[i], children: [] };
+                        var j = i + 1;
+                        while (j < data.length && data[j].depth > 1) {
+                            sec.children.push(data[j]);
+                            j++;
+                        }
+                        sections.push(sec);
+                        i = j;
+                    } else { i++; }
+                }
+
+                function makeLink(d, cls) {
+                    var a = document.createElement('a');
+                    a.href = d.href;
+                    a.dataset.section = d.section;
+                    a.dataset.depth = d.depth;
+                    a.className = cls;
+                    a.textContent = d.text;
+                    return a;
+                }
+
+                nav.innerHTML = '';
+
+                sections.forEach(function (sec) {
+                    var li = document.createElement('li');
+                    li.appendChild(makeLink(sec.item, 'flex items-center py-2 pl-5 pr-3 text-sm font-semibold text-neutral-800 transition-colors hover:bg-neutral-100 hover:text-neutral-900'));
+
+                    // Base URL of the parent section (strip any existing hash)
+                    var parentUrl = sec.item.href.split('#')[0];
+
+                    if (sec.children.length > 0) {
+                        var childUl = document.createElement('ul');
+                        childUl.className = 'mt-0.5 space-y-0.5 pb-2';
+
+                        var k = 0;
+                        while (k < sec.children.length) {
+                            var child = sec.children[k];
+                            if (child.depth === 2) {
+                                // Always point to the parent section page + anchor so the full
+                                // section (with all siblings) loads instead of the child's own page.
+                                child.href = parentUrl + '#' + child.section;
+                                var childLi = document.createElement('li');
+                                childLi.appendChild(makeLink(child, 'block py-1.5 pl-9 pr-4 text-sm text-neutral-600 transition-colors hover:bg-neutral-100 hover:text-neutral-900'));
+
+                                var grandUl = null;
+                                var m = k + 1;
+                                while (m < sec.children.length && sec.children[m].depth === 3) {
+                                    if (!grandUl) {
+                                        grandUl = document.createElement('ul');
+                                        grandUl.className = 'mt-px space-y-px';
+                                    }
+                                    sec.children[m].href = parentUrl + '#' + sec.children[m].section;
+                                    var grandLi = document.createElement('li');
+                                    grandLi.appendChild(makeLink(sec.children[m], 'block py-1.5 pl-[3.25rem] pr-4 text-[0.8125rem] text-neutral-500 transition-colors hover:bg-neutral-100 hover:text-neutral-800'));
+                                    grandUl.appendChild(grandLi);
+                                    m++;
+                                }
+                                if (grandUl) childLi.appendChild(grandUl);
+
+                                childUl.appendChild(childLi);
+                                k = m;
+                            } else { k++; }
+                        }
+
+                        li.appendChild(childUl);
+                    }
+
+                    nav.appendChild(li);
+                });
+            }
+
+            // ── 1. Active state: highlight the link whose href matches the current page
+            var currentPath = window.location.pathname;
+            var currentHash = window.location.hash; // e.g. "#51-slug" or ""
+            var activeTopLink = null;
+            document.querySelectorAll('#docs-nav a[data-section]').forEach(function (a) {
+                var aUrl = new URL(a.href);
+                // Require both pathname AND hash to match so subsection links (which now
+                // share the parent's pathname) don't all light up on the parent page.
+                if (aUrl.pathname === currentPath && aUrl.hash === currentHash) {
+                    a.style.fontWeight = '600';
+                    a.style.color      = '#c2410c';
+                    a.style.background = 'rgba(248,114,6,0.08)';
+                    a.style.boxShadow  = 'inset 3px 0 0 #f87206';
+                    activeTopLink = a;
+                    // Auto-open parent <details> if this is a child/grandchild link
+                    var parentDetails = a.closest('details');
+                    if (parentDetails) parentDetails.open = true;
+                }
+            });
+
+            // On the /help index page, treat section 1 as active
+            if (!activeTopLink && (currentPath === '/help' || currentPath === '/help/')) {
+                var firstLink = document.querySelector('#docs-nav a[data-depth="1"]');
+                if (firstLink) {
+                    firstLink.style.fontWeight = '600';
+                    firstLink.style.color      = '#c2410c';
+                    firstLink.style.background = 'rgba(248,114,6,0.08)';
+                    firstLink.style.boxShadow  = 'inset 3px 0 0 #f87206';
+                    activeTopLink = firstLink;
+                }
+            }
+
+            // Scroll the sidebar so the active section is visible
+            if (activeTopLink) {
+                var aside = activeTopLink.closest('aside');
+                if (aside) {
+                    var linkRect = activeTopLink.getBoundingClientRect();
+                    var asideRect = aside.getBoundingClientRect();
+                    aside.scrollTop += linkRect.top - asideRect.top - aside.clientHeight / 3;
+                }
+            }
+
+            // ── 2. Scroll spy — extensible for dynamically loaded sections ──
+            // spySections / spyLinks are mutable arrays; call extendSpy(container)
+            // any time new content is inserted to register its section[id] elements.
+            var spySections    = [];
+            var spyLinks       = [];
+            var spyDimmedParent = null;
+
+            var spyObserver = new IntersectionObserver(function (entries) {
+                entries.forEach(function (entry) {
+                    if (entry.isIntersecting) spySetActive(entry.target.id);
+                });
+            }, { rootMargin: '-80px 0px -60% 0px' });
+
+            function spySetActive(id) {
+                var activeLink = null;
+
+                // Clear activeTopLink FIRST — if it happens to be the same link
+                // that spyLinks.forEach is about to activate (e.g. when the initial
+                // active-state pass set a depth-2 link via hash match), clearing it
+                // AFTER the forEach would wipe the style we just applied.
+                if (topLinks && activeTopLink) {
+                    activeTopLink.style.fontWeight = '';
+                    activeTopLink.style.color      = '';
+                    activeTopLink.style.background = '';
+                    activeTopLink.style.boxShadow  = '';
+                    activeTopLink = null;
+                }
+
+                spyLinks.forEach(function (a) {
+                    var active = a.dataset.section === id;
+                    if (active) {
+                        a.style.fontWeight  = '600';
+                        a.style.color       = '#c2410c';
+                        a.style.background  = 'rgba(248,114,6,0.08)';
+                        a.style.boxShadow   = 'inset 3px 0 0 #f87206';
+                        activeLink = a;
+                    } else {
+                        a.style.fontWeight  = '';
+                        a.style.color       = '';
+                        a.style.background  = '';
+                        a.style.boxShadow   = '';
+                    }
+                });
+
+                if (topLinks) {
+                    var sEl     = document.getElementById(id);
+                    var wrapper = sEl && sEl.closest('[data-top-idx]');
+                    if (wrapper) {
+                        var wi = parseInt(wrapper.dataset.topIdx, 10);
+                        if (!isNaN(wi) && topLinks[wi]) {
+                            // Fully deactivate all top-level links — only the subsection is active
+                            topLinks.forEach(function (a) {
+                                a.style.fontWeight = '';
+                                a.style.color      = '';
+                                a.style.background = '';
+                                a.style.boxShadow  = '';
+                                a.style.opacity    = '';
+                            });
+                            spyDimmedParent = topLinks[wi];
+                        }
+                    }
+                }
+
+                if (activeLink) {
+                    var aside2 = activeLink.closest('aside');
+                    if (aside2) {
+                        var lr2 = activeLink.getBoundingClientRect();
+                        var ar2 = aside2.getBoundingClientRect();
+                        aside2.scrollTop += lr2.top - ar2.top - aside2.clientHeight / 2;
+                    }
+                }
+            }
+
+            // Registers section[id] elements in `container` with the spy and
+            // rewrites matching sidebar links to pathname#anchor form so they
+            // work both within the same page and across page navigations.
+            // Safe to call multiple times — duplicates are skipped.
+            function extendSpy(container, pageUrl) {
+                var newSections = Array.from(container.querySelectorAll('section[id]'));
+                if (!newSections.length) return;
+
+                var known = {};
+                spySections.forEach(function (s) { known[s.id] = true; });
+
+                var newIds = {};
+                newSections.forEach(function (s) {
+                    if (!known[s.id]) {
+                        spySections.push(s);
+                        spyObserver.observe(s);
+                        newIds[s.id] = true;
+                    }
+                });
+
+                var linked = {};
+                spyLinks.forEach(function (a) { linked[a.dataset.section] = true; });
+
+                var base = pageUrl || window.location.pathname;
+                Array.from(document.querySelectorAll('#docs-nav a[data-section]')).forEach(function (a) {
+                    if (newIds[a.dataset.section] && !linked[a.dataset.section]) {
+                        a.href = base + '#' + a.dataset.section;
+                        spyLinks.push(a);
+                    }
+                });
+            }
+
+            // Seed with sections already in the DOM at page load
+            extendSpy(document, window.location.pathname);
+
+            // ── Sidebar anchor click handler ──
+            // When the target section is already in the DOM (same page or infinite-scroll
+            // loaded), scroll to it via JS — same-page pathname#hash clicks don't always
+            // trigger the native browser scroll when history.replaceState has been used.
+            // Falls through to native navigation when the element is not in the DOM.
+            var docsNav = document.getElementById('docs-nav');
+            if (docsNav) {
+                docsNav.addEventListener('click', function (e) {
+                    var link = e.target.closest('a[data-section]');
+                    if (!link) return;
+                    var href = link.getAttribute('href') || '';
+                    var hashIdx = href.indexOf('#');
+                    if (hashIdx === -1) return;
+                    var id = href.slice(hashIdx + 1);
+                    var target = document.getElementById(id);
+                    if (!target) return; // not in DOM — let browser navigate
+                    e.preventDefault();
+                    target.scrollIntoView({ behavior: 'instant', block: 'start' });
+                    history.pushState(null, '', href);
+                    spySetActive(id);
+                });
+            }
+
+            // ── hashchange — handles search-result clicks that land on the same pathname ──
+            // When history.replaceState has changed the URL to /help/8-something and the
+            // user clicks a search result for /help/8-something#816-slug, the browser
+            // does a same-page hash navigation (no page reload, docsEnhance doesn't re-run).
+            // We catch that here to activate the subsection and scroll to it.
+            window.addEventListener('hashchange', function () {
+                var newHash = decodeURIComponent(window.location.hash.slice(1));
+                if (!newHash) return;
+                if (spyLinks.some(function (a) { return a.dataset.section === newHash; })) {
+                    spySetActive(newHash);
+                }
+                var target = document.getElementById(newHash);
+                if (target) {
+                    requestAnimationFrame(function () {
+                        requestAnimationFrame(function () {
+                            target.scrollIntoView({ behavior: 'instant', block: 'start' });
+                        });
+                    });
+                }
+            });
+
+            // ── 3. Active state + infinite scroll (show pages only) ──
+            var bottomNav = document.getElementById('docs-bottom-nav');
+            if (!bottomNav) return;
+
+            var allSidebarLinks = Array.from(document.querySelectorAll('#docs-nav a'));
+
+            function entryDepth(a) {
+                var t = a.textContent.trim();
+                var m = t.match(/^(\d+(?:\.\d+)*)\s/);
+                if (m) return m[1].split('.').length;
+                // "N. Something" ordinal format → depth 2, not a top-level section
+                if (/^\d+\.\s/.test(t)) return 2;
+                return 1;
+            }
+
+            var topLinks = allSidebarLinks.filter(function (a) { return entryDepth(a) === 1; });
+
+            var idx = -1;
+            topLinks.forEach(function (a, i) {
+                if (new URL(a.href).pathname === currentPath) idx = i;
+            });
+
+            // If on a child/grandchild page, find the nearest parent top-level section
+            if (idx < 0 && activeTopLink) {
+                var curDomIdx = allSidebarLinks.indexOf(activeTopLink);
+                if (curDomIdx >= 0) {
+                    for (var ti = topLinks.length - 1; ti >= 0; ti--) {
+                        if (allSidebarLinks.indexOf(topLinks[ti]) < curDomIdx) {
+                            idx = ti;
+                            break;
+                        }
+                    }
+                }
+            }
+            if (idx < 0) return;
+
+            var prevLink = idx > 0                   ? topLinks[idx - 1] : null;
+            var nextLink = idx < topLinks.length - 1  ? topLinks[idx + 1] : null;
+
+            // ── Highlight the active top-level section link (e.g. when viewing a child page) ──
+            if (topLinks[idx] && !topLinks[idx].style.background) {
+                topLinks[idx].style.fontWeight = '600';
+                topLinks[idx].style.color      = '#c2410c';
+                topLinks[idx].style.background = 'rgba(248,114,6,0.08)';
+                topLinks[idx].style.boxShadow  = 'inset 3px 0 0 #f87206';
+            }
+
+            // ── Orange left-border on all child/grandchild links of the active section ──
+            var parentLiIdx   = allSidebarLinks.indexOf(topLinks[idx]);
+            var nextParentIdx = nextLink ? allSidebarLinks.indexOf(nextLink) : allSidebarLinks.length;
+            for (var ci = parentLiIdx + 1; ci < nextParentIdx; ci++) {
+                if (entryDepth(allSidebarLinks[ci]) > 1) {
+                    allSidebarLinks[ci].style.boxShadow = 'inset 3px 0 0 rgba(248,114,6,0.4)';
+                }
+            }
+
+            // loadHash is used later (after origWrapper exists) so spySetActive can
+            // find the [data-top-idx] wrapper and set spyDimmedParent correctly.
+            // decodeURIComponent handles any URL-encoded characters in Finnish slugs.
+            var loadHash = decodeURIComponent(window.location.hash.slice(1));
+
+
+
+            // ── 5 & 6. Seamless infinite-scroll — prev (top) + next (bottom) ──
+            //
+            // Architecture:
+            //  • The original page content is wrapped in an observable div so we can
+            //    track which section the user is reading (for sidebar + URL sync).
+            //  • A shared `loadSection()` fetches any top-level section, strips layout
+            //    chrome, and prepends/appends it with a fade-in.
+            //  • An IntersectionObserver on every loaded wrapper updates the sidebar
+            //    active link and the URL via history.replaceState as the user scrolls.
+            //  • Each pill tracks its own "next link to load" cursor so the user can
+            //    keep loading section after section without hitting any one-shot limit.
+
+            var mainContent = document.querySelector('main > div');
+            if (mainContent) {
+
+                // ─── Pill factory ────────────────────────────────────────────────
+                var upArrow   = '<svg width="10" height="10" viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 8V2M2 5l3-3 3 3"/></svg>';
+                var downArrow = '<svg width="10" height="10" viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 2v6M2 5l3 3 3-3"/></svg>';
+
+                function makePill(upward) {
+                    var wrap = document.createElement('div');
+                    wrap.style.cssText = 'position:fixed;' + (upward ? 'top:56px' : 'bottom:4px') +
+                        ';z-index:35;display:flex;justify-content:center;pointer-events:none;' +
+                        'transition:opacity 0.25s ease,transform 0.25s ease;opacity:0;' +
+                        'transform:translateY(' + (upward ? '-8px' : '8px') + ');';
+
+                    var btn = document.createElement('button');
+                    btn.type = 'button';
+                    btn.style.cssText = 'pointer-events:auto;display:inline-flex;align-items:center;gap:5px;' +
+                        'padding:4px 12px;background:white;border:1px solid #e5e7eb;border-radius:9999px;' +
+                        'box-shadow:0 1px 4px rgba(0,0,0,0.07),0 0 0 1px rgba(0,0,0,0.02);' +
+                        'font-size:0.75rem;font-weight:500;color:#6b7280;cursor:pointer;' +
+                        'white-space:nowrap;transition:border-color 0.15s,color 0.15s;';
+                    btn.addEventListener('mouseover', function () { btn.style.borderColor = '#f87206'; btn.style.color = '#f87206'; });
+                    btn.addEventListener('mouseout',  function () { btn.style.borderColor = '#e5e7eb';  btn.style.color = '#6b7280';  });
+                    wrap.appendChild(btn);
+                    document.body.appendChild(wrap);
+
+                    function pos() {
+                        wrap.style.left  = window.innerWidth >= 1024 ? '320px' : '0';
+                        wrap.style.right = '0';
+                    }
+                    pos();
+                    window.addEventListener('resize', pos, { passive: true });
+
+                    return {
+                        btn:  btn,
+                        show: function (v) {
+                            wrap.style.opacity       = v ? '1' : '0';
+                            wrap.style.transform     = v ? 'translateY(0)' : 'translateY(' + (upward ? '-8px' : '8px') + ')';
+                            wrap.style.pointerEvents = v ? 'auto' : 'none';
+                        },
+                        setLabel: function (text, up) {
+                            btn.innerHTML = (up ? upArrow : downArrow) + '<span>' + text + '</span>';
+                        }
+                    };
+                }
+
+                // ─── Sidebar top-link active state ───────────────────────────────
+                function setSidebarActive(linkEl) {
+                    // Clear the initially-styled link (child-page link not in spyLinks/topLinks)
+                    if (activeTopLink) {
+                        activeTopLink.style.fontWeight = '';
+                        activeTopLink.style.color      = '';
+                        activeTopLink.style.background = '';
+                        activeTopLink.style.boxShadow  = '';
+                        activeTopLink = null;
+                    }
+                    // Clear any spy-highlighted subsection links
+                    spyLinks.forEach(function (a) {
+                        a.style.fontWeight = '';
+                        a.style.color      = '';
+                        a.style.background = '';
+                        a.style.boxShadow  = '';
+                    });
+                    spyDimmedParent = null;
+                    topLinks.forEach(function (a) {
+                        a.style.fontWeight = '';
+                        a.style.color      = '';
+                        a.style.background = '';
+                        a.style.boxShadow  = '';
+                        a.style.opacity    = '';
+                    });
+                    if (linkEl) {
+                        linkEl.style.fontWeight = '600';
+                        linkEl.style.color      = '#c2410c';
+                        linkEl.style.background = 'rgba(248,114,6,0.08)';
+                        linkEl.style.boxShadow  = 'inset 3px 0 0 #f87206';
+                    }
+                }
+
+                // Wrap the original content so it can be observed like any loaded section
+                var origWrapper = document.createElement('div');
+                origWrapper.dataset.topIdx = String(idx);
+                while (mainContent.firstChild) origWrapper.appendChild(mainContent.firstChild);
+                mainContent.appendChild(origWrapper);
+
+                // Activate the subsection sidebar state and scroll to it.
+                // Must happen AFTER origWrapper exists so spySetActive can find
+                // [data-top-idx] and set spyDimmedParent — preventing visObs from
+                // immediately overriding the subsection highlight.
+                if (loadHash) {
+                    if (spyLinks.some(function (a) { return a.dataset.section === loadHash; })) {
+                        spySetActive(loadHash);
+                    }
+                    var hashTarget = document.getElementById(loadHash);
+                    if (hashTarget) {
+                        hashTarget.scrollIntoView({ behavior: 'instant', block: 'start' });
+                        // Images in preceding sections may not have loaded yet, causing a
+                        // layout shift that pushes the target below the viewport.
+                        // Re-scroll after all resources finish loading, but cancel if the
+                        // user has already scrolled somewhere else.
+                        var loadHashScrolled = false;
+                        window.addEventListener('scroll', function () { loadHashScrolled = true; }, { once: true, passive: true });
+                        window.addEventListener('load', function () {
+                            if (!loadHashScrolled) {
+                                hashTarget.scrollIntoView({ behavior: 'instant', block: 'start' });
+                            }
+                        }, { once: true });
+                    }
+                }
+
+                // One observer drives both URL sync and sidebar highlight
+                var visObs = new IntersectionObserver(function (entries) {
+                    entries.forEach(function (e) {
+                        if (!e.isIntersecting) return;
+                        var ti = parseInt(e.target.dataset.topIdx, 10);
+                        if (isNaN(ti) || !topLinks[ti]) return;
+                        history.replaceState({}, '', topLinks[ti].href);
+                        // Don't override if a subsection of this section is explicitly active
+                        if (spyDimmedParent === topLinks[ti]) return;
+                        setSidebarActive(topLinks[ti]);
+                    });
+                }, { rootMargin: '-25% 0px -55% 0px', threshold: 0 });
+
+                visObs.observe(origWrapper);
+
+                // ─── Generic section loader ──────────────────────────────────────
+                function loadSection(url, linkEl, prepend) {
+                    return fetch(url)
+                        .then(function (r) { return r.text(); })
+                        .then(function (html) {
+                            var fd = new DOMParser().parseFromString(html, 'text/html');
+                            var fm = fd.querySelector('main > div');
+                            if (!fm) return null;
+
+                            ['#docs-bottom-nav'].forEach(function (sel) {
+                                var el = fm.querySelector(sel);
+                                if (el) el.remove();
+                            });
+
+                            var wrap = document.createElement('div');
+                            wrap.dataset.topIdx = String(topLinks.indexOf(linkEl));
+                            wrap.style.cssText  = 'opacity:0;transition:opacity 0.45s ease;';
+
+                            if (prepend) {
+                                wrap.style.paddingBottom = '3rem';
+                                wrap.style.borderBottom  = '3px solid #f87206';
+                                wrap.style.marginBottom  = '3rem';
+                            } else {
+                                wrap.style.paddingTop = '3rem';
+                                wrap.style.borderTop  = '3px solid #f87206';
+                                wrap.style.marginTop  = '3rem';
+                            }
+
+                            wrap.innerHTML = fm.innerHTML;
+
+                            if (prepend) {
+                                // Capture reference point before insertion so we can
+                                // compensate for the layout shift and keep the viewport still.
+                                var refEl = mainContent.firstChild;
+                                var refTopBefore = refEl ? refEl.getBoundingClientRect().top : 0;
+                                mainContent.insertBefore(wrap, refEl);
+                                // Shift scroll by exactly how far the existing content moved down.
+                                // Must disable scroll-smooth (Tailwind scroll-behavior:smooth on <html>)
+                                // or the browser will animate the compensation and dump the user mid-section.
+                                if (refEl) {
+                                    var delta = refEl.getBoundingClientRect().top - refTopBefore;
+                                    document.documentElement.style.scrollBehavior = 'auto';
+                                    window.scrollBy(0, delta);
+                                    document.documentElement.style.scrollBehavior = '';
+                                }
+                            } else {
+                                mainContent.appendChild(wrap);
+                            }
+
+                            requestAnimationFrame(function () {
+                                requestAnimationFrame(function () { wrap.style.opacity = '1'; });
+                            });
+
+                            visObs.observe(wrap);
+                            extendSpy(wrap, new URL(url).pathname);
+                            if (typeof docsEnhance === 'function') docsEnhance(wrap);
+                            return wrap;
+                        });
+                }
+
+                // ─── PREV pill (top) ─────────────────────────────────────────────
+                if (prevLink) {
+                    var prevPill    = makePill(true);
+                    var curPrevLink = prevLink; // advances left as we load
+                    var loadingPrev = false;
+
+                    function refreshPrevPill() {
+                        if (curPrevLink) prevPill.setLabel(curPrevLink.textContent.trim(), true);
+                        else prevPill.show(false);
+                    }
+                    refreshPrevPill();
+
+                    function doLoadPrev() {
+                        if (loadingPrev || !curPrevLink) return;
+                        loadingPrev = true;
+                        prevPill.show(false);
+
+                        var linkToLoad = curPrevLink;
+                        var pIdx = topLinks.indexOf(linkToLoad);
+                        curPrevLink = pIdx > 0 ? topLinks[pIdx - 1] : null;
+
+                        loadSection(linkToLoad.href, linkToLoad, true)
+                            .then(function (wrap) {
+                                loadingPrev = false;
+                                refreshPrevPill();
+                                if (curPrevLink && window.scrollY < 120) prevPill.show(true);
+                            })
+                            .catch(function () { loadingPrev = false; curPrevLink = linkToLoad; });
+                    }
+
+                    prevPill.btn.addEventListener('click', doLoadPrev);
+
+                    window.addEventListener('scroll', function () {
+                        if (curPrevLink && !loadingPrev) prevPill.show(window.scrollY < 120);
+                        else prevPill.show(false);
+                    }, { passive: true });
+
+                    window.addEventListener('wheel', function (e) {
+                        if (e.deltaY < 0 && window.scrollY === 0 && !loadingPrev && curPrevLink) doLoadPrev();
+                    }, { passive: true });
+
+                    if (window.scrollY < 120) prevPill.show(true);
+                }
+
+                // ─── NEXT pill (bottom) ──────────────────────────────────────────
+                if (nextLink) {
+                    var nextPill    = makePill(false);
+                    var curNextLink = nextLink; // advances right as we load
+                    var loadingNext = false;
+
+                    function nearBottom() {
+                        return (window.scrollY + window.innerHeight) >= document.documentElement.scrollHeight - 240;
+                    }
+
+                    function refreshNextPill() {
+                        if (curNextLink) nextPill.setLabel(curNextLink.textContent.trim(), false);
+                        else nextPill.show(false);
+                    }
+                    refreshNextPill();
+
+                    function doLoadNext() {
+                        if (loadingNext || !curNextLink) return;
+                        loadingNext = true;
+                        nextPill.show(false);
+
+                        var linkToLoad = curNextLink;
+                        var nIdx = topLinks.indexOf(linkToLoad);
+                        curNextLink = nIdx < topLinks.length - 1 ? topLinks[nIdx + 1] : null;
+
+                        loadSection(linkToLoad.href, linkToLoad, false)
+                            .then(function (wrap) {
+                                loadingNext = false;
+                                refreshNextPill();
+                                if (curNextLink && nearBottom()) nextPill.show(true);
+                            })
+                            .catch(function () { loadingNext = false; curNextLink = linkToLoad; });
+                    }
+
+                    nextPill.btn.addEventListener('click', doLoadNext);
+
+                    window.addEventListener('scroll', function () {
+                        if (curNextLink && !loadingNext) nextPill.show(nearBottom());
+                        else nextPill.show(false);
+                    }, { passive: true });
+
+                    window.addEventListener('wheel', function (e) {
+                        if (e.deltaY > 0 && nearBottom() && !loadingNext && curNextLink) doLoadNext();
+                    }, { passive: true });
+                }
+            }
+        }());
+        </script>
+
+        <script>
+        /* ── Docs enhancements: anchors ── */
+        (function () {
+
+            // ── Heading anchor links ─────────────────────────────────────────────
+            function ensureHeadingIds(container) {
+                var used = {};
+                document.querySelectorAll('[id]').forEach(function(el) { used[el.id] = true; });
+                container.querySelectorAll('h2, h3').forEach(function(h) {
+                    if (h.id) { used[h.id] = true; return; }
+                    var base = (h.textContent || '').trim().toLowerCase()
+                        .replace(/[äå]/g,'a').replace(/ö/g,'o').replace(/ü/g,'u')
+                        .replace(/[^a-z0-9\s-]/g,'').replace(/\s+/g,'-').slice(0,48) || 'section';
+                    var id = base, n = 2;
+                    while (used[id]) { id = base + '-' + (n++); }
+                    h.id = id; used[id] = true;
+                });
+            }
+
+            function addHeadingAnchors(container) {
+                ensureHeadingIds(container);
+                container.querySelectorAll('h2[id], h3[id]').forEach(function(h) {
+                    if (h.querySelector('.heading-anchor')) return;
+                    var a = document.createElement('a');
+                    a.href      = '#' + h.id;
+                    a.className = 'heading-anchor';
+                    a.setAttribute('aria-label', 'Kopioi linkki tähän kohtaan');
+                    a.innerHTML = '<svg width="14" height="14" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 13a5 5 0 007.54.54l3-3a5 5 0 00-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 00-7.54-.54l-3 3a5 5 0 007.07 7.07l1.71-1.71"/></svg>';
+                    a.addEventListener('click', function(e) {
+                        e.preventDefault();
+                        var url = window.location.origin + window.location.pathname + '#' + h.id;
+                        function fallback() {
+                            var ta = document.createElement('textarea');
+                            ta.value = url;
+                            ta.style.cssText = 'position:fixed;top:0;left:0;opacity:0;';
+                            document.body.appendChild(ta);
+                            ta.focus(); ta.select();
+                            try { document.execCommand('copy'); } catch(ex) {}
+                            document.body.removeChild(ta);
+                            a.style.color = '#16a34a';
+                            setTimeout(function() { a.style.color = ''; }, 1500);
+                        }
+                        if (navigator.clipboard) {
+                            navigator.clipboard.writeText(url).then(function() {
+                                a.style.color = '#16a34a';
+                                setTimeout(function() { a.style.color = ''; }, 1500);
+                            }).catch(fallback);
+                        } else {
+                            fallback();
+                        }
+                        history.replaceState(null, '', '#' + h.id);
+                    });
+                    h.appendChild(a);
+                });
+            }
+
+
+            // ── Master enhancer (called on page load + each infinite-scroll section) ──
+            function docsEnhance(container) {
+                addHeadingAnchors(container);
+            }
+            window.docsEnhance = docsEnhance; // hoisted for loadSection hook
+
+            // ── Init ─────────────────────────────────────────────────────────────
+            docsEnhance(document);
+
+        }());
+        </script>
+
+    </body>
+</html>
+<!-- End: /layout_docs.antlers.html -->

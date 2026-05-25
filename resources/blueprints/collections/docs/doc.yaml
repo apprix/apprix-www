@@ -1,0 +1,89 @@
+title: Doc
+tabs:
+  main:
+    display: Sisältö
+    sections:
+      -
+        fields:
+          - handle: title
+            field:
+              type: text
+              required: true
+              localizable: true
+              display: Otsikko
+
+          - handle: content
+            field:
+              type: bard
+              localizable: true
+              display: Sisältö
+              container: files
+              fullscreen: true
+              save_html: true
+              toolbar_mode: fixed
+              reading_time: true
+              allow_source: true
+              enable_input_rules: true
+              enable_paste_rules: true
+
+          - handle: videos
+            field:
+              type: replicator
+              display: Videot
+              instructions: 'Lisää Vimeo- tai MP4-videoita. Näkyvät sisällön lopussa.'
+              localizable: true
+              collapse: true
+              sets:
+                media:
+                  display: Media
+                  icon: media-image-camera
+                  sets:
+                    vimeo:
+                      display: Vimeo-video
+                      icon: media-webcam-video
+                      instructions: 'Lisää Vimeo-video ID:llä.'
+                      fields:
+                        - handle: vimeo_id
+                          field:
+                            type: text
+                            display: Vimeo Video ID
+                            instructions: 'Video ID Vimeo-osoitteesta. Esim. vimeo.com/video/328168769 → ID on 328168769'
+                            placeholder: '328168769'
+                    mp4:
+                      display: MP4-video
+                      icon: media-webcam-video
+                      instructions: 'Lisää oma MP4-videotiedosto.'
+                      fields:
+                        - handle: file
+                          field:
+                            type: assets
+                            display: Video-tiedosto
+                            container: files
+                            max_files: 1
+  seo:
+    display: SEO
+    sections:
+      -
+        display: Basic
+        instructions: 'Basic SEO settings.'
+        fields:
+          -
+            import: 'statamic-peak-seo::seo_basic'
+      -
+        display: Advanced
+        instructions: 'Advanced SEO settings.'
+        fields:
+          -
+            import: 'statamic-peak-seo::seo_advanced'
+      -
+        display: 'Open Graph'
+        instructions: 'Open Graph meta tags for social sharing.'
+        fields:
+          -
+            import: 'statamic-peak-seo::seo_open_graph'
+      -
+        display: Sitemap
+        instructions: 'Sitemap configuration.'
+        fields:
+          -
+            import: 'statamic-peak-seo::seo_sitemap'
