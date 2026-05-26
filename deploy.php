@@ -56,23 +56,13 @@ after('deploy:vendors', 'deploy:sync-assets');
 after('deploy:vendors', 'artisan:config:cache');
 after('deploy:vendors', 'artisan:route:cache');
 
-// Configure git in each release for Statamic Git integration.
-// Uses a dedicated SSH deploy key (stored in shared/) so www-data can push
-// without being tied to any personal GitHub account.
-// The private key must be placed at shared/.statamic-git-deploy-key on the server
-// and the corresponding public key added to GitHub as a deploy key with write access.
+// Configure git identity in each release for Statamic Git commits.
+// Authentication (deploy key + safe.directory) is handled by the git wrapper
+// script at shared/git-wrapper.sh, referenced via STATAMIC_GIT_BINARY in .env.
 task('deploy:git-auth-setup', function () {
-    $keyPath = '{{deploy_path}}/shared/.statamic-git-deploy-key';
-    $keyExists = test("[ -f $keyPath ]");
-    if (!$keyExists) {
-        writeln('<comment>Warning: deploy key not found at ' . $keyPath . ' — Statamic Git push will not work.</comment>');
-        return;
-    }
-    // Tell git to use the deploy key when connecting to GitHub
-    run("git -C {{release_path}} config core.sshCommand 'ssh -i $keyPath -o StrictHostKeyChecking=no -o IdentitiesOnly=yes'");
     run("git -C {{release_path}} config user.email 'statamic@apprix.fi'");
     run("git -C {{release_path}} config user.name 'Statamic Bot'");
-    // Give www-data access to .git/ so it can run git add/commit/push
+    // Give www-data rwX access to .git/ so it can run git add/commit/push
     run("setfacl -R -m u:www-data:rwX {{release_path}}/.git");
     run("setfacl -R -d -m u:www-data:rwX {{release_path}}/.git");
 });
