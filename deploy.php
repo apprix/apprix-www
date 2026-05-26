@@ -27,6 +27,10 @@ task('deploy:update_code', function () {
     $git = get('bin/git');
     $repo = get('repository');
     $branch = get('branch', 'main');
+    // GitHub Actions checks out in detached HEAD state, so branch resolves to 'HEAD'
+    if (empty($branch) || $branch === 'HEAD') {
+        $branch = 'main';
+    }
     run("export GIT_TERMINAL_PROMPT=0 GIT_SSH_COMMAND='ssh -o StrictHostKeyChecking=accept-new'; $git clone --depth=1 -b $branch $repo {{release_path}} 2>&1");
     run("$git -C {{release_path}} rev-parse HEAD > {{release_path}}/REVISION");
 });
