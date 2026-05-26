@@ -189,7 +189,7 @@ page_builder:
         id: km-p1
         name: 'Jesse Jokinen'
         role: 'Managing Partner'
-        photo: team/jesse_bw.webp
+        photo: team/jesse_bw-(1).webp
         highlights:
           -
             id: km-h1

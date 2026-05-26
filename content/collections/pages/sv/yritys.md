@@ -80,7 +80,7 @@ page_builder:
         email: jesse.jokinen@apprix.fi
         type: person
         enabled: true
-        photo: team/jesse_bw.webp
+        photo: team/jesse_bw-(1).webp
       -
         id: ml50kwbv
         name: 'Mikko Eskelinen'
