@@ -1,6 +1,8 @@
-data: {  }
+data:
+  alt: 'apprix mycourses'
+  exempt_from_alt: false
 size: 161433
-last_modified: 1770381226
+last_modified: 1779782300
 width: 984
 height: 690
 mime_type: image/jpeg
