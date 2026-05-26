@@ -17,7 +17,7 @@ add('shared_dirs', [
     'content',        // CP-managed content persists across deploys
 ]);
 
-add('writable_dirs', ['storage', 'bootstrap/cache']);
+add('writable_dirs', ['storage', 'bootstrap/cache', 'content']);
 
 host('production')
     ->setHostname('62.238.10.202')
