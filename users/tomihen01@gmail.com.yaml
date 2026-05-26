@@ -1,3 +1,4 @@
 name: 'Tomi Test'
 super: true
 id: ff9172a5-a004-4d96-a26a-a6baf09d252c
+password_hash: $2y$12$jD5Mlmxt8BF1lqkcm308J.13X6iZ2CQ4B6FqB/4LzBStMuxMeoGzS
