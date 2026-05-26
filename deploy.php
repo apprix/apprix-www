@@ -71,6 +71,18 @@ task('deploy:git-auth-setup', function () {
 
 after('deploy:update_code', 'deploy:git-auth-setup');
 
+// Ensure www-data can write to shared upload dirs (public/assets, public/files).
+// These are created once by deploy:shared and owned by deploy, so ACL must be
+// set here (as deploy) rather than in deploy:git-auth-setup.
+task('deploy:shared-permissions', function () {
+    foreach (['public/assets', 'public/files'] as $dir) {
+        run("setfacl -m u:www-data:rwx {{deploy_path}}/shared/$dir");
+        run("setfacl -d -m u:www-data:rwx {{deploy_path}}/shared/$dir");
+    }
+});
+
+after('deploy:shared', 'deploy:shared-permissions');
+
 // Statamic-specific commands
 task('statamic:warm', function () {
     run('cd {{release_path}} && php artisan statamic:stache:warm');
