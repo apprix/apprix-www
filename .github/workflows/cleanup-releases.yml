@@ -1,0 +1,42 @@
+name: Cleanup old releases
+
+on:
+  workflow_dispatch:
+
+jobs:
+  cleanup:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Setup SSH
+        run: |
+          mkdir -p ~/.ssh
+          echo "${{ secrets.SSH_PRIVATE_KEY }}" > ~/.ssh/id_ed25519
+          chmod 600 ~/.ssh/id_ed25519
+          ssh-keyscan -H 62.238.10.202 >> ~/.ssh/known_hosts
+
+      - name: Write and run cleanup script via www-data
+        run: |
+          # Write a PHP script as deploy user into the web root
+          ssh deploy@62.238.10.202 "cat > /var/www/apprix-www/current/public/cleanup_releases.php" << 'PHPEOF'
+          <?php
+          if (($_GET['token'] ?? '') !== 'xK9mP2cleanup') { http_response_code(403); die('forbidden'); }
+          $releases = [32, 35, 37, 38, 39];
+          foreach ($releases as $r) {
+              $gitDir = "/var/www/apprix-www/releases/$r/.git";
+              if (is_dir($gitDir)) exec("rm -rf " . escapeshellarg($gitDir));
+              $relDir = "/var/www/apprix-www/releases/$r";
+              if (is_dir($relDir)) exec("rm -rf " . escapeshellarg($relDir));
+          }
+          echo "done";
+          PHPEOF
+
+          # Hit it via HTTP so it runs as www-data
+          curl -sf -u "apprix:Appr1x2026!" \
+            "https://www3.apprix.fi/cleanup_releases.php?token=xK9mP2cleanup"
+
+          # Delete the script immediately
+          ssh deploy@62.238.10.202 "rm /var/www/apprix-www/current/public/cleanup_releases.php"
+
+      - name: Verify releases
+        run: |
+          ssh deploy@62.238.10.202 "ls /var/www/apprix-www/releases/"
