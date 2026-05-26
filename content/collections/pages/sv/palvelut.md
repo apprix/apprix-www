@@ -26,7 +26,7 @@ page_builder:
       -
         id: plv-stat03
         value: 1M+
-        label: 'genomföranden/år'
+        label: genomföranden/år
         type: stat
         enabled: true
     buttons:
