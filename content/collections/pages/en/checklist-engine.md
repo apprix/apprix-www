@@ -11,7 +11,7 @@ page_builder:
   -
     id: ce-hero
     eyebrow: 'Apprix Checklist Engine'
-    heading: 'Efficiency and clarity for your organization''s onboarding processes'
+    heading: "Efficiency and clarity for your organization's onboarding processes"
     text: 'Forget paper forms and handle job guidance the modern way. Checklist Engine is a clear and easy-to-use tool that lets you create, manage, and store onboarding and inspection checklists as well as training cards digitally.'
     trust_line: 'An Apprix Builder® add-on that ensures consistent practices and up-to-date materials across all locations.'
     stats:
@@ -171,8 +171,8 @@ page_builder:
   -
     id: ce-cta
     eyebrow: 'Customizable to your needs'
-    title: 'Streamline your organization''s onboarding processes today'
-    text: 'Checklist Engine can be customized in many ways to fit your organization''s specific needs. Contact us to learn more and book a free demo.'
+    title: "Streamline your organization's onboarding processes today"
+    text: "Checklist Engine can be customized in many ways to fit your organization's specific needs. Contact us to learn more and book a free demo."
     button: /en/yritys
     type: cta
     enabled: true

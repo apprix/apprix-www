@@ -9,7 +9,7 @@ seo_description: 'Apprix Checklist Engine digitalisoi perehdytys- ja tarkistusli
 sitemap_change_frequency: monthly
 sitemap_priority: '0.8'
 updated_by: 680e1400-32cd-4415-9b61-d630b47576db
-updated_at: 1769434142
+updated_at: 1779830265
 page_builder:
   -
     id: ce-hero
@@ -40,12 +40,13 @@ page_builder:
       -
         id: ce-hero-btn1
         label: 'Kysy lisää'
-        link: /yritys#yhteydenotto
+        link: '/yritys#yhteydenotto'
         style: primary
     scroll_label: 'Lue lisää'
     image: checklist-engine-perehdytys.jpg
     type: product_hero
     enabled: true
+    tone: light
   -
     id: ce-benefits
     eyebrow: EDUT
@@ -63,7 +64,7 @@ page_builder:
         id: ce-b2
         icon: pencil
         eyebrow: DIGITALISAATIO
-        title: 'Paperittomuus'
+        title: Paperittomuus
         text: 'Toimipistekohtaisia tai paperisia lomakkeita ei enää tarvita. Kaikki listat ovat sähköisessä muodossa, aina saatavilla.'
         type: feature
         enabled: true
@@ -99,7 +100,6 @@ page_builder:
       - keva.png
       - nyab.png
       - gasum.svg
-      - helsingin-satama.png
       - honkajoki.png
       - grk.jpg
     speed: normal
@@ -115,7 +115,7 @@ page_builder:
       -
         id: ce-f1
         icon: target
-        title: 'Mobiilikäyttö'
+        title: Mobiilikäyttö
         text: 'Sovellusta voi käyttää vaivattomasti mobiililaitteilla esimerkiksi kasvokkain tapahtuvassa työnopastuksessa ja perehdytystilanteissa.'
         type: feature
         enabled: true
@@ -142,6 +142,7 @@ page_builder:
         enabled: true
     type: feature_cards
     enabled: true
+    premium: false
   -
     id: ce-xsell
     eyebrow: 'Tutustu myös'
@@ -176,7 +177,7 @@ page_builder:
     eyebrow: 'Räätälöitävissä tarpeisiinne'
     title: 'Tehosta organisaatiosi perehdytysprosessit jo tänään'
     text: 'Checklist Engine voidaan räätälöidä monin eri tavoin juuri teidän organisaationne tarpeisiin sopivaksi. Kysy lisää ja varaa maksuton esittely.'
-    button: /yritys#yhteydenotto
+    button: '/yritys#yhteydenotto'
     type: cta
     enabled: true
   -
@@ -191,7 +192,7 @@ page_builder:
         id: ce-p1
         name: 'Jesse Jokinen'
         role: 'Managing Partner'
-        photo: team/jesse_bw.webp
+        photo: team/jesse_bw-(1).webp
         highlights:
           -
             id: ce-h1
