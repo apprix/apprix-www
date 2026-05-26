@@ -14,6 +14,7 @@ add('shared_dirs', [
     'storage',
     'public/assets',
     'public/files',
+    'content',        // CP-managed content persists across deploys
 ]);
 
 add('writable_dirs', ['storage', 'bootstrap/cache']);
