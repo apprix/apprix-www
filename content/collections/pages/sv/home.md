@@ -12,7 +12,7 @@ page_builder:
       -
         id: mkmbszvb
         label: 'Begär demo'
-        link: /sv/yritys#contact
+        link: '/sv/yritys#contact'
         style: primary
       -
         id: mkmbukej
@@ -67,7 +67,7 @@ page_builder:
       -
         id: mkfc0003
         icon: chart
-        title: 'Realtidsanalys'
+        title: Realtidsanalys
         text: 'Kompetensprofiler och genomföranden i realtid, rapporter till HR-system'
         type: feature
         enabled: true
@@ -213,11 +213,11 @@ page_builder:
     eyebrow: 'Samarbetet börjar här'
     title: 'Låt oss göra utbildningshanteringen tydlig'
     text: 'Vi hjälper organisationer att skapa tydliga och skalbara lösningar för kompetensutveckling.'
-    primary_button: /sv/yritys#contact
+    primary_button: '/sv/yritys#contact'
     tone: brand
     type: cta
     enabled: true
-    button: /sv/yritys#contact
+    button: '/sv/yritys#contact'
   -
     id: mkfaq001
     eyebrow: 'VANLIGA FRÅGOR'
