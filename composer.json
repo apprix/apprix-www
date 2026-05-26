@@ -84,7 +84,9 @@
     },
     "extra": {
         "laravel": {
-            "dont-discover": []
+            "dont-discover": [
+                "studio1902/statamic-peak-commands"
+            ]
         }
     },
     "config": {
