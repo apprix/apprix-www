@@ -90,7 +90,7 @@ page_builder:
         icon: plug
         eyebrow: INTEGRATIONS
         title: 'Seamless HR integrations'
-        text: 'MyCourses supports flexible integrations with your company''s other systems.'
+        text: "MyCourses supports flexible integrations with your company's other systems."
         bullets:
           - 'Users and profile data are automatically imported from the HR system'
           - 'SSO single sign-on support'
@@ -137,14 +137,14 @@ page_builder:
         id: mc-r2
         icon: pencil
         title: 'Content Creator'
-        text: 'Permission to add and edit courses, but no access to users'' personal data.'
+        text: "Permission to add and edit courses, but no access to users' personal data."
         type: feature
         enabled: true
       -
         id: mc-r3
         icon: users
         title: Manager
-        text: 'View limited to own team members'' course completions.'
+        text: "View limited to own team members' course completions."
         type: feature
         enabled: true
     type: feature_cards
@@ -181,7 +181,7 @@ page_builder:
   -
     id: mc-cta
     eyebrow: 'Customizable to your needs'
-    title: 'Supercharge your organization''s competence development'
+    title: "Supercharge your organization's competence development"
     text: 'MyCourses can be customized in many ways to fit your specific needs. Contact us to learn more and book a free demo.'
     button: /en/yritys
     type: cta

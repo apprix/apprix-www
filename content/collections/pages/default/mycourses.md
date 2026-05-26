@@ -9,7 +9,7 @@ seo_description: 'Apprix MyCourses on moderni oppimisympäristö (LMS), joka koh
 sitemap_change_frequency: monthly
 sitemap_priority: '0.8'
 updated_by: 680e1400-32cd-4415-9b61-d630b47576db
-updated_at: 1769433973
+updated_at: 1779830234
 page_builder:
   -
     id: mc-hero
@@ -21,12 +21,13 @@ page_builder:
       -
         id: mc-hero-btn1
         label: 'Kysy lisää'
-        link: /yritys#yhteydenotto
+        link: '/yritys#yhteydenotto'
         style: primary
     scroll_label: 'Lue lisää'
     image: mycourses_bg.jpg
     type: product_hero
     enabled: true
+    tone: light
   -
     id: mc-features
     eyebrow: OMINAISUUDET
@@ -109,7 +110,6 @@ page_builder:
       - keva.png
       - nyab.png
       - gasum.svg
-      - helsingin-satama.png
       - honkajoki.png
       - grk.jpg
     speed: normal
@@ -150,7 +150,7 @@ page_builder:
     eyebrow: 'Räätälöitävissä tarpeisiinne'
     title: 'Tehosta organisaatiosi osaamisen kehittäminen'
     text: 'MyCoursesia voidaan räätälöidä monin tavoin juuri teidän tarpeisiinne sopivaksi. Kysy meiltä lisää ja varaa maksuton esittely.'
-    button: /yritys#yhteydenotto
+    button: '/yritys#yhteydenotto'
     type: cta
     enabled: true
   -
@@ -165,7 +165,7 @@ page_builder:
         id: mc-p1
         name: 'Jesse Jokinen'
         role: 'Managing Partner'
-        photo: team/jesse_bw.webp
+        photo: team/jesse_bw-(1).webp
         highlights:
           -
             id: mc-h1
