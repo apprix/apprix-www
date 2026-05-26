@@ -123,6 +123,7 @@ return [
         'store' => env('APP_MAINTENANCE_STORE', 'file'),
     ],
 
-    'help_auth_enabled' => env('HELP_AUTH_ENABLED', false),
+    'help_auth_enabled'   => env('HELP_AUTH_ENABLED', false),
+    'builder_checkli_url' => env('BUILDER_CHECKLI_URL', 'https://test.apprix.fi/b_dev_1/login/checkli'),
 
 ];

@@ -11,10 +11,9 @@ Route::get('/builder-auth/check', [\App\Http\Controllers\BuilderAuthController::
 Route::post('/builder-auth/verify', [\App\Http\Controllers\BuilderAuthController::class, 'verify']);
 Route::get('/builder-auth/logout', [\App\Http\Controllers\BuilderAuthController::class, 'logout']);
 
-// Protected: requires valid Builder session
-// TODO: uncomment middleware before going live on www3.apprix.fi
-// Route::middleware(\App\Http\Middleware\RequireBuilderAuth::class)->group(function () {
-Route::group([], function () {
+// Protected by RequireBuilderAuth — gated when HELP_AUTH_ENABLED=true in .env,
+// open to everyone when false. Covers FAQ, Help, and their search endpoints.
+Route::middleware(\App\Http\Middleware\RequireBuilderAuth::class)->group(function () {
 
     Route::get('/faq/search.json', [\App\Http\Controllers\FaqSearchController::class, 'index']);
     Route::statamic('/faq', 'faq/index', ['layout' => 'layout_faq', 'title' => 'FAQ']);

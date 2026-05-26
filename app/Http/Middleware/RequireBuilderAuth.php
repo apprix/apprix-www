@@ -9,6 +9,10 @@ class RequireBuilderAuth
 {
     public function handle(Request $request, Closure $next)
     {
+        if (! config('app.help_auth_enabled')) {
+            return $next($request);
+        }
+
         if ($request->session()->get('builder_auth')) {
             return $next($request);
         }

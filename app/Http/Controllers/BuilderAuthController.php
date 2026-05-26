@@ -6,9 +6,6 @@ use Illuminate\Http\Request;
 
 class BuilderAuthController extends Controller
 {
-    // The Builder API URL — swap this for production URL when ready
-    const CHECKLI_URL = 'https://test.apprix.fi/b_dev_1/login/checkli';
-
     const BUILDER_LOGIN_URL = 'https://builder.apprix.fi/b/';
 
     /**
@@ -20,7 +17,7 @@ class BuilderAuthController extends Controller
         $redirect = $request->input('redirect', '/help');
 
         return response(view('builder_auth.check', [
-            'checkliUrl'      => self::CHECKLI_URL,
+            'checkliUrl'      => config('app.builder_checkli_url'),
             'builderLoginUrl' => self::BUILDER_LOGIN_URL,
             'redirectUrl'     => $redirect,
         ]));
