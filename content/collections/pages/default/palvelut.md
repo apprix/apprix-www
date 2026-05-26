@@ -9,7 +9,7 @@ seo_description: 'Apprixin tuotteet ja palvelut: Builder® sisällöntuotantoty�
 sitemap_change_frequency: monthly
 sitemap_priority: '0.8'
 updated_by: 680e1400-32cd-4415-9b61-d630b47576db
-updated_at: 1769433894
+updated_at: 1779830106
 page_builder:
   -
     id: plv-hero
@@ -33,19 +33,20 @@ page_builder:
       -
         id: plv-stat03
         value: 1M+
-        label: 'suoritusta/v'
+        label: suoritusta/v
         type: stat
         enabled: true
     buttons:
       -
         id: plv-hero-btn1
         label: 'Varaa maksuton demo'
-        link: /yritys#yhteydenotto
+        link: '/yritys#yhteydenotto'
         style: primary
     scroll_label: 'Tutustu palveluihin'
     image: screenshots_diagonal_01.jpg
     type: product_hero
     enabled: true
+    tone: light
   -
     id: plv-overview
     eyebrow: KOKONAISUUS
@@ -102,6 +103,7 @@ page_builder:
         enabled: true
     type: feature_cards
     enabled: true
+    premium: false
   -
     id: plv-row1
     eyebrow: 'SISÄLLÖNTUOTANTO & OPPIMINEN'
@@ -198,7 +200,6 @@ page_builder:
       - keva.png
       - nyab.png
       - gasum.svg
-      - helsingin-satama.png
       - honkajoki.png
       - grk.jpg
     speed: normal
@@ -210,7 +211,7 @@ page_builder:
     eyebrow: 'Aloitetaan yhdessä'
     title: 'Löydetään organisaatiollenne sopiva ratkaisu'
     text: 'Varaa maksuton 30–60 minuutin kartoitustapaaminen, jossa käymme läpi tarpeenne ja ehdotamme sopivaa kokonaisuutta – ilman sitoutumispakkoa.'
-    button: /yritys#yhteydenotto
+    button: '/yritys#yhteydenotto'
     type: cta
     enabled: true
   -
@@ -225,7 +226,7 @@ page_builder:
         id: plv-p1
         name: 'Jesse Jokinen'
         role: 'Managing Partner'
-        photo: team/jesse_bw.webp
+        photo: team/jesse_bw-(1).webp
         highlights:
           -
             id: plv-h1

@@ -30,7 +30,7 @@ page_builder:
       -
         id: plv-stat03
         value: 1M+
-        label: 'completions/year'
+        label: completions/year
         type: stat
         enabled: true
     buttons:
@@ -98,7 +98,7 @@ page_builder:
     eyebrow: 'CONTENT CREATION & LEARNING'
     eyebrow_style: subtle
     title: 'Build courses and assign them to the right learners'
-    text: 'Builder® is an intuitive SaaS tool that lets you create engaging online courses effortlessly. MyCourses brings all courses together and automatically assigns them to the right users — you don''t need to worry about distribution.'
+    text: "Builder® is an intuitive SaaS tool that lets you create engaging online courses effortlessly. MyCourses brings all courses together and automatically assigns them to the right users — you don't need to worry about distribution."
     bullets:
       - 'Ready-made elements, media libraries, and branded page templates'
       - 'Automatic targeting based on HR data'
@@ -199,7 +199,7 @@ page_builder:
   -
     id: plv-cta
     eyebrow: 'Get started'
-    title: 'Let''s find the right solution for your organization'
+    title: "Let's find the right solution for your organization"
     text: 'Book a free 30-60 minute discovery meeting where we review your needs and suggest a suitable package — with no commitment required.'
     button: /en/yritys
     type: cta
