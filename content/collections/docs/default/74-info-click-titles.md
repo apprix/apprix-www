@@ -44,12 +44,12 @@ Klikattavat otsikot voi asettaa pakollisiksi, jolloin jokainen alaotsikko tulee 
 
 <h5 class="p1 fusion-responsive-typography-calculated" data-fontsize="12" data-lineheight="18px">Elementin asetukset muokkaustilassa</h5>
 
-<h5 class="p1 fusion-responsive-typography-calculated" data-fontsize="12" data-lineheight="18px">Elementti esikatselutilassa</h5>
-
-<h5 class="p1 fusion-responsive-typography-calculated" data-fontsize="12" data-lineheight="18px">Elementti julkaisutilassa</h5>
-
 <figure class="doc-image"><img src="/files/docs/2024/06/InfoClicktitle11.gif" alt="" loading="lazy"></figure>
 
+<h5 class="p1 fusion-responsive-typography-calculated" data-fontsize="12" data-lineheight="18px">Elementti esikatselutilassa</h5>
+
 <figure class="doc-image"><img src="/files/docs/2024/06/InfoClicktitle12.gif" alt="" loading="lazy"></figure>
+
+<h5 class="p1 fusion-responsive-typography-calculated" data-fontsize="12" data-lineheight="18px">Elementti julkaisutilassa</h5>
 
 <figure class="doc-image"><img src="/files/docs/2021/08/Info_Click_Titles_FI_-1.gif" alt="" loading="lazy"></figure>

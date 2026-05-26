@@ -27,17 +27,17 @@ Fasilitaattori voi elementin asetuksissa määrittää, näytetäänkö suoritta
 
 <h6 class="p1">Elementit julkaisutilassa (Published mode)</h6>
 
-<h5 class="p1 fusion-responsive-typography-calculated" data-fontsize="12" data-lineheight="18px">Elementin asetukset editointinäkymässä</h5>
-
-<h6>Bars survey -vaihtoehdot</h6>
-
-<h6>Bars Survey - Muiden osallistujien vastausten keskiarvo</h6>
-
 <figure class="doc-image"><img src="/files/docs/2021/08/Bars_Slider_Single_FI_.gif" alt="" loading="lazy"></figure>
+
+<h5 class="p1 fusion-responsive-typography-calculated" data-fontsize="12" data-lineheight="18px">Elementin asetukset editointinäkymässä</h5>
 
 <figure class="doc-image"><img src="/files/docs/2021/08/Bars_Slider_Single_Edit_FI_.gif" alt="" loading="lazy"></figure>
 
+<h6>Bars survey -vaihtoehdot</h6>
+
 <figure class="doc-image"><img src="/files/docs/2022/04/7.16-1-1-600x324.png" alt="" loading="lazy"></figure>
+
+<h6>Bars Survey - Muiden osallistujien vastausten keskiarvo</h6>
 
 <figure class="doc-image"><img src="/files/docs/2024/12/Bars-Survey-options.png" alt="" loading="lazy"></figure>
 

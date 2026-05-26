@@ -32,9 +32,9 @@ Jos haluat aktivoida <b>Answer Mode</b> -toiminnallisuuden, klikkaa rataskuvaket
 
 <h6 class="p1">Klikkaa kuvia suurentaaksesi niitä.</h6>
 
-<h5 class="p1 fusion-responsive-typography-calculated" data-fontsize="12" data-lineheight="18px">Elementin asetukset editointinäkymässä:</h5>
-
 <figure class="doc-image"><img src="/files/docs/2021/08/Checkbox_FI_-1.gif" alt="" loading="lazy"></figure>
+
+<h5 class="p1 fusion-responsive-typography-calculated" data-fontsize="12" data-lineheight="18px">Elementin asetukset editointinäkymässä:</h5>
 
 <figure class="doc-image"><img src="/files/docs/2021/08/Checkbox_Edit_FI_-1.gif" alt="" loading="lazy"></figure>
 

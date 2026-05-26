@@ -28,24 +28,24 @@ Ominaisuus löytyy käyttöönoton jälkeen moduulin editointinäkymän (Edit Mo
 
 <h6>Mistä näen, että Start New / Browse -toiminto on aktivoitu?</h6>
 
-<h6>Klikkaa painiketta ja aloitetaan kurssi!</h6>
-
-<h6>Etkö saanut kurssia suoritettua loppuun? Ei hätää! Klikkaa vain Continue-painiketta.</h6>
-
-<h6>Suoritettuasi kurssin loppuun, voit selailla sen sisältöä uudelleen! Mahtavaa, eikö?</h6>
-
-<h6>Voit aina lisätä muistutuksen! Helppoa ja kätevää!</h6>
-
-<h6>Helpot asetukset!</h6>
-
 <figure class="doc-image"><img src="/files/docs/2025/02/Settings.png" alt="" loading="lazy"></figure>
+
+<h6>Klikkaa painiketta ja aloitetaan kurssi!</h6>
 
 <figure class="doc-image"><img src="/files/docs/2025/02/Start-the-course-button.png" alt="" loading="lazy"></figure>
 
+<h6>Etkö saanut kurssia suoritettua loppuun? Ei hätää! Klikkaa vain Continue-painiketta.</h6>
+
 <figure class="doc-image"><img src="/files/docs/2025/02/Continue-button.png" alt="" loading="lazy"></figure>
+
+<h6>Suoritettuasi kurssin loppuun, voit selailla sen sisältöä uudelleen! Mahtavaa, eikö?</h6>
 
 <figure class="doc-image"><img src="/files/docs/2025/02/Browse-this-course-content-31.gif" alt="" loading="lazy"></figure>
 
+<h6>Voit aina lisätä muistutuksen! Helppoa ja kätevää!</h6>
+
 <figure class="doc-image"><img src="/files/docs/2025/02/Reminder-text-box.png" alt="" loading="lazy"></figure>
+
+<h6>Helpot asetukset!</h6>
 
 <figure class="doc-image"><img src="/files/docs/2025/02/Start-Course-settings.png" alt="" loading="lazy"></figure>

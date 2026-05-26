@@ -31,12 +31,12 @@ Lisätietoja tästä ominaisuudesta löytyy:
 
 <h6>Summary Reports-käyttöoikeudet on myönnetty <strong>Administrate</strong> → <strong>Users </strong>-työkalussa.</h6>
 
-<h6>Reports-painike tulee näkyviin, kun Summary Reports -yhteenvetoraporttien käyttöoikeudet on myönnetty.</h6>
-
-<h6>Esimerkki raporttityökalun käytettävissä olevista suodattimista</h6>
-
 <figure class="doc-image"><img src="/files/docs/2025/02/Admin-Summary-reports-1.png" alt="" loading="lazy"></figure>
 
+<h6>Reports-painike tulee näkyviin, kun Summary Reports -yhteenvetoraporttien käyttöoikeudet on myönnetty.</h6>
+
 <figure class="doc-image"><img src="/files/docs/2025/02/Reports-button.png" alt="" loading="lazy"></figure>
+
+<h6>Esimerkki raporttityökalun käytettävissä olevista suodattimista</h6>
 
 <figure class="doc-image"><img src="/files/docs/2025/02/Reports-filters.png" alt="" loading="lazy"></figure>

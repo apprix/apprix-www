@@ -20,8 +20,8 @@ Alasvetovalikossa aiheet ryhmitellään Comments-elementtien mukaan. On siis suo
 
 <h6 class="p1">Miten kurssilainen voi tarkastella ja arvioida kommentteja?</h6>
 
-<h6 class="p1">Muista nimetä Comments-elementit!</h6>
-
 <figure class="doc-image"><img src="/files/docs/2025/03/Comments-rate.gif" alt="" loading="lazy"></figure>
+
+<h6 class="p1">Muista nimetä Comments-elementit!</h6>
 
 <figure class="doc-image"><img src="/files/docs/2025/03/Rate-Comments1.png" alt="" loading="lazy"></figure>

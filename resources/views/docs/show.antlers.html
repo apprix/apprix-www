@@ -7,7 +7,7 @@
 
 {{# ─── PAGE HEADER ─── #}}
 <div class="mb-8 border-b border-neutral-200 pb-8">
-    <h1 class="text-2xl font-bold tracking-tight text-neutral-900 md:text-3xl">
+    <h1 class="text-2xl font-bold tracking-tight text-neutral-900 md:text-3xl" data-url="{{ url }}">
         {{ title }}
     </h1>
 
@@ -31,11 +31,9 @@
 {{# ─── VIDEOS (Replicator) ─── #}}
 {{ if videos }}
     {{ videos }}
-        {{ if type == 'vimeo' && vimeo_id }}
-            <div style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;border-radius:0.75rem;box-shadow:0 1px 2px 0 rgba(0,0,0,.08);margin-top:1rem"><iframe src="https://player.vimeo.com/video/{{ vimeo_id }}" style="position:absolute;top:0;left:0;width:100%;height:100%;border:0;" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe></div>
-        {{ elseif type == 'mp4' && file }}
+        {{ if file }}
             <video controls preload="metadata" style="width:100%;border-radius:0.75rem;box-shadow:0 1px 2px 0 rgba(0,0,0,.08);margin-top:1rem">
-                <source src="{{ file:url }}" type="video/mp4">
+                <source src="{{ file:url }}">
             </video>
         {{ /if }}
     {{ /videos }}
@@ -62,11 +60,20 @@
                     {{ content }}
                 </div>
             {{ /if }}
+            {{ if videos }}
+                {{ videos }}
+                    {{ if file }}
+                        <video controls preload="metadata" style="width:100%;border-radius:0.75rem;box-shadow:0 1px 2px 0 rgba(0,0,0,.08);margin-top:1rem">
+                            <source src="{{ file:url }}">
+                        </video>
+                    {{ /if }}
+                {{ /videos }}
+            {{ /if }}
         </section>
 
     {{ elseif nest_depth == 3 }}
         <section id="{{ slug }}" class="mt-8 scroll-mt-20 ml-4 border-l-2 border-neutral-200 pl-6">
-            <h3 class="text-lg font-semibold tracking-tight text-neutral-800">
+            <h3 class="text-xl font-semibold tracking-tight text-neutral-800">
                 {{ title }}
             </h3>
             {{ if content }}
@@ -80,6 +87,15 @@
                 ">
                     {{ content }}
                 </div>
+            {{ /if }}
+            {{ if videos }}
+                {{ videos }}
+                    {{ if file }}
+                        <video controls preload="metadata" style="width:100%;border-radius:0.75rem;box-shadow:0 1px 2px 0 rgba(0,0,0,.08);margin-top:1rem">
+                            <source src="{{ file:url }}">
+                        </video>
+                    {{ /if }}
+                {{ /videos }}
             {{ /if }}
         </section>
     {{ /if }}

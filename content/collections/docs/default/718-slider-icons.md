@@ -22,13 +22,13 @@ Voit muokata kaikkia tekstejä ja lisätä myös lisätietoja tietoruutuihin nap
 
 <h6 class="p1">Klikkaa kuvia suurentaaksesi niitä.</h6>
 
-<h5>Elementin asetukset editointinäkymässä:</h5>
-
-<h5>Eteenpäin-kuvake avaa tietoruudun</h5>
-
 <figure class="doc-image"><img src="/files/docs/2021/08/Slider_Icons_FI-1.gif" alt="" loading="lazy"></figure>
 
+<h5>Elementin asetukset editointinäkymässä:</h5>
+
 <figure class="doc-image"><img src="/files/docs/2021/08/Slider_Icons_Edit_FI-1.gif" alt="" loading="lazy"></figure>
+
+<h5>Eteenpäin-kuvake avaa tietoruudun</h5>
 
 <figure class="doc-image"><img src="/files/docs/2022/03/7.17-1-1-600x281.png" alt="" loading="lazy"></figure>
 

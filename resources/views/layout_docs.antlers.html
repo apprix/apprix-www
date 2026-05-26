@@ -29,6 +29,19 @@
         }
         .heading-anchor:hover { color: #f87206; }
 
+/* ── Image question/caption labels (h5 and h6 above images) ── */
+        .prose h5,
+        .prose h6 {
+            font-size: 1.0625rem;
+            font-weight: 700;
+            line-height: 1.45;
+            color: #171717;
+            margin-top: 1.75rem;
+            margin-bottom: 0.375rem;
+        }
+        .prose h5 + figure,
+        .prose h6 + figure { margin-top: 0.5rem; }
+
 </style>
     </head>
     <body class="flex flex-col min-h-screen bg-white text-neutral-900">
@@ -114,6 +127,7 @@
                             <template x-for="(result, i) in results" :key="result.url">
                                 <a
                                     :href="result.url"
+                                    @click="query = ''; results = []"
                                     @mouseenter="active = i"
                                     class="flex items-center gap-3 border-l-2 px-4 py-3 transition-colors"
                                     :class="active === i ? 'border-orange-500 bg-orange-50' : 'border-transparent hover:bg-neutral-50'"
@@ -200,7 +214,7 @@
 
             {{# ─── CONTENT AREA ─── #}}
             <main class="min-w-0 flex-1 bg-white">
-                <div class="mx-auto max-w-3xl px-6 py-10 md:px-10 md:py-12">
+                <div class="ml-[12%] mr-auto max-w-3xl px-6 py-10 md:px-10 md:py-12">
                     {{ template_content }}
                 </div>
             </main>
@@ -377,11 +391,28 @@
 
                 go() {
                     if (this.results[this.active]) {
-                        window.location.href = this.results[this.active].url;
+                        const url = this.results[this.active].url;
+                        this.query = '';
+                        this.results = [];
+                        window.location.href = url;
                     }
                 },
             };
         }
+        </script>
+
+        <script>
+        // Capture hash before any history.replaceState can strip it
+        var _initialDocHash = window.location.hash;
+        // Re-scroll to hash after all images and JS (heading IDs) have loaded
+        window.addEventListener('load', function () {
+            const hash = _initialDocHash;
+            if (!hash) return;
+            const el = document.querySelector(hash);
+            if (!el) return;
+            const top = el.getBoundingClientRect().top + window.pageYOffset - 76; // 64px header + 12px breathing room
+            window.scrollTo({ top: Math.max(0, top), behavior: 'instant' });
+        });
         </script>
 
         <script>
@@ -535,11 +566,16 @@
             var spyLinks       = [];
             var spyDimmedParent = null;
 
+            // Locked briefly after sidebar clicks so the observer doesn't
+            // override the active state while the layout settles (image loads etc.)
+            var spyLocked = false;
+
             var spyObserver = new IntersectionObserver(function (entries) {
+                if (spyLocked) return;
                 entries.forEach(function (entry) {
                     if (entry.isIntersecting) spySetActive(entry.target.id);
                 });
-            }, { rootMargin: '-80px 0px -60% 0px' });
+            }, { rootMargin: '-72px 0px -60% 0px' });
 
             function spySetActive(id) {
                 var activeLink = null;
@@ -636,6 +672,17 @@
             // Seed with sections already in the DOM at page load
             extendSpy(document, window.location.pathname);
 
+            // ── Scroll helper — explicit header offset, more reliable than scrollIntoView ──
+            // scroll-margin-top is not respected by scrollIntoView in all browsers.
+            // Header is h-16 = 64px. Add 12px breathing room below it.
+            var HEADER_OFFSET = 76; // 64px header + 12px padding
+            var navScrollTimer = null;
+
+            function scrollToEl(el) {
+                var top = el.getBoundingClientRect().top + window.pageYOffset - HEADER_OFFSET;
+                window.scrollTo({ top: Math.max(0, top), behavior: 'instant' });
+            }
+
             // ── Sidebar anchor click handler ──
             // When the target section is already in the DOM (same page or infinite-scroll
             // loaded), scroll to it via JS — same-page pathname#hash clicks don't always
@@ -653,9 +700,17 @@
                     var target = document.getElementById(id);
                     if (!target) return; // not in DOM — let browser navigate
                     e.preventDefault();
-                    target.scrollIntoView({ behavior: 'instant', block: 'start' });
+                    scrollToEl(target);
                     history.pushState(null, '', href);
                     spySetActive(id);
+                    // Lock observer and re-correct scroll after lazy images may have
+                    // shifted the layout (images between old position and target load in)
+                    spyLocked = true;
+                    clearTimeout(navScrollTimer);
+                    navScrollTimer = setTimeout(function () {
+                        scrollToEl(target);
+                        spyLocked = false;
+                    }, 350);
                 });
             }
 
@@ -667,17 +722,18 @@
             window.addEventListener('hashchange', function () {
                 var newHash = decodeURIComponent(window.location.hash.slice(1));
                 if (!newHash) return;
+                var target = document.getElementById(newHash);
+                if (!target) return;
                 if (spyLinks.some(function (a) { return a.dataset.section === newHash; })) {
                     spySetActive(newHash);
                 }
-                var target = document.getElementById(newHash);
-                if (target) {
-                    requestAnimationFrame(function () {
-                        requestAnimationFrame(function () {
-                            target.scrollIntoView({ behavior: 'instant', block: 'start' });
-                        });
-                    });
-                }
+                spyLocked = true;
+                clearTimeout(navScrollTimer);
+                scrollToEl(target);
+                navScrollTimer = setTimeout(function () {
+                    scrollToEl(target);
+                    spyLocked = false;
+                }, 350);
             });
 
             // ── 3. Active state + infinite scroll (show pages only) ──
@@ -850,17 +906,16 @@
                     }
                     var hashTarget = document.getElementById(loadHash);
                     if (hashTarget) {
-                        hashTarget.scrollIntoView({ behavior: 'instant', block: 'start' });
+                        spyLocked = true;
+                        scrollToEl(hashTarget);
                         // Images in preceding sections may not have loaded yet, causing a
                         // layout shift that pushes the target below the viewport.
-                        // Re-scroll after all resources finish loading, but cancel if the
-                        // user has already scrolled somewhere else.
-                        var loadHashScrolled = false;
-                        window.addEventListener('scroll', function () { loadHashScrolled = true; }, { once: true, passive: true });
+                        // Re-scroll after all resources finish loading, then release the lock.
+                        // Cancel and release early if the user scrolls manually.
+                        window.addEventListener('scroll', function () { spyLocked = false; }, { once: true, passive: true });
                         window.addEventListener('load', function () {
-                            if (!loadHashScrolled) {
-                                hashTarget.scrollIntoView({ behavior: 'instant', block: 'start' });
-                            }
+                            scrollToEl(hashTarget);
+                            setTimeout(function () { spyLocked = false; }, 100);
                         }, { once: true });
                     }
                 }
@@ -1052,21 +1107,54 @@
                 });
             }
 
+            // ── Pair consecutive h6 image labels with their figures ──
+            // Content files store all h6 captions first then all figures;
+            // this reorders them so each label sits directly above its image.
+            function pairImageLabels(container) {
+                (container || document).querySelectorAll('.prose').forEach(function (prose) {
+                    var els = Array.from(prose.children);
+                    var i = 0;
+                    while (i < els.length) {
+                        if (els[i].tagName !== 'H6' && els[i].tagName !== 'H5') { i++; continue; }
+                        // Collect run of consecutive h5/h6 elements
+                        var h6s = [], j = i;
+                        while (j < els.length && (els[j].tagName === 'H6' || els[j].tagName === 'H5')) h6s.push(els[j++]);
+                        if (h6s.length < 2) { i++; continue; }
+                        // Collect immediately-following figures (must match count)
+                        var figs = [];
+                        while (j < els.length && els[j].tagName === 'FIGURE') figs.push(els[j++]);
+                        if (figs.length !== h6s.length) { i = j; continue; }
+                        // Remove all, then reinsert interleaved: h6[0], fig[0], h6[1], fig[1]…
+                        var anchor = figs[figs.length - 1].nextSibling;
+                        h6s.concat(figs).forEach(function (el) { el.parentNode.removeChild(el); });
+                        for (var k = 0; k < h6s.length; k++) {
+                            prose.insertBefore(h6s[k], anchor);
+                            prose.insertBefore(figs[k], anchor);
+                        }
+                        // Refresh element list after DOM mutation
+                        els = Array.from(prose.children);
+                        i = anchor ? els.indexOf(anchor) : els.length;
+                        if (i < 0) i = els.length;
+                    }
+                });
+            }
+
             function addHeadingAnchors(container) {
                 ensureHeadingIds(container);
-                container.querySelectorAll('h2[id], h3[id]').forEach(function(h) {
+                container.querySelectorAll('h1[data-url]').forEach(function(h) {
                     if (h.querySelector('.heading-anchor')) return;
+                    var rawUrl  = h.dataset.url;
+                    var pageUrl = rawUrl.startsWith('http') ? rawUrl : window.location.origin + rawUrl;
                     var a = document.createElement('a');
-                    a.href      = '#' + h.id;
+                    a.href      = pageUrl;
                     a.className = 'heading-anchor';
-                    a.setAttribute('aria-label', 'Kopioi linkki tähän kohtaan');
+                    a.setAttribute('aria-label', 'Kopioi linkki tähän osioon');
                     a.innerHTML = '<svg width="14" height="14" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 13a5 5 0 007.54.54l3-3a5 5 0 00-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 00-7.54-.54l-3 3a5 5 0 007.07 7.07l1.71-1.71"/></svg>';
                     a.addEventListener('click', function(e) {
                         e.preventDefault();
-                        var url = window.location.origin + window.location.pathname + '#' + h.id;
                         function fallback() {
                             var ta = document.createElement('textarea');
-                            ta.value = url;
+                            ta.value = pageUrl;
                             ta.style.cssText = 'position:fixed;top:0;left:0;opacity:0;';
                             document.body.appendChild(ta);
                             ta.focus(); ta.select();
@@ -1076,14 +1164,13 @@
                             setTimeout(function() { a.style.color = ''; }, 1500);
                         }
                         if (navigator.clipboard) {
-                            navigator.clipboard.writeText(url).then(function() {
+                            navigator.clipboard.writeText(pageUrl).then(function() {
                                 a.style.color = '#16a34a';
                                 setTimeout(function() { a.style.color = ''; }, 1500);
                             }).catch(fallback);
                         } else {
                             fallback();
                         }
-                        history.replaceState(null, '', '#' + h.id);
                     });
                     h.appendChild(a);
                 });
@@ -1092,6 +1179,7 @@
 
             // ── Master enhancer (called on page load + each infinite-scroll section) ──
             function docsEnhance(container) {
+                pairImageLabels(container);
                 addHeadingAnchors(container);
             }
             window.docsEnhance = docsEnhance; // hoisted for loadSection hook

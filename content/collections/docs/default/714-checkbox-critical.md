@@ -16,12 +16,12 @@ Klikkaa huutomerkkipainiketta, ja <strong>Settings for this element</strong> -po
 
 <h6 class="p1">Klikkaa kuvia suurentaaksesi niitä.</h6>
 
-<h6>Elementti esikatselutilassa</h6>
-
-<h6>Elementti muokkaustilassa</h6>
-
 <figure class="doc-image"><img src="/files/docs/2024/06/Checkboxcritical-preview.gif" alt="" loading="lazy"></figure>
 
+<h6>Elementti esikatselutilassa</h6>
+
 <figure class="doc-image"><img src="/files/docs/2024/06/Checkboxcritical-edit1a.gif" alt="" loading="lazy"></figure>
+
+<h6>Elementti muokkaustilassa</h6>
 
 <figure class="doc-image"><img src="/files/docs/2024/06/Checkboxcritical-edit1.gif" alt="" loading="lazy"></figure>

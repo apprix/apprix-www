@@ -30,9 +30,9 @@ Napsauta kunkin palkin vasemmassa alareunassa olevaa ”info” -ikonia. Ponnahd
 
 <h6 class="p1">Klikkaa kuvia suurentaaksesi niitä.</h6>
 
-<h5 class="p1 fusion-responsive-typography-calculated" data-fontsize="12" data-lineheight="18px">Elementin asetukset editointinäkymässä:</h5>
-
 <figure class="doc-image"><img src="/files/docs/2021/08/Bars_Task_FI-1.gif" alt="" loading="lazy"></figure>
+
+<h5 class="p1 fusion-responsive-typography-calculated" data-fontsize="12" data-lineheight="18px">Elementin asetukset editointinäkymässä:</h5>
 
 <figure class="doc-image"><img src="/files/docs/2021/08/Bars_Task_Edit_FI_Small-1.gif" alt="" loading="lazy"></figure>
 

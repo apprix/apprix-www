@@ -31,9 +31,9 @@ Voit esikatsella yksittäistä elementtiä seuraavasti:
 
 <h6>Miten elementtejä esikatsellaan?</h6>
 
-<h6 class="fusion-responsive-typography-calculated" data-fontsize="21" data-lineheight="31.5px"><strong>Preview-työkalupalkki (Max, Min, Draft) </strong></h6>
-
 <figure class="doc-image"><img src="/files/docs/2025/06/Preview-element.jpg" alt="" loading="lazy"></figure>
+
+<h6 class="fusion-responsive-typography-calculated" data-fontsize="21" data-lineheight="31.5px"><strong>Preview-työkalupalkki (Max, Min, Draft) </strong></h6>
 
 <figure class="doc-image"><img src="/files/docs/2025/06/Preview-element-in-new-tab.png" alt="" loading="lazy"></figure>
 

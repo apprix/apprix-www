@@ -15,8 +15,8 @@ Jos et halua tallentaa juuri päivitettyä mutta tallentamatonta moduulin nimeä
 
 <h6 class="p1">Valitse Reload-painike, jos et halua tallentaa juuri päivitettyä, mutta tallentamatonta moduulin nimeä.</h6>
 
-<h6 class="p1">Saat ilmoituksen jos nimeät moduulin samalla nimellä kuin olemassa olevan tai poistetun moduulin.</h6>
-
 <figure class="doc-image"><img src="/files/docs/2024/05/reload-side.png" alt="" loading="lazy"></figure>
+
+<h6 class="p1">Saat ilmoituksen jos nimeät moduulin samalla nimellä kuin olemassa olevan tai poistetun moduulin.</h6>
 
 <figure class="doc-image"><img src="/files/docs/2024/05/module-with-the-same-name.png" alt="" loading="lazy"></figure>

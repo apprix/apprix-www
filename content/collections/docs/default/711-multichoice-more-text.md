@@ -20,8 +20,8 @@ Esimerkiksi jos vaihtoehtoja on yhteensä 3 ja niistä 2 on oikein, <strong>Edit
 
 <h6 class="p1">Elementin esikatselutilassa.</h6>
 
-<h5 class="p1 fusion-responsive-typography-calculated" data-fontsize="12" data-lineheight="18px">Elementin asetukset muokkaustilassa.</h5>
-
 <figure class="doc-image"><img src="/files/docs/2021/09/Multichoice_More_Text_FI.gif" alt="" loading="lazy"></figure>
+
+<h5 class="p1 fusion-responsive-typography-calculated" data-fontsize="12" data-lineheight="18px">Elementin asetukset muokkaustilassa.</h5>
 
 <figure class="doc-image"><img src="/files/docs/2021/09/Multichoice_More_Text_FI_Edit.gif" alt="" loading="lazy"></figure>

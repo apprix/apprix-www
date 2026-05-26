@@ -61,20 +61,20 @@ Manuaalisesti syötettyä nimeä <strong>ei tallenneta tilastoihin</strong>, jot
 
 <h6>Finish-elementissä käyttäjät voivat tulostaa, ladata ja lähettää diplominsa syöttämällä sähköpostiosoitteet EMAIL-kenttään</h6>
 
-<h6>Mistä voit aktivoida Diploma &amp; Printables -toiminnon?</h6>
-
-<h6><strong>"Diploma for Participants" -asetukset</strong></h6>
-
-<h6><strong>"If the participant's name is not found, allow them to write their name" -asetukset</strong></h6>
-
-<h6><strong>"If the participant's name is not found, allow them to write their name" -esikatselutilassa</strong></h6>
-
 <figure class="doc-image"><img src="/files/docs/2025/02/Diploma-and-printables1-1.png" alt="" loading="lazy"></figure>
+
+<h6>Mistä voit aktivoida Diploma &amp; Printables -toiminnon?</h6>
 
 <figure class="doc-image"><img src="/files/docs/2024/08/Diploma-and-printables-menu-1.png" alt="" loading="lazy"></figure>
 
+<h6><strong>"Diploma for Participants" -asetukset</strong></h6>
+
 <figure class="doc-image"><img src="/files/docs/2026/02/Enable-the-diploma-1.png" alt="" loading="lazy"></figure>
 
+<h6><strong>"If the participant's name is not found, allow them to write their name" -asetukset</strong></h6>
+
 <figure class="doc-image"><img src="/files/docs/2026/02/Allow-to-write-the-name-1.png" alt="" loading="lazy"></figure>
+
+<h6><strong>"If the participant's name is not found, allow them to write their name" -esikatselutilassa</strong></h6>
 
 <figure class="doc-image"><img src="/files/docs/2026/02/Finish-page-1.png" alt="" loading="lazy"></figure>

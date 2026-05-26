@@ -11,12 +11,12 @@ Saat lisätietoa Form‑elementistä tästä linkistä:
 
 <h6 class="p1">Klikkaa kuvia suurentaaksesi niitä.</h6>
 
-<h5 class="p1 fusion-responsive-typography-calculated" data-fontsize="12" data-lineheight="18px">Elementin asetukset editointinäkymässä</h5>
-
-<h5>Myös ryhmäkirjautumiselle on oma Login-elementtinsä.</h5>
-
 <figure class="doc-image"><img src="/files/docs/2021/08/Login_FI.jpg" alt="" loading="lazy"></figure>
 
+<h5 class="p1 fusion-responsive-typography-calculated" data-fontsize="12" data-lineheight="18px">Elementin asetukset editointinäkymässä</h5>
+
 <figure class="doc-image"><img src="/files/docs/2021/08/Login_Edit_FI.gif" alt="" loading="lazy"></figure>
+
+<h5>Myös ryhmäkirjautumiselle on oma Login-elementtinsä.</h5>
 
 <figure class="doc-image"><img src="/files/docs/2021/08/Group_Login_FI.jpg" alt="" loading="lazy"></figure>

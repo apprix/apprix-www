@@ -16,9 +16,9 @@ title: '7.35 Switch'
 
 <h6 class="p1">Klikkaa kuvia suurentaaksesi niitä.</h6>
 
-<h5>Elementin asetukset editointinäkymässä:</h5>
-
 <figure class="doc-image"><img src="/files/docs/2021/08/Switch_FI-1.gif" alt="" loading="lazy"></figure>
+
+<h5>Elementin asetukset editointinäkymässä:</h5>
 
 <figure class="doc-image"><img src="/files/docs/2021/08/Switch_Edit_FI-1.gif" alt="" loading="lazy"></figure>
 

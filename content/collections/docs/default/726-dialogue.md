@@ -25,8 +25,8 @@ Voit valita, haluatko näyttää kaikki dialogikuplat kerralla vai keskustelunom
 
 <h6 class="p1">Dialogue-esimerkki.</h6>
 
-<h5 class="p1 fusion-responsive-typography-calculated" data-fontsize="12" data-lineheight="18px">Kuinka puhekupla muokataan?</h5>
-
 <figure class="doc-image"><img src="/files/docs/2026/03/First-Dialogue-example-1.gif" alt="" loading="lazy"></figure>
+
+<h5 class="p1 fusion-responsive-typography-calculated" data-fontsize="12" data-lineheight="18px">Kuinka puhekupla muokataan?</h5>
 
 <figure class="doc-image"><img src="/files/docs/2026/03/First-Dialogue-1.gif" alt="" loading="lazy"></figure>

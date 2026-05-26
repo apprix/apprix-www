@@ -14,8 +14,8 @@ title: '7.12 True/False'
 
 <h6 class="p1">Elementin esikatselutilassa.</h6>
 
-<h5 class="p1 fusion-responsive-typography-calculated" data-fontsize="12" data-lineheight="18px">Elementin asetukset muokkaustilassa.</h5>
-
 <figure class="doc-image"><img src="/files/docs/2021/08/TrueFalse_FI-1.gif" alt="" loading="lazy"></figure>
+
+<h5 class="p1 fusion-responsive-typography-calculated" data-fontsize="12" data-lineheight="18px">Elementin asetukset muokkaustilassa.</h5>
 
 <figure class="doc-image"><img src="/files/docs/2021/08/TrueFalse_Edit_FI-1.gif" alt="" loading="lazy"></figure>

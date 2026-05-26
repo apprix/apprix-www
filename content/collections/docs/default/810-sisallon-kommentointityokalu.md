@@ -146,16 +146,16 @@ Puhekupla-ikoni submoduulin kohdalla tarkoittaa, että submoduulissa (tai sen dr
 <strong>Moduulin editointi-oikeudet omaava fasilitaattori</strong></h6>
 <h6>Kuinka Kommentointi -ominaisuus toimii?</h6>
 
-<h6>Miten ratkaiset tai poistat kommentin?</h6>
-
-<h6>Anonyymikäyttäjät</h6>
-
-<h6>Parametri ” Enable preview sharing for this main module and its submodule ” Share module preview -ikkunassa</h6>
-
 <figure class="doc-image"><img src="/files/docs/2023/12/Comment-edit-module.gif" alt="" loading="lazy"></figure>
+
+<h6>Miten ratkaiset tai poistat kommentin?</h6>
 
 <figure class="doc-image"><img src="/files/docs/2023/12/2.-Comment-resolve-and-delete.gif" alt="" loading="lazy"></figure>
 
+<h6>Anonyymikäyttäjät</h6>
+
 <figure class="doc-image"><img src="/files/docs/2023/12/Anomym-resolved.png" alt="" loading="lazy"></figure>
+
+<h6>Parametri ” Enable preview sharing for this main module and its submodule ” Share module preview -ikkunassa</h6>
 
 <figure class="doc-image"><img src="/files/docs/2023/12/4.-Preview-link.png" alt="" loading="lazy"></figure>
