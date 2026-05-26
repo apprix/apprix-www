@@ -129,8 +129,8 @@ return [
     */
 
     'commands' => [
-        'git add {{ paths }}',
-        'git -c "user.name={{ name }}" -c "user.email={{ email }}" commit -m "{{ message }} [BOT]"',
+        '{{ git }} add {{ paths }}',
+        '{{ git }} -c "user.name={{ name }}" -c "user.email={{ email }}" commit -m "{{ message }} [BOT]"',
     ],
 
     /*
