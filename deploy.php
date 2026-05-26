@@ -65,6 +65,9 @@ task('deploy:git-auth-setup', function () {
     // Give www-data rwX access to .git/ so it can run git add/commit/push
     run("setfacl -R -m u:www-data:rwX {{release_path}}/.git");
     run("setfacl -R -d -m u:www-data:rwX {{release_path}}/.git");
+    // Give www-data rwX access to content/ so Statamic CP can write files
+    run("setfacl -R -m u:www-data:rwX {{release_path}}/content");
+    run("setfacl -R -d -m u:www-data:rwX {{release_path}}/content");
 });
 
 after('deploy:update_code', 'deploy:git-auth-setup');
