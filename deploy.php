@@ -40,16 +40,15 @@ after('deploy:vendors', 'deploy:sync-assets');
 after('deploy:vendors', 'artisan:config:cache');
 after('deploy:vendors', 'artisan:route:cache');
 
-// Ensure www-data can write to shared dirs (setfacl on writable_dirs
-// only touches the top-level dir, not existing files inside it)
+// Ensure www-data can write to shared/content (setfacl on writable_dirs
+// only touches the top-level dir, not existing files inside it).
+// public/files and public/assets are owned by www-data (uploaded via CP)
+// so www-data already has full access there — no ACL needed.
 task('deploy:content-permissions', function () {
-    foreach (['content', 'public/files', 'public/assets'] as $dir) {
-        $path = '{{deploy_path}}/shared/' . $dir;
-        // Only set ACL on deploy-owned files (www-data-owned files are already writable by www-data)
-        run("find $path -user deploy -exec setfacl -m u:www-data:rwX {} +");
-        // Set default ACL on all directories so new files inherit correct permissions
-        run("find $path -type d -exec setfacl -d -m u:www-data:rwX {} +");
-    }
+    $path = '{{deploy_path}}/shared/content';
+    // Set ACL only on deploy-owned paths; www-data-owned files are already writable by www-data
+    run("find $path -user deploy -exec setfacl -m u:www-data:rwX {} +");
+    run("find $path -user deploy -type d -exec setfacl -d -m u:www-data:rwX {} +");
 });
 
 after('deploy:writable', 'deploy:content-permissions');
