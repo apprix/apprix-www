@@ -9,7 +9,7 @@ seo_description: 'Apprixin asiantuntijapalvelut: koulutustarpeiden kartoitus, HR
 sitemap_change_frequency: monthly
 sitemap_priority: '0.8'
 updated_by: 680e1400-32cd-4415-9b61-d630b47576db
-updated_at: 1742083200
+updated_at: 1779830360
 page_builder:
   -
     id: asp-hero
@@ -27,7 +27,7 @@ page_builder:
       -
         id: asp-stat02
         value: 100+
-        label: 'integraatioprojektia'
+        label: integraatioprojektia
         type: stat
         enabled: true
       -
@@ -40,12 +40,13 @@ page_builder:
       -
         id: asp-hero-btn1
         label: 'Varaa kartoitustapaaminen'
-        link: /yritys#yhteydenotto
+        link: '/yritys#yhteydenotto'
         style: primary
     scroll_label: 'Lue lisää'
     image: general_bg.jpg
     type: product_hero
     enabled: true
+    tone: light
   -
     id: asp-features
     eyebrow: PALVELUT
@@ -104,7 +105,6 @@ page_builder:
       - keva.png
       - nyab.png
       - gasum.svg
-      - helsingin-satama.png
       - honkajoki.png
       - grk.jpg
     speed: normal
@@ -145,7 +145,7 @@ page_builder:
     eyebrow: 'Aloitetaan yhdessä'
     title: 'Kartoitetaan organisaationne koulutustarpeet'
     text: 'Varaa maksuton 30–60 minuutin kartoitustapaaminen, jossa käymme läpi tarpeenne ja ehdotamme sopivaa kokonaisuutta – ilman sitoutumispakkoa.'
-    button: /yritys#yhteydenotto
+    button: '/yritys#yhteydenotto'
     type: cta
     enabled: true
   -
@@ -160,7 +160,7 @@ page_builder:
         id: asp-p1
         name: 'Jesse Jokinen'
         role: 'Managing Partner'
-        photo: team/jesse_bw.webp
+        photo: team/jesse_bw-(1).webp
         highlights:
           -
             id: asp-h1

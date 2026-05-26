@@ -12,7 +12,7 @@ page_builder:
     id: asp-hero
     eyebrow: 'Expert Services'
     heading: 'Seamless solutions for learning and integrations'
-    text: 'With over 25 years of experience and deep expertise, Apprix is a Finnish pioneer in engaging and interactive online training. We have designed hundreds of solutions that integrate seamlessly into our clients'' processes and systems.'
+    text: "With over 25 years of experience and deep expertise, Apprix is a Finnish pioneer in engaging and interactive online training. We have designed hundreds of solutions that integrate seamlessly into our clients' processes and systems."
     trust_line: 'We combine data, content, and pedagogy — training reaches the right audience anywhere, anytime.'
     stats:
       -
@@ -66,7 +66,7 @@ page_builder:
         icon: plug
         eyebrow: INTEGRATIONS
         title: 'Secure integrations and completion data management'
-        text: 'We ensure smooth transfer of completion data to the systems that need it. Apprix Builder® is designed to connect seamlessly with the client''s existing environment.'
+        text: "We ensure smooth transfer of completion data to the systems that need it. Apprix Builder® is designed to connect seamlessly with the client's existing environment."
         bullets:
           - 'Secure APIs for HR, ERP, and IAM systems'
           - 'Automatic synchronization of completion data'
@@ -155,7 +155,7 @@ page_builder:
   -
     id: asp-cta
     eyebrow: 'Get started'
-    title: 'Let''s map out your organization''s training needs'
+    title: "Let's map out your organization's training needs"
     text: 'Book a free 30-60 minute discovery meeting where we review your needs and suggest a suitable package — with no commitment required.'
     button: /en/yritys
     type: cta
