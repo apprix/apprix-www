@@ -146,7 +146,7 @@ page_builder:
   -
     id: st-cta
     eyebrow: 'Contact us'
-    title: 'Let''s design a package tailored to your needs'
+    title: "Let's design a package tailored to your needs"
     text: 'Our shared goal is to create THE BEST E-LEARNING EVER for you and your organization. Ask us more and book a free discovery meeting.'
     button: /en/yritys
     type: cta

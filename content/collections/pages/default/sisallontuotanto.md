@@ -9,7 +9,7 @@ seo_description: 'Apprixin sisällöntuotantopalvelut: avaimet käteen -verkkoko
 sitemap_change_frequency: monthly
 sitemap_priority: '0.8'
 updated_by: 680e1400-32cd-4415-9b61-d630b47576db
-updated_at: 1769434378
+updated_at: 1779830337
 page_builder:
   -
     id: st-hero
@@ -21,12 +21,13 @@ page_builder:
       -
         id: st-hero-btn1
         label: 'Kysy lisää'
-        link: /yritys#yhteydenotto
+        link: '/yritys#yhteydenotto'
         style: primary
     scroll_label: 'Lue lisää'
     image: general_bg.jpg
     type: product_hero
     enabled: true
+    tone: light
   -
     id: st-services
     eyebrow: PALVELUT
@@ -96,6 +97,7 @@ page_builder:
         enabled: true
     type: feature_cards
     enabled: true
+    premium: false
   -
     id: st-logos
     heading: 'Luotettu kumppani huippuorganisaatioille'
@@ -110,7 +112,6 @@ page_builder:
       - keva.png
       - nyab.png
       - gasum.svg
-      - helsingin-satama.png
       - honkajoki.png
       - grk.jpg
     speed: normal
@@ -151,7 +152,7 @@ page_builder:
     eyebrow: 'Ota yhteyttä'
     title: 'Suunnitellaan juuri sinun tarpeisiisi sopiva paketti'
     text: 'Yhteinen tavoitteemme on luoda sinulle ja organisaatiollesi THE BEST E-LEARNING EVER. Kysy lisää ja varaa maksuton kartoituskeskustelu.'
-    button: /yritys#yhteydenotto
+    button: '/yritys#yhteydenotto'
     type: cta
     enabled: true
   -
@@ -166,7 +167,7 @@ page_builder:
         id: st-p1
         name: 'Jesse Jokinen'
         role: 'Managing Partner'
-        photo: team/jesse_bw.webp
+        photo: team/jesse_bw-(1).webp
         highlights:
           -
             id: st-h1
