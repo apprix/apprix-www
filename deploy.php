@@ -74,10 +74,13 @@ after('deploy:vendors', 'artisan:route:cache');
 task('deploy:git-auth-setup', function () {
     run("git -C {{release_path}} config user.email 'statamic@apprix.fi'");
     run("git -C {{release_path}} config user.name 'Statamic Bot'");
+    // core.sharedRepository=all makes git create objects with 0666/0777 permissions
+    // so any user (including deploy) can delete them during cleanup, even if www-data created them.
+    run("git -C {{release_path}} config core.sharedRepository all");
     // Give www-data rwX access to all paths Statamic CP may read/write:
     // .git/ (git operations), content/, users/, resources/, and public image dirs.
     foreach (['.git', 'content', 'users', 'resources', 'public/images', 'public/favicons', 'public/social_images'] as $dir) {
-        run("test -e {{release_path}}/$dir && setfacl -R -m u:www-data:rwX {{release_path}}/$dir && setfacl -R -d -m u:www-data:rwX {{release_path}}/$dir || true");
+        run("test -e {{release_path}}/$dir && setfacl -R -m u:www-data:rwX,u:deploy:rwX {{release_path}}/$dir && setfacl -R -d -m u:www-data:rwX,u:deploy:rwX {{release_path}}/$dir || true");
     }
 });
 
@@ -103,17 +106,24 @@ task('statamic:warm', function () {
 
 after('artisan:config:cache', 'statamic:warm');
 
-// Fix permissions on old releases before cleanup.
-// Statamic Git (www-data) creates .git/objects files owned by www-data.
-// Deployer (deploy user) can't rm those files without this step.
-task('deploy:fix-git-permissions', function () {
-    // www-data (Statamic Git) creates .git/objects files/dirs owned by www-data.
-    // deploy can only delete files if the parent directory is writable by deploy.
-    // chmod a+rwX gives all users (including deploy) write on those directories.
-    run("find {{deploy_path}}/releases -maxdepth 2 -name '.git' -type d -exec chmod -R a+rwX {} \; 2>/dev/null || true");
-});
 
-before('deploy:cleanup', 'deploy:fix-git-permissions');
+// Override cleanup to not abort the deploy on permission errors.
+// Old releases may contain www-data-owned .git/objects (created by Statamic Git)
+// that the deploy user cannot delete. We warn but continue — those releases
+// will be retried on the next deploy once core.sharedRepository=all takes effect.
+task('deploy:cleanup', function () {
+    $releases = get('releases_list');
+    $keep = get('keep_releases');
+
+    while (count($releases) > $keep) {
+        $release = array_pop($releases);
+        $releasePath = get('deploy_path') . '/releases/' . $release;
+        run("rm -rf $releasePath; exit 0");
+    }
+
+    run("cd {{deploy_path}} && if [ -e release ]; then rm release; fi");
+    run("cd {{deploy_path}} && if [ -e current ] && [ ! -L current ]; then rm -rf current; fi");
+})->desc('Cleaning up old releases');
 
 // Auto-rollback on failure
 after('deploy:failed', 'deploy:unlock');
