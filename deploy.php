@@ -8,9 +8,6 @@ set('application', 'apprix-www');
 set('repository', 'git@github.com:apprix/apprix-www.git');
 set('keep_releases', 5);
 
-// Keep .git in each release so Statamic Git integration can commit and push
-set('git_cache', false);
-
 // Shared files and dirs (persist across deploys)
 // NOTE: content/ is intentionally NOT shared — it lives in git and is deployed
 // with each release. Statamic Git commits CP changes back to the repo.
@@ -22,6 +19,17 @@ add('shared_dirs', [
 ]);
 
 add('writable_dirs', ['storage', 'bootstrap/cache', 'content']);
+
+// Override Deployer's default deploy:update_code which uses git archive (strips .git).
+// We do a real git clone so each release has a .git directory — required for
+// Statamic Git to run git add/commit/push from the app root.
+task('deploy:update_code', function () {
+    $git = get('bin/git');
+    $repo = get('repository');
+    $branch = get('branch', 'main');
+    run("export GIT_TERMINAL_PROMPT=0 GIT_SSH_COMMAND='ssh -o StrictHostKeyChecking=accept-new'; $git clone --depth=1 -b $branch $repo {{release_path}} 2>&1");
+    run("$git -C {{release_path}} rev-parse HEAD > {{release_path}}/REVISION");
+});
 
 host('production')
     ->setHostname('62.238.10.202')
