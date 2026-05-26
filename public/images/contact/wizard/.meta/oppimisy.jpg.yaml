@@ -1,6 +1,8 @@
-data: {  }
+data:
+  alt: 'apprix builder'
+  exempt_from_alt: false
 size: 149497
-last_modified: 1770381101
+last_modified: 1779782300
 width: 885
 height: 591
 mime_type: image/jpeg
