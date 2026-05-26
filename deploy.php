@@ -40,6 +40,16 @@ after('deploy:vendors', 'deploy:sync-assets');
 after('deploy:vendors', 'artisan:config:cache');
 after('deploy:vendors', 'artisan:route:cache');
 
+// Ensure www-data can write to shared/content (setfacl on writable_dirs
+// only touches the top-level dir, not existing files inside it)
+task('deploy:content-permissions', function () {
+    $sharedContent = '{{deploy_path}}/shared/content';
+    run("setfacl -R -m u:www-data:rwX $sharedContent");
+    run("setfacl -R -d -m u:www-data:rwX $sharedContent");
+});
+
+after('deploy:writable', 'deploy:content-permissions');
+
 // Statamic-specific commands
 task('statamic:warm', function () {
     run('cd {{release_path}} && php artisan statamic:stache:warm');
