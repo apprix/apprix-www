@@ -1,6 +1,7 @@
-data: {  }
+data:
+  exempt_from_alt: true
 size: 15036
-last_modified: 1770027417
+last_modified: 1779782300
 width: 500
 height: 500
 mime_type: image/webp
