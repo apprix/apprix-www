@@ -1,6 +1,8 @@
-data: {  }
+data:
+  alt: '2 workers looking for help on laptop'
+  exempt_from_alt: false
 size: 212468
-last_modified: 1770382164
+last_modified: 1779782300
 width: 1600
 height: 900
 mime_type: image/jpeg
