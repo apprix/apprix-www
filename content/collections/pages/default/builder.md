@@ -9,7 +9,7 @@ seo_description: 'Apprix Builder® on tekoälytuettu verkkokoulutusten sisällö
 sitemap_change_frequency: monthly
 sitemap_priority: '0.8'
 updated_by: 680e1400-32cd-4415-9b61-d630b47576db
-updated_at: 1769433921
+updated_at: 1779830200
 page_builder:
   -
     id: bldr-hero
@@ -33,19 +33,20 @@ page_builder:
       -
         id: bldr-stat03
         value: 1M+
-        label: 'suoritusta/v'
+        label: suoritusta/v
         type: stat
         enabled: true
     buttons:
       -
         id: bldr-hero-btn1
         label: 'Varaa maksuton demo'
-        link: /yritys#yhteydenotto
+        link: '/yritys#yhteydenotto'
         style: primary
     scroll_label: 'Lue lisää'
     image: builder_bg.jpg
     type: product_hero
     enabled: true
+    tone: light
   -
     id: bldr-features
     eyebrow: OMINAISUUDET
@@ -120,7 +121,6 @@ page_builder:
       - keva.png
       - nyab.png
       - gasum.svg
-      - helsingin-satama.png
       - honkajoki.png
       - grk.jpg
     speed: normal
@@ -185,7 +185,7 @@ page_builder:
     eyebrow: 'Varaa maksuton demo'
     title: 'Oletko valmis viemään organisaatiosi osaamisen uudelle tasolle?'
     text: 'Tarjoamme 30 tai 60 minuutin mittaisen demon, johon sisältyy organisaatiosi yksilöllinen koulutustarpeen kartoitus. Käyttöönotto on riskitöntä: maksat vain niiltä kuukausilta, kun verkkokurssia oikeasti käytetään.'
-    button: /yritys#yhteydenotto
+    button: '/yritys#yhteydenotto'
     type: cta
     enabled: true
   -
@@ -200,7 +200,7 @@ page_builder:
         id: bldr-p1
         name: 'Jesse Jokinen'
         role: 'Managing Partner'
-        photo: team/jesse_bw.webp
+        photo: team/jesse_bw-(1).webp
         highlights:
           -
             id: bldr-h1

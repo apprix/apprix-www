@@ -12,7 +12,7 @@ page_builder:
     id: bldr-hero
     eyebrow: 'Apprix Builder®'
     heading: 'Create impactful and engaging online courses with ease'
-    text: 'Apprix is a Finnish pioneer in interactive and engaging e-learning with over 25 years of experience. The next-generation learning tool Apprix Builder® is the most agile solution on the market, enabling you to make your organization''s competence development scalable, inspiring, and measurable.'
+    text: "Apprix is a Finnish pioneer in interactive and engaging e-learning with over 25 years of experience. The next-generation learning tool Apprix Builder® is the most agile solution on the market, enabling you to make your organization's competence development scalable, inspiring, and measurable."
     trust_line: 'Over 1,000 implementations and one million course completions per year – Finnish quality since 2001.'
     stats:
       -
@@ -30,7 +30,7 @@ page_builder:
       -
         id: bldr-stat03
         value: 1M+
-        label: 'completions/yr'
+        label: completions/yr
         type: stat
         enabled: true
     buttons:
@@ -79,7 +79,7 @@ page_builder:
         icon: plug
         eyebrow: INTEGRATIONS
         title: 'Connect seamlessly with your existing environment'
-        text: 'Builder integrates securely with your company''s own systems and supports multiple convenient authentication methods.'
+        text: "Builder integrates securely with your company's own systems and supports multiple convenient authentication methods."
         bullets:
           - 'HR and access control systems (Mepco, SuccessFactors, Once by Pinja)'
           - 'SSO single sign-on and email authentication'
@@ -128,7 +128,7 @@ page_builder:
     eyebrow: 'LEARNER FEEDBACK'
     title: 'Satisfied clients and learners'
     intro: 'Interactive exercises, instant feedback, and engaging elements motivate staff and bring lessons to life in daily work.'
-    clients: 'Dozens of leading organizations trust Apprix''s solutions, including Elenia, Finavia, Valmet, Skanska, Lindström, and SOL Palvelut.'
+    clients: "Dozens of leading organizations trust Apprix's solutions, including Elenia, Finavia, Valmet, Skanska, Lindström, and SOL Palvelut."
     quotes:
       -
         id: bldr-q1
@@ -164,7 +164,7 @@ page_builder:
         id: bldr-xc2
         eyebrow: 'Expert service'
         title: 'Content production – Help building your courses'
-        text: 'Our experts assist with content production when you don''t have the time.'
+        text: "Our experts assist with content production when you don't have the time."
         link: /en/palvelut/sisallontuotanto
         icon: users
       -
@@ -179,7 +179,7 @@ page_builder:
   -
     id: bldr-cta
     eyebrow: 'Book a free demo'
-    title: 'Ready to take your organization''s competence to the next level?'
+    title: "Ready to take your organization's competence to the next level?"
     text: 'We offer a 30 or 60-minute demo that includes a personalized training needs assessment for your organization. Getting started is risk-free: you only pay for the months your online course is actually in use.'
     button: /en/yritys
     type: cta
