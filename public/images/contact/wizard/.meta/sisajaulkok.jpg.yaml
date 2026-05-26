@@ -1,6 +1,8 @@
-data: {  }
+data:
+  alt: 'people working and smiling'
+  exempt_from_alt: false
 size: 81409
-last_modified: 1770382537
+last_modified: 1779782300
 width: 1080
 height: 570
 mime_type: image/jpeg
