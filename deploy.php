@@ -8,13 +8,17 @@ set('application', 'apprix-www');
 set('repository', 'git@github.com:apprix/apprix-www.git');
 set('keep_releases', 5);
 
+// Keep .git in each release so Statamic Git integration can commit and push
+set('git_cache', false);
+
 // Shared files and dirs (persist across deploys)
+// NOTE: content/ is intentionally NOT shared — it lives in git and is deployed
+// with each release. Statamic Git commits CP changes back to the repo.
 add('shared_files', ['.env', 'database/database.sqlite']);
 add('shared_dirs', [
     'storage',
     'public/assets',
     'public/files',
-    'content',        // CP-managed content persists across deploys
 ]);
 
 add('writable_dirs', ['storage', 'bootstrap/cache', 'content']);
@@ -40,18 +44,28 @@ after('deploy:vendors', 'deploy:sync-assets');
 after('deploy:vendors', 'artisan:config:cache');
 after('deploy:vendors', 'artisan:route:cache');
 
-// Ensure www-data can write to shared/content (setfacl on writable_dirs
-// only touches the top-level dir, not existing files inside it).
-// public/files and public/assets are owned by www-data (uploaded via CP)
-// so www-data already has full access there — no ACL needed.
-task('deploy:content-permissions', function () {
-    $path = '{{deploy_path}}/shared/content';
-    // Set ACL only on deploy-owned paths; www-data-owned files are already writable by www-data
-    run("find $path -user deploy -exec setfacl -m u:www-data:rwX {} +");
-    run("find $path -user deploy -type d -exec setfacl -d -m u:www-data:rwX {} +");
+// Configure git in each release for Statamic Git integration.
+// Uses a dedicated SSH deploy key (stored in shared/) so www-data can push
+// without being tied to any personal GitHub account.
+// The private key must be placed at shared/.statamic-git-deploy-key on the server
+// and the corresponding public key added to GitHub as a deploy key with write access.
+task('deploy:git-auth-setup', function () {
+    $keyPath = '{{deploy_path}}/shared/.statamic-git-deploy-key';
+    $keyExists = test("[ -f $keyPath ]");
+    if (!$keyExists) {
+        writeln('<comment>Warning: deploy key not found at ' . $keyPath . ' — Statamic Git push will not work.</comment>');
+        return;
+    }
+    // Tell git to use the deploy key when connecting to GitHub
+    run("git -C {{release_path}} config core.sshCommand 'ssh -i $keyPath -o StrictHostKeyChecking=no -o IdentitiesOnly=yes'");
+    run("git -C {{release_path}} config user.email 'statamic@apprix.fi'");
+    run("git -C {{release_path}} config user.name 'Statamic Bot'");
+    // Give www-data access to .git/ so it can run git add/commit/push
+    run("setfacl -R -m u:www-data:rwX {{release_path}}/.git");
+    run("setfacl -R -d -m u:www-data:rwX {{release_path}}/.git");
 });
 
-after('deploy:writable', 'deploy:content-permissions');
+after('deploy:update_code', 'deploy:git-auth-setup');
 
 // Statamic-specific commands
 task('statamic:warm', function () {
