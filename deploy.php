@@ -45,8 +45,10 @@ after('deploy:vendors', 'artisan:route:cache');
 task('deploy:content-permissions', function () {
     foreach (['content', 'public/files', 'public/assets'] as $dir) {
         $path = '{{deploy_path}}/shared/' . $dir;
-        run("setfacl -R -m u:www-data:rwX $path");
-        run("setfacl -R -d -m u:www-data:rwX $path");
+        // Only set ACL on deploy-owned files (www-data-owned files are already writable by www-data)
+        run("find $path -user deploy -exec setfacl -m u:www-data:rwX {} +");
+        // Set default ACL on all directories so new files inherit correct permissions
+        run("find $path -type d -exec setfacl -d -m u:www-data:rwX {} +");
     }
 });
 
