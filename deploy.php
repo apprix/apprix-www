@@ -20,19 +20,31 @@ add('shared_dirs', [
 
 add('writable_dirs', ['storage', 'bootstrap/cache', 'content']);
 
-// Override Deployer's default deploy:update_code which uses git archive (strips .git).
-// We do a real git clone so each release has a .git directory — required for
-// Statamic Git to run git add/commit/push from the app root.
+// Override Deployer's default deploy:update_code.
+// Instead of doing a git clone on the server (which requires server→GitHub SSH and can
+// cause SSH mux timeouts on slow clones), we upload the code directly from the CI runner.
+// The runner already has the repo checked out (including .git) by actions/checkout.
+// After upload we switch the git remote from HTTPS (runner default) to SSH so that
+// Statamic Git integration can push content commits back to GitHub from the server.
 task('deploy:update_code', function () {
-    $git = get('bin/git');
-    $repo = get('repository');
-    $branch = get('branch', 'main');
-    // GitHub Actions checks out in detached HEAD state, so branch resolves to 'HEAD'
-    if (empty($branch) || $branch === 'HEAD') {
-        $branch = 'main';
-    }
-    run("export GIT_TERMINAL_PROMPT=0 GIT_SSH_COMMAND='ssh -o StrictHostKeyChecking=accept-new'; $git clone --depth=1 -b $branch $repo {{release_path}} 2>&1");
-    run("$git -C {{release_path}} rev-parse HEAD > {{release_path}}/REVISION");
+    $repo = get('repository'); // git@github.com:apprix/apprix-www.git
+
+    // Upload the checked-out code from the CI runner to the release directory.
+    // Exclude build artifacts and dependencies — those are handled by later tasks.
+    upload('./', '{{release_path}}/', [
+        'options' => [
+            '--exclude=node_modules',
+            '--exclude=vendor',
+            '--exclude=public/build',
+        ],
+    ]);
+
+    // actions/checkout sets the remote URL to HTTPS with a temporary token.
+    // Switch to SSH so Statamic Git (via git-wrapper.sh) can push to GitHub.
+    run("/usr/bin/git -C {{release_path}} remote set-url origin $repo");
+    // Remove the HTTPS auth header injected by actions/checkout — not valid on server.
+    run("/usr/bin/git -C {{release_path}} config --unset http.https://github.com/.extraheader 2>/dev/null || true");
+    run("/usr/bin/git -C {{release_path}} rev-parse HEAD > {{release_path}}/REVISION");
 });
 
 host('production')
