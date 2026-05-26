@@ -2,11 +2,6 @@
 id: d19df7d2-f435-43d5-95d0-d32a7f910164
 origin: 2c1cbc43-eba8-47be-ae47-a9a21aa1a88e
 title: 'Services & Products'
-seo_title: 'Services & Products – Training solutions for organizations | Apprix'
-seo_description: 'Apprix products and services: Builder® authoring tool, MyCourses LMS, Checklist Engine, Exam Engine, content production and expert services. Everything from one partner.'
-og_title: 'Services & Products – Complete competence development solution | Apprix'
-updated_by: 680e1400-32cd-4415-9b61-d630b47576db
-updated_at: 1769433894
 page_builder:
   -
     id: plv-hero
@@ -43,6 +38,7 @@ page_builder:
     image: screenshots_diagonal_01.jpg
     type: product_hero
     enabled: true
+    tone: light
   -
     id: plv-overview
     eyebrow: OVERVIEW
@@ -93,6 +89,7 @@ page_builder:
         enabled: true
     type: feature_cards
     enabled: true
+    premium: false
   -
     id: plv-row1
     eyebrow: 'CONTENT CREATION & LEARNING'
@@ -189,7 +186,6 @@ page_builder:
       - keva.png
       - nyab.png
       - gasum.svg
-      - helsingin-satama.png
       - honkajoki.png
       - grk.jpg
     speed: normal
@@ -240,4 +236,9 @@ page_builder:
         enabled: true
     type: team_cards
     enabled: true
+seo_title: 'Services & Products – Training solutions for organizations | Apprix'
+seo_description: 'Apprix products and services: Builder® authoring tool, MyCourses LMS, Checklist Engine, Exam Engine, content production and expert services. Everything from one partner.'
+og_title: 'Services & Products – Complete competence development solution | Apprix'
+updated_by: 680e1400-32cd-4415-9b61-d630b47576db
+updated_at: 1779830508
 ---
