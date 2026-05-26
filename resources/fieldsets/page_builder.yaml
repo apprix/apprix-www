@@ -3,7 +3,7 @@ fields:
   - handle: page_builder
     field:
       type: replicator
-      localizable: false
+      localizable: true
       hide_display: true
       collapse: true
       listable: false
