@@ -62,12 +62,11 @@ after('deploy:vendors', 'artisan:route:cache');
 task('deploy:git-auth-setup', function () {
     run("git -C {{release_path}} config user.email 'statamic@apprix.fi'");
     run("git -C {{release_path}} config user.name 'Statamic Bot'");
-    // Give www-data rwX access to .git/ so it can run git add/commit/push
-    run("setfacl -R -m u:www-data:rwX {{release_path}}/.git");
-    run("setfacl -R -d -m u:www-data:rwX {{release_path}}/.git");
-    // Give www-data rwX access to content/ so Statamic CP can write files
-    run("setfacl -R -m u:www-data:rwX {{release_path}}/content");
-    run("setfacl -R -d -m u:www-data:rwX {{release_path}}/content");
+    // Give www-data rwX access to all paths Statamic CP may read/write:
+    // .git/ (git operations), content/, users/, resources/, and public image dirs.
+    foreach (['.git', 'content', 'users', 'resources', 'public/images', 'public/favicons', 'public/social_images'] as $dir) {
+        run("test -e {{release_path}}/$dir && setfacl -R -m u:www-data:rwX {{release_path}}/$dir && setfacl -R -d -m u:www-data:rwX {{release_path}}/$dir || true");
+    }
 });
 
 after('deploy:update_code', 'deploy:git-auth-setup');
