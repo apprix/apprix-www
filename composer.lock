@@ -4729,59 +4729,6 @@
             "time": "2025-02-11T12:33:16+00:00"
         },
         {
-            "name": "studio1902/statamic-peak-commands",
-            "version": "v9.9.1",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/studio1902/statamic-peak-commands.git",
-                "reference": "15db39db3c6953ccdbb0110789be944a405bf781"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/studio1902/statamic-peak-commands/zipball/15db39db3c6953ccdbb0110789be944a405bf781",
-                "reference": "15db39db3c6953ccdbb0110789be944a405bf781",
-                "shasum": ""
-            },
-            "require": {
-                "php": "^8.2",
-                "statamic/cms": "^5.0"
-            },
-            "require-dev": {
-                "laravel/pint": "^1.22",
-                "orchestra/testbench": "^9.0",
-                "spatie/laravel-ray": "^1.39"
-            },
-            "type": "library",
-            "extra": {
-                "laravel": {
-                    "providers": [
-                        "Studio1902\\PeakCommands\\ServiceProvider"
-                    ]
-                },
-                "statamic": {
-                    "name": "Statamic Peak Commands",
-                    "description": "Statamic Peak Commands addon"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Studio1902\\PeakCommands\\": "src"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "support": {
-                "issues": "https://github.com/studio1902/statamic-peak-commands/issues",
-                "source": "https://github.com/studio1902/statamic-peak-commands/tree/v9.9.1"
-            },
-            "funding": [
-                {
-                    "url": "https://github.com/studio1902",
-                    "type": "github"
-                }
-            ],
-            "time": "2025-10-14T08:33:43+00:00"
-        },
-        {
             "name": "studio1902/statamic-peak-seo",
             "version": "v8.26.2",
             "source": {
