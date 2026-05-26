@@ -30,7 +30,7 @@ page_builder:
       -
         id: bldr-stat03
         value: 1M+
-        label: 'avslut/år'
+        label: avslut/år
         type: stat
         enabled: true
     buttons:
