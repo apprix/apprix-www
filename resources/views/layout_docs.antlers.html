@@ -722,17 +722,18 @@
             window.addEventListener('hashchange', function () {
                 var newHash = decodeURIComponent(window.location.hash.slice(1));
                 if (!newHash) return;
+                var target = document.getElementById(newHash);
+                if (!target) return;
                 if (spyLinks.some(function (a) { return a.dataset.section === newHash; })) {
                     spySetActive(newHash);
                 }
-                var target = document.getElementById(newHash);
-                if (target) {
-                    requestAnimationFrame(function () {
-                        requestAnimationFrame(function () {
-                            scrollToEl(target);
-                        });
-                    });
-                }
+                spyLocked = true;
+                clearTimeout(navScrollTimer);
+                scrollToEl(target);
+                navScrollTimer = setTimeout(function () {
+                    scrollToEl(target);
+                    spyLocked = false;
+                }, 350);
             });
 
             // ── 3. Active state + infinite scroll (show pages only) ──
@@ -905,17 +906,16 @@
                     }
                     var hashTarget = document.getElementById(loadHash);
                     if (hashTarget) {
+                        spyLocked = true;
                         scrollToEl(hashTarget);
                         // Images in preceding sections may not have loaded yet, causing a
                         // layout shift that pushes the target below the viewport.
-                        // Re-scroll after all resources finish loading, but cancel if the
-                        // user has already scrolled somewhere else.
-                        var loadHashScrolled = false;
-                        window.addEventListener('scroll', function () { loadHashScrolled = true; }, { once: true, passive: true });
+                        // Re-scroll after all resources finish loading, then release the lock.
+                        // Cancel and release early if the user scrolls manually.
+                        window.addEventListener('scroll', function () { spyLocked = false; }, { once: true, passive: true });
                         window.addEventListener('load', function () {
-                            if (!loadHashScrolled) {
-                                scrollToEl(hashTarget);
-                            }
+                            scrollToEl(hashTarget);
+                            setTimeout(function () { spyLocked = false; }, 100);
                         }, { once: true });
                     }
                 }
