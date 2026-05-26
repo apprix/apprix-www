@@ -1,6 +1,8 @@
-data: {  }
+data:
+  alt: 'people working'
+  exempt_from_alt: false
 size: 116376
-last_modified: 1770381315
+last_modified: 1779782300
 width: 1080
 height: 721
 mime_type: image/jpeg
