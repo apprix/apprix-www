@@ -1,6 +1,8 @@
-data: {  }
+data:
+  alt: 'apprix logo small'
+  exempt_from_alt: false
 size: 1530
-last_modified: 1769160049
+last_modified: 1779782300
 width: 48
 height: 48
 mime_type: image/png
