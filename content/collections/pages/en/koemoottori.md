@@ -172,8 +172,8 @@ page_builder:
   -
     id: km-cta
     eyebrow: 'Customizable to your needs'
-    title: 'Take your organization''s competence assessment to the next level'
-    text: 'Exam Engine is flexible and can be customized in many ways to fit your organization''s specific needs. Contact us to learn more and book a free demo.'
+    title: "Take your organization's competence assessment to the next level"
+    text: "Exam Engine is flexible and can be customized in many ways to fit your organization's specific needs. Contact us to learn more and book a free demo."
     button: /en/yritys
     type: cta
     enabled: true

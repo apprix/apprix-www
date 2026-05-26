@@ -9,7 +9,7 @@ seo_description: 'Apprix Koemoottori kattaa digitaalisten kokeiden koko prosessi
 sitemap_change_frequency: monthly
 sitemap_priority: '0.8'
 updated_by: 680e1400-32cd-4415-9b61-d630b47576db
-updated_at: 1769434172
+updated_at: 1779830303
 page_builder:
   -
     id: km-hero
@@ -40,12 +40,13 @@ page_builder:
       -
         id: km-hero-btn1
         label: 'Kysy lisää'
-        link: /yritys#yhteydenotto
+        link: '/yritys#yhteydenotto'
         style: primary
     scroll_label: 'Lue lisää'
     image: laptop_hands_01.jpg
     type: product_hero
     enabled: true
+    tone: light
   -
     id: km-features
     eyebrow: OMINAISUUDET
@@ -107,7 +108,6 @@ page_builder:
       - keva.png
       - nyab.png
       - gasum.svg
-      - helsingin-satama.png
       - honkajoki.png
       - grk.jpg
     speed: normal
@@ -143,6 +143,7 @@ page_builder:
         enabled: true
     type: feature_cards
     enabled: true
+    premium: false
   -
     id: km-xsell
     eyebrow: 'Tutustu myös'
@@ -177,7 +178,7 @@ page_builder:
     eyebrow: 'Räätälöitävissä tarpeisiinne'
     title: 'Vie organisaatiosi osaamisen mittaaminen uudelle tasolle'
     text: 'Koemoottori on joustava ja se voidaan räätälöidä monin tavoin juuri teidän organisaationne tarpeisiin sopivaksi. Kysy lisää ja varaa maksuton esittely.'
-    button: /yritys#yhteydenotto
+    button: '/yritys#yhteydenotto'
     type: cta
     enabled: true
   -
@@ -192,7 +193,7 @@ page_builder:
         id: km-p1
         name: 'Jesse Jokinen'
         role: 'Managing Partner'
-        photo: team/jesse_bw.webp
+        photo: team/jesse_bw-(1).webp
         highlights:
           -
             id: km-h1
