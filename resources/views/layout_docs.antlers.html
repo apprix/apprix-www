@@ -410,8 +410,7 @@
             if (!hash) return;
             const el = document.querySelector(hash);
             if (!el) return;
-            const headerHeight = 64; // h-16
-            const top = el.getBoundingClientRect().top + window.pageYOffset - headerHeight - 16;
+            const top = el.getBoundingClientRect().top + window.pageYOffset - 76; // 64px header + 12px breathing room
             window.scrollTo({ top: Math.max(0, top), behavior: 'instant' });
         });
         </script>
@@ -906,7 +905,7 @@
                     }
                     var hashTarget = document.getElementById(loadHash);
                     if (hashTarget) {
-                        hashTarget.scrollIntoView({ behavior: 'instant', block: 'start' });
+                        scrollToEl(hashTarget);
                         // Images in preceding sections may not have loaded yet, causing a
                         // layout shift that pushes the target below the viewport.
                         // Re-scroll after all resources finish loading, but cancel if the
@@ -915,7 +914,7 @@
                         window.addEventListener('scroll', function () { loadHashScrolled = true; }, { once: true, passive: true });
                         window.addEventListener('load', function () {
                             if (!loadHashScrolled) {
-                                hashTarget.scrollIntoView({ behavior: 'instant', block: 'start' });
+                                scrollToEl(hashTarget);
                             }
                         }, { once: true });
                     }
