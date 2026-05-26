@@ -118,7 +118,7 @@ return [
     'nav_desc_checklist' => 'Sähköiset perehdytys- ja tarkistuslistat',
     'nav_desc_exam' => 'Digitaalisten kokeiden koko prosessi',
     'nav_desc_content' => 'Asiantuntijoidemme luomaa sisältöä',
-    'nav_desc_expert' => 'Koulutus, konsultointi ja tuki',
+    'nav_desc_expert' => 'Integraatiot, konsultointi, koulutus ja tukipalvelut',
 
     // UI
     'scroll_to_top' => 'Selaa ylös',
