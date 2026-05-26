@@ -9,7 +9,7 @@ seo_description: 'Apprixin asiantuntijapalvelut: koulutustarpeiden kartoitus, HR
 sitemap_change_frequency: monthly
 sitemap_priority: '0.8'
 updated_by: 680e1400-32cd-4415-9b61-d630b47576db
-updated_at: 1779830360
+updated_at: 1779830466
 page_builder:
   -
     id: asp-hero
