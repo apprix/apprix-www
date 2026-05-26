@@ -39,7 +39,7 @@ page_builder:
   -
     id: yhteydenotto
     title: 'Get in touch'
-    text: "We can review your needs together and see how Apprix could help."
+    text: 'We can review your needs together and see how Apprix could help.'
     form: contact
     type: form
     enabled: true
