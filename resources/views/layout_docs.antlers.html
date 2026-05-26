@@ -16,6 +16,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
         {{ vite src="resources/css/site.css|resources/js/site.js" }}
         {{ partial:statamic-peak-seo::snippets/seo }}
+        <link rel="apple-touch-icon" sizes="180x180" href="/favicons/{{ site:handle }}/apple-touch-icon.png">
+        <link rel="icon" href="/favicons/{{ site:handle }}/favicon-192x192.png" type="image/png" sizes="192x192">
         {{ stack:head }}
         <style>
 
