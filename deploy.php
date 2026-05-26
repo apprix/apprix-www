@@ -107,7 +107,10 @@ after('artisan:config:cache', 'statamic:warm');
 // Statamic Git (www-data) creates .git/objects files owned by www-data.
 // Deployer (deploy user) can't rm those files without this step.
 task('deploy:fix-git-permissions', function () {
-    run("find {{deploy_path}}/releases -maxdepth 2 -name '.git' -type d -exec chmod -R u+rwX {} \; 2>/dev/null || true");
+    // www-data (Statamic Git) creates .git/objects files/dirs owned by www-data.
+    // deploy can only delete files if the parent directory is writable by deploy.
+    // chmod a+rwX gives all users (including deploy) write on those directories.
+    run("find {{deploy_path}}/releases -maxdepth 2 -name '.git' -type d -exec chmod -R a+rwX {} \; 2>/dev/null || true");
 });
 
 before('deploy:cleanup', 'deploy:fix-git-permissions');
