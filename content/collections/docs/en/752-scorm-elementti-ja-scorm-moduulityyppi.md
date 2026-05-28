@@ -1,51 +1,7 @@
 ---
-id: 8d7050e8-e082-4ff9-99aa-021ec43e377f
+id: df77fbce-e8b4-4bcb-bdbf-c4503c0a2b15
+origin: 8d7050e8-e082-4ff9-99aa-021ec43e377f
 blueprint: doc
 title: '7.52 SCORM element and SCORM module type'
 ---
-You can use the<strong> SCORM element</strong> to embed content in a SCORM zip package file into a module. You can upload SCORM content as a zip file by editing the SCORM element and selecting the file from your device. The SCORM package can be your own or created by other parties.
-
-Like any other element, the SCORM element can be used in a standard module type, but we recommend using only one SCORM element.
-
-The difference between a <strong>SCORM module type</strong> and a standard module type is that you cannot add a non-SCORM element to the SCORM module type.
-
-The intro and finish elements that appear in editing mode are not visible in preview and published modes for the SCORM module type. In other words, the trainee will see only the content of the SCORM zip package file when completing the course.
-
-<strong>Note!</strong> If SCORM element uses a SCORM package created with Builder, the answers and points are recorded in the statistics of the course from which the SCORM package was created. For example, course A in Builder contains a SCORM element. The SCORM element includes a SCORM package created from course B in Builder. The answers and points given in course B inside the SCORM element, are recorded in the statistics of course B.
-<h4><strong>Editing Instructions</strong></h4>
-<strong>How do you create a module with the SCORM module type?</strong>
-
-We recommend using only one SCORM element in a module that utilises the SCORM module type.
-<ul>
- <li>Click the "<strong>Create</strong>" button on the left side of the page. The module type selection window will open.</li>
- <li>Select the "<strong>SCORM</strong>" module type and any desired template.</li>
- <li>Give the new SCORM module a name and click the Save button. The SCORM module is now created.</li>
- <li>Click "<strong>Add element</strong>." Drag the SCORM element between the <strong>intro</strong> and <strong>finish</strong> elements to add it to the new module. Then click the <strong>Save</strong> button.</li>
- <li>Click the <strong>SCORM element</strong>. The element will open.</li>
- <li>Click the "<strong>Select file</strong>" button in the middle of the element. The "<strong>Open</strong>" window will open.</li>
- <li>Select the <strong>SCORM zip package file</strong> and click the "<strong>Open</strong>" button. You will then be notified if the file upload was successful. If the file upload is successful, the content of the SCORM file will be displayed in the SCORM element.</li>
-</ul>
-<strong>Note:</strong>
-<ul>
- <li>In preview and publishing mode, the user is not shown the intro and finish elements of the SCORM module.</li>
- <li>Once the participant has completed the content of the SCORM element, the module will be marked as completed.</li>
- <li>You can add other elements if the selected module does not use the SCORM module type. If the module uses the SCORM module type, only the SCORM element is available in the list of elements.</li>
- <li>When previewing in preview mode a Builder training containing another Builder training embedded in a SCORM element, the embedded Builder training is also previewed in preview mode</li>
-</ul>
-<strong>Operation and information security of SCORM packages created in Apprix Builder</strong>
-
-Generally, the latest completion data is sent when the user navigates to a different module page. When the user navigates to the final page (which, in practice, is usually the finish element), the course is marked as completed for the current completion. In addition, when a SCORM package is used and the user navigates to the final page, the system, such as an LMS, embedding the Builder course, is notified via the SCORM interface that the course has been completed.
-
-When using a standard SCORM package (also referred to as an Online SCORM package), the content necessary for the course and the code required for the general operation of the Builder courses (including navigation) are loaded from the Builder domain. In addition, the package includes other files needed for the course at the moment of the creation of the package, like the uploaded files used in Builder course and the customer-specific code and its required files. When using a standard SCORM package, completion data is sent to Builder and Apprix statistics.
-
-When using an offline SCORM package, all the data (including content), code, and other required files are included within the package. The offline SCORM package makes requests to the Apprix domain only to send completion data to Apprix statistics, not to  Builder.
-
-Requests made to Apprix domain use the HTTPS protocol to fetch and send data securely.
-
-For further information about the SCORM, please check the Builder's FAQ.
-
-<strong>Zip/ SCORM files:</strong> <a href="/faq">/faq</a>
-
-<h6 class="p1">How do you create a module with the SCORM module type?</h6>
-
-<figure class="doc-image"><img src="/files/docs/2025/04/SCORM-module-creation2-1.gif" alt="" loading="lazy"></figure>
+<p>You can use the <strong>SCORM</strong> element to embed content contained in a SCORM zip package file as part of a module. You can upload SCORM content as a zip package file by editing the SCORM element and selecting the file from your own device. The SCORM package can be one you have created yourself or one created by other parties.</p><p>The <strong>SCORM element</strong> can also be used in a module that uses the standard module type.</p><p>In a standard module, the SCORM element can be used like other elements, but we recommend that a module using the SCORM module type should use only one SCORM element.</p><p>A module created with the <strong>SCORM module type</strong> differs from a module created with the standard module type in that no element other than the SCORM element can be added to the module, and the intro and finish elements visible in edit mode as a facilitator are not shown to the person completing the training. In other words, the learner sees nothing other than the content in the SCORM zip package file while completing the training. Note! When the learner has completed the content of the SCORM element, the module is marked as completed.</p><p><strong>Note!</strong> If the SCORM element uses a SCORM package created with Builder, the answers and points given during the completion are accumulated in the statistics of the training from which the SCORM package was created. For example, Builder training A contains a SCORM element. The SCORM element has embedded a SCORM package created from Builder training B. The answers and points given in Builder training B shown in the SCORM element are accumulated in the statistics of Builder training B.</p><h3>Editing instructions</h3><h3>How do you create a module that uses the SCORM module type?</h3><p>We recommend that a module using the SCORM module type should use only one SCORM element.</p><ul><li><p>Click the "<strong>Create</strong>" button on the left side of the page. The module type selection window opens.</p></li><li><p>Select the "<strong>SCORM</strong>" module type and any desired template.</p></li><li><p>Give the new SCORM module a name and click the Save button. The SCORM module has now been created.</p></li><li><p>Click "<strong>Add element</strong>". Add the SCORM element to the new module by dragging it between the intro and finish elements. Click the Save button.</p></li><li><p>Click the SCORM element. The element opens.</p></li><li><p>Click the "<strong>Choose file</strong>" button in the centre of the element. The "<strong>Open</strong>" window opens.</p></li><li><p>Select the <strong>SCORM zip package file</strong> and click the "<strong>Open</strong>" button. You will then be notified whether the file upload was successful. If the file upload was successful, the content of the SCORM file is visible in the SCORM element. <strong>Note!</strong> In preview and published mode, the SCORM module's Intro and Finish elements are not shown to the user.</p></li></ul><h3>Note!</h3><ul><li><p>If the selected module does not use the SCORM module type, you can add other elements to the module as well. Only the SCORM element is available in the SCORM module type.</p></li><li><p>When previewing a Builder training in preview mode that has another Builder training embedded in a SCORM element, the embedded Builder training is also previewed in preview mode.</p></li></ul><h3>How SCORM packages exported from Apprix Builder work and security</h3><p>Generally, the most recent completion data is sent when the user moves to the next page of the module. When the user moves to the last page of the module (in practice the finish element), the training is marked as completed (completed) in the current completion. In addition, when using a SCORM package and the user moves to the last page, the system embedding the training, such as an LMS, is notified via the SCORM interface that the training has been successfully completed.</p><p>When using a standard SCORM package (an Online SCORM package), the content required by the training and the code that defines the general operation of Builder trainings (navigation) are fetched from the Builder address. In addition, other files required in the Builder training at the time of package creation are included in the package, such as files uploaded to Builder that are used in the training, as well as customer-specific code and the files it requires. Completion data is sent to Builder as well as to Apprix statistics.</p><p>When using an Offline SCORM package, all data required by the training (including content), code, and other necessary files are included in the package. The Offline SCORM package makes requests to Apprix addresses only for sending completion data to Apprix statistics (not to Builder).</p><p>Requests made to Apprix addresses use the HTTPS protocol for secure downloading and sending of data.</p><p>More information about SCORM can be found in the Builder FAQ section.</p><p>ZIP/SCORM File: <a href="/faq">/faq</a></p><h3>How do you create a module that uses the SCORM module type?</h3><p><img src="statamic://asset::files::docs/2025/04/SCORM-module-creation2.gif"></p>

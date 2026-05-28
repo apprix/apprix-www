@@ -2,35 +2,12 @@
 id: 06f257d5-b799-49c5-b38b-43864c8a06e0
 blueprint: doc
 title: '7.42 Hotspot 360°'
+seo_noindex: false
+seo_nofollow: false
+seo_canonical_type: entry
+sitemap_change_frequency: weekly
+sitemap_priority: 0.5
+updated_by: 680e1400-32cd-4415-9b61-d630b47576db
+updated_at: 1779938921
 ---
-Hotspot 360° -elementti on hyvin samanlainen kuin Hotspot 2, mutta se käyttää taustakuvana tasakulmaista 360° kuvaa kaksiulotteisen kuvan sijaan.
-
-Tätä elementtiä voidaan käyttää, kun suorittajan on tarpeen keskittyä tiettyihin aiheisiin, jotka ovat saatavilla klikattavissa olevissa hotspoteissa tasakulmaisen 360° taustakuvan päällä. Klikattavat hotspotit voivat sisältää tekstiä, kuvia, True/False kysymyksiä ja/tai videotiedostoja.
-
-Suorittaja voi hypätä hotspottien välillä klikkaamalla ikkunan oikealla puolella olevaa <strong>Siirrä</strong> eteenpäin -painiketta. <strong>Julkaistu</strong>-tilassa, kun kaikki pakolliset hotspotit on valittu, eteenpäin -painike siirtää harjoittelijan koulutuksen seuraavalle sivulle.
-<h4>Elementin muokkausohjeet</h4>
-<ul>
- <li>Lisää tasakulmainen 360° taustakuva liikuttamalla hiirtä ja valitsemalla oikeanpuoleisesta työkalupalkista "<strong>Change Image</strong>".</li>
-</ul>
-<strong>Kuvavaatimukset:</strong>
-<ul>
- <li>Tasakulmainen 360° kuva</li>
- <li>Huomaa, että 360° kuvia ei optimoida automaattisesti, joten on suositeltavaa tehdä se manuaalisesti ennen kuvan lataamista: koon tulisi olla noin 6000x3000 - 8000x4000 pikseliä, jolloin keskimääräisellä internet-nopeudella saavutetaan hyvä laatu.</li>
- <li>Vedä klikattava hotspot oikeaan kohtaan kuvan päällä.</li>
-</ul>
-<strong>Huom</strong>! Voit muuttaa hotspotin väriä ja kuvaketta sivellinkuvakkeesta ja säätää sen sijaintia klikkaamalla siirtokuvaketta.
-<ul>
- <li>Lisää hotspotteja valitsemalla yläosassa olevasta rataskuvakkeesta vaihtoehto “<strong>Element Settings…</strong>”.</li>
- <li>Klikkaa kutakin hotspotia muokataksesi sen sisältöä. Klikattava hotspot voi sisältää tekstiä, kuvaa, True/False kysymyksen, videotiedoston ja pakollisen/ei pakollisen vaihtoehdon.</li>
-</ul>
-<ul>
- <li>Valitse vasemmalla olevista työkalukuvakkeista elementin kunkin hotspotin yleiset asetukset.</li>
-</ul>
-
-<h6 class="p1">Klikkaa kuvia suurentaaksesi niitä.</h6>
-
-<figure class="doc-image"><img src="/files/docs/2022/06/hotspot360-2-1.gif" alt="" loading="lazy"></figure>
-
-<figure class="doc-image"><img src="/files/docs/2022/06/HotSpot-360-1-kuva.png" alt="" loading="lazy"></figure>
-
-<figure class="doc-image"><img src="/files/docs/2022/06/HotSpot-360-2-kuva.png" alt="" loading="lazy"></figure>
+<p>Hotspot 360° -elementti on hyvin samanlainen kuin Hotspot 2, mutta se käyttää taustakuvana tasakulmaista 360° kuvaa kaksiulotteisen kuvan sijaan.</p><p>Tätä elementtiä voidaan käyttää, kun suorittajan on tarpeen keskittyä tiettyihin aiheisiin, jotka ovat saatavilla klikattavissa olevissa hotspoteissa tasakulmaisen 360° taustakuvan päällä. Klikattavat hotspotit voivat sisältää tekstiä, kuvia, True/False kysymyksiä ja/tai videotiedostoja.</p><p>Suorittaja voi hypätä hotspottien välillä klikkaamalla ikkunan oikealla puolella olevaa <strong>Siirrä</strong> eteenpäin -painiketta. <strong>Julkaistu</strong>-tilassa, kun kaikki pakolliset hotspotit on valittu, eteenpäin -painike siirtää harjoittelijan koulutuksen seuraavalle sivulle.</p><h3>Elementin muokkausohjeet</h3><ul><li><p>Lisää tasakulmainen 360° taustakuva liikuttamalla hiirtä ja valitsemalla oikeanpuoleisesta työkalupalkista &quot;<strong>Change Image</strong>&quot;.</p></li></ul><p><strong>Kuvavaatimukset:</strong></p><ul><li><p>Tasakulmainen 360° kuva</p></li><li><p>Huomaa, että 360° kuvia ei optimoida automaattisesti, joten on suositeltavaa tehdä se manuaalisesti ennen kuvan lataamista: koon tulisi olla noin 6000x3000 - 8000x4000 pikseliä, jolloin keskimääräisellä internet-nopeudella saavutetaan hyvä laatu.</p></li><li><p>Vedä klikattava hotspot oikeaan kohtaan kuvan päällä.</p></li></ul><p><strong>Huom</strong>! Voit muuttaa hotspotin väriä ja kuvaketta sivellinkuvakkeesta ja säätää sen sijaintia klikkaamalla siirtokuvaketta.</p><ul><li><p>Lisää hotspotteja valitsemalla yläosassa olevasta rataskuvakkeesta vaihtoehto “<strong>Element Settings…</strong>”.</p></li><li><p>Klikkaa kutakin hotspotia muokataksesi sen sisältöä. Klikattava hotspot voi sisältää tekstiä, kuvaa, True/False kysymyksen, videotiedoston ja pakollisen/ei pakollisen vaihtoehdon.</p></li></ul><ul><li><p>Valitse vasemmalla olevista työkalukuvakkeista elementin kunkin hotspotin yleiset asetukset.</p></li></ul><p></p><h3>Elementti julkaisutilassa ( Published mode )</h3><p><img src="statamic://asset::files::docs/2022/06/hotspot360-2-1.gif"></p><p><img src="statamic://asset::files::docs/2022/06/HotSpot-360-1-kuva.png"></p><p><img src="statamic://asset::files::docs/2022/06/HotSpot-360-2-kuva.png"></p>

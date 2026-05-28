@@ -1,0 +1,6 @@
+---
+id: 1c1fc3b2-ab41-4c50-bcf0-10d7996bea76
+origin: 5674f8ad-7272-4ceb-bad0-c47a92574a67
+title: 'How can we make an orientation training visible to external partners? The training link leads to the SSO (Single Sign-On) view and external users cannot log in through it.'
+answer: '<p>External users cannot log in to the orientation training because the SSO login method is enabled in the module (this option is intended for internal employees only).</p><p>In the User Authentication settings under the module''s gear menu, you must select which user authentication method the participant is identified with when they access the module.</p><p>If you want to make the orientation training visible to external users, we recommend changing the login method (for example: Email registration or Tax Number Check (vero.fi))</p><p>Our Help page has more information about user authentication methods integrated into Builder for identifying course participants.</p> <img src="/files/docs/2022/04/SSO.png" alt="" width="247" style="max-width:100%;height:auto;display:block;margin:0.75rem 0;"> <img src="/files/docs/2022/04/User-Authentication-400x221.png" alt="" width="400" style="max-width:100%;height:auto;display:block;margin:0.75rem 0;">'
+---

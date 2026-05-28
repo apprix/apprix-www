@@ -1,28 +1,7 @@
 ---
-id: b3dd95a7-c110-459f-b7e4-62a84ecb5063
+id: 3c3f69d9-5e5c-4796-81e0-8c89e53c9599
+origin: b3dd95a7-c110-459f-b7e4-62a84ecb5063
 blueprint: doc
 title: '7.14 Checkbox Critical'
 ---
-This is an upgraded version of the Checkbox element. In this element you can choose the critical statements that the trainee must answer correctly. For example, if the trainee has responded correctly, with the exception of one critical answer, s/he will be notified in the <b>Pass / Fail</b> element and will need to repeat the test.
-<h4>Editing Instructions</h4>
-<ul>
- <li aria-level="1">Select the number of items from “<b>Element Settings…</b>” on top of the element behind the gear icon.</li>
- <li aria-level="1">Fill in the questions / statements and choose their values (e.g. yes/no, true/false).</li>
- <li aria-level="1">Fill in the info box on the left and click the “<b>answer mode</b>” tool if needed (for more info, please check the information under the <b>CheckBox</b> element).</li>
- <li aria-level="1">Click the Exclamation point- button. “<b>Settings for this element</b>” pop-up window opens. All questions/statements are listed in the pop-up window. </li>
- <li aria-level="1">Choose which of the questions, if any, should be categorized as “critical”. This means that if the trainee answers the critical question incorrectly, s/he fails the test and needs to repeat it. For this reason, the <b>Checkbox critical</b> element should be followed by the <b>Pass/Fail</b> element, since it is this element that informs the trainee if s/he has passed the training or not.</li>
-</ul>
-
-<b>Note!</b> Please, remember also to assign the percentage of points needed for passing the training. You can do this in the module’s “<b>Edit Points…</b>” tool.
-
-<h6 class="p1"><b>Click on the images to enlarge them.</b></h6>
-
-<h6 class="p1"><b>Element in preview mode</b></h6>
-
-<h6 class="p1"><b>Element in edit mode</b></h6>
-
-<figure class="doc-image"><img src="/files/docs/2024/06/Checkboxcritical-preview-1.gif" alt="" loading="lazy"></figure>
-
-<figure class="doc-image"><img src="/files/docs/2024/06/Checkboxcritical-edit1a-1.gif" alt="" loading="lazy"></figure>
-
-<figure class="doc-image"><img src="/files/docs/2024/06/Checkboxcritical-edit1-1.gif" alt="" loading="lazy"></figure>
+<p>This is an updated version of the <strong>Checkbox</strong> element. In this element you can select which critical questions/statements the learner must answer correctly. If the learner has, for example, answered almost all questions/statements correctly except for one critical question/statement, they will receive a notification of a failed attempt in the <strong>Pass/Fail</strong> element and will have to retake the test.</p><h3>Element editing instructions</h3><p>Click <strong>Element Settings</strong> from the orange gear icon located at the top of the element's edit view. Add the required number of items in the Element Settings window. Fill in the questions/statements and select their values (e.g. yes/no, true/false).</p><p>Fill in the information box on the left. From the gear icon in the left corner of the element view, you can also define separate correct and incorrect answer texts for each statement or question. Activate the function by clicking one of the answer fields.</p><p>Click the exclamation mark button, and the <strong>Settings for this element</strong> popup opens. In the popup you can see all the questions/statements. Select which questions should be classified as "critical". This means that if the learner answers a critical question incorrectly, they have failed the test and must retake it. For this reason, a <strong>Pass/Fail</strong> element should be placed after the Checkbox Critical element to inform the learner whether they have passed the training or not.</p><p><strong>Note!</strong> Remember to also edit the module's percentage pass threshold in the Edit Points view.</p><h3>Element in preview mode</h3><p><img src="statamic://asset::files::docs/2024/06/Checkboxcritical-preview.gif"></p><h3>Element in edit mode</h3><p><img src="statamic://asset::files::docs/2024/06/Checkboxcritical-edit1a.gif"></p><p><img src="statamic://asset::files::docs/2024/06/Checkboxcritical-edit1.gif"></p>

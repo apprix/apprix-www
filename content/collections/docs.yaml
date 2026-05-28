@@ -1,9 +1,12 @@
 title: Help
 sites:
   - default
+  - en
 template: docs/show
 layout: layout_docs
-route: '/help/{slug}'
+route:
+  default: '/help/{slug}'
+  en: '/en/help/{slug}'
 revisions: false
 structure:
   root: false

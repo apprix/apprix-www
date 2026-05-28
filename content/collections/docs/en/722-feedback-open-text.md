@@ -1,18 +1,7 @@
 ---
-id: 9eaa2082-b974-48d9-a363-78fe0e8407b3
+id: a0c84c6e-ef8c-4c41-a31f-08b3fe832c35
+origin: 9eaa2082-b974-48d9-a363-78fe0e8407b3
 blueprint: doc
 title: '7.22 Feedback Open Text'
 ---
-<strong>Feedback Open Text</strong> is a feedback element. In this element, you can ask from one to three questions, which the trainee may answer.
-<h4>Editing Instructions</h4>
-<ul>
- <li>Click the <b>Element settings</b> option from the gear icon at the top of <strong>Edit Element Contents</strong> view. In the window, add and edit your questions (max. three questions). Now the boxes will appear on the right side of the element.</li>
- <li>Write the title and any additional information about the survey in the text box on the left side of the element. In case you only want to show the background image, you can remove the text. If there is no content, the text box will not be displayed to the trainee. Please note that for editing purposes, you will still see the empty box with the text <i>"- click to insert text -".</i> </li>
- <li>Add a background image by clicking the <b>Change image</b> icon from the top right corner of the image field. </li>
-</ul>
-
-<h6 class="p1"><b>Click on the images to enlarge them.</b></h6>
-
-<figure class="doc-image"><img src="/files/docs/2021/06/FOT_1-1.png" alt="" loading="lazy"></figure>
-
-<figure class="doc-image"><img src="/files/docs/2021/06/FOT_2-1.png" alt="" loading="lazy"></figure>
+<p><strong>Feedback Open Text</strong> is an element in which the learner writes feedback on questions or statements. In the element you can ask 1–3 questions to which the learner answers in their own words, or present 1–3 statements that the learner evaluates or reflects on verbally.</p><h3>Element editing instructions</h3><ul><li><p>Click <strong>Element settings</strong> from the orange gear menu at the top of the element's edit view. Add, remove, and edit questions and their order in the <strong>Element settings</strong> window (up to three questions). The boxes appear on the right side of the element.</p></li><li><p>Write the title of the task or survey and any instructions or additional information in the title and body text field on the left side of the element. If you want to show only the background image, you can remove the text. If there is no content, the title field and the body text field below it are not shown to the learner. Note that to make editing easier, in the edit view you will still see an empty box with the text "- click to insert text -".</p></li><li><p>Add background images by clicking the <strong>Change image</strong> icon in the upper right corner of the element's image field.</p></li></ul><h3>Element in preview mode</h3><p><img src="statamic://asset::files::docs/2021/08/Feedback_Open_Text_FI-1.png"></p><h3>Element settings in edit view:</h3><p><img src="statamic://asset::files::docs/2021/08/Feedback_Open_Text_Edit_FI-2.gif"></p><p></p>

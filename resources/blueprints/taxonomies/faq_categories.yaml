@@ -1,0 +1,32 @@
+title: 'FAQ Category'
+fields:
+  -
+    handle: title
+    field:
+      type: text
+      required: true
+      display: Nimi
+  -
+    handle: theme
+    field:
+      type: select
+      required: true
+      display: 'Väri'
+      instructions: 'Valitse kategorialle väri (määrittää tehostevärin).'
+      options:
+        theme-orange: 'Oranssi'
+        theme-blue: 'Sininen'
+        theme-teal: 'Teal/sinivihreä'
+        theme-green: 'Vaaleanvihreä'
+        theme-purple: 'Violetti'
+        theme-magenta: 'Magenta'
+        theme-accent-orange: 'Tumma oranssi'
+        theme-dark: 'Tumma'
+  -
+    handle: order
+    field:
+      type: integer
+      display: 'Järjestys'
+      instructions: 'Näyttöjärjestys. Pienempi numero näytetään ensin.'
+      default: 10
+      width: 25

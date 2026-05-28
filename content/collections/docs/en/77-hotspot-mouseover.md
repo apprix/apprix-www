@@ -1,39 +1,7 @@
 ---
-id: 8865c942-5578-4eab-8393-45c8da58b158
+id: 59a2ed18-cdf6-4c58-b3a7-33ef03ac6a19
+origin: 8865c942-5578-4eab-8393-45c8da58b158
 blueprint: doc
 title: '7.7 Hotspot Mouseover'
 ---
-<strong>Hotspot Mouseover</strong> is an interactive info element. The element allows you to place multiple hotspots wherever you wish on top of the background image.
-
-In this element, the trainee first reads the task instructions and/or other relevant information from an introduction box and then hovers the cursor over the hotspot items for further information about the element topic. A text box with additional information will pop-up near each item. Hotspot items can be moved around and placed on top of a mere background image. Alternatively, the hotspot items can be placed on top of boxes with header texts that have been added in the background image beforehand.
-<h4 class="fusion-responsive-typography-calculated" data-fontsize="21" data-lineheight="31px">Editing Instructions</h4>
-<ul>
- <li>If you wish to show an introduction at the beginning of this task, write the introduction and task instructions in the Introduction box. 
-<ul>
- <li>You can also leave the box empty. In this case, the box will not appear to the trainee.</li>
-</ul>
-</li>
- <li>Add the background image by clicking the <b>Change Image</b> icon at the right side of the window.</li>
- <li>Click the Element settings option from the gear icon at the top of the Edit Element Contents window.</li>
- <li>
-<ul>
- <li>In the window, add the needed items. </li>
- <li>Drag the hotspot(s) from the top left of the element and place it/them anywhere on the background image. </li>
- <li>You can adjust the size of the hotspot by grabbing it from its edges. </li>
-</ul>
-</li>
- <li>Finally, you can add a title and body text for each hotspot by clicking on the item. </li>
- <li>Write a detailed explanation on each element subject in the hotspot text boxes.</li>
-</ul>
-
-<h6 class="p1"><b>Click on the images to enlarge them.</b></h6>
-
-<h5 class="p1">Element settings in Edit Element Contents view:</h5>
-
-<h5 class="p1">How can I use the element? Here is an example.</h5>
-
-<figure class="doc-image"><img src="/files/docs/2021/08/Hotspot_Mouseover_EN.gif" alt="" loading="lazy"></figure>
-
-<figure class="doc-image"><img src="/files/docs/2021/08/Hotspot_Mouseover_Edit_EN.gif" alt="" loading="lazy"></figure>
-
-<figure class="doc-image"><img src="/files/docs/2024/06/hotspot-mouseover-2.gif" alt="" loading="lazy"></figure>
+<p><strong>Hotspot Mouseover</strong> is an interactive info element. The learner first reads information about the topic covered in the element from the introduction field along with any task instructions, and then moves the cursor over the active hotspot fields to get more information about the topics covered in the element. A text box containing additional information appears next to each topic when the cursor is moved over the hotspot field.</p><p>Note! If the introduction text field is left empty in edit mode, the learner will only see the hotspot fields.</p><h3>Element editing instructions</h3><ul><li><p>The <strong>Hotspot Mouseover</strong> element allows you to place multiple clickable fields (hotspots) on top of a background image at any position you choose — for example, on top of headings in the image — so that the learner can read more about each topic by hovering over the headings.</p></li><li><p>Write the task introduction in the introduction box if you want to show an introduction at the start of the task. You can also leave the box empty. In that case, the introduction box will not be visible to the learner.</p></li><li><p>Add a background image by clicking the <strong>Change image</strong> icon in the upper right corner of the element.</p></li><li><p>Click the <strong>Element settings</strong> option from the gear menu in the upper part of the element's edit view. Add the desired number of fields from the <strong>Element settings</strong> window. Place the hotspot fields that appear in the upper left corner of the element by dragging them to the desired location on the background image. You can resize each hotspot field from its edges.</p></li><li><p>You can now add information to each hotspot field by clicking them. Write a detailed explanation of the topic covered in each text box.</p></li></ul><h3>Element in published mode</h3><p><img src="statamic://asset::files::docs/2021/08/Hotspot_Mouseover_FI-1.gif"></p><h3>Element settings in edit mode</h3><p><img src="statamic://asset::files::docs/2021/08/Hotspot_Mouseover_Edit_FI-1.gif"></p><h3>How is the element used? Here is an example.</h3><p><img src="statamic://asset::files::docs/2024/06/hotspot-mouseover-1.gif"></p>

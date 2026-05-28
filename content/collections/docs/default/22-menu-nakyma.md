@@ -2,55 +2,12 @@
 id: d05d9647-55fa-4d7e-9832-710ca0aad3a4
 blueprint: doc
 title: '2.2 Menu-näkymä'
+seo_noindex: false
+seo_nofollow: false
+seo_canonical_type: entry
+sitemap_change_frequency: weekly
+sitemap_priority: 0.5
+updated_by: 680e1400-32cd-4415-9b61-d630b47576db
+updated_at: 1779932005
 ---
-<p>Kirjautuessasi sisään näet <strong>Menu-näkymän</strong>, jossa on listattuna kaikki luodut koulutukset eli moduulit. Voit tässä näkymässä:</p>
-
-<ul>
- <li>luoda uuden moduulin<strong> <a href="#moduulinluominen">Create-sivupalkista</a></strong></li>
- <li>kopioida jo olemassa olevan moduulin painamalla kopioitavan moduulin vierestä oikealta <strong><a href="#moduulinluominenmonistamalla">Duplicate-</a>painiketta</strong></li>
- <li>etsiä moduuleita <strong>Search-hakutoiminnolla</strong> tai <strong><a href="#edittags">Tageilla</a> (moduulitunnisteilla)</strong>
-<ul>
- <li>Tageilla voi merkitä moduuleja, jolloin ne on helpompi löytää hakukriteerinä toimivalla tagilla.</li>
- <li>Tagina voi toimia esimerkiksi kieli, osasto, toimipiste tai koulutuksen aihe.</li>
-</ul>
-</li>
- <li>selata, muokata ja tarkastella olemassa olevia moduuleita, <strong>joihin sinulla on joko tarkastelu- tai muokkausoikeudet</strong>
-<ul>
- <li>Julkaistuissa moduuleissa näet <strong><a href="#moduulinjulkaiseminen">Published-</a>painikkeen</strong></li>
- <li><strong><a href="#moduulinesikatseleminen">Preview-</a>painikkeesta</strong> avaat moduulin esikatselun</li>
- <li>Jos sinulla on moduuliin muokkaus- ja/tai tilastojentarkasteluoikeudet, voi sinulla näkyä myös <strong><a href="#tilastointi">Stats-</a>painike</strong>, josta voit tarkastella moduulin suoritustilastoja.</li>
-</ul>
-</li>
-</ul>
-Jos kuulut organisaatiosi pääkäyttäjiin, voi sinulla näkyä myös näkymässä vasemmalla <a href="#administrate"><strong>Administrate-sivuvalikko</strong></a>, josta voi muokata käyttäjähallinta-asetuksia.
-<h4></h4>
-<h4><strong>Kuinka 'Quick filters' -toimintoa käytetään moduulien etsimiseen?</strong></h4>
-'Quick filters' -työkalun avulla voit järjestellä ja suodattaa moduuleja ja verkkokoulutuksia Apprix Builderissa. Tämä helpottaa oikean moduulin löytämistä nopeasti ja tehokkaasti.
-
-<strong>Mitä voit tehdä?</strong>
-
-'Quick filters' -työkalun avulla voit:
-<ul>
- <li><strong>järjestää moduulit</strong> aakkos- tai aikajärjestykseen</li>
- <li><strong>suodattaa omat moduulisi</strong>, eli ne jotka olet itse luonut</li>
- <li><strong>suodattaa muokattavat moduulit</strong>, joihin sinulla on muokkausoikeudet</li>
- <li><strong>suodattaa kommentoidut moduulit</strong>, joissa on ratkaisemattomia kommentteja</li>
- <li><strong>suodattaa julkaisutilan mukaan</strong>: kaikki, julkaistut, julkaisemattomat</li>
-</ul>
-<strong>Mistä ominaisuus löytyy?</strong>
-
-<strong>'Quick filters'</strong> -työkalu sijaitsee Builderin <em>Menu</em> &gt; <em>All Modules</em> -ikkunan <strong>oikeassa yläkulmassa</strong>. Klikkaa kuvaketta avataksesi suodatusvalikon. Valitut suodattimet näkyvät <em>All Modules</em> -ikkunan vasemmassa yläkulmassa suodattimen tekstikentässä.
-
-<strong>Vinkki:</strong> Jos etsit tiettyä moduulia, kokeile yhdistää useita suodattimia — esimerkiksi omat julkaisemattomat moduulit, joissa on kommentteja.
-
-<h6><strong>Menunäkymä, jossa kurssimoduulit on suodatettu nimen mukaan.</strong></h6>
-
-<figure class="doc-image"><img src="/files/docs/2025/11/All-Modules-Menu-with-the-name-filter.png" alt="" loading="lazy"></figure>
-
-<h6><strong>Menunäkymä, jossa kurssimoduulit on suodatettu Quick Filters -työkalun avulla</strong></h6>
-
-<figure class="doc-image"><img src="/files/docs/2025/11/All-Modules-Menu.png" alt="" loading="lazy"></figure>
-
-<h6><strong>Quick Filters -työkalu</strong></h6>
-
-<figure class="doc-image"><img src="/files/docs/2025/11/sort-and-filter-modules-tool.png" alt="" loading="lazy"></figure>
+<p>Kirjautuessasi sisään näet <strong>Menu-näkymän</strong>, jossa on listattuna kaikki luodut koulutukset eli moduulit. Voit tässä näkymässä:</p><ul><li><p>luoda uuden moduulin<strong> <a href="/help/31-moduulin-luominen-create">Create-sivupalkista</a></strong></p></li><li><p>kopioida jo olemassa olevan moduulin painamalla kopioitavan moduulin vierestä oikealta <a href="/help/33-moduulin-luominen-monistamalla-olemassa-olevaa-moduulia-duplicate"><strong>Duplicate-</strong></a><strong>painiketta</strong></p></li><li><p><p>etsiä moduuleita <strong>Search-hakutoiminnolla</strong> tai <a href="/help/68-moduulien-ryhmittaminen-ja-moduulien-hakemisen-helpottaminen-tag-moduulitunni"><strong>Tageilla</strong></a><strong> (moduulitunnisteilla)</strong></p><ul><li><p>Tageilla voi merkitä moduuleja, jolloin ne on helpompi löytää hakukriteerinä toimivalla tagilla.</p></li><li><p>Tagina voi toimia esimerkiksi kieli, osasto, toimipiste tai koulutuksen aihe.</p></li></ul></p></li><li><p><p>selata, muokata ja tarkastella olemassa olevia moduuleita, <strong>joihin sinulla on joko tarkastelu- tai muokkausoikeudet</strong></p><ul><li><p>Julkaistuissa moduuleissa näet <a href="/help/62-moduulin-julkaiseminen-ja-suorituksia-keraava-moduulilinkki-publish-ja-link"><strong>Published-</strong></a><strong>painikkeen</strong></p></li><li><p><a href="/help/61-moduulin-esikatseleminen-preview"><strong>Preview-</strong></a><strong>painikkeesta</strong> avaat moduulin esikatselun</p></li><li><p>Jos sinulla on moduuliin muokkaus- ja/tai tilastojentarkasteluoikeudet, voi sinulla näkyä myös <a href="/help/63-tilastointi-stats"><strong>Stats-</strong></a><strong>painike</strong>, josta voit tarkastella moduulin suoritustilastoja.</p></li></ul></p></li></ul><p>Jos kuulut organisaatiosi pääkäyttäjiin, voi sinulla näkyä myös näkymässä vasemmalla <a href="/help/82-user-authentication-kayttajatodennus"><strong>Administrate-sivuvalikko</strong></a>, josta voi muokata käyttäjähallinta-asetuksia.</p><h2>Kuinka &#039;Quick filters&#039; -toimintoa käytetään moduulien etsimiseen?</h2><p>&#039;Quick filters&#039; -työkalun avulla voit järjestellä ja suodattaa moduuleja ja verkkokoulutuksia Apprix Builderissa. Tämä helpottaa oikean moduulin löytämistä nopeasti ja tehokkaasti.</p><p><strong>Mitä voit tehdä?</strong></p><p>&#039;Quick filters&#039; -työkalun avulla voit:</p><ul><li><p><strong>järjestää moduulit</strong> aakkos- tai aikajärjestykseen</p></li><li><p><strong>suodattaa omat moduulisi</strong>, eli ne jotka olet itse luonut</p></li><li><p><strong>suodattaa muokattavat moduulit</strong>, joihin sinulla on muokkausoikeudet</p></li><li><p><strong>suodattaa kommentoidut moduulit</strong>, joissa on ratkaisemattomia kommentteja</p></li><li><p><strong>suodattaa julkaisutilan mukaan</strong>: kaikki, julkaistut, julkaisemattomat</p></li></ul><p><strong>Mistä ominaisuus löytyy?</strong></p><p><strong>&#039;Quick filters&#039;</strong> -työkalu sijaitsee Builderin <em>Menu</em> &gt; <em>All Modules</em> -ikkunan <strong>oikeassa yläkulmassa</strong>. Klikkaa kuvaketta avataksesi suodatusvalikon. Valitut suodattimet näkyvät <em>All Modules</em> -ikkunan vasemmassa yläkulmassa suodattimen tekstikentässä.</p><p><strong>Vinkki:</strong> Jos etsit tiettyä moduulia, kokeile yhdistää useita suodattimia — esimerkiksi omat julkaisemattomat moduulit, joissa on kommentteja.</p><h3>Menunäkymä, jossa kurssimoduulit on suodatettu nimen mukaan.</h3><p><img src="statamic://asset::files::docs/2025/11/All-Modules-Menu-with-the-name-filter.png"></p><h3>Menunäkymä, jossa kurssimoduulit on suodatettu Quick Filters -työkalun avulla</h3><p><img src="statamic://asset::files::docs/2025/11/All-Modules-Menu.png"></p><h3>Quick Filters -työkalu</h3><p><img src="statamic://asset::files::docs/2025/11/sort-and-filter-modules-tool.png"></p>

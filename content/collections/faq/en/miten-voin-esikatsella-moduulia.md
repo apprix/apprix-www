@@ -1,0 +1,6 @@
+---
+id: 83b7439a-4820-447e-9302-22ebf194333a
+origin: b84bd6de-ea40-44fd-a278-2373ded7e90d
+title: 'How can I preview a module?'
+answer: '<p>You can preview a course:</p><ul><li>In the All Modules window by clicking the Preview button near the module name. In this case the course preview starts from the beginning.</li><li>In the Edit Module window by hovering over any element in the module and clicking the eye symbol that appears in the top right corner of the element. Clicking the eye symbol takes you directly to the preview of that element and you can also preview the module from that point forwards or backwards.</li><li>From the element''''s gear icon, select the Preview Element in New Tab option.</li></ul><p>"All Modules" view</p><p>"Edit Module" view</p><p>Element "Preview Element in New Tab" option</p> <img src="/files/docs/2022/04/Moduulit-ja-submoduulit-2-1-400x231.png" alt="" width="400" style="max-width:100%;height:auto;display:block;margin:0.75rem 0;"> <img src="/files/docs/2022/04/Moduulit-ja-submoduulit-3-1-400x188.png" alt="" width="400" style="max-width:100%;height:auto;display:block;margin:0.75rem 0;"> <img src="/files/docs/2022/04/Moduulit-ja-submoduulit-4-1-600x160.png" alt="" width="600" style="max-width:100%;height:auto;display:block;margin:0.75rem 0;">'
+---

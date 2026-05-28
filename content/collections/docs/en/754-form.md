@@ -1,101 +1,77 @@
 ---
-id: f51b849f-9605-4a27-a19b-efc2c08e50d0
+id: 28d8aa42-a4ad-4846-88af-4b6178f9853e
+origin: f51b849f-9605-4a27-a19b-efc2c08e50d0
 blueprint: doc
 title: '7.54 Form'
 ---
-The Form element is a powerful tool designed to help you easily and reliably gather specific information from the course participants within your e-learning content.
-
-The most common use is to gather additional information not provided by the authentication method or details required only in a specific module. It includes ready-made, validated fields such as First name, Last name, Phone number, Date, Email, EU Business ID / VAT ID, and Finnish tax number. You can also add check boxes, select menus, or create custom fields without validation.
-
-<strong>Editing Instructions</strong>
-
-When you open the Form element, a pop-up window will appear. In it, you can set the element title and an introduction. If no introduction is required, delete the text to bypass the box.
-
-<strong>Note!</strong> If the pop-up window contains text, it can be reopened at any time by clicking the question mark located at the top left side of the element.
-
-In the middle of the element, a text box is displayed. Use the text box to add supplementary instructions, or remove the text if unnecessary. Add the background image to the element.
-
-Access the “<strong>Element Settings”</strong> via the gear icon at the top of the element to define the number of items included in the Form. Available fields are, for example, First name, Last name, Phone number, Date, Email, EU Business ID / VAT ID, and Finnish tax number. The specified items will be displayed in the Form.
-
-How to edit the items in the Form text box:
-<ol>
- <li><strong>Open Row Settings</strong>
+<p>The Form element is a powerful tool that allows you to easily and reliably collect precise information from course participants.
+<p>The most common use case is to collect additional information not obtained from the authentication method, or information that is only needed in a specific module. The element contains ready-made, validated fields such as First name, Last name, Phone number, Date, Email, EU company ID / VAT number, and Finnish tax number. You can also add checkboxes, dropdown fields, or create custom fields without validation.</p><h3>Editing instructions</h3><p>When you open the Form element, a popup window opens. In it you can set the element's title and introduction. If no introduction is needed, remove the text to skip the popup. <strong>Note!</strong> If there is text in the popup, it can be reopened at any time by clicking the question mark in the upper left corner of the element.</p><p>A text box is visible in the centre of the element. Use the text box to provide additional instructions, or remove the text if it is not needed. Then add a background image to the element.</p><p>Open the <strong>Element Settings</strong> menu from the gear icon at the top of the element to define how many fields are included in the form. Available fields include, for example, First name, Last name, Phone number, Date, Email, EU company ID / VAT number, and Finnish tax number. The selected fields are shown in the form.</p><h3>Editing fields in the form text box</h3><ol></p>
+ <li><strong>Open row settings</strong>
 <ul>
- <li>Click the tool icon in the upper row.</li>
- <li>The <strong><em>Row options</em></strong> pop-up window will open, where you can adjust the row settings.</li>
+ <li>Click the tool icon at the top of the row.</li>
+ <li>The row settings popup opens, where you can adjust the row's settings.</li>
 </ul>
 </li>
- <li><strong>Select Field Type</strong>
+ <li><strong>Select field type</strong>
 <ul>
- <li>From the menu, click the arrow to choose a field type.</li>
- <li>For example, select <strong>First Name</strong>.</li>
- <li>An <strong>ID keyword suggestion</strong> pop‑up window will appear.</li>
+ <li>Select the field type from the menu by clicking the arrow.</li>
+ <li>For example, select <em>First name</em>.</li>
+ <li>The ID keyword suggestion window opens.</li>
 </ul>
 </li>
- <li><strong>Configure ID Keyword</strong>
+ <li><strong>Set the ID keyword</strong>
 <ul>
- <li>Click the suggested <strong>first_name</strong> field.</li>
- <li>The pop-up window will close, and the message <em>“Field configured for participant identification”</em> will appear in the Row options.</li>
+ <li>Click the suggested <em>first_name</em> field.</li>
+ <li>The popup closes and the message <em>"Field configured for participant identification"</em> is shown in the row settings.</li>
 </ul>
 </li>
- <li><strong>Set Mandatory Field</strong>
+ <li><strong>Set field as mandatory</strong>
 <ul>
- <li>Check the <strong>Mandatory</strong> box if required.</li>
- <li>When selected, an asterisk (*) will appear at the end of the heading (e.g., <em>First Name*</em>).</li>
+ <li>Select the <strong>Mandatory</strong> checkbox if needed.</li>
+ <li>When selected, an asterisk (*) appears at the end of the title (e.g. <em>First name*</em>).</li>
 </ul>
 </li>
- <li><strong>Edit Validation Message</strong>
+ <li><strong>Edit the validation message</strong>
 <ul>
- <li>Hover over the upper tool icon.</li>
- <li>A text box will appear (in English by default) informing participants to check that no extra characters are entered in the First Name field.</li>
+ <li>Hover over the tool icon at the top of the row.</li>
+ <li>A text box opens (in English by default) instructing participants to check that the First name field has no extra characters.</li>
  <li>Change the language of the text box if needed.</li>
 </ul>
 </li>
- <li><strong>Repeat for Other Fields</strong></li>
-</ol>
-<ul>
- <li>Follow the same steps for all additional items.</li>
-</ul>
-<strong>Note the following:</strong>
-<ul>
- <li>The <strong>ID keyword suggestion</strong> pop-up window appears only when you choose the “First Name”, “Last Name” or “Email” options.</li>
- <li>Remember to include a link to a privacy policy when needed, if it was not already provided during the authentication phase.</li>
-</ul>
-<strong>Field Validation</strong>
-<ul>
- <li>All standard field types in the select menu include format validation.</li>
- <li>When you edit the heading text, the validation message will appear for editing.</li>
-</ul>
-<ul>
- <li>Error messages should always be applied for field format validation. If no text is entered, the default English error message will be displayed.</li>
-</ul>
-<ul>
- <li>If you prefer, you can use the <strong>Custom field</strong>, which does not include validation.</li>
-</ul>
-<strong>Field ID</strong>
-<ul>
- <li>The Field ID is used as the column heading in statistics.</li>
- <li>It can also be applied for features and integrations.</li>
-</ul>
-<strong>ID Keywords</strong>
-<ul>
- <li>ID Keywords are reserved for special cases, such as collecting participant emails.</li>
- <li>These can be used with features like reminders.</li>
+ <li><strong>Repeat for other fields</strong></li>
+</ol><ul>
+ <li>Follow the same steps for all additional fields.</li>
+</ul><h3>Things to note</h3><ul>
+ <li>The ID keyword suggestion window only opens when you select <em>First name</em>, <em>Last name</em>, or <em>Email</em>.</li>
+ <li>Remember to add a link to the privacy policy if needed, if it has not already been provided during the authentication step.</li>
+</ul><h3>Field validation</h3><ul>
+ <li>All standard field types in the menu include format validation.</li>
+ <li>When you edit the title text, the validation message becomes editable.</li>
+ <li>Error messages should always be used for field format validation. If no text has been entered, an English error message is shown by default.</li>
+ <li>You can use a custom field without validation if desired.</li>
+</ul><h3>Field ID</h3><ul>
+ <li>The field ID is used as the column header in statistics.</li>
+ <li>It can also be used in features and integrations.</li>
+</ul><h3>ID keywords</h3><ul>
+ <li>ID keywords are reserved for special cases, such as collecting participant emails.</li>
+ <li>They can be used with features such as reminders.</li>
  <li>Any authentication method you enable for the module will override these keywords.</li>
-</ul>
+</ul><h3>Form element? Here is an example</h3>
 
-<h6>Form element - an example</h6>
+<p></p>
 
-<h6>Row options - Choose a field type</h6>
+<p><img src="/files/docs/2025/12/Form-First-name-5-1.png"></p>
 
-<h6>How to start editing the element? Case field type: "First Name"</h6>
+<p></p>
 
-<h6>Editing the Form</h6>
+<p><img src="/files/docs/2025/12/Form-First-Name-1.png"></p>
 
-<figure class="doc-image"><img src="/files/docs/2025/12/Form-First-name-5.png" alt="" loading="lazy"></figure>
+<p></p>
 
-<figure class="doc-image"><img src="/files/docs/2025/12/Form-First-Name.png" alt="" loading="lazy"></figure>
+<p><img src="/files/docs/2025/12/Form-First-Name2-1.png"></p>
 
-<figure class="doc-image"><img src="/files/docs/2025/12/Form-First-Name2.png" alt="" loading="lazy"></figure>
+<p></p>
 
-<figure class="doc-image"><img src="/files/docs/2025/12/Form-First-name-4-OK.png" alt="" loading="lazy"></figure>
+<p><img src="/files/docs/2025/12/Form-First-name-4-OK-1.png"></p>
+
+<p></p>

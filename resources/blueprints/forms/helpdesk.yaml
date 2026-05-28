@@ -1,0 +1,43 @@
+tabs:
+  main:
+    display: Main
+    sections:
+      -
+        fields:
+          - handle: name
+            field:
+              display: Name
+              type: text
+              validate:
+                - required
+              localizable: false
+              width: 50
+
+          - handle: email
+            field:
+              display: Email
+              type: text
+              input_type: email
+              validate:
+                - required
+                - email
+              localizable: false
+              width: 50
+
+          - handle: subject
+            field:
+              display: Question
+              type: text
+              validate:
+                - required
+              localizable: false
+              width: 100
+
+          - handle: message
+            field:
+              display: Message
+              type: textarea
+              validate:
+                - required
+              localizable: false
+              width: 100

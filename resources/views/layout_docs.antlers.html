@@ -31,9 +31,12 @@
         }
         .heading-anchor:hover { color: #f87206; }
 
-/* ── Image question/caption labels (h5 and h6 above images) ── */
-        .prose h5,
-        .prose h6 {
+/* ── Image caption labels (h3 immediately before an image paragraph) ── */
+/* Uses :has() to detect h3 used as a caption above an image.
+   The <p></p> gap node between h3 and <p><img></p> gives the Bard editor
+   cursor a landing spot between them. */
+        .prose h3:has(+ p:empty + p:has(> img)),
+        .prose h3:has(+ p:has(> img)) {
             font-size: 1.0625rem;
             font-weight: 700;
             line-height: 1.45;
@@ -41,8 +44,28 @@
             margin-top: 1.75rem;
             margin-bottom: 0.375rem;
         }
-        .prose h5 + figure,
-        .prose h6 + figure { margin-top: 0.5rem; }
+
+        /* Normalize paragraph spacing to 1rem (Tailwind default is 1.25em) */
+        .prose p { margin-top: 1rem; margin-bottom: 1rem; }
+
+        /* Zero out the img's own 2em top/bottom margin so spacing is controlled
+           purely by the surrounding <p> margin (1rem). */
+        .prose p > img { margin-top: 0; margin-bottom: 0; }
+
+        .prose h3 + p:empty + p:has(> img),
+        .prose h3 + p:has(> img) { margin-top: 0.5rem; }
+
+/* ── Empty paragraphs: give them a real height so they add
+        visible breathing room matching the Bard editor.
+        Zero own margins so only the height contributes extra space;
+        surrounding element margins (1rem) still provide the base gap. ── */
+        .prose p:empty { margin-top: 0; margin-bottom: 0; min-height: 0.5rem; }
+
+/* ── Thin divider between subsections (not after the last one) ── */
+        main section:not(:last-of-type) {
+            padding-bottom: 1.5rem;
+            border-bottom: 1px solid rgba(249, 115, 22, 0.25);
+        }
 
 </style>
     </head>
@@ -86,7 +109,7 @@
                                 @keydown.arrow-up.prevent="navigate(-1)"
                                 @keydown.enter.prevent="go()"
                                 type="text"
-                                placeholder="Hae ohjeet..."
+                                placeholder="{{ trans:strings.docs_search_placeholder }}"
                                 class="min-w-0 w-full rounded-xl border border-neutral-200 bg-neutral-50 py-2.5 pl-4 pr-10 text-base text-neutral-700 placeholder-neutral-400 outline-none transition-colors focus:border-neutral-300 focus:bg-white"
                                 autocomplete="off"
                             >
@@ -144,28 +167,42 @@
                             </template>
                         </div>
                         <div x-show="results.length === 0 && query.length > 0 && !loading" class="py-10 text-center text-sm text-neutral-400">
-                            Ei tuloksia haulle "<span x-text="query"></span>"
+                            {{ trans:strings.docs_no_results }} "<span x-text="query"></span>"
                         </div>
-                        <div x-show="loading" class="py-8 text-center text-sm text-neutral-400">Ladataan...</div>
+                        <div x-show="loading" class="py-8 text-center text-sm text-neutral-400">{{ trans:strings.docs_loading }}</div>
                         <div x-show="results.length > 0" class="border-t border-neutral-100 px-4 py-2 text-xs text-neutral-400">
-                            <span class="font-mono">↑↓</span> navigoi &nbsp;
-                            <span class="font-mono">↵</span> avaa &nbsp;
-                            <span class="font-mono">Esc</span> sulje
+                            <span class="font-mono">↑↓</span> {{ trans:strings.docs_nav_hint }} &nbsp;
+                            <span class="font-mono">↵</span> {{ trans:strings.docs_open_hint }} &nbsp;
+                            <span class="font-mono">Esc</span> {{ trans:strings.docs_close_hint }}
                         </div>
                     </div>
                     </div>{{# end w-[90%] wrapper #}}
                 </div>
 
-                {{# Right: back to main site #}}
+                {{# Right: language switcher #}}
                 <div class="flex h-full items-center justify-end">
-                    <a
-                        href="https://builder.apprix.fi/b/"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        class="inline-flex items-center rounded-lg border border-neutral-200 bg-white px-5 py-2.5 text-sm font-semibold text-neutral-700 shadow-sm transition hover:border-neutral-300 hover:bg-neutral-50 hover:text-neutral-900"
-                    >
-                        Builder
-                    </a>
+                    <div class="hidden sm:flex items-center gap-0.5 rounded-xl border border-neutral-200 bg-neutral-50 p-1">
+                        <a
+                            href="/help"
+                            class="inline-flex items-center gap-1.5 rounded-lg px-2.5 py-1.5 text-xs font-semibold transition-colors {{ if site:handle == 'default' }}bg-white text-neutral-900 shadow-sm ring-1 ring-neutral-200{{ else }}text-neutral-500 hover:bg-neutral-100 hover:text-neutral-800{{ /if }}"
+                            {{ if site:handle == 'default' }}aria-current="true"{{ /if }}
+                        >
+                            <span class="inline-flex h-[15px] w-[22px] shrink-0 overflow-hidden rounded-[4px] ring-1 ring-black/10" aria-hidden="true">
+                                {{ svg:fi attr:class="h-full w-full" }}
+                            </span>
+                            <span>FI</span>
+                        </a>
+                        <a
+                            href="/en/help"
+                            class="inline-flex items-center gap-1.5 rounded-lg px-2.5 py-1.5 text-xs font-semibold transition-colors {{ if site:handle == 'en' }}bg-white text-neutral-900 shadow-sm ring-1 ring-neutral-200{{ else }}text-neutral-500 hover:bg-neutral-100 hover:text-neutral-800{{ /if }}"
+                            {{ if site:handle == 'en' }}aria-current="true"{{ /if }}
+                        >
+                            <span class="inline-flex h-[15px] w-[22px] shrink-0 overflow-hidden rounded-[4px] ring-1 ring-black/10" aria-hidden="true">
+                                {{ svg:gb attr:class="h-full w-full" }}
+                            </span>
+                            <span>EN</span>
+                        </a>
+                    </div>
                 </div>
 
             </div>
@@ -180,7 +217,7 @@
                 :class="sidebarOpen ? 'translate-x-0' : '-translate-x-full lg:translate-x-0'"
             >
                 <nav class="py-5">
-                    <p class="mb-3 px-5 text-[0.6875rem] font-semibold uppercase tracking-widest text-neutral-400">Ohjeet</p>
+                    <p class="mb-3 px-5 text-[0.6875rem] font-semibold uppercase tracking-widest text-neutral-400">{{ trans:strings.docs_sidebar_label }}</p>
                     {{# Flat list — JS below restructures this into a collapsible tree #}}
                     <ul class="space-y-px" id="docs-nav">
                         {{ collection:docs }}
@@ -1191,6 +1228,9 @@
 
         }());
         </script>
+
+        {{# ─── HELPDESK MODAL ─── #}}
+        {{ partial:partials/_helpdesk_form }}
 
     </body>
 </html>

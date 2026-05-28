@@ -2,34 +2,12 @@
 id: 448f05fd-b126-4676-bf3e-c9c7ec631265
 blueprint: doc
 title: '6.8 Moduulien ryhmittäminen ja moduulien hakemisen helpottaminen Tag-moduulitunnisteilla (Edit Tags -toiminto)'
+seo_noindex: false
+seo_nofollow: false
+seo_canonical_type: entry
+sitemap_change_frequency: weekly
+sitemap_priority: 0.5
+updated_by: 680e1400-32cd-4415-9b61-d630b47576db
+updated_at: 1779934566
 ---
-<p class="p1">Voit hakea moduuleita <b>Menu</b>-näkymän <b>Select tags to filter </b>-hakukentässä moduulitunnisteiden eli<b> tagien </b>avulla, jolloin <strong>Menu</strong>-näkymä näyttää vain tunnisteella merkityt moduulit. Moduulitunniste voi olla esimerkiksi kieli, yksikkö, työmaan numerotunniste, kaupunki tai muu tieto, jolla haluat tiettyyn ryhmään kuuluvia moduuleja haettavan.</p>
-
-<ul>
- <li>Luo moduulitunniste <strong>Edit Module</strong> -näkymässä klikkaamalla oranssia ratasikonia ja valitsemalla <strong>Edit Tags</strong>.</li>
- <li>Valitse avautuneessa <strong>Edit Tags</strong> -ikkunassa <strong>ADD NEW TAG</strong>, jos haluat luoda uuden tunnisteen. Kirjoita haluamasi tunniste avautuneeseen <strong>ADD TAG </strong>- ikkunaan ja klikkaa <strong>ADD</strong>. Klikkaa sitten <strong>SAVE.</strong>
-<ul>
- <li><strong>Huom!</strong> Jos tunnisteen luominen ei onnistu, varmista, ettei kyseinen tunniste ole jo olemassa hakemalla tunnistetta <b>Click to search and select from existing tags </b>-hakukentän avulla.</li>
- <li>Kun tunniste on luotu, se on mahdollista valita ja lisätä myös muihin olemassa oleviin moduuleihin.</li>
-</ul>
-</li>
- <li>Jos haluamasi tunniste on luotu jo aikaisemmin, etsi tunniste <b>Click to search and select from existing tags </b>-hakukentän avulla ja valitse se listasta. Klikkaa lopuksi <b>SAVE</b>.
-<ul>
- <li>Poista tunnisteen valinta hakukentässä klikkaamalla <strong>ruksia (X)</strong> hakukentän oikeassa laidassa.</li>
-</ul>
-</li>
- <li>Jos haluat poistaa valitun tunnisteen moduulista, klikkaa <strong>ruksia (X)</strong> tunnisteen nimen perässä.  <img class="alignnone wp-image-3262" src="/files/docs/2021/01/esim-tag.png" alt="" width="108" height="27" data-wp-editing="1" /></li>
- <li>Jos haluat pysyvästi poistaa jo olemassa olevan tunnisteen, klikkaa <strong>REMOVE TAG, </strong>valitse tunniste <strong>Select tag to remove</strong> -ikkunan listasta ja klikkaa <strong>REMOVE</strong>.  Klikkaa lopuksi <strong>SAVE</strong>.
-<ul>
- <li>Huomioithan, että voit poistaa tunnisteen vain, jos sinulla on muokkausoikeudet kaikkiin moduuleihin, joissa tunniste on käytössä.</li>
-</ul>
-</li>
-</ul>
-
-<h6 class="p1">Miten lisäät tagin moduuliin?</h6>
-
-<figure class="doc-image"><img src="/files/docs/2024/08/Add-a-tag.gif" alt="" loading="lazy"></figure>
-
-<h6 class="p1">Miten luot uuden tagin ja liität sen moduuliin?</h6>
-
-<figure class="doc-image"><img src="/files/docs/2024/08/Add-a-tag-2.gif" alt="" loading="lazy"></figure>
+<p>Voit hakea moduuleita <strong>Menu</strong>-näkymän <strong>Select tags to filter </strong>-hakukentässä moduulitunnisteiden eli<strong> tagien </strong>avulla, jolloin <strong>Menu</strong>-näkymä näyttää vain tunnisteella merkityt moduulit. Moduulitunniste voi olla esimerkiksi kieli, yksikkö, työmaan numerotunniste, kaupunki tai muu tieto, jolla haluat tiettyyn ryhmään kuuluvia moduuleja haettavan.</p><ul><li><p>Luo moduulitunniste <strong>Edit Module</strong> -näkymässä klikkaamalla oranssia ratasikonia ja valitsemalla <strong>Edit Tags</strong>.</p></li><li><p>Valitse avautuneessa <strong>Edit Tags</strong> -ikkunassa <strong>ADD NEW TAG</strong>, jos haluat luoda uuden tunnisteen. Kirjoita haluamasi tunniste avautuneeseen <strong>ADD TAG </strong>- ikkunaan ja klikkaa <strong>ADD</strong>. Klikkaa sitten <strong>SAVE.</strong><ul><li><p><strong>Huom!</strong> Jos tunnisteen luominen ei onnistu, varmista, ettei kyseinen tunniste ole jo olemassa hakemalla tunnistetta <strong>Click to search and select from existing tags </strong>-hakukentän avulla.</p></li><li><p>Kun tunniste on luotu, se on mahdollista valita ja lisätä myös muihin olemassa oleviin moduuleihin.</p></li></ul></p></li><li><p>Jos haluamasi tunniste on luotu jo aikaisemmin, etsi tunniste <strong>Click to search and select from existing tags </strong>-hakukentän avulla ja valitse se listasta. Klikkaa lopuksi <strong>SAVE</strong>.<ul><li><p>Poista tunnisteen valinta hakukentässä klikkaamalla <strong>ruksia (X)</strong> hakukentän oikeassa laidassa.</p></li></ul></p></li><li><p>Jos haluat poistaa valitun tunnisteen moduulista, klikkaa <strong>ruksia (X)</strong> tunnisteen nimen perässä.  <img src="statamic://asset::files::docs/2021/01/esim-tag.png"></p></li><li><p>Jos haluat pysyvästi poistaa jo olemassa olevan tunnisteen, klikkaa <strong>REMOVE TAG, </strong>valitse tunniste <strong>Select tag to remove</strong> -ikkunan listasta ja klikkaa <strong>REMOVE</strong>.  Klikkaa lopuksi <strong>SAVE</strong>.<ul><li><p>Huomioithan, että voit poistaa tunnisteen vain, jos sinulla on muokkausoikeudet kaikkiin moduuleihin, joissa tunniste on käytössä.</p></li></ul></p></li></ul><h3>Miten lisäät tagin moduuliin?</h3><p><img src="statamic://asset::files::docs/2024/08/Add-a-tag.gif"></p><h3>Miten luot uuden tagin ja liität sen moduuliin?</h3><p><img src="statamic://asset::files::docs/2024/08/Add-a-tag-2.gif"></p>

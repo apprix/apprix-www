@@ -1,0 +1,6 @@
+---
+id: d65157da-55ff-48a0-8736-1bae96f54dc9
+origin: e72931d5-480d-44d7-a9ac-ead69d9ba69b
+title: 'Is Builder Login and Email Registration the same thing, and how is the password reset?'
+answer: '<p>Builder Login (logging in to the Builder client environment) and Email Registration (email registration, previously "Personal Password" / "Consumer Login") are two different things.</p><p>To log in to the Builder client environment, the login page at https://builder.apprix.fi/b/ must be used. A user''''s password cannot be reset on this login page. You can request a new password from Apprix (helpdesk@apprix.fi) or directly from the responsible person in your organisation.</p><p>The Email Registration login method is activated from the module''''s gear icon. Participants use this login method to log in to the training. If participants have forgotten or lost their password, they can request a new password by clicking the Forgot password link.</p><p>This is therefore a different credential from the one used when logging in to the Builder client environment.</p> <img src="/files/docs/2022/04/BuilderLogin-600x300.png" alt="" width="600" style="max-width:100%;height:auto;display:block;margin:0.75rem 0;"> <img src="/files/docs/2022/04/EmailRegistration-400x353.png" alt="" width="400" style="max-width:100%;height:auto;display:block;margin:0.75rem 0;">'
+---

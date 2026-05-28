@@ -1,36 +1,25 @@
 ---
-id: f4a2c77c-b734-45b1-b731-267fd074e90b
+id: 01532e56-d8c3-4ffb-b54c-898a1693a74d
+origin: f4a2c77c-b734-45b1-b731-267fd074e90b
 blueprint: doc
 title: '8.12 Element locking'
 ---
-"Locking the elements" means that facilitators with the locking element rights can block other facilitators from editing certain elements.
+<p>"Element Locking" means that facilitators who have element locking permissions can prevent other facilitators from editing certain elements.</p><p>A User Administrator can lock/unlock any element.</p><p><strong>How is an element locked?</strong>
+<p>Click the gear icon at the top of the element and select the option <strong>Lock Element</strong> or <strong>Unlock Element</strong>. In edit mode, a lock is displayed over the locked element.</p><h3>ADMINISTRATE TOOL SETTINGS</h3><p>If in the Administrate tool a facilitator's "<strong>Element Locking</strong>" value is "<strong>View</strong>", they cannot edit the module; instead, to edit the module they must copy it. Once the module is duplicated, the locked elements in the duplicated module can no longer be moved or edited, but the facilitator can add new elements to the module. In this case, the facilitator cannot lock/unlock any elements.</p><p>If in the Administrate tool a facilitator's "<strong>Element Locking</strong>" value is "<strong>Edit</strong>", they can:</p><ul></p>
+ <li>lock any element
+<p>edit, delete, unlock and move the position of locked elements.</li></p>
+</ul><h3>How is an element locked?</h3>
 
-The user Administrator can lock/unlock any element.
+<p></p>
 
-<strong>How do you lock an element?</strong>
+<p><img src="/files/docs/2024/09/Locking-element-1.jpg"></p>
 
-Click on the gear icon at the top of the element and select <strong>Lock Element</strong> or <strong>Unlock Element</strong>.
+<p></p>
 
-The lock will appear on top of the locked element in edit mode.
+<p><img src="/files/docs/2024/09/Locking-element-2.jpg"></p>
 
-<strong>ADMINISTRATE TOOL SETTINGS</strong>
+<p></p>
 
-If the Facilitator's "<strong>Element Locking</strong>" value is "<strong>View</strong>" in the Administrate tool, they cannot edit the module; they have to duplicate it to edit it. Once a module is duplicated, its locked elements can no longer be moved or edited, but the facilitator can add new elements. In this case, the facilitator cannot lock/unlock any elements.
+<p><img src="/files/docs/2024/09/Locking-element-3.jpg"></p>
 
-If the <strong>Element Locking</strong> value in the Administrate tool is set to " <strong>Edit</strong>", the facilitator can:
-<ul>
- <li>lock any element</li>
- <li>edit, delete, unlock and change the position of locked elements.</li>
-</ul>
-
-<h6 class="p1">How do you lock an element?</h6>
-
-<h6>The lock will appear on top of the locked element in edit mode.</h6>
-
-<h6 class="p1">Administrate Tool Settings</h6>
-
-<figure class="doc-image"><img src="/files/docs/2024/09/Locking-element-1-1.jpg" alt="" loading="lazy"></figure>
-
-<figure class="doc-image"><img src="/files/docs/2024/09/Locking-element-2-1.jpg" alt="" loading="lazy"></figure>
-
-<figure class="doc-image"><img src="/files/docs/2024/09/Locking-element-3-1.jpg" alt="" loading="lazy"></figure>
+<p></p>

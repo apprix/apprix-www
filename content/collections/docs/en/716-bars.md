@@ -1,43 +1,7 @@
 ---
-id: ba25c766-4e3d-414b-bfdc-96cc98ac4576
+id: 0b54e367-ae74-4785-b687-b249b0cf5444
+origin: ba25c766-4e3d-414b-bfdc-96cc98ac4576
 blueprint: doc
-title: '7.16 Bars'
+title: '7.16 Slider Bars Task'
 ---
-This is an exercise element. The <b>Slider Bars Task</b> element can be used for tasks where the user is asked the correct number between a minimum and a maximum. 
-
-Some common uses:
-<ul>
- <li aria-level="1">Business gifts: How many euros is acceptable in different situations.</li>
- <li aria-level="1">How many euros can you use to buy something without a manager’s permission?</li>
- <li aria-level="1">How many percent something is?</li>
- <li aria-level="1">A calculation where the user should know the correct answer.</li>
-</ul>
-In the bar are available the min and max number. The trainee first reads the first question and then moves the slider bar accordingly. The correct answer will be displayed on the bar and a pop-up window with additional information will appear. All the bars will appear on the screen, one at a time.
-
-The selected numbers will be stored in the statistics.
-<h4>Editing Instructions</h4>
-Add the background image by clicking the <b>Change image icon</b> from the top right corner  of the element.
-
-Click the <b>Element settings </b>option from the gear icon at the top. In the pop-up window add the needed bars. New bars will appear on the element. Enter a title at the bottom of each bar. Assign the correct, minimum and maximum number for each bar by clicking the box on the top right side of each bar.
-
-Write now the question and ask the user to move the bars accordingly. Some common uses are: business gift limits, purchasing limits, percentage of people or business, amount of yearly work accidents.
-
-<b>Note!</b> To take mobile users into account make sure the scale of the bar fits the answer, for example if the correct answer is 5, make the max value 20 rather than 100.
-
-Click  the ”info” button at the left bottom of each bar. A pop-up window will be opened. Write the answer text for the bar here. Let the user know what the correct amount is and why. This element allows you to add a lot of further information. This content is shown after the user has moved the slider bar.
-
-<b>Note!</b> You don't always have to teach the user the correct answer. You can motivate a user to read a longer answer text by first asking something they don't know yet. In this case, make sure to tell them that this isn't a test about their knowledge. 
-
-<h6 class="p1"><b>Click on the images to enlarge them.</b></h6>
-
-<h5 class="p1">Element settings in Edit Element Contents view:</h5>
-
-<figure class="doc-image"><img src="/files/docs/2021/08/Bars_Task_EN.gif" alt="" loading="lazy"></figure>
-
-<figure class="doc-image"><img src="/files/docs/2021/08/Bars_Task_Edit_EN.gif" alt="" loading="lazy"></figure>
-
-<figure class="doc-image"><img src="/files/docs/2022/04/7.15-1-1-600x308.png" alt="" loading="lazy"></figure>
-
-<figure class="doc-image"><img src="/files/docs/2022/04/7.15-2-1-600x309.png" alt="" loading="lazy"></figure>
-
-<figure class="doc-image"><img src="/files/docs/2022/04/7.15-3-1-600x371.png" alt="" loading="lazy"></figure>
+<p>The <strong>Slider Bars Task</strong> element is a task element in which the user is asked for the correct number between a minimum and maximum value.</p><p>Some common use cases:</p><ul><li><p>Business gifts: How valuable a gift can you receive? (EUR)</p></li><li><p>How valuable an X can you purchase without a manager's approval?</p></li><li><p>What percentage of the total does X represent?</p></li><li><p>A calculation where the learner should know the correct answer value</p></li></ul><p>Minimum and maximum values are set for the bar. The learner first reads the first question and then moves the slider to the position corresponding to their answer. The correct answer is shown in the bar and in a popup that also contains additional information. The bars appear on screen one at a time.</p><p>The learner's answers are saved to the statistics.</p><h3>Element editing instructions</h3><p>Add a background image by clicking the <strong>Change Image</strong> icon in the upper right corner of the element.</p><p>Click <strong>Element Settings</strong> from the gear icon at the top. Add the required bars to the popup. New bars appear in the element. Write a title at the bottom of each bar. Set the correct, minimum, and maximum values for each bar by clicking the box in the upper right corner of each bar.</p><p>Now write the question and ask the user to move the bar sliders to the positions corresponding to their answers. Some common use cases are: business gift limits, purchase limits, percentages of people or companies, and the number of annual workplace accidents.</p><p><strong>Note!</strong> If you want to take mobile users into account, make sure the bar scale corresponds to the answer — for example, if the correct answer is 5, set the maximum value to 20 rather than 100.</p><p>Click the "info" icon at the bottom left of each bar. A popup opens. Write the bar's answer text here. Tell the user what the correct amount is and why. You can add a lot of additional information to the popup. This content is shown when the user has moved the slider.</p><p><strong>Note!</strong> You do not always need to teach the user the correct answer before the task. You can motivate the user to read a longer answer text by asking them to estimate something they do not yet know. In that case, remember to mention that this is not a test.</p><h3>Element in preview mode</h3><p><img src="statamic://asset::files::docs/2021/08/Bars_Task_FI-1.gif"></p><h3>Element settings in edit view:</h3><p><img src="statamic://asset::files::docs/2021/08/Bars_Task_Edit_FI_Small-1.gif"></p><p><img src="statamic://asset::files::docs/2022/04/7.15-1-600x308.png"></p><p><img src="statamic://asset::files::docs/2022/04/7.15-2-600x309.png"></p><p><img src="statamic://asset::files::docs/2022/04/7.15-3-600x371.png"></p>

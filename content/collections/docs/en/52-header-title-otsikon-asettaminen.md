@@ -1,46 +1,7 @@
 ---
-id: 4dc0447b-d387-42cc-9035-134e003c98e4
+id: 6774db22-8aee-4cbd-8865-0ea69d457a07
+origin: 4dc0447b-d387-42cc-9035-134e003c98e4
 blueprint: doc
-title: '5.2 Setting a Header Title'
+title: '5.2 Setting the Header Title'
 ---
-The <strong>Header Title</strong> field is located at the top of every element. You may set the header title in two ways: for the whole module or only for a single element or a group of specific elements with the same topic or theme. The header title is intended to provide additional information about the module (for example the course module name), a broader theme or a specific topic if set only for a single element or a specific, consecutive group of elements.
-
-A common way to use this feature in submodule structures is to enter the name of the training in the main module and the names of the chapters as the header titles in submodules (= chapters). For example the main module header title could be  "Safety Training" and the submodule titles follow the chapter names for the duration of the submodule chapter, for example "Safety Principles" and "Work Tasks That Require Special Attention".
-<h4>Editing Instructions</h4>
-<strong>Setting a header title for an entire module</strong>
-<ul>
- <li>If you wish to set a header title that will appear in every element added in the module, enter the desired header title in the header title field at the top of the <strong>Intro Element</strong>.
-<ul>
- <li>From the Intro element, it will be automatically copied to every element following the element.</li>
-</ul>
-</li>
- <li>Set the header title similarly to modules that will be transformed into submodules/linked to a main module – the header title will remain in the Intro element even though the element will be hidden when the module is transformed into a submodule.</li>
- <li>If you wish to set a header title for a submodule that has already been linked to a submodule structure (linked under a main module), you must first unlink the submodule from the main module (change it back to a normal module) to reveal the hidden Intro element.
-<ul>
- <li>If you wish to link the submodule right back to the main module after setting the header title and the submodule has already been published, remember to unpublish the module first to reveal the <strong>Submodule Settings</strong> button after which re-linking should be possible.</li>
-</ul>
-</li>
-</ul>
-<strong>Note!</strong>
-
-When the header title is set through the Intro element, it will only appear in the Intro element in <strong>Edit Element Contents</strong> view. If you wish to preview the header title in other elements, try viewing the module in preview/published mode and the header title should appear in all of the elements.
-
-<strong>Setting a header title for a specific element</strong>
-<ul>
- <li>Open the element where you wish to place the header title.</li>
- <li>Enter the desired header title in the header title field at the top of the element.
-<ul>
- <li>The header title will now only appear in this specific element.</li>
-</ul>
-</li>
-</ul>
-
-<h6 class="p1"><b>Click on the images to enlarge them.</b></h6>
-
-<h5>Setting a header title for the entire module through the Intro Element:</h5>
-
-<h5>Setting an element-specific header title:</h5>
-
-<figure class="doc-image"><img src="/files/docs/2021/11/Header_Title_EN-1000x687.jpg" alt="" loading="lazy"></figure>
-
-<figure class="doc-image"><img src="/files/docs/2021/11/Element_Header_Title_EN_-1000x685.jpg" alt="" loading="lazy"></figure>
+<p>The Header Title field is located at the top of every element. You can set the title in two ways: for the entire module, or only for a specific element or elements. The purpose of the title is to provide additional information about the module — for example, the name of the course module, or the broader theme or heading of a particular topic covered in the element, if it is set for a specific element or section made up of certain elements.</p><p>A common way to use this feature in submodule structures is to enter the name of the entire training in the main module and the names of the sections/topic areas as titles for the submodules (submodule = section). For example, the main module title could be "Safety Training" and the submodule titles would reflect the submodule section name for the length of that submodule — for instance, submodule 1: "Safety Principles" and submodule 2: "Tasks Requiring Special Attention".</p><h3>Editing instructions</h3><p><strong>Setting the Header Title for the entire module</strong></p><ul><li><p>If you want to define a Header Title that appears in every element added to the module, type the desired title in the field at the top of the Intro element.<ul><li><p>From the Intro element, it is automatically copied to every element that follows it.</p></li></ul></p></li><li><p>Set the title in the same way for modules that will be converted to submodules/linked to a main module — the Header Title is retained in the Intro element even when the element is hidden after the module is converted to a submodule.</p></li><li><p>If you want to set a title for a submodule that is already linked as part of a submodule structure (linked under the main module), you must first unlink the submodule by temporarily converting it back to a regular module to reveal the hidden Intro element and add the title to the element.<ul><li><p>If you want to re-link the submodule to the main module immediately after setting the title and the submodule is already published, remember to unpublish the module first (Unpublish) so that you can see the Submodule settings button, through which re-linking should be possible.</p></li></ul></p></li></ul><p><strong>Note!</strong></p><p>When the Header Title is set for the entire module via the Intro element, it is only visible in the Intro element within the element editing view (Edit Element Contents view). If you want to preview the set title in other elements, try viewing the module in preview (Preview) or published (Published) mode, where the title should be visible in all elements of that module.</p><p><strong>Setting the Header Title for a specific element</strong></p><ul><li><p>Open the element to which you want to add the Header Title.</p></li><li><p>Type the desired title in the field at the top of the element.<ul><li><p>The Header Title will now only appear in this specific element where it has been added.</p></li></ul></p></li></ul><h3>How do you set the module-wide Header Title via the Intro element?</h3><p><img src="statamic://asset::files::docs/2021/11/Header_Title_FI-1-1000x685.jpg"></p>

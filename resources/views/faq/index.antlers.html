@@ -1,296 +1,70 @@
 {{#
     @name FAQ Index
     @desc Usein kysytyt kysymykset — full-width flat accordion with click-to-filter chips.
+         Categories are driven dynamically from the faq_categories taxonomy.
 #}}
 
 <!-- /faq/index.antlers.html -->
 <div x-data="faqPage()" x-init="init()" class="flex flex-col flex-1 min-w-0 bg-white">
 
     {{# ─── PAGE HEADER + CATEGORY FILTER CHIPS ─── #}}
-    <div class="border-b border-neutral-200 px-8 py-12 md:px-16 lg:px-24">
-        <p class="mb-1 text-xs font-semibold uppercase tracking-widest text-primary">Tukikeskus</p>
+    <div class="relative border-b border-neutral-200 px-8 py-12 md:px-16 lg:px-24">
+
+        <p class="mb-1 text-xs font-semibold uppercase tracking-widest text-primary">Helpdesk</p>
         <h1 class="text-3xl font-bold tracking-tight text-neutral-900 md:text-4xl">
-            Usein kysytyt kysymykset
+            {{ trans:strings.faq_title }}
         </h1>
         <p class="mt-3 max-w-2xl text-base leading-relaxed text-neutral-500">
-            Alta löydät vastauksia yleisimpiin kysymyksiin Builderista ja sen ominaisuuksista.
+            {{ trans:strings.faq_desc }}
         </p>
 
         <div class="mt-7 flex flex-wrap gap-2">
 
-            {{# "Kaikki" — clears filter, neutral dark when active #}}
+            {{# "Kaikki" chip — clears filter, neutral dark when active #}}
             <button @click="setFilter('')"
                 class="rounded-full border px-4 py-2 text-sm font-medium transition-colors"
                 :class="filter === '' ? 'border-neutral-800 bg-neutral-800 text-white' : 'border-neutral-200 bg-white text-neutral-600 hover:border-neutral-300 hover:bg-neutral-50'">
-                Kaikki
+                {{ trans:strings.faq_cat_all }}
             </button>
 
-            <button @click="setFilter('yleiset')"
-                class="rounded-full border px-4 py-2 text-sm font-medium transition-colors"
-                :class="filter === 'yleiset' ? 'border-primary bg-primary text-white' : 'border-neutral-200 bg-white text-neutral-600 hover:border-neutral-300 hover:bg-neutral-50'">
-                Yleiset
+            {{# Category chips — one per taxonomy term, ordered by the term's `order` field #}}
+            {{ taxonomy:faq_categories sort="order" scope="cat" }}
+            <button @click="setFilter('{{ cat:slug }}')"
+                class="{{ cat:theme }} rounded-full border px-4 py-2 text-sm font-medium transition-colors"
+                :class="filter === '{{ cat:slug }}' ? 'border-primary bg-primary text-white' : 'border-neutral-200 bg-white text-neutral-600 hover:border-neutral-300 hover:bg-neutral-50'">
+                {{ cat:title }}
             </button>
-
-            <button @click="setFilter('sisaankirjautuminen')"
-                class="rounded-full border px-4 py-2 text-sm font-medium transition-colors"
-                :class="filter === 'sisaankirjautuminen' ? 'border-brand-blue bg-brand-blue text-white' : 'border-neutral-200 bg-white text-neutral-600 hover:border-neutral-300 hover:bg-neutral-50'">
-                Sisäänkirjautuminen
-            </button>
-
-            <button @click="setFilter('video')"
-                class="rounded-full border px-4 py-2 text-sm font-medium transition-colors"
-                :class="filter === 'video' ? 'border-brand-teal bg-brand-teal text-white' : 'border-neutral-200 bg-white text-neutral-600 hover:border-neutral-300 hover:bg-neutral-50'">
-                Video
-            </button>
-
-            <button @click="setFilter('zipscorm-tiedostot')"
-                class="rounded-full border px-4 py-2 text-sm font-medium transition-colors"
-                :class="filter === 'zipscorm-tiedostot' ? 'border-brand-green bg-brand-green text-white' : 'border-neutral-200 bg-white text-neutral-600 hover:border-neutral-300 hover:bg-neutral-50'">
-                Zip/SCORM-tiedostot
-            </button>
-
-            <button @click="setFilter('kayttajaoikeuksien-hallinta')"
-                class="rounded-full border px-4 py-2 text-sm font-medium transition-colors"
-                :class="filter === 'kayttajaoikeuksien-hallinta' ? 'border-accent-purple bg-accent-purple text-white' : 'border-neutral-200 bg-white text-neutral-600 hover:border-neutral-300 hover:bg-neutral-50'">
-                Käyttäjäoikeuksien hallinta
-            </button>
-
-            <button @click="setFilter('moduulit-ja-submoduulit')"
-                class="rounded-full border px-4 py-2 text-sm font-medium transition-colors"
-                :class="filter === 'moduulit-ja-submoduulit' ? 'border-accent-orange bg-accent-orange text-white' : 'border-neutral-200 bg-white text-neutral-600 hover:border-neutral-300 hover:bg-neutral-50'">
-                Moduulit ja submoduulit
-            </button>
-
-            <button @click="setFilter('elementit')"
-                class="rounded-full border px-4 py-2 text-sm font-medium transition-colors"
-                :class="filter === 'elementit' ? 'border-accent-magenta bg-accent-magenta text-white' : 'border-neutral-200 bg-white text-neutral-600 hover:border-neutral-300 hover:bg-neutral-50'">
-                Elementit
-            </button>
-
-            <button @click="setFilter('tilastot')"
-                class="rounded-full border px-4 py-2 text-sm font-medium transition-colors"
-                :class="filter === 'tilastot' ? 'border-brand-blue bg-brand-blue text-white' : 'border-neutral-200 bg-white text-neutral-600 hover:border-neutral-300 hover:bg-neutral-50'">
-                Tilastot
-            </button>
-
-            <button @click="setFilter('tuetut-selaimet')"
-                class="rounded-full border px-4 py-2 text-sm font-medium transition-colors"
-                :class="filter === 'tuetut-selaimet' ? 'border-brand-teal bg-brand-teal text-white' : 'border-neutral-200 bg-white text-neutral-600 hover:border-neutral-300 hover:bg-neutral-50'">
-                Tuetut selaimet
-            </button>
+            {{ /taxonomy:faq_categories }}
 
         </div>
     </div>
 
-    {{# ─── Q&A SECTIONS ─── #}}
+    {{# ─── Q&A SECTIONS — one per taxonomy category ─── #}}
     <div class="divide-y divide-neutral-200">
 
-        {{# ══════ Yleiset — primary orange ══════ #}}
-        <section id="yleiset" x-show="filter === '' || filter === 'yleiset'" class="scroll-mt-20 px-8 py-12 md:px-16 lg:px-24">
+        {{ taxonomy:faq_categories sort="order" scope="cat" }}
+        <section id="{{ cat:slug }}" x-show="filter === '' || filter === '{{ cat:slug }}'" class="{{ cat:theme }} scroll-mt-20 px-8 py-12 md:px-16 lg:px-24">
             <h2 class="mb-6 flex items-center gap-3 text-lg font-bold text-neutral-900">
                 <span class="h-6 w-1 shrink-0 bg-primary"></span>
-                Yleiset
+                {{ cat:title }}
             </h2>
-            <div class="divide-y divide-neutral-100">
-                {{ collection:faq category:is="Yleiset" sort="order" }}
-                    <div id="faq-{{ id }}">
-                        <button type="button" class="flex w-full items-start justify-between gap-6 py-5 text-left" @click="toggle('{{ id }}')" :aria-expanded="open === '{{ id }}'">
-                            <span class="text-base leading-snug transition-all" :class="open === '{{ id }}' ? 'font-semibold text-primary' : 'font-medium text-neutral-600'">{{ title }}</span>
-                            <span class="mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center transition-transform duration-200" :class="open === '{{ id }}' ? 'rotate-180 text-primary' : 'text-neutral-400'">
-                                <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
-                            </span>
-                        </button>
-                        <div x-show="open === '{{ id }}'" x-collapse class="pb-6">
-                            <div class="prose prose-base prose-neutral max-w-none border-l-2 border-primary/40 pl-5 prose-p:text-neutral-600 prose-li:text-neutral-600 prose-strong:text-neutral-800 prose-a:text-primary prose-a:no-underline hover:prose-a:underline">{{ answer }}</div>
-                        </div>
+            <div class="divide-y divide-neutral-300">
+                {{ collection:faq :taxonomy:faq_categories="cat:slug" sort="order" }}
+                <div id="faq-{{ id }}">
+                    <button type="button" class="flex w-full items-center gap-4 py-5 text-left" @click="toggle('{{ id }}')" :aria-expanded="open === '{{ id }}'">
+                        <span class="flex h-8 w-8 shrink-0 items-center justify-center transition-transform duration-200" :class="open === '{{ id }}' ? 'rotate-180 text-primary' : 'text-neutral-400'">
+                            <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                        </span>
+                        <span class="text-base leading-snug transition-all" :class="open === '{{ id }}' ? 'font-semibold text-primary' : 'font-medium text-neutral-600'">{{ title }}</span>
+                    </button>
+                    <div x-show="open === '{{ id }}'" x-collapse class="pb-6">
+                        <div class="prose prose-base prose-neutral max-w-none border-l-2 border-primary/40 pl-5 prose-p:text-neutral-600 prose-li:text-neutral-600 prose-strong:text-neutral-800 prose-a:text-primary prose-a:no-underline hover:prose-a:underline">{{ answer }}</div>
                     </div>
+                </div>
                 {{ /collection:faq }}
             </div>
         </section>
-
-        {{# ══════ Sisäänkirjautuminen — brand-blue ══════ #}}
-        <section id="sisaankirjautuminen" x-show="filter === '' || filter === 'sisaankirjautuminen'" class="scroll-mt-20 px-8 py-12 md:px-16 lg:px-24">
-            <h2 class="mb-6 flex items-center gap-3 text-lg font-bold text-neutral-900">
-                <span class="h-6 w-1 shrink-0 bg-brand-blue"></span>
-                Sisäänkirjautuminen
-            </h2>
-            <div class="divide-y divide-neutral-100">
-                {{ collection:faq category:is="Sisäänkirjautuminen" sort="order" }}
-                    <div id="faq-{{ id }}">
-                        <button type="button" class="flex w-full items-start justify-between gap-6 py-5 text-left" @click="toggle('{{ id }}')" :aria-expanded="open === '{{ id }}'">
-                            <span class="text-base leading-snug transition-all" :class="open === '{{ id }}' ? 'font-semibold text-brand-blue' : 'font-medium text-neutral-600'">{{ title }}</span>
-                            <span class="mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center transition-transform duration-200" :class="open === '{{ id }}' ? 'rotate-180 text-brand-blue' : 'text-neutral-400'">
-                                <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
-                            </span>
-                        </button>
-                        <div x-show="open === '{{ id }}'" x-collapse class="pb-6">
-                            <div class="prose prose-base prose-neutral max-w-none border-l-2 border-brand-blue/40 pl-5 prose-p:text-neutral-600 prose-li:text-neutral-600 prose-strong:text-neutral-800 prose-a:text-brand-blue prose-a:no-underline hover:prose-a:underline">{{ answer }}</div>
-                        </div>
-                    </div>
-                {{ /collection:faq }}
-            </div>
-        </section>
-
-        {{# ══════ Video — brand-teal ══════ #}}
-        <section id="video" x-show="filter === '' || filter === 'video'" class="scroll-mt-20 px-8 py-12 md:px-16 lg:px-24">
-            <h2 class="mb-6 flex items-center gap-3 text-lg font-bold text-neutral-900">
-                <span class="h-6 w-1 shrink-0 bg-brand-teal"></span>
-                Video
-            </h2>
-            <div class="divide-y divide-neutral-100">
-                {{ collection:faq category:is="Video" sort="order" }}
-                    <div id="faq-{{ id }}">
-                        <button type="button" class="flex w-full items-start justify-between gap-6 py-5 text-left" @click="toggle('{{ id }}')" :aria-expanded="open === '{{ id }}'">
-                            <span class="text-base leading-snug transition-all" :class="open === '{{ id }}' ? 'font-semibold text-brand-teal' : 'font-medium text-neutral-600'">{{ title }}</span>
-                            <span class="mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center transition-transform duration-200" :class="open === '{{ id }}' ? 'rotate-180 text-brand-teal' : 'text-neutral-400'">
-                                <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
-                            </span>
-                        </button>
-                        <div x-show="open === '{{ id }}'" x-collapse class="pb-6">
-                            <div class="prose prose-base prose-neutral max-w-none border-l-2 border-brand-teal/40 pl-5 prose-p:text-neutral-600 prose-li:text-neutral-600 prose-strong:text-neutral-800 prose-a:text-brand-teal prose-a:no-underline hover:prose-a:underline">{{ answer }}</div>
-                        </div>
-                    </div>
-                {{ /collection:faq }}
-            </div>
-        </section>
-
-        {{# ══════ Zip/SCORM-tiedostot — brand-green ══════ #}}
-        <section id="zipscorm-tiedostot" x-show="filter === '' || filter === 'zipscorm-tiedostot'" class="scroll-mt-20 px-8 py-12 md:px-16 lg:px-24">
-            <h2 class="mb-6 flex items-center gap-3 text-lg font-bold text-neutral-900">
-                <span class="h-6 w-1 shrink-0 bg-brand-green"></span>
-                Zip/SCORM-tiedostot
-            </h2>
-            <div class="divide-y divide-neutral-100">
-                {{ collection:faq category:is="Zip/SCORM-tiedostot" sort="order" }}
-                    <div id="faq-{{ id }}">
-                        <button type="button" class="flex w-full items-start justify-between gap-6 py-5 text-left" @click="toggle('{{ id }}')" :aria-expanded="open === '{{ id }}'">
-                            <span class="text-base leading-snug transition-all" :class="open === '{{ id }}' ? 'font-semibold text-brand-green' : 'font-medium text-neutral-600'">{{ title }}</span>
-                            <span class="mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center transition-transform duration-200" :class="open === '{{ id }}' ? 'rotate-180 text-brand-green' : 'text-neutral-400'">
-                                <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
-                            </span>
-                        </button>
-                        <div x-show="open === '{{ id }}'" x-collapse class="pb-6">
-                            <div class="prose prose-base prose-neutral max-w-none border-l-2 border-brand-green/40 pl-5 prose-p:text-neutral-600 prose-li:text-neutral-600 prose-strong:text-neutral-800 prose-a:text-brand-green prose-a:no-underline hover:prose-a:underline">{{ answer }}</div>
-                        </div>
-                    </div>
-                {{ /collection:faq }}
-            </div>
-        </section>
-
-        {{# ══════ Käyttäjäoikeuksien hallinta — accent-purple ══════ #}}
-        <section id="kayttajaoikeuksien-hallinta" x-show="filter === '' || filter === 'kayttajaoikeuksien-hallinta'" class="scroll-mt-20 px-8 py-12 md:px-16 lg:px-24">
-            <h2 class="mb-6 flex items-center gap-3 text-lg font-bold text-neutral-900">
-                <span class="h-6 w-1 shrink-0 bg-accent-purple"></span>
-                Käyttäjäoikeuksien hallinta
-            </h2>
-            <div class="divide-y divide-neutral-100">
-                {{ collection:faq category:is="Käyttäjäoikeuksien hallinta" sort="order" }}
-                    <div id="faq-{{ id }}">
-                        <button type="button" class="flex w-full items-start justify-between gap-6 py-5 text-left" @click="toggle('{{ id }}')" :aria-expanded="open === '{{ id }}'">
-                            <span class="text-base leading-snug transition-all" :class="open === '{{ id }}' ? 'font-semibold text-accent-purple' : 'font-medium text-neutral-600'">{{ title }}</span>
-                            <span class="mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center transition-transform duration-200" :class="open === '{{ id }}' ? 'rotate-180 text-accent-purple' : 'text-neutral-400'">
-                                <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
-                            </span>
-                        </button>
-                        <div x-show="open === '{{ id }}'" x-collapse class="pb-6">
-                            <div class="prose prose-base prose-neutral max-w-none border-l-2 border-accent-purple/40 pl-5 prose-p:text-neutral-600 prose-li:text-neutral-600 prose-strong:text-neutral-800 prose-a:text-accent-purple prose-a:no-underline hover:prose-a:underline">{{ answer }}</div>
-                        </div>
-                    </div>
-                {{ /collection:faq }}
-            </div>
-        </section>
-
-        {{# ══════ Moduulit ja submoduulit — accent-orange ══════ #}}
-        <section id="moduulit-ja-submoduulit" x-show="filter === '' || filter === 'moduulit-ja-submoduulit'" class="scroll-mt-20 px-8 py-12 md:px-16 lg:px-24">
-            <h2 class="mb-6 flex items-center gap-3 text-lg font-bold text-neutral-900">
-                <span class="h-6 w-1 shrink-0 bg-accent-orange"></span>
-                Moduulit ja submoduulit
-            </h2>
-            <div class="divide-y divide-neutral-100">
-                {{ collection:faq category:is="Moduulit ja submoduulit" sort="order" }}
-                    <div id="faq-{{ id }}">
-                        <button type="button" class="flex w-full items-start justify-between gap-6 py-5 text-left" @click="toggle('{{ id }}')" :aria-expanded="open === '{{ id }}'">
-                            <span class="text-base leading-snug transition-all" :class="open === '{{ id }}' ? 'font-semibold text-accent-orange' : 'font-medium text-neutral-600'">{{ title }}</span>
-                            <span class="mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center transition-transform duration-200" :class="open === '{{ id }}' ? 'rotate-180 text-accent-orange' : 'text-neutral-400'">
-                                <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
-                            </span>
-                        </button>
-                        <div x-show="open === '{{ id }}'" x-collapse class="pb-6">
-                            <div class="prose prose-base prose-neutral max-w-none border-l-2 border-accent-orange/40 pl-5 prose-p:text-neutral-600 prose-li:text-neutral-600 prose-strong:text-neutral-800 prose-a:text-accent-orange prose-a:no-underline hover:prose-a:underline">{{ answer }}</div>
-                        </div>
-                    </div>
-                {{ /collection:faq }}
-            </div>
-        </section>
-
-        {{# ══════ Elementit — accent-magenta ══════ #}}
-        <section id="elementit" x-show="filter === '' || filter === 'elementit'" class="scroll-mt-20 px-8 py-12 md:px-16 lg:px-24">
-            <h2 class="mb-6 flex items-center gap-3 text-lg font-bold text-neutral-900">
-                <span class="h-6 w-1 shrink-0 bg-accent-magenta"></span>
-                Elementit
-            </h2>
-            <div class="divide-y divide-neutral-100">
-                {{ collection:faq category:is="Elementit" sort="order" }}
-                    <div id="faq-{{ id }}">
-                        <button type="button" class="flex w-full items-start justify-between gap-6 py-5 text-left" @click="toggle('{{ id }}')" :aria-expanded="open === '{{ id }}'">
-                            <span class="text-base leading-snug transition-all" :class="open === '{{ id }}' ? 'font-semibold text-accent-magenta' : 'font-medium text-neutral-600'">{{ title }}</span>
-                            <span class="mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center transition-transform duration-200" :class="open === '{{ id }}' ? 'rotate-180 text-accent-magenta' : 'text-neutral-400'">
-                                <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
-                            </span>
-                        </button>
-                        <div x-show="open === '{{ id }}'" x-collapse class="pb-6">
-                            <div class="prose prose-base prose-neutral max-w-none border-l-2 border-accent-magenta/40 pl-5 prose-p:text-neutral-600 prose-li:text-neutral-600 prose-strong:text-neutral-800 prose-a:text-accent-magenta prose-a:no-underline hover:prose-a:underline">{{ answer }}</div>
-                        </div>
-                    </div>
-                {{ /collection:faq }}
-            </div>
-        </section>
-
-        {{# ══════ Tilastot — brand-blue ══════ #}}
-        <section id="tilastot" x-show="filter === '' || filter === 'tilastot'" class="scroll-mt-20 px-8 py-12 md:px-16 lg:px-24">
-            <h2 class="mb-6 flex items-center gap-3 text-lg font-bold text-neutral-900">
-                <span class="h-6 w-1 shrink-0 bg-brand-blue"></span>
-                Tilastot
-            </h2>
-            <div class="divide-y divide-neutral-100">
-                {{ collection:faq category:is="Tilastot" sort="order" }}
-                    <div id="faq-{{ id }}">
-                        <button type="button" class="flex w-full items-start justify-between gap-6 py-5 text-left" @click="toggle('{{ id }}')" :aria-expanded="open === '{{ id }}'">
-                            <span class="text-base leading-snug transition-all" :class="open === '{{ id }}' ? 'font-semibold text-brand-blue' : 'font-medium text-neutral-600'">{{ title }}</span>
-                            <span class="mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center transition-transform duration-200" :class="open === '{{ id }}' ? 'rotate-180 text-brand-blue' : 'text-neutral-400'">
-                                <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
-                            </span>
-                        </button>
-                        <div x-show="open === '{{ id }}'" x-collapse class="pb-6">
-                            <div class="prose prose-base prose-neutral max-w-none border-l-2 border-brand-blue/40 pl-5 prose-p:text-neutral-600 prose-li:text-neutral-600 prose-strong:text-neutral-800 prose-a:text-brand-blue prose-a:no-underline hover:prose-a:underline">{{ answer }}</div>
-                        </div>
-                    </div>
-                {{ /collection:faq }}
-            </div>
-        </section>
-
-        {{# ══════ Tuetut selaimet — brand-teal ══════ #}}
-        <section id="tuetut-selaimet" x-show="filter === '' || filter === 'tuetut-selaimet'" class="scroll-mt-20 px-8 py-12 md:px-16 lg:px-24">
-            <h2 class="mb-6 flex items-center gap-3 text-lg font-bold text-neutral-900">
-                <span class="h-6 w-1 shrink-0 bg-brand-teal"></span>
-                Tuetut selaimet
-            </h2>
-            <div class="divide-y divide-neutral-100">
-                {{ collection:faq category:is="Tuetut selaimet" sort="order" }}
-                    <div id="faq-{{ id }}">
-                        <button type="button" class="flex w-full items-start justify-between gap-6 py-5 text-left" @click="toggle('{{ id }}')" :aria-expanded="open === '{{ id }}'">
-                            <span class="text-base leading-snug transition-all" :class="open === '{{ id }}' ? 'font-semibold text-brand-teal' : 'font-medium text-neutral-600'">{{ title }}</span>
-                            <span class="mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center transition-transform duration-200" :class="open === '{{ id }}' ? 'rotate-180 text-brand-teal' : 'text-neutral-400'">
-                                <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
-                            </span>
-                        </button>
-                        <div x-show="open === '{{ id }}'" x-collapse class="pb-6">
-                            <div class="prose prose-base prose-neutral max-w-none border-l-2 border-brand-teal/40 pl-5 prose-p:text-neutral-600 prose-li:text-neutral-600 prose-strong:text-neutral-800 prose-a:text-brand-teal prose-a:no-underline hover:prose-a:underline">{{ answer }}</div>
-                        </div>
-                    </div>
-                {{ /collection:faq }}
-            </div>
-        </section>
+        {{ /taxonomy:faq_categories }}
 
     </div>
 
@@ -308,18 +82,23 @@ function faqPage() {
         },
 
         init() {
-            // Hash navigation from search — clear any active filter so the item is visible
+            const openItem = (id) => {
+                this.filter = '';
+                this.open = id;
+                // Wait for x-show + x-collapse transitions to finish before scrolling
+                setTimeout(() => {
+                    const el = document.getElementById('faq-' + id);
+                    if (el) el.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                }, 350);
+            };
+
+            // Triggered by the search box (no native browser scroll involved)
+            window.addEventListener('faq:open', (e) => openItem(e.detail.id));
+
+            // Direct URL hash or back/forward navigation
             const openFromHash = () => {
                 const hash = window.location.hash;
-                if (hash && hash.startsWith('#faq-')) {
-                    const itemId = hash.slice(5);
-                    this.filter = '';
-                    this.open = itemId;
-                    this.$nextTick(() => {
-                        const el = document.getElementById('faq-' + itemId);
-                        if (el) el.scrollIntoView({ behavior: 'smooth', block: 'center' });
-                    });
-                }
+                if (hash && hash.startsWith('#faq-')) openItem(hash.slice(5));
             };
             window.addEventListener('hashchange', openFromHash);
             openFromHash();
@@ -330,6 +109,17 @@ function faqPage() {
         },
     };
 }
+</script>
+
+<script>
+// Expand data-full-url links to use the current origin (works across www3 → www2 etc.)
+document.addEventListener('DOMContentLoaded', () => {
+    document.querySelectorAll('a[data-full-url]').forEach(a => {
+        const full = window.location.origin + a.getAttribute('href');
+        a.href = full;
+        a.textContent = full;
+    });
+});
 </script>
 
 <!-- End: /faq/index.antlers.html -->

@@ -1,51 +1,38 @@
 ---
-id: ec136506-07f9-45fe-a7c0-abf7161e45ea
+id: ac81635c-b39b-49b2-b77f-e54f79018f8e
+origin: ec136506-07f9-45fe-a7c0-abf7161e45ea
 blueprint: doc
 title: '8.6 Start New/ Browse'
 ---
-<b>Start new / Browse </b>functionality allows the end-user to complete or browse an already completed online course.
+<p><b>Start new / Browse</b> allows the end user to retake or browse a previously completed online course.</p><p>At the beginning of the course, by selecting the option "<b>Browse course content</b>", the user can browse the course without any entries being made in the statistics. By clicking the "<b>Browse – click to skip</b>" button, the user can browse through elements and skip the tasks.</p><p><b>Note!</b> The option to browse (<b>Browse course content</b>) is shown when the user has a complete and valid completion. In this situation, the user can also alternatively choose to start a new completion by pressing the "<b>START COURSE</b>" button.</p><p>If the user:</p><ul>
+ <li>has no previous completion, they can complete the training without any selection</li>
+ <li>has an incomplete completion, they can continue it by clicking the "<b>CONTINUE</b>" button</li>
+ <li>has a completed training, they can start a new completion (<b>START COURSE</b>) or browse the training content (<b>Browse course content</b>).</li>
+ <li>has an incomplete completion and a previous complete valid completion, they can continue the incomplete completion on the same statistics row by pressing the <b>CONTINUE</b> button, or they can browse the course without any entries being made in the statistics by pressing the "<b>Browse course content</b>" button.</li>
+</ul><p>If the Expiration settings feature is also enabled at the same time, text appears on the left indicating when the course was completed and whether it is still valid. If the course is no longer valid, the "<b>Browse course content</b>" option is no longer available and the date is shown with a strikethrough.</p><p><b>Instructions for using the feature</b></p><p>The <b>Start new / Browse</b> feature requires user identification before entering the online course (e.g. Email Registration, SSO, Tax number authentication, or the user can log in e.g. via MyCourses).</p><p>When an identified participant enters the module, they are shown a popup over the Intro element according to the settings above. If the Expiration feature is enabled, it is shown at the same point.</p><p>After activation, the feature is found in the gear menu at the top of the module's edit view (Edit Module). The feature is activated per module. Button texts are also editable per module.</p><h3>How do I see that the Start New / Browse feature is activated?</h3>
 
-At the beginning of the course, by selecting the option “<b>Browse course contents</b>”, the end user <b>can browse the course without entering any data in the statistics</b>. By clicking the “<b>Browse - click to skip</b>” button the end-user can move forward in the course without doing the exercises or answering the questions.
+<p></p>
 
-<b>Note!</b> “<b>Browse course content</b>” option is displayed when the end-user has a completed and valid course. In this case, the end-user can also alternatively choose to start a new session by pressing the “<b>START COURSE</b>” button.
+<p><img src="/files/docs/2025/02/Settings.png"></p>
 
-If the user:
-<ul>
- <li> has not previously started the course, they will be able to complete the course without the “<b>Browse course content</b>” option, by choosing “<b>START COURSE</b>”-button</li>
- <li> has an incomplete session, they can continue the course by selecting the “<b>CONTINUE</b>” button</li>
- <li aria-level="1">has completed the course, they can start a new course by choosing the ”<b>START COURSE</b>”- option or they can browse the course content by choosing the “<b>Browse course content</b>” - option.</li>
- <li aria-level="1">has an incomplete session and a previously completed course, which has not expired, they can continue the incomplete session on the same statistics row by pressing the “<b>CONTINUE</b>” button or can browse the course by pressing the “<b>Browse course content</b>” button <b>without entering any data in the statistics</b>.</li>
-</ul>
-If the “<b>Expiration settings”</b> feature is used at the same time, a “Welcome” message will appear at the beginning of the training, stating when the course has been completed and whether it is still valid. If the course is no longer valid because it has expired, the “<b>Browse course</b>” option is not available and the completion info is overwritten.
+<p></p>
 
-<b>How to use </b><b>Start new / Browse</b><b> feature</b>
+<p><img src="/files/docs/2025/02/Start-the-course-button.png"></p>
 
-The <b>Start new / Browse</b> functionality requires end-user authentication before starting the online course (e.g., Consumer Login, SSO, Tax ID, or the end-user can enter via MyCourses).
+<p></p>
 
-When an identified end-user enters the module, they will be shown a modal on top of the <b>Intro</b> element. If the Expiration-functionality message is used, it is displayed at the same time.
+<p><img src="/files/docs/2025/02/Continue-button.png"></p>
 
-Once enabled, <b>Start new / Browse</b> functionality can be found in the gear icon menu at the top of the <b>Edit Module</b> view. The functionality is activated on a module basis. Button texts can also be edited on a module basis.
+<p></p>
 
-<h6>Where can I see that the Start New / Browse feature is activated?</h6>
+<p><img src="/files/docs/2025/02/Browse-this-course-content-31.gif"></p>
 
-<h6>Click the button, and let's start the course!</h6>
+<p></p>
 
-<h6>Didn't you finish the course? No problem; click the Continue button.</h6>
+<p><img src="/files/docs/2025/02/Reminder-text-box.png"></p>
 
-<h6>Once you have completed the course, you can browse the content again! Great.</h6>
+<p></p>
 
-<h6>You can always add a reminder! Easy and convenient!</h6>
+<p><img src="/files/docs/2025/02/Start-Course-settings.png"></p>
 
-<h6>Easy settings!</h6>
-
-<figure class="doc-image"><img src="/files/docs/2025/02/Settings-1.png" alt="" loading="lazy"></figure>
-
-<figure class="doc-image"><img src="/files/docs/2025/02/Start-the-course-button-1.png" alt="" loading="lazy"></figure>
-
-<figure class="doc-image"><img src="/files/docs/2025/02/Continue-button-1.png" alt="" loading="lazy"></figure>
-
-<figure class="doc-image"><img src="/files/docs/2025/02/Browse-this-course-content-31-1.gif" alt="" loading="lazy"></figure>
-
-<figure class="doc-image"><img src="/files/docs/2025/02/Reminder-text-box-1.png" alt="" loading="lazy"></figure>
-
-<figure class="doc-image"><img src="/files/docs/2025/02/Start-Course-settings-1.png" alt="" loading="lazy"></figure>
+<p></p>

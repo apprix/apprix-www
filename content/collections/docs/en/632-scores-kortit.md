@@ -1,45 +1,7 @@
 ---
-id: 07cc8e2f-de2f-4a19-aae3-76d18cc53e02
+id: c5897ac4-36bc-4fbb-ac06-401e411ba0fa
+origin: 07cc8e2f-de2f-4a19-aae3-76d18cc53e02
 blueprint: doc
-title: '6.3.2 Scores Cards'
+title: '6.3.2 Scores - Cards'
 ---
-<h4><strong>Task elements</strong></h4>
-By default, task-type elements are the only elements that collect points (with a few exceptions), so this card shows all the scoring elements in the module if they are not separately visualized.
-
-<strong>Note!</strong> The statistics are shown for completed tasks only.
-
-The left side shows:
-<ul>
- <li>Element name (the text displayed above the element in the Edit Module view),</li>
- <li>Title of the element (in the Edit Module view the title of the element or the name of the question)</li>
- <li>Element page number (#n).</li>
-</ul>
-If there are separate questions within the element (e.g. Checkbox element), they appear under the element as separate rows (there can be also exceptions since the element can be customized).
-
-If the percentage could not be calculated, <strong>N/A = Not Available</strong> will be displayed. If the question is not to be scored, but in text form, the number of answers is shown instead of a percentage.
-
-<strong>Note!</strong>
-<ul>
- <li>Since many elements are customized, if you would like to see other task-type elements visualized, please contact Apprix.</li>
- <li>A question mark will appear on the N/A row if the percentage could not be calculated. When you move the mouse over the question mark, the help text appears.</li>
-</ul>
-<h4><strong>Percentage calculation formulas</strong></h4>
-1) (Used when the element’s maximum score is &gt; 0, e.g. Checkbox element)
-
-<strong>Element score</strong> =
-
-(Total score of the course participants * maximum score of the element) / (number of answers * maximum score of the element) * 100.
-
-<strong>Note!</strong> If the score of the element in the <strong>Edit Points</strong> <strong>tool</strong> is 0, i.e., no “real points” are awarded, then the maximum score is the same as the number of tasks, i.e., it is assumed that each task is worth 1 point.
-
-2) (Used when the element’s <strong>Edit points score</strong> is 0)
-
-<strong>The score of the element’s single question</strong> =
-
-(Total score of the course participants * maximum score of one question) / (number of performances * maximum score of one question) * 100.
-
-<h6 class="p1"><b>Click on the images to enlarge them.</b></h6>
-
-<h6><em>Task elements</em></h6>
-
-<figure class="doc-image"><img src="/files/docs/2023/03/Task-elements-1.png" alt="" loading="lazy"></figure>
+<h3>Task-type elements</h3><p>By default, task-type elements are the only ones that collect points (with a few exceptions), so this card shows all scorable elements in the module, <strong>if</strong> they have not been separately visualised.</p><p><strong>Note!</strong> Statistics are only shown for completed completions.</p><p>On the left side of the card you can see:</p><ul><li><p>The element name (the text visible above the element in the Edit Module view),</p></li><li><p>The element title (the general title of the element or the question name in the Edit Module view)</p></li><li><p>The element page number (#n).</p></li></ul><p>If an element contains individual statements that the course learner must respond to (e.g. in a Checkbox element), the statements appear as separate rows below that element (there are also exceptions, as the element may have been customised).</p><p>If the percentage cannot be calculated, <strong>N/A = Not Available</strong> is shown. If the question is not scorable but text-based, the number of responses is shown instead of a percentage.</p><p><strong>Note!</strong></p><ul><li><p>Since many elements are customised, if you want to see other task elements visualised, contact Apprix.</p></li><li><p>If the percentage could not be calculated, a question mark appears on the N/A row. When you hover the mouse over the question mark, the tooltip text becomes visible.</p></li></ul><h3>Percentage calculation formulas</h3><p>1) (Used when the <strong>element's</strong> maximum score is &gt; 0, e.g. Checkbox element)</p><p><strong>Element score =</strong></p><p>(Total score of learners * maximum score of element) / (number of responses * maximum score of element) * 100.</p><p><strong>Note!</strong> If the element score in the <strong>Edit Points</strong> tool is 0, meaning no "correct points" are awarded, then the maximum score equals the number of task items, i.e. each task item is assumed to be worth 1 point.</p><p>2) (Used when the <strong>Edit Points</strong> scores for the element are 0)</p><p>Score for an individual <strong>question</strong> in the element =</p><p>(Total score of learners * maximum score of one question) / (number of completions * maximum score of one question) * 100.</p><h3>Scores - Cards</h3><p><img src="statamic://asset::files::docs/2023/03/Task-elements.png"></p>

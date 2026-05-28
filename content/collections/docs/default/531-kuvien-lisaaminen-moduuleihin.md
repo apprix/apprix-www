@@ -2,17 +2,12 @@
 id: 738651eb-3e53-4b91-8a9f-9c0b055f2d7b
 blueprint: doc
 title: '5.3.1 Kuvien lisääminen moduuleihin'
+seo_noindex: false
+seo_nofollow: false
+seo_canonical_type: entry
+sitemap_change_frequency: weekly
+sitemap_priority: 0.5
+updated_by: 680e1400-32cd-4415-9b61-d630b47576db
+updated_at: 1779933411
 ---
-Voit lisätä tai poistaa moduulissa tarvitsemiasi kuvia valitsemalla Edit Module -ikkunan rataskuvakkeesta <strong>Open Image Library...</strong>
-
-Kun klikkaat " <strong>Open Image Library..</strong>.” " -painiketta, <strong>Image Library</strong> -ikkuna avautuu.
-
-Jos sinun on ladattava kuva tiedostoistasi, päätä ensin, haluatko sijoittaa sen kaikkien saataville kuvakirjastoon.
-
-Jos näin on,  klikkaa <strong>Upload new image</strong>. Valitse kuva tiedostoistasi ja paina sitten Avaa/Open. Kuva on nyt saatavilla kuvakirjastossa. Tarvittaessa voit lisätä kuvan haluttuun alihakemistoon liikuttamalla sitä hiirellä.
-
-<strong>Huom</strong>! Parametrin "<em>Show uploaded file in library</em>" valintaa ei voi deaktivoida, kun Image Library avataan moduulin rataskuvakkeesta.
-
-<h6>Miten lisäät kuvia moduuleihin kuvakirjaston (Image Library) avulla?</h6>
-
-<figure class="doc-image"><img src="/files/docs/2023/04/Image_library1-1.png" alt="" loading="lazy"></figure>
+<p>Voit lisätä tai poistaa moduulissa tarvitsemiasi kuvia valitsemalla Edit Module -ikkunan rataskuvakkeesta <strong>Open Image Library...</strong></p><p>Kun klikkaat &quot; <strong>Open Image Library..</strong>.” &quot; -painiketta, <strong>Image Library</strong> -ikkuna avautuu.</p><p>Jos sinun on ladattava kuva tiedostoistasi, päätä ensin, haluatko sijoittaa sen kaikkien saataville kuvakirjastoon.</p><p>Jos näin on,  klikkaa <strong>Upload new image</strong>. Valitse kuva tiedostoistasi ja paina sitten Avaa/Open. Kuva on nyt saatavilla kuvakirjastossa. Tarvittaessa voit lisätä kuvan haluttuun alihakemistoon liikuttamalla sitä hiirellä.</p><p><strong>Huom</strong>! Parametrin &quot;<em>Show uploaded file in library</em>&quot; valintaa ei voi deaktivoida, kun Image Library avataan moduulin rataskuvakkeesta.</p><h3>Miten lisäät kuvia moduuleihin kuvakirjaston (Image Library) avulla?</h3><p><img src="statamic://asset::files::docs/2023/04/Image_library1-1.png"></p>

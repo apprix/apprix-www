@@ -1,34 +1,7 @@
 ---
-id: 7d245285-2c56-4712-924a-8e9d7e7f3893
+id: 5950b155-e68c-49dc-a157-7269127c428d
+origin: 7d245285-2c56-4712-924a-8e9d7e7f3893
 blueprint: doc
-title: '8.1 Managing additional features in the module settings menu'
+title: '8.1 Managing Additional Features in the Module Settings Menu'
 ---
-The module settings menu in the <b>Edit Module</b> window is designed to make it easy for you to check which settings are on or off and which authentication method is in use in the module.
-
-<b>How does that settings menu</b> <b>work?</b>
-<ul>
- <li aria-level="1">The menu opens by clicking on the gear icon and closes when you click outside the menu or the gear icon again</li>
- <li aria-level="1">“Edit tags…”, “Edit points…”, “Change template…” options are at the top, and “About this module…” at the bottom. In between you can find all other customer-specific features.</li>
- <li aria-level="1">“Hide this module”, an upcoming new feature, and “Audit module” are the only modules that can be activated/deactivated directly in the menu by clicking them.</li>
-</ul>
-<b>Customer Specific Features</b>
-
-Customer-specific features are activated in the settings menu.
-
-Here is a possible content of the settings menu:
-<ul>
- <li aria-level="1">Edit Tags</li>
- <li aria-level="1">Edit Points</li>
- <li aria-level="1">Change template</li>
- <li aria-level="1">Change module editor…</li>
- <li aria-level="1">User Authentication</li>
- <li aria-level="1">Audit Module</li>
- <li aria-level="1">Nagging ( previously “Participants and Reminders”)</li>
- <li aria-level="1">Expiration Settings</li>
- <li aria-level="1">Start new / Browse…</li>
- <li aria-level="1">About this module</li>
-</ul>
-
-<h6 class="p1"><b>Click on the images to enlarge them.</b></h6>
-
-<figure class="doc-image"><img src="/files/docs/2022/03/ratasmenut-1-600x598.jpg" alt="" loading="lazy"></figure>
+<p>The module settings menu in the <strong>Edit Module</strong> view is designed so that you can easily see which settings are enabled or disabled and which authentication method is selected for the module.</p><p><strong>How does the settings menu work?</strong></p><ul><li><p>The menu opens by clicking the gear icon at the top of the module and closes when you click outside the menu or click the gear icon again.</p></li><li><p>"Edit tags…", "Edit points…", "Change template…" are at the top, and "About this module…" is at the bottom. All customer-specific features appear between them.</p></li><li><p>"Hide this module" (an upcoming feature) and "Audit module" are the only ones that are activated/deactivated directly in the menu by clicking.</p></li></ul><p><strong>Customer-specific features</strong></p><p>Customer-specific features are activated from the settings menu.</p><p>Here is the possible content of the settings menu:</p><ul><li><p><a href="/help/68-moduulien-ryhmittaminen-ja-moduulien-hakemisen-helpottaminen-tag-moduulitunni">Edit Tags</a></p></li><li><p><a href="/help/69-moduulin-pisteiden-muokkaaminen-edit-points">Edit Points</a></p></li><li><p><a href="/help/610-change-template">Change template</a></p></li><li><p><a href="/help/611-change-module-editors">Change module editors</a></p></li><li><p><a href="/help/82-user-authentication-kayttajatodennus">User Authentication</a></p></li><li><p><a href="/help/83-audit-module-aukoton-kirjausketju-ominaisuus">Audit Module</a></p></li><li><p><a href="/help/84-nagging">Nagging</a> (formerly "Participants and Reminders")</p></li><li><p><a href="/help/85-expiration-and-reminder-kurssisuorituksen-vanhentumistoiminto">Expiration and Reminder</a></p></li><li><p><a href="/help/86-start-new-browse">Start new / Browse</a></p></li><li><p><a href="/help/87-about-this-module">About this module</a></p></li></ul><p></p><h3>Module in Published Mode</h3><p><img src="statamic://asset::files::docs/2022/03/ratasmenut-400x399.jpg"></p>

@@ -3,25 +3,25 @@ id: 123ce55f-c7f8-4404-88eb-51360b4d3dac
 blueprint: doc
 title: '8.4 Nagging'
 ---
-<h4><strong>Toiminnon tarkoitus</strong></h4>
-<strong>Nagging</strong> -ominaisuuden (aiemmin nimeltään “Participants and reminders”) avulla voit kutsua henkilöitä suorittamaan verkkokurssin sekä muistuttaa henkilöitä vielä suorittamatta jääneistä kursseista, jotka heidän olisi pitänyt jo suorittaa aikaisemmin.
+<h3>Toiminnon tarkoitus</h3>
+<p><strong>Nagging</strong> -ominaisuuden (aiemmin nimeltään “Participants and reminders”) avulla voit kutsua henkilöitä suorittamaan verkkokurssin sekä muistuttaa henkilöitä vielä suorittamatta jääneistä kursseista, jotka heidän olisi pitänyt jo suorittaa aikaisemmin.</p>
 
-Kutsut voidaan lähettää <strong>manuaalisesti</strong> tai <strong>automaattisesti</strong> asetusten mukaan. Toiminto vaatii kutsuttavan henkilön sähköpostiosoitteen.
-<h4><strong>Toiminnon käyttö</strong></h4>
+<p>Kutsut voidaan lähettää <strong>manuaalisesti</strong> tai <strong>automaattisesti</strong> asetusten mukaan. Toiminto vaatii kutsuttavan henkilön sähköpostiosoitteen.</p>
+<h3>Toiminnon käyttö</h3>
 <ul>
  <li>Toiminto on käytettävissä moduulin muokkaustilassa.</li>
  <li>Klikkaa moduulin <strong>rataskuvaketta</strong> ja valitse <strong>“Nagging…”</strong>.</li>
  <li>Kun automaattinen muistutus on käytössä, valikossa näkyy teksti <strong>“ON”</strong>.</li>
 </ul>
-<strong>Huom: Moduulin täytyy olla julkaistu, jotta muistutuksia voidaan lähettää.</strong>
-<h4><strong>Participants &amp; Reminders pääikkunan rakenne</strong></h4>
-<strong>Participants &amp; Reminders </strong>-ikkuna koostuu kolmesta osasta:
+<p><strong>Huom: Moduulin täytyy olla julkaistu, jotta muistutuksia voidaan lähettää.</strong></p>
+<h3>Participants &amp; Reminders pääikkunan rakenne</h3>
+<p><strong>Participants &amp; Reminders </strong>-ikkuna koostuu kolmesta osasta:</p>
 <ol>
  <li>Painikkeet osallistujalistan muokkaamiseen</li>
  <li>Osallistujien lista</li>
  <li>Painikkeet muistutusten lähettämiseen manuaalisesti tai automaattisesti</li>
 </ol>
-<h4><strong>Osallistujien lisääminen ja poistaminen</strong></h4>
+<h3>Osallistujien lisääminen ja poistaminen</h3>
 <ul>
  <li><strong>Lisääminen:</strong>
 <ul>
@@ -37,7 +37,7 @@ Kutsut voidaan lähettää <strong>manuaalisesti</strong> tai <strong>automaatti
 </ul>
 </li>
 </ul>
-<h4> <strong>Kutsujen lähettäminen manuaalisesti</strong></h4>
+<h3>Kutsujen lähettäminen manuaalisesti</h3>
 <ol>
  <li>Valitse yksi tai useampi sähköpostiosoite osallistujataulukosta.</li>
  <li>Klikkaa <strong>“Send reminders manually…”</strong>.</li>
@@ -51,14 +51,14 @@ Kutsut voidaan lähettää <strong>manuaalisesti</strong> tai <strong>automaatti
 </li>
  <li>Klikkaa <strong>“Send to … participants”</strong>.</li>
 </ol>
-<strong>Lähetyksen jälkeen: </strong>
+<p><strong>Lähetyksen jälkeen: </strong></p>
 <ul>
  <li><strong>“Reminders Sent”</strong> -sarake kasvaa yhdellä.</li>
  <li><strong>“Last Reminder”</strong> -sarake päivittyy uudella päivämäärällä.</li>
 </ul>
-<strong> </strong>
-<h4><strong>Kutsujen lähettäminen automaattisesti</strong></h4>
-Osallistujien kutsuminen voidaan automatisoida.
+<p><strong> </strong></p>
+<h3>Kutsujen lähettäminen automaattisesti</h3>
+<p>Osallistujien kutsuminen voidaan automatisoida.</p>
 <ul>
  <li>Klikkaa <strong>“Automatic Reminder settings…”</strong> avataksesi asetukset.</li>
  <li>Valitse <strong>“Use automated email reminders”</strong> -valintaruutu.</li>
@@ -76,12 +76,12 @@ Osallistujien kutsuminen voidaan automatisoida.
 <ul>
  <li>Klikkaa “<strong>Save</strong>” tallentaaksesi asetukset.</li>
 </ul>
-<strong>Lähetyksen jälkeen: </strong>
+<p><strong>Lähetyksen jälkeen: </strong></p>
 <ul>
  <li><strong>“Reminders Sent”</strong> -sarake kasvaa yhdellä.</li>
  <li><strong>“Last Reminder”</strong> -sarake päivittyy uudella päivämäärällä.</li>
 </ul>
-<h4> <strong>Automaattisten kutsujen toiminta</strong></h4>
+<h3>Automaattisten kutsujen toiminta</h3>
 <ul>
  <li>Kaikki osallistujat saavat saman kutsun, kunnes:
 <ol>
@@ -91,32 +91,32 @@ Osallistujien kutsuminen voidaan automatisoida.
 </li>
  <li>Voit keskeyttää kutsut tietyiltä osallistujilta painikkeella <strong>“Pause / Unpause…”</strong>.</li>
 </ul>
-Esimerkkejä osallistujataulukosta
+<p>Esimerkkejä osallistujataulukosta</p>
 <ul>
  <li><strong>teppo.testinen@apprix.fi</strong> → sai 2 kutsua ja suoritti moduulin. Ei saa enää uusia kutsuja.</li>
  <li><strong>jane.doe@gmail.com</strong> → sai 3 kutsua, ei ole suorittanut. Voi saada lisää kutsuja riippuen asetetusta enimmäismäärästä.</li>
  <li><strong>erkki.esimerkki@gmail.com</strong> → sai 2 kutsua, sitten asetettiin tauolle. Ei saa uusia kutsuja ennen kuin tauko poistetaan.</li>
 </ul>
-<h4><strong>Automaattisten asetusten lisätiedot </strong></h4>
-<strong>Osallistujataulukko</strong>
+<h3>Automaattisten asetusten lisätiedot</h3>
+<p><strong>Osallistujataulukko</strong></p>
 <ul>
  <li>Uusi osallistuja saa ensimmäisen kutsun heti.</li>
  <li>Seuraava kutsu ajoitetaan asetetun lähetysvälin mukaan.</li>
  <li>Kun osallistuja suorittaa moduulin, uusia kutsuja ei lähetetä.</li>
  <li>Tauolla olevat osallistujat eivät saa kutsuja ennen tauon poistamista.</li>
 </ul>
-<strong>Lähetysvälit</strong>
+<p><strong>Lähetysvälit</strong></p>
 <ul>
  <li><strong>Välin kasvattaminen:</strong> kutsut siirtyvät myöhemmäksi.</li>
  <li><strong>Välin lyhentäminen:</strong> osa osallistujista voi saada kutsun heti, riippuen <strong>Last Reminder</strong> -päivästä.</li>
 </ul>
-<strong>Enimmäismäärä</strong>
+<p><strong>Enimmäismäärä</strong></p>
 <ul>
  <li><strong>Enimmäismäärän kasvattaminen:</strong> osallistujat, jotka olivat saavuttaneet rajan, voivat saada uusia kutsuja.</li>
  <li><strong>Enimmäismäärän pienentäminen:</strong> osallistujat lopettavat kutsujen saamisen heti, kun uusi raja saavutetaan.</li>
 </ul>
-<h4><strong>Nagging- + Expiration-ominaisuudet</strong></h4>
-Jos Nagging- ja Expiration-ominaisuudet ovat käytössä samanaikaisesti:
+<h3>Nagging- + Expiration-ominaisuudet</h3>
+<p>Jos Nagging- ja Expiration-ominaisuudet ovat käytössä samanaikaisesti:</p>
 <ul>
  <li>Nagging-ominaisuudella voi muistuttaa keskeneräisestä suorituksesta tai kutsua henkilö suorittamaan verkkokurssi.</li>
  <li>Kun Expiration-ominaisuus on päällä, kurssin suoritus vanhentuu määritellyn ajan kuluttua.</li>
@@ -124,21 +124,23 @@ Jos Nagging- ja Expiration-ominaisuudet ovat käytössä samanaikaisesti:
  <li>Kun suoritus on vanhentunut, suorittajalle voi taas lähettää Nagging-muistutuksia.</li>
 </ul>
 
-<h6 class="p1">Klikkaa kuvia suurentaaksesi niitä.</h6>
-<h6 class="p1"> </h6>
+<h3>Klikkaa kuvia suurentaaksesi niitä.</h3>
 
-<h6 class="p1">Kutsu lähetetään manuaalisesti
-</h6>
 
-<h6 class="p1"> Kutsu lähetetään automaattisesti
-</h6>
+<h3>Kutsu lähetetään manuaalisesti</h3>
 
-<h6 class="p1">Osallistujat ja muistutukset ‑valintaikkunan kolme pääosiota
-</h6>
+<h3>Kutsu lähetetään automaattisesti</h3>
 
-<h6 class="p1"> Esimerkkejä osallistujataulukossa
-</h6>
+<h3>Osallistujat ja muistutukset ‑valintaikkunan kolme pääosiota</h3>
 
-<figure class="doc-image"><img src="/files/docs/2026/01/PR-123.png" alt="" loading="lazy"></figure>
+<h3>Esimerkkejä osallistujataulukossa</h3>
 
-<figure class="doc-image"><img src="/files/docs/2026/01/Picture1.png" alt="" loading="lazy"></figure>
+<p></p>
+
+<p><img src="/files/docs/2026/01/PR-123.png"></p>
+
+<p></p>
+
+<p><img src="/files/docs/2026/01/Picture1.png"></p>
+
+<p></p>

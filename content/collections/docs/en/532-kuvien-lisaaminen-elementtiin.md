@@ -1,22 +1,7 @@
 ---
-id: a2953e43-159a-43c3-a565-e0e7e74b580a
+id: 814764fa-8f8f-44c5-a48e-39dc13941d51
+origin: a2953e43-159a-43c3-a565-e0e7e74b580a
 blueprint: doc
-title: '5.3.2 Adding images to an element'
+title: '5.3.2 Adding Images to an Element'
 ---
-When you need to add an image to an element follow these instructions:
-<ul>
- <li>Open the element. The element must be in <strong>Edit mode</strong> (”Edit Module &gt; Edit Element Contents” window).</li>
- <li>Open the <strong>Image Library</strong> by moving the mouse on the right side of the background image on top of the image toolbar and by clicking the lowest icon <strong>Change image</strong>.</li>
- <li>In the new pop-up window click <strong>Browse / Upload Files…</strong> Now you can see the <strong>Image Library</strong>.</li>
- <li>Choose the image by clicking on it.</li>
- <li>In case you need to upload an image from your files, proceed as described in the previous chapter.</li>
- <li>Once the desired image is available in the <strong>Image Library</strong> click it and press <strong>Insert Selected</strong> at the bottom right of the window. The chosen image appears as a ”background image” in the element.</li>
- <li>You can zoom in and out of the image with the mouse scroll gear or by using the <strong>+</strong> and <strong>–</strong> buttons on the image toolbar. The second lowest button in the image toolbar fills the image area vertically and the middle one fills it horizontally.</li>
- <li>You can also move the image by dragging it.</li>
-</ul>
-
-<h6 class="p1"><b>Click on the images to enlarge them.</b></h6>
-
-<figure class="doc-image"><img src="/files/docs/2023/04/Image_library3.png" alt="" loading="lazy"></figure>
-
-<figure class="doc-image"><img src="/files/docs/2023/04/Image_library4.png" alt="" loading="lazy"></figure>
+<p>When you want to add an image to an element, follow these instructions:</p><ul><li><p>Open the element. The element must be in editing mode ("Edit Module &gt; Edit Element Contents" window).</p></li><li><p>Open the image library by moving your mouse over the image toolbar to the right of the background image and clicking the bottom icon <strong>Change image</strong>.</p></li><li><p>In the new popup window, click <strong>Browse / Upload Files…</strong> You will now see the image library.</p></li><li><p>Select an image by clicking on it.</p></li><li><p>If you need to upload an image from your files, follow the steps described in the previous section.</p></li><li><p>Once the desired image is available in the image library, click on it and press <strong>Insert Selected</strong> in the bottom-right corner of the window. The selected image will now appear in the element as the "background image".</p></li><li><p>You can zoom in and out on the image using the mouse scroll wheel or by using the <strong>+</strong> and <strong>–</strong> buttons on the image toolbar. The second button from the bottom on the image toolbar fills the image area vertically, and the middle button fills it horizontally.</p></li><li><p>You can also move the image by dragging it.</p></li></ul><h3>How do you add images to elements using the Image Library?</h3><p><img src="statamic://asset::files::docs/2024/04/5.3.2-2-Kuvien-lisaaminen-elementtiin.gif"></p>

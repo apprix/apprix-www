@@ -1,34 +1,7 @@
 ---
-id: d97dbf4b-596a-4b47-ad8b-a535b22c8441
+id: 96f13c89-9c23-4314-99d7-86aa7d52df2a
+origin: d97dbf4b-596a-4b47-ad8b-a535b22c8441
 blueprint: doc
 title: '7.9 Multichoice'
 ---
-<span><b>Multichoice</b> element is a multiple choice task where you can ask a question or provide a statement and give it two or more answer options from the gear icon on top of the <b>Edit Element Contents</b> view. Answer options can be added, removed, </span>rearranged and marked as correct or incorrect. If the <b>Shuffle</b> function is switched on, options will be mixed every time the element opens in <b>Preview </b>or <b>Published mode.</b>
-
-Common uses for the element:
-<ul>
- <li>Options or statements where one or more options are correct.</li>
- <li>Real-life situation – What should you do next? How do you react?</li>
- <li>A person (e.g., a customer or colleague) asks: What do you answer?</li>
- <li>An employee describes their work – Which of our business units are they describing? (For example, in a sales course, the descriptions say how they support sales in their business unit.)</li>
-</ul>
-In the answer text, it’s recommended that you explain to the user why those specific options were correct or incorrect and add additional information on the chosen topic.
-
-<strong>Note!</strong> The points of the multichoice element must be set manually in the <strong>Edit Points </strong>window. For example, if there are 3 options and 2 of them are correct, the number of points in the<strong> Edit Points</strong> window for the element should be 2.
-
-Click the orange gear icon on the <strong>Edit Module</strong> view to access the <strong>Edit Points</strong> option.
-
-<strong>NEW! Element Multichoice 2.0 - Switch page layout feature</strong>
-If you want longer question-and-answer texts, click on the tool icon on the top left corner to switch the element layout to two pages.
-
-<h6 class="p1">Element in publishing mode.</h6>
-
-<h5 class="p1">Element settings in Edit mode</h5>
-
-<h5 class="p1">NEW! Element Multichoice 2.0 – Switch page layout feature</h5>
-
-<figure class="doc-image"><img src="/files/docs/2021/08/Multichoice_EN_.gif" alt="" loading="lazy"></figure>
-
-<figure class="doc-image"><img src="/files/docs/2021/08/Multichoice_Edit_Small.gif" alt="" loading="lazy"></figure>
-
-<figure class="doc-image"><img src="/files/docs/2025/03/Multichoice-new-feature.gif" alt="" loading="lazy"></figure>
+<p>The <strong>Multichoice element</strong> is a multiple-choice task where you can present a question and add two or more answer options using the orange <strong>gear icon</strong> in the upper part of the edit view. Answer options can be added, removed, reordered, and marked as correct or incorrect. If the Shuffle function is active, the answer options are randomised each time the element is opened in the run or preview view.</p><p>Example use cases:</p><ul><li><p>Which of the following statements are true?</p></li><li><p>Complete the sentence/statement with the correct options</p></li><li><p>Presenting a real-life situation – What do you do? / How do you react? / What do you do next?</p></li><li><p>A person (for example, a customer or colleague) asks a question – How do you respond?</p></li></ul><p>In the answer field, it is recommended to explain why certain presented answers were correct and others were wrong, or to provide general additional information about the topic.</p><p><strong>Note!</strong> The task points must be set manually in the <strong>Edit Points</strong> window, which opens from the orange gear icon in the upper part of the module's edit view.</p><p>For example, if there are 3 options in total and 2 are correct, the number of points in the <strong>Edit Points</strong> window should be 2.</p><p><strong>NEW! Multichoice element 2.0 - Switch page layout feature</strong> If you want to use longer question-and-answer texts, click the tool icon in the upper left corner to switch the element's layout to a two-page view.</p><h3>Element in published mode</h3><p><img src="statamic://asset::files::docs/2021/08/Multichoice_FI_Small.gif"></p><h3>Element settings in edit mode.</h3><p><img src="statamic://asset::files::docs/2021/08/Multichoice_Edit_FI_Small.gif"></p><h3>NEW! Multichoice element 2.0 - Switch page layout feature.</h3><p><img src="statamic://asset::files::docs/2024/09/Multichoice-new-feature.gif"></p>

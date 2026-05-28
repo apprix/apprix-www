@@ -1,33 +1,7 @@
 ---
-id: dc1c88ec-1523-4c60-b497-9fcc4513be8b
+id: 8fc83ed8-71c9-4875-8fbd-1494084e522f
+origin: dc1c88ec-1523-4c60-b497-9fcc4513be8b
 blueprint: doc
 title: '7.34 Drag and Drop'
 ---
-<strong>Drag and Drop</strong> is a task element. In this exercise, the course participant associates the cards in the deck of cards on the left with the correct card/answer on the right. If the answer is incorrect, the card is placed back in the deck on the left and an error message is shown. If the answer is correct, the card remains where it was inserted, and the next card will be revealed.
-
-When all the cards have been successfully inserted, a message box with further information about the exercise is shown to the participant at the left side of the window.
-<h4>Editing Instructions</h4>
-<ul>
- <li>Use the <strong>Introduction</strong> text box to provide a detailed introduction to this exercise. If this is unnecessary, clear the text, and the participant will go directly to the exercise.</li>
- <li>You can add, edit, and, if necessary, remove the items by clicking the gear icon at the top of the window and choosing the <strong>Element Settings </strong>option.</li>
- <li>In the <strong>Element Settings,</strong> choose the <strong>Shuffle items</strong> option “<strong>Yes”</strong> from the pop-up window, if you wish to shuffle the items in <strong>Preview</strong>/<strong>Published</strong> mode. Please note that the cards are placed in chronological order in Edit mode.</li>
- <li>First, edit the topic titles. Then, hover the mouse over the right side of each topic box to reveal the <strong>Change image</strong> icon. Click on the icon and select an image from the <strong>Image</strong> <strong>Library</strong>.</li>
- <li>Edit each card's content on the left side and move it to its correct place.</li>
- <li>If you move one card to the wrong place, an error message will appear at the bottom of the page. Edit it if needed.</li>
- <li>To add the element's background image, move the cursor to the window's top right corner and click the lowest icon, <strong>Change image</strong>.</li>
- <li>When all the cards are dragged and dropped successfully, a new box will appear on the left side of the window. Write here any additional information about the task (e.g. All correct! …. )</li>
-</ul>
-
-<h6 class="p1">How does the "Drag and drop" element work?</h6>
-
-<h6 class="p1">How do you edit the element?</h6>
-
-<h6 class="p1">An example of how to use it.</h6>
-
-<figure class="doc-image"><img src="/files/docs/2025/03/DragandDropWastedoing-1.gif" alt="" loading="lazy"></figure>
-
-<figure class="doc-image"><img src="/files/docs/2025/03/DragandDropEditWasteedit2-1.gif" alt="" loading="lazy"></figure>
-
-<figure class="doc-image"><img src="/files/docs/2021/08/Drag_and_Drop_Edit_EN.gif" alt="" loading="lazy"></figure>
-
-<figure class="doc-image"><img src="/files/docs/2021/05/dragdrop.png" alt="" loading="lazy"></figure>
+<p><strong>Drag and Drop</strong> is a task element. In this exercise, the course participant matches the cards in the card stack on the left to the correct answer in the cards on the right.</p><p>If the answer is incorrect, the card is placed back in the stack on the left and an error message is shown. If the answer is correct, the card stays in the position it was dropped to and the next card is revealed.</p><p>When all cards have been placed successfully, a message box containing additional information about the exercise appears on the left side of the window.</p><h3>Element editing instructions</h3><ul><li><p>Use the <strong>Introduction</strong> text box for a detailed introduction to the exercise. If this is unnecessary, clear the text, and the learner will proceed directly to the exercise.</p></li><li><p>You can add, edit, and remove items as needed by clicking the gear icon at the top of the window and selecting the <strong>Element Settings</strong> option.</p></li><li><p>Select <strong>"Yes"</strong> for the <strong>Shuffle items</strong> option in the <strong>Element Settings</strong> popup if you want to shuffle the items in <strong>Preview</strong> / <strong>Published</strong> mode. Note that in edit mode, the cards are arranged in chronological order.</p></li><li><p>First edit the item titles. Then move the mouse to the right side of each item's box, which will reveal the <strong>Change image</strong> icon. Click the icon and select the desired image from the <strong>Image Library</strong>.</p></li><li><p>Edit the content of each card and move the card on top of the option.</p></li><li><p>Move one card to the wrong place. An error message will appear at the bottom of the page. Edit it if necessary.</p></li><li><p>Add a background image to the element by moving the cursor to the upper right area of the window and clicking the bottom icon, <strong>Change image</strong>.</p></li><li><p>When all cards have been placed correctly, a new box will appear on the left side of the window. Write additional information about the task here (e.g. All correct!…)</p></li></ul><h3>How does the Drag and Drop element work?</h3><p><img src="statamic://asset::files::docs/2025/03/DragandDropWastedoing.gif"></p><h3>How is the element edited?</h3><p><img src="statamic://asset::files::docs/2025/03/DragandDropEditWasteedit2.gif"></p><p><img src="statamic://asset::files::docs/2021/08/Drag_and_Drop_Edit_FI_1_new.gif"></p><h3>An example of its use.</h3><p><img src="statamic://asset::files::docs/2021/05/dragdrop-1.png"></p>

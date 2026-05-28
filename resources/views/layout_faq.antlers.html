@@ -34,7 +34,7 @@
 
                 {{# Center: FAQ search #}}
                 <div
-                    x-data="faqSearch()"
+                    x-data="faqSearch('{{ site:handle }}')"
                     class="relative min-w-0 px-16"
                     @click.outside="results = []"
                 >
@@ -48,7 +48,7 @@
                                 @keydown.arrow-up.prevent="navigate(-1)"
                                 @keydown.enter.prevent="go()"
                                 type="text"
-                                placeholder="Hae kysymyksistä..."
+                                placeholder="{{ trans:strings.faq_search_placeholder }}"
                                 class="min-w-0 w-full rounded-xl border border-neutral-200 bg-neutral-50 py-2.5 pl-4 pr-10 text-base text-neutral-700 placeholder-neutral-400 outline-none transition-colors focus:border-neutral-300 focus:bg-white"
                                 autocomplete="off"
                             >
@@ -89,7 +89,7 @@
                                     <a
                                         :href="'#faq-' + result.id"
                                         @mouseenter="active = i"
-                                        @click="query = ''; results = []"
+                                        @click.prevent="select(result.id)"
                                         class="flex items-center gap-3 border-l-2 px-4 py-3 transition-colors"
                                         :class="active === i ? 'border-orange-500 bg-orange-50' : 'border-transparent hover:bg-neutral-50'"
                                     >
@@ -102,30 +102,44 @@
                                 </template>
                             </div>
                             <div x-show="results.length === 0 && query.length > 0 && !loading" class="py-10 text-center text-sm text-neutral-400">
-                                Ei tuloksia haulle &ldquo;<span x-text="query"></span>&rdquo;
+                                {{ trans:strings.faq_no_results }} &ldquo;<span x-text="query"></span>&rdquo;
                             </div>
                             <div x-show="loading" class="py-8 text-center text-sm text-neutral-400">
-                                Ladataan...
+                                {{ trans:strings.faq_loading }}
                             </div>
                             <div x-show="results.length > 0" class="border-t border-neutral-100 px-4 py-2 text-xs text-neutral-400">
-                                <span class="font-mono">↑↓</span> navigoi &nbsp;
-                                <span class="font-mono">↵</span> avaa &nbsp;
-                                <span class="font-mono">Esc</span> sulje
+                                <span class="font-mono">↑↓</span> {{ trans:strings.faq_nav_hint }} &nbsp;
+                                <span class="font-mono">↵</span> {{ trans:strings.faq_open_hint }} &nbsp;
+                                <span class="font-mono">Esc</span> {{ trans:strings.faq_close_hint }}
                             </div>
                         </div>
                     </div>
                 </div>
 
-                {{# Right: Builder button #}}
+                {{# Right: language switcher #}}
                 <div class="flex h-full items-center justify-end">
-                    <a
-                        href="https://builder.apprix.fi/b/"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        class="inline-flex items-center rounded-lg border border-neutral-200 bg-white px-5 py-2.5 text-sm font-semibold text-neutral-700 shadow-sm transition hover:border-neutral-300 hover:bg-neutral-50 hover:text-neutral-900"
-                    >
-                        Builder
-                    </a>
+                    <div class="hidden sm:flex items-center gap-0.5 rounded-xl border border-neutral-200 bg-neutral-50 p-1">
+                        <a
+                            href="/faq"
+                            class="inline-flex items-center gap-1.5 rounded-lg px-2.5 py-1.5 text-xs font-semibold transition-colors {{ if site:handle == 'default' }}bg-white text-neutral-900 shadow-sm ring-1 ring-neutral-200{{ else }}text-neutral-500 hover:bg-neutral-100 hover:text-neutral-800{{ /if }}"
+                            {{ if site:handle == 'default' }}aria-current="true"{{ /if }}
+                        >
+                            <span class="inline-flex h-[15px] w-[22px] shrink-0 overflow-hidden rounded-[4px] ring-1 ring-black/10" aria-hidden="true">
+                                {{ svg:fi attr:class="h-full w-full" }}
+                            </span>
+                            <span>FI</span>
+                        </a>
+                        <a
+                            href="/en/faq"
+                            class="inline-flex items-center gap-1.5 rounded-lg px-2.5 py-1.5 text-xs font-semibold transition-colors {{ if site:handle == 'en' }}bg-white text-neutral-900 shadow-sm ring-1 ring-neutral-200{{ else }}text-neutral-500 hover:bg-neutral-100 hover:text-neutral-800{{ /if }}"
+                            {{ if site:handle == 'en' }}aria-current="true"{{ /if }}
+                        >
+                            <span class="inline-flex h-[15px] w-[22px] shrink-0 overflow-hidden rounded-[4px] ring-1 ring-black/10" aria-hidden="true">
+                                {{ svg:gb attr:class="h-full w-full" }}
+                            </span>
+                            <span>EN</span>
+                        </a>
+                    </div>
                 </div>
 
             </div>
@@ -147,13 +161,14 @@
         </footer>
 
         <script>
-        function faqSearch() {
+        function faqSearch(siteHandle) {
             return {
-                query:   '',
-                results: [],
-                active:  0,
-                cache:   null,
-                loading: false,
+                query:      '',
+                results:    [],
+                active:     0,
+                cache:      null,
+                loading:    false,
+                siteHandle: siteHandle || 'default',
 
                 init() {
                     // Preload index in the background
@@ -191,7 +206,10 @@
                     if (this.cache) return;
                     this.loading = true;
                     try {
-                        const r    = await fetch('/faq/search.json');
+                        const url  = this.siteHandle !== 'default'
+                            ? `/faq/search.json?site=${this.siteHandle}`
+                            : '/faq/search.json';
+                        const r    = await fetch(url);
                         this.cache = await r.json();
                     } catch (err) {
                         console.error('FAQ search index failed to load', err);
@@ -235,11 +253,16 @@
                     });
                 },
 
+                select(id) {
+                    this.query   = '';
+                    this.results = [];
+                    history.pushState(null, '', '#faq-' + id);
+                    window.dispatchEvent(new CustomEvent('faq:open', { detail: { id } }));
+                },
+
                 go() {
                     if (this.results[this.active]) {
-                        window.location.hash = 'faq-' + this.results[this.active].id;
-                        this.query   = '';
-                        this.results = [];
+                        this.select(this.results[this.active].id);
                     }
                 },
 
@@ -252,6 +275,9 @@
             };
         }
         </script>
+
+        {{# ─── HELPDESK MODAL ─── #}}
+        {{ partial:partials/_helpdesk_form }}
 
     </body>
 </html>

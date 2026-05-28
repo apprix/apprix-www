@@ -1,32 +1,7 @@
 ---
-id: 9030e319-e91a-4fd9-b48d-95fd7e65bb25
+id: 657e9876-b1cb-445b-b124-5f37c675d070
+origin: 9030e319-e91a-4fd9-b48d-95fd7e65bb25
 blueprint: doc
 title: '7.26 Dialogue'
 ---
-The <b>Dialogue</b> element allows you to create different kinds of real-life situations. For example, use a photo of two people talking or a person on the phone, and create a dialogue by adding speech bubbles.
-
-This works best when combined with a task afterwards, for example a dialogue with a scenario (e.g. a problematic situation, a sales conversation), and a <b>Multichoice</b> element afterwards to ask the trainee what should be said or done next.
-
-You can also use the element to place text boxes more freely on top of a background image.
-<h4><b>Editing Instructions</b></h4>
-You can start by adding the background image of the Dialogue element. Click then the <b>Element settings</b> option from the <b>gear</b> icon at the top in<b> Edit Element Contents</b> view. Add all needed dialogues and drag them in the desired order.
-
-Now edit one speech bubble at a time:
-<ol>
- <li>Select the colour.</li>
- <li>Choose the tail position.</li>
- <li>Edit the dialogue content (if haven't already from the <b>gear</b> icon).</li>
- <li>Choose the shape of the dialogue.</li>
- <li>Choose the shape of the tail.</li>
-</ol>
-From the <b>tool </b>icon at the top left, you can set the<b> Dialogue</b> <b>settings</b>. You can choose between showing dialogues one by one or all at once.
-
-<img class="wp-image-6840 aligncenter" src="/files/docs/2026/03/Dialogue-settings.png" alt="" width="585" height="253" />
-
-<h6 class="p1"><b>Dialogue example.</b></h6>
-
-<h5 class="p1">How to edit a speech bubble.</h5>
-
-<figure class="doc-image"><img src="/files/docs/2026/03/First-Dialogue-example.gif" alt="" loading="lazy"></figure>
-
-<figure class="doc-image"><img src="/files/docs/2026/03/First-Dialogue.gif" alt="" loading="lazy"></figure>
+<p>In the <strong>Dialogue</strong> element, you can create various real-life conversation situations. For example, use an image of two people talking on the phone to each other and create a dialogue between them by adding speech bubbles. The shape and color of the speech bubbles can be changed in the bubble settings.</p><p>The element works best when combined with a task that follows the conversation: for example, a conversation in which a problematic situation or a sales situation occurs, and afterwards a multiple-choice question is asked about how one of the characters should respond or react.</p><p>The element can also be used if you want to position text fields more freely over a background image than in info elements.</p><h3>Element editing instructions</h3><p>Start by adding a background image to the element. Then click <strong>Element Settings</strong> from the gear menu at the top of the element's edit view. Add the required number of dialogue fields/speech bubbles. Add dialogue to the speech bubbles and put them in the correct order by dragging.</p><p>Next, edit one speech bubble at a time:</p><ol start="1"><li><p>Select a color.</p></li><li><p>Select the pointer position.</p></li><li><p>Edit the bubble's text content (unless you have already done so from the element's <strong>gear icon</strong> settings).</p></li><li><p>Edit the bubble shape.</p></li><li><p>Select the pointer shape.</p></li></ol><p>You can choose whether you want to show all dialogue bubbles at once or one at a time in a conversational manner by clicking the tool icon in the upper left corner of the element in the <strong>Dialogue settings</strong> popup.</p><p><img src="statamic://asset::files::docs/2026/03/Dialogue-settings-1.png"></p><h3><strong> Element in published mode</strong></h3><p><img src="statamic://asset::files::docs/2026/03/First-Dialogue-example-1.gif"></p><h3>How is a speech bubble edited?</h3><p><img src="statamic://asset::files::docs/2026/03/First-Dialogue-1.gif"></p>

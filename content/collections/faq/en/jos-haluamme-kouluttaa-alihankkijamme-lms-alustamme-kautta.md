@@ -1,0 +1,6 @@
+---
+id: 2492b1f5-979c-4781-89f2-c328935a4a2e
+origin: 3408f79f-43ad-4d51-90fd-7e734d3dbbaf
+title: 'If we want to train our subcontractors through our LMS platform and collect the details of those who have completed the training for the subcontractor later, can we deliver the accumulated training data to them as an Excel file?'
+answer: "<p>An Apprix customer has a subcontractor who wants to train their employees using courses created with the customer''s Builder. The customer asks whether they can provide training statistics to the subcontractor as an Excel file.</p><p>In order for data on completions to be collected in statistics, the customer solution implemented in Builder for the trainings must be able to communicate with the LMS platform. The most common way to communicate with an LMS platform is through a SCORM-compliant implementation. Customer solutions implemented in Builder do not by default save personal data provided by the LMS to the statistics. To implement this, please contact your Apprix account manager.</p><p>Courses created on the Builder platform can be used on an LMS platform to train subcontractors, regardless of whose LMS platform is used. Data accumulated from the courses can later be exported from Builder to an Excel file and you can deliver the file to whoever needs it.</p>"
+---

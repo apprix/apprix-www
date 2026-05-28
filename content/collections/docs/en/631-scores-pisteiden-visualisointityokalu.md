@@ -1,30 +1,35 @@
 ---
-id: 8d358b72-6fb9-4289-a7ce-a4c659483062
+id: 9f5391fc-09be-45de-9b8c-0ce0e430a851
+origin: 8d358b72-6fb9-4289-a7ce-a4c659483062
 blueprint: doc
-title: '6.3.1 Scores visualization tool'
+title: '6.3.1 Scores – Points Visualisation Tool'
 ---
-The purpose of the <strong>Scores</strong> tool is to provide a combined place where you can easily see the level of competence of the course participants either as an overview, based on task types, user data, or time period.
+<p>The purpose of the <strong>Scores</strong> tool is to provide a combined place where you can easily see the knowledge level of course learners either as a whole, by task type, by user data, or by time period.</p>
 
-You will find the <strong>Scores</strong> tool by pressing first the module <strong>Stats</strong> button and then from the Apprix <strong>Stats</strong> window by choosing the <strong>Scores</strong> button at the right side of the window.
-<h4><strong>Scores ”Filters”</strong></h4>
-At the top of the <strong>Scores</strong> window, you can find the <strong>Filters</strong> tool.
+<p>You can find the <strong>Scores</strong> tool by first clicking the module's <strong>Stats</strong> button and then, from the Apprix <strong>Stats</strong> window, selecting <strong>Scores</strong> on the right side of the window.</p>
+<h3>Scores – Filters tool</h3>
+<p>At the top of the <strong>Scores</strong> window you will find the <strong>Filters</strong> tool.</p>
 
-With this tool you can filter the data using the following criteria:
+<p>With this tool you can filter data by the following criteria:</p>
 <ul>
- <li><strong>Date select</strong> – filters the data of the completed courses based on the course completion date, pre-defined time periods, or your own selection.  <strong>Default value: </strong>From the Date of the first-course completion – To this date. The filtered data is visible if at least one-course completion is found.</li>
- <li><strong>Element type</strong> – filters the data of the completed courses based on task element selection. <strong>Default value</strong>: All. The filtered data is visible if at least one-course completion is found.</li>
- <li><strong>Department</strong> – Refers to the “department” user information collected from the <strong>Login </strong>element. Visible if such a value is found in at least one of the trainee’s data.</li>
- <li><strong>Location – </strong>Refers to the ” location” user information collected from the <strong>Login </strong>element. Visible if such a value is found in at least one of the trainee’s data.</li>
- <li><strong>Manager</strong> <strong>– </strong>Refers to the “manager” user information collected from the <strong>Login </strong>element<strong>.</strong> Visible if such a value is found in at least one of the trainee’s data.</li>
- <li><strong>Search users – </strong>In this field, you can search for the data of all those who have completed the course. The user data collected may vary for different customers. User information can be, for example, name, e-mail, department, workplace, manager, Tax number, company ID, or user ID.</li>
- <li><strong>Clear filters </strong>– This button resets all selected filters to their default values.</li>
+ <li><strong>Date select</strong> – filters completion data by completion date; predefined time periods are available or you can define your own period. <strong>Default value</strong>: Date of first completion – today's date. The filter is visible if at least one completion is found.</li>
+ <li><strong>Element type</strong> – filters completion data based on the selected task element. <strong>Default value</strong>: All. Filtered data is visible if at least one completion is found.</li>
+ <li><strong>Department</strong> – Refers to the general "department" user data collected from the <strong>Login</strong> element. Visible if such a value is found for at least one course learner.</li>
+ <li><strong>Location</strong> – Refers to the general workplace user data collected from the <strong>Login</strong> element. Visible if such a value is found for at least one course learner.</li>
+ <li><strong>Manager</strong> – Refers to the general manager user data collected from the <strong>Login</strong> element. Visible if such a value is found for at least one course learner.</li>
+ <li><strong>Search users</strong> – In this field you can search the completion data of all learners who have completed the training. The user data collected may vary between different customers. User data can include e.g. name, email, department, workplace, manager, work cards, tax number, company business ID, username. This is a logical "<strong>AND</strong>" search, meaning the more words are chained together, the more precise the search result.</li>
+ <li><strong>Clear filters</strong> – This button resets all selected filters to their default values.</li>
 </ul>
-<strong>Note! </strong>All filters show completed tasks only.
-<h3><strong>Module general information</strong></h3>
-The module’s general information shows the number of participants who completed the course and the average score they received out of the maximum number (in percentage). <strong>Note!</strong> The data displayed is affected by the selected filters.
+<p><strong>Note!</strong> All filters show only completed completions.</p>
+<h3>General module information</h3>
+<p>This general information shows the number of participants who have completed the course and the average of their scores as a percentage of the maximum.</p>
 
-<h6 class="p1"><b>Click on the images to enlarge them.</b></h6>
+<p><strong>Note!</strong> These figures are affected by the selected filters.</p>
 
-<h6><em>Scores tool's view</em></h6>
+<h3>Scores tool</h3>
 
-<figure class="doc-image"><img src="/files/docs/2023/03/21-nuovo.png" alt="" loading="lazy"></figure>
+<p></p>
+
+<p><img src="/files/docs/2023/03/21-nuovo-1.png"></p>
+
+<p></p>

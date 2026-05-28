@@ -1,38 +1,30 @@
 ---
-id: fb7d988e-090b-43c9-a2fe-20769bad9e01
+id: 4ab23325-020a-4847-a8cd-3934eba2c518
+origin: fb7d988e-090b-43c9-a2fe-20769bad9e01
 blueprint: doc
 title: '8.8 Extended Reports'
 ---
-The users’ access settings assigned in the <b>Administrate</b> tool located in the sidebar in <b>Menu</b> view determine what kind of reports the user has access to. Builder users with different levels of access may have access to different module’s (training courses) reports. Additionally, reports can be customized for specific purposes.
+<p>In the Administrate menu's User's access settings, you can define what types of reports a user has access to. Users with different levels of access rights also have different levels of access to course module reports. In addition, reports can be tailored for specific purposes.</p><p>View permissions can be granted per user, for example to a manager, so they can monitor their subordinates' results. Reports can also be extended to third parties and customised so that they can only view a specific part of the report. The Builder administrator must then create an account for the party via the Administrate menu, if the external party does not yet have a user account, and activate the <b>Extended Report</b> feature by selecting the <b>On</b> option.</p><ul>
+ <li>From the Settings menu's <b>Extended Report Settings</b> popup, the administrator can choose which companies, modules, report columns (e.g. date/period, participant result, participant information) and completion date range a specific user can view. Using the <b>Modify list</b> function at the top of the window, the administrator can add and remove companies from the <b>Company</b> list.</li>
+ <li>Please note that all changes made are saved automatically.</li>
+ <li>Once the administrator has configured the <b>Extended report</b> options appropriately, the user can activate the Report feature by clicking the <b>Report</b> function on the left side of the view.</li>
+ <li>The user can then use the <b>Filter</b> function to filter the report's completion data (e.g. participants' companies, course modules, date/period selection). In the <b>Report</b> view, the user can also search for specific information and select which fields are displayed (<b>Column visibility</b> function) or download the data in CSV or Excel format.</li>
+</ul><p>Please note that only data from <strong>published modules</strong> is available in reports.</p><h3>Access rights to Extended Reports are granted in the "<strong>Administrate</strong> → <strong>Users</strong>" tool.</h3>
 
-Access for viewing can be granted separately, e.g. for a manager to view his/her employees’ progress. Reports may also be extended to third parties and customized in a way that they can only view a separately defined content.
-<ul>
- <li>A user with Builder administrator rights in your organization should first create the user in the <b>Administrate</b> tool, if not already done before, and activate the<b> Extended Report </b>by selecting the <b>On</b> option.</li>
- <li>From the <b>Settings...</b> option (see the <b>Extended Report Settings</b> pop-up window below) the administrator can choose which companies, modules, columns (e.g. date, score, user info) and date range the user can view.</li>
- <li>From the <b>Modify list...</b> option at the top of the window, the Administrator can add/remove companies from the <b>COMPANY</b> list.</li>
- <li>Please note that all updates are automatically saved!</li>
- <li>
-<p>Once the</p>
-<p><b>Extended report</b></p>
-<p>parameters have been activated by the Administrator, the user can activate the <b>Report</b> tool by clicking the <b>Report</b> option on the left side of the window.</p>
-</li>
- <li>Now, the user can select the <b>Filter</b> option (on the top left side of the window), which allows to choose which data will be displayed in the report (e.g. companies, modules, data range).</li>
- <li>In the Report view, the user can also search data, choose which fields to view (<b>Column visibility</b> option) or export the data in CSV/Excel formats.</li>
-</ul>
-<b>Note! </b>Only <u>published modules data</u> is available in the report.
+<p></p>
 
-<h6>Access rights to the Extended Report are granted in Administrate → Users tool.</h6>
+<p><img src="/files/docs/2025/02/Extended-report-1-settings-1.png"></p>
 
-<h6>The Reports button will appear once the Access Rights for Extended Reports are granted.</h6>
+<p></p>
 
-<h6><strong>In Extended Report Settings, viewing rights can be granted and customised per user via the Administrate menu, for example, to supervisors and third parties.</strong></h6>
+<p><img src="/files/docs/2025/02/Reports-button-2-1.png"></p>
 
-<h6>The user can use the Filter function to filter the report performance data. In the Reports view, the user can search for specific data, select which fields are displayed and download the data in CSV or Excel file format.</h6>
+<p></p>
 
-<figure class="doc-image"><img src="/files/docs/2025/02/Extended-report-1-settings.png" alt="" loading="lazy"></figure>
+<p><img src="/files/docs/2025/02/Extended-report-settings-3-1.png"></p>
 
-<figure class="doc-image"><img src="/files/docs/2025/02/Reports-button-2.png" alt="" loading="lazy"></figure>
+<p></p>
 
-<figure class="doc-image"><img src="/files/docs/2025/02/Extended-report-settings-3.png" alt="" loading="lazy"></figure>
+<p><img src="/files/docs/2025/02/Filters-4-1.png"></p>
 
-<figure class="doc-image"><img src="/files/docs/2025/02/Filters-4.png" alt="" loading="lazy"></figure>
+<p></p>

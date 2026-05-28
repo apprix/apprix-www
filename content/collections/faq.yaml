@@ -1,9 +1,12 @@
 title: FAQ
 sites:
   - default
+  - en
 template: false
 layout: false
 route: false
 revisions: false
 sort_field: order
 sort_dir: asc
+taxonomies:
+  - faq_categories

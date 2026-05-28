@@ -1,0 +1,6 @@
+---
+id: d42e660c-3b6b-4bb4-bf34-ab2d3245194c
+origin: 9ed713e9-4957-4bad-8218-1d4f9ece84f8
+title: 'How can a submodule structure (main module + submodules) be completed all the way through?'
+answer: '<p>When the participant has completed all submodules, they must click the forward arrow on the right side of the view in the Submenu Buttons element to reach the course''s last Finish element. At this point their completion updates in the Big Data view in statistics (the entry changes from zero to one when the completion is done).</p><p>NOTE! If the participant logs out or closes their browser before reaching the Finish element, their completion will not be marked as completed/passed in the statistics.</p><p>Note! If there is a checkmark at the top of the submodule bar, it means the submodule has been successfully completed.</p><p>Submenu Buttons element. Both submodules have been completed. The user can now advance in the main module (the Move forward button becomes visible) and finish the training.</p> <img src="/files/docs/2020/07/main.png" alt="" width="325" style="max-width:100%;height:auto;display:block;margin:0.75rem 0;"> <img src="/files/docs/2020/07/table-1000x504.png" alt="" width="395" style="max-width:100%;height:auto;display:block;margin:0.75rem 0;">'
+---

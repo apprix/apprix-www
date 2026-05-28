@@ -1,20 +1,7 @@
 ---
-id: 738651eb-3e53-4b91-8a9f-9c0b055f2d7b
+id: bc514c72-f101-4f49-b0a6-8dfde0d6ccbe
+origin: 738651eb-3e53-4b91-8a9f-9c0b055f2d7b
 blueprint: doc
-title: '5.3.1 Adding images to modules'
+title: '5.3.1 Adding Images to Modules'
 ---
-You can add or remove images that you need in the module by choosing the <strong>Open Image Library...</strong> option from the gear icon in the <strong>Edit Module</strong> window.
-
-Once you click the ”<strong>Open Image Library..</strong>.” button the <strong>Image Library</strong> window opens.
-
-<strong> </strong>If you need to upload an image from your files, first decide if you want to place it accessible to everyone in the <strong>Image Library</strong>.
-
-Click <strong>Upload new image</strong>. Choose the image from your files and then press <strong>Open</strong>. The image is now available in the <strong>Image Library</strong>. If needed, you can insert the image into the desired subdirectory by moving the image with the mouse.
-
-<strong>Note!</strong> The parameter "<em>Show uploaded file in library</em>" cannot be unticked when the <strong>Image Library</strong> is opened from the module's gear icon.
-
-<h6 class="p1"><b>Click on the images to enlarge them.</b></h6>
-
-<figure class="doc-image"><img src="/files/docs/2023/04/Image_library2.png" alt="" loading="lazy"></figure>
-
-<figure class="doc-image"><img src="/files/docs/2023/04/Image_library1.png" alt="" loading="lazy"></figure>
+<p>You can add or remove images you need in the module by selecting <strong>Open Image Library...</strong> from the gear icon in the Edit Module window.</p><p>When you click the <strong>"Open Image Library..."</strong> button, the <strong>Image Library</strong> window opens.</p><p>If you need to upload an image from your files, first decide whether you want to make it available to everyone in the image library.</p><p>If so, click <strong>Upload new image</strong>. Select the image from your files and then click Open. The image is now available in the image library. If needed, you can add the image to a desired subfolder by dragging it with the mouse.</p><p><strong>Note</strong>! The "<em>Show uploaded file in library</em>" checkbox cannot be deactivated when the Image Library is opened from the module's gear icon.</p><h3>How do you add images to modules using the Image Library?</h3><p><img src="statamic://asset::files::docs/2023/04/Image_library1-1.png"></p>

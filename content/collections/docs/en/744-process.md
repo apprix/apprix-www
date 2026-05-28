@@ -1,46 +1,7 @@
 ---
-id: 1d759c00-18c7-47fc-b1d4-2ea837e4fae6
+id: 8d657be1-8929-4df7-a6d4-53dafb3c67ac
+origin: 1d759c00-18c7-47fc-b1d4-2ea837e4fae6
 blueprint: doc
 title: '7.44 Process'
 ---
-The <strong>Process</strong> element shows the learner the steps to complete a specific task or process.
-
-In the beginning, it is explained how the Process element works. In practice, they have to read the instructions attached to the background image of each step. Once the learner has read the instructions and clicked on the hotspot or icon, they will move on to the next phase of the process.
-
-In each slide, the course participant can move forward by clicking on the hotspot or back to the previous slide by clicking the arrow button on the page's left side.
-
-Once the process is completed, there are instructions on how to continue the course.
-
-<strong>Element editing instructions</strong>
-<ul>
- <li>Plan the steps that you want to show to the learner.</li>
- <li>Open the element in <em>Edit mode.</em></li>
- <li>Type Introduction and Process Summary in the Introduction box to display the introduction at the beginning of this process. You can also leave the box blank - in this case, the text box will not be visible to the person running the course.</li>
- <li>Each background image, i.e. a step in the process with an explanation, appears in <em>Edit mode</em> at the bottom of the element.</li>
- <li>Click the <em>Element settings</em> option in the orange wheel at the top of the element's <em>Edit view</em>. The <em>Element settings</em> window opens.</li>
- <li>Add the necessary items, i.e. steps in the process.</li>
- <li>Click on the slide below one by one. A new window will open each time.</li>
- <li>You can add a background image by clicking on the Change Image icon at the top right corner of the image. The image will also appear on the slide at the bottom of the page.</li>
- <li>Add the text of the step in the process in each text box.</li>
- <li>Select each text box's position, shape, size and colour using the text box tools.</li>
- <li>Adjust the position, shape, size and colour of each hotspot.</li>
- <li>Remember that you can stretch the hotspot size so that the icon goes inside the box. The icon will remain in the same position relative to the hotspot where it was placed. The submenu hotspots element works in the same way.</li>
- <li>As you move the mouse, a brush appears to the left of each hotspot.</li>
- <li>Click on the brush. A bar with icons and colours to apply to each hotspot will appear on the left side of the window. Note that the droplet-shaped icons move while the round icons are stationary.</li>
- <li>Test the options and choose the most appropriate for you.</li>
- <li>When you reach the last background image, a summary text box will appear on the right. In summary, you can summarise the process you have just explained to the learner and give instructions on continuing the course.</li>
- <li>Remember that leaving the summary text box blank will not appear on the last background image at the end of the process.</li>
- <li>You can hide the background image bar by clicking the arrow in the middle.</li>
-</ul>
-
-<h6 class="p1">Example of using simple gif animation in a Process element</h6>
-
-<h6 class="p1">Process element settings in edit mode</h6>
-
-<h6 class="p1">Process element in edit mode</h6>
-
-<figure class="doc-image"><img src="/files/docs/2024/09/Process-animation-1.gif" alt="" loading="lazy"></figure>
-
-<figure class="doc-image"><img src="/files/docs/2023/07/Process-video-1-1-1.gif" alt="" loading="lazy"></figure>
-
-<figure class="doc-image"><img src="/files/docs/2024/09/Process-gif-animation-1.jpg" alt="" loading="lazy"></figure>
+<p>The <strong>Process element</strong> shows the steps needed to complete a specific task or process.</p><p>First, it is explained how the element works. In practice, the instructions attached to each step's background image (the process step) are read. When the instructions have been read and the hotspot is clicked, the process moves to the next step.</p><p>From each background image you can move forward by clicking the hotspot. You can return to the previous background image by clicking the arrow button on the left edge of the page.</p><p>When the element has been completed, instructions on how to continue the course are shown.</p><h3>Element editing instructions</h3><ul><li><p>Plan the steps of the process.</p></li><li><p>Open the element in edit mode.</p></li><li><p>Write an introduction in the <em>Introduction</em> box if you want to show an introduction at the start of this process. You can also leave the text box empty — in that case the text box will not be shown.</p></li><li><p>Write the process summary.</p></li><li><p>Each background image is added by clicking the <em>Element settings</em> option from the orange gear menu in the upper part of the element's edit view. The <em>Element settings</em> window opens.</p></li><li><p>Add the required empty background images, i.e. process steps, by clicking the "<em>Add item</em>" button.</p></li><li><p>Each empty background image, i.e. process step, appears at the bottom of the element in <em>Edit</em> mode.</p></li><li><p>Clicking on the background images below opens a new window.</p></li><li><p>Add a new background image by clicking the <em>Change image</em> icon in the upper right corner of the background image. Note that the image now also appears in the background image at the bottom of the page.</p></li><li><p>Add the text for each process step in the respective text boxes.</p></li><li><p>Now select the position, shape, size, and colour of each text box using the text box tools.</p></li><li><p>Adjust the position, shape, size, and colour of each hotspot point.</p></li><li><p>Remember that you can stretch the size of the hotspot so that the icon goes inside the box. The icon stays in the same position relative to the hotspot where you have placed it. The Submenu Hotspot element works the same way.</p></li><li><p>When you move the mouse to the left side of each hotspot, a brush appears.</p></li><li><p>Click the brush. A bar with icons and colours you can use for each hotspot opens on the left side of the window. Note that drop-shaped icons move, while round icons are stationary.</p></li><li><p>Try the options and select the one that feels most suitable for you.</p></li><li><p>When you reach the last background image, the summary text box appears on the right. In the summary you can recap the process just explained and provide instructions for continuing the course.</p></li><li><p>Remember that if you leave the summary text field without text, it will not appear at the end of the process on the last background image.</p></li><li><p>Note that you can hide the bar containing the background images by clicking the arrow that appears in the centre of the bar.</p></li></ul><p></p><h3>Example of using a simple GIF animation in the Process element</h3><p><img src="statamic://asset::files::docs/2024/09/Process-animation.gif"></p><h3>Process element settings in edit mode</h3><p><img src="statamic://asset::files::docs/2023/07/Process-video-1-.gif"></p><h3>Process element in edit mode</h3><p><img src="statamic://asset::files::docs/2024/09/Process-gif-animation.jpg"></p>

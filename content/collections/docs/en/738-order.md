@@ -1,47 +1,7 @@
 ---
-id: 0bafb961-1d04-499b-ae00-593bbf877df5
+id: 14a1f7c6-d9e8-48c2-9713-7c985b24b4e2
+origin: 0bafb961-1d04-499b-ae00-593bbf877df5
 blueprint: doc
 title: '7.38 Order'
 ---
-This is an exercise element. In this element the trainee has to select the correct order of the listed steps by clicking on the text boxes at the left side of the element.
-
-An exercise example could be: 
-<p>What should you do in the event of a fire? </p>
-<p>In the event of a fire, the following steps should be taken to ensure the safety of all building occupants. </p>
-<p>Select the steps in the correct order.</p>
-For example in this case the order should be ”Save ”, ”Alert”, ”Estinguish”, “Limit”, “Call” and “Guide”.
-
-In case that the trainee chooses the wrong item an error message is shown.
-
-After the trainee has chosen correctly all the steps, the move forward button will appear at the right side of the window.
-<h4>Editing Instructions</h4>
-A pop-up window with some instructions is first displayed in the element. If needed, you can add here additional information about this task. In case that it is not needed, you can remove its content. In this case the pop-up window will not be displayed in Preview nor Published mode.
-
-Add, remove and edit the items by clicking the gear icon at the top and by choosing "<b>Element Settings</b>". 
-Once you add an item in the <b>Element settings</b> two boxes will appear in the element: one on the left side (see: ”1 task” button) and the text box at the right side (see: ”1 answer” – ”Here you can write an answer text”) of the element. 
-
-Name each task, e.g. ”Save ” on the left and on the right give an extended description of the same task. 
-Give instructions for the exercise in the upper left box. 
-<p>E.g.: <i>What should you do in the event of a fire? </i></p>
-<p><i>In the event of a fire, the following steps should be taken to ensure the safety of all building occupants. </i></p>
-<p><i>Select the steps in the correct order.</i></p>
-Choose option ”Shuffle items” ”YES”, if you wish that the items are shuffled.
-
-Edit, if needed the ”Wrong order message”.
-
-Add the background image by choosing the "Change image" option from the right-hand side toolbar.
-Add the Header title, if needed.
-
-<h6 class="p1"><b>Click on the images to enlarge them.</b></h6>
-
-<figure class="doc-image"><img src="/files/docs/2022/04/Order-element-2-1.gif" alt="" loading="lazy"></figure>
-
-<figure class="doc-image"><img src="/files/docs/2022/04/Order-image-eng-1-600x317.png" alt="" loading="lazy"></figure>
-
-<figure class="doc-image"><img src="/files/docs/2022/04/Order-image-eng-2-600x315.png" alt="" loading="lazy"></figure>
-
-<figure class="doc-image"><img src="/files/docs/2022/04/Order-image-eng-3.png" alt="" loading="lazy"></figure>
-
-<figure class="doc-image"><img src="/files/docs/2022/04/Order-image-eng-4-600x544.png" alt="" loading="lazy"></figure>
-
-<figure class="doc-image"><img src="/files/docs/2022/04/Order-image-fin-5-1-600x384.png" alt="" loading="lazy"></figure>
+<p>The <strong>Order</strong> element is a task element in which the learner must select the correct order of the listed steps by clicking the text boxes on the left side of the element.</p><p>The task could be, for example:</p><p><em>What must be done in the event of a fire?</em></p><p><em>In the event of a fire, the following steps must be carried out to ensure the safety of all building occupants.</em></p><p><em>Select the steps in the correct order.</em></p><p>For example, in this case the order should be "Rescue", "Warn", "Extinguish", "Contain", "Alert", and "Guide".</p><p>If the learner selects the wrong item, an error message is shown.</p><p>When the learner has selected all the steps correctly, the forward button appears on the right edge of the window.</p><h3>Element editing instructions</h3><p>The element shows a popup window with instructions. If needed, you can add additional information about the task here. If it is not needed, you can remove the content from the window. In that case, the popup window will not be shown to the learner.</p><p>Add, remove, and edit items by clicking the gear icon at the top and selecting "<strong>Element settings</strong>".</p><p>When you add a new item, two text boxes appear in the element: one on the left side of the element (see the "1 task" box) and one on the right side (see the "1 answer" - "Here you can write an answer text").</p><p>Name the item, for example "Rescue" in the left text box, and in the right text box provide a broader description of the same item.</p><p>Write the task instructions in the upper left corner.</p><p>For example: <em>What must be done in the event of a fire?</em></p><p><em>In the event of a fire, the following steps must be carried out to ensure the safety of all building occupants.</em></p><p><em>Select the steps in the correct order.</em></p><p>Select the "Shuffle items" option "YES" if you want the items to be shuffled.</p><p>Edit the "Wrong order" message if necessary.</p><p>Add a background image by clicking "Change image" from the right-side toolbar.</p><p>Add a title if needed.</p><p></p><h3>Element in published mode</h3><p><img src="statamic://asset::files::docs/2022/04/Order-element-2.gif"></p><p><img src="statamic://asset::files::docs/2022/04/Order-image-fin-1-600x348.png"></p><p><img src="statamic://asset::files::docs/2022/04/Order-image-fin-2-600x338.png"></p><p><img src="statamic://asset::files::docs/2022/04/Order-image-fin-3.png"></p><p><img src="statamic://asset::files::docs/2022/04/Order-image-fin-4-600x545.png"></p><p><img src="statamic://asset::files::docs/2022/04/Order-image-fin-5-600x384.png"></p>

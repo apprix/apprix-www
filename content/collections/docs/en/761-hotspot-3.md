@@ -1,39 +1,7 @@
 ---
-id: c684988f-a204-4d5e-b800-0e1845540016
+id: ef55a005-038b-4817-9e66-2ec2041d8553
+origin: c684988f-a204-4d5e-b800-0e1845540016
 blueprint: doc
 title: '7.6.1 Hotspot 3'
 ---
-The hotspot is one of the most versatile elements. This version, “HotSpot 3,” is similar to the Hotspot element, with a couple of new features added.
-
-Each hotspot opens a window containing text, image, video, a true/false option, or a combination of the options mentioned above. When all windows have been clicked, the ”Move forward” button appears on the right, and the trainee can move to the next element.
-
-You can find more information about the Hotspot element in Chapter: <strong>7.6 Hotspot</strong>
-<h4><strong>Editing Instructions </strong></h4>
-Start by adding a background image to the element. Then click <strong>Element Settings</strong> from the gear icon at the top of the element editing window. Add the required number of clickable items (hotspots).
-
-Next, edit one clickable hotspot at a time:
-<ol>
- <li>Choose a color</li>
- <li>Edit the title</li>
- <li>Edit the shape and position by dragging it to the right place.</li>
- <li>Edit its content according to <strong>6 HotSpot instructions</strong>.</li>
-</ol>
-Move the mouse to the left of the hotspot. You can choose its colour.
-
-Click the gear icon at the upper left corner of the element view.
-
-The <strong>Settings</strong> window opens. In this window, you can select the following options:
-<ul>
- <li>Visual options: Hotspot visible, Show checkmarks after clicking, hotspot title visible.</li>
- <li>Mandatory options: Select all / Select none</li>
-</ul>
-
-<h6 class="p1"><b>Click on the images to enlarge them.</b></h6>
-
-<h5 class="p1">Move the mouse to the left of the hotspot. You can choose its colour.</h5>
-
-<h5 class="p1">Settings window</h5>
-
-<figure class="doc-image"><img src="/files/docs/2022/08/HotSpot3-colour-1.gif" alt="" loading="lazy"></figure>
-
-<figure class="doc-image"><img src="/files/docs/2024/06/hotspot3-1.png" alt="" loading="lazy"></figure>
+<p><strong>Hotspot</strong> is one of the most versatile elements. This version, "<strong>Hotspot 3"</strong>, is similar to the <strong>Hotspot</strong> element, with a couple of new features added.</p><p>Each hotspot opens a window that can contain: text, an image, a video, a true/false task, or a combination of the above options. When all mandatory windows have been clicked, the <strong>Move forward</strong> button appears and the learner can proceed to the next element.</p><p>You can find more information about the Hotspot element in chapter: <strong>7.6 Hotspot</strong></p><h3>Element editing instructions</h3><p>Start by adding a background image to the element. Then click <strong>Element Settings</strong> from the gear menu in the upper part of the element's edit view. Add the required number of clickable fields (hotspots).</p><p>Next, edit one clickable field at a time:</p><ol start="1"><li><p>Select a colour</p></li><li><p>Edit the title</p></li><li><p>Edit the shape and position by dragging it to the correct location.</p></li><li><p>Edit its content following the <strong>7.6 HotSpot</strong> instructions.</p></li></ol><p>Click the gear icon in the upper left corner of the element view.</p><p>The Settings window opens. In this window you can select the following options:</p><ul><li><p>Visual options: Hotspot visible, Show checkmarks after click, hotspot title visible.</p></li><li><p>Mandatory options: Select all / Select none</p><p></p></li></ul><h3>Hover the mouse over the left side of the hotspot. You have the option to select the hotspot colour.</h3><p><img src="statamic://asset::files::docs/2022/08/HotSpot3-colour.gif"></p><h3>Settings window</h3><p><img src="statamic://asset::files::docs/2024/06/hotspot3.png"></p><h3>A hotspot item containing text and True/False options, from edit mode to preview mode.</h3><h3><img src="statamic://asset::files::docs/2024/08/Hotspot3-truefalse-opt2-1.gif">Remember that you are in preview mode when the red preview bar is visible at the bottom of the window!</h3><p></p>

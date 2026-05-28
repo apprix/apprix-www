@@ -2,52 +2,12 @@
 id: 54b810a4-db3c-4290-9d5a-a67ed5c7f928
 blueprint: doc
 title: '7.50 Comments'
+seo_noindex: false
+seo_nofollow: false
+seo_canonical_type: entry
+sitemap_change_frequency: weekly
+sitemap_priority: 0.5
+updated_by: 680e1400-32cd-4415-9b61-d630b47576db
+updated_at: 1779939606
 ---
-<strong>Comments</strong>-elementin avulla kurssin vetäjä voi pyytää kurssilaisilta avointa palautetta ja ideoita koulutuksen aikana käsitellyistä eri aiheista.
-
-Kurssilainen klikkaa valitun aiheen kynäkuvaketta ja kirjoittaa avautuvaan tekstikenttään mielipiteensä, ideansa tai palautteensa. Kun kurssilainen on kirjoittanut kommenttinsa tekstikenttään, kynäkuvake korvataan Done-kuvakkeella sen merkiksi, että hän on ilmaissut mielipiteensä kyseisestä väitteestä. Kaikkia väitteitä ei ole pakko kommentoida. Kun kurssilainen on valmiina, hän voi siirtyä seuraavaan elementtiin klikkaamalla sivun oikeassa reunassa olevaa eteenpäin-nuolta.
-<h4><strong>Elementin muokkausohjeet</strong></h4>
-<ul>
- <li>Avaa Comments -elementti muokkaustilassa.</li>
- <li>Jos haluat näyttää johdannon tämän tehtävän alussa, kirjoita johdanto ja tehtävän ohjeet <strong>Introduction</strong>-ruutuun.
-<ul>
- <li>Voit myös jättää Introduction -ruudun tyhjäksi. Tällöin ruutu ei näy kurssin suorittajalle.</li>
-</ul>
-</li>
- <li>Lisää taustakuva klikkaamalla ikkunan oikeassa reunassa olevaa <strong>Change Image</strong> -kuvaketta.</li>
- <li>Klikkaa <strong>Element Settings</strong> -vaihtoehtoa <strong>Edit Element Contents</strong> -näkymän yläreunan hammasrataskuvakkeesta.</li>
- <li>Lisää kaikki tarvittavat tekstiruudut ja vedä ne haluttuihin paikkoihin.</li>
- <li>Muokkaa seuraavaksi yksi tekstiruutu kerrallaan:
-<ul>
- <li>Valitse väri ja muoto.</li>
- <li>Valitse osoittimen asento ja muoto.</li>
- <li>Muokkaa tekstiruudun sisältö (ellet ole jo muokannut asetuksista elementin ratassymbolista).</li>
-</ul>
-</li>
-</ul>
-<ul>
- <li>Voit määrittää muita Comments -elementinasetuksia vasemmassa yläkulmassa olevasta työkalukuvakkeesta:
-<ul>
- <li><strong>Hide text box </strong>(only show pencil icon) - Piilota aiheiden tekstit, ja näytä ainoastaan pyöreät kynäikonit. <strong>Huom</strong>! Tällä asetuksella voit sijoittaa kynäkuvakkeita minkä tahansa taustakuvan, kuvituskuvan tai diaesityksen päälle ja pyytää kirjallista palautetta tietyistä osista.</li>
- <li><strong>Snap to grid</strong> - aiheiden liikuttaminen ja koon muuttaminen taustalla olevaa ruudukkoa vasten. Toiminto helpottaa aiheiden sommittelua keskenään.</li>
-</ul>
-</li>
-</ul>
-<strong>Huom!</strong>
-<ul>
- <li><strong>Rate comments</strong> -elementti ehdotetaan lisättäväksi Comments -elementin jälkeen, jotta muut kurssilaiset voivat lukea ja arvioida toistensa ideoita.</li>
- <li>Kurssilaiset voivat antaa mielipiteensä tietystä väitteestä useaan kertaan.</li>
- <li>Tekstikentän suurin sallittu merkkimäärä on 500 merkkiä.</li>
- <li>Moduuli voi sisältää yhden tai useamman <strong>Comments</strong>-elementin.</li>
-</ul>
-<strong>Miten kommentit palautuvat, ja missä tilanteissa ne eivät palaudu elementtiin takaisin?</strong>
-
-Kurssilaisen jättämiä kommentteja pystyy muokkaamaan elementissä ollessaan. Niitä ei kuitenkaan palauteta elementtiin palatessa, vaan kurssilainen jättää siinä tapauksessa uudet kommentit. Aikaisemmat kommentit näkyvät kuitenkin edelleen Rate Comments -elementissä. Statistiikoissa näytetään vain viimeisin kurssilaisen aiheeseen jättämä kommentti.
-
-<h6 class="p1">Miten kurssilainen antaa kommentteja?</h6>
-
-<figure class="doc-image"><img src="/files/docs/2025/03/Comment-1.gif" alt="" loading="lazy"></figure>
-
-<h6 class="p1">Miten tekstiruutu muokataan?</h6>
-
-<figure class="doc-image"><img src="/files/docs/2025/03/Com-task-box-1.gif" alt="" loading="lazy"></figure>
+<p><strong>Comments</strong>-elementin avulla kurssin vetäjä voi pyytää kurssilaisilta avointa palautetta ja ideoita koulutuksen aikana käsitellyistä eri aiheista.</p><p>Kurssilainen klikkaa valitun aiheen kynäkuvaketta ja kirjoittaa avautuvaan tekstikenttään mielipiteensä, ideansa tai palautteensa. Kun kurssilainen on kirjoittanut kommenttinsa tekstikenttään, kynäkuvake korvataan Done-kuvakkeella sen merkiksi, että hän on ilmaissut mielipiteensä kyseisestä väitteestä. Kaikkia väitteitä ei ole pakko kommentoida. Kun kurssilainen on valmiina, hän voi siirtyä seuraavaan elementtiin klikkaamalla sivun oikeassa reunassa olevaa eteenpäin-nuolta.</p><h3>Elementin muokkausohjeet</h3><ul><li><p>Avaa Comments -elementti muokkaustilassa.</p></li><li><p>Jos haluat näyttää johdannon tämän tehtävän alussa, kirjoita johdanto ja tehtävän ohjeet <strong>Introduction</strong>-ruutuun.<ul><li><p>Voit myös jättää Introduction -ruudun tyhjäksi. Tällöin ruutu ei näy kurssin suorittajalle.</p></li></ul></p></li><li><p>Lisää taustakuva klikkaamalla ikkunan oikeassa reunassa olevaa <strong>Change Image</strong> -kuvaketta.</p></li><li><p>Klikkaa <strong>Element Settings</strong> -vaihtoehtoa <strong>Edit Element Contents</strong> -näkymän yläreunan hammasrataskuvakkeesta.</p></li><li><p>Lisää kaikki tarvittavat tekstiruudut ja vedä ne haluttuihin paikkoihin.</p></li><li><p>Muokkaa seuraavaksi yksi tekstiruutu kerrallaan:<ul><li><p>Valitse väri ja muoto.</p></li><li><p>Valitse osoittimen asento ja muoto.</p></li><li><p>Muokkaa tekstiruudun sisältö (ellet ole jo muokannut asetuksista elementin ratassymbolista).</p></li></ul></p></li></ul><ul><li><p>Voit määrittää muita Comments -elementinasetuksia vasemmassa yläkulmassa olevasta työkalukuvakkeesta:<ul><li><p><strong>Hide text box </strong>(only show pencil icon) - Piilota aiheiden tekstit, ja näytä ainoastaan pyöreät kynäikonit. <strong>Huom</strong>! Tällä asetuksella voit sijoittaa kynäkuvakkeita minkä tahansa taustakuvan, kuvituskuvan tai diaesityksen päälle ja pyytää kirjallista palautetta tietyistä osista.</p></li><li><p><strong>Snap to grid</strong> - aiheiden liikuttaminen ja koon muuttaminen taustalla olevaa ruudukkoa vasten. Toiminto helpottaa aiheiden sommittelua keskenään.</p></li></ul></p></li></ul><p><strong>Huom!</strong></p><ul><li><p><strong>Rate comments</strong> -elementti ehdotetaan lisättäväksi Comments -elementin jälkeen, jotta muut kurssilaiset voivat lukea ja arvioida toistensa ideoita.</p></li><li><p>Kurssilaiset voivat antaa mielipiteensä tietystä väitteestä useaan kertaan.</p></li><li><p>Tekstikentän suurin sallittu merkkimäärä on 500 merkkiä.</p></li><li><p>Moduuli voi sisältää yhden tai useamman <strong>Comments</strong>-elementin.</p></li></ul><p><strong>Miten kommentit palautuvat, ja missä tilanteissa ne eivät palaudu elementtiin takaisin?</strong></p><p>Kurssilaisen jättämiä kommentteja pystyy muokkaamaan elementissä ollessaan. Niitä ei kuitenkaan palauteta elementtiin palatessa, vaan kurssilainen jättää siinä tapauksessa uudet kommentit. Aikaisemmat kommentit näkyvät kuitenkin edelleen Rate Comments -elementissä. Statistiikoissa näytetään vain viimeisin kurssilaisen aiheeseen jättämä kommentti.</p><p></p><h3>Miten kurssilainen antaa kommentteja?</h3><p><img src="statamic://asset::files::docs/2025/03/Comment-1.gif"></p><h3>Miten tekstiruutu muokataan?</h3><p><img src="statamic://asset::files::docs/2025/03/Com-task-box-1.gif"></p>

@@ -2,28 +2,12 @@
 id: b56ffe41-46a4-499f-92ef-ee36c0836f3b
 blueprint: doc
 title: '7.35 Switch'
+seo_noindex: false
+seo_nofollow: false
+seo_canonical_type: entry
+sitemap_change_frequency: weekly
+sitemap_priority: 0.5
+updated_by: 680e1400-32cd-4415-9b61-d630b47576db
+updated_at: 1779938515
 ---
-<strong>Switch</strong>-tehtäväelementissä suorittajan on vastattava kysymyksiin tai väittämiin valitsemalla klikkaamalla säätimen asteikolla yksi kolmesta käytettävissä olevista vaihtoehdoista, esimerkiksi: "Ei koskaan" - "Joskus" - "Aina". Kun  suorittaja on vastannut kaikkiin tehtävän kysymyksiin/väittämiin, hän klikkaa sivun oikeassa laidassa sijatsevaa eteenpäin-painiketta. Jokaiselle kysymykselle ilmestyy yksi kerrallaan vastaus, joka sisältää lisätietoa aiheesta. Suorittaja voi tarkistaa uudelleen kysymysten lisätietoja painamalla i-infoikonia.
-<h4>Elementin muokkausohjeet</h4>
-<ul>
- <li>Kirjoita johdantolaatikkoon tehtävänanto suorittajille eli miten tehtävä toimii ja mikä on sen tarkoitus. Jos jätät laatikon tyhjäksi, sitä ei näytetä kurssin suorittajalle.</li>
- <li>Lisää taustakuva klikkaamalla <strong>Change image</strong> -kuvaketta elementin oikeassa ylälaidassa.</li>
- <li>Klikkaa elementin editointinäkymän ylälaidassa sijaitsevasta ratasikonista <strong>Element Settings</strong> -vaihtoehtoa. <strong>Element Settings</strong> -ikkuna avautuu. Lisää kaikki haluamasi määrä säätimiä. Muokkaa tehtävän kysymykset/väittämät. Lisää säätimien yläpuolelle vastausvaihtoehdot, esim. "Ei koskaan" - "Joskus" - "Aina" ja aseta lopuksi oikeat vastausvaihtoehdot <strong>Element Settings</strong> -ikkunassa.</li>
- <li>Jokaisen säätimen yhteydessä olevan tekstin alapuolelle on myös mahdollista lisätä kuva.</li>
- <li>Kirjoita kunkin tekstikentän vieressä olevaan Info-kuvakkeeseen kaikki aiheeseen liittyvät lisätiedot. Tämä sisältö näkyy sen jälkeen, kun suorittaja on antanut vastauksensa ja klikannut eteenpäin-painiketta.</li>
- <li>Klikkaa oranssia työkaluikonia ikkunan vasemmassa yläkulmassa. Asetuspalkki, jonka avulla voit muuttaa teksti- ja vastausruutujen väriä, tulee näkyviin. Valitse ruuduille haluamasi väri.</li>
-</ul>
-
-<h6 class="p1">Klikkaa kuvia suurentaaksesi niitä.</h6>
-
-<figure class="doc-image"><img src="/files/docs/2021/08/Switch_FI-1.gif" alt="" loading="lazy"></figure>
-
-<h5>Elementin asetukset editointinäkymässä:</h5>
-
-<figure class="doc-image"><img src="/files/docs/2021/08/Switch_Edit_FI-1.gif" alt="" loading="lazy"></figure>
-
-<figure class="doc-image"><img src="/files/docs/2021/06/Switch1.png" alt="" loading="lazy"></figure>
-
-<figure class="doc-image"><img src="/files/docs/2021/06/Switch2.png" alt="" loading="lazy"></figure>
-
-<figure class="doc-image"><img src="/files/docs/2021/06/Switch3.png" alt="" loading="lazy"></figure>
+<p><strong>Switch</strong>-tehtäväelementissä suorittajan on vastattava kysymyksiin tai väittämiin valitsemalla klikkaamalla säätimen asteikolla yksi kolmesta käytettävissä olevista vaihtoehdoista, esimerkiksi: &quot;Ei koskaan&quot; - &quot;Joskus&quot; - &quot;Aina&quot;. Kun  suorittaja on vastannut kaikkiin tehtävän kysymyksiin/väittämiin, hän klikkaa sivun oikeassa laidassa sijatsevaa eteenpäin-painiketta. Jokaiselle kysymykselle ilmestyy yksi kerrallaan vastaus, joka sisältää lisätietoa aiheesta. Suorittaja voi tarkistaa uudelleen kysymysten lisätietoja painamalla i-infoikonia.</p><h3>Elementin muokkausohjeet</h3><ul><li><p>Kirjoita johdantolaatikkoon tehtävänanto suorittajille eli miten tehtävä toimii ja mikä on sen tarkoitus. Jos jätät laatikon tyhjäksi, sitä ei näytetä kurssin suorittajalle.</p></li><li><p>Lisää taustakuva klikkaamalla <strong>Change image</strong> -kuvaketta elementin oikeassa ylälaidassa.</p></li><li><p>Klikkaa elementin editointinäkymän ylälaidassa sijaitsevasta ratasikonista <strong>Element Settings</strong> -vaihtoehtoa. <strong>Element Settings</strong> -ikkuna avautuu. Lisää kaikki haluamasi määrä säätimiä. Muokkaa tehtävän kysymykset/väittämät. Lisää säätimien yläpuolelle vastausvaihtoehdot, esim. &quot;Ei koskaan&quot; - &quot;Joskus&quot; - &quot;Aina&quot; ja aseta lopuksi oikeat vastausvaihtoehdot <strong>Element Settings</strong> -ikkunassa.</p></li><li><p>Jokaisen säätimen yhteydessä olevan tekstin alapuolelle on myös mahdollista lisätä kuva.</p></li><li><p>Kirjoita kunkin tekstikentän vieressä olevaan Info-kuvakkeeseen kaikki aiheeseen liittyvät lisätiedot. Tämä sisältö näkyy sen jälkeen, kun suorittaja on antanut vastauksensa ja klikannut eteenpäin-painiketta.</p></li><li><p>Klikkaa oranssia työkaluikonia ikkunan vasemmassa yläkulmassa. Asetuspalkki, jonka avulla voit muuttaa teksti- ja vastausruutujen väriä, tulee näkyviin. Valitse ruuduille haluamasi väri.</p></li></ul><p></p><h3>Elementti julkaisutilassa ( Published mode )</h3><p><img src="statamic://asset::files::docs/2021/08/Switch_FI-1.gif"></p><h3>Elementin asetukset editointinäkymässä</h3><h3><img src="statamic://asset::files::docs/2021/08/Switch_Edit_FI-1.gif"></h3><h3>Switch elementin käyttöä</h3><p><img src="statamic://asset::files::docs/2021/06/Switch1.png"></p><p><img src="statamic://asset::files::docs/2021/06/Switch2.png"></p>

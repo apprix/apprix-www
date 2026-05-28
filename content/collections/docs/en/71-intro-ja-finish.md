@@ -1,31 +1,7 @@
 ---
-id: b85557e1-bca3-4946-ac3d-dea575e0887e
+id: 61153e2e-a566-4088-a0c6-c37d0753e076
+origin: b85557e1-bca3-4946-ac3d-dea575e0887e
 blueprint: doc
 title: '7.1 Intro and Finish'
 ---
-<p class="p1"><b>Intro</b> and <b>Finish</b> elements are added to a module automatically. These elements cannot be removed, as they provide the technical functions needed to start and finish the module. In a submodule structure, these elements are located in the beginning and end of the main module.</p>
-In the <b>Intro</b> element, write a brief welcome and an introduction that includes
-<ul class="ul1">
- <li class="li1">The aim of the module (Why should this module be completed and how does completing this module help the trainee in his/her daily work?</li>
- <li class="li1">The duration of the module (Approximately, how many minutes does it take to complete the module?)</li>
- <li>Are the trainees required to retake the module after a certain time period?</li>
- <li class="li1">Other general instructions, such as
-<ul class="ul1">
- <li class="li1">Information about the strucure of the module (e.g. "The course consists of infos and exercises that test your knowledge on module topics.")</li>
- <li class="li1">A mention of the final test or quiz testing the gained knowledge on given topics (if applicable).</li>
-</ul>
-</li>
-</ul>
-In the <b>Finish</b> element, you may thank or congratulate the trainee for completing the module and inform them on the possible following steps in the training process. You may also share relevant sources of information or contact information for further information on the topics discussed in the module.
-
-<h6 class="p1"><b>Click on the images to enlarge them.</b></h6>
-
-<h5 class="p1">Element settings in Edit Element Contents view:</h5>
-
-<h5 class="p1">Finish element</h5>
-
-<figure class="doc-image"><img src="/files/docs/2021/08/Intro_EN.gif" alt="" loading="lazy"></figure>
-
-<figure class="doc-image"><img src="/files/docs/2021/08/Intro_Edit_EN_.gif" alt="" loading="lazy"></figure>
-
-<figure class="doc-image"><img src="/files/docs/2021/08/Finish_EN.jpg" alt="" loading="lazy"></figure>
+<p>The <strong>Intro and Finish elements</strong> are added automatically to the beginning and end of a module. These elements cannot be deleted, as they perform the technical operations for starting and ending the module. In a submodule structure, they are located at the beginning and end of the main module.</p><p>In the <strong>Intro element</strong>, write a welcome message and introductory text that includes for example:</p><ul><li><p>The module's objective (Why should the module be completed and how will completing the module help the learner in their tasks?)</p></li><li><p>The module's duration (How many minutes should be estimated for completing the module?)</p></li><li><p>Does the module completion need to be renewed at certain intervals?</p></li><li><p>Other general instructions, such as<ul><li><p>Information about the module's structure (contains information and tasks)</p></li><li><p>A mention of a possible final test that tests knowledge gained in the module.</p></li></ul></p></li></ul><p>In the <strong>Finish element</strong> you can thank or congratulate the learner for completing the module and inform them about possible next steps, for example the next phase of onboarding or sources where they can find more information about the topics covered in the module.</p><h3>Intro element in published mode (Published mode)</h3><p><img src="statamic://asset::files::docs/2021/08/Intro_FI-1.gif"></p><h3>How are element settings changed in editing mode?</h3><p><img src="statamic://asset::files::docs/2021/08/Intro_Edit_FI_.gif"></p><h3>Finish element</h3><p><img src="statamic://asset::files::docs/2021/08/Finish_FI.jpg"></p>

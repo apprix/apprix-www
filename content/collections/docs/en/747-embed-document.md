@@ -1,31 +1,7 @@
 ---
-id: ad02aa02-f806-4267-a890-48fe321afb8e
+id: 85f7be75-5e70-438b-bb21-18a6af632b1e
+origin: ad02aa02-f806-4267-a890-48fe321afb8e
 blueprint: doc
-title: '7.47 Document embed'
+title: '7.47 Document Embed'
 ---
-The purpose of the Document Embed element is to make the trainees read the documents embedded in the training material during the training. 
-
-Note! Adding exercise elements after the Document Embed element is good practice to ensure that course participants understand and assimilate the document's content.
-
-<b>Element editing instructions</b>
-
-This element works on the same principle as the embed code for the video element. 
-<ul>
- <li aria-level="1">In the text box, type a short introduction to the embedded document. In this text box, you can tell your students they will be asked questions about key points after the content.</li>
- <li aria-level="1">Add the embed code by clicking in the middle of the element. The Embed code pop-up window will open.</li>
- <li aria-level="1">Find the embed code for the document in the service (Google Drive/SharePoint/etc) from which you want to embed the document.</li>
- <li aria-level="1">Paste the embed code into the Embed Code pop-up window and click the Save button.</li>
- <li aria-level="1">Click on the wrench icon in the top left corner of the element. The "Embed element options" pop-up window will open. </li>
- <li aria-level="1">Specify the delay in seconds, after which the Move Forward button will appear on the right side of the element. Then click "Save."</li>
-</ul>
-<strong>Note!</strong> 
-
-Make sure that the content to be embedded is visible to the users:
-<ul>
- <li>Please check with the Apprix HelpDesk<a href="mailto:helpdesk@apprix.fi" target="_blank" rel="noopener">(helpdesk@apprix.fi</a>) that the embedded content is on the Apprix list of allowed domains. If you still want to upload content from your preferred domain, please provide the HelpDesk with the URL. Alternatively, you can provide the entire embed code, as the URL will be found there naturally. If the domain is missing, Apprix will add it to the list of allowed domains.</li>
- <li>Make sure that the content you want to embed is viewable. By default, embedded content may have limited visibility, so depending on the service you use to embed the content, you may need to change the visibility settings. The settings may need to specify who can view the content and to which addresses the content can be embedded. In the case of Builder, add "<a href="http://builder.apprix.fi/">builder.apprix.fi</a>"as an allowed address if necessary.</li>
-</ul>
-
-<h6 class="p1"><b>Click on the video to enlarge it.</b></h6>
-
-<figure class="doc-image"><img src="/files/docs/2024/07/Embed-document-element-1.gif" alt="" loading="lazy"></figure>
+<p>The purpose of the <strong>Embed Document</strong> element is to get learners to read documents embedded in the training material during the course.</p><p><strong>Note!</strong> It is good practice to add elements containing exercises after the Embed Document element to ensure that course participants understand and absorb the content of the document.</p><h3>Element editing instructions</h3><p>This element works on the same principle as the embed code in the video element.</p><ul><li><p>Write a short introduction to the embedded document in the text box. In this text box you can let learners know in advance that they will be asked a few questions about key points after the content.</p></li><li><p>Add the embed code by clicking in the centre of the element. The Embed code popup window opens.</p></li><li><p>Find the embed code for the document from the service (Google Drive/SharePoint/etc.) from which you want to embed the document.</p></li><li><p>Paste the embed code into the Embed Code popup window and save by pressing the Save button.</p></li><li><p>Click the wrench icon in the upper left corner of the element. The "Embed element options" popup opens.</p></li><li><p>Set the delay in seconds after which the Move forward button appears on the right side of the element, then click "Save".</p></li></ul><p><strong>Note!</strong></p><p>Please ensure the following so that the embedded content is visible to those completing the training:</p><ul><li><p>Verify with Apprix HelpDesk (<a href="mailto:helpdesk@apprix.fi">helpdesk@apprix.fi</a>) that the content to be embedded is on Apprix's list of allowed domains. If the content is not yet allowed to be embedded from your desired domain, provide HelpDesk with the URL of the content to be embedded. Alternatively, you can provide the entire embed code, as the URL is naturally found within it. Apprix will then add the domain to the list of allowed domains if it is missing.</p></li><li><p>Verify that the visibility of the embeddable content is correctly set. By default, embedded content may have limited visibility, so you may need to change the content visibility settings in the service from which the content is embedded. The settings may require you to specify who can view the content and to which addresses the content can be embedded. If it is Builder, add "<a href="http://builder.apprix.fi/">builder.apprix.fi</a>" as an allowed address if needed.</p></li></ul><h3>Element in edit mode</h3><p><img src="statamic://asset::files::docs/2024/07/Embed-document-element.gif"></p>

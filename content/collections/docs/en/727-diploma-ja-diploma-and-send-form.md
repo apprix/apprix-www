@@ -1,30 +1,7 @@
 ---
-id: e3aab3c3-b5aa-4b78-873e-0a9279a6b8c7
+id: e2b7c3cb-35d3-47e2-9ecf-20075d3267db
+origin: e3aab3c3-b5aa-4b78-873e-0a9279a6b8c7
 blueprint: doc
 title: '7.27 Diploma and Diploma & Send Form'
 ---
-<h4>Diploma</h4>
-The <b>Diploma</b> element allows the trainee to download, open in a new browser tab or send a printable diploma or certificate to his/her email.
-
-<h4><b>Diploma &amp; Send Form</b></h4>
-<strong>How does the Diploma &amp; Send Form element differ from the Diploma element?</strong>
-
-In this element, it is possible to define the email addresses to which an email will be sent whenever a trainee arrives at the <b>Diploma &amp; Send Form</b>. The email contains basic information about the trainee, the module and the data collected by the <b>Login </b>element.
-<h4><b>Editing Instructions</b></h4>
-<ul>
- <li>Click the gear icon in the upper left corner of the element view.</li>
- <li>The <b>Settings</b> pop-up window opens. In this window, you can define 1–3 email addresses to which an email message will be sent whenever a trainee arrives at the <b>Diploma &amp; Send Form</b> element.</li>
-</ul>
-On the right is an example of an email with basic information about the course author, the course module and the data collected by the form in the <b>Login</b> element that has been added to the module.
-
-<h6 class="p1"><b>Click on the images to enlarge them.</b></h6>
-
-<h5>Diploma element</h5>
-
-<h5>Diploma &amp; Send Form in Element Edit view</h5>
-
-<figure class="doc-image"><img src="/files/docs/2021/10/Diploma_EN_.jpg" alt="" loading="lazy"></figure>
-
-<figure class="doc-image"><img src="/files/docs/2021/10/Diploma_Send_Form_EN-1.jpg" alt="" loading="lazy"></figure>
-
-<figure class="doc-image"><img src="/files/docs/2021/10/msg.png" alt="" loading="lazy"></figure>
+<h3>Diploma</h3><p>In the <strong>Diploma</strong> element, the learner can download the diploma to their own computer, open it in a new browser tab, or send a printable diploma to an email address of their choice.</p><h3>Diploma &amp; Send Form</h3><p><strong>How does the Diploma &amp; Send Form element differ from the Diploma element?</strong></p><p>In this element, you can specify email addresses to which a notification email is sent every time a course learner reaches the <strong>Diploma &amp; Send Form</strong> element. The email contains basic information about the course learner, the course module, and the learner's details collected via the <strong>Login</strong> element form added to the module. An example of a notification received by email is shown to the right.</p><h3>Element editing instructions</h3><ul><li><p>Click the gear icon in the upper left corner of the element view.</p></li><li><p>The <strong>Settings</strong> window opens. In this window you can enter 1–3 email addresses to which a notification is sent every time a learner reaches the <strong>Diploma &amp; Send Form</strong> element.</p></li></ul><h3><strong> </strong></h3><h3><strong>Element in published mode</strong></h3><h3><img src="statamic://asset::files::docs/2021/10/Diploma_FI-1.jpg"></h3><h3>Diploma &amp; Send Form element edit view</h3><p><img src="statamic://asset::files::docs/2021/10/Diploma_Send_Form_FI.jpg"></p><p><img src="statamic://asset::files::docs/2021/10/msg-1.png"></p>
