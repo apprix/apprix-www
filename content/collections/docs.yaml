@@ -6,7 +6,7 @@ template: docs/show
 layout: layout_docs
 route:
   default: '/help/{slug}'
-  en: '/en/help/{slug}'
+  en: '/help/{slug}'
 revisions: false
 structure:
   root: false

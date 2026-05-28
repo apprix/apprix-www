@@ -32,7 +32,7 @@
             <button @click="setFilter('{{ cat:slug }}')"
                 class="{{ cat:theme }} rounded-full border px-4 py-2 text-sm font-medium transition-colors"
                 :class="filter === '{{ cat:slug }}' ? 'border-primary bg-primary text-white' : 'border-neutral-200 bg-white text-neutral-600 hover:border-neutral-300 hover:bg-neutral-50'">
-                {{ cat:title }}
+                {{ trans key="strings.faq_cat_{cat:slug}" }}
             </button>
             {{ /taxonomy:faq_categories }}
 
@@ -46,7 +46,7 @@
         <section id="{{ cat:slug }}" x-show="filter === '' || filter === '{{ cat:slug }}'" class="{{ cat:theme }} scroll-mt-20 px-8 py-12 md:px-16 lg:px-24">
             <h2 class="mb-6 flex items-center gap-3 text-lg font-bold text-neutral-900">
                 <span class="h-6 w-1 shrink-0 bg-primary"></span>
-                {{ cat:title }}
+                {{ trans key="strings.faq_cat_{cat:slug}" }}
             </h2>
             <div class="divide-y divide-neutral-300">
                 {{ collection:faq :taxonomy:faq_categories="cat:slug" sort="order" }}
