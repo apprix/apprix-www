@@ -1,14 +1,7 @@
 ---
-id: f031a4a7-92d1-4864-82f4-e99971b0c983
+id: bc92e202-1898-4322-8778-73dc330aba5a
+origin: f031a4a7-92d1-4864-82f4-e99971b0c983
 blueprint: doc
-title: '3.1 Creating a New Module (Create Option)'
+title: '3.1 Creating a Module (Create)'
 ---
-Create a new module by clicking<b> Create</b> on the left side of the Menu view and then choose a template (if more than one available).
-
-You can now see the first and last elements, Intro (first element) and Finish (last element), which cannot be deleted.
-
-<b>Note! </b>Intro and Finish elements will always stay as the first and last elements. The placement of these elements cannot be changed, only the elements between them.
-
-<h6 class="p1"><b>Click on the images to enlarge them.</b></h6>
-
-<figure class="doc-image"><img src="/files/docs/2021/08/Moduulin_luominen.gif" alt="" loading="lazy"></figure>
+<p>Select a template. At the time of writing this guide, only one template is available. Click the circle and your module has now been created. You will see Intro and Finish elements on the page, which cannot be removed. New elements are added between these elements.</p><h3>How do you create a new module?</h3><p><img src="statamic://asset::files::docs/2021/08/Moduuli_luominen.gif"></p><p></p>

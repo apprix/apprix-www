@@ -1,0 +1,6 @@
+---
+id: 457b6d77-115f-43ab-a02c-81116a7eb8fe
+origin: a3c87737-2ca9-40f5-8202-b689f1b5bf2f
+title: 'What happens to failed and incomplete completions?'
+answer: '<p>Incomplete completion:</p><p>If when the participant logs in with their credentials it is identified that they have a previous incomplete completion, and the participant is directed to continue the previous session from the point where they left off in the previous session, the data entered up to that point is retained. If, however, the participant navigates backwards in the training to a point where they need to enter data that is saved in the statistics, they will need to re-enter the data from that point onwards.</p><p>If the participant''s completion starts from the beginning of the course after logging in, they start a new empty completion.</p><p>Failed completion:</p><p>If the participant fails the final test after exhausting all attempts, the participant is directed to the beginning of the course module and when they log in again they start a new completion that does not contain data entered during previous completions. The previous failed completion, however, is not removed from the statistics. Failed completion</p> <img src="/files/docs/2023/04/Epaonnistunut-suoritus.png" alt="" width="685" style="max-width:100%;height:auto;display:block;margin:0.75rem 0;">'
+---

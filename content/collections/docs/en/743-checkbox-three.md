@@ -1,38 +1,7 @@
 ---
-id: 766ed38d-a055-4b8f-9b10-1e7aa5e446a8
+id: 241caae2-238a-4e87-bcb2-9d6933fc8ed8
+origin: 766ed38d-a055-4b8f-9b10-1e7aa5e446a8
 blueprint: doc
 title: '7.43 Checkbox Three'
 ---
-<strong>Checkbox Three</strong>-element is commonly used in final tests.
-
-The element contains statements or questions answered by clicking on one of the three checkboxes on the right side of each question box. After answering the question, a mark will appear on the clicked checkbox indicating whether the answer was correct. At the same time, a text box containing further information, e.g., about the correct answer, will open.
-
-After all the checkboxes have been clicked, a summary box will open with further information.
-
-<strong>Element editing instructions</strong>
-<ul>
- <li>Click the element icon in the <em>Edit Module</em> view to open and edit the element's contents.</li>
- <li>Write the title of the exercise on the upper text field.</li>
- <li>Write the instructions and question or statement for the learner in the lower text field.</li>
- <li>Edit the labels of the checkboxes if needed. For example:
-<ul>
- <li>"Always" / "Sometimes" / "Never" (in case of giving business gifts)</li>
- <li>"Low" / "Medium" / "High" (in case of risk evaluation)</li>
- <li>"Employer"  / "Employee" / "Contractor" (in case of responsibilities)</li>
-</ul>
-</li>
- <li>Add the required question boxes by clicking the <em>Element settings</em> option in the orange wheel icon at the top of the element's <em>Edit</em> The question boxes appear on the element.</li>
- <li>Assign the correct answer to each item by clicking the button's left or right side.</li>
- <li>Write the question or case description in each question box. The question boxes will be shown to the user one by one.</li>
- <li>If needed, write the answer text and add further information about the topic on each answer text box at the right side of the element.</li>
- <li>After all checkboxes have been clicked, a <em>Summary</em> text box will appear. You can add a summary for this task here.</li>
- <li><strong>Note!</strong> These will not be shown if you leave the answer text boxes and/or the summary box empty.</li>
-</ul>
-
-<h6 class="p1"><b>Click on the images to enlarge them.</b></h6>
-
-<figure class="doc-image"><img src="/files/docs/2023/07/Checkbox-three-OK-video-1.gif" alt="" loading="lazy"></figure>
-
-<figure class="doc-image"><img src="/files/docs/2023/07/Checkbox-three-1-1.png" alt="" loading="lazy"></figure>
-
-<figure class="doc-image"><img src="/files/docs/2023/07/Checkbox-three-2-1.png" alt="" loading="lazy"></figure>
+<p>The <strong>CheckBox Three</strong> element is commonly used in final tests.</p><p>The <strong>CheckBox Three</strong> element contains statements or questions that are answered by clicking one of the three checkboxes on the right side of each question box. After answering, a mark appears in the clicked checkbox indicating whether the answer was correct. At the same time, a text box opens containing additional information about, for example, the correct answer.</p><h3>Element editing instructions</h3><ul><li><p>Open the element and edit its content by clicking the element icon in the <strong>Edit module</strong> view.</p></li><li><p>Write the name of the exercise in the upper text field.</p></li><li><p>Write the instructions and the question or statement for the course participant in the lower text field.</p></li><li><p><p>Change the checkbox headings if needed. For example:</p><ul><li><p>&quot;Always&quot; / &quot;Sometimes&quot; / &quot;Never&quot; (in the case of giving business gifts).</p></li><li><p>&quot;Low&quot; / &quot;Medium&quot; / &quot;High&quot; (in the case of risk assessment).</p></li><li><p>&quot;Employer&quot; / &quot;Employee&quot; / &quot;Contractor&quot; (regarding responsibilities).</p></li></ul></p></li></ul><ul><li><p>Add the required question boxes by clicking the <em>Element Settings</em> option from the orange gear icon at the top of the element's <em>Edit</em> view. The question boxes will appear in the element.</p></li><li><p>Set the correct answer for each item by clicking the left or right side of the button.</p></li><li><p>Write the question or case description in each question box. Question boxes are shown one at a time.</p></li><li><p>Write the answer text and add additional information about the topic in each answer text box on the right side of the element if needed.</p></li><li><p>When all checkboxes have been clicked, the Summary text box appears. Here you can add a summary of this task.</p></li><li><p>Note! If you leave the answer text boxes and the summary box empty, they will not be shown.</p></li></ul><p></p><h3>Element in published mode</h3><p><img src="statamic://asset::files::docs/2023/07/Checkbox-three-OK-video.gif"></p><h3><strong>CheckBox Three in edit mode</strong></h3><p><img src="statamic://asset::files::docs/2023/07/Checkbox-three-1.png"></p><p><img src="statamic://asset::files::docs/2023/07/Checkbox-three-2.png"></p><p></p>

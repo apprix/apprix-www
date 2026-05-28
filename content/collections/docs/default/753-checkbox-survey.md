@@ -2,49 +2,12 @@
 id: c7148a14-b5cc-481d-a6dc-17e89bd6dcca
 blueprint: doc
 title: '7.53 Checkbox Survey'
+seo_noindex: false
+seo_nofollow: false
+seo_canonical_type: entry
+sitemap_change_frequency: weekly
+sitemap_priority: 0.5
+updated_by: 680e1400-32cd-4415-9b61-d630b47576db
+updated_at: 1779940046
 ---
-<strong>Checkbox Survey</strong> on kyselyelementti. Se on erityisen tehokas, kun useilla kysymyksillä/väiteillä on samat vastausvaihtoehdot. Tämän elementin avulla käyttäjä voi arvioida useita eri aiheita. Oikeita vastauksia ei ole - tarkoituksena on kerätä mielipiteitä ja arvioita.
-
-Näytölle ilmestyy ponnahdusikkuna, jossa esitetään kysymys tai väite. Käyttäjä valitsee yhden vaihtoehdoista vastatakseen. Kaikki palkit ilmestyvät näytölle yksi kerrallaan. Jos yhteenveto on saatavilla, se näytetään, kun käyttäjä on vastannut kaikkiin kysymyksiin tai väitteisiin.
-
-<strong>Huom!</strong> Valitut vaihtoehdot tallennetaan tilastoihin.
-
-<strong>Vihje!</strong> Aloita aiheeseen perehtyminen positiivisella asenteella, erityisesti silloin, kun kurssi käsittelee muutosta, joka voi kohdata vastustusta. Kannusta kurssin osallistujia arvioimaan, kuinka muutoksen keskeiset näkökohdat voivat parantaa heidän päivittäistä työtään. Aloittamalla keskustelun tällä tavoin osallistujat alkavat jo pohtia muutoksen mahdollisia hyötyjä sen käyttöönoton yhteydessä.
-
-<strong>Milloin tätä elementtiä käytetään?
-</strong>Tätä elementtiä käytetään, kun kurssilaisia pyydetään esittämään yksityiskohtainen mielipide tietystä aiheesta.
-
-Alla on muutamia yleisiä käyttötapauksia, joissa vastaukset valitaan asteikolla kolmesta viiteen vaihtoehtoa:
-<ul>
- <li>Tyytyväisyys (”Erittäin tyytymätön” – ”Erittäin tyytyväinen”)</li>
- <li>Todennäköisyys (”Erittäin epätodennäköinen” – ”Erittäin todennäköinen”)</li>
- <li>Huolestuneisuusaste (”Ei huolestunut” – ”Huolestunut”)</li>
- <li>Suhtautuminen (”Täysin eri mieltä” – ”Täysin samaa mieltä”)</li>
- <li>Yleisyys (”Ei koskaan” – ”Aina”)</li>
- <li>Tietoisuus (”Erittäin tietämätön” – ”Erittäin tietoinen”)</li>
- <li>Tuttuus (”Erittäin tuntematon” – ”Erittäin tuttu”)</li>
- <li>Laatu (”Erittäin huono” – ”Riittävä” – ”Erittäin hyvä”)</li>
- <li>Tärkeys (”Merkityksetön” – ”Tärkeä”)</li>
-</ul>
-<h4><strong>Muokkausohjeet</strong></h4>
-<ul>
- <li>Kirjoita kyselyn otsikko sekä kysymys tai skenaario. Lisää tarvittaessa yhteenveto alempaan tekstikenttään.</li>
- <li>Klikkaa <em>Element Settings</em> -vaihtoehtoa <em>Edit Element Contents</em> -näkymän yläosassa olevasta hammasrataskuvakkeesta.</li>
- <li>Lisää (max 6 riviä) ja muokkaa kyselyn kysymyksiä tai lausuntoja avautuvassa ikkunassa. Elementin oikealle puolelle ilmestyvät uudet valintakuvakkeet.</li>
- <li>Klikkaa elementin vasemmassa yläkulmassa olevaa jakoavaimen kuvaketta. <em>Checkbox survey settings</em> -ikkuna avautuu, ja siinä voit määrittää, kuinka monta vaihtoehtoa koulutettavan tulee valita (max 5). Valittu sarakkeiden määrä näkyy elementin oikealla puolella.</li>
- <li>Kirjoita vastausvaihtoehdot kunkin sarakkeen yläpuolella oleviin tekstikenttiin, esimerkiksi: <strong>Laatu</strong> – ”<em>Huono”, ”Riittävä” , ”Hyvä”, ”Erittäin hyvä”</em>.</li>
- <li>Klikkaa check-painiketta jokaisen rivin kohdalla. Tekstipalkki avautuu, jolloin voit muokata lausumaa tai kysymystä tarpeen mukaan.</li>
- <li>Klikkaa jokaisen rivin oikealla puolella olevaa kysymysmerkkikuvaketta. Avautuva tekstiruutu mahdollistaa lisätietojen lisäämisen kysymysriville. Jos teksti ei ole tarpeen, voit poistaa sen, jolloin kysymysmerkkiä ei näytetä koulutettaville.</li>
-</ul>
-
-<h6>Miten Checkbox Survey -elementti toimii?</h6>
-
-<figure class="doc-image"><img src="/files/docs/2025/05/Checkbox-Survey-2.gif" alt="" loading="lazy"></figure>
-
-<h6>Miten Checkbox Survey -elementin muokkaaminen aloitetaan?</h6>
-
-<figure class="doc-image"><img src="/files/docs/2025/05/Checkbox-Survey-Ins-1-2.gif" alt="" loading="lazy"></figure>
-
-<h6>Kuinka saat sen valmiiksi?</h6>
-
-<figure class="doc-image"><img src="/files/docs/2025/05/CheckboxSurveyIns2.2O-2.gif" alt="" loading="lazy"></figure>
+<p><strong>Checkbox Survey</strong> on kyselyelementti. Se on erityisen tehokas, kun useilla kysymyksillä/väiteillä on samat vastausvaihtoehdot. Tämän elementin avulla käyttäjä voi arvioida useita eri aiheita. Oikeita vastauksia ei ole - tarkoituksena on kerätä mielipiteitä ja arvioita.</p><p>Näytölle ilmestyy ponnahdusikkuna, jossa esitetään kysymys tai väite. Käyttäjä valitsee yhden vaihtoehdoista vastatakseen. Kaikki palkit ilmestyvät näytölle yksi kerrallaan. Jos yhteenveto on saatavilla, se näytetään, kun käyttäjä on vastannut kaikkiin kysymyksiin tai väitteisiin.</p><p><strong>Huom!</strong> Valitut vaihtoehdot tallennetaan tilastoihin.</p><p><strong>Vihje!</strong> Aloita aiheeseen perehtyminen positiivisella asenteella, erityisesti silloin, kun kurssi käsittelee muutosta, joka voi kohdata vastustusta. Kannusta kurssin osallistujia arvioimaan, kuinka muutoksen keskeiset näkökohdat voivat parantaa heidän päivittäistä työtään. Aloittamalla keskustelun tällä tavoin osallistujat alkavat jo pohtia muutoksen mahdollisia hyötyjä sen käyttöönoton yhteydessä.</p><p><strong>Milloin tätä elementtiä käytetään?<p></p></strong>Tätä elementtiä käytetään, kun kurssilaisia pyydetään esittämään yksityiskohtainen mielipide tietystä aiheesta.</p><p>Alla on muutamia yleisiä käyttötapauksia, joissa vastaukset valitaan asteikolla kolmesta viiteen vaihtoehtoa:</p><ul><li><p>Tyytyväisyys (”Erittäin tyytymätön” – ”Erittäin tyytyväinen”)</p></li><li><p>Todennäköisyys (”Erittäin epätodennäköinen” – ”Erittäin todennäköinen”)</p></li><li><p>Huolestuneisuusaste (”Ei huolestunut” – ”Huolestunut”)</p></li><li><p>Suhtautuminen (”Täysin eri mieltä” – ”Täysin samaa mieltä”)</p></li><li><p>Yleisyys (”Ei koskaan” – ”Aina”)</p></li><li><p>Tietoisuus (”Erittäin tietämätön” – ”Erittäin tietoinen”)</p></li><li><p>Tuttuus (”Erittäin tuntematon” – ”Erittäin tuttu”)</p></li><li><p>Laatu (”Erittäin huono” – ”Riittävä” – ”Erittäin hyvä”)</p></li><li><p>Tärkeys (”Merkityksetön” – ”Tärkeä”)</p></li></ul><h3>Muokkausohjeet</h3><ul><li><p>Kirjoita kyselyn otsikko sekä kysymys tai skenaario. Lisää tarvittaessa yhteenveto alempaan tekstikenttään.</p></li><li><p>Klikkaa <em>Element Settings</em> -vaihtoehtoa <em>Edit Element Contents</em> -näkymän yläosassa olevasta hammasrataskuvakkeesta.</p></li><li><p>Lisää (max 6 riviä) ja muokkaa kyselyn kysymyksiä tai lausuntoja avautuvassa ikkunassa. Elementin oikealle puolelle ilmestyvät uudet valintakuvakkeet.</p></li><li><p>Klikkaa elementin vasemmassa yläkulmassa olevaa jakoavaimen kuvaketta. <em>Checkbox survey settings</em> -ikkuna avautuu, ja siinä voit määrittää, kuinka monta vaihtoehtoa koulutettavan tulee valita (max 5). Valittu sarakkeiden määrä näkyy elementin oikealla puolella.</p></li><li><p>Kirjoita vastausvaihtoehdot kunkin sarakkeen yläpuolella oleviin tekstikenttiin, esimerkiksi: <strong>Laatu</strong> – ”<em>Huono”, ”Riittävä” , ”Hyvä”, ”Erittäin hyvä”</em>.</p></li><li><p>Klikkaa check-painiketta jokaisen rivin kohdalla. Tekstipalkki avautuu, jolloin voit muokata lausumaa tai kysymystä tarpeen mukaan.</p></li><li><p>Klikkaa jokaisen rivin oikealla puolella olevaa kysymysmerkkikuvaketta. Avautuva tekstiruutu mahdollistaa lisätietojen lisäämisen kysymysriville. Jos teksti ei ole tarpeen, voit poistaa sen, jolloin kysymysmerkkiä ei näytetä koulutettaville.</p></li></ul><p></p><h3>Miten Checkbox Survey -elementti toimii?</h3><p><img src="statamic://asset::files::docs/2025/05/Checkbox-Survey-2.gif"></p><p><img src="statamic://asset::files::docs/2025/05/Checkbox-Survey-Ins-1-2.gif"></p><p><img src="statamic://asset::files::docs/2025/05/CheckboxSurveyIns2.2O-2.gif"></p>

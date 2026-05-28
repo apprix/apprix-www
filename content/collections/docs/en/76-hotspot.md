@@ -1,41 +1,7 @@
 ---
-id: f6b611d3-647d-4fef-a7ee-a55cb0a8b9e9
+id: 9e8b2616-57ba-4108-8e07-30907e55bb8f
+origin: f6b611d3-647d-4fef-a7ee-a55cb0a8b9e9
 blueprint: doc
 title: '7.6 Hotspot'
 ---
-Hotspot is one of the most versatile elements. You can add clickable fields (items) on top of a background image, and choose what the user sees after they click it: a text, an image, a video, a true/false task or a combination of the previously mentioned options.
-
-Common uses include:
-<ul>
- <li>Clickable icons or headers</li>
- <li>Map with marked areas for further information</li>
- <li>History timeline with clickable years</li>
- <li>Mosaic image – a combination of clickable images of different topics</li>
- <li>Screenshot of a software or a bill where the trainee is taught to interpret it by clicking marked areas in the photo.</li>
- <li>Photo of an industrial workspace where the user is asked to identify hazards</li>
-</ul>
-From every clickable field/item opens a window. From the icon menu on the left side of the window, you can select the following content options:
-<ul>
- <li>Text (title and/or body text)</li>
- <li>Photo</li>
- <li>Video</li>
- <li>True/False task</li>
- <li>Or a combination of the above options</li>
-</ul>
-In addition, you can select whether it is mandatory to click open a hotspot field/item before proceeding from the element.
-<h4 class="fusion-responsive-typography-calculated" data-fontsize="20" data-lineheight="30px">How Can I Add a Photo to a Hotspot Item?</h4>
-A photo can be added to hotspot items similarly as to any other element with a photo field. Read more about adding photos <strong><a href="#addingphotos">here</a><a href="#kuvienlisaaminenelementeissa">.</a> </strong>
-<h4 class="fusion-responsive-typography-calculated" data-fontsize="20" data-lineheight="30px">How Can I Add a Video to a Hotspot Item?</h4>
-Videos can be added to hotspot items similarly as to the <b>Video</b> element. Read more about adding videos <strong><a href="#videoelement">here.</a></strong>
-<h4 class="fusion-responsive-typography-calculated" data-fontsize="20" data-lineheight="30px">How Can I Change a Hotspot Item as a True/False Task?</h4>
-True/False function can be used similarly to the <a href="#truefalse"><strong>True/False -element</strong></a>. You can change the correct answer from the <b>gear icon</b> on top of <b>Edit Element Contents</b> view.
-
-<h6 class="p1"><b>Click on the images to enlarge them.</b></h6>
-
-<h5 class="p1">Element settings in Edit Element Contents view:</h5>
-
-<figure class="doc-image"><img src="/files/docs/2021/08/Hotspot_EN.gif" alt="" loading="lazy"></figure>
-
-<figure class="doc-image"><img src="/files/docs/2021/08/Hotspot_Edit_EN.gif" alt="" loading="lazy"></figure>
-
-<figure class="doc-image"><img src="/files/docs/2021/08/Hotspot_Edit_EN_2.gif" alt="" loading="lazy"></figure>
+<p><strong>Hotspot</strong> is one of the most versatile elements. You can place clickable, movable fields — so-called hotspot points — on top of an image in the element. When a learner clicks a hotspot, an information window opens. Example use cases include:</p><ul><li><p>Headings and icons as the background image, which when clicked open more information about the topics symbolised by the icons.</p></li><li><p>A map where the learner can click marked areas to get more information about them.</p></li><li><p>A timeline where clicking on years reveals more information about the events of those years.</p></li><li><p>A mosaic or composite image of different topics, if you want a lot of individual information on the same page.</p></li><li><p>A screenshot of a programme or, for example, an invoice, where marked points help the learner use or interpret the content.</p></li><li><p>An image of, for example, a hall interior or a construction site, where the learner is guided to find and click on issues.</p></li></ul><p>Each clickable field opens a window where you can select the content from the menu on the left side of the field:</p><ul><li><p>text</p></li><li><p>image</p></li><li><p>video</p></li><li><p>a true/false or correct/incorrect task</p></li><li><p>or a combination of the above options.</p></li></ul><p>You can also choose whether the field must be clicked open to proceed from the element (mandatory) or not.</p><h3>How do I add images to the fields added in the Hotspot element?</h3><p>Images are added to hotspot fields using the same principle as in other elements. Read more about adding images <a href="/help/532-kuvien-lisaaminen-elementtiin"><strong>here.</strong></a></p><h3><strong>How do I add videos</strong> to fields added in the <strong>Hotspot element?</strong></h3><p>Videos are added to hotspot fields using the same principle as the Video element. Read more about this topic <a href="/help/724-video"><strong>here.</strong></a></p><h3>How do I change the content of a hotspot field to a <strong>True/False task?</strong></h3><p>The True/False feature is used in the same way as the <a href="/help/712-truefalse"><strong>True/False element</strong></a>. You can change whether a statement is correct or incorrect using the <strong>gear icon</strong> in the element's edit mode.</p><h3>Element settings in edit mode</h3><p><img src="statamic://asset::files::docs/2021/08/Hotspot_Edit_FI_Small-2.gif"></p><h3><img src="statamic://asset::files::docs/2021/08/Hotspot_Edit_FI_2_-1.gif"></h3><h3>Element in published mode</h3><p><img src="statamic://asset::files::docs/2021/08/Hotspot_FI_.gif"></p><p></p>

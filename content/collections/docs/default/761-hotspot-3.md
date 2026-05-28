@@ -2,40 +2,12 @@
 id: c684988f-a204-4d5e-b800-0e1845540016
 blueprint: doc
 title: '7.6.1 Hotspot 3'
+seo_noindex: false
+seo_nofollow: false
+seo_canonical_type: entry
+sitemap_change_frequency: weekly
+sitemap_priority: 0.5
+updated_by: 680e1400-32cd-4415-9b61-d630b47576db
+updated_at: 1779935292
 ---
-<strong>Hotspot</strong> on yksi monikäyttöisimmistä elementeistä. Tämä versio ”<strong>Hotspot 3”</strong> on samanlainen kuin <strong>Hotspot</strong>-elementti, lisättynä parilla uudella ominaisuudella.
-
-Jokaisesta hotspotista avautuu ikkuna, joka voi sisältää: tekstin, kuvan, videon, totta/tarua tai oikein/väärin -tehtävän tai yhdistelmän edellä mainituista vaihtoehdoista. Kun kaikki pakolliset ikkunat on klikattu, <strong>Siirry eteenpäin</strong> -painike tulee näkyviin ja suorittaja voi siirtyä seuraavaan elementtiin.
-
-Löydät lisätietoja Hotspot-elementistä luvusta: <strong>7.6 Hotspot</strong>
-<h4><strong>Elementin muokkausohjeet</strong></h4>
-Aloita lisäämällä taustakuva elementille. Klikkaa sitten <strong>Element Settings</strong> elementin editointinäkymän ylälaidassa sijaitsevasta ratasvalikosta. Lisää tarvittava määrä klikattavia kenttiä (hotspotteja).
-
-Muokkaa seuraavaksi yksi klikattava kenttä kerrallaan:
-<ol>
- <li>Valitse väri</li>
- <li>Muokkaa otsikko</li>
- <li>Muokkaa muoto ja sijainti raahaamalla se oikeaan paikkaan.</li>
- <li>Muokkaa sen sisältö <strong>7.6 HotSpot</strong>in ohjeiden mukaisesti.</li>
-</ol>
-Klikkaa rataskuvaketta elementtinäkymän vasemmassa yläkulmassa.
-
-Settings-ikkuna avautuu. Tässä ikkunassa voit valita seuraavat vaihtoehdot:
-<ul>
- <li>Visuaaliset vaihtoehdot: Hotspot näkyvissä, Näytä valintamerkit klikkauksen jälkeen, hotspotin otsikko näkyy.</li>
- <li>Pakolliset vaihtoehdot: Valitse kaikki / Valitse ei mitään</li>
-</ul>
-
-<h5 class="p1 fusion-responsive-typography-calculated" data-fontsize="12" data-lineheight="18px">Vieritä hiirtä hotspotin vasemmalle puolelle. Sinulla on mahdollisuus valita hotspotin väri.</h5>
-
-<h5 class="p1 fusion-responsive-typography-calculated" data-fontsize="12" data-lineheight="18px">Settings-ikkuna</h5>
-
-<h5 class="p1 fusion-responsive-typography-calculated" data-fontsize="12" data-lineheight="18px">Hotspot-kohde, joka sisältää tekstiä ja True/false-vaihtoehdot, muokkaustilasta esikatselutilaan.</h5>
-
-<h6>Muistathan, että olet esikatselutilassa, kun punainen esikatselupalkki näkyy ikkunan alareunassa!</h6>
-
-<figure class="doc-image"><img src="/files/docs/2022/08/HotSpot3-colour.gif" alt="" loading="lazy"></figure>
-
-<figure class="doc-image"><img src="/files/docs/2024/06/hotspot3.png" alt="" loading="lazy"></figure>
-
-<figure class="doc-image"><img src="/files/docs/2024/08/Hotspot3-truefalse-opt2-1.gif" alt="" loading="lazy"></figure>
+<p><strong>Hotspot</strong> on yksi monikäyttöisimmistä elementeistä. Tämä versio ”<strong>Hotspot 3”</strong> on samanlainen kuin <strong>Hotspot</strong>-elementti, lisättynä parilla uudella ominaisuudella.</p><p>Jokaisesta hotspotista avautuu ikkuna, joka voi sisältää: tekstin, kuvan, videon, totta/tarua tai oikein/väärin -tehtävän tai yhdistelmän edellä mainituista vaihtoehdoista. Kun kaikki pakolliset ikkunat on klikattu, <strong>Siirry eteenpäin</strong> -painike tulee näkyviin ja suorittaja voi siirtyä seuraavaan elementtiin.</p><p>Löydät lisätietoja Hotspot-elementistä luvusta: <strong>7.6 Hotspot</strong></p><h3>Elementin muokkausohjeet</h3><p>Aloita lisäämällä taustakuva elementille. Klikkaa sitten <strong>Element Settings</strong> elementin editointinäkymän ylälaidassa sijaitsevasta ratasvalikosta. Lisää tarvittava määrä klikattavia kenttiä (hotspotteja).</p><p>Muokkaa seuraavaksi yksi klikattava kenttä kerrallaan:</p><ol start="1"><li><p>Valitse väri</p></li><li><p>Muokkaa otsikko</p></li><li><p>Muokkaa muoto ja sijainti raahaamalla se oikeaan paikkaan.</p></li><li><p>Muokkaa sen sisältö <strong>7.6 HotSpot</strong>in ohjeiden mukaisesti.</p></li></ol><p>Klikkaa rataskuvaketta elementtinäkymän vasemmassa yläkulmassa.</p><p>Settings-ikkuna avautuu. Tässä ikkunassa voit valita seuraavat vaihtoehdot:</p><ul><li><p>Visuaaliset vaihtoehdot: Hotspot näkyvissä, Näytä valintamerkit klikkauksen jälkeen, hotspotin otsikko näkyy.</p></li><li><p>Pakolliset vaihtoehdot: Valitse kaikki / Valitse ei mitään</p><p></p></li></ul><h3>Vieritä hiirtä hotspotin vasemmalle puolelle. Sinulla on mahdollisuus valita hotspotin väri.</h3><p><img src="statamic://asset::files::docs/2022/08/HotSpot3-colour.gif"></p><h3>Settings-ikkuna</h3><p><img src="statamic://asset::files::docs/2024/06/hotspot3.png"></p><h3>Hotspot-kohde, joka sisältää tekstiä ja True/false-vaihtoehdot, muokkaustilasta esikatselutilaan.</h3><h3><img src="statamic://asset::files::docs/2024/08/Hotspot3-truefalse-opt2-1.gif">Muistathan, että olet esikatselutilassa, kun punainen esikatselupalkki näkyy ikkunan alareunassa!</h3><p></p>

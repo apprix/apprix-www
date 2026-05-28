@@ -1,26 +1,7 @@
 ---
-id: 356d417b-8944-4740-a094-b4a083950ab6
+id: b0ed10e9-482f-4749-a8f0-08ba0e3acbe9
+origin: 356d417b-8944-4740-a094-b4a083950ab6
 blueprint: doc
 title: '7.10 Multichoice Critical'
 ---
-This is an upgraded version of the <strong>Multichoice</strong> element. You can choose the critical statements the trainee must answer correctly in this element. If, for example, the trainee has answered correctly in all but one of the critical questions, she will get an error message in the <strong>Pass/Fail</strong> element and will have to repeat the test.
-
-Common uses for the element:
-<ul>
- <li aria-level="1">Real-life situation - what should we do next?</li>
- <li aria-level="1">Someone asks a question: how should you respond?</li>
- <li aria-level="1">An employee describes their work - which business unit are they describing?</li>
-</ul>
-<h4>Editing Instructions</h4>
-<ul>
- <li>Select the number of items from the element “<strong>Element Settings…</strong>” on top of the element behind the orange gear icon.</li>
- <li>Fill in the statements and choose their values (correct/incorrect).</li>
- <li>Fill in the info boxes on the left.</li>
- <li>Click the Exclamation point- button. The “<strong>Settings for this element</strong>” pop-up window opens. All statements are listed in the pop-up window.</li>
- <li>Choose which statements, if any, should be categorized as “critical”. If the trainee answers the critical question incorrectly, he/she will fail the test and have to repeat it. For this reason, the <strong>Multichoice critical</strong> element should be followed by the <strong>Pass/Fail</strong> element since it is this element that informs the trainee if they have passed the training or not.</li>
-</ul>
-<strong>Note!</strong> Please also remember to assign the percentage of points needed to pass the training. You can do this in the module’s “<strong>Edit Points …</strong>” tool.
-
-<h6 class="p1"><b>Click on the images to enlarge them.</b></h6>
-
-<figure class="doc-image"><img src="/files/docs/2022/01/multicoice-critical-1.gif" alt="" loading="lazy"></figure>
+<p>This is an updated version of the <strong>Multichoice</strong> element. In this element you can select which answer options are critical and must be answered correctly by the learner. If the learner has, for example, answered almost everything correctly except for one critical answer option, they will receive a notification of a failed attempt in the <strong>Pass/Fail</strong> element and will have to retake the test.</p><h3>Element editing instructions</h3><ul><li><p>Click <strong>Element Settings</strong> from the orange gear icon located at the top of the element's edit view.</p></li><li><p>Add the required number of answer options in the <strong>Element Settings</strong> window.</p></li><li><p>Fill in the answer options and select their values (correct/incorrect).</p></li><li><p>Fill in the information boxes on the left.</p></li><li><p>Click the exclamation mark button. The "<strong>Settings for this element</strong>" popup opens. The popup lists all the answer options you have written.</p></li><li><p>Select which of the options, if any, are classified as "critical". This means that if the learner answers a critical answer option incorrectly, they have failed the test and must retake it. For this reason, a <strong>Pass/Fail</strong> element should be placed after the Multichoice Critical element to inform the learner whether they have passed the training or not.</p></li></ul><p><strong>Note!</strong> Remember to also edit the module's percentage pass threshold in the Edit Points view.</p><h3>Element settings in edit mode.</h3><p><img src="statamic://asset::files::docs/2022/01/multicoice-critical-2.gif"></p>

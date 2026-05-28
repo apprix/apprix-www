@@ -1,0 +1,6 @@
+---
+id: 7d22b81d-65ed-4949-9f8f-481912601cd3
+origin: 4bcbb4e5-7fb0-4206-8df9-2b2a43cc328a
+title: 'Is it possible for the personal details submitted by a participant to be retained in the unique URL link created for them during authentication?'
+answer: '<p>Example case:</p><p>A participant logs in to a training using the original completion link, completing the authentication and then the training. After completing the training to the end, the participant copies the link from the browser and sends it to another participant. The other participant completes the training using the link sent by the first participant. As a result, the first participant''s name appears in the second participant''s diploma and completion data in the statistics.</p><p>The first participant sent the other participant their personal, unique link that contains their unique identifier (see the numbers at the end of the link). The first participant should have sent the original completion link (Published link), which does not contain anyone''s unique identifier.</p><p>Note! A unique identifier is created in the link for the participant when they log in to the module.</p> <img src="/files/docs/2020/07/module.png" alt="" width="512" style="max-width:100%;height:auto;display:block;margin:0.75rem 0;">'
+---

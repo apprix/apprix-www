@@ -1,51 +1,7 @@
 ---
-id: c7148a14-b5cc-481d-a6dc-17e89bd6dcca
+id: ed0a563e-fd09-42a8-9e09-d2d9e98af300
+origin: c7148a14-b5cc-481d-a6dc-17e89bd6dcca
 blueprint: doc
 title: '7.53 Checkbox Survey'
 ---
-<strong>Checkbox Survey</strong> is a survey element. It is particularly effective when multiple questions share the same response options. This element allows the user to evaluate several different topics. There are no correct answers—the idea is to gather opinions and evaluations.
-
-A pop-up bar with a question/affirmation is displayed. The user clicks on one of the check icons to answer the given question. All the bars will appear on the screen, one at a time. A summary will be shown if available after the user has responded to all questions.
-
-<strong>Note!</strong> The selected options will be stored in the statistics.
-
-<strong>Tip!</strong> It's best to start with a positive mindset when introducing a course topic that may face resistance to change. Encourage trainees to assess how the key aspects of the shift could enhance their daily work. By initiating the discussion, participants will consider the potential benefits as the change is introduced.
-
-<strong>When using this element?</strong>
-
-When a course participant is asked to provide a detailed opinion on specific topics.
-
-Below are some everyday use cases when using three to five options:
-<ul>
- <li>Satisfaction (from "Very dissatisfied” to "Very satisfied")</li>
- <li>Likelihood (from "Very unlikely" to "Very likely")</li>
- <li>Level of concern ("Unconcerned" to "Concerned")</li>
- <li>Agreement ("Strongly disagree" to "Strongly agree")</li>
- <li>Frequency ("Never" to "Always")</li>
- <li>Awareness ("Very unaware" to "Very aware")</li>
- <li>Familiarity ("Very unfamiliar" to "Very familiar")</li>
- <li>Quality ("Very poor" to "Adequate" to "Very good")</li>
- <li>Importance ("Unimportant" to "Important")</li>
-</ul>
-<strong> </strong>
-<h4><strong>Editing Instructions</strong></h4>
-<ul>
- <li>Write the survey's title and question/scenario. If necessary, add a summary in the lower text box.</li>
- <li>Click the <strong>Element settings</strong> option from the gear icon at the top of the <strong>Edit Element Contents</strong> view. In the window, add and edit your survey questions/statements. New check icons will appear on the right side of the element.</li>
- <li>Click the wrench icon at the top left of the element. The <strong>Checkbox survey settings</strong> window opens. In this window, set the number of options the trainee must select (max 5). The chosen number of columns will appear on the right side of the element.</li>
- <li>Write the options in the text boxes on top of each column, for example: <strong>Quality</strong> “Poor – Adequate – Good – Very good”.</li>
- <li>Click a check button in each row. The text bar will open. If necessary, edit the statement/question.</li>
- <li>Click the Question mark icon on the right of each row. A text box will open. Add additional information for the question row here. Remove unnecessary text, and the question mark will not be shown to the trainee.</li>
-</ul>
-
-<h6>How does the Checkbox Survey element work?</h6>
-
-<h6>How to start editing the element?</h6>
-
-<h6>How do you complete it?</h6>
-
-<figure class="doc-image"><img src="/files/docs/2025/05/Checkbox-Survey-1.gif" alt="" loading="lazy"></figure>
-
-<figure class="doc-image"><img src="/files/docs/2025/05/Checkbox-Survey-Ins-1-1.gif" alt="" loading="lazy"></figure>
-
-<figure class="doc-image"><img src="/files/docs/2025/05/CheckboxSurveyIns2.2O-1.gif" alt="" loading="lazy"></figure>
+<p><strong>Checkbox Survey</strong> is a survey element. It is particularly effective when several questions/statements share the same answer options. This element allows users to evaluate multiple different topics. There are no correct answers — the purpose is to gather opinions and assessments.</p><p>A popup appears on screen presenting a question or statement. The user selects one of the options to answer. All bars appear on screen one at a time. If a summary is available, it is shown when the user has answered all the questions or statements.</p><p><strong>Note!</strong> Selected options are saved to statistics.</p><p><strong>Tip!</strong> Start by engaging with the topic positively, especially when the course deals with a change that may face resistance. Encourage course participants to assess how the key aspects of the change can improve their daily work. By starting the discussion in this way, participants will already begin to consider the potential benefits of the change as it is being introduced.</p><p><strong>When is this element used?<p></p></strong>This element is used when learners are asked to express a detailed opinion on a specific topic.</p><p>Below are some common use cases where answers are selected on a scale of three to five options:</p><ul><li><p>Satisfaction ("Very dissatisfied" – "Very satisfied")</p></li><li><p>Likelihood ("Very unlikely" – "Very likely")</p></li><li><p>Level of concern ("Not concerned" – "Concerned")</p></li><li><p>Attitude ("Strongly disagree" – "Strongly agree")</p></li><li><p>Frequency ("Never" – "Always")</p></li><li><p>Awareness ("Very unaware" – "Very aware")</p></li><li><p>Familiarity ("Very unfamiliar" – "Very familiar")</p></li><li><p>Quality ("Very poor" – "Adequate" – "Very good")</p></li><li><p>Importance ("Insignificant" – "Important")</p></li></ul><h3>Editing instructions</h3><ul><li><p>Write the survey title and the question or scenario. Add a summary in the lower text field if needed.</p></li><li><p>Click the <em>Element Settings</em> option from the gear icon at the top of the <em>Edit Element Contents</em> view.</p></li><li><p>Add (max 6 rows) and edit survey questions or statements in the window that opens. New selection icons will appear on the right side of the element.</p></li><li><p>Click the wrench icon in the upper left corner of the element. The <em>Checkbox survey settings</em> window opens, where you can set how many options the learner must select (max 5). The selected number of columns is shown on the right side of the element.</p></li><li><p>Write the answer options in the text fields above each column, for example: <strong>Quality</strong> – "<em>Poor", "Adequate", "Good", "Very good"</em>.</p></li><li><p>Click the check button for each row. A text bar opens, allowing you to edit the statement or question as needed.</p></li><li><p>Click the question mark icon on the right side of each row. The text box that opens allows you to add additional information to the question row. If the text is not needed, you can remove it, and the question mark will not be shown to the learner.</p></li></ul><p></p><h3>How does the Checkbox Survey element work?</h3><p><img src="statamic://asset::files::docs/2025/05/Checkbox-Survey-2.gif"></p><p><img src="statamic://asset::files::docs/2025/05/Checkbox-Survey-Ins-1-2.gif"></p><p><img src="statamic://asset::files::docs/2025/05/CheckboxSurveyIns2.2O-2.gif"></p>

@@ -1,16 +1,7 @@
 ---
-id: 85a7dd95-23df-4120-8fb6-621794e3efbd
+id: af583e1e-98af-4f5f-8621-37030ed7e89e
+origin: 85a7dd95-23df-4120-8fb6-621794e3efbd
 blueprint: doc
 title: '6.11 Change Module Editors'
 ---
-In this pop-up window, you can add or remove the module’s editors so that any module owner can manage the course permissions.
-
-Permissions are given in the edit window of the module. The module editor must already have editing rights to manage the rights of others.
-
-Editors can be retrieved either by name or by email. After a few characters, Builder will display a list of matching users.
-
-Note! This is a customer-specific feature. Please contact Apprix HelpDesk or your Apprix Account Manager, if you would like this feature enabled.
-
-<h6 class="p1"><b>Click on the images to enlarge them.</b></h6>
-
-<figure class="doc-image"><img src="/files/docs/2022/04/R_Change_module_editor.jpg" alt="" loading="lazy"></figure>
+<p>In the <strong>Change Module Editors</strong> popup you can add or remove course editors, allowing people other than user administrators to manage course permissions. You can find the function in the module settings menu in the <strong>Edit Module</strong> view.</p><p>A module editor must have editing rights in order to manage other users' permissions.</p><p>Editors can be searched by name or email address. After typing a few characters, Builder displays the found course editors.</p><p>Note! This is a customer-specific feature. Please contact our customer support (helpdesk@apprix.fi) if you would like it to be enabled.</p><h3>How can you change module editors?</h3><p><img src="statamic://asset::files::docs/2024/08/Change-module-editor.gif"></p>

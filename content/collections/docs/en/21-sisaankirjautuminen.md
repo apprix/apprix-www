@@ -1,20 +1,7 @@
 ---
-id: 4dbf9d1d-e874-472b-b435-a68f6c284d9b
+id: c1196267-980d-4eef-be4c-561549a9ae73
+origin: 4dbf9d1d-e874-472b-b435-a68f6c284d9b
 blueprint: doc
 title: '2.1 Login'
 ---
-Log in with your personal username and password that you received via email.
-
-Link: <b><a href="https://builder.apprix.fi/b/" target="_blank" rel="noopener noreferrer">https://builder.apprix.fi/b/</a></b>
-
-If you lose your password, please contact <b>helpdesk@apprix.fi</b> and request a new one. 
-
-Alternatively, you can ask for a new password from a person in your company with user management permissions.
-
-Once you get the new password via email, you are invited to change it.
-
- 
-
-<h6 class="p1">Builder Login</h6>
-
-<figure class="doc-image"><img src="/files/docs/2025/03/2.1-Sisaankirjautuminen-Login-1.png" alt="" loading="lazy"></figure>
+<p>Log in with your personal credentials at:</p><p><a rel="noopener noreferrer" target="_blank" href="https://builder.apprix.fi/b/"><strong>https://builder.apprix.fi/b/</strong></a></p><p>Keep your password safe, as you will not be able to access Builder if you lose it.</p><p>If this happens, contact <strong>helpdesk@apprix.fi</strong> and request a new password. Alternatively, ask a person in your organisation who has user administration rights to issue you a new password.</p><p>When you receive a new password by email, you will be asked to change it.</p><p></p><h3>Login - Builder Login</h3><p><img src="statamic://asset::files::docs/2025/11/2.1-Builder-login.png"></p><p></p>

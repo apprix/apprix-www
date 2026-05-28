@@ -2,38 +2,12 @@
 id: 766ed38d-a055-4b8f-9b10-1e7aa5e446a8
 blueprint: doc
 title: '7.43 Checkbox Three'
+seo_noindex: false
+seo_nofollow: false
+seo_canonical_type: entry
+sitemap_change_frequency: weekly
+sitemap_priority: 0.5
+updated_by: 680e1400-32cd-4415-9b61-d630b47576db
+updated_at: 1779939042
 ---
-<strong>CheckBox Three</strong> -elementtiä käytetään yleisesti lopputesteissä.
-
-<strong>CheckBox Three</strong> -elementti sisältää väittämiä tai kysymyksiä, joihin vastataan klikkaamalla yhtä kunkin kysymyslaatikon oikealla puolella olevista kolmesta valintaruudusta. Vastaamisen jälkeen klikattuun valintaruutuun ilmestyy merkki, joka osoittaa oliko vastaus oikea. Samalla aukeaa tekstiruutu, joka sisältää lisätietoja esimerkiksi oikeasta vastauksesta.
-<h4><strong>Elementin muokkausohjeet</strong></h4>
-<ul>
- <li>Avaa elementti ja muokkaa sen sisältöä klikkaamalla elementin kuvaketta <strong>Edit module</strong> -näkymässä.</li>
- <li>Kirjoita harjoituksen nimi ylempään tekstikenttään.</li>
- <li>Kirjoita alempaan tekstikenttään ohjeet ja kysymys tai lausunto kurssin suorittajalle.</li>
- <li>Muuta tarvittaessa valintaruutujen otsikoita. Esim:
-<ul>
- <li>"Aina" / "Joskus" / "Ei koskaan" (jos kyseessä on liikelahjojen antaminen).</li>
- <li>"Vähäinen" / "Keskisuuri" / "Suuri" (jos kyseessä on riskinarviointi).</li>
- <li>"Työnantaja" / "Työntekijä" / "Urakoitsija" (vastuiden osalta).</li>
-</ul>
-</li>
-</ul>
-<ul>
- <li>Lisää tarvittavat kysymysruudut klikkaamalla elementin <em>Edit</em>-näkymän yläreunassa olevan oranssin rataskuvakkeen <em>Element Settings</em>-vaihtoehtoa. Kysymysruudut tulevat näkyviin elementtiin.</li>
- <li>Määritä oikea vastaus kullekin kohdalle klikkaamalla painikkeen vasenta tai oikeaa puolta.</li>
- <li>Kirjoita kysymys tai tapauksen kuvaus kuhunkin kysymysruutuun. Kysymysruutuja näytetään yksi kerrallaan.</li>
- <li>Kirjoita vastausteksti ja lisää lisätietoja aiheesta kuhunkin vastaustekstiruutuun elementin oikealla puolella tarvittaessa.</li>
- <li>Kun kaikki valintaruudut on klikattu Summary-tekstiruutu tulee näkyviin. Tähän voit lisätä yhteenvedon tästä tehtävästä.</li>
- <li>Huom! Jos jätät vastaustekstiruudut ja yhteenvetoruudun tyhjiksi, niitä ei näytetä.</li>
-</ul>
-
-<h6 class="p1">Klikkaa kuvia suurentaaksesi niitä.</h6>
-
-<figure class="doc-image"><img src="/files/docs/2023/07/Checkbox-three-OK-video.gif" alt="" loading="lazy"></figure>
-
-<figure class="doc-image"><img src="/files/docs/2023/07/Checkbox-three-1.png" alt="" loading="lazy"></figure>
-
-<figure class="doc-image"><img src="/files/docs/2023/07/Checkbox-three-2.png" alt="" loading="lazy"></figure>
-
-<figure class="doc-image"><img src="/files/docs/2023/07/Checkbox-three-0-1.jpg" alt="" loading="lazy"></figure>
+<p><strong>CheckBox Three</strong> -elementtiä käytetään yleisesti lopputesteissä.</p><p><strong>CheckBox Three</strong> -elementti sisältää väittämiä tai kysymyksiä, joihin vastataan klikkaamalla yhtä kunkin kysymyslaatikon oikealla puolella olevista kolmesta valintaruudusta. Vastaamisen jälkeen klikattuun valintaruutuun ilmestyy merkki, joka osoittaa oliko vastaus oikea. Samalla aukeaa tekstiruutu, joka sisältää lisätietoja esimerkiksi oikeasta vastauksesta.</p><h3>Elementin muokkausohjeet</h3><ul><li><p>Avaa elementti ja muokkaa sen sisältöä klikkaamalla elementin kuvaketta <strong>Edit module</strong> -näkymässä.</p></li><li><p>Kirjoita harjoituksen nimi ylempään tekstikenttään.</p></li><li><p>Kirjoita alempaan tekstikenttään ohjeet ja kysymys tai lausunto kurssin suorittajalle.</p></li><li><p><p>Muuta tarvittaessa valintaruutujen otsikoita. Esim:</p><ul><li><p>&quot;Aina&quot; / &quot;Joskus&quot; / &quot;Ei koskaan&quot; (jos kyseessä on liikelahjojen antaminen).</p></li><li><p>&quot;Vähäinen&quot; / &quot;Keskisuuri&quot; / &quot;Suuri&quot; (jos kyseessä on riskinarviointi).</p></li><li><p>&quot;Työnantaja&quot; / &quot;Työntekijä&quot; / &quot;Urakoitsija&quot; (vastuiden osalta).</p></li></ul></p></li></ul><ul><li><p>Lisää tarvittavat kysymysruudut klikkaamalla elementin <em>Edit</em>-näkymän yläreunassa olevan oranssin rataskuvakkeen <em>Element Settings</em>-vaihtoehtoa. Kysymysruudut tulevat näkyviin elementtiin.</p></li><li><p>Määritä oikea vastaus kullekin kohdalle klikkaamalla painikkeen vasenta tai oikeaa puolta.</p></li><li><p>Kirjoita kysymys tai tapauksen kuvaus kuhunkin kysymysruutuun. Kysymysruutuja näytetään yksi kerrallaan.</p></li><li><p>Kirjoita vastausteksti ja lisää lisätietoja aiheesta kuhunkin vastaustekstiruutuun elementin oikealla puolella tarvittaessa.</p></li><li><p>Kun kaikki valintaruudut on klikattu Summary-tekstiruutu tulee näkyviin. Tähän voit lisätä yhteenvedon tästä tehtävästä.</p></li><li><p>Huom! Jos jätät vastaustekstiruudut ja yhteenvetoruudun tyhjiksi, niitä ei näytetä.</p></li></ul><p></p><h3>Elementti julkaisutilassa ( Published mode )</h3><p><img src="statamic://asset::files::docs/2023/07/Checkbox-three-OK-video.gif"></p><h3><strong>CheckBox Three Edit tilassa</strong></h3><p><img src="statamic://asset::files::docs/2023/07/Checkbox-three-1.png"></p><p><img src="statamic://asset::files::docs/2023/07/Checkbox-three-2.png"></p><p></p>

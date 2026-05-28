@@ -1,24 +1,7 @@
 ---
-id: 627be9f4-4759-44f4-97b4-69915aa4e27f
+id: 3f290867-9c4a-412e-9c66-5d6d504200af
+origin: 627be9f4-4759-44f4-97b4-69915aa4e27f
 blueprint: doc
 title: '7.3 Info Half Background'
 ---
-<p class="p1"><b>Info Half Background</b> is an element used for different text and image pages. You may use the element as half page images and half page text areas. There are two text areas in the element that change size according to the length of the content. </p>
-<p class="p1">Please note that if you leave a title or text field empty, they will not be visible in the training. </p>
-<p class="p1">From the <b>gear icon </b>toolbar located at the top left corner of <b>Edit Module Contents</b> view, you may change the position of the text boxes (up, down, middle) and also choose to use the element as either</p>
-
-<ul>
- <li class="p1">two half-page text areas with background colors according to your organization's brand colors</li>
- <li class="p1">remove the text backgrounds altogether and use photos as text backrounds</li>
- <li>use a photo on one side and text on the other</li>
- <li>use photos without any text on both sides</li>
-</ul>
-<strong>Tip! </strong>It is recommended to keep the texts as concise as possible. If you end up using several info elements in a row, consider using a task element in between or, for example, a<b> <a href="#hotspot">Hotspot</a></b> element to make the module more interesting and reduce repetition.
-
-<h6 class="p1"><b>Click on the images to enlarge them.</b></h6>
-
-<h5 class="p1">Element settings in Edit Element Contents view:</h5>
-
-<figure class="doc-image"><img src="/files/docs/2021/08/Info_Half_Background_EN.gif" alt="" loading="lazy"></figure>
-
-<figure class="doc-image"><img src="/files/docs/2021/08/Info_Half_Background_Edit_EN.gif" alt="" loading="lazy"></figure>
+<p>The <strong>Info Half Background</strong> element can be used as a text and image page, from which you can select via the orange <strong>gear icon</strong>:</p><ul><li><p>two half-page text fields, for which you can set background colors based on brand colors or remove the text backgrounds entirely</p></li><li><p>text on one side and an image on the other</p></li><li><p>images on both sides</p></li></ul><p>The page has two text areas whose size adapts to the length of the text. If the title field and the body text field are left empty, the text area will not be visible in the learner view. You can also align the text fields to the same or different levels, change the background color of the text fields, or hide the text background areas entirely.</p><p><strong>Tips: </strong></p><ul><li><p>Keep the text as concise as possible. If you decide to place several info elements in a row, it is recommended to insert a task element or a hotspot element in between, which can consolidate multiple info slides into one. This keeps the content varied.</p></li><li><p>You can add an audio file to this element. See the "Add audio" option in the upper gear icon.</p></li></ul><h3>Element in published mode</h3><p><img src="statamic://asset::files::docs/2021/08/Info_Half_Background_FI-1.gif"></p><h3>How to change the element settings in edit mode?</h3><p><img src="statamic://asset::files::docs/2021/08/Info_Half_Background_Edit_FI_-1.gif"></p><p></p>

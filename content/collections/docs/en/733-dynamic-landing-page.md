@@ -1,24 +1,31 @@
 ---
-id: 77d2d02d-4ccb-4c97-b89a-9c6e6a0c7423
+id: 28c69f9f-c6ef-43ee-a6a7-e66a90066543
+origin: 77d2d02d-4ccb-4c97-b89a-9c6e6a0c7423
 blueprint: doc
 title: '7.33 Dynamic Landing Page'
 ---
-The <strong>Dynamic Landing Page</strong> element is an enhanced version of the <strong>Landing Page</strong>.
+<p>The <strong>Dynamic Landing Page</strong> element is a more advanced version of the Landing Page element.</p>
 
-<strong>Note!</strong> In the Dynamic Landing Page, the facilitator can also choose whether another course must be completed before the one they are editing.
+<p>On the Dynamic Landing Page platform, the facilitator can also choose whether another course must be completed before the course they are currently editing.</p>
 
-This element can be customised. Please do not hesitate to contact your account manager for additional information.
-<h4><strong>Editing Instructions</strong></h4>
-The default editing instructions for the Dynamic Landing Page element are the same as in the Landing Page element, with the following addition:
+<p><strong>Note!</strong> This element can be customised. Do not hesitate to contact your account manager for more information.</p>
 
-If another course must be completed before the selected one, choose the column and button of the course that should be completed first. Notify the user in the mouse-over text field that the other course must be completed before this one.
+<p>More information about this element is available in this <a href="https://drive.google.com/file/d/1COVe1Ves7JSXKvaIUATxn6xHE6oUr8pA/view?usp=sharing" target="_blank" rel="noopener">PDF document</a>.</p>
+<h3>Editing instructions</h3>
+<p>The editing instructions for the <strong>Dynamic Landing Page</strong> element are the same as for the Landing Page element, with one addition:</p>
 
-For further information about this element, please <a href="https://drive.google.com/file/d/1JsTyp9byCtK8TvDEi6Ap8SR4JPB3akQE/view?usp=sharing" target="_blank" rel="noopener">click this link.</a>
+<p>If another course must be completed before the selected course, first select the column and button of the course that must be completed first. Inform the user in the <strong>Mouseover text</strong> field that the other course must be completed before this one.</p>
 
-<h6>Dynamic Landing Page -Button Settings</h6>
+<h3>Dynamic Landing Page - Button Settings</h3>
 
-<h6>How does the feature "Choose if another course has to be completed before this course" work in the Dynamic Landing Page element?</h6>
+<p></p>
 
-<figure class="doc-image"><img src="/files/docs/2025/05/DLP-button-settings-01052025.png" alt="" loading="lazy"></figure>
+<p><img src="/files/docs/2025/05/DLP-button-settings-01052025-1.png"></p>
 
-<figure class="doc-image"><img src="/files/docs/2025/05/DLP-Preview-0105-1.gif" alt="" loading="lazy"></figure>
+<h3>How does the "Select whether another course must be completed before this course" feature work in the Dynamic Landing Page element?</h3>
+
+<p></p>
+
+<p><img src="/files/docs/2025/05/DLP-Preview-0105-2.gif"></p>
+
+<p></p>

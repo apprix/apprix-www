@@ -2,66 +2,12 @@
 id: eea55968-55c7-4b37-a2fc-98a9895f4905
 blueprint: doc
 title: '7.49 Phrases'
+seo_noindex: false
+seo_nofollow: false
+seo_canonical_type: entry
+sitemap_change_frequency: weekly
+sitemap_priority: 0.5
+updated_by: 680e1400-32cd-4415-9b61-d630b47576db
+updated_at: 1779939563
 ---
-<strong>Phrases</strong> on tehtäväelementti, jossa suorittajan pitää raahata oikeassa järjestyksessä lauseen sananappeja alkulaatikosta paikoilleen lauseeseen sen alapuolella olevaan loppulaatikkoon. Sananappi voi sisältää yhden tai useamman sanan tekstiä ja osa sananapeista voi olla myös vääriä, mitkä eivät siis kuulu lauseeseen.
-
-Sen jälkeen, että suorittaja on siirtänyt tarvittavat sananapit loppulaatikkoon, hän klikkaa eteenpäin-painiketta oikealla, jolloin Builder tarkistaa, menikö suorittajan kirjoittama lause oikein. Alkulaatikon tilalle ilmestyy vastauslaatikko (punainen, jos vastaus on väärin, vihreä jos vastaus on oikein), jossa annetaan palautetta suorittajalle. Loppulaatikossa ilmestyy oikea lause.
-
-Jos vastaus on 100 % oikein, <strong>OK</strong>-ikoni tulee näkyviin. Jos vastaus on väärä, näkyviin tulee <strong>Ei OK</strong>-ikoni.
-
-<strong>Tässä ideoita milloin tätä elementtiä voisi käyttää:</strong>
-<ul>
- <li>rakennettaessa yrityksen missiota tai visiota</li>
- <li>työtehtävissä, jotka edellyttävät tarkkaa sanamuotoa esim. radioviestinnässä.</li>
-</ul>
-<h4><strong>Elementin muokkausohjeet </strong></h4>
-Lisää elementin taustakuva, joka tukee käsiteltävää aihetta.
-
-Klikkaa elementin editointinäkymän ylälaidassa sijaitsevasta oranssista ratasikonista <strong>Element Settings</strong> -vaihtoehtoa.
-
-Lisää tarvittavat raahattavat sananapit <strong>Element Settings</strong> -ikkunasta. Sananapit ilmestyvät elementin oikealle puolelle. Anna sananapille loogisessa järjestyksessä nimet, esim. "<em>A Code of Conduct</em>", "<em>is a set of values</em>", "<em>and principles</em>", "<em>that guide</em>", "<em>an organisation</em>."
-
-Lisää tarvittaessa virheelliset sananapit viimeisen oikean sananapin alapuolelle, esimerkiksi tässä tapauksessa "<em>A Code of behaviour</em>", "<em>is a set of laws</em>" ja "<em>that run</em>". Tässä esimerkissä suorittajan pitäisi siirtää sananappeja, jotka muodostavat seuraavan lauseen: <em>"A Code of Conduct is a set of values and principles that guide an organisation."   </em>
-
-Kytke <strong>Shuffle</strong>-toiminto päälle. Jos toimintoa ei ole aktivoitu, sananapit näkyvät samassa järjestyksessä alkulaatikossa.
-
-Vihreä vastauslaatikko tulee näkyviin, kun klikkaat eteenpäin-painiketta. Kirjoita tähän vastausteksti, joka antaa lisätietoja oikeasta lauseesta. Sama teksti näkyy myös punaisella puolella.
-
-Anna vasempaan ylempään tekstikenttään tietoja kyseisestä lauseesta ja ohjeita suorittajalle, esimerkiksi:
-
-<em>”Vedä oikealla ylhäällä olevat sananapit oikeassa järjestyksessä alla olevaan laatikkoon. Klikkaa eteenpäin-painiketta, kun olet valmis, nähdäksesi tuloksen."</em>
-
-Voit säätää tehtävän vaikeusastetta klikkaamalla vasemmassa yläkulmassa olevaa työkaluikonia. Tämän jälkeen avautuu <strong>Phrase-elementin asetukset</strong>.
-
-Jos Phrase-elementin asetuksissa on aktivoitu vaihtoehto ”<em>Allow only the right number of words to be dragged</em>” ikkunan oikeassa alakulmassa näkyy oikea määrä siirrettäviä sananappeja. Jos tätä vaihtoehtoa ei ole valittu, eteenpäin -painike näytetään sen jälkeen, kun ensimmäinen sananappi on siirretty alempaan laatikkoon.
-
-<strong>Tarkistuslogiikka</strong>
-
-Elementti laskee, kuinka oikein tehtävä on mennyt prosentteina (0-1, 1 = 100%). Statistiikkaan merkitään prosentti. Prosentilla kerrotaan elementille merkattu maksipistemäärä, jolloin saadaan elementistä saadut pisteet.
-
-Prosentin laskemisessa tarkastellaan kolmea asiaa:
-<ul>
- <li>kuinka monta oikeaa sanaa suorittaja on valinnut</li>
- <li>kuinka monta väärää sanaa suorittaja on valinnut</li>
- <li>onko koko fraasi oikeassa järjestyksessä</li>
-</ul>
-<strong>Normal - vaihtoehdon tarkistuslogiikka:</strong>
-<ul>
- <li>Jos koko fraasi on oikein, tehtävästä saa 100%</li>
- <li>Jos vastauksessa on jotain virheitä (väärä järjestys, liian vähän tai paljon valittuja sanoja) käyttäjälle annetaan 50% maksimipisteistä.</li>
- <li>Tästä 50%:sta vähennetään prosentteja jokaisen väärän raahatun sanan edestä.</li>
- <li>Tästä 50%:sta jokainen väärin valittu sana pienentää prosenttia, jolla kerrotaan elementin maksimipistemäärä.</li>
- <li>Yhden väärän sanan suhteutettu prosenttiarvo on sama kuin yhden oikean sanan, eli yhdestä väärästä sanasta vähentyy yhtä paljon prosentteja kuin oikeasta sanasta saa.</li>
-</ul>
-
-<h6 class="p1">Elementin julkaisutilassa</h6>
-
-<figure class="doc-image"><img src="/files/docs/2024/12/Phrases-element-demo.gif" alt="" loading="lazy"></figure>
-
-<h6 class="p1">Elementin muokkaustilassa</h6>
-
-<figure class="doc-image"><img src="/files/docs/2024/12/Phrases-element-settings-image.png" alt="" loading="lazy"></figure>
-
-<h6 class="p1">Elementin asetukset muokkaustilassa</h6>
-
-<figure class="doc-image"><img src="/files/docs/2024/12/Phrase-asetukset.png" alt="" loading="lazy"></figure>
+<p><strong>Phrases</strong> on tehtäväelementti, jossa suorittajan pitää raahata oikeassa järjestyksessä lauseen sananappeja alkulaatikosta paikoilleen lauseeseen sen alapuolella olevaan loppulaatikkoon. Sananappi voi sisältää yhden tai useamman sanan tekstiä ja osa sananapeista voi olla myös vääriä, mitkä eivät siis kuulu lauseeseen.</p><p>Sen jälkeen, että suorittaja on siirtänyt tarvittavat sananapit loppulaatikkoon, hän klikkaa eteenpäin-painiketta oikealla, jolloin Builder tarkistaa, menikö suorittajan kirjoittama lause oikein. Alkulaatikon tilalle ilmestyy vastauslaatikko (punainen, jos vastaus on väärin, vihreä jos vastaus on oikein), jossa annetaan palautetta suorittajalle. Loppulaatikossa ilmestyy oikea lause.</p><p>Jos vastaus on 100 % oikein, <strong>OK</strong>-ikoni tulee näkyviin. Jos vastaus on väärä, näkyviin tulee <strong>Ei OK</strong>-ikoni.</p><p><strong>Tässä ideoita milloin tätä elementtiä voisi käyttää:</strong></p><ul><li><p>rakennettaessa yrityksen missiota tai visiota</p></li><li><p>työtehtävissä, jotka edellyttävät tarkkaa sanamuotoa esim. radioviestinnässä.</p></li></ul><h3>Elementin muokkausohjeet</h3><p>Lisää elementin taustakuva, joka tukee käsiteltävää aihetta.</p><p>Klikkaa elementin editointinäkymän ylälaidassa sijaitsevasta oranssista ratasikonista <strong>Element Settings</strong> -vaihtoehtoa.</p><p>Lisää tarvittavat raahattavat sananapit <strong>Element Settings</strong> -ikkunasta. Sananapit ilmestyvät elementin oikealle puolelle. Anna sananapille loogisessa järjestyksessä nimet, esim. &quot;<em>A Code of Conduct</em>&quot;, &quot;<em>is a set of values</em>&quot;, &quot;<em>and principles</em>&quot;, &quot;<em>that guide</em>&quot;, &quot;<em>an organisation</em>.&quot;</p><p>Lisää tarvittaessa virheelliset sananapit viimeisen oikean sananapin alapuolelle, esimerkiksi tässä tapauksessa &quot;<em>A Code of behaviour</em>&quot;, &quot;<em>is a set of laws</em>&quot; ja &quot;<em>that run</em>&quot;. Tässä esimerkissä suorittajan pitäisi siirtää sananappeja, jotka muodostavat seuraavan lauseen: <em>&quot;A Code of Conduct is a set of values and principles that guide an organisation.&quot;   </em></p><p>Kytke <strong>Shuffle</strong>-toiminto päälle. Jos toimintoa ei ole aktivoitu, sananapit näkyvät samassa järjestyksessä alkulaatikossa.</p><p>Vihreä vastauslaatikko tulee näkyviin, kun klikkaat eteenpäin-painiketta. Kirjoita tähän vastausteksti, joka antaa lisätietoja oikeasta lauseesta. Sama teksti näkyy myös punaisella puolella.</p><p>Anna vasempaan ylempään tekstikenttään tietoja kyseisestä lauseesta ja ohjeita suorittajalle, esimerkiksi:</p><p><em>”Vedä oikealla ylhäällä olevat sananapit oikeassa järjestyksessä alla olevaan laatikkoon. Klikkaa eteenpäin-painiketta, kun olet valmis, nähdäksesi tuloksen.&quot;</em></p><p>Voit säätää tehtävän vaikeusastetta klikkaamalla vasemmassa yläkulmassa olevaa työkaluikonia. Tämän jälkeen avautuu <strong>Phrase-elementin asetukset</strong>.</p><p>Jos Phrase-elementin asetuksissa on aktivoitu vaihtoehto ”<em>Allow only the right number of words to be dragged</em>” ikkunan oikeassa alakulmassa näkyy oikea määrä siirrettäviä sananappeja. Jos tätä vaihtoehtoa ei ole valittu, eteenpäin -painike näytetään sen jälkeen, kun ensimmäinen sananappi on siirretty alempaan laatikkoon.</p><p><strong>Tarkistuslogiikka</strong></p><p>Elementti laskee, kuinka oikein tehtävä on mennyt prosentteina (0-1, 1 = 100%). Statistiikkaan merkitään prosentti. Prosentilla kerrotaan elementille merkattu maksipistemäärä, jolloin saadaan elementistä saadut pisteet.</p><p>Prosentin laskemisessa tarkastellaan kolmea asiaa:</p><ul><li><p>kuinka monta oikeaa sanaa suorittaja on valinnut</p></li><li><p>kuinka monta väärää sanaa suorittaja on valinnut</p></li><li><p>onko koko fraasi oikeassa järjestyksessä</p></li></ul><p><strong>Normal - vaihtoehdon tarkistuslogiikka:</strong></p><ul><li><p>Jos koko fraasi on oikein, tehtävästä saa 100%</p></li><li><p>Jos vastauksessa on jotain virheitä (väärä järjestys, liian vähän tai paljon valittuja sanoja) käyttäjälle annetaan 50% maksimipisteistä.</p></li><li><p>Tästä 50%:sta vähennetään prosentteja jokaisen väärän raahatun sanan edestä.</p></li><li><p>Tästä 50%:sta jokainen väärin valittu sana pienentää prosenttia, jolla kerrotaan elementin maksimipistemäärä.</p></li><li><p>Yhden väärän sanan suhteutettu prosenttiarvo on sama kuin yhden oikean sanan, eli yhdestä väärästä sanasta vähentyy yhtä paljon prosentteja kuin oikeasta sanasta saa.</p></li></ul><p></p><h3>Elementin julkaisutilassa</h3><p><img src="statamic://asset::files::docs/2024/12/Phrases-element-demo.gif"></p><h3>Elementin muokkaustilassa</h3><p><img src="statamic://asset::files::docs/2024/12/Phrases-element-settings-image.png"></p><h3>Elementin asetukset muokkaustilassa</h3><p><img src="statamic://asset::files::docs/2024/12/Phrase-asetukset.png"></p>

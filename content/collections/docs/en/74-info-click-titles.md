@@ -1,45 +1,7 @@
 ---
-id: 4b27e2fc-2242-41d5-8224-46ae35f1bba6
+id: d806679b-c431-4d0f-806a-a176ee9ef135
+origin: 4b27e2fc-2242-41d5-8224-46ae35f1bba6
 blueprint: doc
 title: '7.4 Info Click Titles'
 ---
-<b>Info Click Titles</b> is an element in which you can divide a longer text or subject area as a main header, lead text and several subheaders that provide additional information on the topic (or subtopics) when clicked. Dividing a complex or broad topic into a main chapter and sub-chapters will make it <span>easier for the trainee to grasp. </span>You can also choose which subheaders are mandatory and must be clicked open before continuing.
-
-When activated, every clickable subheader has a field for a subtopic title, body text, and an information box that can be utilized to structure the body text, e.g., by providing additional information on the subtopic.
-
-The trainee reads the main info on the left side of the element, then s/he clicks the subheader buttons and reads the additional information of each chapter on the right side of the element.
-<h4>Editing Instructions</h4>
-<ul>
- <li>Write the main title and the main topic in the left text area of the element.</li>
- <li>If the left side of the element does not have a solid colour background automatically installed, add a background image by clicking the <b>Change image </b>icon from the top right corner on the left half of the element.</li>
- <li>Add a background image on the right side of the element that supports the topic addressed in the element.</li>
- <li>Click the Element Settings option from the gear icon at the top of the Edit Element Contents view. In the window, add the needed subheaders.
-<ul>
- <li>New subheader buttons will appear on the left side of the element. Enter a title for each subheader.</li>
-</ul>
-</li>
- <li>Click the uppermost subheader button. A small <strong>Mandatory</strong> icon appears on the right side of the subheader button.
-<ul>
- <li>If you select the Mandatory icon, the subheader button will become mandatory (the trainee must click it open before proceeding from the element).</li>
-</ul>
-</li>
- <li>Add the subheader title on the right side of the element and provide additional information on the topic in the body text field below.</li>
- <li>You can also use the button below to add information the user isn’t required to read before continuing. Use this button to structure the content, e.g.,” Read more” or ”Did you know?”
-<ul>
- <li>After the trainee clicks the button, the text appears below the button. Use this text box to provide additional information related to the topic.</li>
- <li>If there is no text in the button or its text area, neither will be visible.</li>
- <li>Removing the text from the button and its text field can free up more space for a longer body text. In this case, the button and its text field will not be visible, making more space for body text available.</li>
-</ul>
-</li>
- <li>Repeat these steps for each subheader button.</li>
-</ul>
-
-<h6 class="p1"><b>Click on the images to enlarge them.</b></h6>
-
-<h5>Element settings in Edit mode</h5>
-
-<h5>Element in Preview mode</h5>
-
-<figure class="doc-image"><img src="/files/docs/2024/06/InfoClicktitle11-1.gif" alt="" loading="lazy"></figure>
-
-<figure class="doc-image"><img src="/files/docs/2024/06/InfoClicktitle12-1.gif" alt="" loading="lazy"></figure>
+<p>In the <strong>Info Click Titles</strong> info element, you can divide a long text or subject area into a main heading, an introduction text shown below it, and clickable subheadings that the learner can press to get more information (sub-topics). The element makes it possible to organize large or complex subject areas into a more easily understandable form.</p><p>The learner first reads the topic introduction or general information on the left side of the element, then clicks the heading buttons below it and, after clicking, reads the additional information about the topic that opens on the right side of the element.</p><p>The clickable headings can be set as mandatory, in which case every subheading must be clicked open, or as optional, in which case these headings do not need to be clicked open to proceed past the element. Each subheading, when clicked active, has its own title field, body text field, and an additional information button that can be used for organizing the sub-topic. The button can be named to suit the topic, such as "Did you know?" or "More information about topic X". When the learner clicks the button, an information box appears below the sub-topic.</p><h3>Element editing instructions</h3><ul><li><p>Write the main heading of the topic being covered and the topic introduction on the left side of the element. You can also leave the introduction field empty.</p></li><li><p>If a single-color background image has not been automatically set on the right side of the element: it is recommended to add a solid-color background on the right side so that the clickable headings and other text content stand out clearly (e.g. a white image if the texts are dark-colored). You can set the image by clicking the <strong>Change Image</strong> icon in the upper right corner of the left half of the element.</p></li><li><p>Add a background image to the right side of the element that supports the topic being covered.</p></li><li><p>Click <strong>Element Settings</strong> from the orange gear icon located at the top of the element's edit view. Add the required clickable topic headings in the <strong>Element Settings</strong> window. The topic heading buttons will appear on the left side of the element. Give the buttons titles according to the topics being covered.</p></li><li><p>Click the topmost topic heading button you added. A <strong>Mandatory</strong> icon appears to the right of the button.<ul><li><p>If you select the <strong>Mandatory</strong> icon, clicking the heading button (i.e. opening the topic) becomes mandatory. The learner must click the heading open before proceeding.</p></li></ul></p></li><li><p>Add the chapter/sub-topic heading on the right side of the element, which can be the same as the clickable topic heading button.<ul><li><p>Write information about the topic in the text field below. You can also use this space for longer texts: if you do not use the additional information button located below the body text, more space is freed up for the sub-topic body text field.<ul><li><p>In that case, remove the text content from the heading button and the additional information field that opens from the button.</p></li></ul></p></li></ul></p></li><li><p>Use the button below the sub-topic body text field to add additional information that the user does not need to read before proceeding.<ul><li><p>In that case, also name the button that the user clicks to open the text with additional information (for example "Did you know?" or "Read more").</p></li><li><p>Also add text to the text field that opens from the button.</p></li><li><p>Remove the text content from the heading button and the additional information field that opens from the button if you want to hide the button and the additional information field.<ul><li><p>If there is no text, the text box is not visible.</p></li></ul></p></li></ul></p></li><li><p>Repeat these steps for each clickable topic heading you added in the <strong>Element Settings</strong> window.</p></li></ul><h3>Element settings in edit mode</h3><p><img src="statamic://asset::files::docs/2024/06/InfoClicktitle11.gif"></p><h3>Element in preview mode</h3><p><img src="statamic://asset::files::docs/2024/06/InfoClicktitle12.gif"></p><h3>Element in published mode</h3><p><img src="statamic://asset::files::docs/2021/08/Info_Click_Titles_FI_-1.gif"></p>

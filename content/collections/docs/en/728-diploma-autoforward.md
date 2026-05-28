@@ -1,37 +1,7 @@
 ---
-id: f9586636-c3a1-40a2-8133-6781517237d3
+id: 7ad5715b-6a97-4dce-a435-dae6f816e712
+origin: f9586636-c3a1-40a2-8133-6781517237d3
 blueprint: doc
-title: '7.28 Diploma autoforward'
+title: '7.28 Diploma Autoforward'
 ---
-When the trainee arrives in this element, they can do the following:
-<ul>
- <li>If the element is placed at the end of the main module, before the Finish element, the trainee can
-<ul>
- <li>Move forward to the end of the module, by using the move forward button.</li>
- <li>Select “Open a new tab” button. In this case a new tab is opened. The new tab contains the diploma. The diploma can be saved or printed. Note, that in the first tab the trainee is moved automatically from the Diploma to the Finish element.</li>
- <li>Insert the email address and press the “Send via email” button. The trainee will be then moved automatically to the Finish element.</li>
-</ul>
-</li>
-</ul>
-<ul>
- <li>If the element is placed at the end of the submodule, the trainee can
-<ul>
- <li>Move forward, by using the move forward button. In this case the trainee will be moved to the Submenu buttons element, in the main module.</li>
- <li>Select “Open a new tab” button. In this case a new tab is opened. The new tab contains the diploma. The diploma can be saved or printed. Note, that in the other tab the trainee is moved from the Diploma element to the main module Submenu buttons - element.</li>
- <li>Insert the email address and press the “Send via email” button. The user will be then moved automatically to the main module Submenu buttons - element.</li>
-</ul>
-</li>
-</ul>
-<h4>Editing Instructions</h4>
-This element should be placed:
-<ul>
- <li>in the main module before the Finish element</li>
- <li>in the submodule at the end of the submodule.</li>
-</ul>
-Edit the text boxes, if needed.
-
-<h6 class="p1"><b>Click on the images to enlarge them.</b></h6>
-
-<h5>Diploma autoforward element</h5>
-
-<figure class="doc-image"><img src="/files/docs/2022/01/diploma-autoforward-1.png" alt="" loading="lazy"></figure>
+<p>When the learner reaches this element, they can perform the following actions:</p><ul><li><p>If the element is placed at the end of the main module, before the Finish element:<ul><li><p>Proceed to the end of the module using the arrow button on the right side.</p></li><li><p>Click the "Open in new tab" button, which opens a new tab containing the diploma. The learner can save or print the diploma. Meanwhile, in the other tab, the learner is automatically moved from the Diploma element to the Finish element.</p></li><li><p>Enter an email address and press the "Send by email" button. After this, the user is automatically moved to the Finish element.</p></li></ul></p></li><li><p>If the element is placed at the end of a submodule:<ul><li><p>Proceed using the arrow button on the right side. In this case, the learner is moved to the main module's Submenu Buttons element.</p></li><li><p>Click the "Open in new tab" button, which opens a new tab containing the diploma. The learner can save or print the diploma. Meanwhile, in the other tab, the learner is automatically moved from the Diploma element to the main module's Submenu Buttons element.</p></li><li><p>Enter an email address and press the "Send by email" button. After this, the learner is automatically moved to the main module's Submenu Buttons element.</p></li></ul></p></li></ul><h3>Element editing instructions</h3><p>This element should be placed in the main module before the <strong>Finish</strong> element, or at the end of a submodule.</p><p>Edit the text fields as needed.</p><h3></h3><h3><strong> Element in published mode</strong></h3><p><img src="statamic://asset::files::docs/2022/01/diploma-autoforward.png"></p>

@@ -2,37 +2,12 @@
 id: fde31160-3535-4358-8004-f8f86409fcff
 blueprint: doc
 title: '7.46 Pictures & Captions'
+seo_noindex: false
+seo_nofollow: false
+seo_canonical_type: entry
+sitemap_change_frequency: weekly
+sitemap_priority: 0.5
+updated_by: 680e1400-32cd-4415-9b61-d630b47576db
+updated_at: 1779939377
 ---
-<strong>Pictures &amp; captions</strong> -elementti näyttää tietyn tehtävän tai prosessin suorittamisen vaiheet tai sen avulla voidaan tarkistaa tietyn väitteen yksityiskohdat.
-
-Aluksi selitetään miten elementti toimii.
-
-Elementin oikealla puolella on luettelo, jossa on tekstilaatikoita, jotka sisältävät selityksiä kyseisestä aiheesta.
-
-Uusi kuva avautuu aina, kun klikataan uutta tekstilaatikkoa.
-
-Jokainen tekstilaatikko sisältää lyhyen tekstin, joka selittää vastaavan kuvan.
-
-Kun tekstilaatikkoa on klikattu, näyttöön ilmestyy "<em>Done</em>"-merkki.
-
-<strong>Huom!</strong> Sama tekstilaatikko voidaan klikata useammin kuin kerran.
-
-Oikealla alhaalla on tekstilaatikoiden summa ja oikealla ylhäällä kyseisen aiheen otsikko.
-<h4><strong>Elementin muokkausohjeet</strong></h4>
-<ul>
- <li><strong> </strong>Suunnittele eri vaiheet.</li>
- <li>Avaa elementti muokkaustilassa.</li>
- <li>Kirjoita johdanto <em>Introduction</em> -tekstilaatikkoon, jos haluat näyttää johdannon tämän elementin alussa. Voit myös jättää tekstilaatikon tyhjäksi – tässä tapauksessa tekstilaatikko ei näy.</li>
- <li>Kukin tekstilaatikko lisätään klikkaamalla elementin editointinäkymän ylälaidassa sijaitsevasta oranssista ratasvalikosta <em>Element settings</em> -vaihtoehtoa. <em>Element settings</em> ikkuna avautuu.</li>
- <li>Lisää tarvittavat kohteet, eli vaiheet klikkaamalla "<em>Add item</em>" -painiketta.</li>
- <li>Kukin kohde, eli vaihe ilmestyy <em>Edit</em>-tilassa elementin oikealle puolelle.</li>
- <li>Klikkaa oikealla puolella olevaa tekstilaatikkoa kerrallaan. Uusi tyhjä taustakuva avautuu joka kerta.</li>
- <li>Lisää taustakuva klikkaamalla <em>Change image</em> -kuvaketta taustakuvan oikeassa yläkulmassa.</li>
- <li>Lisää kuhunkin tekstiruutuun vaiheen teksti.</li>
-</ul>
-
-<h6 class="p1">Klikkaa kuvia suurentaaksesi niitä.</h6>
-
-<figure class="doc-image"><img src="/files/docs/2023/07/Pictures-and-captions-preview-video-1.gif" alt="" loading="lazy"></figure>
-
-<figure class="doc-image"><img src="/files/docs/2023/07/Pictures-and-captions-element-editing-video-1.gif" alt="" loading="lazy"></figure>
+<p><strong>Pictures &amp; captions</strong> -elementti näyttää tietyn tehtävän tai prosessin suorittamisen vaiheet tai sen avulla voidaan tarkistaa tietyn väitteen yksityiskohdat.</p><p>Aluksi selitetään miten elementti toimii.</p><p>Elementin oikealla puolella on luettelo, jossa on tekstilaatikoita, jotka sisältävät selityksiä kyseisestä aiheesta.</p><p>Uusi kuva avautuu aina, kun klikataan uutta tekstilaatikkoa.</p><p>Jokainen tekstilaatikko sisältää lyhyen tekstin, joka selittää vastaavan kuvan.</p><p>Kun tekstilaatikkoa on klikattu, näyttöön ilmestyy &quot;<em>Done</em>&quot;-merkki.</p><p><strong>Huom!</strong> Sama tekstilaatikko voidaan klikata useammin kuin kerran.</p><p>Oikealla alhaalla on tekstilaatikoiden summa ja oikealla ylhäällä kyseisen aiheen otsikko.</p><h3>Elementin muokkausohjeet</h3><ul><li><p><strong> </strong>Suunnittele eri vaiheet.</p></li><li><p>Avaa elementti muokkaustilassa.</p></li><li><p>Kirjoita johdanto <em>Introduction</em> -tekstilaatikkoon, jos haluat näyttää johdannon tämän elementin alussa. Voit myös jättää tekstilaatikon tyhjäksi – tässä tapauksessa tekstilaatikko ei näy.</p></li><li><p>Kukin tekstilaatikko lisätään klikkaamalla elementin editointinäkymän ylälaidassa sijaitsevasta oranssista ratasvalikosta <em>Element settings</em> -vaihtoehtoa. <em>Element settings</em> ikkuna avautuu.</p></li><li><p>Lisää tarvittavat kohteet, eli vaiheet klikkaamalla &quot;<em>Add item</em>&quot; -painiketta.</p></li><li><p>Kukin kohde, eli vaihe ilmestyy <em>Edit</em>-tilassa elementin oikealle puolelle.</p></li><li><p>Klikkaa oikealla puolella olevaa tekstilaatikkoa kerrallaan. Uusi tyhjä taustakuva avautuu joka kerta.</p></li><li><p>Lisää taustakuva klikkaamalla <em>Change image</em> -kuvaketta taustakuvan oikeassa yläkulmassa.</p></li><li><p>Lisää kuhunkin tekstiruutuun vaiheen teksti.</p></li></ul><p></p><h3><strong>Elementti Esikatselu tilassa</strong></h3><h3><img src="statamic://asset::files::docs/2023/07/Pictures-and-captions-preview-video-1.gif"></h3><h3><strong>Elementti Edit tilassa</strong></h3><p><img src="statamic://asset::files::docs/2023/07/Pictures-and-captions-element-editing-video-1.gif"></p>

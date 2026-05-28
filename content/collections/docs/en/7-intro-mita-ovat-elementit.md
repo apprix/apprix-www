@@ -1,26 +1,7 @@
 ---
-id: 8b3a586e-f4f4-43b5-a2da-6849b8352425
+id: 61c48bd2-3274-4406-bcdc-b4c97bd864c3
+origin: 8b3a586e-f4f4-43b5-a2da-6849b8352425
 blueprint: doc
-title: '7 Intro – What Are Elements?'
+title: '7 Elements'
 ---
-Course modules consist of elements. There are several different types of elements in the element library that you can add between the Intro and Finish elements that form the module's frame. Your module is the masterpiece in-between them!
-
-The best way to get familiarized with the elements is to preview them in the Element Library. Click the <b>Add Element button</b> in <b>Edit Module</b> view. Hover your mouse on the i-icon in the top right corner of elements to see previews of elements in the library.
-
-Element categories include:
-<ul>
- <li><strong>Info elements:</strong> These elements consist of mostly text and they have limited interactivity.</li>
- <li><strong>Task elements:</strong> E.g. Multichoice, True/False, Bars, Checkbox elements
-<ul>
- <li>Please note that task elements are not suitable for gathering opinions or experiences as a correct answer needs to be defined.</li>
-</ul>
-</li>
- <li><strong>Gathering signals: </strong>E.g. Fourfold, Slider icons and Feedback elements that gather opinions and experiences in a questionnaire type manner. These elements can also be used for educational purposes. As an example of these use cases, have a look at the descriptions of <b><a href="#slidericons">Slider icons</a> </b>and <a href="#bars"><b>Bars</b></a> elements.</li>
- <li><b>Other elements for more specific purposes: </b>E.g. hotspot, video, dialogue, and transition elements.</li>
-</ul>
-
-<p class="p1">In addition, you may find elements like Submenu Buttons or Landing Page to build module structures and create pages for module links.</p>
-<p class="p1">Please consider that modules containing merely info elements are quite easy to browse through without really understanding or internalizing the content. With a little effort, your content can be transformed into a more compelling task form that allows the trainee to truly stop and think about the correct answers and what he/she has learned from the course experience. With the help of statistics, you will be better informed about the level of knowledge and understanding amongst the trainees in terms of your course topic. You can also fit long chunks of content in multiple choice tasks that trainees have to read thoroughly to be able to give the correct answer.</p>
-<p class="p1">If you can think of real-life situations or concrete examples that speak to the trainees – even better! Try to think about the key points of your content and make the trainee stop and focus in those parts with excersises and questionnaires.</p>
-
-<figure class="doc-image"><img src="/files/docs/2020/04/Elements_-1.png" alt="" loading="lazy"></figure>
+<h3>What are elements?</h3><p>Course modules are made up of elements that are added between the Intro and Finish elements. The aforementioned elements act as a frame for your module.</p><p>The easiest way to explore elements is to click <strong>Add Element</strong> in the module editing view <strong>Edit Module</strong> and hover your mouse over the <strong>i-icon</strong> that appears in the top-right corner of the elements to see a brief preview of the element's functionality and to read about their recommended use cases.</p><p>There are various types of elements, and they can be broadly divided into four categories:</p><ul><li><p><strong>Info elements:</strong> these consist mainly of text and images and have very limited interactivity.</p></li><li><p><strong>Task elements:</strong> for example multiple choice, true/false, bars task with answer, checkbox.<ul><li><p>Please note that task elements should not be used in surveys to measure users' opinions or experiences, as tasks require defining a correct answer.</p></li></ul></p></li><li><p><strong>Signal collection:</strong> for example Fourfold, Slider icons, and Feedback elements, which collect learners' opinions and experiences in a survey-like manner. These can also be used for teaching purposes instead of surveys (see for example the descriptions of the Slider icons and Bars elements).</p></li><li><p><strong>Other elements made for specific purposes:</strong> for example hotspot, video, dialogue, transition.</p><p></p></li></ul><p>In addition, the selection may include Submenu and Landing Page elements for creating different structures and module summary pages.</p><p>Please note that plain info pages one after another are unfortunately very easy to skip or browse through without reading and internalising their content. With just a little thought, you can transform the content into a more interesting, engaging task format, which requires the user to stop and think about the correct answers and what they have learned during the course experience. The course statistics will give you an accurate picture of the respondent group's level of knowledge. A great deal of content that the learner must internalise in order to answer correctly can also be embedded in the answer option texts of task elements.</p><p>If you can find situations from real life for the tasks or come up with concrete examples that resonate with the learner – all the better! Think especially about the possible key points or problem areas of the content and stop the learner at those points to think using tasks or surveys.</p><h3>How can you explore the elements?</h3><p><img src="statamic://asset::files::docs/2024/08/How-you-can-get-to-know-the-elements.gif"></p>

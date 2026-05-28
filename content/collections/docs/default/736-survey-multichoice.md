@@ -2,31 +2,12 @@
 id: 2bb6e5bd-4c63-4eee-9f14-98cfdb94e04c
 blueprint: doc
 title: '7.36 Survey Multichoice'
+seo_noindex: false
+seo_nofollow: false
+seo_canonical_type: entry
+sitemap_change_frequency: weekly
+sitemap_priority: 0.5
+updated_by: 680e1400-32cd-4415-9b61-d630b47576db
+updated_at: 1779939885
 ---
-<strong><strong>Survey Multichoice</strong> on kyselyelementti. Elementin avulla voit esittää kysymyksen, johon suorittajan on vastattava valitsemalla yksi tai useampi käytettävissä olevista vaihtoehdoista. Kun vaihtoehdot on valittu, suorittaja klikkaa </strong>eteenpäin<strong>-painiketta elementin oikeassa laidassa, ja inforuutu loppuyhteenvetoa tai lisätietoa varten ilmestyy. Ruudussa voidaan kiittää harjoittelijaa palautteen antamisesta ja/tai antaa lisätietoja elementissä käsitellyistä aiheista.</strong>
-<h4>Elementin muokkausohjeet</h4>
-<ul>
- <li>Kirjoita ikkunan vasemmassa laidassa sijaitsevaan tekstikenttään kyselyn otsikko ja kysymys/skenaario.</li>
- <li>Lisää taustakuva klikkaamalla <b>Change image</b> -kuvaketta elementin kuvakentän oikeassa yläkulmassa.</li>
- <li>Klikkaa elementin editointinäkymän yläosassa sijaitsevasta oranssista ratasvalikosta <b>Element settings</b> -vaihtoehtoa. 
-<ul>
- <li>Lisää, poista, muokkaa tai vaihda vastausvaihtoehtojen järjestystä <b>Element settings </b>-ikkunassa. Uudet valintaruudut ilmestyvät elementin oikeaan laitaan.</li>
-</ul>
-</li>
- <li>Klikkaa elementin vasemmassa yläkulmassa olevaa ratasikonia. <b>Option settings</b> -ikkuna avautuu. Ikkunassa voit asettaa vaatimukseksi, että tehtävässä pitää valita yksi tai vaihtoehtoisesti useampi vastausvaihtoehto ennen kuin suorittaja voi jatkaa eteenpäin.</li>
- <li>Klikkaa kysymysmerkkikuvaketta elementin oikeassa yläkulmassa. Tekstiruutu/loppuyhteenveto avautuu. Tekstikentässä voit kiittää suorittajaa palautteen antamisesta ja/tai antaa lisätietoja tehtävästä. Voit myös jättää laatikon tyhjäksi. Tällöin tekstiruutu ei näy suorittajalle tehtävän lopussa.</li>
-</ul>
-
-<h6 class="p1">Klikkaa kuvia suurentaaksesi niitä.</h6>
-
-<figure class="doc-image"><img src="/files/docs/2021/08/Survey_Multichoice_FI-1.gif" alt="" loading="lazy"></figure>
-
-<h5>Elementin asetukset editointinäkymässä:</h5>
-
-<figure class="doc-image"><img src="/files/docs/2021/08/Survey_Multichoice_Edit_FI-1.gif" alt="" loading="lazy"></figure>
-
-<figure class="doc-image"><img src="/files/docs/2021/06/survey1.png" alt="" loading="lazy"></figure>
-
-<figure class="doc-image"><img src="/files/docs/2021/06/Survey2.png" alt="" loading="lazy"></figure>
-
-<figure class="doc-image"><img src="/files/docs/2021/06/Survey3.png" alt="" loading="lazy"></figure>
+<p><strong>Survey Multichoice</strong> on kyselyelementti. Elementin avulla voit esittää kysymyksen, johon suorittajan on vastattava valitsemalla yksi tai useampi käytettävissä olevista vaihtoehdoista. Kun vaihtoehdot on valittu, suorittaja klikkaa eteenpäin-painiketta elementin oikeassa laidassa, ja inforuutu loppuyhteenvetoa tai lisätietoa varten ilmestyy. Ruudussa voidaan kiittää harjoittelijaa palautteen antamisesta ja/tai antaa lisätietoja elementissä käsitellyistä aiheista.</p><h3>Elementin muokkausohjeet</h3><ul><li><p>Kirjoita ikkunan vasemmassa laidassa sijaitsevaan tekstikenttään kyselyn otsikko ja kysymys/skenaario.</p></li><li><p>Lisää taustakuva klikkaamalla <strong>Change image</strong> -kuvaketta elementin kuvakentän oikeassa yläkulmassa.</p></li><li><p><p>Klikkaa elementin editointinäkymän yläosassa sijaitsevasta oranssista ratasvalikosta <strong>Element settings</strong> -vaihtoehtoa.</p><ul><li><p>Lisää, poista, muokkaa tai vaihda vastausvaihtoehtojen järjestystä <strong>Element settings </strong>-ikkunassa. Uudet valintaruudut ilmestyvät elementin oikeaan laitaan.</p></li></ul></p></li><li><p>Klikkaa elementin vasemmassa yläkulmassa olevaa ratasikonia. <strong>Option settings</strong> -ikkuna avautuu. Ikkunassa voit asettaa vaatimukseksi, että tehtävässä pitää valita yksi tai vaihtoehtoisesti useampi vastausvaihtoehto ennen kuin suorittaja voi jatkaa eteenpäin.</p></li><li><p>Klikkaa kysymysmerkkikuvaketta elementin oikeassa yläkulmassa. Tekstiruutu/loppuyhteenveto avautuu. Tekstikentässä voit kiittää suorittajaa palautteen antamisesta ja/tai antaa lisätietoja tehtävästä. Voit myös jättää laatikon tyhjäksi. Tällöin tekstiruutu ei näy suorittajalle tehtävän lopussa.</p></li></ul><p></p><h3>Elementti julkaisutilassa ( Published mode )</h3><p><img src="statamic://asset::files::docs/2021/08/Survey_Multichoice_FI-1.gif"></p><h3>Elementin asetukset editointinäkymässä:</h3><p><img src="statamic://asset::files::docs/2021/08/Survey_Multichoice_Edit_FI-1.gif"></p><p><img src="statamic://asset::files::docs/2021/06/survey1.png"></p><p><img src="statamic://asset::files::docs/2021/06/Survey2.png"></p><p><img src="statamic://asset::files::docs/2021/06/Survey3.png"></p>

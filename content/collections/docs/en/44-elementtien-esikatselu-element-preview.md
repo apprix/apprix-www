@@ -1,44 +1,7 @@
 ---
-id: 020b3e30-3a12-402d-845e-ea8194a9a208
+id: b85d86ca-b36b-42fa-9eb2-9dbf401af2da
+origin: 020b3e30-3a12-402d-845e-ea8194a9a208
 blueprint: doc
-title: '4.4 Previewing Elements (Element Preview Option)'
+title: '4.4 Element Preview'
 ---
-You can preview a single element by:
-<ul>
- <li>Clicking the eye icon in the upper right corner of the element in the "Edit Module" view.</li>
- <li>Selecting the option "<strong>Preview element in new tab</strong>" from the gear icon at the top of the element in Edit mode.</li>
-</ul>
-<h4><strong>Preview Toolbar</strong></h4>
-<ul>
- <li>The Preview toolbar appears when the element is in <strong>Preview</strong> mode. The forward and backwards buttons allow easy navigation within the module.</li>
- <li>The forward and backwards buttons on the Preview toolbar do not allow you to move backwards from the intro element or forward from the finish element.</li>
- <li>The size of the Preview toolbar changes when clicking the Minimise/Maximise buttons and remains the same when switching tabs.</li>
- <li>The <strong>Copy</strong> button is displayed in the preview bar if the user is logged in as a facilitator to the same tenant as the module.</li>
- <li>The element and its content are copied by pressing 'Copy' in the Preview toolbar.
-<ul>
- <li><strong>How do you then attach the copied element? </strong>Select the module where you want to attach the copied element. From the orange gear at the top of the <strong>Edit Module</strong>, choose '<strong>Paste element &amp; content</strong>', and the element will be copied with its content to the end of the module <strong>before</strong> the <strong>Finish</strong> element.</li>
-</ul>
-</li>
-</ul>
-<ul>
- <li>The Preview toolbar will display <strong>Draft</strong> and <strong>Published</strong> buttons for tenants with the <strong>Draft feature</strong> enabled when the module is published. These buttons show the active state with a white background. When either button is clicked, the module moves to the Intro element.</li>
- <li>The <strong>Preview toolbar</strong> can be <strong>dragged</strong> across the entire browser window. <strong>Note</strong>: If dragging is not enabled (this feature is unavailable for all customers), the drag icon (dots on the left side) will be missing.</li>
-</ul>
-<strong>Additional information</strong>
-
-<strong>4.6 Copying Elements with their content</strong>
-<a href="/help/46-elementtien-kopiointi-sisaltoineen-copy-element">4.6 Copying Elements with their content</a>
-
-<h6 class="p1">How are elements previewed?</h6>
-
-<h6 class="p1">Preview Toolbar (Max, Min, Draft)</h6>
-
-<figure class="doc-image"><img src="/files/docs/2025/06/Preview-element-1.jpg" alt="" loading="lazy"></figure>
-
-<figure class="doc-image"><img src="/files/docs/2025/06/Preview-element-in-new-tab-1.png" alt="" loading="lazy"></figure>
-
-<figure class="doc-image"><img src="/files/docs/2025/06/Preview-mode-max-1.png" alt="" loading="lazy"></figure>
-
-<figure class="doc-image"><img src="/files/docs/2025/06/Preview-mode-min-1.png" alt="" loading="lazy"></figure>
-
-<figure class="doc-image"><img src="/files/docs/2025/06/Preview-mode-draft-1.png" alt="" loading="lazy"></figure>
+<p>You can preview an individual element in the following ways:</p><ul><li><p>By clicking the eye icon in the top-right corner of the element in the <strong>Edit Module</strong> view.</p></li><li><p>In the element editing view, by selecting <strong>Preview element in new tab</strong> from the gear icon menu at the top of the element.</p></li></ul><h3>Preview toolbar</h3><ul><li><p>The Preview toolbar appears when an element is in <strong>Preview</strong> mode (the module preview mode). The forward and back buttons allow you to navigate through the module conveniently.</p></li><li><p>The Preview toolbar shows a <strong>Copy</strong> button if the user is logged in as a facilitator on the same tenant as the module.</p></li><li><p>The toolbar can be dragged anywhere within the browser window. <strong>Note!</strong> If the drag functionality is not available (this feature is not available to all customers), the drag icon — the dots on the left edge — will be absent.</p></li><li><p>The <strong>forward</strong> and <strong>back</strong> buttons in the <strong>Preview</strong> toolbar cannot be used to navigate backwards from the <strong>intro</strong> element or forwards from the <strong>finish</strong> element.</p></li><li><p>Clicking the <strong>Minimize/Maximize</strong> buttons changes the size of the Preview toolbar, and the size is retained when you switch tabs.</p></li><li><p>By clicking <strong>Copy</strong> in the <strong>Preview</strong> toolbar, the element's content is copied.<ul><li><p><strong>How do you then paste the copied element?</strong> Select the module to which you want to paste the copied element. From the orange gear icon at the top of Edit Module, select <strong>'Paste element &amp; content'</strong> — the element will be copied with its content to the end of the module, <strong>before the Finish</strong> element.</p></li></ul></p></li></ul><ul><li><p>On tenants where the <strong>Draft</strong> feature is enabled, <strong>Draft</strong> and <strong>Published</strong> buttons appear in the Preview toolbar once the module is published. The active state is shown with a white background. Clicking either button moves the module to the <strong>Intro</strong> element.</p></li></ul><p><strong>More information:</strong></p><p><strong>4.6 Copying Elements with Content</strong> <a href="/help/46-elementtien-kopiointi-sisaltoineen-copy-element">4.6 Copying Elements with Content</a></p><h3>How do you preview elements?</h3><p><img src="statamic://asset::files::docs/2025/06/Preview-element.jpg"></p><p><img src="statamic://asset::files::docs/2025/06/Preview-element-in-new-tab.png"></p><h3>Preview toolbar (Max, Min, Draft)</h3><p><img src="statamic://asset::files::docs/2025/06/Preview-mode-max.png"></p><p><img src="statamic://asset::files::docs/2025/06/Preview-mode-min.png"></p><p><img src="statamic://asset::files::docs/2025/06/Preview-mode-draft.png"></p><p></p>

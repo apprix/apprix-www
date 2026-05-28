@@ -2,46 +2,12 @@
 id: e25672a9-cd6f-4b6e-9a3a-c53b23ead364
 blueprint: doc
 title: '7.8 Hotspot Multichoice'
+seo_noindex: false
+seo_nofollow: false
+seo_canonical_type: entry
+sitemap_change_frequency: weekly
+sitemap_priority: 0.5
+updated_by: 680e1400-32cd-4415-9b61-d630b47576db
+updated_at: 1779935395
 ---
-<strong>Hotspot Multichoice</strong> on monivalintatehtäväelementti. Suorittaja lukee ensin tähän tehtävänannon <b>Introduction</b>-ruudusta, sitten kysymyksen ja lisätiedot tietoruuduista.
-
-Suorittajan on sitten vastattava valitsemalla ne vaihtoehdot (hotspotit), jotka hänen mielestään ovat oikeita vastauksia kysymykseen.
-
-Kun vaihtoehdot on valittu, suorittaja klikkaa nuolta eteenpäin sivun oikeassa laidassa. Hotspoteissa, jotka ovat oikeita vastauksia, näkyy oikein-merkki. Jos muokkaustilassa on lisätty lisätietoa vastaukseen liittyen sen kohdalle, lähelle hotspotia ilmestyy lyhyt viesti sisältäen selvityksen siitä, miksi kyseinen hotspot on oikein tai väärin.
-
-Tehtävän loppuun voi asettaa yhteenvetoruudun, jossa esitetään tiivistelmä tehtävän tuloksesta. Jos ruutu jätetään tyhjäksi muokkaustilassa, ikkuna ei ilmesty ja suorittajat näkevät vain Eteenpäin-painikkeen, josta siirrytään lopuksi pois tehtävästä.
-<h4>Elementin muokkausohjeet</h4>
-<ul>
- <li>Kirjoita johdanto ja tehtävän yhteenveto <b>Introduction</b> ja <b>Summary</b> -ruutuihin, jos haluat näyttää johdannon tämän tehtävän alussa ja yhteenvedon sen lopussa. Voit myös jättää laatikot tyhjiksi – tässä tapauksessa laatikot eivät näy suorittajalle.</li>
- <li>Sijoita monivalintavaihtoehtojen liikuteltavat kentät haluamaasi paikkaan taustakuvan päälle.</li>
- <li>Kirjoita tehtävän kysymys, skenaario tai tilanne tekstiruutuihin. Jos haluat näyttää vain taustakuvan, voit poistaa tekstin. Jos sisältöä ei ole, tekstiruutuja ei näytetä suorittajalle. Huomaathan, että näet tällöin muokkaustilassa edelleen tyhjät laatikot, joissa on teksti <i>”- click to insert text –”. </i>
-<ul>
- <li>Jos haluat piilottaa laatikot muokkaustilassa, klikkaa pyöreää <b>Hide Infos</b> -kuvaketta oikeassa yläkulmassa.</li>
-</ul>
-</li>
- <li>Lisää taustakuva klikkaamalla <b>Change image</b> -kuvaketta taustakuvan oikeassa yläkulmassa.</li>
- <li>Klikkaa elementin editointinäkymän ylälaidassa sijaitsevasta oranssista ratasvalikosta <b>Element settings</b> -vaihtoehtoa. Uusi ikkuna avautuu. Lisää tarvittavat hotspot-kentät ja aseta ne oikeiksi tai vääriksi vaihtoehdoiksi. 
-<ul>
- <li>Vedä hotspot-kenttä paikoilleen tarttumalla siihen hiirellä ja aseta se paikalleen. </li>
- <li>Voit säätää hotspotin kokoa ja muotoa sen reunoista. </li>
- <li>Muuta muotoa käyttämällä hotspot-kentän oikealla puolella olevaa kahvaa.</li>
-</ul>
-</li>
- <li>Nyt voit lisätä vastaustekstin kuhunkin hotspot-kentän viestiruutuun erikseen klikkaamalla hotspotteja. Kirjoita kuhunkin hotspottiin yksityiskohtainen selitys, miksi vaihtoehto on oikea tai väärä. Jos jätät tämän tekstiruudun tyhjäksi, sitä ei näytetä suorittajille, kun he tarkastavat vastauksiansa.</li>
- <li>Klikkaa oranssia työkaluikonia ikkunan vasemmassa yläkulmassa. Tuökalupalkki, jonka avulla voit säätää tekstiruutujen sijaintia ja väriä, tulee näkyviin. </li>
- <li>Työkalupalkin alla vasemmassa laidassa sijaitsee <b>Hide hotspots</b> -toiminto. </li>
- <li>Elementin oikeassa yläkulmassa sijaitsee pyöreä <b>Intro/Summary</b> -painike.</li>
- <li>Elementin muokkaamisen helpottamiseksi voit piilottaa infoboksit muokkaustilassa klikkaamalla <b>Hide/Show</b> <b>Infos</b> -painiketta oikeassa yläkulmassa.</li>
-</ul>
-
-<h6 class="p1">Elementti julkaisutilassa</h6>
-
-<figure class="doc-image"><img src="/files/docs/2024/08/Hotspot-multichoice-video-optimized.gif" alt="" loading="lazy"></figure>
-
-<h6>Elementin asetukset muokkaustilassa.</h6>
-
-<figure class="doc-image"><img src="/files/docs/2024/08/Hotspot-multichoice-video-settings-opt2.gif" alt="" loading="lazy"></figure>
-
-<h6>Voit lisätä vastaustekstin kuhunkin hotspot-kentän viestiruutuun erikseen klikkaamalla</h6>
-
-<figure class="doc-image"><img src="/files/docs/2024/08/Hotspot-multichoice-video-items-opt-3-1.gif" alt="" loading="lazy"></figure>
+<p><strong>Hotspot Multichoice</strong> on monivalintatehtäväelementti. Suorittaja lukee ensin tähän tehtävänannon <strong>Introduction</strong>-ruudusta, sitten kysymyksen ja lisätiedot tietoruuduista.</p><p>Suorittajan on sitten vastattava valitsemalla ne vaihtoehdot (hotspotit), jotka hänen mielestään ovat oikeita vastauksia kysymykseen.</p><p>Kun vaihtoehdot on valittu, suorittaja klikkaa nuolta eteenpäin sivun oikeassa laidassa. Hotspoteissa, jotka ovat oikeita vastauksia, näkyy oikein-merkki. Jos muokkaustilassa on lisätty lisätietoa vastaukseen liittyen sen kohdalle, lähelle hotspotia ilmestyy lyhyt viesti sisältäen selvityksen siitä, miksi kyseinen hotspot on oikein tai väärin.</p><p>Tehtävän loppuun voi asettaa yhteenvetoruudun, jossa esitetään tiivistelmä tehtävän tuloksesta. Jos ruutu jätetään tyhjäksi muokkaustilassa, ikkuna ei ilmesty ja suorittajat näkevät vain Eteenpäin-painikkeen, josta siirrytään lopuksi pois tehtävästä.</p><h3>Elementin muokkausohjeet</h3><ul><li><p>Kirjoita johdanto ja tehtävän yhteenveto <strong>Introduction</strong> ja <strong>Summary</strong> -ruutuihin, jos haluat näyttää johdannon tämän tehtävän alussa ja yhteenvedon sen lopussa. Voit myös jättää laatikot tyhjiksi – tässä tapauksessa laatikot eivät näy suorittajalle.</p></li><li><p>Sijoita monivalintavaihtoehtojen liikuteltavat kentät haluamaasi paikkaan taustakuvan päälle.</p></li><li><p>Kirjoita tehtävän kysymys, skenaario tai tilanne tekstiruutuihin. Jos haluat näyttää vain taustakuvan, voit poistaa tekstin. Jos sisältöä ei ole, tekstiruutuja ei näytetä suorittajalle. Huomaathan, että näet tällöin muokkaustilassa edelleen tyhjät laatikot, joissa on teksti <em>”- click to insert text –”. </em><ul><li><p>Jos haluat piilottaa laatikot muokkaustilassa, klikkaa pyöreää <strong>Hide Infos</strong> -kuvaketta oikeassa yläkulmassa.</p></li></ul></p></li><li><p>Lisää taustakuva klikkaamalla <strong>Change image</strong> -kuvaketta taustakuvan oikeassa yläkulmassa.</p></li><li><p>Klikkaa elementin editointinäkymän ylälaidassa sijaitsevasta oranssista ratasvalikosta <strong>Element settings</strong> -vaihtoehtoa. Uusi ikkuna avautuu. Lisää tarvittavat hotspot-kentät ja aseta ne oikeiksi tai vääriksi vaihtoehdoiksi.<ul><li><p>Vedä hotspot-kenttä paikoilleen tarttumalla siihen hiirellä ja aseta se paikalleen.</p></li><li><p>Voit säätää hotspotin kokoa ja muotoa sen reunoista.</p></li><li><p>Muuta muotoa käyttämällä hotspot-kentän oikealla puolella olevaa kahvaa.</p></li></ul></p></li><li><p>Nyt voit lisätä vastaustekstin kuhunkin hotspot-kentän viestiruutuun erikseen klikkaamalla hotspotteja. Kirjoita kuhunkin hotspottiin yksityiskohtainen selitys, miksi vaihtoehto on oikea tai väärä. Jos jätät tämän tekstiruudun tyhjäksi, sitä ei näytetä suorittajille, kun he tarkastavat vastauksiansa.</p></li><li><p>Klikkaa oranssia työkaluikonia ikkunan vasemmassa yläkulmassa. Tuökalupalkki, jonka avulla voit säätää tekstiruutujen sijaintia ja väriä, tulee näkyviin.</p></li><li><p>Työkalupalkin alla vasemmassa laidassa sijaitsee <strong>Hide hotspots</strong> -toiminto.</p></li><li><p>Elementin oikeassa yläkulmassa sijaitsee pyöreä <strong>Intro/Summary</strong> -painike.</p></li><li><p>Elementin muokkaamisen helpottamiseksi voit piilottaa infoboksit muokkaustilassa klikkaamalla <strong>Hide/Show</strong> <strong>Infos</strong> -painiketta oikeassa yläkulmassa.</p></li></ul><h3>Elementti julkaisutilassa</h3><p><img src="statamic://asset::files::docs/2024/08/Hotspot-multichoice-video-optimized.gif"></p><h3>Elementin asetukset muokkaustilassa.</h3><p><img src="statamic://asset::files::docs/2024/08/Hotspot-multichoice-video-settings-opt2.gif"></p><h3>Voit lisätä vastaustekstin kuhunkin hotspot-kentän viestiruutuun erikseen klikkaamalla</h3><p><img src="statamic://asset::files::docs/2024/08/Hotspot-multichoice-video-items-opt-3-1.gif"></p>

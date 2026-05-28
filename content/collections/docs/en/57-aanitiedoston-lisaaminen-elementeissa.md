@@ -1,39 +1,7 @@
 ---
-id: a1443e03-49ba-4517-8f62-0c5973617976
+id: 5d4ee624-0c97-4b6a-8a18-824662f766ef
+origin: a1443e03-49ba-4517-8f62-0c5973617976
 blueprint: doc
-title: '5.7 Adding an Audio File (Add Audio Option)'
+title: '5.7 Adding an Audio File in Elements'
 ---
-The <strong>Audio</strong> feature can be activated in the following elements: <strong>Info Half Background, Info Full Background, Transition</strong> and <strong>Hotspot</strong>
-
-Choose the element where you would like to add the audio file and <strong>Add audio</strong> from the gear icon at the top of the element.
-
-<strong>Note!</strong> If the Audio option is not activated in the element by default, please contact helpdesk@apprix.fi
-
-The Audio player is displayed at the bottom of the window.
-
-Click the Audio player. <strong>Change Audiofile</strong> pop-up window is displayed.
-
-<strong>Note!</strong> You can choose several options in this pop-up window:
-<ul>
- <li><strong>Autoplay:</strong> plays the audio automatically when the user enters the element.</li>
- <li><strong>Loop:</strong>  repeats the audio file in a loop</li>
- <li><strong>Position:</strong> chooses where the audio player should be shown in the element.</li>
- <li><strong>Alt text: </strong>shows text when the user clicks an icon next to the player. This is especially important when using voiceovers or speech for users without audio.</li>
-</ul>
-Click the <strong>Browse /Upload files</strong>… button in the Change Audio window.
-
-The <strong>Audio Library</strong> pop-up window appears. To save the audio file to the library, click <strong>Show uploaded file in library</strong> and then click the <strong>Upload new audio file</strong>… button.
-
-The pop-up window is opened. Select your audio file and <strong>Open</strong> button.
-
-In the "builder.apprix.fi says" pop-up window, enter the name of the audio file and press the <strong>OK</strong> button.
-
-<strong>Note!</strong> Only .MP3 or .MP4 files are allowed. <strong>Maximum audio size is</strong> <strong>100 megabytes</strong>.
-
-The audio file is now available in the <strong>Audio player</strong> at the bottom of the element’s window. You can play the audio by clicking the forward button.
-
-If necessary, you can remove the audio by selecting Remove Audio from the gear icon at the top of the element.
-
-<h6 class="p1"><b>How do you add an audio file?</b></h6>
-
-<figure class="doc-image"><img src="/files/docs/2023/12/5.7-Adding-an-Audio-File-.gif" alt="" loading="lazy"></figure>
+<p>The audio feature can be activated in the following elements: <strong>Info Half Background</strong>, <strong>Info Full Background</strong>, <strong>Transition</strong>, and <strong>Hotspot</strong>.</p><p>Select the element to which you want to add an audio file, and select <strong>Add audio</strong> from the gear icon at the top of the element.</p><p><strong>Note!</strong> If the audio option is not activated by default in the element, please contact helpdesk@apprix.fi.</p><p>The audio player appears at the bottom of the window.</p><p>Click the <strong>Audio</strong> player. The <strong>Change Audiofile</strong> popup window appears.</p><p><strong>Note!</strong> You can select several options in this popup window:</p><ul><li><p><strong>Autoplay</strong>: play the audio automatically when the user enters the element.</p></li><li><p><strong>Loop</strong>: play the audio file on loop.</p></li><li><p><strong>Position</strong>: choose where in the element the audio player is displayed.</p></li><li><p><strong>Alt text</strong>: display text when the user clicks the icon next to the player. This is especially important when using a voiceover/narration for users who do not have audio.</p></li></ul><p>Click the <strong>Browse / Upload files...</strong> button in the <strong>Change Audio</strong> window.</p><p>The <strong>Audio Library</strong> popup window appears. If you want to save the audio file to the library, click the <strong>Show uploaded file in library</strong> button and then the <strong>Upload new audio file...</strong> button.</p><p>A popup window opens. Select the audio file and click the <strong>Open</strong> button.</p><p>Enter the name of the audio file in the popup window "<strong>builder.apprix.fi says</strong>" and press the OK button. <strong>Note!</strong> Only .MP3 or .MP4 files are allowed. The maximum size of an audio file is 100 megabytes.</p><p>The audio file is now available in the <strong>Audio</strong> player at the bottom of the element window. You can play the audio by pressing the play button.</p><p>If needed, you can remove the audio file by selecting "<strong>Remove Audio</strong>" from the gear icon above the element.</p><h3>How do you add an audio file to an element?</h3><p><img src="statamic://asset::files::docs/2023/12/5.7-Adding-an-Audio-File-1-2.gif"></p>

@@ -1,80 +1,48 @@
 ---
-id: f100821e-673e-4918-a33c-a244db4ad010
+id: 8f2641cf-1fe0-404a-ad46-80c4bc565162
+origin: f100821e-673e-4918-a33c-a244db4ad010
 blueprint: doc
-title: '8.11 Diploma & Printables… feature'
+title: '8.11 Diploma & Printables...'
 ---
-The <strong>Diploma &amp; Printables</strong> feature is an updated and extended version of the Send diploma element.
-
-The benefits of the Diploma &amp; Printables feature are:
-<ul>
- <li>The trainee will only receive a diploma after completing the course (reaching the Finish element). This ensures that the trainee does not close the course after receiving the diploma from the Send diploma element before completing the course.</li>
- <li>You can choose a diploma template from the available ones and define its content.</li>
- <li>The course no longer needs a diploma element for the participant to print a diploma for themselves.</li>
-</ul>
-In the <strong>Finish</strong> element (the last element of the module), the course participant can open the course diploma in a new tab or email it.
-
-<strong>Activating the <em>Diploma &amp; Printables</em> Feature</strong>
-
-The <em>Diploma &amp; Printables</em> feature can be activated from the drop‑down menu that opens when you click the gear icon in the module’s editing view.
-
-<strong>Enabling Diplomas for Participants</strong>
-
-In the <em>Diploma for Participants</em> pop‑up window, the facilitator enables the feature by selecting <strong>Enable participant diploma for this module</strong>, located in the upper-left corner.
-
-Below this activation button, the facilitator can:
-<ul>
- <li>choose one or more customized diploma templates,</li>
+<p><strong>Diploma &amp; Printables</strong> is an updated and expanded version of the <strong>Send diploma</strong> element.</p><p>The advantages of Diploma &amp; Printables are:</p><ul>
+ <li>the learner receives the diploma only after completing the training in full (reaching the Finish element). This ensures that the learner does not close the training after receiving the diploma from the Send diploma element before finishing the training</li>
+ <li>you can select a diploma template from the available templates for the training, and additionally define any content to be included in the diploma.</li>
+ <li>it is no longer necessary to add an element to the training for the learner to print their own diploma.</li>
+</ul><p>In the <strong>Finish</strong> element (the last element of the module), the course participant can open the course diploma in a new tab, or send it by email.</p><h3>Activating the Diploma &amp; Printables Feature</h3><p>The <em>Diploma &amp; Printables</em> feature is activated in the module edit view by selecting the dropdown menu that opens from the gear icon.</p><h3>Enabling the Diploma for Participants</h3><p>In the <em>Diploma for Participants</em> popup, the facilitator can activate the feature by selecting <strong>Enable participant diploma for this module</strong>, located in the upper left corner of the window.</p><p>Below the activation button, the facilitator can:</p><ul>
+ <li>select one or more custom diploma templates,</li>
  <li>edit the diploma title,</li>
- <li>edit the diploma content text.</li>
-</ul>
-The participant’s first name, surname, and completion date are always included automatically.
-
-<strong>Customizing Participant-Facing Texts</strong>
-
-On the right side of the pop‑up window, the facilitator can edit:
-<ul>
+ <li>edit the diploma body text.</li>
+</ul><p>The participant's first name, last name, and completion date are always added to the diploma automatically.</p><h3>Editing Texts Visible to the Participant</h3><p>On the right side of the popup, the facilitator can edit:</p><ul>
  <li>the text displayed to the participant,</li>
- <li>the labels of the buttons shown to the participant,</li>
- <li>the title and content of the email associated with the diploma.</li>
-</ul>
-<strong>Allowing Participants to Enter Their Name Manually</strong>
+ <li>the text on buttons visible to the participant,</li>
+ <li>the subject and content of the diploma-related email.</li>
+</ul><h3>Option to Enter Name Manually</h3><p>When <strong>Enable participant diploma for this module</strong> is enabled, the facilitator can also activate the setting <strong>If the participant's name is not found, allow them to write their name</strong>.</p><p>If this feature is enabled, the course participant can enter their name manually, after which the name appears on the diploma.</p><h3>Retrieving the Participant's Name</h3><p>The participant's name is usually retrieved from authentication or from a <em>Form</em> element.
+<p>If manual entry is allowed and the name is not found when the participant reaches the <em>Finish</em> element, the participant is shown fields where they can enter their name themselves.</p><p>The manually entered name is <strong>not saved in the statistics</strong>, so that the module can be used anonymously. The name is used only for creating the diploma.</p><h3>Note!</h3><ul></p>
+ <li>Learners always have the option to download the diploma as a PDF file by opening it in a new tab or sending it by email. They can also send the email to multiple addresses by either adding more than one email address separated by a comma, or by sending the email separately.</li>
+ <li>The same Diploma &amp; Printables settings as in the original module are transferred to a duplicated module.</li>
+ <li>An entry is made in the audit trail if the Diploma &amp; Printables setting is turned on or off for a module.</li>
+ <li>In preview and published modes, the participant's diploma print dialog can be hidden by clicking the X icon in the upper right corner of the print dialog. A diploma icon appears in place of the print dialog. Click the diploma icon to see the content of the diploma print dialog again.</li>
+ <li>You can change the diploma name at any time by updating the 'module name' in the Diploma Texts field.</li>
+</ul><h3>In the Finish element, users can print, download and send their diploma by entering email addresses in the EMAIL field</h3>
 
-When <strong>Enable participant diploma for this module</strong> is active, the facilitator may also enable the option <strong>If the participant's name is not found, allow them to write their name</strong>.
+<p></p>
 
-When this feature is enabled, the participant can manually enter their name, which will then appear on the diploma.
+<p><img src="/files/docs/2025/02/Diploma-and-printables1-1.png"></p>
 
-<strong>How the Participant’s Name Is Retrieved</strong>
+<p></p>
 
-The participant’s name is typically retrieved from authentication data or from a <em>Form</em> element.
-If the manual-entry option is enabled and the name cannot be found when the participant reaches the <em>Finish</em> element, fields will appear allowing them to enter their name manually.
+<p><img src="/files/docs/2024/08/Diploma-and-printables-menu-1.png"></p>
 
-The name entered by the participant is <strong>not stored in the statistics</strong>, ensuring anonymous use. It is used solely for generating the diploma.
+<p></p>
 
-<strong>Note!</strong>
-<ul>
- <li>Course participants always have the option to download the diploma's PDF file by opening it in a new tab or sending it by email. They can also send an email to more than one address by adding more than one email separated by a comma or by sending it separately.</li>
- <li>The duplicate module will have the same Diploma &amp; Printables settings as the original one.</li>
- <li>An audit trail will be left if the Diploma &amp; Printables setting is turned on or off for the module.</li>
- <li>In preview and publishing modes, a course participant's diploma print dialogue can be hidden by clicking on the X icon in the upper right corner of the print dialogue. The diploma icon will replace the dialogue. Click on the diploma icon to see its contents again.</li>
- <li>You can change the name of the diploma at any time by updating the 'module name' in the Diploma Texts field.</li>
-</ul>
+<p><img src="/files/docs/2026/02/Enable-the-diploma-1.png"></p>
 
-<h6 class="p1">In the Finish element, users can print, download, and send their diplomas by entering their email addresses in the EMAIL field</h6>
+<p></p>
 
-<h6>Where can you activate the Diploma &amp; Printable feature?</h6>
+<p><img src="/files/docs/2026/02/Allow-to-write-the-name-1.png"></p>
 
-<h6 class="p1">"<strong>Diploma for Participants</strong>" - Settings</h6>
+<p></p>
 
-<h6 class="p1">"If the participant's name is not found, allow them to write their name" - Settings</h6>
+<p><img src="/files/docs/2026/02/Finish-page-1.png"></p>
 
-<h6 class="p1">"If the participant's name is not found, allow them to write their name" - Feature activated</h6>
-
-<figure class="doc-image"><img src="/files/docs/2025/02/Diploma-and-printables1.png" alt="" loading="lazy"></figure>
-
-<figure class="doc-image"><img src="/files/docs/2024/08/Diploma-and-printables-menu.png" alt="" loading="lazy"></figure>
-
-<figure class="doc-image"><img src="/files/docs/2026/02/Enable-the-diploma.png" alt="" loading="lazy"></figure>
-
-<figure class="doc-image"><img src="/files/docs/2026/02/Allow-to-write-the-name.png" alt="" loading="lazy"></figure>
-
-<figure class="doc-image"><img src="/files/docs/2026/02/Finish-page.png" alt="" loading="lazy"></figure>
+<p></p>

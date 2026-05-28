@@ -1,35 +1,7 @@
 ---
-id: 448f05fd-b126-4676-bf3e-c9c7ec631265
+id: b0bbead5-298e-4620-9caf-46f17dae5aac
+origin: 448f05fd-b126-4676-bf3e-c9c7ec631265
 blueprint: doc
-title: '6.8 Grouping Modules and Facilitating Module Search with Tags (Edit Tags Option)'
+title: '6.8 Grouping Modules and Making Modules Easier to Find with Tag Module Labels (Edit Tags function)'
 ---
-<p class="p1">You may search modules with module identifier <strong>Tags </strong>using the <b>Select tags to filter </b>search bar in <strong>Menu</strong> view. When searching modules with Tags, only modules marked with the specific Tag will show up as search results in <strong>Menu</strong> view. For instance, a language, a business unit, a worksite identifier number, a city or other information that you wish to use as an identifier for specific modules can be used as a tag.</p>
-
-<ul>
- <li>Create a tag for a module in <strong>Edit Module</strong> view by first clicking on the orange wheel icon and choosing <strong>Edit Tags</strong>.</li>
- <li class="p1">In the <strong>Edit Tags</strong> window, choose <strong>ADD NEW TAG </strong>if you wish to create a new tag. Enter the name of the tag in the <strong>ADD TAG</strong> window and click <strong>ADD</strong>. Exit by clicking<strong> SAVE</strong>.
-<ul>
- <li>Please note that if you are unable to create a tag, it may already exist. Check this by searching the tag using the <b>Click to search and select from existing tags </b>search bar.</li>
- <li>When a tag has been successfully created, it can be added to other existing modules as well.</li>
-</ul>
-</li>
- <li>If the tag has already been created, search for the tag you wish to add by using the <b>Click to search and select from existing tags </b>search bar and select the tag from the list that opens. Click<strong> SAVE. </strong>
-<ul>
- <li>Deselect the selected tag by clicking on<strong> the cross icon (X) </strong>on the right side of the search bar.</li>
-</ul>
-</li>
- <li>If you wish to remove a selected tag from the module you are currently editing, click on <strong>the cross icon (X)</strong> on the right side of the name of a selected tag. <img class="alignnone wp-image-3263" src="/files/docs/2021/01/example-tag.png" alt="" width="113" height="30" /></li>
- <li>If you wish to permanently remove an existing tag, click <strong>REMOVE TAG </strong>and choose the tag from the list in the <strong>Select tag to remove </strong>window<strong>. </strong>Click <strong>SAVE</strong>.
-<ul>
- <li>Please note that you can remove a tag only if you have editing access to every module that uses that specific tag.</li>
-</ul>
-</li>
-</ul>
-
-<h6 class="p1"><b>Click on the images to enlarge them.</b></h6>
-
-<figure class="doc-image"><img src="/files/docs/2022/03/R_Edit_tags-1.jpg" alt="" loading="lazy"></figure>
-
-<figure class="doc-image"><img src="/files/docs/2024/05/Edit-tag.jpg" alt="" loading="lazy"></figure>
-
-<figure class="doc-image"><img src="/files/docs/2021/01/Select_tags_to_remove.png" alt="" loading="lazy"></figure>
+<p>You can search for modules in the <strong>Menu</strong> view's <strong>Select tags to filter</strong> search field using module labels, i.e. <strong>tags</strong>, so that the <strong>Menu</strong> view only shows modules marked with the label. A module tag can be, for example, a language, a unit, a site number identifier, a city, or any other information by which you want to search for modules belonging to a certain group.</p><ul><li><p>Create a module tag in the <strong>Edit Module</strong> view by clicking the orange gear icon and selecting <strong>Edit Tags</strong>.</p></li><li><p>In the <strong>Edit Tags</strong> window that opens, select <strong>ADD NEW TAG</strong> if you want to create a new label. Type the desired label into the <strong>ADD TAG</strong> window that opens and click <strong>ADD</strong>. Then click <strong>SAVE.</strong><ul><li><p><strong>Note!</strong> If creating the label does not succeed, make sure the label does not already exist by searching for it using the <strong>Click to search and select from existing tags</strong> search field.</p></li><li><p>Once a label has been created, it can also be selected and added to other existing modules.</p></li></ul></p></li><li><p>If the label you want has already been created, find it using the <strong>Click to search and select from existing tags</strong> search field and select it from the list. Finally, click <strong>SAVE</strong>.<ul><li><p>Remove the label selection in the search field by clicking the <strong>cross (X)</strong> on the right side of the search field.</p></li></ul></p></li><li><p>If you want to remove a selected label from the module, click the <strong>cross (X)</strong> after the label name.  <img src="statamic://asset::files::docs/2021/01/esim-tag.png"></p></li><li><p>If you want to permanently delete an existing label, click <strong>REMOVE TAG</strong>, select the label from the list in the <strong>Select tag to remove</strong> window, and click <strong>REMOVE</strong>. Finally, click <strong>SAVE</strong>.<ul><li><p>Please note that you can only delete a label if you have editing rights to all modules in which the label is in use.</p></li></ul></p></li></ul><h3>How do you add a tag to a module?</h3><p><img src="statamic://asset::files::docs/2024/08/Add-a-tag.gif"></p><h3>How do you create a new tag and attach it to a module?</h3><p><img src="statamic://asset::files::docs/2024/08/Add-a-tag-2.gif"></p>

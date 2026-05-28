@@ -1,34 +1,7 @@
 ---
-id: f5ff7475-5074-4d98-a8f5-477318c62ddf
+id: c9fe0f98-7b14-4413-ac2f-93ee12373e9c
+origin: f5ff7475-5074-4d98-a8f5-477318c62ddf
 blueprint: doc
 title: '7.20 Fourfold'
 ---
-In <b>Fourfold</b> element, you can ask the user to consider and evaluate topics from a specific point of view. The trainee will have to drag the numbers on the right to the fourfold field on the left side of the element based on his/her opinion on the statements. For example, to identify ideas that are easy to implement yet have a big impact, or to see if users think some goals are unobtainable.
-
-Common topics are:
-<ul>
- <li>Strategy implementation,</li>
- <li>Development ideas,</li>
- <li>Personal development,</li>
- <li>Risk assessment,</li>
- <li>Task prioritisation,</li>
- <li>Preparedness for different situations.</li>
-</ul>
-You can also change the background of the fourfold field to fit the topic, for example a risk assessment matrix or a graph.
-<h4>Editing Instructions</h4>
-<ol>
- <li>First add the background image.</li>
- <li>Then write an intro and instructions for the fourfold exercise.</li>
- <li>Choose <b>Element Settings</b> option from the gear icon at the top of the window and add the required items.</li>
- <li>You can edit all of the element's text fields, fourfold table axel headers (X&amp;Y) and also add additional information about the table and its contents by clicking the info icon at the bottom left corner of the fourfold table area.</li>
- <li>Move all the numbered items on top of the fourfold. A text box will appear. </li>
- <li>Add some extra information or a summary about the task in the text box. The text box will appear to the trainees after they have moved all the numbered items on top of the fourfold table. If you leave the text box empty, it will not appear.</li>
-</ol>
-
-<h6 class="p1"><b>Click on the images to enlarge them.</b></h6>
-
-<h5 class="p1">Element settings in Edit Element Contents view:</h5>
-
-<figure class="doc-image"><img src="/files/docs/2021/09/Fourfold_EN_new.gif" alt="" loading="lazy"></figure>
-
-<figure class="doc-image"><img src="/files/docs/2021/09/Fourfold_Edit_EN_new-1.gif" alt="" loading="lazy"></figure>
+<p>In the <strong>Fourfold</strong> element, you can ask the learner to think about or evaluate topics from a specific perspective. For example, you can ask learners to identify ideas that are easy to implement but have a high impact, or find out whether a goal seems impossible to achieve from the learners' perspective.</p><p>Examples of use cases:</p><ul><li><p>Strategy implementation</p></li><li><p>Development ideas</p></li><li><p>Personal development</p></li><li><p>Risk assessment</p></li><li><p>Prioritizing work tasks</p></li><li><p>Readiness level in certain situations</p></li></ul><p>Both the background image of the element and the background image of the scale can be changed to suit the topic.</p><h3>Element editing instructions</h3><ol start="1"><li><p>First, add a background image.</p></li><li><p>Then write an introduction and instructions for the task.</p></li><li><p>Edit the element settings from the gear icon at the top of the window and add the required number of numbered items that the learner drags onto the fourfold grid when completing the task.</p></li><li><p>You can edit all text fields in the element as well as the titles of the X and Y axes of the fourfold grid. You can also add additional information about the grid by clicking the info button located in the lower left corner of the fourfold grid.</p></li><li><p>Move all numbered items onto the fourfold grid area. A text box will finally appear.</p></li><li><p>Add a summary or additional information about the task to the text box. The text box appears to learners when they have moved all numbered items onto the fourfold grid. If you leave the text box empty, it will not appear.</p></li></ol><h3>Click images to enlarge them.</h3><p><img src="statamic://asset::files::docs/2021/08/Fourfold_FIN-1.gif"></p><h3>Element settings in edit view:</h3><p><img src="statamic://asset::files::docs/2021/08/Fourfold_Edit_FI-1.gif"></p>

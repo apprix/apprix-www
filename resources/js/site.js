@@ -121,6 +121,65 @@ Alpine.data('featureShowcase', (count, autoplay, interval) => ({
   destroy() { this._stopLoop() }
 }))
 
+// ── Image lightbox ──────────────────────────────────────────────────────────
+// Covers both /help (docs) and /faq — any image inside .prose or figure.doc-image
+// opens in a full-screen overlay on click.
+;(function initLightbox() {
+  let overlay, imgEl
+
+  function build() {
+    overlay = document.createElement('div')
+    overlay.id = 'img-lightbox'
+    overlay.setAttribute('role', 'dialog')
+    overlay.setAttribute('aria-modal', 'true')
+    overlay.setAttribute('aria-label', 'Image preview')
+    overlay.style.display = 'none'
+
+    const closeBtn = document.createElement('button')
+    closeBtn.id = 'img-lightbox-close'
+    closeBtn.setAttribute('aria-label', 'Close image preview')
+    closeBtn.innerHTML = '&times;'
+    closeBtn.addEventListener('click', close)
+
+    imgEl = document.createElement('img')
+    imgEl.alt = ''
+
+    overlay.appendChild(closeBtn)
+    overlay.appendChild(imgEl)
+    document.body.appendChild(overlay)
+
+    overlay.addEventListener('click', (e) => { if (e.target === overlay) close() })
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && overlay.style.display !== 'none') close()
+    })
+    document.addEventListener('click', (e) => {
+      const target = e.target.closest('.prose img')
+      if (target) { e.preventDefault(); open(target.src, target.alt) }
+    })
+  }
+
+  function open(src, alt) {
+    imgEl.src = src
+    imgEl.alt = alt || ''
+    overlay.style.display = 'flex'
+    document.body.style.overflow = 'hidden'
+    // double rAF ensures the display:flex is painted before the transition runs
+    requestAnimationFrame(() => requestAnimationFrame(() => overlay.classList.add('lb-open')))
+  }
+
+  function close() {
+    overlay.classList.remove('lb-open')
+    document.body.style.overflow = ''
+    setTimeout(() => { overlay.style.display = 'none'; imgEl.src = '' }, 200)
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', build)
+  } else {
+    build()
+  }
+})()
+
 // Call Alpine.
 window.Alpine = Alpine
 Alpine.plugin([collapse, focus, intersect, morph, persist, precognition])

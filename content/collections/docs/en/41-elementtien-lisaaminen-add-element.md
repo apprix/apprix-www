@@ -1,18 +1,7 @@
 ---
-id: fbda4a5b-f022-4937-8244-81cbea585efb
+id: c3529586-e472-49b6-840d-93ab7b269619
+origin: fbda4a5b-f022-4937-8244-81cbea585efb
 blueprint: doc
-title: '4.1 Adding Elements to a Module (Add Element Option)'
+title: '4.1 Adding Elements (Add Element)'
 ---
-Click <b>Add Element</b> button in the middle of <b>Edit Module view</b>. This will open the <b>Element library.</b> From there, you can select an element one at a time by dragging and dropping them to the module, between the Intro and Finish element.
-
-You can also change the order of the elements simply by dragging them left or right when editing a module.
-
-To remove an element, click the <b>X icon</b> below the element.
-
-You can preview elements functions by hovering the mouse over the info icon located in top left corner of the elements in the Element library.
-
-<b>Note!</b> Make sure to save the changes in your module structure by clicking <b>Save</b>.
-
-<h6 class="p1"><b>Click on the images to enlarge them.</b></h6>
-
-<figure class="doc-image"><img src="/files/docs/2021/08/Add_elements_small-2.gif" alt="" loading="lazy"></figure>
+<p>In the module view, click the <strong>Add Element</strong> button in the centre of the view. You will now see the element library — a list of the elements available to you. Select elements one at a time by dragging them into the module between the Intro and Finish elements.</p><p>You can change the order of elements by dragging an element to the desired position in the module.</p><p>Remove an element using the <strong>X symbol</strong>.</p><p>You can preview the functionality of each element before adding it to the module by hovering over the <strong>i symbol</strong> in the top-left corner of the element.</p><p><strong>Note!</strong> Remember to save your structural changes by clicking the <strong>Save</strong> button when you are done.</p><h3>How do you add elements to a module?</h3><p><img src="statamic://asset::files::docs/2021/08/Add_elements_small.gif"></p>

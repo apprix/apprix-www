@@ -1,24 +1,7 @@
 ---
-id: ddb37d65-362b-495e-80e5-1ea1f6573c60
+id: b3685ee9-8a0e-4c89-862c-6a4b4d245995
+origin: ddb37d65-362b-495e-80e5-1ea1f6573c60
 blueprint: doc
 title: '7.21 Feedback'
 ---
-It is recommended to include a<b> Feedback</b> element at the end of each course. Most users fill in the numbered feedback from 1 to 5, and about 1% write open feedback.
-
-Most often the questions are related to the user’s experience of this specific course and its content. This allows the next versions of the course, and any other courses you create, to serve the future trainees better.
-
-View the module statistics every now and then to browse the feedback. In the open feedback, trainees can for example inform you of a mistake in the content, a need for a language or a localised version, or even new ideas for the course.
-<h4 class="fusion-responsive-typography-calculated" data-fontsize="21" data-lineheight="31.5px">Editing Instructions</h4>
-<ul>
- <li>Add the background image by clicking the <strong>Change image</strong> option from the right-hand side of the element.</li>
- <li>Write the instructions for giving feedback.</li>
- <li>Choose Element Settings option from the gear icon at the top of the window and add/edit feedback statements.</li>
-</ul>
-
-<h6 class="p1"><b>Click on the images to enlarge them.</b></h6>
-
-<h5 class="p1">Element settings in Edit Element Contents view:</h5>
-
-<figure class="doc-image"><img src="/files/docs/2021/08/Feedback_EN_.gif" alt="" loading="lazy"></figure>
-
-<figure class="doc-image"><img src="/files/docs/2021/08/Feedback_Edit_EN_small.gif" alt="" loading="lazy"></figure>
+<p>It is recommended to use the <strong>Feedback</strong> element to collect feedback at the end of a course module. The majority of learners respond to numbered feedback questions on a scale of one to five, and approximately 1% of users leave open-ended feedback.</p><p>Most commonly, learners are asked about their experience of the module's implementation, such as views on the comprehensiveness of the content or the length of the module. This way, future versions of the module and other modules you create will better serve the learners' learning needs.</p><p>Browse the statistics occasionally to review the feedback. Through open feedback, learners can, for example, leave development ideas, report an error in the implementation content, or suggest a need for a language version.</p><h3>Element editing instructions</h3><ul><li><p>Add an image by clicking the <strong>Change image</strong> option on the right side of the element.</p></li><li><p>Write instructions for giving feedback.</p></li><li><p>Select Element Settings from the gear icon at the top of the window and add/edit the topics on which to give feedback.</p></li></ul><h3>Element in preview mode</h3><p><img src="statamic://asset::files::docs/2021/08/Feedback_FI_small-1.gif"></p>

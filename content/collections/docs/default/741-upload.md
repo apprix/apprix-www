@@ -2,25 +2,12 @@
 id: 8528ca86-f013-414a-b08d-e8d4b1083a99
 blueprint: doc
 title: '7.41 Upload'
+seo_noindex: false
+seo_nofollow: false
+seo_canonical_type: entry
+sitemap_change_frequency: weekly
+sitemap_priority: 0.5
+updated_by: 680e1400-32cd-4415-9b61-d630b47576db
+updated_at: 1779938878
 ---
-<b>Upload</b>-elementissä suorittaja voi ladata koulutusta tehdessään oman henkilökuvansa henkilökorttia varten Apprixin palvelimelle. 
-
-”<b>1 Valitse kuva</b>”- ikonia klikkaamalla avautuu tietokoneen tiedostohakemisto, josta voi ladata kuvan. Jos suorittaja käyttää matkapuhelinta tai tablettia, hänellä on seuraavat vaihtoehdot: "Ota kuva tai video", "Kuvakirjasto" ja "Selaa".
-
-<b>Huom!</b> Kuvan tulee olla JPG/JPEG, PNG, GIF tai SVG -muodossa, ja tiedoston koko voi olla maksimissaan 1MB.
-
-Kun kuvan lataus onnistuu, se tulee näkyviin ”<b>1 Valitse kuva</b>”- ikonin yläpuolelle. Nyt suorittaja voi klikata alempaa painiketta “<b>2 Lähetä valittu kuva</b>”. Jos tiedostomuoto on väärä, näyttöön tulee virheilmoitus.
-
-Jos työntekijä ei voi ladata kuvaansa, hän klikkaa valintaruutua "<b>En lähetä kuvaani etukäteen</b>".
-
-Kun työntekijä on lähettänyt kuvan onnistuneesti tai on päättänyt olla lähettämättä kuvaa, hän klikkaa oikealla olevaa nuolipainiketta jatkaakseen.
-
-<b>HUOM!</b> Jos työntekijä ei saa lähetettyä kuvaa itsestään, kulunvalvoja voi ottaa kuvan hänestä paikan päällä.
-<h4>Elementin muokkausohjeet</h4>
-Lisää taustakuva ja muokkaa kaikkia kenttiä tarvittaessa.
-
-<h6 class="p1">Klikkaa kuvia suurentaaksesi niitä.</h6>
-
-<figure class="doc-image"><img src="/files/docs/2022/04/Upload-END-USER-FIN.gif" alt="" loading="lazy"></figure>
-
-<figure class="doc-image"><img src="/files/docs/2022/04/Upload-Edit-FIN.gif" alt="" loading="lazy"></figure>
+<p><strong>Upload</strong>-elementissä suorittaja voi ladata koulutusta tehdessään oman henkilökuvansa henkilökorttia varten Apprixin palvelimelle.</p><p>”<strong>1 Valitse kuva</strong>”- ikonia klikkaamalla avautuu tietokoneen tiedostohakemisto, josta voi ladata kuvan. Jos suorittaja käyttää matkapuhelinta tai tablettia, hänellä on seuraavat vaihtoehdot: &quot;Ota kuva tai video&quot;, &quot;Kuvakirjasto&quot; ja &quot;Selaa&quot;.</p><p><strong>Huom!</strong> Kuvan tulee olla JPG/JPEG, PNG, GIF tai SVG -muodossa, ja tiedoston koko voi olla maksimissaan 1MB.</p><p>Kun kuvan lataus onnistuu, se tulee näkyviin ”<strong>1 Valitse kuva</strong>”- ikonin yläpuolelle. Nyt suorittaja voi klikata alempaa painiketta “<strong>2 Lähetä valittu kuva</strong>”. Jos tiedostomuoto on väärä, näyttöön tulee virheilmoitus.</p><p>Jos työntekijä ei voi ladata kuvaansa, hän klikkaa valintaruutua &quot;<strong>En lähetä kuvaani etukäteen</strong>&quot;.</p><p>Kun työntekijä on lähettänyt kuvan onnistuneesti tai on päättänyt olla lähettämättä kuvaa, hän klikkaa oikealla olevaa nuolipainiketta jatkaakseen.</p><p><strong>HUOM!</strong> Jos työntekijä ei saa lähetettyä kuvaa itsestään, kulunvalvoja voi ottaa kuvan hänestä paikan päällä.</p><h3>Elementin muokkausohjeet</h3><p>Lisää taustakuva ja muokkaa kaikkia kenttiä tarvittaessa.</p><p></p><h3>Elementti julkaisutilassa ( Published mode )</h3><p><img src="statamic://asset::files::docs/2022/04/Upload-END-USER-FIN.gif"></p><p><img src="statamic://asset::files::docs/2022/04/Upload-Edit-FIN.gif"></p>

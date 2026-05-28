@@ -1,35 +1,7 @@
 ---
-id: ccb3a54f-2025-4196-9ce7-a50b870fabd2
+id: a74e146e-678c-4561-aa10-957918b04ee6
+origin: ccb3a54f-2025-4196-9ce7-a50b870fabd2
 blueprint: doc
 title: '7.18 Slider Icons'
 ---
-In the <b>Slider Icons</b> element, the trainee evaluates several topics with a slider. Each slider includes a box with additional information after the evaluation has been made. If you leave an additional information box empty, it will not appear when viewing the module in <b>Preview</b> or <b>Published</b> mode.
-
-Some common uses:
-<ul>
- <li aria-level="1">How familiar are you with the following terminology?</li>
- <li aria-level="1">How often do you come across the following in your own work?</li>
-</ul>
-When you first ask about the trainee’s knowledge on a topic or how close to their daily life the topic is, they’re more likely to read the additional information that comes after.
-<h4>Editing Instructions</h4>
-<ul>
- <li aria-level="1">Add the background image by clicking the <b>Change image</b> option from the right-hand side of the element. </li>
- <li aria-level="1">Write an intro and instructions for the trainee on the top of the window. </li>
- <li aria-level="1">Choose <b>Element Settings</b> option from the gear icon at the top </li>
- <li aria-level="1">Add and edit the required items (the text will appear on the left side of the window). </li>
-</ul>
-You can edit all texts and add also additional information in the info boxes by clicking the <b>forward</b> icon at the right side of each bar.
-
-<h6 class="p1"><b>Click on the images to enlarge them.</b></h6>
-
-<h5 class="p1">Element settings in Edit Element Contents view:</h5>
-
-<h5 class="p1">Forward icon opens the additional information text box</h5>
-
-<figure class="doc-image"><img src="/files/docs/2021/08/Slider_Icons_EN.gif" alt="" loading="lazy"></figure>
-
-<figure class="doc-image"><img src="/files/docs/2021/08/Slider_Icons_Edit_EN_.gif" alt="" loading="lazy"></figure>
-
-<figure class="doc-image"><img src="/files/docs/2022/03/7.17-1-600x281.png" alt="" loading="lazy"></figure>
-
-<figure class="doc-image"><img src="/files/docs/2022/03/7.17-2-600x321.png" alt="" loading="lazy"></figure>
+<p>In the <strong>Slider Icons</strong> element, the learner evaluates several topics using a slider. After each evaluation, a text field appears next to the slider where you can add more in-depth information about the topic. If the text field is left empty, it will not appear in the play view. "Icons" in the element name refers to the replaceable background of the slider, which most commonly uses stars, but the slider illustration can also be changed to, for example, euros, people, or something related to the company's own brand.</p><p>Examples of use cases:</p><ul><li><p>How familiar are the following concepts to you?</p></li><li><p>How often do you encounter the following things at work or in your tasks?</p></li></ul><p>When learners are encouraged to reflect by asking about their knowledge of a specific topic or how close the subject is to their lives, they are also more likely to engage with the additional information presented after the evaluation.</p><h3>Element editing instructions</h3><ul><li><p>First add a background image by clicking the <strong>Change image</strong> option on the right side of the element.</p></li><li><p>Then write an introduction and instructions for the learner at the top of the element.</p></li><li><p>Select <strong>Element Settings</strong> from the gear icon at the top</p></li><li><p>Add and edit items (text appears on the left side of the window).</p></li></ul><p>You can edit all texts and also add additional information to the information boxes by clicking the forward icon on the right side of each bar.</p><h3>Element in preview mode</h3><p><img src="statamic://asset::files::docs/2021/08/Slider_Icons_FI-1.gif"></p><h3>Element settings in edit view:</h3><p><img src="statamic://asset::files::docs/2021/08/Slider_Icons_Edit_FI-1.gif"></p><p><img src="statamic://asset::files::docs/2022/03/7.17-1-1-600x281.png"></p><h3>The forward icon opens the information box</h3><p></p><p><img src="statamic://asset::files::docs/2022/03/7.17-2-1-600x321.png"></p><p></p>

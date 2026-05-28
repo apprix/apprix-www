@@ -1,0 +1,6 @@
+---
+id: 54e2a472-7675-48bb-80bc-a653de0e88cb
+origin: 19a36ad9-c5ba-4b88-96ce-eb769b1ab1b8
+title: 'How can I grant edit permissions for a single module only?'
+answer: '<p>If you want to grant edit permissions for a specific module, perform the following steps in the Administrate view:</p><p>1. Select the user whose permissions you want to edit.</p><p>2. Click the Settings... button under the User''s Module Edit & Stats Permissions heading. A pop-up window opens.</p><p>3. Select the View (default) option from the Access column for modules you want the user to be able to see but not edit.</p><p>4. Select the Edit option for modules you want the user to be able to edit. If you also want the user to be able to view the module''s statistics, grant permissions by ticking the box in the Statistics column for the module''s row.</p><p>The user can now edit the module and view its statistics, if statistics viewing permissions have been granted.</p> <img src="/files/docs/2020/07/userpermission.png" alt="" width="350" style="max-width:100%;height:auto;display:block;margin:0.75rem 0;"> <img src="/files/docs/2020/07/access-1000x377.png" alt="" width="626" style="max-width:100%;height:auto;display:block;margin:0.75rem 0;">'
+---

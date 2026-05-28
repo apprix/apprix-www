@@ -1,29 +1,13 @@
 ---
 id: 8b3a586e-f4f4-43b5-a2da-6849b8352425
 blueprint: doc
-title: '7 Intro – Mitä ovat elementit?'
+title: '7 Elementit'
+seo_noindex: false
+seo_nofollow: false
+seo_canonical_type: entry
+sitemap_change_frequency: weekly
+sitemap_priority: 0.5
+updated_by: 680e1400-32cd-4415-9b61-d630b47576db
+updated_at: 1779934811
 ---
-Kurssimoduulit muodostuvat elementeistä, joita lisätään Intro ja Finish -elementtien väliin. Edellä mainitut elementit toimivat raameina moduulillesi.
-
-Voit tutustua elementteihin helpoiten klikkaamalla <b>Add Element</b> moduulin editointinäkymässä <b>Edit Module</b> ja viemällä hiiren elementtien oikeaan yläkulmaan ilmestyvän <b>i-ikonin</b> päälle nähdäksesi lyhyen esikatselun elementin toiminnallisuudesta ja lukeaksesi niiden suositelluista käyttötarkoituksista.
-
-Elementtejä on erilaisia ja ne voidaan jakaa karkeasti neljään kategoriaan:
-<ul>
- <li><strong>Infoelementit:</strong> nämä koostuu lähinnä tekstistä ja kuvista ja niissä on hyvin rajoitetusti interaktiivisuutta.</li>
- <li><strong>Tehtäväelementit:</strong> esimerkiksi monivalinta, totta/tarua, palkkitehtävä vastauksella, checkbox. 
-<ul>
- <li>Huomioithan, että tehtäväelementtejä ei kannata käyttää kyselyissä mittaamassa käyttäjien mielipiteitä tai kokemuksia, sillä tehtävät vaatii oikean vastauksen määrittelemisen.</li>
-</ul>
-</li>
- <li><strong>Signaalien kerääminen: </strong>esimerkiksi Fourfold-, Slider icons- ja Feedback-elementit, joilla kerätään kyselynomaisesti suorittajien mielipiteitä ja kokemuksia. Näitä voi myös käyttää kyselyn sijaan opetustarkoitukseen (katso esimerkiksi elementtien Slider icons ja Bars -kuvaukset).</li>
- <li><b>Muut erityisiin tarkoituksiin tehdyt elementit: </b>esimerkiksi hotspot, video, dialogi, siirtymä.</li>
-</ul>
-
-<h6>Miten voit tutustua elementteihin?</h6>
-
-<p class="p1">Lisäksi valikoimassa saattaa olla mukana esimerkiksi Submenu ja Landing Page -elementit erilaisten rakenteiden ja moduulien kokoomasivujen luomiseksi.</p>
-<p class="p1">Huomaathan, että pelkät infosivut peräkkäin on valitettavan helppo hypätä yli tai selata lukematta ja sisäistämättä niiden sisältöä. Voit jo pienellä mietintätyöllä muuttaa sisällön mielenkiintoisempaan, mukaansatempaavaan tehtävämuotoon, jolloin käyttäjän on pysähdyttävä miettimään oikeita vastauksia ja oppimaansa tietoa kurssikokemuksen aikana. Saat kurssistatistiikan avulla tarkan käsityksen vastaajajoukon tietämyksen tasosta. Tehtäväelementtien vaihtoehtoteksteihin saa myös upotettua paljon sisältöä, joka suorittajan on sisäistettävä pystyäkseen vastaamaan oikein.
-</p>
-<p class="p1">Jos löydät tehtävään tilanteita oikeasta elämästä tai keksit konkreettisia, suorittajaa puhuttelevia esimerkkejä – aina parempi! Mieti etenkin sisällön mahdollisia avain- tai ongelmakohtia ja pysäytä niissä kohdissa suorittaja ajattelemaan tehtävien tai kyselyjen avulla.</p>
-
-<figure class="doc-image"><img src="/files/docs/2024/08/How-you-can-get-to-know-the-elements.gif" alt="" loading="lazy"></figure>
+<h3>Mitä ovat elementit?</h3><p>Kurssimoduulit muodostuvat elementeistä, joita lisätään Intro ja Finish -elementtien väliin. Edellä mainitut elementit toimivat raameina moduulillesi.</p><p>Voit tutustua elementteihin helpoiten klikkaamalla <strong>Add Element</strong> moduulin editointinäkymässä <strong>Edit Module</strong> ja viemällä hiiren elementtien oikeaan yläkulmaan ilmestyvän <strong>i-ikonin</strong> päälle nähdäksesi lyhyen esikatselun elementin toiminnallisuudesta ja lukeaksesi niiden suositelluista käyttötarkoituksista.</p><p>Elementtejä on erilaisia ja ne voidaan jakaa karkeasti neljään kategoriaan:</p><ul><li><p><strong>Infoelementit:</strong> nämä koostuu lähinnä tekstistä ja kuvista ja niissä on hyvin rajoitetusti interaktiivisuutta.</p></li><li><p><strong>Tehtäväelementit:</strong> esimerkiksi monivalinta, totta/tarua, palkkitehtävä vastauksella, checkbox.<ul><li><p>Huomioithan, että tehtäväelementtejä ei kannata käyttää kyselyissä mittaamassa käyttäjien mielipiteitä tai kokemuksia, sillä tehtävät vaatii oikean vastauksen määrittelemisen.</p></li></ul></p></li><li><p><strong>Signaalien kerääminen: </strong>esimerkiksi Fourfold-, Slider icons- ja Feedback-elementit, joilla kerätään kyselynomaisesti suorittajien mielipiteitä ja kokemuksia. Näitä voi myös käyttää kyselyn sijaan opetustarkoitukseen (katso esimerkiksi elementtien Slider icons ja Bars -kuvaukset).</p></li><li><p><strong>Muut erityisiin tarkoituksiin tehdyt elementit: </strong>esimerkiksi hotspot, video, dialogi, siirtymä.</p><p></p></li></ul><p>Lisäksi valikoimassa saattaa olla mukana esimerkiksi Submenu ja Landing Page -elementit erilaisten rakenteiden ja moduulien kokoomasivujen luomiseksi.</p><p>Huomaathan, että pelkät infosivut peräkkäin on valitettavan helppo hypätä yli tai selata lukematta ja sisäistämättä niiden sisältöä. Voit jo pienellä mietintätyöllä muuttaa sisällön mielenkiintoisempaan, mukaansatempaavaan tehtävämuotoon, jolloin käyttäjän on pysähdyttävä miettimään oikeita vastauksia ja oppimaansa tietoa kurssikokemuksen aikana. Saat kurssistatistiikan avulla tarkan käsityksen vastaajajoukon tietämyksen tasosta. Tehtäväelementtien vaihtoehtoteksteihin saa myös upotettua paljon sisältöä, joka suorittajan on sisäistettävä pystyäkseen vastaamaan oikein.</p><p>Jos löydät tehtävään tilanteita oikeasta elämästä tai keksit konkreettisia, suorittajaa puhuttelevia esimerkkejä – aina parempi! Mieti etenkin sisällön mahdollisia avain- tai ongelmakohtia ja pysäytä niissä kohdissa suorittaja ajattelemaan tehtävien tai kyselyjen avulla.</p><h3>Miten voit tutustua elementteihin?</h3><p><img src="statamic://asset::files::docs/2024/08/How-you-can-get-to-know-the-elements.gif"></p>

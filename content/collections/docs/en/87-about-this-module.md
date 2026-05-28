@@ -1,16 +1,16 @@
 ---
-id: dee9412c-51be-469c-bc65-51139fa18d24
+id: 9d7e4a78-7ac9-4b3e-833a-572c12a255e1
+origin: dee9412c-51be-469c-bc65-51139fa18d24
 blueprint: doc
 title: '8.7 About this module'
 ---
-In the <b>About This Module</b> pop-up window you can find the module’s creator, created and last modified dates, tag(s) and access.
+<p><b>About this module</b> window shows the module creator, creation date, last modification date, tags, and access rights.</p>
 
-If the <b>Audit Module</b> – feature is activated the <b>About Module</b> - view will show also the module change history. 
+<p>If the <b>Audit Module</b> feature is activated, the <b>About Module</b> view also shows the module's change history.</p>
 
-<h6 class="p1"><b>Click on the images/videos to enlarge them.</b></h6>
+<h3>Watch the video by clicking the Play button on the left side of the toolbar.</h3>
+<h3>Click the square to enlarge the video.</h3>
 
-<h6 class="p1">How does the "About This Module" pop-up window work?</h6>
+<h3>How does "About This Module" work?</h3>
 
-<figure class="doc-image"><img src="/files/docs/2023/01/About-this-module.gif" alt="" loading="lazy"></figure>
-
-<figure class="doc-image"><img src="/files/docs/2022/03/About_Module-1-400x251.png" alt="" loading="lazy"></figure>
+<p><video controls preload="metadata" style="width:100%;border-radius:0.75rem;box-shadow:0 1px 2px 0 rgba(0,0,0,.08);margin-top:1rem"> <source src="/files/docs/2023/01/About-this-module.mp4" type="video/mp4"> </video></p>

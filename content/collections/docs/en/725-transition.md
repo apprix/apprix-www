@@ -1,22 +1,7 @@
 ---
-id: 82e664f2-091e-43d4-a0c9-3ddcd47cc014
+id: 86bfd792-4d49-4c1b-a47d-ab7219de2289
+origin: 82e664f2-091e-43d4-a0c9-3ddcd47cc014
 blueprint: doc
 title: '7.25 Transition'
 ---
-The <b>Transition</b> element can be used as a transition from one topic to another. An element with slight visual differences helps the trainee to categorize the contents under different topics in their mind.
-
-In addition to the topic header, you can also add a brief description on what the next topic is going to entail.
-
-<b>Tip!</b> You can also list all the topics like in a contents page, and highlight the topic the user is going to next. This is a great way to tell the trainee where they are in the course. If you do this, add the topic list to each transition only after you have finalized the course structure to avoid unnecessary work.
-
-<strong>Note!</strong>
-
-If needed, you can lock the element and add an audio file by clicking the gear icon at the top of the element.
-
-In the enhanced ‘Transition’ element, you can set the background and/or box colours by clicking the tool icon in the top-left corner.
-
-<img class="aligncenter wp-image-6851" src="/files/docs/2026/03/Transition-settings.gif" alt="" width="542" height="373" />
-
-<h6 class="p1"><b>Transition element</b></h6>
-
-<figure class="doc-image"><img src="/files/docs/2021/08/transition-1000x618.jpg" alt="" loading="lazy"></figure>
+<p>The <strong>Transition</strong> element can be used as a transition between subject areas. A visually distinct element organizes content effectively and helps learners categorize the content in their minds.</p><p>Below the topic heading, you can also add a concise summary of what the next section will cover.</p><p><strong>Tip:</strong> The element can also be used as a table of contents between topics, visually highlighting the subject area to be covered next. This way, learners can periodically see how far they have progressed in the module. If you use a table of contents, it is recommended to add the table of contents topics to all transitions only once the module structure is finalized, to avoid unnecessary extra work.</p><p><strong>Note!</strong></p><p>If needed, you can lock the element and add an audio file by clicking the gear icon at the top of the element.</p><p>In the expanded 'Transition' element, you can define the background and/or box colors by clicking the tool icon in the upper left corner.</p><p></p><h3> Element in published mode</h3><p><img src="statamic://asset::files::docs/2026/03/Transition-settings-1.gif"></p><h3>Transition element</h3><p><img src="statamic://asset::files::docs/2026/03/Transition-preview.gif"></p>

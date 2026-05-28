@@ -18,6 +18,8 @@ Route::middleware(\App\Http\Middleware\RequireBuilderAuth::class)->group(functio
     Route::get('/faq/search.json', [\App\Http\Controllers\FaqSearchController::class, 'index']);
     Route::statamic('/faq', 'faq/index', ['layout' => 'layout_faq', 'title' => 'FAQ']);
 
+    Route::statamic('/en/faq', 'faq/index', ['layout' => 'layout_faq', 'title' => 'FAQ']);
+
     Route::get('/help', function () {
         // /help has no URL prefix so it is always the Finnish (default) site
         $section1 = Entry::query()
@@ -27,20 +29,43 @@ Route::middleware(\App\Http\Middleware\RequireBuilderAuth::class)->group(functio
             ->filter(fn ($e) => preg_match('/^1\s/', (string) ($e->value('title') ?? '')))
             ->first();
 
-        if ($section1) {
+        if ($section1 && $section1->url()) {
             return redirect($section1->url());
         }
 
-        // Fallback: first docs entry
+        // Fallback: first docs entry with a resolvable URL
         $first = Entry::query()
             ->where('collection', 'docs')
             ->where('site', 'default')
+            ->get()
+            ->filter(fn ($e) => $e->url())
             ->first();
 
         return $first ? redirect($first->url()) : abort(404);
     });
 
     Route::get('/help/search.json', [\App\Http\Controllers\DocsSearchController::class, 'index']);
+
+    Route::get('/en/help', function () {
+        $section1 = Entry::query()
+            ->where('collection', 'docs')
+            ->where('site', 'en')
+            ->get()
+            ->filter(fn ($e) => preg_match('/^1\s/', (string) ($e->value('title') ?? '')))
+            ->first();
+        if ($section1 && $section1->url()) {
+            return redirect($section1->url());
+        }
+        $first = Entry::query()
+            ->where('collection', 'docs')
+            ->where('site', 'en')
+            ->get()
+            ->filter(fn ($e) => $e->url())
+            ->first();
+        return $first ? redirect($first->url()) : abort(404);
+    });
+
+    Route::get('/en/help/search.json', [\App\Http\Controllers\DocsSearchController::class, 'index']);
 
 });
 

@@ -2,49 +2,12 @@
 id: 0bafb961-1d04-499b-ae00-593bbf877df5
 blueprint: doc
 title: '7.38 Order'
+seo_noindex: false
+seo_nofollow: false
+seo_canonical_type: entry
+sitemap_change_frequency: weekly
+sitemap_priority: 0.5
+updated_by: 680e1400-32cd-4415-9b61-d630b47576db
+updated_at: 1779938704
 ---
-<b>Order</b>-elementti on tehtäväelementti, jossa suorittajan on valittava listattujen vaiheiden oikea järjestys napsauttamalla elementin vasemmalla puolella olevia tekstiruutuja.
-
-Tehtävä voisi esimerkiksi olla:
-<p><i>Mitä tulee tehdä tulipalon sattuessa?</i></p>
-<p><i>Tulipalon sattuessa on suoritettava seuraavat toimenpiteet kaikkien rakennuksen asukkaiden turvallisuuden varmistamiseksi.</i></p>
-<p><i>Valitse vaiheet oikeassa järjestyksessä.</i></p>
-Esimerkiksi tässä tapauksessa järjestyksen tulee olla "Pelasta", "Varoita", "Sammuta", "Rajoita", "Hälytä" ja "Opasta".
-
-Jos suorittaja valitsee väärän kohteen, näytetään virheilmoitus.
-
-Kun suorittaja on valinnut kaikki vaiheet oikein, ikkunan oikeaan reunaan ilmestyy eteenpäin -painike.
-<h4>Elementin muokkausohjeet</h4>
-Elementissä näkyy ponnahdusikkuna ohjeineen. Tarvittaessa voit lisätä tähän tehtävää koskevia lisätietoja. Jos niitä ei tarvita, voit poistaa ikkunan sisällön. Tässä tapauksessa ponnahdusikkunaa ei näytetä suorittajalle.
-
-Lisää, poista ja muokkaa kohteita klikkaamalla yläreunassa olevaa rataskuvaketta ja valitsemalla "<b>Element settings</b>".
-
-Kun olet lisännyt uuden kohteen, elementtiin tulee kaksi tekstilaatikkoa: yksi elementin vasemmalle puolelle (katso "1 task" -laatikko) ja toinen oikealle puolelle (katso "1 answer" - "Here you can write an answer text").
-
-Nimeä kohde, esimerkiksi ”Pelasta” vasemmalla tekstilaatikossa ja oikealla olevassa tekstilaatikossa anna laajempi kuvaus samasta kohteesta.
-
-Kirjoita tehtävän ohjeet vasempaan yläkulmaan.
-<p>Esimerkiksi: <i>Mitä tulee tehdä tulipalon sattuessa?</i></p>
-<p><i>Tulipalon sattuessa on suoritettava seuraavat toimenpiteet kaikkien rakennuksen asukkaiden turvallisuuden varmistamiseksi.</i></p>
-<p><i>Valitse vaiheet oikeassa järjestyksessä.</i></p>
-Valitse vaihtoehto ”Shuffle items” (Sekoita kohteet)   ”YES”, jos haluat, että kohteet sekoitetaan.
-
-Muokkaa tarvittaessa ”Wrong order” -viesti.
-
-Lisää taustakuva klikkaamalla "Change image" -vaihtoehtoa oikeanpuoleisesta työkalupalkista.
-
-Lisää otsikko tarvittaessa.
-
-<h6 class="p1">Klikkaa kuvia suurentaaksesi niitä.</h6>
-
-<figure class="doc-image"><img src="/files/docs/2022/04/Order-element-2.gif" alt="" loading="lazy"></figure>
-
-<figure class="doc-image"><img src="/files/docs/2022/04/Order-image-fin-1-600x348.png" alt="" loading="lazy"></figure>
-
-<figure class="doc-image"><img src="/files/docs/2022/04/Order-image-fin-2-600x338.png" alt="" loading="lazy"></figure>
-
-<figure class="doc-image"><img src="/files/docs/2022/04/Order-image-fin-3.png" alt="" loading="lazy"></figure>
-
-<figure class="doc-image"><img src="/files/docs/2022/04/Order-image-fin-4-600x545.png" alt="" loading="lazy"></figure>
-
-<figure class="doc-image"><img src="/files/docs/2022/04/Order-image-fin-5-600x384.png" alt="" loading="lazy"></figure>
+<p><strong>Order</strong>-elementti on tehtäväelementti, jossa suorittajan on valittava listattujen vaiheiden oikea järjestys napsauttamalla elementin vasemmalla puolella olevia tekstiruutuja.</p><p>Tehtävä voisi esimerkiksi olla:</p><p><em>Mitä tulee tehdä tulipalon sattuessa?</em></p><p><em>Tulipalon sattuessa on suoritettava seuraavat toimenpiteet kaikkien rakennuksen asukkaiden turvallisuuden varmistamiseksi.</em></p><p><em>Valitse vaiheet oikeassa järjestyksessä.</em></p><p>Esimerkiksi tässä tapauksessa järjestyksen tulee olla &quot;Pelasta&quot;, &quot;Varoita&quot;, &quot;Sammuta&quot;, &quot;Rajoita&quot;, &quot;Hälytä&quot; ja &quot;Opasta&quot;.</p><p>Jos suorittaja valitsee väärän kohteen, näytetään virheilmoitus.</p><p>Kun suorittaja on valinnut kaikki vaiheet oikein, ikkunan oikeaan reunaan ilmestyy eteenpäin -painike.</p><h3>Elementin muokkausohjeet</h3><p>Elementissä näkyy ponnahdusikkuna ohjeineen. Tarvittaessa voit lisätä tähän tehtävää koskevia lisätietoja. Jos niitä ei tarvita, voit poistaa ikkunan sisällön. Tässä tapauksessa ponnahdusikkunaa ei näytetä suorittajalle.</p><p>Lisää, poista ja muokkaa kohteita klikkaamalla yläreunassa olevaa rataskuvaketta ja valitsemalla &quot;<strong>Element settings</strong>&quot;.</p><p>Kun olet lisännyt uuden kohteen, elementtiin tulee kaksi tekstilaatikkoa: yksi elementin vasemmalle puolelle (katso &quot;1 task&quot; -laatikko) ja toinen oikealle puolelle (katso &quot;1 answer&quot; - &quot;Here you can write an answer text&quot;).</p><p>Nimeä kohde, esimerkiksi ”Pelasta” vasemmalla tekstilaatikossa ja oikealla olevassa tekstilaatikossa anna laajempi kuvaus samasta kohteesta.</p><p>Kirjoita tehtävän ohjeet vasempaan yläkulmaan.</p><p>Esimerkiksi: <em>Mitä tulee tehdä tulipalon sattuessa?</em></p><p><em>Tulipalon sattuessa on suoritettava seuraavat toimenpiteet kaikkien rakennuksen asukkaiden turvallisuuden varmistamiseksi.</em></p><p><em>Valitse vaiheet oikeassa järjestyksessä.</em></p><p>Valitse vaihtoehto ”Shuffle items” (Sekoita kohteet)   ”YES”, jos haluat, että kohteet sekoitetaan.</p><p>Muokkaa tarvittaessa ”Wrong order” -viesti.</p><p>Lisää taustakuva klikkaamalla &quot;Change image&quot; -vaihtoehtoa oikeanpuoleisesta työkalupalkista.</p><p>Lisää otsikko tarvittaessa.</p><p></p><h3>Elementti julkaisutilassa ( Published mode )</h3><p><img src="statamic://asset::files::docs/2022/04/Order-element-2.gif"></p><p><img src="statamic://asset::files::docs/2022/04/Order-image-fin-1-600x348.png"></p><p><img src="statamic://asset::files::docs/2022/04/Order-image-fin-2-600x338.png"></p><p><img src="statamic://asset::files::docs/2022/04/Order-image-fin-3.png"></p><p><img src="statamic://asset::files::docs/2022/04/Order-image-fin-4-600x545.png"></p><p><img src="statamic://asset::files::docs/2022/04/Order-image-fin-5-600x384.png"></p>

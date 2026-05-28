@@ -2,34 +2,12 @@
 id: dc1c88ec-1523-4c60-b497-9fcc4513be8b
 blueprint: doc
 title: '7.34 Drag and Drop'
+seo_noindex: false
+seo_nofollow: false
+seo_canonical_type: entry
+sitemap_change_frequency: weekly
+sitemap_priority: 0.5
+updated_by: 680e1400-32cd-4415-9b61-d630b47576db
+updated_at: 1779938368
 ---
-<strong>Drag and Drop </strong>on tehtäväelementti. Tässä harjoituksessa kurssin suorittaja yhdistää vasemmalla korttipakassa olevat kortit oikeaan vastaukseen oikealla sijaitseviin kortteihin.
-
-Jos vastaus on väärä, kortti asetetaan takaisin vasemmalla olevaan pakkaan, ja näytetään virheilmoitus. Jos vastaus on oikein, kortti pysyy paikassa, johon se on viety, ja seuraava kortti paljastetaan.
-
-Kun kaikki kortit on asetettu onnistuneesti, kurssin suorittajalle näytetään ikkunan vasemmassa reunassa viestiruutu, jossa on lisätietoja harjoituksesta.
-<h4>Elementin muokkausohjeet</h4>
-<ul>
- <li>Käytä <strong>Introduction</strong>-tekstiruutua harjoituksen yksityiskohtaiseen esittelyyn. Jos tämä on tarpeetonta, tyhjennä teksti, jolloin suorittaja siirtyy suoraan harjoitukseen.</li>
- <li>Voit lisätä, muokata ja tarvittaessa poistaa kohteita klikkaamalla ikkunan yläosassa olevaa hammasrataskuvaketta ja valitsemalla <strong>Element Settings</strong> -vaihtoehdon.</li>
- <li>Valitse <strong>Element Settings</strong> -ponnahdusikkunasta <strong>Shuffle items</strong> -vaihtoehto ”<strong>Yes”</strong>, jos haluat sekoittaa kohteita <strong>Preview</strong> / <strong>Published</strong>-tilassa.  Huomaa, että muokkaustilassa kortit asetetaan aikajärjestykseen.</li>
- <li>Muokkaa ensin kohteiden otsikot. Vie sen jälkeen hiiri kunkin kohteen laatikon oikealle puolelle, jolloin <strong>Change image</strong> -kuvake tulee näkyviin. Klikkaa kuvaketta ja valitse haluamasi kuva <strong>Image Library</strong> -kuvakirjastosta.</li>
- <li>Muokkaa kunkin kortin sisältöä ja siirrä kortti vaihtoehdon päälle.</li>
- <li>Siirrä yksi kortti väärään paikkaan. Sivun alareunaan ilmestyy virheilmoitus. Muokkaa sitä tarvittaessa.</li>
- <li>Lisää elementin taustakuva siirtämällä kohdistinta ikkunan oikean reunan yläosaan ja klikkaamalla alinta kuvaketta <strong>Change image</strong>.</li>
- <li>Kun kaikki kortit on asetettu oikeille kohdilleen, ikkunan vasemmalle puolelle ilmestyy uusi laatikko. Kirjoita tähän tehtävää koskevia lisätietoja (esim. Kaikki oikein!….)</li>
-</ul>
-
-<h6 class="p1">Miten Drag and Drop -elementti toimii?</h6>
-
-<figure class="doc-image"><img src="/files/docs/2025/03/DragandDropWastedoing.gif" alt="" loading="lazy"></figure>
-
-<h6 class="p1">Miten elementtiä muokataan?</h6>
-
-<figure class="doc-image"><img src="/files/docs/2025/03/DragandDropEditWasteedit2.gif" alt="" loading="lazy"></figure>
-
-<h6 class="p1">Esimerkki sen käytöstä.</h6>
-
-<figure class="doc-image"><img src="/files/docs/2021/08/Drag_and_Drop_Edit_FI_1_new.gif" alt="" loading="lazy"></figure>
-
-<figure class="doc-image"><img src="/files/docs/2021/05/dragdrop-1.png" alt="" loading="lazy"></figure>
+<p><strong>Drag and Drop </strong>on tehtäväelementti. Tässä harjoituksessa kurssin suorittaja yhdistää vasemmalla korttipakassa olevat kortit oikeaan vastaukseen oikealla sijaitseviin kortteihin.</p><p>Jos vastaus on väärä, kortti asetetaan takaisin vasemmalla olevaan pakkaan, ja näytetään virheilmoitus. Jos vastaus on oikein, kortti pysyy paikassa, johon se on viety, ja seuraava kortti paljastetaan.</p><p>Kun kaikki kortit on asetettu onnistuneesti, kurssin suorittajalle näytetään ikkunan vasemmassa reunassa viestiruutu, jossa on lisätietoja harjoituksesta.</p><h3>Elementin muokkausohjeet</h3><ul><li><p>Käytä <strong>Introduction</strong>-tekstiruutua harjoituksen yksityiskohtaiseen esittelyyn. Jos tämä on tarpeetonta, tyhjennä teksti, jolloin suorittaja siirtyy suoraan harjoitukseen.</p></li><li><p>Voit lisätä, muokata ja tarvittaessa poistaa kohteita klikkaamalla ikkunan yläosassa olevaa hammasrataskuvaketta ja valitsemalla <strong>Element Settings</strong> -vaihtoehdon.</p></li><li><p>Valitse <strong>Element Settings</strong> -ponnahdusikkunasta <strong>Shuffle items</strong> -vaihtoehto ”<strong>Yes”</strong>, jos haluat sekoittaa kohteita <strong>Preview</strong> / <strong>Published</strong>-tilassa.  Huomaa, että muokkaustilassa kortit asetetaan aikajärjestykseen.</p></li><li><p>Muokkaa ensin kohteiden otsikot. Vie sen jälkeen hiiri kunkin kohteen laatikon oikealle puolelle, jolloin <strong>Change image</strong> -kuvake tulee näkyviin. Klikkaa kuvaketta ja valitse haluamasi kuva <strong>Image Library</strong> -kuvakirjastosta.</p></li><li><p>Muokkaa kunkin kortin sisältöä ja siirrä kortti vaihtoehdon päälle.</p></li><li><p>Siirrä yksi kortti väärään paikkaan. Sivun alareunaan ilmestyy virheilmoitus. Muokkaa sitä tarvittaessa.</p></li><li><p>Lisää elementin taustakuva siirtämällä kohdistinta ikkunan oikean reunan yläosaan ja klikkaamalla alinta kuvaketta <strong>Change image</strong>.</p></li><li><p>Kun kaikki kortit on asetettu oikeille kohdilleen, ikkunan vasemmalle puolelle ilmestyy uusi laatikko. Kirjoita tähän tehtävää koskevia lisätietoja (esim. Kaikki oikein!….)</p></li></ul><h3>Miten Drag and Drop -elementti toimii?</h3><p><img src="statamic://asset::files::docs/2025/03/DragandDropWastedoing.gif"></p><h3>Miten elementtiä muokataan?</h3><p><img src="statamic://asset::files::docs/2025/03/DragandDropEditWasteedit2.gif"></p><p><img src="statamic://asset::files::docs/2021/08/Drag_and_Drop_Edit_FI_1_new.gif"></p><h3>Esimerkki sen käytöstä.</h3><p><img src="statamic://asset::files::docs/2021/05/dragdrop-1.png"></p>

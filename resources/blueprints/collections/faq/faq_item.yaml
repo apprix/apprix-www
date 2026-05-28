@@ -13,23 +13,16 @@ tabs:
               display: Kysymys
               instructions: "The FAQ question."
 
-          - handle: category
+          - handle: faq_categories
             field:
-              type: select
+              type: terms
+              taxonomies:
+                - faq_categories
+              display: Kategoria
               required: true
               localizable: false
-              display: Kategoria
-              instructions: "Valitse osio johon tämä kysymys kuuluu."
-              options:
-                - 'Yleiset'
-                - 'Sisäänkirjautuminen'
-                - 'Video'
-                - 'Zip/SCORM-tiedostot'
-                - 'Käyttäjäoikeuksien hallinta'
-                - 'Moduulit ja submoduulit'
-                - 'Elementit'
-                - 'Tilastot'
-                - 'Tuetut selaimet'
+              max_items: 1
+              mode: select
 
           - handle: order
             field:
@@ -46,8 +39,17 @@ tabs:
               required: true
               localizable: true
               display: Vastaus
+              container: files
               save_html: true
               toolbar_mode: fixed
               allow_source: false
               enable_input_rules: true
               enable_paste_rules: true
+              buttons:
+                - bold
+                - italic
+                - unorderedlist
+                - orderedlist
+                - anchor
+                - image
+                - removeformat

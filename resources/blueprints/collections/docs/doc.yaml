@@ -25,6 +25,17 @@ tabs:
               allow_source: true
               enable_input_rules: true
               enable_paste_rules: true
+              buttons:
+                - h2
+                - h3
+                - bold
+                - italic
+                - unorderedlist
+                - orderedlist
+                - quote
+                - anchor
+                - image
+                - removeformat
 
           - handle: videos
             field:

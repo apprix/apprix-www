@@ -144,11 +144,14 @@
    Add e.g. class="theme-teal" to a section wrapper to re-accent all
    text-primary / bg-primary / border-primary etc. inside that section.
    ========================= */
-.theme-orange { --color-primary: var(--color-brand-orange); }
-.theme-green  { --color-primary: var(--color-brand-green); }
-.theme-blue   { --color-primary: var(--color-brand-blue); }
-.theme-teal   { --color-primary: var(--color-brand-teal); }
-.theme-dark   { --color-primary: var(--color-brand-dark); }
+.theme-orange        { --color-primary: var(--color-brand-orange); }
+.theme-green         { --color-primary: var(--color-brand-green); }
+.theme-blue          { --color-primary: var(--color-brand-blue); }
+.theme-teal          { --color-primary: var(--color-brand-teal); }
+.theme-dark          { --color-primary: var(--color-brand-dark); }
+.theme-purple        { --color-primary: var(--color-accent-purple); }
+.theme-magenta       { --color-primary: var(--color-accent-magenta); }
+.theme-accent-orange { --color-primary: var(--color-accent-orange); }
 
 /* =========================
    Logo carousel animation
@@ -328,4 +331,73 @@
     color: var(--color-primary);
     border-radius: 2px;
     font-style: normal;
+}
+
+/* ── Image lightbox ────────────────────────────────────────────────────── */
+.prose img,
+figure.doc-image img {
+    cursor: zoom-in;
+}
+
+#img-lightbox {
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1.5rem;
+    background: rgba(0, 0, 0, 0.82);
+    cursor: zoom-out;
+    opacity: 0;
+    transition: opacity 0.2s ease;
+}
+
+#img-lightbox.lb-open {
+    opacity: 1;
+}
+
+#img-lightbox > img {
+    max-width: min(90vw, 1200px);
+    max-height: 90vh;
+    object-fit: contain;
+    border-radius: 0.5rem;
+    box-shadow: 0 25px 60px -10px rgba(0, 0, 0, 0.6);
+    cursor: default;
+    transform: scale(0.95);
+    transition: transform 0.2s ease;
+}
+
+#img-lightbox.lb-open > img {
+    transform: scale(1);
+}
+
+#img-lightbox-close {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    width: 2.25rem;
+    height: 2.25rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.12);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    border-radius: 9999px;
+    color: #fff;
+    font-size: 1.375rem;
+    line-height: 1;
+    cursor: pointer;
+    transition: background 0.15s ease;
+}
+
+#img-lightbox-close:hover {
+    background: rgba(255, 255, 255, 0.22);
+}
+
+@media (prefers-reduced-motion: reduce) {
+    #img-lightbox,
+    #img-lightbox > img {
+        transition: none;
+    }
 }

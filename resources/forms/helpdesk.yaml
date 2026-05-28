@@ -1,0 +1,10 @@
+title: Helpdesk
+honeypot: fax
+email:
+  -
+    to: helpdesk@apprix.fi
+    from: helpdesk@apprix.fi
+    reply_to: '{{ email }}'
+    subject: 'Helpdesk: {{ subject }}'
+    html: email/form_owner
+    text: email/form_owner_text

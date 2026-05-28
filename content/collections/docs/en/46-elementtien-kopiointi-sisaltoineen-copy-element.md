@@ -1,31 +1,7 @@
 ---
-id: b015d359-9afb-4276-abec-adc4051ad6a7
+id: 2aec8305-3a90-4939-b90d-d8479f5e78f7
+origin: b015d359-9afb-4276-abec-adc4051ad6a7
 blueprint: doc
-title: '4.6 Copying Elements with their content (Copy Element)'
+title: '4.6 Copying Elements with Content (Copy Element)'
 ---
-This feature allows elements and their content to be copied from one module to another or within the same module.
-
-<strong>How do you copy and paste an element?</strong>
-
-You can copy an element in <strong>Preview</strong> mode by pressing <strong>'Copy'</strong> in the <strong>Preview bar</strong>, which copies the element's content. Select the module where you want to add the element. In the <strong>Edit module</strong>, press <strong>'Paste element &amp; content'</strong> from the orange gear icon at the top, which pastes the element as the last one in the module, before the <strong>Finish</strong> element.
-<h4><strong>Additional information about the feature</strong></h4>
-<ul>
- <li>With the <strong>Copy</strong> feature, you can copy one element at a time.</li>
- <li>The <strong>'Paste element &amp; content'</strong> button appears behind the <strong>Edit module's</strong> gear icon when an element has been copied to the browser's memory.</li>
- <li>Elements that cannot be copied are <strong>intro, submodule_menu, pass/fail (fail), and finish</strong>. The Copy button for these elements appears greyed out.</li>
- <li>An entry is added to the <strong>audit log when an element is added</strong>. This applies only to customers who have <strong>Auditing Tools</strong> enabled and the <strong>Audit Module</strong> feature activated in the module for the marking to be visible.</li>
- <li>Elements can be copied from <strong>published</strong> and <strong>draft</strong> modules and pasted into a draft module.</li>
- <li>The element to be added must be of the same module type. Otherwise, an error message is displayed.
-<ul>
- <li><strong>Why is this?</strong> Each module type contains an entirely different set of elements, possibly different logos, colours, fonts, and integrations.</li>
-</ul>
-</li>
-</ul>
-
-<h6 class="p1">How do you copy the element?</h6>
-
-<h6 class="p1">How do you paste the element?</h6>
-
-<figure class="doc-image"><img src="/files/docs/2025/06/Copy-button-1.jpg" alt="" loading="lazy"></figure>
-
-<figure class="doc-image"><img src="/files/docs/2025/06/Paste-element-1.jpg" alt="" loading="lazy"></figure>
+<p>This feature allows you to copy elements along with their content, either from one module to another or within the same module.</p><p><strong>How do you copy and paste an element?</strong></p><p>You can copy an element while in the element's <strong>Preview mode</strong> by clicking <strong>Copy</strong> in the <strong>Preview toolbar</strong>, which copies the element's content. Select the module to which you want to add the element. From the orange gear icon at the top of <strong>Edit Module</strong>, click <strong>"Paste element &amp; content"</strong> — the element will be copied with its content as the last element in the module, before the <strong>Finish</strong> element.</p><p><strong>Additional information about this feature</strong></p><ul><li><p>The <strong>Copy</strong> feature can only copy one element at a time.</p></li><li><p>The <strong>'Paste element &amp; content'</strong> button appears behind the Edit Module gear icon once an element has been copied to the browser's memory.</p></li><li><p>Elements that cannot be copied: <strong>intro, submodule_menu, pass/fail (fail), and finish</strong>. The copy button for these elements appears greyed out.</p></li><li><p>Elements can be copied from both a published module and a draft module, and pasted into a draft module.</p></li><li><p>An entry is added to the <strong>Audit</strong> log when an element is added. This only applies to customers who have <strong>Auditing Tools</strong> enabled and the <strong>Audit Module</strong> feature turned on in the module for the entry to be visible.</p></li><li><p>The element being pasted must be from the same module type; otherwise an error message is displayed.<ul><li><p><strong>Why?</strong> Because each module type contains a completely different set of elements, logos, colours, and fonts, as well as potentially different integrations.</p></li></ul></p></li></ul><h3>How do you copy an element?</h3><p><img src="statamic://asset::files::docs/2025/06/Copy-button.jpg"></p><h3>How do you paste an element?</h3><p><img src="statamic://asset::files::docs/2025/06/Paste-element.jpg"></p>

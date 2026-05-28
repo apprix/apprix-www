@@ -3,64 +3,72 @@ id: b08a97a3-508b-4fae-9016-85532c3e1b5f
 blueprint: doc
 title: '8.2.1 Email Registration 2.0'
 ---
-Email Registration 2.0 on  sähköpostirekisteröinnin todennusmekanismi, joka antaa kurssin osallistujien rekisteröityä Builderiin ja luoda käyttäjätunnuksen ja salasanan. Rekisteröinnin jälkeen samaa käyttäjätunnusta ja salasanaa voidaan käyttää kaikissa moduuleissa, joissa sähköpostirekisteröinti on käytössä. Jos toiminto on käytössä, kurssin osallistujien on käytettävä voimassa olevaa ja yksilöllistä sähköpostiosoitetta (tai matkapuhelinnumeroa).
+<p>Email Registration 2.0 on sähköpostirekisteröinnin todennusmekanismi, joka antaa kurssin osallistujien rekisteröityä Builderiin ja luoda käyttäjätunnuksen ja salasanan. Rekisteröinnin jälkeen samaa käyttäjätunnusta ja salasanaa voidaan käyttää kaikissa moduuleissa, joissa sähköpostirekisteröinti on käytössä. Jos toiminto on käytössä, kurssin osallistujien on käytettävä voimassa olevaa ja yksilöllistä sähköpostiosoitetta (tai matkapuhelinnumeroa).</p>
 
-<strong>Kirjautumislomake (Login form)</strong>
+<p><strong>Kirjautumislomake (Login form)</strong></p>
 
-Kirjautumislomake on ensimmäinen sivu, jonka kurssilainen näkee, kun hän aloittaa kurssin.
+<p>Kirjautumislomake on ensimmäinen sivu, jonka kurssilainen näkee, kun hän aloittaa kurssin.</p>
 
-Kirjautumislomakkeessa on sähköpostikenttä.  Kun sähköpostikenttä on täytetty, kurssilainen klikkaa <strong>Seuraava</strong> tai painaa enter, jolloin järjestelmä etsii, onko tili olemassa vai ei.
+<p>Kirjautumislomakkeessa on sähköpostikenttä. Kun sähköpostikenttä on täytetty, kurssilainen klikkaa Seuraava tai painaa enter, jolloin järjestelmä etsii, onko tili olemassa vai ei.</p>
 
-<img class="wp-image-5446 aligncenter" src="/files/docs/2024/02/Picture1-Login-form-1.png" alt="" width="342" height="266" />
-<ol>
- <li><strong>Jos tiliä ei ole vielä olemassa</strong></li>
-</ol>
-Jos tiliä ei ole olemassa, kun ilmoittautumislomake avautuu, kurssilainen voi lisätä sinne tietonsa (etunimi, sukunimi ja salasana) ja klikata <strong>Rekisteröidy</strong>-painiketta.
+<p><img src="/files/docs/2024/02/Picture1-Login-form-1.png"></p>
 
-<img class="wp-image-5447 aligncenter" src="/files/docs/2024/02/Picture-2-Registration-Form-1.png" alt="" width="298" height="277" />
+<p><strong>Jos tiliä ei ole vielä olemassa</strong></p>
 
-<strong>Huom! Käyttäjän sähköpostiosoitteen, puhelinnumeron ja kirjautumistunnuksen tulee olla yksilöllisiä.</strong>
+<p>Jos tiliä ei ole olemassa, kun ilmoittautumislomake avautuu, kurssilainen voi lisätä sinne tietonsa (etunimi, sukunimi ja salasana) ja klikata Rekisteröidy-painiketta.</p>
 
-<strong>Kirjautumiseen käytettävissä olevat merkit ovat:</strong>
+<p><img src="/files/docs/2024/02/Picture-2-Registration-Form-1.png"></p>
+
+<h3>Huom! Käyttäjän sähköpostiosoitteen, puhelinnumeron ja kirjautumistunnuksen tulee olla yksilöllisiä.</h3>
+
+<p>Kirjautumiseen käytettävissä olevat merkit ovat:</p>
+
 <ul>
  <li>latinalaiset kirjaimet (sekä isot että pienet)</li>
  <li>numerot</li>
  <li>merkit -._@.</li>
 </ul>
-<strong>Tenantin asetuksista riippuen salasanan vahvuuden tulee olla ”keskivahva (medium)” tai ”vahva”.</strong>
 
-Keskivahva tarkoittaa, että salasanan tulee sisältää:
+<h3>Tenantin asetuksista riippuen salasanan vahvuuden tulee olla "keskivahva (medium)" tai "vahva".</h3>
+
+<p>Keskivahva tarkoittaa, että salasanan tulee sisältää:</p>
+
 <ul>
  <li>vähintään 8 kirjainta</li>
  <li>latinalaiset isot kirjaimet</li>
  <li>pienet latinalaiset kirjaimet</li>
 </ul>
-Vahvat salasanat vaativat lisäksi vähintään yhden erikoissymbolin tästä sarjasta:
 
-!”#$%&amp;'()*+,./:;&lt;=&gt;?@[\]-^_`{|}~
+<p>Vahvat salasanat vaativat lisäksi vähintään yhden erikoissymbolin tästä sarjasta:</p>
 
-<strong>Huom! Ennen rekisteröitymistä </strong><strong>kurssilaisen</strong> <strong>on vahvistettava sähköpostiosoitteensa tai puhelinnumeronsa PIN-koodilla.</strong>
+<p>!"#$%&amp;'()*+,./:;&lt;=&gt;?@[\]-^_`~</p>
 
-Sen jälkeen, että kurssilainen on klikannut <strong>Rekisteröidy</strong>-painiketta uusi ponnahdusikkuna avautuu. Siinä kysytään kurssilaiselta, haluaako hän saada pin-koodin sähköpostitse tai puhelimitse. Kun hän on valinnut jommankumman vaihtoehdon, hän saa pin-koodin, joka hänen on syötettävä lomakkeeseen. Tämän jälkeen hän voi aloittaa kurssin.
+<h3>Huom! Ennen rekisteröitymistä kurssilaisen on vahvistettava sähköpostiosoitteensa tai puhelinnumeronsa PIN-koodilla.</h3>
 
-<img class="wp-image-5448 aligncenter" src="/files/docs/2024/02/Picture3-Send-PIN-code-1.png" alt="" width="317" height="235" />
+<p>Sen jälkeen, että kurssilainen on klikannut Rekisteröidy-painiketta uusi ponnahdusikkuna avautuu. Siinä kysytään kurssilaiselta, haluaako hän saada pin-koodin sähköpostitse tai puhelimitse. Kun hän on valinnut jommankumman vaihtoehdon, hän saa pin-koodin, joka hänen on syötettävä lomakkeeseen. Tämän jälkeen hän voi aloittaa kurssin.</p>
 
-<strong>Huom! Kurssilaisen on suoritettava tunnistautuminen 10 minuutin sisällä.</strong>
+<p><img src="/files/docs/2024/02/Picture3-Send-PIN-code-1.png"></p>
 
-<img class="wp-image-5449 aligncenter" src="/files/docs/2024/02/Picture4-Insert-PIN-Code-1.png" alt="" width="327" height="248" />
-<h4>Pin-koodivahvistus</h4>
-PIN-koodivarmennus voidaan tehdä käyttämällä käyttäjän sähköpostiosoitetta tai puhelinnumeroa.
+<h3>Huom! Kurssilaisen on suoritettava tunnistautuminen 10 minuutin sisällä.</h3>
 
-Koodi sisältää 6 numeroa, jotka luodaan satunnaisesti ja tallennetaan käyttäjän istuntoon 5 minuutin ajan. Tämän ajanjakson sisällä koodi ei muutu. Klikkaamalla <strong>Lähetä uudelleen</strong> -painiketta käyttäjä saa saman koodin joka kerta, kunnes se vanhenee. Tämän jälkeen järjestelmä luo uuden koodin. Huomaa, että edellinen koodi ei ole enää voimassa.
+<p><img src="/files/docs/2024/02/Picture4-Insert-PIN-Code-1.png"></p>
 
-Numeron syöttö on tavallinen syöttökenttä ja tukee kaikkia yleisiä tekstinmuokkaustoimintoja, kuten kopiointia, liittämistä, muokkaamista, poistamista jne. Kun käyttäjä syöttää kuusi numeroa, vahvistusprosessi käynnistyy automaattisesti.
+<p><strong>Pin-koodivahvistus</strong></p>
 
-<strong>2. Jos tili on olemassa, mutta kurssin osallistuja on unohtanut salasanansa</strong>
+<p>PIN-koodivarmennus voidaan tehdä käyttämällä käyttäjän sähköpostiosoitetta tai puhelinnumeroa.</p>
 
-Kurssilainen klikkaa "<strong>Unohdin salasanan</strong>" -linkkiä. Ponnahdusikkuna tilin palauttamisesta avautuu. Kurssilainen täyttää sähköpostiosoitteensa ja klikkaa <strong>Lähetä PIN-koodi</strong> -painiketta. Kun PIN-koodi on lähetetty sähköpostiosoitteeseen, kurssilainen syöttää koodin uuteen ponnahdusikkunaan. Uusi salasana -ikkuna avautuu, ja kurssilainen voi vaihtaa salasanansa tässä. Kun salasana on vaihdettu, kurssi avautuu.
+<p>Koodi sisältää 6 numeroa, jotka luodaan satunnaisesti ja tallennetaan käyttäjän istuntoon 5 minuutin ajan. Tämän ajanjakson sisällä koodi ei muutu. Klikkaamalla Lähetä uudelleen -painiketta käyttäjä saa saman koodin joka kerta, kunnes se vanhenee. Tämän jälkeen järjestelmä luo uuden koodin. Huomaa, että edellinen koodi ei ole enää voimassa.</p>
 
-<strong>3. Kurssilainen on rekisteröitynyt ja muistaa salasanansa.</strong>
+<p>Numeron syöttö on tavallinen syöttökenttä ja tukee kaikkia yleisiä tekstinmuokkaustoimintoja, kuten kopiointia, liittämistä, muokkaamista, poistamista jne. Kun käyttäjä syöttää kuusi numeroa, vahvistusprosessi käynnistyy automaattisesti.</p>
 
-Kurssilainen syöttää kirjautumislomakkeen sähköpostiosoitteen ja painaa sitten <strong>Seuraava</strong>-painiketta. Uusi ikkuna avautuu. Tässä hän kirjoittaa salasanan ja painaa <strong>Jatka</strong>-painiketta. Kurssi voidaan nyt aloittaa.
-<h4>Turvallisuussuojaus</h4>
-Järjestelmässä on sisäinen palomuuri, joka pystyy havaitsemaan ja estämään käyttäjän epäilyttävän toiminnan. Apprixin käytössä oleva palomuuri sisältää useita suojakerroksia.
+<p><strong>2. Jos tili on olemassa, mutta kurssin osallistuja on unohtanut salasanansa</strong></p>
+
+<p>Kurssilainen klikkaa "Unohdin salasanan" -linkkiä. Ponnahdusikkuna tilin palauttamisesta avautuu. Kurssilainen täyttää sähköpostiosoitteensa ja klikkaa Lähetä PIN-koodi -painiketta. Kun PIN-koodi on lähetetty sähköpostiosoitteeseen, kurssilainen syöttää koodin uuteen ponnahdusikkunaan. Uusi salasana -ikkuna avautuu, ja kurssilainen voi vaihtaa salasanansa tässä. Kun salasana on vaihdettu, kurssi avautuu.</p>
+
+<p><strong>3. Kurssilainen on rekisteröitynyt ja muistaa salasanansa.</strong></p>
+
+<p>Kurssilainen syöttää kirjautumislomakkeen sähköpostiosoitteen ja painaa sitten Seuraava-painiketta. Uusi ikkuna avautuu. Tässä hän kirjoittaa salasanan ja painaa Jatka-painiketta. Kurssi voidaan nyt aloittaa.</p>
+
+<p><strong>Turvallisuussuojaus</strong></p>
+
+<p>Järjestelmässä on sisäinen palomuuri, joka pystyy havaitsemaan ja estämään käyttäjän epäilyttävän toiminnan. Apprixin käytössä oleva palomuuri sisältää useita suojakerroksia.</p>
