@@ -1216,10 +1216,25 @@
             }
 
 
+            // ── Open internal /help links in a new tab ───────────────────────────────
+            // Any <a> inside a .prose block whose href points to /help/ or /en/help/
+            // gets target="_blank" so the reader's current position isn't lost.
+            // Called on page load AND on every infinite-scroll loaded section.
+            function openHelpLinksInNewTab(container) {
+                (container || document).querySelectorAll('.prose a[href]').forEach(function (a) {
+                    var href = a.getAttribute('href') || '';
+                    if (/^(\/en)?\/help\//.test(href)) {
+                        a.setAttribute('target', '_blank');
+                        a.setAttribute('rel', 'noopener noreferrer');
+                    }
+                });
+            }
+
             // ── Master enhancer (called on page load + each infinite-scroll section) ──
             function docsEnhance(container) {
                 pairImageLabels(container);
                 addHeadingAnchors(container);
+                openHelpLinksInNewTab(container);
             }
             window.docsEnhance = docsEnhance; // hoisted for loadSection hook
 
