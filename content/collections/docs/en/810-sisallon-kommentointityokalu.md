@@ -47,8 +47,9 @@ title: '8.10 Content Commenting Tool'
 </ul><h3>General Notes</h3><ul>
  <li>Commenting does not leave entries in the audit trail.</li>
  <li>The Builder view and commenting tool do not update in real time if another facilitator is, for example, writing comments at the same time.</li>
-</ul><h3>Click the video to enlarge it</h3><h3>All Modules and Edit Element Views</strong>
-<p><strong>Facilitator with module edit permissions</h3><h3>How does the Comments feature work?</h3></p>
+</ul><h3>How does the Comments feature work?</h3>
+<p><strong>All Modules and Edit Element Views</strong></p>
+<p><strong>Facilitator with module edit permissions</strong></p>
 
 <p></p>
 

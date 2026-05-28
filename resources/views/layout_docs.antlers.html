@@ -213,7 +213,7 @@
 
             {{# ─── SIDEBAR ─── #}}
             <aside
-                class="fixed inset-y-0 left-0 z-30 w-80 overflow-y-auto border-r border-neutral-200/80 bg-neutral-50 pt-16 transition-transform duration-200 lg:sticky lg:top-16 lg:h-[calc(100vh-4rem)] lg:translate-x-0 lg:shrink-0 lg:pt-0"
+                class="fixed inset-y-0 left-0 z-30 w-80 overflow-y-auto overscroll-contain border-r border-neutral-200/80 bg-neutral-50 pt-16 transition-transform duration-200 lg:sticky lg:bottom-auto lg:top-16 lg:h-[calc(100vh-4rem)] lg:translate-x-0 lg:shrink-0 lg:pt-0"
                 :class="sidebarOpen ? 'translate-x-0' : '-translate-x-full lg:translate-x-0'"
             >
                 <nav class="py-5">
@@ -633,9 +633,33 @@
 
             var spyObserver = new IntersectionObserver(function (entries) {
                 if (spyLocked) return;
+                var lastActivated = null;
                 entries.forEach(function (entry) {
-                    if (entry.isIntersecting) spySetActive(entry.target.id);
+                    if (entry.isIntersecting) {
+                        spySetActive(entry.target.id);
+                        lastActivated = entry.target;
+                    }
                 });
+
+                // Bottom-of-page correction: the spy zone (top 40% of viewport) can't
+                // reach sections near the document end. When near the bottom, check if
+                // the next sibling section (same parent wrapper) is visible below the
+                // zone and activate it — that's the section the user is actually reading.
+                if (lastActivated && (window.scrollY + window.innerHeight) >= document.documentElement.scrollHeight - 200) {
+                    var wrapper = lastActivated.closest('[data-top-idx]');
+                    if (wrapper) {
+                        var ai = spySections.indexOf(lastActivated);
+                        if (ai >= 0 && ai < spySections.length - 1) {
+                            var next = spySections[ai + 1];
+                            if (next.closest('[data-top-idx]') === wrapper) {
+                                var nr = next.getBoundingClientRect();
+                                if (nr.top >= 0 && nr.top < window.innerHeight) {
+                                    spySetActive(next.id);
+                                }
+                            }
+                        }
+                    }
+                }
             }, { rootMargin: '-72px 0px -60% 0px' });
 
             function spySetActive(id) {
@@ -849,7 +873,7 @@
             var nextParentIdx = nextLink ? allSidebarLinks.indexOf(nextLink) : allSidebarLinks.length;
             for (var ci = parentLiIdx + 1; ci < nextParentIdx; ci++) {
                 if (entryDepth(allSidebarLinks[ci]) > 1) {
-                    allSidebarLinks[ci].style.boxShadow = 'inset 3px 0 0 rgba(248,114,6,0.4)';
+                    allSidebarLinks[ci].style.boxShadow = 'inset 3px 0 0 rgba(248,114,6,0.65)';
                 }
             }
 
@@ -983,6 +1007,7 @@
 
                 // One observer drives both URL sync and sidebar highlight
                 var visObs = new IntersectionObserver(function (entries) {
+                    if (spyLocked) return; // respect programmatic navigation lock
                     entries.forEach(function (e) {
                         if (!e.isIntersecting) return;
                         var ti = parseInt(e.target.dataset.topIdx, 10);
@@ -1238,17 +1263,68 @@
             }
 
 
-            // ── Open internal /help links in a new tab ───────────────────────────────
-            // Any <a> inside a .prose block whose href points to /help/ or /en/help/
-            // gets target="_blank" so the reader's current position isn't lost.
+            // ── Smart internal /help link handling ────────────────────────────────────
+            // Content links to /help/ or /en/help/ are intercepted on click:
+            //  • If the target section is already in the DOM (loaded via infinite scroll),
+            //    scroll to it in-place and update the sidebar — no new tab, no page reload.
+            //  • Otherwise open in a new tab so the reader's current position isn't lost.
             // Called on page load AND on every infinite-scroll loaded section.
             function openHelpLinksInNewTab(container) {
                 (container || document).querySelectorAll('.prose a[href]').forEach(function (a) {
                     var href = a.getAttribute('href') || '';
-                    if (/^(\/en)?\/help\//.test(href)) {
-                        a.setAttribute('target', '_blank');
-                        a.setAttribute('rel', 'noopener noreferrer');
-                    }
+                    if (!/^(\/en)?\/help\//.test(href)) return;
+
+                    // Extract the slug from the URL path (last segment)
+                    var slug = href.replace(/[#?].*$/, '').split('/').pop();
+                    // Also grab any hash from the href
+                    var hashIdx = href.indexOf('#');
+                    var hash = hashIdx !== -1 ? href.slice(hashIdx + 1) : '';
+
+                    // Always set target="_blank" as fallback; the click handler below
+                    // will preventDefault when in-page navigation is possible.
+                    a.setAttribute('target', '_blank');
+                    a.setAttribute('rel', 'noopener noreferrer');
+
+                    a.addEventListener('click', function (e) {
+                        // Determine the ID to look for in the DOM: prefer hash, fall back to slug
+                        var targetId = hash || slug;
+                        if (!targetId) return; // let default behavior handle it
+
+                        var targetEl = document.getElementById(targetId);
+
+                        if (!targetEl) {
+                            // Not in DOM — check if the sidebar has a link for this section.
+                            // Sidebar child links use parentUrl#slug, which loads the full
+                            // parent page with all siblings and activates the right subsection.
+                            var sbLink = document.querySelector('#docs-nav a[data-section="' + targetId + '"]');
+                            if (sbLink) {
+                                e.preventDefault();
+                                window.open(sbLink.href, '_blank', 'noopener,noreferrer');
+                            }
+                            return; // otherwise let target="_blank" open the original href
+                        }
+
+                        // Target section is already in the page — navigate in-place
+                        e.preventDefault();
+
+                        // Resolve sidebar link for this section
+                        var sidebarLink = document.querySelector('#docs-nav a[data-section="' + targetId + '"]');
+                        var sidebarHref = sidebarLink ? sidebarLink.getAttribute('href') : (window.location.pathname + '#' + targetId);
+
+                        scrollToEl(targetEl);
+                        history.pushState(null, '', sidebarHref);
+
+                        if (spyLinks.some(function (sl) { return sl.dataset.section === targetId; })) {
+                            spySetActive(targetId);
+                        }
+
+                        spyLocked = true;
+                        clearTimeout(navScrollTimer);
+                        navScrollTimer = setTimeout(function () {
+                            scrollToEl(targetEl);
+                            spyLocked = false;
+                        }, 350);
+                    });
                 });
             }
 

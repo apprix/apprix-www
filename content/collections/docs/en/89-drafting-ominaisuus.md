@@ -39,4 +39,4 @@ title: '8.9 Drafting feature'
  <li><a href="https://test.xxxx/b_dev/e/abcde/index.html?mid=edcba&amp;skip&amp;nostats">https://test.xxxx/b_dev/e/abcde/index.html?mid=<em>edcba</em><strong>&amp;skip&amp;nostats</strong></a></li>
  <li><strong>Draft module preview link:</strong></li>
  <li><a href="https://test.xxxx.fi/b_dev/e/abcde/index.html?mid=edcba&amp;skip&amp;nostats&amp;t=draft">https://test.xxxx.fi/b_dev/e/abcde/index.html?mid=edcba<strong>&amp;skip&amp;nostats&amp;t=draft</strong></a></li>
-</ul><h3>Watch the video by clicking the Play button on the left side of the toolbar.</h3><h3>Click the square to enlarge the video.</h3><h3>How does the "Audit Module" feature work?</h3><h3>Drafting buttons</h3>
+</ul>

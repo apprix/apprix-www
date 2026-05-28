@@ -166,15 +166,6 @@ return [
     'faq_open_hint'          => 'avaa',
     'faq_close_hint'         => 'sulje',
     'faq_cat_all'                          => 'Kaikki',
-    'faq_cat_yleiset'                      => 'Yleiset',
-    'faq_cat_sisaankirjautuminen'          => 'Sisäänkirjautuminen',
-    'faq_cat_video'                        => 'Video',
-    'faq_cat_zipscorm-tiedostot'           => 'Zip/SCORM-tiedostot',
-    'faq_cat_kayttajaoikeuksien-hallinta'  => 'Käyttäjäoikeuksien hallinta',
-    'faq_cat_moduulit-ja-submoduulit'      => 'Moduulit ja submoduulit',
-    'faq_cat_elementit'                    => 'Elementit',
-    'faq_cat_tilastot'                     => 'Tilastot',
-    'faq_cat_tuetut-selaimet'              => 'Tuetut selaimet',
 
     // Help / Docs
     'docs_search_placeholder' => 'Hae ohjeet...',

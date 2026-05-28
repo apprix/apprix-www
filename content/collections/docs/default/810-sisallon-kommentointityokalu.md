@@ -46,8 +46,9 @@ title: '8.10 Sisällön kommentointityökalu'
 </ul><h3>Yleisiä huomioita</h3><ul>
  <li>Kommentointi ei jätä audit trailiin merkintöjä.</li>
  <li>Builderin näkymä ja kommentointityökalu eivät päivity reaaliaikaisesti, jos toinen fasilitaattori esimerkiksi kirjoittaa yhtä aikaa kommentteja.</li>
-</ul><h3>Klikkaa videota suurentaaksesi sitä</h3><h3>All Modules ja Edit Element -näkymät</strong>
-<p><strong>Moduulin editointi-oikeudet omaava fasilitaattori</h3><h3>Kuinka Kommentointi -ominaisuus toimii?</h3></p>
+</ul><h3>Kuinka Kommentointi -ominaisuus toimii?</h3>
+<p><strong>All Modules ja Edit Element -näkymät</strong></p>
+<p><strong>Moduulin editointi-oikeudet omaava fasilitaattori</strong></p>
 
 <p></p>
 

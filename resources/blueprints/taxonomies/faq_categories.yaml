@@ -5,6 +5,7 @@ fields:
     field:
       type: text
       required: true
+      localizable: true
       display: Nimi
   -
     handle: theme

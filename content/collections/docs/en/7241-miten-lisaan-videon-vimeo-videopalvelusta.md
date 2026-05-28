@@ -13,7 +13,7 @@ title: '7.24.1 How do I add a video from the Vimeo video service?'
 
 <p>If you want to know how to embed a video from your own Vimeo channel into Builder, see the FAQ:</p>
 
-<p><a href="/faq">/faq</a>: "<strong>How do I embed a video from my own Vimeo channel?</strong>"</p>
+<p><a href="/en/faq">/faq</a>: "<strong>How do I embed a video from my own Vimeo channel?</strong>"</p>
 
 <h3>Element settings in edit view:</h3>
 
