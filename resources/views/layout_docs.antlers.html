@@ -588,14 +588,36 @@
                 }
             }
 
-            // Scroll the sidebar so the active section is visible
-            if (activeTopLink) {
-                var aside = activeTopLink.closest('aside');
-                if (aside) {
-                    var linkRect = activeTopLink.getBoundingClientRect();
-                    var asideRect = aside.getBoundingClientRect();
-                    aside.scrollTop += linkRect.top - asideRect.top - aside.clientHeight / 3;
+            // Fallback for child pages opened directly at their own /help/slug URL.
+            // The sidebar tree-builder rewrites child hrefs to parentUrl#slug so the
+            // pathname+hash match above never fires for direct child-page loads.
+            // Match by data-section (= entry slug) instead.
+            if (!activeTopLink) {
+                var pathSlug = currentPath.split('/').pop();
+                if (pathSlug) {
+                    document.querySelectorAll('#docs-nav a[data-section]').forEach(function (a) {
+                        if (!activeTopLink && a.dataset.section === pathSlug) {
+                            a.style.fontWeight = '600';
+                            a.style.color      = '#c2410c';
+                            a.style.background = 'rgba(248,114,6,0.08)';
+                            a.style.boxShadow  = 'inset 3px 0 0 #f87206';
+                            activeTopLink = a;
+                        }
+                    });
                 }
+            }
+
+            // Scroll the sidebar so the active link is centred — use rAF so
+            // getBoundingClientRect() runs after the browser has finished layout.
+            if (activeTopLink) {
+                var _activeForScroll = activeTopLink;
+                requestAnimationFrame(function () {
+                    var aside = _activeForScroll.closest('aside');
+                    if (!aside) return;
+                    var linkRect  = _activeForScroll.getBoundingClientRect();
+                    var asideRect = aside.getBoundingClientRect();
+                    aside.scrollTop += linkRect.top - asideRect.top - aside.clientHeight / 2;
+                });
             }
 
             // ── 2. Scroll spy — extensible for dynamically loaded sections ──
