@@ -175,4 +175,6 @@ return [
     'docs_open_hint'          => 'avaa',
     'docs_close_hint'         => 'sulje',
     'docs_sidebar_label'      => 'Ohjeet',
+    'docs_index_title'        => 'Ohjeet',
+    'docs_index_intro'        => 'Apprix Builder -ohjeet. Valitse aihe vasemmalta tai alta.',
 ];

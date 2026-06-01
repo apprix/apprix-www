@@ -47,5 +47,11 @@ class AppServiceProvider extends ServiceProvider
         RateLimiter::for('api', function (Request $request) {
             return Limit::perMinute(60)->by($request->user()?->id ?: $request->ip());
         });
+
+        // Generous limiter for the search-as-you-type JSON endpoints. Caps
+        // scripted abuse without tripping normal (debounced) human searching.
+        RateLimiter::for('search', function (Request $request) {
+            return Limit::perMinute(120)->by($request->ip());
+        });
     }
 }

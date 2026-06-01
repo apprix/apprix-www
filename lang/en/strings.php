@@ -175,4 +175,6 @@ return [
     'docs_open_hint'          => 'open',
     'docs_close_hint'         => 'close',
     'docs_sidebar_label'      => 'Help',
+    'docs_index_title'        => 'Help',
+    'docs_index_intro'        => 'Apprix Builder guides. Choose a topic on the left or below.',
 ];

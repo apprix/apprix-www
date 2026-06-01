@@ -12,16 +12,22 @@ class FaqSearchController extends Controller
     {
         $site = in_array($request->input('site'), ['default', 'en']) ? $request->input('site') : 'default';
 
+        // Build the category slug => title map once, up front, to avoid an N+1
+        // Term::find() lookup per FAQ entry inside the map() below.
+        $catMap = Term::query()
+            ->where('taxonomy', 'faq_categories')
+            ->get()
+            ->mapWithKeys(fn ($t) => [$t->slug() => (string) ($t->get('title') ?? $t->slug())]);
+
         $entries = Entry::query()
             ->where('collection', 'faq')
             ->where('site', $site)
             ->orderBy('order')
             ->get()
-            ->map(function ($entry) {
+            ->map(function ($entry) use ($catMap) {
                 $catSlugs = $entry->get('faq_categories') ?? [];
                 $catSlug  = is_array($catSlugs) ? ($catSlugs[0] ?? '') : (string) $catSlugs;
-                $term     = $catSlug ? Term::find('faq_categories::' . $catSlug) : null;
-                $catTitle = $term ? (string) ($term->get('title') ?? $catSlug) : $catSlug;
+                $catTitle = $catSlug ? ($catMap[$catSlug] ?? $catSlug) : $catSlug;
 
                 return [
                     'id'            => $entry->id(),
