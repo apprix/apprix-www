@@ -2,3 +2,7 @@ name: 'Antti Rasi'
 super: true
 id: db5e5b56-bca0-41f0-830d-0f1d51fd8fe6
 password_hash: $2y$12$au6sAt8sNmzyFybO9o4JauuBu.ASbiW3M2ZZm5ahsh3lgyJw6FMPi
+preferences:
+  collections:
+    pages:
+      view: tree
