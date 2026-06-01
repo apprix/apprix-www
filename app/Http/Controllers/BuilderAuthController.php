@@ -67,12 +67,25 @@ class BuilderAuthController extends Controller
         }
 
         $path = $parts['path'] ?? '/help';
+        $target = $path . (isset($parts['query']) ? '?' . $parts['query'] : '');
 
-        // Only allow same-site absolute paths; reject relative and protocol-relative (//host).
-        if (! str_starts_with($path, '/') || str_starts_with($path, '//')) {
+        // Validate the fully URL-decoded target so encoded payloads can't slip through.
+        $decoded = rawurldecode($target);
+
+        // Require a same-site absolute path and reject:
+        // - relative / protocol-relative URLs (// or missing leading slash);
+        // - backslashes — some browsers normalize "\" to "/", turning "/\evil" into
+        //   "//evil", and a trailing "\" can escape the JS-string delimiter; and
+        // - quote/control chars — this value is embedded in a JS string in
+        //   builder_auth.check, where CR/LF or quotes would break that context.
+        if (! str_starts_with($decoded, '/')
+            || str_starts_with($decoded, '//')
+            || str_contains($decoded, '\\')
+            || preg_match('/[\'"\r\n\x00-\x1F]/', $decoded)
+        ) {
             return '/help';
         }
 
-        return $path . (isset($parts['query']) ? '?' . $parts['query'] : '');
+        return $target;
     }
 }
