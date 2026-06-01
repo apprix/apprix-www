@@ -78,7 +78,7 @@
                 type="button"
                 @click="open = false"
                 class="ml-4 shrink-0 rounded-lg p-1.5 text-neutral-400 transition hover:bg-neutral-100 hover:text-neutral-600"
-                aria-label="Close"
+                aria-label="{{ trans:strings.close }}"
             >
                 <svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
@@ -110,7 +110,7 @@
                         </div>
                         <div class="mt-4 flex justify-end">
                             <button type="button" @click="open = false" class="rounded-xl border border-neutral-200 px-4 py-2 text-sm font-medium text-neutral-600 transition hover:bg-neutral-50">
-                                Sulje
+                                {{ trans:strings.close }}
                             </button>
                         </div>
                     </div>

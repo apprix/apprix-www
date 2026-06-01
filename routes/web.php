@@ -15,7 +15,7 @@ Route::get('/builder-auth/logout', [\App\Http\Controllers\BuilderAuthController:
 // open to everyone when false. Covers FAQ, Help, and their search endpoints.
 Route::middleware(\App\Http\Middleware\RequireBuilderAuth::class)->group(function () {
 
-    Route::get('/faq/search.json', [\App\Http\Controllers\FaqSearchController::class, 'index']);
+    Route::get('/faq/search.json', [\App\Http\Controllers\FaqSearchController::class, 'index'])->middleware('throttle:search');
     Route::statamic('/faq', 'faq/index', ['layout' => 'layout_faq', 'title' => 'FAQ']);
 
     Route::statamic('/en/faq', 'faq/index', ['layout' => 'layout_faq', 'title' => 'FAQ']);
@@ -44,7 +44,7 @@ Route::middleware(\App\Http\Middleware\RequireBuilderAuth::class)->group(functio
         return $first ? redirect($first->url()) : abort(404);
     });
 
-    Route::get('/help/search.json', [\App\Http\Controllers\DocsSearchController::class, 'index']);
+    Route::get('/help/search.json', [\App\Http\Controllers\DocsSearchController::class, 'index'])->middleware('throttle:search');
 
     Route::get('/en/help', function () {
         $section1 = Entry::query()
@@ -65,7 +65,7 @@ Route::middleware(\App\Http\Middleware\RequireBuilderAuth::class)->group(functio
         return $first ? redirect($first->url()) : abort(404);
     });
 
-    Route::get('/en/help/search.json', [\App\Http\Controllers\DocsSearchController::class, 'index']);
+    Route::get('/en/help/search.json', [\App\Http\Controllers\DocsSearchController::class, 'index'])->middleware('throttle:search');
 
 });
 
@@ -166,4 +166,4 @@ Route::get('/api/search', function (Request $request) {
         ->values();
 
     return response()->json($results);
-});
+})->middleware('throttle:search');

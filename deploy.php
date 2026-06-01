@@ -16,6 +16,10 @@ add('shared_dirs', [
     'storage',
     'public/assets',
     'public/files',
+    // Glide rendered-image cache (config/statamic/assets.php 'cache' => true).
+    // Regenerable cache, NOT source content. Shared so variants persist across
+    // deploys; created empty by Deployer (gitignored, absent from the release).
+    'public/img',
 ]);
 
 add('writable_dirs', ['storage', 'bootstrap/cache', 'content']);
@@ -94,7 +98,7 @@ after('deploy:update_code', 'deploy:git-auth-setup');
 // subdirs that predate this default must be fixed once as root (deploy cannot setfacl
 // files it doesn't own).
 task('deploy:shared-permissions', function () {
-    foreach (['public/assets', 'public/files'] as $dir) {
+    foreach (['public/assets', 'public/files', 'public/img'] as $dir) {
         run("setfacl -m u:www-data:rwX,u:deploy:rwX {{deploy_path}}/shared/$dir");
         run("setfacl -d -m u:www-data:rwX,u:deploy:rwX {{deploy_path}}/shared/$dir");
     }

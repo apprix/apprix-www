@@ -137,4 +137,8 @@ return [
     'no_search_results' => 'Inga resultat hittades.',
     'no_articles_yet' => 'Inga artiklar ännu.',
     'back_to_articles' => 'Aktuellt',
+
+    // Help / Docs
+    'docs_index_title'        => 'Hjälp',
+    'docs_index_intro'        => 'Apprix Builder-guider. Välj ett ämne till vänster eller nedan.',
 ];
