@@ -110,6 +110,14 @@ task('statamic:warm', function () {
 
 after('artisan:config:cache', 'statamic:warm');
 
+// Clear the static page cache once the new release is live. Content edits
+// self-invalidate the static cache, but template/code changes do NOT — without
+// this, code deploys keep serving stale cached HTML until manually cleared.
+task('statamic:static-clear', function () {
+    run('cd {{deploy_path}}/current && php artisan statamic:static:clear');
+});
+after('deploy:symlink', 'statamic:static-clear');
+
 
 // Override cleanup to not abort the deploy on permission errors.
 // Old releases may contain www-data-owned .git/objects (created by Statamic Git)
