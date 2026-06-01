@@ -10,14 +10,14 @@
         "laravel"
     ],
     "require": {
-        "php": "^8.2",
+        "php": "^8.3",
         "laravel/framework": "^12.0",
         "laravel/tinker": "^2.10.1",
-        "statamic/cms": "^5.0",
+        "statamic/cms": "^6.0",
         "studio1902/statamic-peak": "^20.14",
-        "studio1902/statamic-peak-browser-appearance": "^3.4",
-        "studio1902/statamic-peak-seo": "^8.0",
-        "studio1902/statamic-peak-tools": "^7.0"
+        "studio1902/statamic-peak-browser-appearance": "^4.0",
+        "studio1902/statamic-peak-seo": "^11.0",
+        "studio1902/statamic-peak-tools": "^9.0"
     },
     "require-dev": {
         "barryvdh/laravel-debugbar": "^3.8.1",
