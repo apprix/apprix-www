@@ -148,7 +148,6 @@
                 {{ if social_media:social_media }}
                     <div class="mt-5 flex items-center gap-3">
                         {{ social_media:social_media }}
-                            {{ if enabled }}
                                 <a
                                     href="{{ prefix }}{{ handle }}"
                                     rel="noopener{{ type == 'mastodon' ?= ' me' }}"
@@ -166,7 +165,6 @@
                                 >
                                     {{ svg :src="type" attr:class="w-6 h-6 overflow-visible fill-current" attr:aria-hidden="true" }}
                                 </a>
-                            {{ /if }}
                         {{ /social_media:social_media }}
                     </div>
                 {{ /if }}
