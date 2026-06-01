@@ -22,6 +22,7 @@ BOT-commitit (Statamic CP:n automaattiset git-commitit) ohitetaan GitHub Actions
 | **Hostname** | apprix-www |
 | **OS** | Ubuntu 24.04 LTS |
 | **PHP** | 8.4 (php8.4-fpm) |
+| **Statamic** | 6.20.0 PRO (Laravel 12; lisenssi voimassa 6.x:lle) |
 | **Web** | Nginx |
 | **Hetzner-projekti** | [143018](https://console.hetzner.cloud/projects/143018/servers/126819258/overview) |
 | **Domain (nyt)** | www3.apprix.fi (SSL aktiivinen) → siirtyy www2.apprix.fi |
@@ -70,7 +71,8 @@ Tiedosto: `.github/workflows/deploy.yml`
 9. Ajaa `artisan config:cache` ja `route:cache`
 10. Ajaa `statamic:stache:warm` ja `statamic:search:update`
 11. Vaihtaa `current`-symlinkin uuteen releaseen
-12. Siivoa vanhimmat releaset (max 5 säilytetään)
+12. Tyhjentää static page cachen (`statamic:static:clear`) — jotta koodi-/templaattimuutokset näkyvät heti
+13. Siivoaa vanhimmat releaset (max 5 säilytetään)
 
 ### Miksi upload eikä git clone palvelimella?
 
@@ -246,8 +248,9 @@ DNS-hallinta: https://dns.hetzner.com
 
 | Domain | Osoite | Tila |
 |---|---|---|
-| www3.apprix.fi | 62.238.10.202 | Aktiivinen, SSL ✅ |
-| www2.apprix.fi | 62.238.10.202 | Tuleva domain |
+| www3.apprix.fi | 62.238.10.202 | Aktiivinen (staging, basic auth), SSL ✅ |
+| www2.apprix.fi | 62.238.10.202 | Julkaisukohde (tuleva) |
+| apprix.fi, www.apprix.fi | muualla käytössä | Redirect → www2.apprix.fi (tuleva) |
 
 ---
 
@@ -266,5 +269,4 @@ DNS-hallinta: https://dns.hetzner.com
 
 - [ ] **Domain-siirto www3 → www2** — Lisää www2.apprix.fi DNS + SSL, päivitä APP_URL ja statamic.com-domain (ks. ohjeet yllä)
 - [ ] **Basic auth poisto** — Poista Nginx-konfiguraatiosta ennen julkaisua
-- [ ] **Palvelimen kernel-päivitys** — Odottava päivitys (6.8.0-106 → 107), vaatii rebootin — tee sopivana ajankohtana
 - [ ] **Node.js 24 GitHub Actionsissa** — actions/checkout@v4 ja actions/setup-node@v4 käyttävät Node 20:tä joka poistetaan syyskuussa 2026; päivitä versiot ajoissa
