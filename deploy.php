@@ -86,13 +86,17 @@ task('deploy:git-auth-setup', function () {
 
 after('deploy:update_code', 'deploy:git-auth-setup');
 
-// Ensure www-data can write to shared upload dirs (public/assets, public/files).
-// These are created once by deploy:shared and owned by deploy, so ACL must be
-// set here (as deploy) rather than in deploy:git-auth-setup.
+// Ensure both www-data AND deploy can write to shared upload dirs (public/assets,
+// public/files). www-data writes CP/SFTP uploads; deploy must also be able to write
+// (e.g. Statamic 6 creates asset .meta dirs during stache warm / search update).
+// The default (-d) ACL makes every newly created entry inheritable-writable by both,
+// so future CP uploads don't reintroduce the permission gap. Existing www-data-owned
+// subdirs that predate this default must be fixed once as root (deploy cannot setfacl
+// files it doesn't own).
 task('deploy:shared-permissions', function () {
     foreach (['public/assets', 'public/files'] as $dir) {
-        run("setfacl -m u:www-data:rwx {{deploy_path}}/shared/$dir");
-        run("setfacl -d -m u:www-data:rwx {{deploy_path}}/shared/$dir");
+        run("setfacl -m u:www-data:rwX,u:deploy:rwX {{deploy_path}}/shared/$dir");
+        run("setfacl -d -m u:www-data:rwX,u:deploy:rwX {{deploy_path}}/shared/$dir");
     }
 });
 
