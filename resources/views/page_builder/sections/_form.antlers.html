@@ -135,7 +135,8 @@
                             attr:x-ref="form" }}
                             <div
                                 x-data="formHandler()"
-                                x-init="attempted = false"
+                                {{# After a native (non-JS) submit Statamic redirects back with server-side `success`; mirror it into Alpine so the existing success message shows, and scroll it into view (the reload lands at the top). #}}
+                                x-init="attempted = false{{ if success }}; success = true; setTimeout(() => $el.scrollIntoView({ behavior: 'smooth', block: 'center' }), 150){{ /if }}"
                                 class="flex flex-col gap-6"
                             >
                                 {{# Status messages #}}
