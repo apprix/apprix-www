@@ -151,7 +151,7 @@
 
                                     <div
                                         x-cloak
-                                        x-show="attempted && hasErrors"
+                                        x-show="attempted && form.hasErrors"
                                         x-transition
                                         class="rounded-xl border border-rose-200/80 dark:border-rose-800 bg-rose-50/60 dark:bg-rose-900/30 px-5 py-3.5 text-sm font-medium text-rose-800 dark:text-rose-200 backdrop-blur-sm"
                                     >
@@ -173,7 +173,7 @@
                                                 {{ trans:strings.form_field_name }}
                                                 <span
                                                     x-cloak
-                                                    x-show="attempted && fieldError('name')"
+                                                    x-show="attempted && form.errors.name"
                                                     x-transition.opacity
                                                     class="text-rose-500"
                                                 >*</span>
@@ -190,8 +190,8 @@
                                             />
                                             <p
                                                 x-cloak
-                                                x-show="attempted && fieldError('name')"
-                                                x-text="fieldError('name')"
+                                                x-show="attempted && form.errors.name"
+                                                x-text="form.errors.name"
                                                 class="mt-1.5 text-xs font-medium text-rose-600"
                                             ></p>
                                         </div>
@@ -219,8 +219,8 @@
                                             />
                                             <p
                                                 x-cloak
-                                                x-show="attempted && fieldError('company')"
-                                                x-text="fieldError('company')"
+                                                x-show="attempted && form.errors.company"
+                                                x-text="form.errors.company"
                                                 class="mt-1.5 text-xs font-medium text-rose-600"
                                             ></p>
                                         </div>
@@ -237,7 +237,7 @@
                                                 {{ trans:strings.form_field_email }}
                                                 <span
                                                     x-cloak
-                                                    x-show="attempted && fieldError('email')"
+                                                    x-show="attempted && form.errors.email"
                                                     x-transition.opacity
                                                     class="text-rose-500"
                                                 >*</span>
@@ -254,8 +254,8 @@
                                             />
                                             <p
                                                 x-cloak
-                                                x-show="attempted && fieldError('email')"
-                                                x-text="fieldError('email')"
+                                                x-show="attempted && form.errors.email"
+                                                x-text="form.errors.email"
                                                 class="mt-1.5 text-xs font-medium text-rose-600"
                                             ></p>
                                         </div>
@@ -283,8 +283,8 @@
                                             />
                                             <p
                                                 x-cloak
-                                                x-show="attempted && fieldError('phone')"
-                                                x-text="fieldError('phone')"
+                                                x-show="attempted && form.errors.phone"
+                                                x-text="form.errors.phone"
                                                 class="mt-1.5 text-xs font-medium text-rose-600"
                                             ></p>
                                         </div>
@@ -301,7 +301,7 @@
                                                 {{ trans:strings.form_field_message }}
                                                 <span
                                                     x-cloak
-                                                    x-show="attempted && fieldError('message_body')"
+                                                    x-show="attempted && form.errors.message_body"
                                                     x-transition.opacity
                                                     class="text-rose-500"
                                                 >*</span>
@@ -318,8 +318,8 @@
                                             ></textarea>
                                             <p
                                                 x-cloak
-                                                x-show="attempted && fieldError('message_body')"
-                                                x-text="fieldError('message_body')"
+                                                x-show="attempted && form.errors.message_body"
+                                                x-text="form.errors.message_body"
                                                 class="mt-1.5 text-xs font-medium text-rose-600"
                                             ></p>
                                         </div>
@@ -340,7 +340,7 @@
                                         <span>{{ submit_label }}</span>
                                         <span
                                             x-cloak
-                                            x-show="submitting"
+                                            x-show="form.processing"
                                             x-transition.opacity
                                             class="ml-2 text-white/90"
                                         >{{ trans:strings.form_submitting }}</span>
