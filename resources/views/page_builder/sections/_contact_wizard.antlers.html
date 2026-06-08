@@ -81,8 +81,12 @@ Statamic form submissions). @set page.page_builder.contact_wizard #}}
                                 </div>
                             </div>
 
+                            {{# Plain (non-js) form: the wizard validates client-side itself and its
+                            inputs aren't x-model-bound, so it submits natively. Dropping js="alpine:form"
+                            lets Statamic set the server-side `success` flash on the redirect-back, which
+                            the initializer below turns into the on-page confirmation. #}}
                             {{ if form_handle }} {{ form:create
-                            :in="form_handle" js="alpine:form" attr:x-ref="form"
+                            :in="form_handle" attr:x-ref="form"
                             }}
                             {{# Native (non-JS) submit redirects back with server-side `success`. This sits inside form:create (where `success` exists) and inside the contactWizard scope, so it flips the wizard's success state and scrolls the card into view (the reload lands at the page top). #}}
                             {{ if success }}<div x-init="success = true; setTimeout(() => $root.scrollIntoView({ behavior: 'smooth', block: 'center' }), 150)" class="hidden"></div>{{ /if }}
@@ -1148,9 +1152,11 @@ Statamic form submissions). @set page.page_builder.contact_wizard #}}
                                         </button>
 
                                         <button
-                                            type="submit"
-                                            @click="attempted = true; attemptedStep4 = true"
+                                            type="button"
+                                            @click.prevent="attempted = true; attemptedStep4 = true; if (validateCurrentStep()) { submitting = true; $el.closest('form').submit() }"
                                             x-show="step === 4"
+                                            :disabled="submitting"
+                                            :class="{ 'opacity-60 cursor-not-allowed hover:translate-y-0': submitting }"
                                             class="inline-flex items-center justify-center gap-2 rounded-xl bg-primary px-7 py-3 max-md:w-full max-md:py-4 text-sm font-semibold text-white shadow-md shadow-primary/20 transition hover:bg-primary/90 hover:-translate-y-0.5 focus:outline-none focus:ring-4 focus:ring-primary/20"
                                         >
                                             <span>{{ submit_label }}</span>
@@ -1190,6 +1196,7 @@ Statamic form submissions). @set page.page_builder.contact_wizard #}}
                                         stepError: "",
                                         attemptedStep4: false,
                                         success: false,
+                                        submitting: false,
 
                                         stepTitle() {
                                             return (
@@ -1245,10 +1252,8 @@ Statamic form submissions). @set page.page_builder.contact_wizard #}}
 
                                         validateCurrentStep() {
                                             this.stepError = "";
-                                            // NB: query the form via $el, not $refs. peak-tools' js="alpine:form"
-                                            // wraps the <form> in its own x-data, which captures x-ref="form"
-                                            // into that inner scope — so this.$refs.form is undefined here and
-                                            // every step would silently pass. (Statamic 6 / peak-tools ^9.)
+                                            // Query the form via $el — scope-independent and robust
+                                            // regardless of whether the form carries its own x-data.
                                             const form = this.$el.querySelector("form");
                                             if (!form) return true;
 

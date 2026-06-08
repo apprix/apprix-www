@@ -135,8 +135,7 @@
                             attr:x-ref="form" }}
                             <div
                                 x-data="formHandler()"
-                                {{# After a native (non-JS) submit Statamic redirects back with server-side `success`; mirror it into Alpine so the existing success message shows, and scroll it into view (the reload lands at the top). #}}
-                                x-init="attempted = false{{ if success }}; success = true; setTimeout(() => $el.scrollIntoView({ behavior: 'smooth', block: 'center' }), 150){{ /if }}"
+                                x-init="attempted = false"
                                 class="flex flex-col gap-6"
                             >
                                 {{# Status messages #}}
@@ -333,9 +332,12 @@
 
                                 {{# Submit button #}}
                                 <div class="flex justify-center pt-2">
+                                    {{# Canonical Peak alpine:form submit — AJAX via the formHandler (no native POST/reload), so the success message and inline errors render in place. Disabled while the request is in flight. #}}
                                     <button
-                                        type="submit"
-                                        @click="attempted = true"
+                                        type="button"
+                                        @click.prevent="attempted = true; submit()"
+                                        :disabled="form.processing"
+                                        :class="{ 'opacity-60 cursor-not-allowed hover:translate-y-0': form.processing }"
                                         class="w-full sm:w-auto sm:min-w-[240px] rounded-xl bg-primary px-10 py-3.5 text-sm font-semibold text-white shadow-lg shadow-primary/15 transition-all duration-200 hover:brightness-110 hover:shadow-xl hover:shadow-primary/20 hover:-translate-y-0.5 focus:outline-none focus:ring-4 focus:ring-primary/20"
                                     >
                                         <span>{{ submit_label }}</span>
