@@ -38,7 +38,10 @@ task('deploy:update_code', function () {
     upload('./', '{{release_path}}/', [
         'options' => [
             '--exclude=node_modules',
-            '--exclude=vendor',
+            // Anchor to repo root: only skip Composer's top-level /vendor (rebuilt by
+            // deploy:vendors). An unanchored "vendor" also dropped resources/views/vendor/,
+            // silently stripping all Statamic view overrides (consent banner, SEO, forms).
+            '--exclude=/vendor',
             '--exclude=public/build',
         ],
     ]);
