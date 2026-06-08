@@ -64,4 +64,5 @@ Disallow: /
 User-agent: Omgilibot
 Disallow: /
 
-Sitemap: https://apprix.fi/sitemap.xml
+# Update to the canonical domain (apprix.fi) at the apex cutover — tracks APP_URL.
+Sitemap: https://www2.apprix.fi/sitemap.xml
