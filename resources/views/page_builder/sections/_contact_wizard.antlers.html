@@ -1242,7 +1242,11 @@ Statamic form submissions). @set page.page_builder.contact_wizard #}}
 
                                         validateCurrentStep() {
                                             this.stepError = "";
-                                            const form = this.$refs.form;
+                                            // NB: query the form via $el, not $refs. peak-tools' js="alpine:form"
+                                            // wraps the <form> in its own x-data, which captures x-ref="form"
+                                            // into that inner scope — so this.$refs.form is undefined here and
+                                            // every step would silently pass. (Statamic 6 / peak-tools ^9.)
+                                            const form = this.$el.querySelector("form");
                                             if (!form) return true;
 
                                             if (this.step === 1) {
