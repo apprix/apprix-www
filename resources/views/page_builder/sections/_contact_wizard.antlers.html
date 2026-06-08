@@ -81,30 +81,22 @@ Statamic form submissions). @set page.page_builder.contact_wizard #}}
                                 </div>
                             </div>
 
-                            {{# Plain (non-js) form: the wizard's inputs aren't x-model-bound, so it can't
-                            use the peak-tools alpine:form object. It submits via fetch()+FormData
-                            (submitForm()), which reads the native inputs directly and shows the success
-                            message in place — no reload. #}}
+                            {{# The wizard submits via fetch()+FormData (submitForm()) — its inputs aren't
+                            x-model-bound. Statamic's "half" static cache re-runs Alpine.initTree on this
+                            subtree, creating duplicate contactWizard scopes, so Alpine x-show bindings are
+                            unreliable here. The success/error notices are therefore toggled with plain DOM
+                            (id + .hidden); the success notice lives OUTSIDE the form so it stays visible
+                            after the form is hidden. #}}
+                            <div id="wizard-success" class="hidden rounded-xl border border-emerald-200 dark:border-emerald-800 bg-emerald-50/80 dark:bg-emerald-900/30 px-4 py-3 text-sm text-emerald-900 dark:text-emerald-200">
+                                {{ trans:wizard.success_message }}
+                            </div>
+
                             {{ if form_handle }} {{ form:create
                             :in="form_handle" attr:x-ref="form"
                             }}
                             <div class="flex flex-col gap-2 md:gap-4">
                                 <div class="space-y-3">
-                                    <div
-                                        x-cloak
-                                        x-show="success"
-                                        x-transition
-                                        class="rounded-xl border border-emerald-200 dark:border-emerald-800 bg-emerald-50/80 dark:bg-emerald-900/30 px-4 py-3 text-sm text-emerald-900 dark:text-emerald-200"
-                                    >
-                                        {{ trans:wizard.success_message }}
-                                    </div>
-
-                                    <div
-                                        x-cloak
-                                        x-show="attempted && hasErrors"
-                                        x-transition
-                                        class="rounded-xl border border-rose-200 dark:border-rose-800 bg-rose-50/80 dark:bg-rose-900/30 px-4 py-3 text-sm text-rose-900 dark:text-rose-200"
-                                    >
+                                    <div id="wizard-error" class="hidden rounded-xl border border-rose-200 dark:border-rose-800 bg-rose-50/80 dark:bg-rose-900/30 px-4 py-3 text-sm text-rose-900 dark:text-rose-200">
                                         {{ trans:wizard.error_message }}
                                     </div>
                                 </div>
@@ -1151,11 +1143,10 @@ Statamic form submissions). @set page.page_builder.contact_wizard #}}
 
                                         <button
                                             type="button"
+                                            id="wizard-submit"
                                             @click.prevent="submitForm()"
                                             x-show="step === 4"
-                                            :disabled="submitting"
-                                            :class="{ 'opacity-60 cursor-not-allowed hover:translate-y-0': submitting }"
-                                            class="inline-flex items-center justify-center gap-2 rounded-xl bg-primary px-7 py-3 max-md:w-full max-md:py-4 text-sm font-semibold text-white shadow-md shadow-primary/20 transition hover:bg-primary/90 hover:-translate-y-0.5 focus:outline-none focus:ring-4 focus:ring-primary/20"
+                                            class="inline-flex items-center justify-center gap-2 rounded-xl bg-primary px-7 py-3 max-md:w-full max-md:py-4 text-sm font-semibold text-white shadow-md shadow-primary/20 transition hover:bg-primary/90 hover:-translate-y-0.5 focus:outline-none focus:ring-4 focus:ring-primary/20 disabled:opacity-60 disabled:cursor-not-allowed disabled:hover:translate-y-0"
                                         >
                                             <span>{{ submit_label }}</span>
                                             <span
@@ -1203,25 +1194,35 @@ Statamic form submissions). @set page.page_builder.contact_wizard #}}
                                             this.attempted = true;
                                             this.attemptedStep4 = true;
                                             if (!this.validateCurrentStep()) return;
-                                            this.submitting = true;
-                                            const form = this.$el.querySelector("form");
+                                            // All UI effects below use plain DOM (document.querySelector +
+                                            // classList), not Alpine state: the half static cache produces
+                                            // duplicate contactWizard scopes, so `this` may be detached from
+                                            // the live DOM bindings by the time the fetch resolves.
+                                            const wiz = document.querySelector('[x-data="contactWizard()"]');
+                                            const form = wiz.querySelector("form");
+                                            const btn = wiz.querySelector("#wizard-submit");
+                                            const release = () => { if (btn) btn.disabled = false; };
+                                            if (btn) btn.disabled = true;
+                                            wiz.querySelector("#wizard-error").classList.add("hidden");
                                             fetch(form.action, {
                                                 method: "POST",
                                                 body: new FormData(form),
                                                 headers: { "X-Requested-With": "XMLHttpRequest", "Accept": "application/json" },
                                             })
                                                 .then((r) => {
-                                                    this.submitting = false;
                                                     if (r.ok) {
-                                                        this.success = true;
-                                                        this.$nextTick(() => this.$el.scrollIntoView({ behavior: "smooth", block: "center" }));
+                                                        form.style.display = "none";
+                                                        const ok = wiz.querySelector("#wizard-success");
+                                                        ok.classList.remove("hidden");
+                                                        ok.scrollIntoView({ behavior: "smooth", block: "center" });
                                                     } else {
-                                                        this.stepError = "{{ trans:wizard.error_message }}";
+                                                        wiz.querySelector("#wizard-error").classList.remove("hidden");
+                                                        release();
                                                     }
                                                 })
                                                 .catch(() => {
-                                                    this.submitting = false;
-                                                    this.stepError = "{{ trans:wizard.error_message }}";
+                                                    wiz.querySelector("#wizard-error").classList.remove("hidden");
+                                                    release();
                                                 });
                                         },
 
