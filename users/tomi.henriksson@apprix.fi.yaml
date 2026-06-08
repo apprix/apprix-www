@@ -1,5 +1,5 @@
 name: 'Tomi Henriksson (salasana muutettu, ei pääse kirjautumaan)'
-super: true
+super: false
 id: 680e1400-32cd-4415-9b61-d630b47576db
 password_hash: $2y$12$WgYY0Z7xcMtvgM6VXztWROmuXA17SxF1JSjkAB4rgCIs9fN/lROui
 preferences:
