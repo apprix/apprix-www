@@ -84,6 +84,8 @@ Statamic form submissions). @set page.page_builder.contact_wizard #}}
                             {{ if form_handle }} {{ form:create
                             :in="form_handle" js="alpine:form" attr:x-ref="form"
                             }}
+                            {{# Native (non-JS) submit redirects back with server-side `success`. This sits inside form:create (where `success` exists) and inside the contactWizard scope, so it flips the wizard's success state and scrolls the card into view (the reload lands at the page top). #}}
+                            {{ if success }}<div x-init="success = true; setTimeout(() => $root.scrollIntoView({ behavior: 'smooth', block: 'center' }), 150)" class="hidden"></div>{{ /if }}
                             <div class="flex flex-col gap-2 md:gap-4">
                                 <div class="space-y-3">
                                     <div
@@ -1187,6 +1189,7 @@ Statamic form submissions). @set page.page_builder.contact_wizard #}}
                                         attempted: false,
                                         stepError: "",
                                         attemptedStep4: false,
+                                        success: false,
 
                                         stepTitle() {
                                             return (
