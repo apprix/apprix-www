@@ -1,5 +1,5 @@
 title: Configuration
 sites:
   default: null
-  en: null
-  sv: null
+  en: default
+  sv: default
