@@ -28,7 +28,7 @@ tabs:
               type: text
               instructions: 'Falls back to the application name.'
               width: 50
-              localizable: true
+              localizable: false
           -
             handle: copyright_since
             field:
@@ -43,7 +43,7 @@ tabs:
               width: 50
               validate:
                 - required
-              localizable: true
+              localizable: false
       -
         display: 'Privacy statement'
         instructions: 'Configure an optional privacy statement.'
