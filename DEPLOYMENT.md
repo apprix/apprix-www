@@ -25,7 +25,7 @@ BOT-commitit (Statamic CP:n automaattiset git-commitit) ohitetaan GitHub Actions
 | **Statamic** | 6.20.0 PRO (Laravel 12; lisenssi voimassa 6.x:lle) |
 | **Web** | Nginx |
 | **Hetzner-projekti** | [143018](https://console.hetzner.cloud/projects/143018/servers/126819258/overview) |
-| **Domain (nyt)** | www3.apprix.fi (SSL aktiivinen) → siirtyy www2.apprix.fi |
+| **Domain** | **www2.apprix.fi — LIVE** (julkinen, SSL aktiivinen, ei basic authia). www3.apprix.fi = vanha staging. |
 | **SSH** | `ssh tomih@62.238.10.202` tai `ssh root@62.238.10.202` |
 
 ---
@@ -205,7 +205,7 @@ Tärkeimmät muuttujat:
 
 | Muuttuja | Tila | Huom |
 |---|---|---|
-| `APP_URL` | `https://www3.apprix.fi` | |
+| `APP_URL` | `https://www2.apprix.fi` | Tuotanto (live) |
 | `APP_KEY` | Asetettu | Älä koskaan vaihda |
 | `STATAMIC_LICENSE_KEY` | Asetettu | Pro-lisenssi aktiivinen |
 | `STATAMIC_GIT_ENABLED` | `true` | Auto-commit käytössä |
@@ -221,19 +221,9 @@ Tärkeimmät muuttujat:
 
 Sisältää myös APP_KEY, MAIL_PASSWORD, STATAMIC_LICENSE_KEY. Ei koskaan versionhallinnassa.
 
-### Basic Auth (väliaikainen, ennen julkaisua)
+### Basic Auth (POISTETTU — historiatieto)
 
-Nginx basic auth suojaa sivuston kehitysvaiheen ajan:
-- Käyttäjä: `apprix`
-- Salasana: `Appr1x2026!`
-- Tiedosto palvelimella: `/etc/nginx/.htpasswd`
-
-Salasanan vaihto:
-```bash
-ssh root@62.238.10.202 "htpasswd -b /etc/nginx/.htpasswd apprix UUSI_SALASANA"
-```
-
-Basic auth **poistetaan** ennen julkaisua (kommentoi `auth_basic`-rivit Nginx-konfiguraatiosta).
+Sivusto oli julkaisuun asti suojattu Nginx basic authilla. **Poistettu julkaisun yhteydessä** — www2.apprix.fi on nyt julkinen, ei basic authia. `/etc/nginx/.htpasswd` voi yhä olla palvelimella, mutta `auth_basic` on pois käytöstä Nginx-konfiguraatiosta.
 
 ### SSH-avaimet
 
@@ -287,9 +277,9 @@ DNS-hallinta: https://dns.hetzner.com
 
 | Domain | Osoite | Tila |
 |---|---|---|
-| www3.apprix.fi | 62.238.10.202 | Aktiivinen (staging, basic auth), SSL ✅ |
-| www2.apprix.fi | 62.238.10.202 | Julkaisukohde (tuleva) |
-| apprix.fi, www.apprix.fi | muualla käytössä | Redirect → www2.apprix.fi (tuleva) |
+| www2.apprix.fi | 62.238.10.202 | **LIVE** (tuotanto, julkinen), SSL ✅ |
+| www3.apprix.fi | 62.238.10.202 | Vanha staging |
+| apprix.fi, www.apprix.fi | — | Redirect → www2.apprix.fi |
 
 ---
 
@@ -306,6 +296,7 @@ DNS-hallinta: https://dns.hetzner.com
 
 ## Avoimet tehtävät
 
-- [ ] **Domain-siirto www3 → www2** — Lisää www2.apprix.fi DNS + SSL, päivitä APP_URL ja statamic.com-domain (ks. ohjeet yllä)
-- [ ] **Basic auth poisto** — Poista Nginx-konfiguraatiosta ennen julkaisua
-- [ ] **Node.js 24 GitHub Actionsissa** — actions/checkout@v4 ja actions/setup-node@v4 käyttävät Node 20:tä joka poistetaan syyskuussa 2026; päivitä versiot ajoissa
+- [x] **Domain-siirto www3 → www2** — Valmis (2026-06-15): www2.apprix.fi live, SSL aktiivinen, APP_URL päivitetty.
+- [x] **Basic auth poisto** — Valmis (2026-06-15): www2 julkinen, ei basic authia.
+- [ ] **Node.js 24 GitHub Actionsissa** — actions/checkout@v4 ja actions/setup-node@v4 käyttävät Node 20:tä joka poistetaan syyskuussa 2026; päivitä versiot ajoissa (deploy-loki varoittaa jo)
+- [ ] **composer-update.yml: korjaa deploy-skip** — workflow committaa `github-actions[bot]`-nimellä → squash-mergen `Co-authored-by`-rivi osuu deployn case-insensitive `[BOT]`-suodattimeen → deploy skippaa. Vaihda git-author nimeen ilman `[bot]`-merkkijonoa. Lisäksi `composer outdated` -rivi ottaa vain yhden pakettiargumentin (kosmeettinen).

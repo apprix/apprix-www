@@ -63,7 +63,10 @@ jobs:
           composer update $PKGS --no-scripts --no-interaction --no-progress
 
       - name: Show outdated (for the PR reviewer)
-        run: composer outdated "statamic/*" "studio1902/*" --direct || true
+        run: |
+          # composer outdated takes a single package pattern — run once per vendor.
+          composer outdated "statamic/*" --direct || true
+          composer outdated "studio1902/*" --direct || true
 
       - name: Open pull request
         env:
@@ -75,8 +78,12 @@ jobs:
           fi
 
           BRANCH="chore/composer-update-${{ inputs.scope }}-${{ github.run_id }}"
-          git config user.name  "github-actions[bot]"
-          git config user.email "github-actions[bot]@users.noreply.github.com"
+          # Author must NOT contain "[bot]": the squash-merge adds a Co-authored-by
+          # trailer, and deploy.yml skips commits whose message contains "[BOT]"
+          # (GitHub's contains() is case-insensitive). A "[bot]" author would make
+          # every merged update PR silently skip the deploy.
+          git config user.name  "apprix-deps"
+          git config user.email "deps@apprix.fi"
           git checkout -b "$BRANCH"
           git add composer.lock
           git commit -m "chore(deps): composer update (${{ inputs.scope }})"
