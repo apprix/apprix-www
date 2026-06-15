@@ -51,6 +51,45 @@ Tiedosto: `.github/workflows/deploy.yml`
 
 ---
 
+## Statamic- ja riippuvuuspäivitykset
+
+Statamicia, Peak-addoneja tai muita Composer-riippuvuuksia **ei päivitetä hallintapaneelista eikä palvelimella.**
+
+### Miksi ei CP:stä / palvelimelta
+
+- CP:n **Tools → Updates** vain *näyttää* `composer update` -komennon — se ei aja sitä. Pelkkä info.
+- `vendor/` rakennetaan **GitHub Actionsissa** (`composer install --no-dev`), ei palvelimella. Releaset ovat immutaabeleita (symlink) → palvelimella ajettu composer-muutos **katoaa seuraavassa deployssa**.
+- ⇒ Gitin `composer.lock` on ainoa totuus. Päivitys = uusi lock → PR → merge → normaali deploy.
+
+### Prosessi (patch/minor, esim. 6.20 → 6.22)
+
+1. **GitHub → Actions → "Composer update" → Run workflow.** Valitse `scope`:
+   | scope | Päivittää |
+   |---|---|
+   | `statamic+addons` (oletus) | Statamic core + kaikki Peak-addonit (+ riippuvuudet) |
+   | `statamic-only` | Vain `statamic/cms` (+ riippuvuudet) |
+   | `addons-only` | Vain Peak-addonit (+ riippuvuudet) |
+   | `all` | Kaikki (`composer update`) |
+2. Workflow ajaa `composer update … --no-scripts`, committaa `composer.lock`:n omalle haaralle ja **avaa PR:n** automaattisesti.
+3. **Tarkista PR:n `composer.lock`-diffi** (job-logissa `composer outdated` -yhteenveto Statamic/Peak-versioista).
+4. **Merge `main`** → normaali Deploy buildaa lockista ja julkaisee. Static cache tyhjenee automaattisesti.
+
+`--no-scripts`: artisan/install-skriptit tarvitsevat täyden app+env:n ja kaatuisivat paljaassa CI:ssä; varsinainen build tehdään silti `deploy.yml`:ssä. CP-assetit (Vite manifest) julkaistaan `pixelfear/composer-dist-plugin`-pluginilla deploy-buildissa.
+
+### Major-päivitys (esim. 6 → 7)
+
+1. Muuta constraint `composer.json`:iin haarassa (esim. `"statamic/cms": "^7.0"`).
+2. Käy läpi Statamicin [upgrade guide](https://statamic.dev/upgrade-guide) ja testaa haarassa ennen mergeä.
+3. Sama PR → merge → deploy -putki kuin yllä.
+
+### Vaatimus
+
+Workflow avaa PR:n → repon asetuksissa **Settings → Actions → General → Workflow permissions → "Allow GitHub Actions to create and approve pull requests"** on oltava päällä. Tiedosto: `.github/workflows/composer-update.yml`.
+
+> **Älä** päivitä Statamicia CP:stä tai aja `composer update` palvelimella — muutos katoaa seuraavassa deployssa ja voi rikkoa releasen.
+
+---
+
 ## Deployer (deploy.php)
 
 [Deployer](https://deployer.org/) 7.5.12 hoitaa varsinaisen julkaisun palvelimelle.

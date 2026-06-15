@@ -102,10 +102,6 @@
         {
             "type": "vcs",
             "url": "https://github.com/studio1902/statamic-peak"
-        },
-        {
-            "type": "vcs",
-            "url": "https://github.com/studio1902/statamic-peak"
         }
     ]
 }
