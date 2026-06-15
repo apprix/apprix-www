@@ -1,0 +1,93 @@
+name: Composer update
+
+# Regenerates composer.lock in CI (no PHP/Composer on the dev machine) and opens
+# a PR. Merging the PR to main triggers the normal Deploy workflow, which builds
+# from the updated lock and ships to production. Never update Statamic/addons via
+# the Control Panel or directly on the server — releases are immutable and CI is
+# the source of truth for vendor/.
+
+on:
+  workflow_dispatch:
+    inputs:
+      scope:
+        description: 'What to update'
+        type: choice
+        required: true
+        default: statamic+addons
+        options:
+          - statamic+addons   # Statamic core + all Peak addons (+ their deps)
+          - statamic-only     # Statamic core only (+ its deps)
+          - addons-only       # Peak addons only (+ their deps)
+          - all               # Everything in composer.json (full composer update)
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pull-requests: write
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: '8.4'
+          tools: composer:v2
+
+      - name: Run composer update
+        id: update
+        env:
+          SCOPE: ${{ inputs.scope }}
+        run: |
+          case "$SCOPE" in
+            statamic+addons)
+              PKGS="statamic/cms studio1902/statamic-peak studio1902/statamic-peak-seo studio1902/statamic-peak-tools studio1902/statamic-peak-browser-appearance --with-dependencies"
+              ;;
+            statamic-only)
+              PKGS="statamic/cms --with-dependencies"
+              ;;
+            addons-only)
+              PKGS="studio1902/statamic-peak studio1902/statamic-peak-seo studio1902/statamic-peak-tools studio1902/statamic-peak-browser-appearance --with-dependencies"
+              ;;
+            all)
+              PKGS=""
+              ;;
+            *)
+              echo "Unknown scope: $SCOPE" >&2; exit 1 ;;
+          esac
+          echo "Running: composer update $PKGS"
+          # --no-scripts: only regenerate the lock; artisan/install scripts need a
+          # full app+env and would fail here. The real build runs in deploy.yml.
+          composer update $PKGS --no-scripts --no-interaction --no-progress
+
+      - name: Show outdated (for the PR reviewer)
+        run: composer outdated "statamic/*" "studio1902/*" --direct || true
+
+      - name: Open pull request
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          if git diff --quiet composer.lock; then
+            echo "composer.lock unchanged — nothing to update."
+            exit 0
+          fi
+
+          BRANCH="chore/composer-update-${{ inputs.scope }}-${{ github.run_id }}"
+          git config user.name  "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git checkout -b "$BRANCH"
+          git add composer.lock
+          git commit -m "chore(deps): composer update (${{ inputs.scope }})"
+          git push origin "$BRANCH"
+
+          gh pr create \
+            --base main \
+            --head "$BRANCH" \
+            --title "chore(deps): composer update (${{ inputs.scope }})" \
+            --body "Automated \`composer update\` (scope: **${{ inputs.scope }}**) run via the Composer update workflow.
+
+          Review the \`composer.lock\` diff, then merge to deploy. See the job log for the \`composer outdated\` summary of Statamic/Peak versions.
+
+          For a **major** Statamic upgrade, bump the constraint in \`composer.json\` first and follow the upgrade guide before merging."
