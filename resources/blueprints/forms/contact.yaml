@@ -127,3 +127,13 @@ tabs:
                 - 'min:5'
               localizable: false
               width: 100
+
+          # Anti-spam time-trap. Carries elapsed-ms (set by JS) so the
+          # FormSubmitted listener in AppServiceProvider can reject sub-3s
+          # (bot) submissions. Hidden; not user-facing.
+          - handle: ts
+            field:
+              display: Timer
+              type: hidden
+              localizable: false
+              width: 100

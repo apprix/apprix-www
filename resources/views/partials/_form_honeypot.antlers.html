@@ -1,0 +1,26 @@
+<!-- /partials/_form_honeypot.antlers.html -->
+{{#
+    @name Form honeypot
+    @desc Shared spam honeypot for every public form. Invisible to humans; bots
+    fill it and Statamic silently rejects the submission (each form declares
+    `honeypot: fax` in its YAML). Offscreen rather than display:none, which some
+    bots skip. Pairs with the time-trap in app/Providers/AppServiceProvider.php.
+
+    Params:
+      - id:    unique input id (forms can coexist on one page).
+      - model: Alpine x-model expression. Set it ONLY on alpine:form forms so the
+               value rides along in the precognition form object. FormData forms
+               (native POST / fetch) submit the raw input and need no model.
+#}}
+<div aria-hidden="true" style="position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden;">
+    <label for="{{ id ?? 'honeypot-fax' }}">Fax</label>
+    <input
+        id="{{ id ?? 'honeypot-fax' }}"
+        type="text"
+        name="fax"
+        tabindex="-1"
+        autocomplete="off"
+        {{ if model }}x-model="{{ model }}"{{ /if }}
+    />
+</div>
+<!-- End: /partials/_form_honeypot.antlers.html -->
