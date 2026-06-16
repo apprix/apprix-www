@@ -6,13 +6,14 @@
     - Auto-reopens after page reload if success (?success=helpdesk) or errors
 #}}
 <div
-    x-data="{ open: false }"
+    x-data="{ open: false, loadedAt: Date.now() }"
     x-init="
         const p = new URLSearchParams(location.search);
         if (p.get('success') === 'helpdesk') open = true;
         if (document.getElementById('helpdesk-has-errors')) open = true;
     "
     @keydown.escape.window="open = false"
+    @submit="if ($refs.hdTs) $refs.hdTs.value = String(Date.now() - loadedAt)"
 >
 
     {{# ── Floating trigger button ── #}}
@@ -189,10 +190,12 @@
                             {{ error:message }}<p class="mt-1 text-xs text-red-500">{{ value }}</p>{{ /error:message }}
                         </div>
 
-                        {{# Honeypot — hidden from humans #}}
-                        <div class="hidden" aria-hidden="true">
-                            <input type="text" name="fax" tabindex="-1" autocomplete="off">
-                        </div>
+                        {{# Spam honeypot. Native FormData submit — raw input, no x-model. #}}
+                        {{ partial:partials/_form_honeypot id="hd-fax" }}
+
+                        {{# Anti-spam time-trap. JS stamps elapsed-ms on submit; the
+                        FormSubmitted listener rejects sub-3s (bot) submissions. #}}
+                        <input type="hidden" name="_ts" x-ref="hdTs">
 
                         <div class="flex justify-end pt-1">
                             <button

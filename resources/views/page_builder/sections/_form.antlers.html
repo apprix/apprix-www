@@ -135,7 +135,7 @@
                             attr:x-ref="form" }}
                             <div
                                 x-data="formHandler()"
-                                x-init="attempted = false"
+                                x-init="attempted = false; loadedAt = Date.now()"
                                 class="flex flex-col gap-6"
                             >
                                 {{# Status messages #}}
@@ -327,6 +327,10 @@
                                     {{ /if }}
 
                                     {{ /fields }}
+
+                                    {{# Spam honeypot. alpine:form form, so bind x-model
+                                    (form.fax already exists in the x-data). #}}
+                                    {{ partial:partials/_form_honeypot id="contact-fax" model="form.fax" }}
                                 </fieldset>
                                 {{ /sections }}
 
@@ -335,7 +339,7 @@
                                     {{# Canonical Peak alpine:form submit — AJAX via the formHandler (no native POST/reload), so the success message and inline errors render in place. Disabled while the request is in flight. #}}
                                     <button
                                         type="button"
-                                        @click.prevent="attempted = true; submit()"
+                                        @click.prevent="attempted = true; form.ts = String(Date.now() - loadedAt); submit()"
                                         :disabled="form.processing"
                                         :class="{ 'opacity-60 cursor-not-allowed hover:translate-y-0': form.processing }"
                                         class="w-full sm:w-auto sm:min-w-[240px] rounded-xl bg-primary px-10 py-3.5 text-sm font-semibold text-white shadow-lg shadow-primary/15 transition-all duration-200 hover:brightness-110 hover:shadow-xl hover:shadow-primary/20 hover:-translate-y-0.5 focus:outline-none focus:ring-4 focus:ring-primary/20"
