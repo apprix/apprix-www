@@ -1181,10 +1181,11 @@ Statamic form submissions). @set page.page_builder.contact_wizard #}}
                             }} {{ /if }}
 
                             <script>
-                                // Anti-spam time-trap baseline. Module-level (not Alpine
-                                // state) so it survives the half static cache re-running
-                                // Alpine.initTree, which spawns duplicate contactWizard scopes.
-                                const wizardLoadedAt = Date.now();
+                                // Anti-spam time-trap baseline. On window (not const) so it
+                                // survives the half static cache re-running Alpine.initTree,
+                                // and so a page with two wizard blocks can't throw a
+                                // "already declared" redeclaration error.
+                                window.wizardLoadedAt = window.wizardLoadedAt || Date.now();
 
                                 function contactWizard() {
                                     return {
@@ -1213,7 +1214,7 @@ Statamic form submissions). @set page.page_builder.contact_wizard #}}
                                             if (btn) btn.disabled = true;
                                             wiz.querySelector("#wizard-error").classList.add("hidden");
                                             const body = new FormData(form);
-                                            body.append("_ts", String(Date.now() - wizardLoadedAt));
+                                            body.append("_ts", String(Date.now() - window.wizardLoadedAt));
                                             fetch(form.action, {
                                                 method: "POST",
                                                 body: body,

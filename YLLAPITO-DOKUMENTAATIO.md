@@ -672,7 +672,7 @@ Lomake koostuu useista vaiheista:
 **Roskapostisuojaus** (kaksi kerrosta, taysin automaattinen — ei vaadi yllapitotoimia):
 
 1. **Honeypot** — piilokentta ("fax"), jota kayttaja ei nae mutta botit tayttavat. Tayttynyt kentta = lahetys hylataan hiljaisesti.
-2. **Aikaloukku** — jos lomake lahetetaan alle 3 sekunnissa avaamisesta (tai ohittaen sivun JavaScriptin), lahetys hylataan bottina.
+2. **Aikaloukku** — jos lomake lahetetaan alle 3 sekunnissa avaamisesta, lahetys hylataan bottina. (Sivun JavaScriptin kokonaan ohittavat suorat POST-pyynnot eivat sisalla ajastinta eika niita hylata taman saannon perusteella — ne jaavat honeypotin varaan.)
 
 Hylatyt lahetykset eivat tallennu eivatka laheta sahkopostia; botti nakee silti "onnistui"-viestin. Sama suojaus on kaytossa myos helpdesk-lomakkeessa. Tekninen toteutus: jaettu honeypot-kentta `resources/views/partials/_form_honeypot.antlers.html` ja aikaloukun tarkistus `app/Providers/AppServiceProvider.php` (`bootFormSpamProtection`). Aikarajaa (3000 ms) voi saataa kyseisesta tiedostosta.
 
