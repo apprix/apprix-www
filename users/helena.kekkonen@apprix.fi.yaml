@@ -6,3 +6,5 @@ preferences:
   collections:
     docs:
       view: tree
+    pages:
+      view: tree
