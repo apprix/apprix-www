@@ -151,9 +151,6 @@ page_builder:
         content:
           -
             type: text
-            marks:
-              -
-                type: bold
             text: 'Principles of Register Protection'
       -
         type: heading
@@ -231,5 +228,5 @@ page_builder:
 seo_title: 'Privacy Policy | Apprix Oy'
 seo_description: 'Apprix Oy privacy policy. We describe how we collect, process, and protect personal data in connection with our services.'
 updated_by: 130eaae6-78e3-4830-8a3a-5909a377b96c
-updated_at: 1782470128
+updated_at: 1782470219
 ---
