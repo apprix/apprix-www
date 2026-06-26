@@ -13,13 +13,7 @@ page_builder:
         content:
           -
             type: text
-            text: 'This is a test 26.06.2026'
-      -
-        type: paragraph
-        content:
-          -
-            type: text
-            text: 'EU:n yleisen tietosuoja-asetuksen (GDPR) mukainen rekisteri- ja tietosuojaseloste.'
+            text: 'This is a register and privacy policy in accordance with the EU General Data Protection Regulation (GDPR).'
       -
         type: heading
         attrs:
@@ -27,7 +21,7 @@ page_builder:
         content:
           -
             type: text
-            text: 'Rekisterin tiedot'
+            text: 'Register information'
       -
         type: paragraph
         content:
@@ -36,10 +30,10 @@ page_builder:
             marks:
               -
                 type: bold
-            text: 'Rekisterin nimi:'
+            text: 'Register name:'
           -
             type: text
-            text: ' Apprix Oy:n asiakastietorekisteri'
+            text: ' Apprix Oy Customer Register'
       -
         type: paragraph
         content:
@@ -48,10 +42,10 @@ page_builder:
             marks:
               -
                 type: bold
-            text: 'Rekisterinpitäjä:'
+            text: 'Data Controller:'
           -
             type: text
-            text: ' Apprix Oy, Y-tunnus: 1721154-1'
+            text: ' Apprix Oy, Business ID: 1721154-1'
       -
         type: paragraph
         content:
@@ -60,7 +54,7 @@ page_builder:
             marks:
               -
                 type: bold
-            text: 'Rekisteriasioista vastaava henkilö:'
+            text: 'Person Responsible for Registry Matters:'
           -
             type: text
             text: ' Apprix Oy'
@@ -71,13 +65,16 @@ page_builder:
         content:
           -
             type: text
-            text: 'Rekisterin käyttötarkoitus'
+            marks:
+              -
+                type: bold
+            text: 'Purpose of the Register'
       -
         type: paragraph
         content:
           -
             type: text
-            text: 'Rekisteri toimii Apprix Oy:n asiakastietojärjestelmänä. Tietoja voidaan käyttää asiakassuhteen hoitamiseen.'
+            text: 'The purpose of this register is to serve as the customer register of Apprix Oy. The data may be used for managing the customer relationship.'
       -
         type: heading
         attrs:
@@ -85,13 +82,16 @@ page_builder:
         content:
           -
             type: text
-            text: 'Säännönmukaiset tietolähteet'
+            marks:
+              -
+                type: bold
+            text: 'Regular Sources of Data'
       -
         type: paragraph
         content:
           -
             type: text
-            text: 'Ensisijaiset tietolähteet ovat asiakkaat itse, viranomaisten ja yritysten rekisterit sekä yhteistyökumppanit.'
+            text: 'The primary source of data is the customer. Data may also be obtained from public authority and business registers, as well as from mutual cooperation partners.'
       -
         type: heading
         attrs:
@@ -99,13 +99,16 @@ page_builder:
         content:
           -
             type: text
-            text: 'Rekisterin tietosisältö'
+            marks:
+              -
+                type: bold
+            text: 'Data Content of the Register'
       -
         type: paragraph
         content:
           -
             type: text
-            text: 'Rekisteri sisältää pääasiassa asiakkaiden itse antamia tietoja:'
+            text: 'The register mainly contains data provided by customers themselves:'
       -
         type: bulletList
         content:
@@ -117,7 +120,7 @@ page_builder:
                 content:
                   -
                     type: text
-                    text: 'Henkilön nimi'
+                    text: Name
           -
             type: listItem
             content:
@@ -126,7 +129,7 @@ page_builder:
                 content:
                   -
                     type: text
-                    text: Sähköpostiosoite
+                    text: 'Email address'
           -
             type: listItem
             content:
@@ -135,7 +138,7 @@ page_builder:
                 content:
                   -
                     type: text
-                    text: 'Muut käyttäjän antamat tiedot'
+                    text: 'Other data provided by the user'
       -
         type: heading
         attrs:
@@ -143,13 +146,16 @@ page_builder:
         content:
           -
             type: text
-            text: 'Säännönmukaiset tietojen luovutukset'
+            marks:
+              -
+                type: bold
+            text: 'Regular Disclosure of Data'
       -
         type: paragraph
         content:
           -
             type: text
-            text: 'Tietoja voidaan jakaa yhteistyökumppaneiden kanssa asiakkaiden suostumuksella, erityisesti tuotteiden ja palveluiden toimittamiseksi. Laskutukseen liittyvät tiedot välitetään maksujen välittäjille. Tietoja ei siirretä EU-alueen ulkopuolelle ilman laillista perustetta.'
+            text: 'With the customer’s consent, data may be disclosed to cooperation partners shared by the customer and Apprix Oy for the purpose of delivering products and services ordered by the customer. Information related to invoicing may be disclosed to parties responsible for payment processing. Data is not transferred outside the EU without a legal basis.'
       -
         type: heading
         attrs:
@@ -157,7 +163,10 @@ page_builder:
         content:
           -
             type: text
-            text: 'Rekisterin suojauksen periaatteet'
+            marks:
+              -
+                type: bold
+            text: 'Principles of Register Protection'
       -
         type: heading
         attrs:
@@ -165,13 +174,16 @@ page_builder:
         content:
           -
             type: text
-            text: 'Manuaalinen aineisto'
+            marks:
+              -
+                type: bold
+            text: 'Manual Material'
       -
         type: paragraph
         content:
           -
             type: text
-            text: 'Fyysinen aineisto rajoittuu kirjanpitoaineistoon. Pääsy on rajattu nimetyille henkilöille, joita sitoo salassapitovelvollisuus.'
+            text: 'Data is not stored in physical form except for accounting materials, which are accessible only to designated Apprix Oy employees and the accountant, all of whom are bound by confidentiality obligations.'
       -
         type: heading
         attrs:
@@ -179,13 +191,13 @@ page_builder:
         content:
           -
             type: text
-            text: 'Sähköinen aineisto'
+            text: 'Digital Material'
       -
         type: paragraph
         content:
           -
             type: text
-            text: 'Tiedot siirretään SSL-suojattujen yhteyksien kautta. Järjestelmät on suojattu palomuureilla. Pääsy on rajattu valtuutetuille henkilöille käyttäjätunnuksin ja salasanoin. Kaikkia tietoja käsitellään luottamuksellisesti.'
+            text: 'Data is transferred over an SSL-secured connection. The systems are protected by firewalls. Only specifically authorized Apprix Oy employees have access to the register data. Employees are authenticated using a username and password. All data is processed confidentially.'
       -
         type: heading
         attrs:
@@ -193,13 +205,16 @@ page_builder:
         content:
           -
             type: text
-            text: 'Tarkastus- ja kielto-oikeus'
+            marks:
+              -
+                type: bold
+            text: 'Right of Access and Right to Object'
       -
         type: paragraph
         content:
           -
             type: text
-            text: 'Rekisteröidyllä on oikeus tarkastaa itseään koskevat henkilötiedot kirjallisella pyynnöllä rekisterinpitäjälle. Tarkastusoikeus on maksuton kerran vuodessa.'
+            text: 'The data subject has the right to access what personal data concerning them has been stored in the register by submitting a written request to the data controller. The right of access is free of charge once a year.'
       -
         type: heading
         attrs:
@@ -207,13 +222,16 @@ page_builder:
         content:
           -
             type: text
-            text: 'Tietojen säilytys'
+            marks:
+              -
+                type: bold
+            text: 'Data Retention Period'
       -
         type: paragraph
         content:
           -
             type: text
-            text: 'Henkilötietoja säilytetään vain niin kauan kuin se on käsittelyn tarkoituksen kannalta tarpeellista.'
+            text: 'Personal data is retained only for as long as is necessary for the purpose of the processing.'
       -
         type: heading
         attrs:
@@ -221,15 +239,18 @@ page_builder:
         content:
           -
             type: text
-            text: Evästeet
+            marks:
+              -
+                type: bold
+            text: Cookies
       -
         type: paragraph
         content:
           -
             type: text
-            text: 'Verkkosivusto käyttää evästeitä – pieniä tekstitiedostoja, jotka tallennetaan selaimen luvalla – vierailujen analysoimiseen, valintojen personointiin ja yksilöllisten palvelujen tarjoamiseen. Kolmannen osapuolen analytiikkatyökalut tuottavat käyttötilastoja. Selaimen asetukset ohjaavat evästeiden hyväksymistä; niiden poistaminen käytöstä vaikuttaa palvelun laatuun.'
+            text: 'This website uses cookies - small text files stored with your browser’s consent - to analyze visits, personalize your experience, and provide customized services. Third-party analytics tools provide usage statistics. Your browser settings control whether cookies are accepted; disabling them will affect the quality of the service.'
 seo_title: 'Privacy Policy | Apprix Oy'
 seo_description: 'Apprix Oy privacy policy. We describe how we collect, process, and protect personal data in connection with our services.'
 updated_by: 130eaae6-78e3-4830-8a3a-5909a377b96c
-updated_at: 1782468593
+updated_at: 1782469967
 ---
