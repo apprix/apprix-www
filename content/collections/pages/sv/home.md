@@ -255,7 +255,7 @@ page_builder:
       -
         id: mkfq0006
         question: 'Stöder Apprix flera språk?'
-        answer: '<p>Ja. Vår plattform och utbildningar fungerar flerspråkigt. Vi stöder för närvarande finska, svenska och engelska, och nya språk kan läggas till efter behov.</p>'
+        answer: '<p>Ja. Vår plattform och utbildningar fungerar flerspråkigt. </p>'
         type: faq_item
         enabled: true
     type: faq
@@ -316,5 +316,5 @@ seo_description: 'Apprix är en finsk digital utbildningsplattform för företag
 og_title: 'Digital utbildningsplattform för företag | Apprix'
 og_image: apprix_logo_rgb.png
 updated_by: 54f1c4c9-2642-4137-9504-e7b3042b847b
-updated_at: 1783330021
+updated_at: 1783339122
 ---
