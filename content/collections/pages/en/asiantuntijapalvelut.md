@@ -2,11 +2,6 @@
 id: f4ac0908-2d85-4750-8e7d-fc35af6583e7
 origin: ca1bc143-a016-40a2-b2c5-02bfd3dd1ba3
 title: 'Expert Services – Seamless solutions for learning'
-seo_title: 'Expert Services – Consulting, integrations and training | Apprix'
-seo_description: 'Apprix expert services: training needs analysis, HR and ERP system integrations, content production, and implementation consulting. Over 100 completed integration projects.'
-og_title: 'Expert Services – Seamless solutions for learning | Apprix'
-updated_by: 680e1400-32cd-4415-9b61-d630b47576db
-updated_at: 1742083200
 page_builder:
   -
     id: asp-hero
@@ -37,12 +32,13 @@ page_builder:
       -
         id: asp-hero-btn1
         label: 'Book a discovery meeting'
-        link: /en/yritys
+        link: '/en/yritys#contact'
         style: primary
     scroll_label: 'Read more'
     image: general_bg.jpg
     type: product_hero
     enabled: true
+    tone: light
   -
     id: asp-features
     eyebrow: SERVICES
@@ -116,7 +112,6 @@ page_builder:
       - keva.png
       - nyab.png
       - gasum.svg
-      - helsingin-satama.png
       - honkajoki.png
       - grk.jpg
     speed: normal
@@ -196,4 +191,9 @@ page_builder:
         enabled: true
     type: team_cards
     enabled: true
+seo_title: 'Expert Services – Consulting, integrations and training | Apprix'
+seo_description: 'Apprix expert services: training needs analysis, HR and ERP system integrations, content production, and implementation consulting. Over 100 completed integration projects.'
+og_title: 'Expert Services – Seamless solutions for learning | Apprix'
+updated_by: 54f1c4c9-2642-4137-9504-e7b3042b847b
+updated_at: 1783336038
 ---
