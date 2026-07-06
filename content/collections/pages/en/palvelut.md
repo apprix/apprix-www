@@ -32,7 +32,7 @@ page_builder:
       -
         id: plv-hero-btn1
         label: 'Book a free demo'
-        link: /en/yritys
+        link: '/en/yritys#contact'
         style: primary
     scroll_label: 'Explore services'
     image: screenshots_diagonal_01.jpg
@@ -239,6 +239,6 @@ page_builder:
 seo_title: 'Services & Products – Training solutions for organizations | Apprix'
 seo_description: 'Apprix products and services: Builder® authoring tool, MyCourses LMS, Checklist Engine, Exam Engine, content production and expert services. Everything from one partner.'
 og_title: 'Services & Products – Complete competence development solution | Apprix'
-updated_by: 680e1400-32cd-4415-9b61-d630b47576db
-updated_at: 1779830508
+updated_by: 54f1c4c9-2642-4137-9504-e7b3042b847b
+updated_at: 1783331730
 ---
