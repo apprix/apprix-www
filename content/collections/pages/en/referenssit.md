@@ -2,11 +2,6 @@
 id: 510b5c0a-4faa-49ce-8b12-257cbfa50da3
 origin: b1a3f5c0-d70b-472e-aa07-b4fe4e8c4ea5
 title: 'Customers & Cases'
-seo_title: 'Customers & Cases – References | Apprix'
-seo_description: 'Apprix clients include Finavia, DHL, Atria, Loimua, Gasum, and Matkahuolto. Explore client cases and use cases.'
-og_title: 'Customers & Cases – Apprix references'
-updated_by: 680e1400-32cd-4415-9b61-d630b47576db
-updated_at: 1769434243
 page_builder:
   -
     id: mkref_hero
@@ -26,7 +21,6 @@ page_builder:
       - keva.png
       - nyab.png
       - gasum.svg
-      - helsingin-satama.png
       - honkajoki.png
       - grk.jpg
     text: 'Over 100 international organizations trust Apprix for their workforce competence development — over one million course completions per year and over 25 years of experience in digital training solutions.'
@@ -89,7 +83,7 @@ page_builder:
         enabled: true
       -
         id: mkrq06
-        text: "When a driver completes the training, the completion data and driver details are transferred directly to the supply chain management system."
+        text: 'When a driver completes the training, the completion data and driver details are transferred directly to the supply chain management system.'
         author: 'Karoliina Kärkäs, Fuel Procurement Manager, Loimua'
         type: quote
         enabled: true
@@ -99,5 +93,10 @@ page_builder:
     enabled: true
     title: 'Want to hear how Apprix could help your organization?'
     text: 'Book a free discovery meeting and find out how digital training solutions could benefit your organization.'
-    button: /en/yritys
+    button: '/en/yritys#contact'
+seo_title: 'Customers & Cases – References | Apprix'
+seo_description: 'Apprix clients include Finavia, DHL, Atria, Loimua, Gasum, and Matkahuolto. Explore client cases and use cases.'
+og_title: 'Customers & Cases – Apprix references'
+updated_by: 54f1c4c9-2642-4137-9504-e7b3042b847b
+updated_at: 1783337567
 ---
