@@ -2,11 +2,6 @@
 id: 7356a5d7-a80f-4185-92ac-0f285931e436
 origin: 24514695-2e7d-4163-9b24-52f19154279b
 title: 'Apprix MyCourses – Modern learning environment'
-updated_by: 680e1400-32cd-4415-9b61-d630b47576db
-updated_at: 1768563635
-seo_title: 'Apprix MyCourses – Modern learning environment'
-seo_description: 'Apprix MyCourses is a modern learning management system (LMS) that automatically assigns courses based on HR data. SSO login, learning paths, and real-time analytics.'
-og_title: 'Apprix MyCourses – Intelligent LMS for your organization | Apprix'
 page_builder:
   -
     id: mc-hero
@@ -37,12 +32,13 @@ page_builder:
       -
         id: mc-hero-btn1
         label: 'Learn more'
-        link: /en/yritys
+        link: '/en/yritys#contact'
         style: primary
     scroll_label: 'Read more'
     image: mycourses_bg.jpg
     type: product_hero
     enabled: true
+    tone: light
   -
     id: mc-features
     eyebrow: FEATURES
@@ -113,7 +109,6 @@ page_builder:
       - keva.png
       - nyab.png
       - gasum.svg
-      - helsingin-satama.png
       - honkajoki.png
       - grk.jpg
     speed: normal
@@ -149,6 +144,7 @@ page_builder:
         enabled: true
     type: feature_cards
     enabled: true
+    premium: false
   -
     id: mc-xsell
     eyebrow: 'See also'
@@ -183,7 +179,7 @@ page_builder:
     eyebrow: 'Customizable to your needs'
     title: "Supercharge your organization's competence development"
     text: 'MyCourses can be customized in many ways to fit your specific needs. Contact us to learn more and book a free demo.'
-    button: /en/yritys
+    button: '/en/yritys#contact'
     type: cta
     enabled: true
   -
@@ -222,4 +218,9 @@ page_builder:
         enabled: true
     type: team_cards
     enabled: true
+seo_title: 'Apprix MyCourses – Modern learning environment'
+seo_description: 'Apprix MyCourses is a modern learning management system (LMS) that automatically assigns courses based on HR data. SSO login, learning paths, and real-time analytics.'
+og_title: 'Apprix MyCourses – Intelligent LMS for your organization | Apprix'
+updated_by: 54f1c4c9-2642-4137-9504-e7b3042b847b
+updated_at: 1783337309
 ---
