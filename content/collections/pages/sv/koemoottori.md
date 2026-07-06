@@ -170,7 +170,7 @@ page_builder:
     eyebrow: 'Anpassningsbar efter era behov'
     title: 'Ta organisationens kompetensmätning till nästa nivå'
     text: 'Provmotorn är flexibel och kan anpassas på många sätt för att passa just er organisations behov. Kontakta oss för mer information och boka en gratis demo.'
-    button: /sv/yritys
+    button: '/sv/yritys#contact'
     type: cta
     enabled: true
   -
@@ -213,5 +213,5 @@ seo_title: 'Apprix Provmotorn – Hantering av digitala prov'
 seo_description: 'Apprix Provmotorn täcker hela processen för digitala prov: skapa frågor, distribuera prov, automatisk rättning och resultathantering. Full spårbarhet.'
 og_title: 'Apprix Provmotorn – Mångsidigt verktyg för provhantering | Apprix'
 updated_by: 54f1c4c9-2642-4137-9504-e7b3042b847b
-updated_at: 1783337035
+updated_at: 1783337048
 ---
