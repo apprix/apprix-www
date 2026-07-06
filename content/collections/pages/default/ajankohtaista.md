@@ -10,7 +10,7 @@ seo_canonical_type: entry
 sitemap_change_frequency: monthly
 sitemap_priority: '0.4'
 updated_by: 54f1c4c9-2642-4137-9504-e7b3042b847b
-updated_at: 1783343420
+updated_at: 1783343496
 page_builder:
   -
     id: mknydopk
@@ -40,7 +40,7 @@ page_builder:
     eyebrow: 'Seuraava askel'
     title: 'Kiinnostuitko aiheesta?'
     text: 'Autamme organisaatioita rakentamaan selkeitä ja skaalautuvia ratkaisuja koulutusten ja osaamisen hallintaan.'
-    button: /yhteydenotto
+    button: '/yritys#yhteydenotto'
     type: cta
     enabled: true
 parent: home
