@@ -74,6 +74,18 @@ page_builder:
           - 'Kursgenomföranden exporteras automatiskt tillbaka till HR-systemet'
         type: feature
         enabled: true
+      -
+        id: f34wRTTCtJO2NqjttV2cI
+        icon: shield
+        eyebrow: ADMINISTRATÖRSROLLER
+        title: 'Flexibla administratörsroller'
+        text: 'Administratörsrollerna kan skräddarsys helt efter er organisations behov.'
+        bullets:
+          - 'Huvudadministratör - fulla rättigheter till allt innehåll och all administration.'
+          - 'Innehållsproducent - rätt att lägga till och redigera kurser, men ingen åtkomst till användarnas personuppgifter.'
+          - 'Chef - vy begränsad till egna underställdas kursgenomföranden.'
+        type: feature
+        enabled: true
     type: feature_grid
     enabled: true
   -
@@ -96,36 +108,6 @@ page_builder:
     tone: light
     type: logo_carousel
     enabled: true
-  -
-    id: mc-roles
-    eyebrow: ADMINISTRATÖRSROLLER
-    title: 'Flexibla administratörsroller'
-    lead: 'Administratörsrollerna kan skräddarsys helt efter er organisations behov.'
-    features:
-      -
-        id: mc-r1
-        icon: shield
-        title: Huvudadministratör
-        text: 'Fulla rättigheter till allt innehåll och all administration.'
-        type: feature
-        enabled: true
-      -
-        id: mc-r2
-        icon: pencil
-        title: Innehållsproducent
-        text: 'Rätt att lägga till och redigera kurser, men ingen åtkomst till användarnas personuppgifter.'
-        type: feature
-        enabled: true
-      -
-        id: mc-r3
-        icon: users
-        title: Chef
-        text: 'Vy begränsad till egna underställdas kursgenomföranden.'
-        type: feature
-        enabled: true
-    type: feature_cards
-    enabled: true
-    premium: false
   -
     id: mc-xsell
     eyebrow: 'Utforska även'
@@ -203,5 +185,5 @@ seo_title: 'Apprix MyCourses – Modern lärmiljö'
 seo_description: 'Apprix MyCourses är en modern lärmiljö (LMS) som riktar kurser automatiskt baserat på HR-data. SSO-inloggning, lärvägar och realtidsanalys.'
 og_title: 'Apprix MyCourses – Intelligent LMS för din organisation | Apprix'
 updated_by: 54f1c4c9-2642-4137-9504-e7b3042b847b
-updated_at: 1783345420
+updated_at: 1783348266
 ---
