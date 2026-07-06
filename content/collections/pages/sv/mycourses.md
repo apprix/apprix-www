@@ -2,11 +2,6 @@
 id: e10dcbe4-34f6-4e2f-8383-94a0e2a61a5d
 origin: 24514695-2e7d-4163-9b24-52f19154279b
 title: 'Apprix MyCourses – Modern lärmiljö'
-seo_title: 'Apprix MyCourses – Modern lärmiljö'
-seo_description: 'Apprix MyCourses är en modern lärmiljö (LMS) som riktar kurser automatiskt baserat på HR-data. SSO-inloggning, lärvägar och realtidsanalys.'
-og_title: 'Apprix MyCourses – Intelligent LMS för din organisation | Apprix'
-updated_by: 680e1400-32cd-4415-9b61-d630b47576db
-updated_at: 1768563666
 page_builder:
   -
     id: mc-hero
@@ -37,12 +32,13 @@ page_builder:
       -
         id: mc-hero-btn1
         label: 'Kontakta oss'
-        link: /sv/yritys
+        link: '/sv/yritys#contact'
         style: primary
     scroll_label: 'Läs mer'
     image: mycourses_bg.jpg
     type: product_hero
     enabled: true
+    tone: light
   -
     id: mc-features
     eyebrow: FUNKTIONER
@@ -113,7 +109,6 @@ page_builder:
       - keva.png
       - nyab.png
       - gasum.svg
-      - helsingin-satama.png
       - honkajoki.png
       - grk.jpg
     speed: normal
@@ -149,6 +144,7 @@ page_builder:
         enabled: true
     type: feature_cards
     enabled: true
+    premium: false
   -
     id: mc-xsell
     eyebrow: 'Utforska även'
@@ -183,7 +179,7 @@ page_builder:
     eyebrow: 'Anpassningsbar efter era behov'
     title: 'Effektivisera organisationens kompetensutveckling'
     text: 'MyCourses kan anpassas på många sätt för att passa just era behov. Kontakta oss för mer information och boka en gratis demo.'
-    button: /sv/yritys
+    button: '/sv/yritys#contact'
     type: cta
     enabled: true
   -
@@ -222,4 +218,9 @@ page_builder:
         enabled: true
     type: team_cards
     enabled: true
+seo_title: 'Apprix MyCourses – Modern lärmiljö'
+seo_description: 'Apprix MyCourses är en modern lärmiljö (LMS) som riktar kurser automatiskt baserat på HR-data. SSO-inloggning, lärvägar och realtidsanalys.'
+og_title: 'Apprix MyCourses – Intelligent LMS för din organisation | Apprix'
+updated_by: 54f1c4c9-2642-4137-9504-e7b3042b847b
+updated_at: 1783337332
 ---
