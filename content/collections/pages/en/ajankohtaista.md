@@ -2,10 +2,6 @@
 id: d830c1ae-9fa6-41ed-a953-623ab255ce34
 origin: 1237ccf1-20f4-4245-b8da-ca9c7322e24b
 title: News
-seo_title: 'News – Articles and updates | Apprix'
-seo_description: 'The latest news, articles and updates from Apprix on e-learning, digital training and competence development.'
-updated_by: 680e1400-32cd-4415-9b61-d630b47576db
-updated_at: 1769434351
 page_builder:
   -
     id: mknydopk
@@ -35,7 +31,11 @@ page_builder:
     eyebrow: 'Next step'
     title: 'Interested in the topic?'
     text: 'We help organizations build clear and scalable solutions for training and competence management.'
-    button: /en/yritys
+    button: '/en/yritys#contact'
     type: cta
     enabled: true
+seo_title: 'News – Articles and updates | Apprix'
+seo_description: 'The latest news, articles and updates from Apprix on e-learning, digital training and competence development.'
+updated_by: 54f1c4c9-2642-4137-9504-e7b3042b847b
+updated_at: 1783343550
 ---
