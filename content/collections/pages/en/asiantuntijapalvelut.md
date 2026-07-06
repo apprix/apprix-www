@@ -152,7 +152,7 @@ page_builder:
     eyebrow: 'Get started'
     title: "Let's map out your organization's training needs"
     text: 'Book a free 30-60 minute discovery meeting where we review your needs and suggest a suitable package — with no commitment required.'
-    button: /en/yritys
+    button: '/en/yritys#contact'
     type: cta
     enabled: true
   -
@@ -195,5 +195,5 @@ seo_title: 'Expert Services – Consulting, integrations and training | Apprix'
 seo_description: 'Apprix expert services: training needs analysis, HR and ERP system integrations, content production, and implementation consulting. Over 100 completed integration projects.'
 og_title: 'Expert Services – Seamless solutions for learning | Apprix'
 updated_by: 54f1c4c9-2642-4137-9504-e7b3042b847b
-updated_at: 1783336038
+updated_at: 1783336740
 ---
