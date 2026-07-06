@@ -76,7 +76,7 @@ page_builder:
         enabled: true
       -
         id: CW9RWfVB1XG-TqtziCqNu
-        icon: users
+        icon: shield
         eyebrow: 'ADMIN ROLES'
         title: 'Flexible admin roles'
         text: 'Admin roles can be fully customized to suit the needs of your organization.'
@@ -185,5 +185,5 @@ seo_title: 'Apprix MyCourses – Modern learning environment'
 seo_description: 'Apprix MyCourses is a modern learning management system (LMS) that automatically assigns courses based on HR data. SSO login, learning paths, and real-time analytics.'
 og_title: 'Apprix MyCourses – Intelligent LMS for your organization | Apprix'
 updated_by: 54f1c4c9-2642-4137-9504-e7b3042b847b
-updated_at: 1783348066
+updated_at: 1783348126
 ---
