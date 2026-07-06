@@ -9,25 +9,6 @@ page_builder:
     heading: 'Modern och intelligent lärmiljö för din organisation'
     text: 'MyCourses är en användarvänlig lärmiljö (LMS) som gör utbildning, introduktion och kompetensutveckling av personalen enkel.'
     trust_line: 'Fungerar sömlöst med Apprix Builder – skapade webbutbildningar samlas och riktas till rätt deltagare i MyCourses.'
-    stats:
-      -
-        id: mc-stat01
-        value: LMS
-        label: lärplattform
-        type: stat
-        enabled: true
-      -
-        id: mc-stat02
-        value: 24/7
-        label: tillgänglig
-        type: stat
-        enabled: true
-      -
-        id: mc-stat03
-        value: SSO
-        label: 'enkel inloggning'
-        type: stat
-        enabled: true
     buttons:
       -
         id: mc-hero-btn1
@@ -222,5 +203,5 @@ seo_title: 'Apprix MyCourses – Modern lärmiljö'
 seo_description: 'Apprix MyCourses är en modern lärmiljö (LMS) som riktar kurser automatiskt baserat på HR-data. SSO-inloggning, lärvägar och realtidsanalys.'
 og_title: 'Apprix MyCourses – Intelligent LMS för din organisation | Apprix'
 updated_by: 54f1c4c9-2642-4137-9504-e7b3042b847b
-updated_at: 1783337332
+updated_at: 1783345420
 ---
