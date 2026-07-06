@@ -13,7 +13,7 @@ page_builder:
         id: mkmbszvb
         label: 'Request a demo'
         link: '/en/yritys#contact'
-        style: primary
+        style: secondary
       -
         id: mkmbukej
         label: 'View services'
@@ -36,7 +36,6 @@ page_builder:
       - keva.png
       - nyab.png
       - gasum.svg
-      - helsingin-satama.png
       - honkajoki.png
       - grk.jpg
     speed: normal
@@ -316,6 +315,6 @@ seo_title: 'Digital training platform for businesses – Apprix'
 seo_description: 'Apprix is a Finnish digital training platform for businesses. Create e-learning courses, manage learning and track competence on one platform. Over 25 years of experience and one million course completions per year.'
 og_title: 'Digital training platform for businesses | Apprix'
 og_image: apprix_logo_rgb.png
-updated_by: 680e1400-32cd-4415-9b61-d630b47576db
-updated_at: 1772617824
+updated_by: 54f1c4c9-2642-4137-9504-e7b3042b847b
+updated_at: 1783329895
 ---
