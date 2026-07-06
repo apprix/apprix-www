@@ -161,24 +161,24 @@ page_builder:
   -
     id: mkstats1
     eyebrow: 'Apprix i siffror'
-    title: 'Resultat du kan lita på'
+    title: 'Expertis inom utbildning sedan 2001'
     stats:
       -
         id: mkstat01
-        value: 100+
-        label: 'Internationella nyckelkunder'
+        value: 25+
+        label: 'Års erfarenhet'
         type: stat
         enabled: true
       -
         id: mkstat02
-        value: '1 500+'
-        label: Builder-webbutbildningar
+        value: 1M+
+        label: 'Utbildningsgenomföranden per år'
         type: stat
         enabled: true
       -
         id: mkstat03
-        value: 80k+
-        label: 'Utbildningsgenomföranden per månad'
+        value: 100+
+        label: 'Internationella nyckelkunder'
         type: stat
         enabled: true
     type: stats
@@ -255,7 +255,7 @@ page_builder:
       -
         id: mkfq0006
         question: 'Stöder Apprix flera språk?'
-        answer: '<p>Ja. Vår plattform och utbildningar fungerar flerspråkigt. </p>'
+        answer: '<p>Ja. Vår plattform och utbildningar fungerar flerspråkigt.</p>'
         type: faq_item
         enabled: true
     type: faq
@@ -316,5 +316,5 @@ seo_description: 'Apprix är en finsk digital utbildningsplattform för företag
 og_title: 'Digital utbildningsplattform för företag | Apprix'
 og_image: apprix_logo_rgb.png
 updated_by: 54f1c4c9-2642-4137-9504-e7b3042b847b
-updated_at: 1783339122
+updated_at: 1783340547
 ---
