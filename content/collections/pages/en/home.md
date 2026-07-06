@@ -316,5 +316,5 @@ seo_description: 'Apprix is a Finnish digital training platform for businesses. 
 og_title: 'Digital training platform for businesses | Apprix'
 og_image: apprix_logo_rgb.png
 updated_by: 54f1c4c9-2642-4137-9504-e7b3042b847b
-updated_at: 1783340377
+updated_at: 1783340787
 ---
