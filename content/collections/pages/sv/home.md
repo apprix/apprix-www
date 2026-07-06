@@ -172,7 +172,7 @@ page_builder:
       -
         id: mkstat02
         value: 1M+
-        label: 'Utbildningsgenomföranden per år'
+        label: 'Kursgenomföranden per år'
         type: stat
         enabled: true
       -
@@ -316,5 +316,5 @@ seo_description: 'Apprix är en finsk digital utbildningsplattform för företag
 og_title: 'Digital utbildningsplattform för företag | Apprix'
 og_image: apprix_logo_rgb.png
 updated_by: 54f1c4c9-2642-4137-9504-e7b3042b847b
-updated_at: 1783340547
+updated_at: 1783340684
 ---
