@@ -210,8 +210,8 @@ page_builder:
   -
     id: mknsml2b
     eyebrow: 'Samarbetet börjar här'
-    title: 'Låt oss göra utbildningshanteringen tydlig'
-    text: 'Vi hjälper organisationer att skapa tydliga och skalbara lösningar för kompetensutveckling.'
+    title: 'Är du redo att ta kompetensutvecklingen till nästa nivå?'
+    text: 'Vi erbjuder en 30–60 minuters demo som inkluderar en kartläggning av era utbildningsbehov. Vi kan även sätta upp en testmiljö för dig, helt kostnadsfritt.'
     primary_button: '/sv/yritys#contact'
     tone: brand
     type: cta
@@ -316,5 +316,5 @@ seo_description: 'Apprix är en finsk digital utbildningsplattform för företag
 og_title: 'Digital utbildningsplattform för företag | Apprix'
 og_image: apprix_logo_rgb.png
 updated_by: 54f1c4c9-2642-4137-9504-e7b3042b847b
-updated_at: 1783340684
+updated_at: 1783343204
 ---
