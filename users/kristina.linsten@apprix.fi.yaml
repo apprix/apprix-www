@@ -8,3 +8,5 @@ preferences:
       view: tree
     docs:
       view: tree
+    articles:
+      view: list
