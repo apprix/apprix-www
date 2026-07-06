@@ -2,11 +2,6 @@
 id: c3aa6a29-799a-481b-bb21-5f1c51f1ead0
 origin: 0d44d6e5-c869-4515-b4ec-cda97d6e0e3b
 title: 'Apprix Checklist Engine – Streamline onboarding processes'
-updated_by: 680e1400-32cd-4415-9b61-d630b47576db
-updated_at: 1768563702
-seo_title: 'Apprix Checklist Engine – Streamline onboarding processes'
-seo_description: 'Apprix Checklist Engine digitizes onboarding and inspection checklists. Digital signatures, version control, and full traceability across all locations.'
-og_title: 'Apprix Checklist Engine – Digital onboarding checklists | Apprix'
 page_builder:
   -
     id: ce-hero
@@ -37,12 +32,13 @@ page_builder:
       -
         id: ce-hero-btn1
         label: 'Learn more'
-        link: /en/yritys
+        link: '/en/yritys#contact'
         style: primary
     scroll_label: 'Read more'
     image: checklist-engine-perehdytys.jpg
     type: product_hero
     enabled: true
+    tone: light
   -
     id: ce-benefits
     eyebrow: BENEFITS
@@ -96,7 +92,6 @@ page_builder:
       - keva.png
       - nyab.png
       - gasum.svg
-      - helsingin-satama.png
       - honkajoki.png
       - grk.jpg
     speed: normal
@@ -139,6 +134,7 @@ page_builder:
         enabled: true
     type: feature_cards
     enabled: true
+    premium: false
   -
     id: ce-xsell
     eyebrow: 'See also'
@@ -173,7 +169,7 @@ page_builder:
     eyebrow: 'Customizable to your needs'
     title: "Streamline your organization's onboarding processes today"
     text: "Checklist Engine can be customized in many ways to fit your organization's specific needs. Contact us to learn more and book a free demo."
-    button: /en/yritys
+    button: '/en/yritys#contact'
     type: cta
     enabled: true
   -
@@ -212,4 +208,9 @@ page_builder:
         enabled: true
     type: team_cards
     enabled: true
+seo_title: 'Apprix Checklist Engine – Streamline onboarding processes'
+seo_description: 'Apprix Checklist Engine digitizes onboarding and inspection checklists. Digital signatures, version control, and full traceability across all locations.'
+og_title: 'Apprix Checklist Engine – Digital onboarding checklists | Apprix'
+updated_by: 54f1c4c9-2642-4137-9504-e7b3042b847b
+updated_at: 1783337161
 ---
