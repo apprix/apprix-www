@@ -2,11 +2,6 @@
 id: 907f68b1-c1e8-4a72-b4d5-0700cf60212e
 origin: b1a3f5c0-d70b-472e-aa07-b4fe4e8c4ea5
 title: 'Kunder & case'
-seo_title: 'Kunder & case – Referenser | Apprix'
-seo_description: 'Bland Apprix kunder finns bl.a. Finavia, DHL, Atria, Loimua, Gasum och Matkahuolto. Utforska kundcase och användningsområden.'
-og_title: 'Kunder & case – Apprix-referenser'
-updated_by: 680e1400-32cd-4415-9b61-d630b47576db
-updated_at: 1768563981
 page_builder:
   -
     id: mkref_hero
@@ -26,7 +21,6 @@ page_builder:
       - keva.png
       - nyab.png
       - gasum.svg
-      - helsingin-satama.png
       - honkajoki.png
       - grk.jpg
     text: 'Över 100 internationella organisationer litar på Apprix för sin kompetensutveckling — över en miljon utbildningsgenomföranden per år och över 25 års erfarenhet av digitala utbildningslösningar.'
@@ -99,5 +93,10 @@ page_builder:
     enabled: true
     title: 'Vill du höra hur Apprix kan hjälpa er organisation?'
     text: 'Boka ett kostnadsfritt kartläggningsmöte och ta reda på hur digitala utbildningslösningar kan gynna er organisation.'
-    button: /sv/yritys
+    button: '/sv/yritys#contact'
+seo_title: 'Kunder & case – Referenser | Apprix'
+seo_description: 'Bland Apprix kunder finns bl.a. Finavia, DHL, Atria, Loimua, Gasum och Matkahuolto. Utforska kundcase och användningsområden.'
+og_title: 'Kunder & case – Apprix-referenser'
+updated_by: 54f1c4c9-2642-4137-9504-e7b3042b847b
+updated_at: 1783337582
 ---
