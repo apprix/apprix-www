@@ -109,36 +109,6 @@ page_builder:
     type: logo_carousel
     enabled: true
   -
-    id: mc-roles
-    eyebrow: 'ADMIN ROLES'
-    title: 'Flexible admin roles'
-    lead: 'Admin roles can be fully customized to suit the needs of your organization.'
-    features:
-      -
-        id: mc-r1
-        icon: shield
-        title: 'Super Admin'
-        text: 'Full access to all content and administration.'
-        type: feature
-        enabled: true
-      -
-        id: mc-r2
-        icon: pencil
-        title: 'Content Creator'
-        text: "Permission to add and edit courses, but no access to users' personal data."
-        type: feature
-        enabled: true
-      -
-        id: mc-r3
-        icon: users
-        title: Manager
-        text: "View limited to own team members' course completions."
-        type: feature
-        enabled: true
-    type: feature_cards
-    enabled: true
-    premium: false
-  -
     id: mc-xsell
     eyebrow: 'See also'
     heading: 'Complete your solution'
@@ -215,5 +185,5 @@ seo_title: 'Apprix MyCourses – Modern learning environment'
 seo_description: 'Apprix MyCourses is a modern learning management system (LMS) that automatically assigns courses based on HR data. SSO login, learning paths, and real-time analytics.'
 og_title: 'Apprix MyCourses – Intelligent LMS for your organization | Apprix'
 updated_by: 54f1c4c9-2642-4137-9504-e7b3042b847b
-updated_at: 1783348007
+updated_at: 1783348066
 ---
