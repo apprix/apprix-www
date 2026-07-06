@@ -2,7 +2,6 @@
 id: f8f0234c-dba8-49c9-b40b-f5b55610eac9
 origin: ca1bc143-a016-40a2-b2c5-02bfd3dd1ba3
 title: 'Experttjänster – Sömlösa lösningar för lärande'
-seo_description: 'Apprix experttjänster: över 25 års erfarenhet av engagerande webbutbildningar. Sömlösa integrationer med era processer och system.'
 page_builder:
   -
     id: asp-hero
@@ -33,12 +32,13 @@ page_builder:
       -
         id: asp-hero-btn1
         label: 'Boka kartläggningsmöte'
-        link: /sv/yritys
+        link: '/sv/yritys#contact'
         style: primary
     scroll_label: 'Läs mer'
     image: general_bg.jpg
     type: product_hero
     enabled: true
+    tone: light
   -
     id: asp-features
     eyebrow: TJÄNSTER
@@ -112,7 +112,6 @@ page_builder:
       - keva.png
       - nyab.png
       - gasum.svg
-      - helsingin-satama.png
       - honkajoki.png
       - grk.jpg
     speed: normal
@@ -193,7 +192,8 @@ page_builder:
     type: team_cards
     enabled: true
 seo_title: 'Experttjänster – Rådgivning, integrationer och utbildning | Apprix'
+seo_description: 'Apprix experttjänster: över 25 års erfarenhet av engagerande webbutbildningar. Sömlösa integrationer med era processer och system.'
 og_title: 'Experttjänster – Sömlösa lösningar för lärande | Apprix'
-updated_by: 680e1400-32cd-4415-9b61-d630b47576db
-updated_at: 1768563920
+updated_by: 54f1c4c9-2642-4137-9504-e7b3042b847b
+updated_at: 1783336063
 ---
