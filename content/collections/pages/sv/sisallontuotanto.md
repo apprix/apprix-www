@@ -2,7 +2,6 @@
 id: 2bdbe1ab-c6b8-4818-9c25-9e1a85c49c54
 origin: edc147d8-e52a-4da7-976d-c42d664e400e
 title: 'Innehållsproduktion – Apprix experter vid din sida'
-seo_description: 'Apprix innehållsproduktion: behöver du hjälp att skapa webbutbildningar? Våra experter står vid din sida – från sparring till nyckelfärdiga kurser.'
 page_builder:
   -
     id: st-hero
@@ -14,12 +13,13 @@ page_builder:
       -
         id: st-hero-btn1
         label: 'Fråga oss mer'
-        link: /sv/yritys
+        link: '/sv/yritys#contact'
         style: primary
     scroll_label: 'Läs mer'
     image: general_bg.jpg
     type: product_hero
     enabled: true
+    tone: light
   -
     id: st-services
     eyebrow: TJÄNSTER
@@ -89,6 +89,7 @@ page_builder:
         enabled: true
     type: feature_cards
     enabled: true
+    premium: false
   -
     id: st-logos
     heading: 'En betrodd partner för ledande organisationer'
@@ -103,7 +104,6 @@ page_builder:
       - keva.png
       - nyab.png
       - gasum.svg
-      - helsingin-satama.png
       - honkajoki.png
       - grk.jpg
     speed: normal
@@ -184,7 +184,8 @@ page_builder:
     type: team_cards
     enabled: true
 seo_title: 'Innehållsproduktion – Apprix experter vid din sida'
+seo_description: 'Apprix innehållsproduktion: behöver du hjälp att skapa webbutbildningar? Våra experter står vid din sida – från sparring till nyckelfärdiga kurser.'
 og_title: 'Innehållsproduktion – Webbutbildningar från proffs | Apprix'
-updated_by: 680e1400-32cd-4415-9b61-d630b47576db
-updated_at: 1768563854
+updated_by: 54f1c4c9-2642-4137-9504-e7b3042b847b
+updated_at: 1783336515
 ---
