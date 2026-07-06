@@ -2,11 +2,6 @@
 id: 972b8ac6-00cc-459a-8182-0e28b1a74bae
 origin: 249c0fc6-926b-4125-9d2f-6850b57cd969
 title: 'Apprix Exam Engine – Digital exam management'
-updated_by: 680e1400-32cd-4415-9b61-d630b47576db
-updated_at: 1768563756
-seo_title: 'Apprix Exam Engine – Digital exam management'
-seo_description: 'Apprix Exam Engine covers the entire digital exam process: question creation, exam distribution, automatic grading, and results management. Full traceability.'
-og_title: 'Apprix Exam Engine – Comprehensive tool for exam management | Apprix'
 page_builder:
   -
     id: km-hero
@@ -37,12 +32,13 @@ page_builder:
       -
         id: km-hero-btn1
         label: 'Learn more'
-        link: /en/yritys
+        link: '/en/yritys#contact'
         style: primary
     scroll_label: 'Read more'
     image: checklist-engine-perehdytys.jpg
     type: product_hero
     enabled: true
+    tone: light
   -
     id: km-features
     eyebrow: FEATURES
@@ -104,7 +100,6 @@ page_builder:
       - keva.png
       - nyab.png
       - gasum.svg
-      - helsingin-satama.png
       - honkajoki.png
       - grk.jpg
     speed: normal
@@ -140,6 +135,7 @@ page_builder:
         enabled: true
     type: feature_cards
     enabled: true
+    premium: false
   -
     id: km-xsell
     eyebrow: 'See also'
@@ -213,4 +209,9 @@ page_builder:
         enabled: true
     type: team_cards
     enabled: true
+seo_title: 'Apprix Exam Engine – Digital exam management'
+seo_description: 'Apprix Exam Engine covers the entire digital exam process: question creation, exam distribution, automatic grading, and results management. Full traceability.'
+og_title: 'Apprix Exam Engine – Comprehensive tool for exam management | Apprix'
+updated_by: 54f1c4c9-2642-4137-9504-e7b3042b847b
+updated_at: 1783336937
 ---
