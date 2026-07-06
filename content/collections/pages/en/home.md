@@ -255,7 +255,7 @@ page_builder:
       -
         id: mkfq0006
         question: 'Does Apprix support multiple languages?'
-        answer: '<p>Yes. Our platform and courses work multilingually. We currently support Finnish, Swedish and English, and new languages can be added as needed.</p>'
+        answer: '<p>Yes. Our platform and courses work multilingually. </p>'
         type: faq_item
         enabled: true
     type: faq
@@ -316,5 +316,5 @@ seo_description: 'Apprix is a Finnish digital training platform for businesses. 
 og_title: 'Digital training platform for businesses | Apprix'
 og_image: apprix_logo_rgb.png
 updated_by: 54f1c4c9-2642-4137-9504-e7b3042b847b
-updated_at: 1783329950
+updated_at: 1783339077
 ---
