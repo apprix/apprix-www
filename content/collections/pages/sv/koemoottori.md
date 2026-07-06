@@ -2,11 +2,6 @@
 id: 4e0c1273-6bd1-416b-bce3-bab8dedf2e4a
 origin: 249c0fc6-926b-4125-9d2f-6850b57cd969
 title: 'Apprix Provmotorn – Hantering av digitala prov'
-seo_title: 'Apprix Provmotorn – Hantering av digitala prov'
-seo_description: 'Apprix Provmotorn täcker hela processen för digitala prov: skapa frågor, distribuera prov, automatisk rättning och resultathantering. Full spårbarhet.'
-og_title: 'Apprix Provmotorn – Mångsidigt verktyg för provhantering | Apprix'
-updated_by: 680e1400-32cd-4415-9b61-d630b47576db
-updated_at: 1768563782
 page_builder:
   -
     id: km-hero
@@ -37,12 +32,13 @@ page_builder:
       -
         id: km-hero-btn1
         label: 'Kontakta oss'
-        link: /sv/yritys
+        link: '/sv/yritys#contact'
         style: primary
     scroll_label: 'Läs mer'
     image: checklist-engine-perehdytys.jpg
     type: product_hero
     enabled: true
+    tone: light
   -
     id: km-features
     eyebrow: FUNKTIONER
@@ -104,7 +100,6 @@ page_builder:
       - keva.png
       - nyab.png
       - gasum.svg
-      - helsingin-satama.png
       - honkajoki.png
       - grk.jpg
     speed: normal
@@ -140,6 +135,7 @@ page_builder:
         enabled: true
     type: feature_cards
     enabled: true
+    premium: false
   -
     id: km-xsell
     eyebrow: 'Utforska även'
@@ -213,4 +209,9 @@ page_builder:
         enabled: true
     type: team_cards
     enabled: true
+seo_title: 'Apprix Provmotorn – Hantering av digitala prov'
+seo_description: 'Apprix Provmotorn täcker hela processen för digitala prov: skapa frågor, distribuera prov, automatisk rättning och resultathantering. Full spårbarhet.'
+og_title: 'Apprix Provmotorn – Mångsidigt verktyg för provhantering | Apprix'
+updated_by: 54f1c4c9-2642-4137-9504-e7b3042b847b
+updated_at: 1783337035
 ---
