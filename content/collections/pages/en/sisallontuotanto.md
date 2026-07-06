@@ -2,11 +2,6 @@
 id: 2db5b0fd-f490-4553-8c88-c2dc9d322c86
 origin: edc147d8-e52a-4da7-976d-c42d664e400e
 title: 'Content Production – Apprix experts at your service'
-seo_title: 'Content Production – Apprix experts at your service'
-seo_description: 'Apprix content production services: turnkey online courses, coaching, gamification, storytelling, and translations to over 30 languages. An expert team at your service.'
-og_title: 'Content Production Services – Professional online courses | Apprix'
-updated_by: 680e1400-32cd-4415-9b61-d630b47576db
-updated_at: 1769434378
 page_builder:
   -
     id: st-hero
@@ -18,12 +13,13 @@ page_builder:
       -
         id: st-hero-btn1
         label: 'Ask us more'
-        link: /en/yritys
+        link: '/en/yritys#contact'
         style: primary
     scroll_label: 'Read more'
     image: general_bg.jpg
     type: product_hero
     enabled: true
+    tone: light
   -
     id: st-services
     eyebrow: SERVICES
@@ -93,6 +89,7 @@ page_builder:
         enabled: true
     type: feature_cards
     enabled: true
+    premium: false
   -
     id: st-logos
     heading: 'A trusted partner for leading organizations'
@@ -107,7 +104,6 @@ page_builder:
       - keva.png
       - nyab.png
       - gasum.svg
-      - helsingin-satama.png
       - honkajoki.png
       - grk.jpg
     speed: normal
@@ -187,4 +183,9 @@ page_builder:
         enabled: true
     type: team_cards
     enabled: true
+seo_title: 'Content Production – Apprix experts at your service'
+seo_description: 'Apprix content production services: turnkey online courses, coaching, gamification, storytelling, and translations to over 30 languages. An expert team at your service.'
+og_title: 'Content Production Services – Professional online courses | Apprix'
+updated_by: 54f1c4c9-2642-4137-9504-e7b3042b847b
+updated_at: 1783336493
 ---
