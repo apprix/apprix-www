@@ -170,7 +170,7 @@ page_builder:
     eyebrow: 'Customizable to your needs'
     title: "Take your organization's competence assessment to the next level"
     text: "Exam Engine is flexible and can be customized in many ways to fit your organization's specific needs. Contact us to learn more and book a free demo."
-    button: /en/yritys
+    button: '/en/yritys#contact'
     type: cta
     enabled: true
   -
@@ -213,5 +213,5 @@ seo_title: 'Apprix Exam Engine – Digital exam management'
 seo_description: 'Apprix Exam Engine covers the entire digital exam process: question creation, exam distribution, automatic grading, and results management. Full traceability.'
 og_title: 'Apprix Exam Engine – Comprehensive tool for exam management | Apprix'
 updated_by: 54f1c4c9-2642-4137-9504-e7b3042b847b
-updated_at: 1783336937
+updated_at: 1783336952
 ---
