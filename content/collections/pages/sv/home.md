@@ -18,7 +18,7 @@ page_builder:
         id: mkmbukej
         label: 'Se tjänster'
         link: /sv/palvelut
-        style: primary
+        style: secondary
     image: screenshots_diagonal_01.jpg
     type: hero
     enabled: true
@@ -36,7 +36,6 @@ page_builder:
       - keva.png
       - nyab.png
       - gasum.svg
-      - helsingin-satama.png
       - honkajoki.png
       - grk.jpg
     speed: normal
@@ -316,6 +315,6 @@ seo_title: 'Digital utbildningsplattform för företag – Apprix'
 seo_description: 'Apprix är en finsk digital utbildningsplattform för företag. Skapa webbutbildningar, hantera lärande och följ kompetens på en plattform. Över 25 års erfarenhet och en miljon utbildningsgenomföranden per år.'
 og_title: 'Digital utbildningsplattform för företag | Apprix'
 og_image: apprix_logo_rgb.png
-updated_by: 680e1400-32cd-4415-9b61-d630b47576db
-updated_at: 1772617839
+updated_by: 54f1c4c9-2642-4137-9504-e7b3042b847b
+updated_at: 1783330021
 ---
