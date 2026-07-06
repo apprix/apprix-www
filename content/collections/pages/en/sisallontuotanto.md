@@ -144,7 +144,7 @@ page_builder:
     eyebrow: 'Contact us'
     title: "Let's design a package tailored to your needs"
     text: 'Our shared goal is to create THE BEST E-LEARNING EVER for you and your organization. Ask us more and book a free discovery meeting.'
-    button: /en/yritys
+    button: '/en/yritys#contact'
     type: cta
     enabled: true
   -
@@ -187,5 +187,5 @@ seo_title: 'Content Production – Apprix experts at your service'
 seo_description: 'Apprix content production services: turnkey online courses, coaching, gamification, storytelling, and translations to over 30 languages. An expert team at your service.'
 og_title: 'Content Production Services – Professional online courses | Apprix'
 updated_by: 54f1c4c9-2642-4137-9504-e7b3042b847b
-updated_at: 1783336493
+updated_at: 1783336827
 ---
