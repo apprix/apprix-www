@@ -144,7 +144,7 @@ page_builder:
     eyebrow: 'Kontakta oss'
     title: 'Vi skräddarsyr ett paket för just dina behov'
     text: 'Vårt gemensamma mål är att skapa THE BEST E-LEARNING EVER för dig och din organisation. Fråga oss mer och boka en kostnadsfri kartläggning.'
-    button: /sv/yritys
+    button: '/sv/yritys#contact'
     type: cta
     enabled: true
   -
@@ -187,5 +187,5 @@ seo_title: 'Innehållsproduktion – Apprix experter vid din sida'
 seo_description: 'Apprix innehållsproduktion: behöver du hjälp att skapa webbutbildningar? Våra experter står vid din sida – från sparring till nyckelfärdiga kurser.'
 og_title: 'Innehållsproduktion – Webbutbildningar från proffs | Apprix'
 updated_by: 54f1c4c9-2642-4137-9504-e7b3042b847b
-updated_at: 1783336515
+updated_at: 1783336810
 ---
