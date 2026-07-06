@@ -9,25 +9,6 @@ page_builder:
     heading: 'A modern and intelligent learning environment for your organization'
     text: 'MyCourses is an easy-to-use learning management system (LMS) that makes staff training, onboarding, and competence development effortless.'
     trust_line: 'Works seamlessly with Apprix Builder – online courses created in Builder are compiled and assigned to the right participants in MyCourses.'
-    stats:
-      -
-        id: mc-stat01
-        value: LMS
-        label: 'learning platform'
-        type: stat
-        enabled: true
-      -
-        id: mc-stat02
-        value: 24/7
-        label: available
-        type: stat
-        enabled: true
-      -
-        id: mc-stat03
-        value: SSO
-        label: 'single sign-on'
-        type: stat
-        enabled: true
     buttons:
       -
         id: mc-hero-btn1
@@ -222,5 +203,5 @@ seo_title: 'Apprix MyCourses – Modern learning environment'
 seo_description: 'Apprix MyCourses is a modern learning management system (LMS) that automatically assigns courses based on HR data. SSO login, learning paths, and real-time analytics.'
 og_title: 'Apprix MyCourses – Intelligent LMS for your organization | Apprix'
 updated_by: 54f1c4c9-2642-4137-9504-e7b3042b847b
-updated_at: 1783337309
+updated_at: 1783345392
 ---
