@@ -97,7 +97,7 @@ page_builder:
         type: quote
         enabled: true
     type: testimonials
-    enabled: true
+    enabled: false
   -
     id: asp-logos
     heading: 'A trusted partner for leading organizations'
@@ -195,5 +195,5 @@ seo_title: 'Expert Services – Consulting, integrations and training | Apprix'
 seo_description: 'Apprix expert services: training needs analysis, HR and ERP system integrations, content production, and implementation consulting. Over 100 completed integration projects.'
 og_title: 'Expert Services – Seamless solutions for learning | Apprix'
 updated_by: 54f1c4c9-2642-4137-9504-e7b3042b847b
-updated_at: 1783336740
+updated_at: 1783345627
 ---
