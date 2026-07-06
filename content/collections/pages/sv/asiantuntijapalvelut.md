@@ -97,7 +97,7 @@ page_builder:
         type: quote
         enabled: true
     type: testimonials
-    enabled: true
+    enabled: false
   -
     id: asp-logos
     heading: 'En betrodd partner för ledande organisationer'
@@ -195,5 +195,5 @@ seo_title: 'Experttjänster – Rådgivning, integrationer och utbildning | Appr
 seo_description: 'Apprix experttjänster: över 25 års erfarenhet av engagerande webbutbildningar. Sömlösa integrationer med era processer och system.'
 og_title: 'Experttjänster – Sömlösa lösningar för lärande | Apprix'
 updated_by: 54f1c4c9-2642-4137-9504-e7b3042b847b
-updated_at: 1783336757
+updated_at: 1783345663
 ---
