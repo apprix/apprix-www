@@ -213,5 +213,5 @@ seo_title: 'Apprix Exam Engine – Digital exam management'
 seo_description: 'Apprix Exam Engine covers the entire digital exam process: question creation, exam distribution, automatic grading, and results management. Full traceability.'
 og_title: 'Apprix Exam Engine – Comprehensive tool for exam management | Apprix'
 updated_by: 54f1c4c9-2642-4137-9504-e7b3042b847b
-updated_at: 1783336952
+updated_at: 1783337015
 ---
