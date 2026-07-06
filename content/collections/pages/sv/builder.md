@@ -2,11 +2,6 @@
 id: 652ac83e-c9ff-4d9c-82d7-ba130bf0d89b
 origin: 32699eb5-9c3f-4baf-bc0c-4f8d6b3066c0
 title: 'Apprix Builder® – Skapa engagerande webbutbildningar'
-seo_title: 'Apprix Builder® – Skapa engagerande webbutbildningar'
-seo_description: 'Apprix Builder® är ett AI-stött författarverktyg för webbutbildningar. Skapa engagerande kurser utan teknisk kompetens. Över 1 000 genomföranden och en miljon kursavslut per år.'
-og_title: 'Apprix Builder® – Skapa webbutbildningar enkelt | Apprix'
-updated_by: 680e1400-32cd-4415-9b61-d630b47576db
-updated_at: 1768563601
 page_builder:
   -
     id: bldr-hero
@@ -37,12 +32,13 @@ page_builder:
       -
         id: bldr-hero-btn1
         label: 'Boka gratis demo'
-        link: /sv/yritys
+        link: '/sv/yritys#contact'
         style: primary
     scroll_label: 'Läs mer'
     image: builder_bg.jpg
     type: product_hero
     enabled: true
+    tone: light
   -
     id: bldr-features
     eyebrow: FUNKTIONER
@@ -116,7 +112,6 @@ page_builder:
       - keva.png
       - nyab.png
       - gasum.svg
-      - helsingin-satama.png
       - honkajoki.png
       - grk.jpg
     speed: normal
@@ -181,7 +176,7 @@ page_builder:
     eyebrow: 'Boka gratis demo'
     title: 'Är du redo att ta din organisations kompetens till nästa nivå?'
     text: 'Vi erbjuder en 30 eller 60 minuters demo som inkluderar en individuell kartläggning av organisationens utbildningsbehov. Införandet är riskfritt: du betalar bara för de månader webbutbildningen faktiskt används.'
-    button: /sv/yritys
+    button: '/sv/yritys#contact'
     type: cta
     enabled: true
   -
@@ -220,4 +215,9 @@ page_builder:
         enabled: true
     type: team_cards
     enabled: true
+seo_title: 'Apprix Builder® – Skapa engagerande webbutbildningar'
+seo_description: 'Apprix Builder® är ett AI-stött författarverktyg för webbutbildningar. Skapa engagerande kurser utan teknisk kompetens. Över 1 000 genomföranden och en miljon kursavslut per år.'
+og_title: 'Apprix Builder® – Skapa webbutbildningar enkelt | Apprix'
+updated_by: 54f1c4c9-2642-4137-9504-e7b3042b847b
+updated_at: 1783337462
 ---
