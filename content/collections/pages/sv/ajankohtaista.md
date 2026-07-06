@@ -2,8 +2,6 @@
 id: f4578efe-1d9c-43fb-81fb-46ae32429132
 origin: 1237ccf1-20f4-4245-b8da-ca9c7322e24b
 title: Aktuellt
-seo_title: 'Aktuellt – Nyheter och artiklar | Apprix'
-seo_description: 'Apprix senaste nyheter, artiklar och aktuella uppdateringar om webbutbildning, digitalt lärande och kompetensutveckling.'
 page_builder:
   -
     id: mknydopk
@@ -33,9 +31,11 @@ page_builder:
     eyebrow: 'Nästa steg'
     title: 'Blev du intresserad?'
     text: 'Vi hjälper organisationer att bygga tydliga och skalbara lösningar för utbildnings- och kompetenshantering.'
-    button: /sv/yritys
+    button: '/sv/yritys#contact'
     type: cta
     enabled: true
-updated_by: 680e1400-32cd-4415-9b61-d630b47576db
-updated_at: 1768564175
+seo_title: 'Aktuellt – Nyheter och artiklar | Apprix'
+seo_description: 'Apprix senaste nyheter, artiklar och aktuella uppdateringar om webbutbildning, digitalt lärande och kompetensutveckling.'
+updated_by: 54f1c4c9-2642-4137-9504-e7b3042b847b
+updated_at: 1783343572
 ---
