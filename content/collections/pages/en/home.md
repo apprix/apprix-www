@@ -210,8 +210,8 @@ page_builder:
   -
     id: mknsml2b
     eyebrow: 'Collaboration starts here'
-    title: "Let's make training management clear"
-    text: 'We help organizations create clear and scalable solutions for competence development.'
+    title: 'Ready to take competence development to the next level?'
+    text: 'We offer a 30–60 minute demo, which includes a training needs assessment. We can also set up a test environment for you, completely free of charge.'
     primary_button: '/en/yritys#contact'
     tone: brand
     type: cta
@@ -316,5 +316,5 @@ seo_description: 'Apprix is a Finnish digital training platform for businesses. 
 og_title: 'Digital training platform for businesses | Apprix'
 og_image: apprix_logo_rgb.png
 updated_by: 54f1c4c9-2642-4137-9504-e7b3042b847b
-updated_at: 1783340964
+updated_at: 1783343166
 ---
