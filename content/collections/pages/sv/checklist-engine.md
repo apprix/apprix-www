@@ -2,11 +2,6 @@
 id: 6e95aca5-1922-4ff4-8e57-d6876a75dd36
 origin: 0d44d6e5-c869-4515-b4ec-cda97d6e0e3b
 title: 'Apprix Checklist Engine – Effektiva introduktionsprocesser'
-seo_title: 'Apprix Checklist Engine – Effektiva introduktionsprocesser'
-seo_description: 'Apprix Checklist Engine digitaliserar introduktions- och checklistor. Digitala signaturer, versionshantering och full spårbarhet på alla arbetsplatser.'
-og_title: 'Apprix Checklist Engine – Digitala introduktionslistor | Apprix'
-updated_by: 680e1400-32cd-4415-9b61-d630b47576db
-updated_at: 1768563725
 page_builder:
   -
     id: ce-hero
@@ -37,12 +32,13 @@ page_builder:
       -
         id: ce-hero-btn1
         label: 'Kontakta oss'
-        link: /sv/yritys
+        link: '/sv/yritys#contact'
         style: primary
     scroll_label: 'Läs mer'
     image: checklist-engine-perehdytys.jpg
     type: product_hero
     enabled: true
+    tone: light
   -
     id: ce-benefits
     eyebrow: FÖRDELAR
@@ -96,7 +92,6 @@ page_builder:
       - keva.png
       - nyab.png
       - gasum.svg
-      - helsingin-satama.png
       - honkajoki.png
       - grk.jpg
     speed: normal
@@ -139,6 +134,7 @@ page_builder:
         enabled: true
     type: feature_cards
     enabled: true
+    premium: false
   -
     id: ce-xsell
     eyebrow: 'Utforska även'
@@ -173,7 +169,7 @@ page_builder:
     eyebrow: 'Anpassningsbar efter era behov'
     title: 'Effektivisera organisationens introduktionsprocesser redan idag'
     text: 'Checklist Engine kan anpassas på många sätt för att passa just er organisations behov. Kontakta oss för mer information och boka en gratis demo.'
-    button: /sv/yritys
+    button: '/sv/yritys#contact'
     type: cta
     enabled: true
   -
@@ -212,4 +208,9 @@ page_builder:
         enabled: true
     type: team_cards
     enabled: true
+seo_title: 'Apprix Checklist Engine – Effektiva introduktionsprocesser'
+seo_description: 'Apprix Checklist Engine digitaliserar introduktions- och checklistor. Digitala signaturer, versionshantering och full spårbarhet på alla arbetsplatser.'
+og_title: 'Apprix Checklist Engine – Digitala introduktionslistor | Apprix'
+updated_by: 54f1c4c9-2642-4137-9504-e7b3042b847b
+updated_at: 1783337187
 ---
