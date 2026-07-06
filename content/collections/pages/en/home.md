@@ -161,24 +161,24 @@ page_builder:
   -
     id: mkstats1
     eyebrow: 'Apprix in numbers'
-    title: 'Results you can trust'
+    title: 'Trusted e-learning expertise since 2001'
     stats:
       -
         id: mkstat01
-        value: 100+
-        label: 'International key accounts'
+        value: 25+
+        label: 'Years of experience'
         type: stat
         enabled: true
       -
         id: mkstat02
-        value: '1 500+'
-        label: 'Builder online courses'
+        value: 1M+
+        label: 'Course completions per year'
         type: stat
         enabled: true
       -
         id: mkstat03
-        value: 80k+
-        label: 'Course completions per month'
+        value: 100+
+        label: 'International key customer'
         type: stat
         enabled: true
     type: stats
@@ -316,5 +316,5 @@ seo_description: 'Apprix is a Finnish digital training platform for businesses. 
 og_title: 'Digital training platform for businesses | Apprix'
 og_image: apprix_logo_rgb.png
 updated_by: 54f1c4c9-2642-4137-9504-e7b3042b847b
-updated_at: 1783339417
+updated_at: 1783340377
 ---
