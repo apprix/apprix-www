@@ -2,11 +2,6 @@
 id: 7cd1a550-66fd-459d-8906-02b02c9c9eba
 origin: 32699eb5-9c3f-4baf-bc0c-4f8d6b3066c0
 title: 'Apprix Builder® – Create impactful online courses'
-updated_by: 680e1400-32cd-4415-9b61-d630b47576db
-updated_at: 1768563576
-seo_title: 'Apprix Builder® – Create impactful online courses'
-seo_description: 'Apprix Builder® is an AI-powered e-learning authoring tool. Create engaging courses without technical skills. Over 1,000 implementations and one million course completions per year.'
-og_title: 'Apprix Builder® – Easy e-learning authoring tool | Apprix'
 page_builder:
   -
     id: bldr-hero
@@ -37,12 +32,13 @@ page_builder:
       -
         id: bldr-hero-btn1
         label: 'Book a free demo'
-        link: /en/yritys
+        link: '/en/yritys#contact'
         style: primary
     scroll_label: 'Read more'
     image: builder_bg.jpg
     type: product_hero
     enabled: true
+    tone: light
   -
     id: bldr-features
     eyebrow: FEATURES
@@ -116,7 +112,6 @@ page_builder:
       - keva.png
       - nyab.png
       - gasum.svg
-      - helsingin-satama.png
       - honkajoki.png
       - grk.jpg
     speed: normal
@@ -181,7 +176,7 @@ page_builder:
     eyebrow: 'Book a free demo'
     title: "Ready to take your organization's competence to the next level?"
     text: 'We offer a 30 or 60-minute demo that includes a personalized training needs assessment for your organization. Getting started is risk-free: you only pay for the months your online course is actually in use.'
-    button: /en/yritys
+    button: '/en/yritys#contact'
     type: cta
     enabled: true
   -
@@ -220,4 +215,9 @@ page_builder:
         enabled: true
     type: team_cards
     enabled: true
+seo_title: 'Apprix Builder® – Create impactful online courses'
+seo_description: 'Apprix Builder® is an AI-powered e-learning authoring tool. Create engaging courses without technical skills. Over 1,000 implementations and one million course completions per year.'
+og_title: 'Apprix Builder® – Easy e-learning authoring tool | Apprix'
+updated_by: 54f1c4c9-2642-4137-9504-e7b3042b847b
+updated_at: 1783337438
 ---
