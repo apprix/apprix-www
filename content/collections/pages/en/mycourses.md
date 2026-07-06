@@ -74,6 +74,18 @@ page_builder:
           - 'Course completion data is automatically exported back to the HR system'
         type: feature
         enabled: true
+      -
+        id: CW9RWfVB1XG-TqtziCqNu
+        icon: users
+        eyebrow: 'ADMIN ROLES'
+        title: 'Flexible admin roles'
+        text: 'Admin roles can be fully customized to suit the needs of your organization.'
+        bullets:
+          - 'Super Admin - full access to all content and administration.'
+          - "Content Creator - permission to add and edit courses, but no access to users' personal data."
+          - "Manager - view limited to own team members' course completions."
+        type: feature
+        enabled: true
     type: feature_grid
     enabled: true
   -
@@ -203,5 +215,5 @@ seo_title: 'Apprix MyCourses – Modern learning environment'
 seo_description: 'Apprix MyCourses is a modern learning management system (LMS) that automatically assigns courses based on HR data. SSO login, learning paths, and real-time analytics.'
 og_title: 'Apprix MyCourses – Intelligent LMS for your organization | Apprix'
 updated_by: 54f1c4c9-2642-4137-9504-e7b3042b847b
-updated_at: 1783345392
+updated_at: 1783348007
 ---
