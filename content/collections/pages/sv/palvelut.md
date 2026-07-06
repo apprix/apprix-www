@@ -2,7 +2,6 @@
 id: 4770fe7c-1dba-447b-9a70-aa9ac7c8aa71
 origin: 2c1cbc43-eba8-47be-ae47-a9a21aa1a88e
 title: 'Tjänster & produkter'
-seo_description: 'Apprix erbjuder en komplett produktfamilj för webbutbildningar, introduktioner och kompetensmätning. Finsk kvalitet sedan 2001.'
 page_builder:
   -
     id: plv-hero
@@ -33,12 +32,13 @@ page_builder:
       -
         id: plv-hero-btn1
         label: 'Boka en kostnadsfri demo'
-        link: /sv/yritys
+        link: '/sv/yritys#contact'
         style: primary
     scroll_label: 'Utforska tjänsterna'
     image: screenshots_diagonal_01.jpg
     type: product_hero
     enabled: true
+    tone: light
   -
     id: plv-overview
     eyebrow: HELHET
@@ -89,6 +89,7 @@ page_builder:
         enabled: true
     type: feature_cards
     enabled: true
+    premium: false
   -
     id: plv-row1
     eyebrow: 'INNEHÅLLSPRODUKTION & LÄRANDE'
@@ -185,7 +186,6 @@ page_builder:
       - keva.png
       - nyab.png
       - gasum.svg
-      - helsingin-satama.png
       - honkajoki.png
       - grk.jpg
     speed: normal
@@ -237,7 +237,8 @@ page_builder:
     type: team_cards
     enabled: true
 seo_title: 'Tjänster & produkter – Utbildningslösningar för organisationer | Apprix'
+seo_description: 'Apprix erbjuder en komplett produktfamilj för webbutbildningar, introduktioner och kompetensmätning. Finsk kvalitet sedan 2001.'
 og_title: 'Tjänster & produkter – Helhetslösning för kompetensutveckling | Apprix'
-updated_by: 680e1400-32cd-4415-9b61-d630b47576db
-updated_at: 1768563538
+updated_by: 54f1c4c9-2642-4137-9504-e7b3042b847b
+updated_at: 1783331876
 ---
