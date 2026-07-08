@@ -68,6 +68,7 @@ page_builder:
           - 'Occupational safety and environmental training'
           - 'Compliance and responsibility training (GDPR, ESG, DEI)'
           - 'Scales to organization-wide needs'
+          - 'Suitable for both internal and external target groups'
         type: feature
         enabled: true
       -
@@ -219,5 +220,5 @@ seo_title: 'Apprix Builder® – Create impactful online courses'
 seo_description: 'Apprix Builder® is an AI-powered e-learning authoring tool. Create engaging courses without technical skills. Over 1,000 implementations and one million course completions per year.'
 og_title: 'Apprix Builder® – Easy e-learning authoring tool | Apprix'
 updated_by: 54f1c4c9-2642-4137-9504-e7b3042b847b
-updated_at: 1783502937
+updated_at: 1783503411
 ---
