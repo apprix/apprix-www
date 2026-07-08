@@ -225,7 +225,7 @@ page_builder:
       -
         id: mkfq0001
         question: 'Vad är Apprix?'
-        answer: '<p>Apprix är en finsk pionjär inom digitala utbildningslösningar med över 25 års erfarenhet. Vi hjälper organisationer att bygga, dela och hantera webbutbildningar på en plattform — oavsett om det gäller introduktion, regelefterlevnad eller kontinuerlig kompetensutveckling.</p>'
+        answer: '<p>Apprix är en finsk pionjär inom digitala utbildningslösningar med över 25 års erfarenhet. Vi hjälper organisationer att bygga, dela och hantera webbutbildningar — oavsett om det gäller introduktion, regelefterlevnad eller kontinuerlig kompetensutveckling. Apprix är stolt över sin mycket berömda kundsupport och utmärkta Helpdesk-tjänst.</p>'
         type: faq_item
         enabled: true
       -
@@ -316,5 +316,5 @@ seo_description: 'Apprix är en finsk digital utbildningsplattform för företag
 og_title: 'Digital utbildningsplattform för företag | Apprix'
 og_image: apprix_logo_rgb.png
 updated_by: 54f1c4c9-2642-4137-9504-e7b3042b847b
-updated_at: 1783501355
+updated_at: 1783501763
 ---
