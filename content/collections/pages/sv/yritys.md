@@ -9,7 +9,7 @@ page_builder:
     enabled: true
     tone: brand
     heading: 'Experter på digitala utbildningslösningar'
-    text: 'Apprix Oy är ett lönsamt finländskt mjukvaruföretag specialiserat på att bygga e-utbildningar, hantera lärande och följa kompetens. Vår produktfamilj inkluderar Apprix Builder® författarverktyg, MyCourses LMS, Checklist Engine och Provmotorn.'
+    text: 'Apprix Oy är ett lönsamt finländskt mjukvaruföretag specialiserat på att bygga e-utbildningar, hantera lärande och följa kompetens. Vår produktfamilj inkluderar Apprix Builder® författarverktyg, MyCourses LMS, Checklist Engine och Provmotorn. Apprix mission: Vi erbjuder de bästa digitala, interaktiva verktygen och tjänsterna för modernt lärande i olika situationer och arbetsmiljöer.'
     stats:
       -
         id: mkstat_y01
@@ -126,5 +126,5 @@ seo_title: 'Företag – Apprix Oy | Expert på digitala utbildningslösningar s
 seo_description: 'Apprix Oy är ett Helsingforsbaserat mjukvaruföretag grundat 2001 som erbjuder digitala utbildningslösningar för medelstora och stora organisationer. Över 100 internationella kunder.'
 og_title: 'Apprix Oy – Expert på digitala utbildningslösningar sedan 2001'
 updated_by: 54f1c4c9-2642-4137-9504-e7b3042b847b
-updated_at: 1783507775
+updated_at: 1783508174
 ---
