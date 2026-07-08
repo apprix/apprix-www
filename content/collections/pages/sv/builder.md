@@ -54,7 +54,7 @@ page_builder:
           - 'Färdiga element, mediabibliotek och sidmallar anpassade till företagsprofilen'
           - 'Bygg utbildningar snabbt utan teknisk kompetens'
           - 'Generativ AI som stöd i innehållsproduktionen'
-          - 'Checklist Engine effektiviserar utbildningsprocesserna'
+          - 'Smidiga förhandsvisningar och samarbetsverktyg för granskning av innehåll före publicering'
         type: feature
         enabled: true
       -
@@ -219,5 +219,5 @@ seo_title: 'Apprix Builder® – Skapa engagerande webbutbildningar'
 seo_description: 'Apprix Builder® är ett AI-stött författarverktyg för webbutbildningar. Skapa engagerande kurser utan teknisk kompetens. Över 1 000 genomföranden och en miljon kursavslut per år.'
 og_title: 'Apprix Builder® – Skapa webbutbildningar enkelt | Apprix'
 updated_by: 54f1c4c9-2642-4137-9504-e7b3042b847b
-updated_at: 1783337462
+updated_at: 1783502977
 ---
