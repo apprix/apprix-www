@@ -122,7 +122,7 @@ page_builder:
           - 'Enhetliga introduktionskort och kompetenskrav'
           - 'Prov och tester för kompetensverifiering'
           - 'Tydlig dokumentation och rapportering för myndighetsbruk'
-        image: checklist-engine-perehdytys.jpg
+        image: laptop_hands_01.jpg
         buttons:
           -
             id: mksb0003

@@ -122,7 +122,7 @@ page_builder:
           - 'Standardized onboarding cards and competence requirements'
           - 'Tests and exams for competence verification'
           - 'Clear documentation and reporting for regulatory use'
-        image: checklist-engine-perehdytys.jpg
+        image: laptop_hands_01.jpg
         buttons:
           -
             id: mksb0003

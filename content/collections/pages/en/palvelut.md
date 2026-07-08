@@ -148,7 +148,7 @@ page_builder:
         style: secondary
     type: feature_row
     enabled: true
-    image: checklist-engine-perehdytys.jpg
+    image: laptop_hands_01.jpg
   -
     id: plv-row3
     eyebrow: 'EXPERT SERVICES'

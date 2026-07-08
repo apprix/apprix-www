@@ -35,7 +35,7 @@ page_builder:
         link: '/sv/yritys#contact'
         style: primary
     scroll_label: 'Läs mer'
-    image: checklist-engine-perehdytys.jpg
+    image: laptop_hands_01.jpg
     type: product_hero
     enabled: true
     tone: light

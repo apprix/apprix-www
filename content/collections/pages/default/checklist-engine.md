@@ -43,7 +43,7 @@ page_builder:
         link: '/yritys#yhteydenotto'
         style: primary
     scroll_label: 'Lue lisää'
-    image: checklist-engine-perehdytys.jpg
+    image: laptop_hands_01.jpg
     type: product_hero
     enabled: true
     tone: light

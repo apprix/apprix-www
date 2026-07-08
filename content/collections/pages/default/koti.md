@@ -134,7 +134,7 @@ page_builder:
           - 'Yhdenmukaiset perehdytyslistat ja sähköiset allekirjoitukset kaikissa toimipisteissä'
           - 'Monipuoliset tehtävätyypit ja automatisoitu kokeiden tarkistus'
           - 'Täysi jäljitettävyys, versiohallinta ja suoritustietojen automaattinen siirto HR-järjestelmiin'
-        image: checklist-engine-perehdytys.jpg
+        image: laptop_hands_01.jpg
         buttons:
           -
             id: mksb0003
