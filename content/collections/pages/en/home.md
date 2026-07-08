@@ -231,7 +231,7 @@ page_builder:
       -
         id: mkfq0002
         question: 'Who are Apprix services for?'
-        answer: '<p>Our services are designed for mid-sized and large organizations that need a scalable way to train employees, partners or customers. Our clients include Finavia, DHL, Atria, Loimua and Gasum.</p>'
+        answer: '<p>Our services are designed for large and mid-sized organizations that need a scalable way to train employees, partners or customers. Our clients include Finavia, DHL, Atria, Loimua and Gasum.</p>'
         type: faq_item
         enabled: true
       -
@@ -316,5 +316,5 @@ seo_description: 'Apprix is a Finnish digital training platform for businesses. 
 og_title: 'Digital training platform for businesses | Apprix'
 og_image: apprix_logo_rgb.png
 updated_by: 54f1c4c9-2642-4137-9504-e7b3042b847b
-updated_at: 1783501650
+updated_at: 1783501884
 ---
