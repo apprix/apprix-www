@@ -78,7 +78,7 @@ page_builder:
         title: 'Anslut sömlöst till din egen miljö'
         text: 'Builder integreras säkert med ditt företags egna system och stöder flera smidiga inloggningsmetoder.'
         bullets:
-          - 'HR- och passersystem (Mepco, SuccessFactors, Once by Pinja)'
+          - 'HR- och passersystem (Mepco, Sympa, SuccessFactors, Workday, Megaflex, Zeroni, Once by Pinja…)'
           - 'SSO-enkel inloggning och e-postautentisering'
           - 'Engångspinkod och skattenummerverifiering'
           - 'Valttikortsverifiering och andra säkra inloggningsmetoder'
@@ -220,5 +220,5 @@ seo_title: 'Apprix Builder® – Skapa engagerande webbutbildningar'
 seo_description: 'Apprix Builder® är ett AI-stött författarverktyg för webbutbildningar. Skapa engagerande kurser utan teknisk kompetens. Över 1 000 genomföranden och en miljon kursavslut per år.'
 og_title: 'Apprix Builder® – Skapa webbutbildningar enkelt | Apprix'
 updated_by: 54f1c4c9-2642-4137-9504-e7b3042b847b
-updated_at: 1783503459
+updated_at: 1783503654
 ---
