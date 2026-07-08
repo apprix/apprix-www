@@ -46,7 +46,7 @@ page_builder:
     id: mkfcards1
     premium: true
     eyebrow: 'VARFÖR APPRIX'
-    title: 'Allt för kompetensutveckling från en partner'
+    title: 'Alla verktyg för onlineutbildning från en partner'
     lead: 'Över 25 års erfarenhet, AI-driven innehållsproduktion och skalbar prissättning — allt ordnat på en gång.'
     features:
       -
@@ -316,5 +316,5 @@ seo_description: 'Apprix är en finsk digital utbildningsplattform för företag
 og_title: 'Digital utbildningsplattform för företag | Apprix'
 og_image: apprix_logo_rgb.png
 updated_by: 54f1c4c9-2642-4137-9504-e7b3042b847b
-updated_at: 1783343204
+updated_at: 1783501355
 ---
