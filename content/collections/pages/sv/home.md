@@ -91,17 +91,17 @@ page_builder:
         tab_label: 'Builder & MyCourses'
         icon: pencil
         eyebrow: UTBILDNINGSHANTERING
-        title: 'Bygg, dela och hantera utbildningar i en vy'
-        text: 'Apprix Builder gör det enkelt att skapa och dela utbildningar. MyCourses samlar lärandet på ett ställe för både användare och organisationen.'
+        title: 'Skapa effektfulla e-utbildningar och rikta dem till rätt deltagare'
+        text: 'Apprix Builder® är marknadens smidigaste verktyg för innehållsproduktion av engagerande e-utbildningar. Lärmiljön MyCourses samlar och riktar kurser automatiskt till rätt deltagare baserat på HR-data.'
         bullets:
-          - 'Bygg engagerande webbutbildningar utan teknisk kompetens'
-          - 'Hantera lärvägar, användare och innehåll centralt'
-          - 'Följ utbildningarnas framsteg och genomföranden i realtid'
+          - 'Bygg engagerande webbutbildningar utan teknisk kompetens – med stöd av AI i innehållsproduktionen'
+          - 'Smarta användargrupper och automatisk riktning med HR-integration'
+          - 'Lärvägar, prioriterade vyer och uppföljning av utgående genomföranden'
         image: builder_bg.jpg
         buttons:
           -
             id: mksb0001
-            label: 'Utforska Builder'
+            label: 'Apprix Builder®'
             link: /sv/palvelut/builder
             style: primary
           -
@@ -116,12 +116,12 @@ page_builder:
         tab_label: 'Checklist & Provmotorn'
         icon: clipboard
         eyebrow: REGELEFTERLEVNAD
-        title: 'Säkerställ kompetens och uppfyll myndighetskrav'
-        text: 'Checklist Engine och Provmotorn hjälper till att säkerställa att kompetensen uppfyller kraven och kan verifieras vid behov.'
+        title: 'Digitala introduktionslistor och prov som uppfyller myndighetskrav'
+        text: 'Checklist Engine digitaliserar introduktions- och checklistor papperslöst i hela organisationen. Provmotorn täcker hela processen för digitala prov, från att skapa frågor till att godkänna resultat.'
         bullets:
-          - 'Enhetliga introduktionskort och kompetenskrav'
-          - 'Prov och tester för kompetensverifiering'
-          - 'Tydlig dokumentation och rapportering för myndighetsbruk'
+          - 'Enhetliga introduktionslistor och e-signaturer på alla verksamhetsställen'
+          - 'Mångsidiga uppgiftstyper och automatiserad provrättning'
+          - 'Full spårbarhet, versionshantering och automatisk överföring av genomförandedata till HR-system'
         image: laptop_hands_01.jpg
         buttons:
           -
@@ -141,12 +141,12 @@ page_builder:
         tab_label: Innehållsproduktion
         icon: sparkles
         eyebrow: 'STÖD & INNEHÅLL'
-        title: 'Få innehåll och experter som stöd'
-        text: 'Vi erbjuder expertstöd och kvalitetsinnehåll för att säkerställa att utbildningarna motsvarar er organisations behov och mål.'
+        title: 'Räcker inte tiden till? Våra experter hjälper dig'
+        text: 'Oavsett om du behöver tillfälligt bollplank eller en nyckelfärdig webbkurs — Apprix innehållsproduktionsteam står till din tjänst.'
         bullets:
-          - 'Professionellt producerat utbildningsmaterial'
-          - 'Experter som hjälper vid implementering och utveckling'
-          - 'Skräddarsydda lösningar för olika branscher'
+          - 'Heltäckande innehållsproduktionsprojekt: från material till färdig kurs'
+          - 'Boost-, Polishing- och Refresh-paket för egenbyggande'
+          - 'Det lilla extra: spelifiering, storytelling, tone of voice och animationer'
         image: general_bg.jpg
         buttons:
           -
@@ -316,5 +316,5 @@ seo_description: 'Apprix är en finsk digital utbildningsplattform för företag
 og_title: 'Digital utbildningsplattform för företag | Apprix'
 og_image: apprix_logo_rgb.png
 updated_by: 54f1c4c9-2642-4137-9504-e7b3042b847b
-updated_at: 1783501844
+updated_at: 1783519217
 ---
