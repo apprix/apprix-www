@@ -2,11 +2,6 @@
 id: 850bb822-0d51-4796-b858-5122f9710447
 origin: 0127ef44-ff0c-4713-ac5a-1b952954d66d
 title: Company
-seo_title: 'Company – Apprix Oy | Digital training solutions expert since 2001'
-seo_description: 'Apprix Oy is a Helsinki-based software company founded in 2001, providing digital training solutions for mid-size and large organizations. Over 100 international clients.'
-og_title: 'Apprix Oy – Digital training solutions expert since 2001'
-updated_by: 680e1400-32cd-4415-9b61-d630b47576db
-updated_at: 1710720000
 page_builder:
   -
     id: mkcompany01
@@ -118,6 +113,18 @@ page_builder:
         link: '/en/referenssit#caset'
         icon: case
         image: apprix_logo_rgb.png
+      -
+        id: bQXB6NIf0VnNJGpbUz9Tb
+        eyebrow: 'Customer support'
+        title: 'Helpdesk – Technical support'
+        text: 'Questions about Builder or need technical help? Contact our support team directly.'
+        link: 'mailto:helpdesk@apprix.fi'
+        icon: arrow
     type: link_cards
     enabled: true
+seo_title: 'Company – Apprix Oy | Digital training solutions expert since 2001'
+seo_description: 'Apprix Oy is a Helsinki-based software company founded in 2001, providing digital training solutions for mid-size and large organizations. Over 100 international clients.'
+og_title: 'Apprix Oy – Digital training solutions expert since 2001'
+updated_by: 54f1c4c9-2642-4137-9504-e7b3042b847b
+updated_at: 1783499431
 ---
