@@ -6,8 +6,8 @@ page_builder:
   -
     id: mkmbr96q
     eyebrow: 'Betrodd av finska organisationer'
-    heading: 'Utbildningsplattformen som håller kompetensen synlig'
-    text: 'Skapa och dela utbildningar, följ kompetensutvecklingen och säkerställ att rätt kunskap når rätt person — allt i en tydlig vy.'
+    heading: 'Skapa effektfulla e-utbildningar med marknadens smidigaste premiumlösning'
+    text: 'Med över 25 års erfarenhet och generativ AI — bygg, dela och följ upp e-utbildningar i ett och samma ekosystem.'
     buttons:
       -
         id: mkmbszvb
@@ -316,5 +316,5 @@ seo_description: 'Apprix är en finsk digital utbildningsplattform för företag
 og_title: 'Digital utbildningsplattform för företag | Apprix'
 og_image: apprix_logo_rgb.png
 updated_by: 54f1c4c9-2642-4137-9504-e7b3042b847b
-updated_at: 1783519217
+updated_at: 1783520440
 ---
