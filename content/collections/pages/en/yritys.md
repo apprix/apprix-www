@@ -9,7 +9,7 @@ page_builder:
     enabled: true
     tone: brand
     heading: 'Experts in digital training solutions'
-    text: 'Apprix Oy is a Helsinki-based software company specializing in building e-learning courses, managing learning, and tracking competence. Our product family includes the Apprix Builder® authoring tool, MyCourses LMS, Checklist Engine, and Exam Engine.'
+    text: 'Apprix Oy is a profitable software company specializing in building e-learning courses, managing learning, and tracking competence. Our product family includes the Apprix Builder® authoring tool, MyCourses LMS, Checklist Engine, and Exam Engine.'
     stats:
       -
         id: mkstat_y01
@@ -126,5 +126,5 @@ seo_title: 'Company – Apprix Oy | Digital training solutions expert since 2001
 seo_description: 'Apprix Oy is a Helsinki-based software company founded in 2001, providing digital training solutions for mid-size and large organizations. Over 100 international clients.'
 og_title: 'Apprix Oy – Digital training solutions expert since 2001'
 updated_by: 54f1c4c9-2642-4137-9504-e7b3042b847b
-updated_at: 1783499431
+updated_at: 1783507651
 ---
