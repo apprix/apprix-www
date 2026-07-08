@@ -6,8 +6,8 @@ page_builder:
   -
     id: mkmbr96q
     eyebrow: 'Trusted by Finnish organizations'
-    heading: 'The training platform that keeps competence visible'
-    text: 'Create and share training, track competence development, and ensure the right knowledge reaches the right person — all in one clear view.'
+    heading: 'Create impactful e-learning with the market’s most agile premium solution'
+    text: 'With over 25 years of experience and generative AI — building, sharing, and tracking e-learning courses in one ecosystem.'
     buttons:
       -
         id: mkmbszvb
@@ -316,5 +316,5 @@ seo_description: 'Apprix is a Finnish digital training platform for businesses. 
 og_title: 'Digital training platform for businesses | Apprix'
 og_image: apprix_logo_rgb.png
 updated_by: 54f1c4c9-2642-4137-9504-e7b3042b847b
-updated_at: 1783519529
+updated_at: 1783520403
 ---
