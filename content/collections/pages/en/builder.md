@@ -54,7 +54,7 @@ page_builder:
           - 'Ready-made elements, media libraries, and branded page templates'
           - 'Build courses quickly without technical expertise'
           - 'Generative AI to support content creation'
-          - 'Checklist Engine to streamline training processes'
+          - 'Convenient preview modes and collaboration tools for content review before publishing'
         type: feature
         enabled: true
       -
@@ -219,5 +219,5 @@ seo_title: 'Apprix Builder® – Create impactful online courses'
 seo_description: 'Apprix Builder® is an AI-powered e-learning authoring tool. Create engaging courses without technical skills. Over 1,000 implementations and one million course completions per year.'
 og_title: 'Apprix Builder® – Easy e-learning authoring tool | Apprix'
 updated_by: 54f1c4c9-2642-4137-9504-e7b3042b847b
-updated_at: 1783337438
+updated_at: 1783502937
 ---
