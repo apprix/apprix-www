@@ -91,17 +91,17 @@ page_builder:
         tab_label: 'Builder & MyCourses'
         icon: pencil
         eyebrow: 'TRAINING MANAGEMENT'
-        title: 'Build, share and manage training in one view'
-        text: 'Apprix Builder makes it easy to create and share training. MyCourses brings learning together in one place for both users and the organization.'
+        title: 'Create impactful e-learning and target it to the right learners'
+        text: 'Apprix Builder® is the market’s most agile content creation tool for building engaging e-learning courses. The MyCourses learning environment automatically gathers and targets courses to the right participants based on HR data.'
         bullets:
-          - 'Build engaging online courses without technical skills'
-          - 'Manage learning paths, users and content centrally'
-          - 'Track training progress and completions in real time'
+          - 'Build engaging online courses without technical skills – supported by AI content creation'
+          - 'Smart user groups and automated targeting with HR integration'
+          - 'Learning paths, prioritized views, and tracking of expiring completions'
         image: builder_bg.jpg
         buttons:
           -
             id: mksb0001
-            label: 'Explore Builder'
+            label: 'Apprix Builder®'
             link: /en/palvelut/builder
             style: primary
           -
@@ -116,12 +116,12 @@ page_builder:
         tab_label: 'Checklist & Exam Engine'
         icon: clipboard
         eyebrow: COMPLIANCE
-        title: 'Ensure competence and meet regulatory requirements'
-        text: 'Checklist Engine and Exam Engine help ensure that competence meets requirements and can be verified when needed.'
+        title: 'Digital onboarding checklists and exams compliant with regulatory requirements'
+        text: 'Checklist Engine digitalizes onboarding and checklists paperlessly across the entire organization. Exam Engine covers the entire digital exam process, from question creation to result approval.'
         bullets:
-          - 'Standardized onboarding cards and competence requirements'
-          - 'Tests and exams for competence verification'
-          - 'Clear documentation and reporting for regulatory use'
+          - 'Standardized onboarding checklists and e-signatures across all locations'
+          - 'Versatile task types and automated exam grading'
+          - 'Full traceability, version control, and automated transfer of completion data to HR systems'
         image: laptop_hands_01.jpg
         buttons:
           -
@@ -141,12 +141,12 @@ page_builder:
         tab_label: 'Content production'
         icon: sparkles
         eyebrow: 'SUPPORT & CONTENT'
-        title: 'Get content and experts to support you'
-        text: "We provide expert support and quality content to ensure training meets your organization's needs and goals."
+        title: 'Not enough time? Our experts are here to help'
+        text: 'Whether you need occasional sparring or a fully turnkey online course — Apprix’s content production team is here to support you.'
         bullets:
-          - 'Professionally produced training materials'
-          - 'Experts to assist with implementation and development'
-          - 'Tailored solutions for different industries'
+          - 'Comprehensive content production projects: from raw material to a finished course'
+          - 'Boost, Polishing, and Refresh packages for self-building'
+          - 'Extra spices: gamification, storytelling, tone of voice, and animations'
         image: general_bg.jpg
         buttons:
           -
@@ -316,5 +316,5 @@ seo_description: 'Apprix is a Finnish digital training platform for businesses. 
 og_title: 'Digital training platform for businesses | Apprix'
 og_image: apprix_logo_rgb.png
 updated_by: 54f1c4c9-2642-4137-9504-e7b3042b847b
-updated_at: 1783501884
+updated_at: 1783518938
 ---
