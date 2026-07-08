@@ -68,6 +68,7 @@ page_builder:
           - 'Arbetarskydds- och miljöutbildningar'
           - 'Compliance- och hållbarhetsutbildningar (GDPR, ESG, DEI)'
           - 'Skalbart till organisationsomfattande behov'
+          - 'Lämpligt för både interna och externa målgrupper'
         type: feature
         enabled: true
       -
@@ -219,5 +220,5 @@ seo_title: 'Apprix Builder® – Skapa engagerande webbutbildningar'
 seo_description: 'Apprix Builder® är ett AI-stött författarverktyg för webbutbildningar. Skapa engagerande kurser utan teknisk kompetens. Över 1 000 genomföranden och en miljon kursavslut per år.'
 og_title: 'Apprix Builder® – Skapa webbutbildningar enkelt | Apprix'
 updated_by: 54f1c4c9-2642-4137-9504-e7b3042b847b
-updated_at: 1783502977
+updated_at: 1783503459
 ---
