@@ -231,7 +231,7 @@ page_builder:
       -
         id: mkfq0002
         question: 'Vem passar Apprix tjänster för?'
-        answer: '<p>Våra tjänster är utformade för medelstora och stora organisationer som behöver ett skalbart sätt att utbilda personal, partners eller kunder. Bland våra kunder finns Finavia, DHL, Atria, Loimua och Gasum.</p>'
+        answer: '<p>Våra tjänster är utformade för stora och medelstora organisationer som behöver ett skalbart sätt att utbilda personal, partners eller kunder. Bland våra kunder finns Finavia, DHL, Atria, Loimua och Gasum.</p>'
         type: faq_item
         enabled: true
       -
@@ -316,5 +316,5 @@ seo_description: 'Apprix är en finsk digital utbildningsplattform för företag
 og_title: 'Digital utbildningsplattform för företag | Apprix'
 og_image: apprix_logo_rgb.png
 updated_by: 54f1c4c9-2642-4137-9504-e7b3042b847b
-updated_at: 1783501763
+updated_at: 1783501844
 ---
