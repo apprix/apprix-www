@@ -2,11 +2,6 @@
 id: 29b94e7e-7736-4848-a0b4-879f5e6453eb
 origin: 0127ef44-ff0c-4713-ac5a-1b952954d66d
 title: Företag
-seo_title: 'Företag – Apprix Oy | Expert på digitala utbildningslösningar sedan 2001'
-seo_description: 'Apprix Oy är ett Helsingforsbaserat mjukvaruföretag grundat 2001 som erbjuder digitala utbildningslösningar för medelstora och stora organisationer. Över 100 internationella kunder.'
-og_title: 'Apprix Oy – Expert på digitala utbildningslösningar sedan 2001'
-updated_by: 680e1400-32cd-4415-9b61-d630b47576db
-updated_at: 1710720000
 page_builder:
   -
     id: mkcompany01
@@ -118,6 +113,18 @@ page_builder:
         link: '/sv/referenssit#caset'
         icon: case
         image: apprix_logo_rgb.png
+      -
+        id: nhPYjFCPi5ZMoRHMJ_G1i
+        eyebrow: Kundsupport
+        title: 'Helpdesk – Teknisk support'
+        text: 'Frågor om Builder eller behöver du teknisk hjälp? Kontakta vårt supportteam direkt.'
+        link: 'mailto:helpdesk@apprix.fi'
+        icon: arrow
     type: link_cards
     enabled: true
+seo_title: 'Företag – Apprix Oy | Expert på digitala utbildningslösningar sedan 2001'
+seo_description: 'Apprix Oy är ett Helsingforsbaserat mjukvaruföretag grundat 2001 som erbjuder digitala utbildningslösningar för medelstora och stora organisationer. Över 100 internationella kunder.'
+og_title: 'Apprix Oy – Expert på digitala utbildningslösningar sedan 2001'
+updated_by: 54f1c4c9-2642-4137-9504-e7b3042b847b
+updated_at: 1783499519
 ---
