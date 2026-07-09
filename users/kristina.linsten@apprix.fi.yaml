@@ -10,3 +10,5 @@ preferences:
       view: tree
     articles:
       view: list
+    faq:
+      view: list
