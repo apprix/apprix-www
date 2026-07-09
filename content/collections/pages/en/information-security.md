@@ -15,9 +15,6 @@ page_builder:
         content:
           -
             type: text
-            marks:
-              -
-                type: bold
             text: General
       -
         type: paragraph
@@ -41,9 +38,6 @@ page_builder:
         content:
           -
             type: text
-            marks:
-              -
-                type: bold
             text: Servers
       -
         type: heading
@@ -52,9 +46,6 @@ page_builder:
         content:
           -
             type: text
-            marks:
-              -
-                type: bold
             text: 'Physical Security'
       -
         type: bulletList
@@ -93,9 +84,6 @@ page_builder:
         content:
           -
             type: text
-            marks:
-              -
-                type: bold
             text: 'Network Security'
       -
         type: bulletList
@@ -116,9 +104,6 @@ page_builder:
         content:
           -
             type: text
-            marks:
-              -
-                type: bold
             text: 'Server Protection'
       -
         type: bulletList
@@ -202,9 +187,6 @@ page_builder:
         content:
           -
             type: text
-            marks:
-              -
-                type: bold
             text: 'Server Software Updates'
       -
         type: bulletList
@@ -243,9 +225,6 @@ page_builder:
         content:
           -
             type: text
-            marks:
-              -
-                type: bold
             text: 'Server Management'
       -
         type: bulletList
@@ -293,9 +272,6 @@ page_builder:
         content:
           -
             type: text
-            marks:
-              -
-                type: bold
             text: 'Software Developed by Apprix Oy'
       -
         type: heading
@@ -304,9 +280,6 @@ page_builder:
         content:
           -
             type: text
-            marks:
-              -
-                type: bold
             text: 'Data Transmission Security'
       -
         type: bulletList
@@ -336,9 +309,6 @@ page_builder:
         content:
           -
             type: text
-            marks:
-              -
-                type: bold
             text: 'Data Backup and Recovery'
       -
         type: bulletList
@@ -413,9 +383,6 @@ page_builder:
         content:
           -
             type: text
-            marks:
-              -
-                type: bold
             text: 'Service Portability'
       -
         type: paragraph
@@ -430,9 +397,6 @@ page_builder:
         content:
           -
             type: text
-            marks:
-              -
-                type: bold
             text: 'Location of Service Data'
       -
         type: bulletList
@@ -471,9 +435,6 @@ page_builder:
         content:
           -
             type: text
-            marks:
-              -
-                type: bold
             text: 'Data Deletion'
       -
         type: paragraph
@@ -488,9 +449,6 @@ page_builder:
         content:
           -
             type: text
-            marks:
-              -
-                type: bold
             text: 'Security Audits of Services'
       -
         type: paragraph
@@ -505,9 +463,6 @@ page_builder:
         content:
           -
             type: text
-            marks:
-              -
-                type: bold
             text: 'Service Administrators, Users, Roles, and Responsibilities'
       -
         type: bulletList
@@ -579,9 +534,6 @@ page_builder:
         content:
           -
             type: text
-            marks:
-              -
-                type: bold
             text: 'Security-Related Agreements'
       -
         type: heading
@@ -590,9 +542,6 @@ page_builder:
         content:
           -
             type: text
-            marks:
-              -
-                type: bold
             text: 'Non-Disclosure Agreement (NDA)'
       -
         type: bulletList
@@ -622,9 +571,6 @@ page_builder:
         content:
           -
             type: text
-            marks:
-              -
-                type: bold
             text: 'Data Processing Agreement (DPA)'
       -
         type: bulletList
@@ -663,9 +609,6 @@ page_builder:
         content:
           -
             type: text
-            marks:
-              -
-                type: bold
             text: 'Service Level Agreement (SLA)'
       -
         type: paragraph
@@ -680,9 +623,6 @@ page_builder:
         content:
           -
             type: text
-            marks:
-              -
-                type: bold
             text: 'Supported Devices'
       -
         type: paragraph
@@ -693,5 +633,5 @@ page_builder:
 seo_title: 'Information Security Description | Apprix Oy'
 seo_description: 'Apprix Oy information security description. We describe our information security principles, technical safeguards, and data processing practices.'
 updated_by: 54f1c4c9-2642-4137-9504-e7b3042b847b
-updated_at: 1783595776
+updated_at: 1783597405
 ---
