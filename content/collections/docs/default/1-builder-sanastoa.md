@@ -8,7 +8,7 @@ seo_canonical_type: entry
 sitemap_change_frequency: weekly
 sitemap_priority: 0.5
 updated_by: 54f1c4c9-2642-4137-9504-e7b3042b847b
-updated_at: 1784113288
+updated_at: 1784113760
 content:
   -
     type: paragraph
@@ -28,15 +28,6 @@ content:
         type: text
         text: '– rakennuspalikoita, joista Builder-kurssisi koostuu. Muokattavia elementtejä on monia erilaisia, ja ne näyttävät käytännössä sivuilta kurssien suorittajille.'
   -
-    type: set
-    attrs:
-      id: zSbhNVbubUQbBC2ZtreLK
-      values:
-        type: image
-        image: elements.jpg
-        size: md
-        caption: Elements
-  -
     type: paragraph
     attrs:
       textAlign: left
@@ -45,6 +36,11 @@ content:
     attrs:
       textAlign: left
     content:
+      -
+        type: image
+        attrs:
+          src: 'asset::files::elements_group-1-600x252.jpg'
+          alt: null
       -
         type: hardBreak
   -
