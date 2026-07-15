@@ -5,26 +5,25 @@ tabs:
     sections:
       -
         fields:
-          - handle: title
+          -
+            handle: title
             field:
               type: text
               required: true
               localizable: true
               display: Otsikko
-
-          - handle: content
+              validate:
+                - required
+          -
+            handle: content
             field:
               type: bard
               localizable: true
               display: Sisältö
               container: files
-              fullscreen: true
               save_html: true
-              toolbar_mode: fixed
               reading_time: true
               allow_source: true
-              enable_input_rules: true
-              enable_paste_rules: true
               buttons:
                 - h2
                 - h3
@@ -37,8 +36,13 @@ tabs:
                 - anchor
                 - image
                 - removeformat
-
-          - handle: videos
+                - alignleft
+                - aligncenter
+                - alignright
+                - alignjustify
+              remove_empty_nodes: false
+          -
+            handle: videos
             field:
               type: replicator
               display: 'Lisää video'
@@ -50,7 +54,8 @@ tabs:
                   display: Video
                   icon: media-webcam-video
                   fields:
-                    - handle: file
+                    -
+                      handle: file
                       field:
                         type: assets
                         display: Video-tiedosto
@@ -83,3 +88,14 @@ tabs:
         fields:
           -
             import: 'statamic-peak-seo::seo_sitemap'
+  sidebar:
+    display: Sidebar
+    sections:
+      -
+        fields:
+          -
+            handle: slug
+            field:
+              type: slug
+              localizable: true
+              validate: 'max:200'
