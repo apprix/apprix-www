@@ -8,7 +8,7 @@ seo_canonical_type: entry
 sitemap_change_frequency: weekly
 sitemap_priority: 0.5
 updated_by: 54f1c4c9-2642-4137-9504-e7b3042b847b
-updated_at: 1784113233
+updated_at: 1784113288
 content:
   -
     type: paragraph
@@ -35,6 +35,7 @@ content:
         type: image
         image: elements.jpg
         size: md
+        caption: Elements
   -
     type: paragraph
     attrs:
