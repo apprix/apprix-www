@@ -45,11 +45,9 @@ tabs:
                 media:
                   display: Media
                   sets:
-                    image:
-                      display: Image
-                      fields:
-                        -
-                          import: image
+                    new_set:
+                      display: 'New Set'
+                      fields: {  }
           -
             handle: videos
             field:
