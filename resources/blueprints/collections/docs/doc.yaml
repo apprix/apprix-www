@@ -41,6 +41,15 @@ tabs:
                 - alignright
                 - alignjustify
               remove_empty_nodes: false
+              sets:
+                media:
+                  display: Media
+                  sets:
+                    image:
+                      display: Image
+                      fields:
+                        -
+                          import: image
           -
             handle: videos
             field:
