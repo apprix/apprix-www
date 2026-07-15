@@ -8,6 +8,6 @@ seo_canonical_type: entry
 sitemap_change_frequency: weekly
 sitemap_priority: 0.5
 updated_by: 54f1c4c9-2642-4137-9504-e7b3042b847b
-updated_at: 1784133014
+updated_at: 1784133083
 ---
-<p>Valitse template. Ohjeen tekemisen hetkellä käytössä on vain yksi template. Klikkaa ympyrää ja moduulisi on nyt luotu. Näet sivulla Intro ja Finish-elementit, joita et voi poistaa. Uudet elementit lisätään näiden elementtien keskelle.</p><p><img src="statamic://asset::files::docs/2021/08/Moduuli_luominen.gif" alt="Miten luot uuden moduulin?"></p><p></p>
+<p>Valitse template. Ohjeen tekemisen hetkellä käytössä on vain yksi template. Klikkaa ympyrää ja moduulisi on nyt luotu. Näet sivulla Intro ja Finish-elementit, joita et voi poistaa. Uudet elementit lisätään näiden elementtien keskelle.</p><p><strong>Miten luot uuden moduulin?</strong></p><p><img src="statamic://asset::files::docs/2021/08/Moduuli_luominen.gif"></p><p></p>
