@@ -2,33 +2,12 @@
 id: 8d358b72-6fb9-4289-a7ce-a4c659483062
 blueprint: doc
 title: '6.3.1 Scores – Pisteiden visualisointityökalu'
+seo_noindex: inherit
+seo_nofollow: false
+seo_canonical_type: entry
+sitemap_change_frequency: weekly
+sitemap_priority: 0.5
+updated_by: 54f1c4c9-2642-4137-9504-e7b3042b847b
+updated_at: 1784222932
 ---
-<p><strong>Scores</strong>-työkalun tarkoituksena on tarjota yhdistetty paikka, josta voit helposti nähdä kurssin suorittajien osaamisen tason joko kokonaisuutena, tehtävätyypittäin, käyttäjätiedoittain tai ajanjaksoittain.</p>
-
-<p>Löydät <strong>Scores</strong> -työkalun painamalla ensin moduulin <strong>Stats</strong>-painiketta ja sitten Apprix <strong>Stats</strong>-ikkunasta valitsemalla ikkunan oikealta puolelta <strong>Scores</strong>.</p>
-<h3>Scores – Filters-työkalu</h3>
-<p><strong>Scores</strong>-ikkunan yläosassa löydät <strong>Filters</strong>-työkalun.</p>
-
-<p>Tällä työkalulla voit suodattaa tiedot seuraavilla kriteereillä:</p>
-<ul>
- <li><strong>Date select </strong>– filtteröi suoritustietoja suorituspäivämäärän perusteella, valittavissa ennalta määritetyt aikajaksot tai voit itse määritellä haluamasi ajanjakson. <strong>Oletusarvo</strong>: Ensimmäisen suorituksen päivämäärä – tämä päivämäärä. Filtteri näkyvissä mikäli vähintään yksi suoritus löytyy.</li>
- <li><strong>Element type</strong> – filtteröi suoritustietoja tehtävä-elementin valinnan perusteella. <strong>Oletusarvo</strong>: All. Filtteröydy data on näkyvissä mikäli vähintään yksi suoritus löytyy.</li>
- <li><strong>Department </strong>– Viittaa yleiseen <strong>Login</strong>-elementistä kerättävään “osasto” käyttäjätietoon. Näkyvissä mikäli sellainen arvo löytyy vähintään yhdeltä kurssin suorittajalta.</li>
- <li><strong>Location</strong> – Viittaa yleiseen <strong>Login</strong>-elementistä kerättävään työpaikka-käyttäjätietoon. Näkyvissä mikäli sellainen arvo löytyy vähintään yhdeltä kurssin suorittajalta.</li>
- <li><strong>Manager</strong> – Viittaa yleiseen <strong>Login</strong>-elementistä kerättävään esimieshenkilö -käyttäjätietoon. Näkyvissä mikäli sellainen arvo löytyy vähintään yhdeltä kurssin suorittajalta.</li>
- <li><strong>Search users</strong> – Tässä kentässä voit hakea kaikkien koutuksen loppuun suortittaneiden suoritustietoja. Kerättävät käyttäjätiedot voivat vaihdella eri asiakkailla. Käyttäjätietona voi olla esim. nimi, sähköposti, osasto, työpaikka, esimies, työkortit, veronumero, yrityksen y-tunnus, käyttäjätunnus. Kyseessä on looginen ”<strong>AND</strong>” haku, eli mitä enemmän sanoja ketjutetaan, sen tarkempi hakutulos.</li>
- <li><strong>Clear filters</strong> – Tämä painike nollaa kaikki valitut filtterit oletusarvoihin.</li>
-</ul>
-<p><strong> Huom! </strong>Kaikki suodattimet näyttävät vain loppuun suoritettuja suorituksia.</p>
-<h3>Moduulin yleistiedot</h3>
-<p>Nämä yleistiedot osoittavat kurssin suorittaneiden osallistujien lukumäärän ja heidän saamiensa pisteiden keskiarvo maksimimäärästä (prosenteina).</p>
-
-<p><strong>Huom!</strong> Näihin lukuihin vaikuttavat valitut suodattimet.</p>
-
-<h3>Scores -työkalu</h3>
-
-<p></p>
-
-<p><img src="/files/docs/2023/03/21-nuovo-1.png"></p>
-
-<p></p>
+<p><strong>Scores</strong>-työkalun tarkoituksena on tarjota yhdistetty paikka, josta voit helposti nähdä kurssin suorittajien osaamisen tason joko kokonaisuutena, tehtävätyypittäin, käyttäjätiedoittain tai ajanjaksoittain.</p><p>Löydät <strong>Scores</strong> -työkalun painamalla ensin moduulin <strong>Stats</strong>-painiketta ja sitten Apprix <strong>Stats</strong>-ikkunasta valitsemalla ikkunan oikealta puolelta <strong>Scores</strong>.</p><h3>Scores – Filters-työkalu</h3><p><strong>Scores</strong>-ikkunan yläosassa löydät <strong>Filters</strong>-työkalun.</p><p>Tällä työkalulla voit suodattaa tiedot seuraavilla kriteereillä:</p><ul><li><strong>Date select </strong>– filtteröi suoritustietoja suorituspäivämäärän perusteella, valittavissa ennalta määritetyt aikajaksot tai voit itse määritellä haluamasi ajanjakson. <strong>Oletusarvo</strong>: Ensimmäisen suorituksen päivämäärä – tämä päivämäärä. Filtteri näkyvissä mikäli vähintään yksi suoritus löytyy.</li><li><strong>Element type</strong> – filtteröi suoritustietoja tehtävä-elementin valinnan perusteella. <strong>Oletusarvo</strong>: All. Filtteröydy data on näkyvissä mikäli vähintään yksi suoritus löytyy.</li><li><strong>Department </strong>– Viittaa yleiseen <strong>Login</strong>-elementistä kerättävään “osasto” käyttäjätietoon. Näkyvissä mikäli sellainen arvo löytyy vähintään yhdeltä kurssin suorittajalta.</li><li><strong>Location</strong> – Viittaa yleiseen <strong>Login</strong>-elementistä kerättävään työpaikka-käyttäjätietoon. Näkyvissä mikäli sellainen arvo löytyy vähintään yhdeltä kurssin suorittajalta.</li><li><strong>Manager</strong> – Viittaa yleiseen <strong>Login</strong>-elementistä kerättävään esimieshenkilö -käyttäjätietoon. Näkyvissä mikäli sellainen arvo löytyy vähintään yhdeltä kurssin suorittajalta.</li><li><strong>Search users</strong> – Tässä kentässä voit hakea kaikkien koutuksen loppuun suortittaneiden suoritustietoja. Kerättävät käyttäjätiedot voivat vaihdella eri asiakkailla. Käyttäjätietona voi olla esim. nimi, sähköposti, osasto, työpaikka, esimies, työkortit, veronumero, yrityksen y-tunnus, käyttäjätunnus. Kyseessä on looginen ”<strong>AND</strong>” haku, eli mitä enemmän sanoja ketjutetaan, sen tarkempi hakutulos.</li><li><strong>Clear filters</strong> – Tämä painike nollaa kaikki valitut filtterit oletusarvoihin.</li></ul><p><strong>Huom! </strong>Kaikki suodattimet näyttävät vain loppuun suoritettuja suorituksia.</p><h3>Moduulin yleistiedot</h3><p>Nämä yleistiedot osoittavat kurssin suorittaneiden osallistujien lukumäärän ja heidän saamiensa pisteiden keskiarvo maksimimäärästä (prosenteina).</p><p><strong>Huom!</strong> Näihin lukuihin vaikuttavat valitut suodattimet.</p><h3>Scores -työkalu</h3><p></p><p><img src="statamic://asset::files::docs/2023/03/21-nuovo-1.png"></p><p></p>
