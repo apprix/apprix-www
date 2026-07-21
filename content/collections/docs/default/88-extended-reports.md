@@ -2,28 +2,12 @@
 id: fb7d988e-090b-43c9-a2fe-20769bad9e01
 blueprint: doc
 title: '8.8 Extended Reports'
+seo_noindex: inherit
+seo_nofollow: false
+seo_canonical_type: entry
+sitemap_change_frequency: weekly
+sitemap_priority: 0.5
+updated_by: 54f1c4c9-2642-4137-9504-e7b3042b847b
+updated_at: 1784645810
 ---
-<p>Administrate-valikon User's access -asetuksissa voi määrittää, minkälaisiin raportteihin käyttäjällä on pääsy. Eri tasoiset käyttöoikeukset hallitsevilla käyttäjillä on eri tasoiset oikeudet myös kurssimoduulien raportteihin. Lisäksi raportteja voidaan räätälöidä tiettyihin tarkoituksiin.</p><p>Katseluoikeudet on mahdollista myöntää käyttäjäkohtaisesti, esimerkiksi esimiehelle, jotta hän voi seurata alaistensa tuloksia. Raportteja voi myös laajentaa kolmansille osapuolille ja räätälöidä niin, että he voivat tarkastella vain tiettyä osaa raportista. Builder pääkäyttäjän on tällöin luotava taholle käyttäjätili Administrate-valikon kautta, jos ulkopuolisella taholla ei vielä ole käyttäjätiliä ja aktivoimalla <b>Extended Report</b> -ominaisuuden valitsemalla <b>On</b>-vaihtoehdon.</p><ul>
- <li>Settings-valikosta <b>Extended Report Settings</b> -ponnahdusikkunasta pääkäyttäjän on mahdollista valita, mitä yrityksiä, moduuleja, raportin kolumneja (esimerkiksi päivämäärä/ajanjakso, suorittajan tulos, suorittajatiedot) ja suoritusten päivämäärärajausta tietty käyttäjä voi tarkastella. <b>Modify list</b> -toiminnosta ikkunan yläosassa pääkäyttäjä voi lisätä ja poistaa yrityksiä<b> Company</b>-listasta.</li>
- <li>Huomioithan, että kaikki tehdyt muutokset tallentuu automaattisesti.</li>
- <li>Kun pääkäyttäjä on säätänyt<b> Extended report</b> -valinnat sopiviksi, käyttäjä voi aktivoida Report-ominaisuuden klikkaamalla <b>Report</b>-toimintoa näkymän vasemmassa laidassa.</li>
- <li>Tämän jälkeen käyttäjä voi käyttää <b>Filter</b>-toimintoa, jonka avulla raportin suoritusdataa voi suodattaa (esimerkiksi suorittajien yritykset, kurssimoduulit, päivämäärän/ajanjakson valinta). <b>Report</b>-näkymässä käyttäjä voi myös etsiä tiettyä tietoa ja valita mitkä kentät näkyvät (<b>Column visibility</b> -toiminto) tai ladata tiedot CSV- tai Excel-tiedostomuodossa.</li>
-</ul><p>Huomioithan, että ainoastaan <strong>julkaistujen moduulien tiedot</strong> on saatavilla raporteissa.</p><h3>Käyttöoikeudet Extended -raporttiin myönnetään ” <strong>Administrate</strong> → <strong>Users</strong>” -työkalussa.</h3>
-
-<p></p>
-
-<p><img src="/files/docs/2025/02/Extended-report-1-settings-1.png"></p>
-
-<p></p>
-
-<p><img src="/files/docs/2025/02/Reports-button-2-1.png"></p>
-
-<p></p>
-
-<p><img src="/files/docs/2025/02/Extended-report-settings-3-1.png"></p>
-
-<p></p>
-
-<p><img src="/files/docs/2025/02/Filters-4-1.png"></p>
-
-<p></p>
+<p><a target="_blank" href="222-sisaankirjautuminen-ja-menu-nakyman-toiminnot">Administrate-valikon User&#039;s access</a> -asetuksissa voi määrittää, minkälaisiin raportteihin käyttäjällä on pääsy. Eri tasoiset käyttöoikeukset hallitsevilla käyttäjillä on eri tasoiset oikeudet myös kurssimoduulien raportteihin. Lisäksi raportteja voidaan räätälöidä tiettyihin tarkoituksiin.</p><p>Katseluoikeudet on mahdollista myöntää käyttäjäkohtaisesti, esimerkiksi esimiehelle, jotta hän voi seurata alaistensa tuloksia. Raportteja voi myös laajentaa kolmansille osapuolille ja räätälöidä niin, että he voivat tarkastella vain tiettyä osaa raportista. Builder pääkäyttäjän on tällöin luotava taholle käyttäjätili Administrate-valikon kautta, jos ulkopuolisella taholla ei vielä ole käyttäjätiliä ja aktivoimalla <strong>Extended Report</strong> -ominaisuuden valitsemalla <strong>On</strong>-vaihtoehdon.</p><h3>Käyttöoikeudet Extended -raporttiin myönnetään ” <strong>Administrate</strong> → <strong>Users</strong>” -työkalussa.</h3><p><img src="statamic://asset::files::docs/2025/02/Extended-report-1-settings-1.png"></p><ul><li><p>Settings-valikosta <strong>Extended Report Settings</strong> -ponnahdusikkunasta pääkäyttäjän on mahdollista valita, mitä yrityksiä, moduuleja, raportin kolumneja (esimerkiksi päivämäärä/ajanjakso, suorittajan tulos, suorittajatiedot) ja suoritusten päivämäärärajausta tietty käyttäjä voi tarkastella. <strong>Modify list</strong> -toiminnosta ikkunan yläosassa pääkäyttäjä voi lisätä ja poistaa yrityksiä<strong> Company</strong>-listasta.</p></li></ul><p><img src="statamic://asset::files::docs/2025/02/Extended-report-settings-3-1.png"></p><ul><li><p>Huomioithan, että kaikki tehdyt muutokset tallentuu automaattisesti.</p></li><li><p>Kun pääkäyttäjä on säätänyt<strong> Extended report</strong> -valinnat sopiviksi, käyttäjä voi aktivoida Report-ominaisuuden klikkaamalla <strong>Report</strong>-toimintoa näkymän vasemmassa laidassa.</p></li></ul><p><img src="statamic://asset::files::docs/2025/02/Reports-button-2-1.png"></p><ul><li><p>Tämän jälkeen käyttäjä voi käyttää <strong>Filter</strong>-toimintoa, jonka avulla raportin suoritusdataa voi suodattaa (esimerkiksi suorittajien yritykset, kurssimoduulit, päivämäärän/ajanjakson valinta). <strong>Report</strong>-näkymässä käyttäjä voi myös etsiä tiettyä tietoa ja valita mitkä kentät näkyvät (<strong>Column visibility</strong> -toiminto) tai ladata tiedot CSV- tai Excel-tiedostomuodossa.</p></li></ul><p>Huomioithan, että ainoastaan <strong>julkaistujen moduulien tiedot</strong> on saatavilla raporteissa.</p><p></p><p><img src="statamic://asset::files::docs/2025/02/Filters-4-1.png"></p>
