@@ -8,6 +8,6 @@ seo_canonical_type: entry
 sitemap_change_frequency: weekly
 sitemap_priority: 0.5
 updated_by: 54f1c4c9-2642-4137-9504-e7b3042b847b
-updated_at: 1784644779
+updated_at: 1784645311
 ---
-<p><strong>About this moduule </strong>-ikkunasta löydät moduulin luojan, luontipäivän ja viimeisen muokkauspäivämäärän, tunnisteet (tag) ja käyttöoikeudet.</p><p>Jos <a target="_blank" href="83-audit-module-aukoton-kirjausketju-ominaisuus"><strong>Audit Module</strong> – ominaisuus</a> on aktivoitu, <strong>About Module</strong> -näkymä näyttää myös moduulin muutoshistorian.</p><h3>Miten &quot;About This Module&quot; toimii?</h3><p> </p>
+<p><strong>About this moduule </strong>-ikkunasta löydät moduulin luojan, luontipäivän ja viimeisen muokkauspäivämäärän, tunnisteet (tag) ja käyttöoikeudet.</p><p>Jos <a target="_blank" href="83-audit-module-aukoton-kirjausketju-ominaisuus"><strong>Audit Module</strong> – ominaisuus</a> on aktivoitu, <strong>About Module</strong> -näkymä näyttää myös moduulin muutoshistorian.</p><h3>Miten &quot;About This Module&quot; toimii?</h3><p><img src="statamic://asset::files::about-this-module.gif"></p>
