@@ -2,46 +2,12 @@
 id: f100821e-673e-4918-a33c-a244db4ad010
 blueprint: doc
 title: '8.11 Diploma & Printables...'
+seo_noindex: inherit
+seo_nofollow: false
+seo_canonical_type: entry
+sitemap_change_frequency: weekly
+sitemap_priority: 0.5
+updated_by: 54f1c4c9-2642-4137-9504-e7b3042b847b
+updated_at: 1784804573
 ---
-<p><strong>Diploma &amp; Printables</strong> -ominaisuus on päivitetty ja laajennettu versio <strong>Send diploma</strong> -elementistä.</p><p>Diploma &amp; Printables -ominaisuuden edut ovat:</p><ul>
- <li>suorittaja saa diplomin vasta kun on suorittanut koulutuksen kokonaan (saavuttanut Finish-elementin). Tämä varmistaa sen, että suorittaja ei sulje koulutusta saatuaan diplomin Send diploma elementistä ennen koulutuksen loppuun menemistä</li>
- <li>koulutukselle voi valita diplomipohjan saatavilla olevista diplomipohjista ja sen lisäksi määrittää mahdollista diplomiin tulevaa sisältöä.</li>
- <li>koulutukseen ei tarvitse enää lisätä elementtiä, jotta suorittaja voi tulostaa diplomin itselleen.</li>
-</ul><p><strong>Finish</strong>-elementissä (moduulin viimeinen elementti), kurssin suorittaja voi avata kurssin diplomin uuteen välilehteen, tai lähettää sen sähköpostitse.</p><h3>Diploma &amp; Printables ‑toiminnon käyttöönotto</h3><p><em>Diploma &amp; Printables</em> ‑toiminto otetaan käyttöön moduulin muokkausnäkymässä valitsemalla pudotusvalikko, joka avautuu hammasrataskuvakkeesta.</p><h3>Diplomin käyttöönotto osallistujille</h3><p><em>Diploma for Participants</em> ‑ponnahdusikkunassa fasilitaattori voi ottaa toiminnon käyttöön valitsemalla <strong>Enable participant diploma for this module</strong>, joka sijaitsee ikkunan vasemmassa yläkulmassa.</p><p>Aktivointipainikkeen alapuolella fasilitaattori voi:</p><ul>
- <li>valita yhden tai useamman mukautetun diplomipohjan,</li>
- <li>muokata diplomin otsikkoa,</li>
- <li>muokata diplomin sisältötekstiä.</li>
-</ul><p>Osallistujan etunimi, sukunimi ja suorituspäivämäärä lisätään diplomiin aina automaattisesti.</p><h3>Osallistujalle näkyvien tekstien muokkaaminen</h3><p>Ponnahdusikkunan oikealla puolella fasilitaattori voi muokata:</p><ul>
- <li>osallistujalle näytettävää tekstiä,</li>
- <li>osallistujalle näkyvien painikkeiden tekstejä,</li>
- <li>diplomiin liittyvän sähköpostin otsikkoa ja sisältöä.</li>
-</ul><h3>Mahdollisuus syöttää nimi manuaalisesti</h3><p>Kun <strong>Enable participant diploma for this module</strong> on käytössä, fasilitaattori voi ottaa käyttöön myös asetuksen <strong>If the participant's name is not found, allow them to write their name</strong>.</p><p>Jos tämä ominaisuus on käytössä, kurssin suorittaja voi syöttää nimensä manuaalisesti, ja sen jälkeen nimi ilmestyy diplomiin.</p><h3>Osallistujan nimen hakeminen</h3><p>Osallistujan nimi haetaan yleensä autentikoinnista tai <em>Form</em>‑elementistä.
-<p>Jos manuaalinen syöttö on sallittu ja nimeä ei löydy osallistujan siirtyessä <em>Finish</em>‑elementtiin, osallistujalle näytetään kentät, joihin hän voi syöttää nimensä itse.</p><p>Manuaalisesti syötettyä nimeä <strong>ei tallenneta tilastoihin</strong>, jotta moduulia voidaan käyttää anonyymisti. Nimeä käytetään ainoastaan diplomin luomiseen.</p><h3>Huom!</h3><ul></p>
- <li>Kurssilaisilla on aina mahdollisuus ladata diplomin PDF-tiedosto avaamalla se uuteen välilehteen tai lähettämällä se sähköpostiin. He voivat myös lähettää sähköpostin useampaan osoitteeseen joko lisäämällä useamman kuin yhden sähköpostiosoitteen pilkulla erotettuna tai lähettämällä sähköpostin erikseen.</li>
- <li>Duplikoituun moduuliin siirtyvät samat Diploma &amp; Printables asetukset kuin alkuperäisessä moduulissa.</li>
- <li>Auditointiin jää merkintä, jos Diploma &amp; Printables asetuksen laittaa moduulille päälle tai pois päältä.</li>
- <li>Esikatselu- ja julkaisutiloissa kurssin osallistujan diplomin tulostusdialogi voidaan piilottaa klikkaamalla tulostusdialogin oikeassa yläkulmassa olevaa X-kuvaketta. Diplomin tulostusdialogin tilalle ilmestyy diplomikuvake. Klikkaa diplomikuvaketta nähdäksesi Diplomin tulostusdialogin sisällön uudelleen.</li>
- <li>Voit milloin tahansa muuttaa diplomin nimeä päivittämällä  'module name' Diploma Texts -kentässä.</li>
-</ul><h3>Finish-elementissä käyttäjät voivat tulostaa, ladata ja lähettää diplominsa syöttämällä sähköpostiosoitteet EMAIL-kenttään</h3>
-
-<p></p>
-
-<p><img src="/files/docs/2025/02/Diploma-and-printables1-1.png"></p>
-
-<p></p>
-
-<p><img src="/files/docs/2024/08/Diploma-and-printables-menu-1.png"></p>
-
-<p></p>
-
-<p><img src="/files/docs/2026/02/Enable-the-diploma-1.png"></p>
-
-<p></p>
-
-<p><img src="/files/docs/2026/02/Allow-to-write-the-name-1.png"></p>
-
-<p></p>
-
-<p><img src="/files/docs/2026/02/Finish-page-1.png"></p>
-
-<p></p>
+<p><strong>Diploma &amp; Printables</strong> -ominaisuus on päivitetty ja laajennettu versio <a target="_blank" href="727-diploma-ja-diploma-and-send-form"><strong>Send diploma</strong> -elementistä</a>.</p><p>Diploma &amp; Printables -ominaisuuden edut ovat:</p><ul><li>suorittaja saa diplomin vasta kun on suorittanut koulutuksen kokonaan (saavuttanut Finish-elementin). Tämä varmistaa sen, että suorittaja ei sulje koulutusta saatuaan diplomin Send diploma elementistä ennen koulutuksen loppuun menemistä</li><li>koulutukselle voi valita diplomipohjan saatavilla olevista diplomipohjista ja sen lisäksi määrittää mahdollista diplomiin tulevaa sisältöä.</li><li>koulutukseen ei tarvitse enää lisätä elementtiä, jotta suorittaja voi tulostaa diplomin itselleen.</li></ul><p><strong>Finish</strong>-elementissä (moduulin viimeinen elementti), kurssin suorittaja voi avata kurssin diplomin uuteen välilehteen, tai lähettää sen sähköpostitse.</p><h3>Diploma &amp; Printables ‑toiminnon käyttöönotto</h3><p><em>Diploma &amp; Printables</em> ‑toiminto otetaan käyttöön moduulin muokkausnäkymässä valitsemalla pudotusvalikko, joka avautuu hammasrataskuvakkeesta.</p><h3>Diplomin käyttöönotto osallistujille</h3><p><em>Diploma for Participants</em> ‑ponnahdusikkunassa fasilitaattori voi ottaa toiminnon käyttöön valitsemalla <strong>Enable participant diploma for this module</strong>, joka sijaitsee ikkunan vasemmassa yläkulmassa.</p><p>Aktivointipainikkeen alapuolella fasilitaattori voi:</p><ul><li>valita yhden tai useamman mukautetun diplomipohjan,</li><li>muokata diplomin otsikkoa,</li><li>muokata diplomin sisältötekstiä.</li></ul><p>Osallistujan etunimi, sukunimi ja suorituspäivämäärä lisätään diplomiin aina automaattisesti.</p><h3>Osallistujalle näkyvien tekstien muokkaaminen</h3><p>Ponnahdusikkunan oikealla puolella fasilitaattori voi muokata:</p><ul><li>osallistujalle näytettävää tekstiä,</li><li>osallistujalle näkyvien painikkeiden tekstejä,</li><li>diplomiin liittyvän sähköpostin otsikkoa ja sisältöä.</li></ul><h3>Mahdollisuus syöttää nimi manuaalisesti</h3><p>Kun <strong>Enable participant diploma for this module</strong> on käytössä, fasilitaattori voi ottaa käyttöön myös asetuksen <strong>If the participant&#039;s name is not found, allow them to write their name</strong>.</p><p>Jos tämä ominaisuus on käytössä, kurssin suorittaja voi syöttää nimensä manuaalisesti, ja sen jälkeen nimi ilmestyy diplomiin.</p><h3>Osallistujan nimen hakeminen</h3><p>Osallistujan nimi haetaan yleensä autentikoinnista tai <em>Form</em>‑elementistä.</p><p>Jos manuaalinen syöttö on sallittu ja nimeä ei löydy osallistujan siirtyessä <em>Finish</em>‑elementtiin, osallistujalle näytetään kentät, joihin hän voi syöttää nimensä itse.</p><p>Manuaalisesti syötettyä nimeä <strong>ei tallenneta tilastoihin</strong>, jotta moduulia voidaan käyttää anonyymisti. Nimeä käytetään ainoastaan diplomin luomiseen.</p><h3>Huom!</h3><ul><li>Kurssilaisilla on aina mahdollisuus ladata diplomin PDF-tiedosto avaamalla se uuteen välilehteen tai lähettämällä se sähköpostiin. He voivat myös lähettää sähköpostin useampaan osoitteeseen joko lisäämällä useamman kuin yhden sähköpostiosoitteen pilkulla erotettuna tai lähettämällä sähköpostin erikseen.</li><li>Duplikoituun moduuliin siirtyvät samat Diploma &amp; Printables asetukset kuin alkuperäisessä moduulissa.</li><li>Auditointiin jää merkintä, jos Diploma &amp; Printables asetuksen laittaa moduulille päälle tai pois päältä.</li><li>Esikatselu- ja julkaisutiloissa kurssin osallistujan diplomin tulostusdialogi voidaan piilottaa klikkaamalla tulostusdialogin oikeassa yläkulmassa olevaa X-kuvaketta. Diplomin tulostusdialogin tilalle ilmestyy diplomikuvake. Klikkaa diplomikuvaketta nähdäksesi Diplomin tulostusdialogin sisällön uudelleen.</li><li>Voit milloin tahansa muuttaa diplomin nimeä päivittämällä  &#039;module name&#039; Diploma Texts -kentässä.</li></ul><h3>Finish-elementissä käyttäjät voivat tulostaa, ladata ja lähettää diplominsa syöttämällä sähköpostiosoitteet EMAIL-kenttään</h3><p></p><p><img src="statamic://asset::files::docs/2025/02/Diploma-and-printables1-1.png"></p><p></p><p><img src="statamic://asset::files::docs/2024/08/Diploma-and-printables-menu-1.png"></p><p></p><p><img src="statamic://asset::files::docs/2026/02/Enable-the-diploma-1.png"></p><p></p><p><img src="statamic://asset::files::docs/2026/02/Allow-to-write-the-name-1.png"></p><p></p><p><img src="statamic://asset::files::docs/2026/02/Finish-page-1.png"></p><p></p>
